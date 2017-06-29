@@ -30,9 +30,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/simpligility/ossrh-demo.git</connection>
-        <developerConnection>scm:git:ssh://github.com:simpligility/ossrh-demo.git</developerConnection>
-        <url>http://github.com/simpligility/ossrh-demo/tree/master</url>
+        <connection>scm:git:git://github.com/hashmapinc/WitsmlObjectsLibrary.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:hashmapinc/WitsmlObjectsLibrary.git</developerConnection>
+        <url>https://github.com/hashmapinc/WitsmlObjectsLibrary/tree/master</url>
     </scm>
 
     <build>
