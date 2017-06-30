@@ -32,21 +32,20 @@ This library aims to provide a few key features:
 * Git client (to build locally)
 
 ## Getting Started
-1) To build the library and get started first off clone the GitHub repository 
+To build the library and get started first off clone the GitHub repository 
 
     git clone https://github.com/hashmapinc/WitsmlObjectsLibrary.git
 
-2) Change directory into the WitsmlObjectsLibrary
+Change directory into the WitsmlObjectsLibrary
 
     cd WitsmlObjectsLibrary
     
-3) Execute a maven clean install
+Execute a maven clean install
 
     mvn clean install
     
-4) A Build success message should appear
+A Build success message should appear
     
-    '''
     [INFO] ------------------------------------------------------------------------
     [INFO] BUILD SUCCESS
     [INFO] ------------------------------------------------------------------------
@@ -54,24 +53,22 @@ This library aims to provide a few key features:
     [INFO] Finished at: 2017-06-30T15:14:58-05:00
     [INFO] Final Memory: 20M/377M
     [INFO] ------------------------------------------------------------------------
-    '''
 
-5) To generate the documentation, execute a javadoc build
+To generate the documentation, execute a javadoc build
 
     mvn javadoc:javadoc
-
-6) A build success message should appear again
-
-   '''
-   [INFO] ------------------------------------------------------------------------
-   [INFO] BUILD SUCCESS
-   [INFO] ------------------------------------------------------------------------
-   [INFO] Total time: 9.320 s
-   [INFO] Finished at: 2017-06-30T15:15:54-05:00
-   [INFO] Final Memory: 17M/309M
-   [INFO] ------------------------------------------------------------------------
-   '''
-7) The documentation should now be available in /targets/site/apidocs
+    
+A build success message should appear again    
+    
+    [INFO] ------------------------------------------------------------------------
+    [INFO] BUILD SUCCESS
+    [INFO] ------------------------------------------------------------------------
+    [INFO] Total time: 9.320 s
+    [INFO] Finished at: 2017-06-30T15:15:54-05:00
+    [INFO] Final Memory: 17M/309M
+    [INFO] ------------------------------------------------------------------------
+   
+The documentation should now be available in /targets/site/apidocs
 
 
 
