@@ -13,7 +13,7 @@ such as Apache NiFi as well.
 - [Features](#features)
 - [Requirements](#requirements)
 - [Getting Started](#getting-started)
-- [Usage](#useage)
+- [Usage](#usage)
 - [Documentation](#documentation)
 - [License](#license)
 
@@ -135,7 +135,7 @@ public void testForwardTransformWells(){
         }
     }
 ```
-###LogDataHelper
+### LogDataHelper
 
 #### Creating a CSV from a 1.4.1.1 Log Object (only 3 lines!)
 
