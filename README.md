@@ -1,4 +1,4 @@
-[<img src="https://hashmapinc.github.io/hashmap.github.io/images/tempus/Tempus_Black.png" width="300" height="126" alt="Hashmap, Inc Tempus"/>][tempus]
+<img src="https://hashmapinc.github.io/hashmap.github.io/images/tempus/Tempus_Black.png" width="250" height="306" alt="Hashmap, Inc Tempus"/>
 
 [![Build Status](https://travis-ci.org/hashmapinc/WitsmlObjectsLibrary.svg?branch=master)](https://travis-ci.org/hashmapinc/WitsmlObjectsLibrary)
 # WitsmlObjectsLibrary
