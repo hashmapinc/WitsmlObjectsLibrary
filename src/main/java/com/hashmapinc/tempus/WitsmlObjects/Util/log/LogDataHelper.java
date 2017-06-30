@@ -1,18 +1,25 @@
 package com.hashmapinc.tempus.WitsmlObjects.Util.log;
 
-import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlMarshal;
-import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlVersionTransformer;
-import com.hashmapinc.tempus.WitsmlObjects.v1411.*;
+import com.hashmapinc.tempus.WitsmlObjects.v1411.CsLogCurveInfo;
 import com.hashmapinc.tempus.WitsmlObjects.v1411.LogIndexType;
+import com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLog;
 
-import javax.xml.bind.JAXBException;
-import javax.xml.transform.TransformerException;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This is a helper class that can process the log data and return it in a much more streamlined structure for processing. This class
+ * can either generate a list of AbstractDataTraces or a CSV string.
+ */
 public class LogDataHelper {
 
+    /**
+     * Takes a 1.4.1.1 logs object and returns a list of all the AbstractDataTraces contained within the log. Each
+     * AbstractDataTrace represents one log curve. The logs input can only contain 1 log within the collection, and
+     * the log must contain the logData element.
+     * @param log The 1.4.1.1 log object to process
+     * @return A list of AbstractDataTraces each representing one log curve
+     */
     public static List<AbstractDataTrace> processData(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLogs log){
         if (log.getLog().size() > 1)
             throw new IllegalArgumentException("Object cannot contain more than one log per request");
@@ -30,21 +37,13 @@ public class LogDataHelper {
         return fillTraceValues(logToProcess, curves);
     }
 
-    private static List<AbstractDataTrace> fillTraceValues(ObjLog log, List<AbstractDataTrace> traces){
-        log.getLogData().get(0).getData().forEach(logData -> {
-            String data[] = logData.split(",");
-            for(int i = 0; i < data.length - 1; i++){
-                if (i == 0)
-                    continue;
-
-                traces.get(i).getValues().put(data[0], data[i]);
-            }
-
-        });
-
-        return traces;
-    }
-
+    /**
+     * Takes a 1.4.1.1 log object and produces an equivalent CSV file representing the data. The first row is the mneumonic,
+     * the second row is the unit (if requested).
+     * @param log The 1.4.1.1 log object to process.
+     * @param withUnits When true, the csv will contain the unit row in the second position, when false, the unit row will not be included.
+     * @return A string representing a CSV from the data conatined within the 1.4.1.1 log object
+     */
     public static String getCSV(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLog log, Boolean withUnits){
         StringBuilder builder = new StringBuilder();
 
@@ -59,6 +58,7 @@ public class LogDataHelper {
         return builder.toString();
     }
 
+    // Creates the correct type of data trace depending on the metadata of the log
     private static AbstractDataTrace createDataTrace(com.hashmapinc.tempus.WitsmlObjects.v1411.LogIndexType indexType, CsLogCurveInfo info){
 
         AbstractDataTrace trace = null;
@@ -128,11 +128,17 @@ public class LogDataHelper {
         return trace;
     }
 
-    public static List<AbstractDataTrace> processData(com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLogs log) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, JAXBException, TransformerException {
-        String witsml = WitsmlMarshal.serialize(log);
-        WitsmlVersionTransformer transformer = new WitsmlVersionTransformer();
-        String newWitsmlLog = transformer.convertVersion(witsml);
-        return processData((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLogs)(WitsmlMarshal.deserialize(newWitsmlLog, ObjLogs.class)));
-    }
+    // Fills the trace collection that was created only with the metadata values with the actual data values.
+    private static List<AbstractDataTrace> fillTraceValues(ObjLog log, List<AbstractDataTrace> traces){
+        log.getLogData().get(0).getData().forEach(logData -> {
+            String data[] = logData.split(",");
+            for(int i = 0; i < data.length - 1; i++){
+                if (i == 0)
+                    continue;
 
+                traces.get(i).getValues().put(data[0], data[i]);
+            }
+        });
+        return traces;
+    }
 }

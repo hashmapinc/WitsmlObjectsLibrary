@@ -10,6 +10,7 @@ import javax.xml.transform.TransformerException;
 import java.io.IOException;
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 public class HelperTest {
@@ -21,8 +22,6 @@ public class HelperTest {
             ObjLogs logs = WitsmlMarshal.deserialize(data, ObjLogs.class);
             String csv = LogDataHelper.getCSV(logs.getLog().get(0), true);
             assertNotNull(csv);
-
-
         } catch (IOException | JAXBException e) {
             e.printStackTrace();
         }
@@ -52,9 +51,8 @@ public class HelperTest {
             String data = TestUtilities.getResourceAsString("log_with_data_1411.xml");
             ObjLogs logs = WitsmlMarshal.deserialize(data, ObjLogs.class);
             List<AbstractDataTrace> traces = LogDataHelper.processData(logs);
+            assertEquals((logs.getLog().get(0).getLogCurveInfo().size() - 1), traces.size());
             assertNotNull(traces);
-
-
         } catch (IOException | JAXBException e) {
             e.printStackTrace();
         }
