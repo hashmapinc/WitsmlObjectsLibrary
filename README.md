@@ -1,5 +1,6 @@
+[<img src="https://hashmapinc.github.io/hashmap.github.io/images/tempus/Tempus_Black.png" width="300" height="126" alt="Hashmap, Inc Tempus"/>][tempus]
 
-#  [![Build Status](https://travis-ci.org/apache/nifi.svg?branch=master)](https://travis-ci.org/hashmapinc/WitsmlObjectsLibrary)
+[![Build Status](https://travis-ci.org/hashmapinc/WitsmlObjectsLibrary.svg?branch=master)](https://travis-ci.org/hashmapinc/WitsmlObjectsLibrary)
 # WitsmlObjectsLibrary
 This library aims to help users who need to ingest or deal with WITSML-based data from within a Linux, or cross platform
 environment, especially the Hadoop ecosystem, process and operate on WITSML data. WITSML is maintained by Energistics, a 
