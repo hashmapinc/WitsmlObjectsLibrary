@@ -1,5 +1,8 @@
 package com.hashmapinc.tempus.WitsmlObjects.Util;
 
+import com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLogs;
+import com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLog;
+
 import javax.xml.transform.*;
 import javax.xml.transform.stream.*;
 import java.io.StringReader;
@@ -61,4 +64,5 @@ public class WitsmlVersionTransformer {
         writer.flush();
         return writer.toString();
     }
+
 }
