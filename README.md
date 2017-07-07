@@ -6,10 +6,10 @@
 # WitsmlObjectsLibrary
 This library aims to help users who need to ingest or deal with WITSML-based data from within a Linux, or cross platform
 environment, especially the Hadoop ecosystem, process and operate on WITSML data. WITSML is maintained by Energistics, a 
-global consortium that facilitate the development of standards for the upstream oil and gas industry. WITSML itself is an
+global consortium that facilitates the development of standards for the upstream oil and gas industry. WITSML itself is an
 XML based specification that is used to transmit, and sometimes archive data that was generated throughout the construction
 phase of a well. At this time currently only the legacy 1.3.1.1 and 1.4.1.1 versions are supported. The intention is that this
-library can be used within Spark, Storm, NiFi, HDFS, or anywhere where WITSML data needs to be parsed and handled. Note 
+library can be used within Spark, Storm, NiFi, HDFS, or anywhere that WITSML data needs to be parsed and handled. Note 
 that this is a sub-project that will support the continuing work of developing a WITSML client for use in applications 
 such as Apache NiFi as well.
 
