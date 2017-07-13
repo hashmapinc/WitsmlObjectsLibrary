@@ -3,7 +3,7 @@
         <server>
             <id>ossrh</id>
             <username>${env.OSSRH_JIRA_USERNAME}</username>
-            <password>${env.OSSRH_JIRA_PASSWORD}</password>
+            <password>${env.OSSRH_JIRA_PASSWORD}/password>
         </server>
     </servers>
 
@@ -15,8 +15,8 @@
             </activation>
             <properties>
                 <gpg.executable>gpg</gpg.executable>
-                <gpg.keyname>${env.Key_Name}</gpg.keyname>
-                <gpg.passphrase>${env.Pass_Phrase}</gpg.passphrase>
+                <gpg.keyname>${env.GPG_KEY_NAME}</gpg.keyname>
+                <gpg.passphrase>${env.GPG_PASSPHRASE}</gpg.passphrase>
             </properties>
 
         </profile>
