@@ -54,6 +54,12 @@ public class WitsmlVersionTransformer {
      * @see WitsmlVersionTransformer
      */
     public String convertVersion(String witsmlInput) throws TransformerException {
+        if (witsmlInput == null){
+            return "";
+        }
+        if (witsmlInput.equals("")){
+            return "";
+        }
         StringReader reader = new StringReader(witsmlInput);
         StreamSource xmlInputFile = new StreamSource(reader);
         StringWriter writer = new StringWriter();
