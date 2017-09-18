@@ -6,7 +6,7 @@
 
     <groupId>com.hashmapinc.tempus</groupId>
     <artifactId>WitsmlObjects</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <packaging>jar</packaging>
 
     <name>WITSML Objects Helper Library</name>
@@ -148,11 +148,6 @@
             <artifactId>xmlunit</artifactId>
             <version>1.4</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>net.sf.saxon</groupId>
-            <artifactId>Saxon-HE</artifactId>
-            <version>9.7.0-20</version>
         </dependency>
     </dependencies>
 </project>

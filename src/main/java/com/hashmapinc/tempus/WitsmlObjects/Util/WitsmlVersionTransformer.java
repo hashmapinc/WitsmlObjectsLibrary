@@ -38,13 +38,9 @@ import java.io.StringWriter;
  */
 public class WitsmlVersionTransformer {
 
-    private Transformer transformer;
-
+    private StreamSource xslTransformationFile;
     public WitsmlVersionTransformer() throws TransformerConfigurationException {
-        StreamSource xslTransformationFile = new StreamSource(getClass().getResourceAsStream("/WITSMLverConvert.xslt"));
-        TransformerFactory tFactory = TransformerFactory.newInstance();
-        transformer = tFactory.newTransformer(xslTransformationFile);
-
+        xslTransformationFile = new StreamSource(getClass().getResourceAsStream("/WITSMLverConvert.xslt"));
     }
 
     /**
@@ -54,6 +50,8 @@ public class WitsmlVersionTransformer {
      * @see WitsmlVersionTransformer
      */
     public String convertVersion(String witsmlInput) throws TransformerException {
+        TransformerFactory tFactory = TransformerFactory.newInstance();
+        Transformer transformer = tFactory.newTransformer(xslTransformationFile);
         if (witsmlInput == null){
             return "";
         }
