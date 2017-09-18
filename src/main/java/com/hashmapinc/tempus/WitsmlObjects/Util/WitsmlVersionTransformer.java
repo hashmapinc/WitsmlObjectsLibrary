@@ -64,7 +64,11 @@ public class WitsmlVersionTransformer {
         StreamSource xmlInputFile = new StreamSource(reader);
         StringWriter writer = new StringWriter();
         StreamResult xmlOutputFile = new StreamResult(writer);
-        transformer.setParameter("omit-banner", "YES");
+        try {
+            transformer.setParameter("omit-banner", "YES");
+        } catch (NullPointerException ex){
+            ex.printStackTrace();
+        }
         transformer.setOutputProperty(OutputKeys.ENCODING,"UTF-8");
         transformer.transform(xmlInputFile, xmlOutputFile);
         writer.flush();
