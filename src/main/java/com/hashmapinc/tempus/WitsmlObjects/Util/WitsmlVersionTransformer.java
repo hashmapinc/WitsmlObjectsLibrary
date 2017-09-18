@@ -5,8 +5,8 @@ import com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLog;
 
 import javax.xml.transform.*;
 import javax.xml.transform.stream.*;
-import java.io.StringReader;
-import java.io.StringWriter;
+import java.io.*;
+import java.util.stream.Collectors;
 
 /**
  * This class is responsible for transforming WITSML data between 1.3.1.1 and 1.4.1.1 in either direction (automatically determined).
@@ -38,9 +38,14 @@ import java.io.StringWriter;
  */
 public class WitsmlVersionTransformer {
 
-    private StreamSource xslTransformationFile;
+    private String xslTransformationFile;
+
     public WitsmlVersionTransformer() throws TransformerConfigurationException {
-        xslTransformationFile = new StreamSource(getClass().getResourceAsStream("/WITSMLverConvert.xslt"));
+        InputStream stream = getClass().getResourceAsStream("/WITSMLverConvert.xslt");
+        BufferedReader reader = new BufferedReader(
+                new InputStreamReader(stream));
+        xslTransformationFile = reader.lines().collect(Collectors.joining(
+                System.getProperty("line.separator")));
     }
 
     /**
@@ -51,7 +56,8 @@ public class WitsmlVersionTransformer {
      */
     public String convertVersion(String witsmlInput) throws TransformerException {
         TransformerFactory tFactory = TransformerFactory.newInstance();
-        Transformer transformer = tFactory.newTransformer(xslTransformationFile);
+        StreamSource transformSource = new StreamSource(new StringReader(xslTransformationFile));
+        Transformer transformer = tFactory.newTransformer(transformSource);
         if (witsmlInput == null){
             return "";
         }
