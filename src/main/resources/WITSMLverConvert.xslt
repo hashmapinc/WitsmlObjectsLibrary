@@ -1,4 +1,4 @@
-<xsl:transform xmlns:w131="http://www.witsml.org/schemas/131" xmlns:w141="http://www.witsml.org/schemas/1series" xmlns:prodml="http://www.prodml.org/schemas/1series" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:diff="http://www.posc.org/schemas/schemaDiff" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1">
+<xsl:transform xmlns:w131="http://www.witsml.org/schemas/131" xmlns:w141="http://www.witsml.org/schemas/1series" xmlns:prodml="http://www.prodml.org/schemas/1series" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:diff="http://www.posc.org/schemas/schemaDiff" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
 	<xsl:output method="xml" media-type="text/xml" encoding="utf-8" indent="yes"/>
 	<!-- ==================================================================== -->
 	<!-- Input parameters. -->
