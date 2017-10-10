@@ -125,6 +125,8 @@ public class LogDataHelper {
             }
         }
         trace.setMneumoic(info.getMnemonic().getValue());
+        trace.setUnitOfMeasure(info.getUnit());
+
         return trace;
     }
 

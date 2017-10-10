@@ -12,6 +12,8 @@ public abstract class AbstractDataTrace <K,V> {
 
     private String mnemonic;
 
+    private String unitOfMeasure;
+
     /**
      * The index type of the trace, either Depth or Time
      * @return The index type
@@ -33,6 +35,18 @@ public abstract class AbstractDataTrace <K,V> {
     public void setMneumoic(String mneumoic){
         this.mnemonic = mneumoic;
     }
+
+    /**
+     * Gets the unit of measure for the channel
+     * @return The unit of measure
+     */
+    public String getUnitOfMeasure() {return unitOfMeasure;}
+
+    /**
+     * Sets the unit of measure for the channel
+     * @param unitOfMeasure The unit of measure for the channel
+     */
+    public void setUnitOfMeasure(String unitOfMeasure){ this.unitOfMeasure = unitOfMeasure; }
 
     /**
      * The values that were contained within the log for the trace

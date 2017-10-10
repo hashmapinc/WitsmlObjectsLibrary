@@ -69,7 +69,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "commonData",
     "customData"
 })
-public class ObjWell {
+public class ObjWell implements WitsmlObj {
 
     @XmlElement(required = true)
     protected String name;
