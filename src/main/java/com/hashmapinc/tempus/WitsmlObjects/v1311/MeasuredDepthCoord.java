@@ -32,21 +32,19 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "measuredDepthCoord")
 public class MeasuredDepthCoord
-    extends AbstractMeasure
+    extends com.hashmapinc.tempus.WitsmlObjects.common.MeasuredDepthCoord
 {
 
     @XmlAttribute(name = "uom", required = true)
     protected MeasuredDepthUom uom;
-    @XmlAttribute(name = "datum")
-    protected String datum;
 
     /**
      * Gets the value of the uom property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link MeasuredDepthUom }
-     *     
+     *
      */
     public MeasuredDepthUom getUom() {
         return uom;
@@ -54,38 +52,13 @@ public class MeasuredDepthCoord
 
     /**
      * Sets the value of the uom property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link MeasuredDepthUom }
-     *     
+     *
      */
     public void setUom(MeasuredDepthUom value) {
         this.uom = value;
     }
-
-    /**
-     * Gets the value of the datum property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getDatum() {
-        return datum;
-    }
-
-    /**
-     * Sets the value of the datum property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setDatum(String value) {
-        this.datum = value;
-    }
-
 }

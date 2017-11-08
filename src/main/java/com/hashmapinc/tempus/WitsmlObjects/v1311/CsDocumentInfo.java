@@ -5,9 +5,7 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -56,28 +54,20 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "owner",
     "comment"
 })
-public class CsDocumentInfo {
+public class CsDocumentInfo extends com.hashmapinc.tempus.WitsmlObjects.common.CsDocumentInfo {
 
     @XmlElement(name = "DocumentName", required = true)
     protected NameStruct documentName;
     @XmlElement(name = "DocumentAlias")
     protected List<NameStruct> documentAlias;
     @XmlElement(name = "DocumentDate")
-    @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar documentDate;
     protected List<NameStruct> documentClass;
     @XmlElement(name = "FileCreationInformation")
     protected FileCreationType fileCreationInformation;
     @XmlElement(name = "SecurityInformation")
     protected List<SecurityInfoType> securityInformation;
-    @XmlElement(name = "Disclaimer")
-    protected String disclaimer;
     @XmlElement(name = "AuditTrail")
     protected AuditType auditTrail;
-    @XmlElement(name = "Owner")
-    protected String owner;
-    @XmlElement(name = "Comment")
-    protected String comment;
 
     /**
      * Gets the value of the documentName property.
@@ -130,30 +120,6 @@ public class CsDocumentInfo {
             documentAlias = new ArrayList<NameStruct>();
         }
         return this.documentAlias;
-    }
-
-    /**
-     * Gets the value of the documentDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getDocumentDate() {
-        return documentDate;
-    }
-
-    /**
-     * Sets the value of the documentDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setDocumentDate(XMLGregorianCalendar value) {
-        this.documentDate = value;
     }
 
     /**
@@ -239,30 +205,6 @@ public class CsDocumentInfo {
     }
 
     /**
-     * Gets the value of the disclaimer property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getDisclaimer() {
-        return disclaimer;
-    }
-
-    /**
-     * Sets the value of the disclaimer property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setDisclaimer(String value) {
-        this.disclaimer = value;
-    }
-
-    /**
      * Gets the value of the auditTrail property.
      * 
      * @return
@@ -284,54 +226,6 @@ public class CsDocumentInfo {
      */
     public void setAuditTrail(AuditType value) {
         this.auditTrail = value;
-    }
-
-    /**
-     * Gets the value of the owner property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getOwner() {
-        return owner;
-    }
-
-    /**
-     * Sets the value of the owner property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setOwner(String value) {
-        this.owner = value;
-    }
-
-    /**
-     * Gets the value of the comment property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getComment() {
-        return comment;
-    }
-
-    /**
-     * Sets the value of the comment property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setComment(String value) {
-        this.comment = value;
     }
 
 }

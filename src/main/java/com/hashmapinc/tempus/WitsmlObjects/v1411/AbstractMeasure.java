@@ -12,7 +12,6 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
 
 
 /**
@@ -93,26 +92,6 @@ import javax.xml.bind.annotation.XmlValue;
     VolumeFlowRateMeasure.class,
     MagneticInductionMeasure.class
 })
-public abstract class AbstractMeasure {
-
-    @XmlValue
-    protected double value;
-
-    /**
-     * This type disallows an "empty" double value.
-     * 			This type should not be used directly except to derive another type.
-     * 
-     */
-    public double getValue() {
-        return value;
-    }
-
-    /**
-     * Sets the value of the value property.
-     * 
-     */
-    public void setValue(double value) {
-        this.value = value;
-    }
+public abstract class AbstractMeasure extends com.hashmapinc.tempus.WitsmlObjects.common.AbstractMeasure {
 
 }

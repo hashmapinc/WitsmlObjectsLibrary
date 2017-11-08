@@ -12,11 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -66,25 +63,15 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "commonData",
     "customData"
 })
-public class ObjMessage {
+public class ObjMessage
+    extends com.hashmapinc.tempus.WitsmlObjects.common.ObjMessage {
 
-    @XmlElement(required = true)
-    protected String nameWell;
-    @XmlElement(required = true)
-    protected String nameWellbore;
-    @XmlElement(required = true)
-    protected String name;
     protected RefObjectString objectReference;
     protected RefObjectString subObjectReference;
-    @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar dTim;
-    protected String activityCode;
-    protected String detailActivity;
     protected MeasuredDepthCoord md;
     protected MeasuredDepthCoord mdBit;
     @XmlSchemaType(name = "string")
     protected MessageType typeMessage;
-    protected String messageText;
     protected List<IndexedObject> param;
     @XmlSchemaType(name = "string")
     protected MessageSeverity severity;
@@ -92,84 +79,6 @@ public class ObjMessage {
     protected MessageProbability warnProbability;
     protected CsCommonData commonData;
     protected CsCustomData customData;
-    @XmlAttribute(name = "uidWell")
-    protected String uidWell;
-    @XmlAttribute(name = "uidWellbore")
-    protected String uidWellbore;
-    @XmlAttribute(name = "uid")
-    protected String uid;
-
-    /**
-     * Gets the value of the nameWell property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getNameWell() {
-        return nameWell;
-    }
-
-    /**
-     * Sets the value of the nameWell property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setNameWell(String value) {
-        this.nameWell = value;
-    }
-
-    /**
-     * Gets the value of the nameWellbore property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getNameWellbore() {
-        return nameWellbore;
-    }
-
-    /**
-     * Sets the value of the nameWellbore property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setNameWellbore(String value) {
-        this.nameWellbore = value;
-    }
-
-    /**
-     * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setName(String value) {
-        this.name = value;
-    }
 
     /**
      * Gets the value of the objectReference property.
@@ -217,78 +126,6 @@ public class ObjMessage {
      */
     public void setSubObjectReference(RefObjectString value) {
         this.subObjectReference = value;
-    }
-
-    /**
-     * Gets the value of the dTim property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getDTim() {
-        return dTim;
-    }
-
-    /**
-     * Sets the value of the dTim property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setDTim(XMLGregorianCalendar value) {
-        this.dTim = value;
-    }
-
-    /**
-     * Gets the value of the activityCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getActivityCode() {
-        return activityCode;
-    }
-
-    /**
-     * Sets the value of the activityCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setActivityCode(String value) {
-        this.activityCode = value;
-    }
-
-    /**
-     * Gets the value of the detailActivity property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getDetailActivity() {
-        return detailActivity;
-    }
-
-    /**
-     * Sets the value of the detailActivity property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setDetailActivity(String value) {
-        this.detailActivity = value;
     }
 
     /**

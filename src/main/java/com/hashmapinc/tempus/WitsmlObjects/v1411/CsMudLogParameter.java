@@ -12,11 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -67,26 +65,17 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "commonTime",
     "extensionNameValue"
 })
-public class CsMudLogParameter {
+public class CsMudLogParameter extends com.hashmapinc.tempus.WitsmlObjects.common.CsMudLogParameter {
 
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected MudLogParameterType type;
-    @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar dTime;
-    @XmlElement(required = true)
-    protected MeasuredDepthCoord mdTop;
-    @XmlElement(required = true)
-    protected MeasuredDepthCoord mdBottom;
     protected ForceMeasure force;
     protected VolumePerVolumeMeasure concentration;
     protected DensityMeasure equivalentMudWeight;
     protected ForcePerVolumeMeasure pressureGradient;
-    protected String text;
     protected CsCommonTime commonTime;
     protected List<CsExtensionNameValue> extensionNameValue;
-    @XmlAttribute(name = "uid")
-    protected String uid;
 
     /**
      * Gets the value of the type property.
@@ -110,78 +99,6 @@ public class CsMudLogParameter {
      */
     public void setType(MudLogParameterType value) {
         this.type = value;
-    }
-
-    /**
-     * Gets the value of the dTime property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getDTime() {
-        return dTime;
-    }
-
-    /**
-     * Sets the value of the dTime property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setDTime(XMLGregorianCalendar value) {
-        this.dTime = value;
-    }
-
-    /**
-     * Gets the value of the mdTop property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link MeasuredDepthCoord }
-     *     
-     */
-    public MeasuredDepthCoord getMdTop() {
-        return mdTop;
-    }
-
-    /**
-     * Sets the value of the mdTop property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link MeasuredDepthCoord }
-     *     
-     */
-    public void setMdTop(MeasuredDepthCoord value) {
-        this.mdTop = value;
-    }
-
-    /**
-     * Gets the value of the mdBottom property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link MeasuredDepthCoord }
-     *     
-     */
-    public MeasuredDepthCoord getMdBottom() {
-        return mdBottom;
-    }
-
-    /**
-     * Sets the value of the mdBottom property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link MeasuredDepthCoord }
-     *     
-     */
-    public void setMdBottom(MeasuredDepthCoord value) {
-        this.mdBottom = value;
     }
 
     /**
@@ -281,30 +198,6 @@ public class CsMudLogParameter {
     }
 
     /**
-     * Gets the value of the text property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getText() {
-        return text;
-    }
-
-    /**
-     * Sets the value of the text property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setText(String value) {
-        this.text = value;
-    }
-
-    /**
      * Gets the value of the commonTime property.
      * 
      * @return
@@ -356,29 +249,4 @@ public class CsMudLogParameter {
         }
         return this.extensionNameValue;
     }
-
-    /**
-     * Gets the value of the uid property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getUid() {
-        return uid;
-    }
-
-    /**
-     * Sets the value of the uid property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setUid(String value) {
-        this.uid = value;
-    }
-
 }
