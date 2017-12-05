@@ -59,12 +59,12 @@ public class LogDataHelper {
 
     private static List<ColumnarDataTrace> fillColumnarValues(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLog log, List<ColumnarDataTrace> traces, boolean omitNulls){
         log.getLogData().get(0).getData().forEach(logData -> {
-            String data[] = logData.split(",");
+            String data[] = logData.split(",(?=([^\"]*\"[^\"]*\")*[^\"]*$)");
             for(int i = 0; i < data.length - 1; i++){
                 if (i == 0)
                     continue;
                 if (omitNulls && data[i].equals(""))
-                    continue;
+                    continue;3
                 traces.get(i).createDataPoint(data[0], data[i]);
             }
         });
