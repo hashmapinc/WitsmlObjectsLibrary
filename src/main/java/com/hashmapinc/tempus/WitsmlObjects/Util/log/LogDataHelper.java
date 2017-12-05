@@ -64,7 +64,7 @@ public class LogDataHelper {
                 if (i == 0)
                     continue;
                 if (omitNulls && data[i].equals(""))
-                    continue;3
+                    continue;
                 traces.get(i).createDataPoint(data[0], data[i]);
             }
         });
