@@ -37,7 +37,7 @@ public class LogDataHelper {
         return fillTraceValues(logToProcess, curves);
     }
 
-    public static List<ColumnarDataTrace> getColumnarDataPoints(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLogs log){
+    public static List<ColumnarDataTrace> getColumnarDataPoints(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLogs log, boolean omitNulls){
         if (log.getLog().size() > 1)
             throw new IllegalArgumentException("Object cannot contain more than one log per request");
 
@@ -54,14 +54,16 @@ public class LogDataHelper {
             traces.add(trace);
         }
 
-        return fillColumnarValues(logToProcess, traces);
+        return fillColumnarValues(logToProcess, traces, omitNulls);
     }
 
-    private static List<ColumnarDataTrace> fillColumnarValues(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLog log, List<ColumnarDataTrace> traces){
+    private static List<ColumnarDataTrace> fillColumnarValues(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLog log, List<ColumnarDataTrace> traces, boolean omitNulls){
         log.getLogData().get(0).getData().forEach(logData -> {
             String data[] = logData.split(",");
             for(int i = 0; i < data.length - 1; i++){
                 if (i == 0)
+                    continue;
+                if (omitNulls && data[i].equals(""))
                     continue;
                 traces.get(i).createDataPoint(data[0], data[i]);
             }

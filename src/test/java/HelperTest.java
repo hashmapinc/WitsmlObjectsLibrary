@@ -65,7 +65,7 @@ public class HelperTest {
         try {
             String data = TestUtilities.getResourceAsString("log_with_data_1411.xml");
             ObjLogs logs = WitsmlMarshal.deserialize(data, ObjLogs.class);
-            List<ColumnarDataTrace> traces = LogDataHelper.getColumnarDataPoints(logs);
+            List<ColumnarDataTrace> traces = LogDataHelper.getColumnarDataPoints(logs, false);
             assertEquals((logs.getLog().get(0).getLogCurveInfo().size() - 1), traces.size());
             assertNotNull(traces);
         } catch (IOException | JAXBException e) {
