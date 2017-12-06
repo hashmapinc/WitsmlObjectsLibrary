@@ -12,6 +12,16 @@ public class ColumnarDataTrace <I, V> {
 
     private String logUid;
 
+    public String getWellboreUid() {
+        return wellboreUid;
+    }
+
+    public void setWellboreUid(String wellboreUid) {
+        this.wellboreUid = wellboreUid;
+    }
+
+    private String wellboreUid;
+
     private List<ColumnarDataPoint<I, V>> dataPoints = new ArrayList<>();
 
     public String getMnemonic() {
@@ -59,6 +69,8 @@ public class ColumnarDataTrace <I, V> {
         datapoint.setMneumoic(this.mnemonic);
         datapoint.setIndex(index);
         datapoint.setValue(value);
+        datapoint.setLogName(logName);
+        datapoint.setWellboreUid(wellboreUid);
         this.dataPoints.add(datapoint);
     }
 }

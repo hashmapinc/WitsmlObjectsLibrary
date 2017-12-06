@@ -16,6 +16,27 @@ public class ColumnarDataPoint<I,V> {
 
     private V value;
 
+    private String logName;
+
+    private String wellboreUid;
+
+    public String getWellboreUid() {
+        return wellboreUid;
+    }
+
+    public void setWellboreUid(String wellboreUid) {
+        this.wellboreUid = wellboreUid;
+    }
+
+    public String getLogName() {
+        return logName;
+    }
+
+    public void setLogName(String logName) {
+        this.logName = logName;
+    }
+
+
     /**
      * The index of the point
      * @return The index type
