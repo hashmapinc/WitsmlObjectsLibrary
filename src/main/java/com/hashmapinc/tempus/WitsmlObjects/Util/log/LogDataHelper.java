@@ -48,7 +48,7 @@ public class LogDataHelper {
         for (int i = 0; i < logToProcess.getLogCurveInfo().size(); i++){
             if (i == 0)
                 continue;
-            ColumnarDataTrace trace = createColumnarDataTrace(logToProcess.getIndexType(), logToProcess.getName(), logToProcess.getUid(), logToProcess.getLogCurveInfo().get(i), logToProcess.getUidWellbore());
+            ColumnarDataTrace trace = createColumnarDataTrace(logToProcess.getIndexType(), logToProcess.getName(), logToProcess.getUid(), logToProcess.getLogCurveInfo().get(i), logToProcess.getUidWellbore(), logToProcess.getUidWell());
             if (trace == null)
                 continue;
             traces.add(trace);
@@ -71,7 +71,7 @@ public class LogDataHelper {
         return traces;
     }
 
-    private static ColumnarDataTrace createColumnarDataTrace(com.hashmapinc.tempus.WitsmlObjects.v1411.LogIndexType indexType, String logName, String logUid, CsLogCurveInfo info, String wellboreId){
+    private static ColumnarDataTrace createColumnarDataTrace(com.hashmapinc.tempus.WitsmlObjects.v1411.LogIndexType indexType, String logName, String logUid, CsLogCurveInfo info, String wellboreId, String wellId){
 
         ColumnarDataTrace trace = null;
 
@@ -145,6 +145,7 @@ public class LogDataHelper {
         trace.setMnemonic(info.getMnemonic().getValue());
         trace.setUnitOfMeasure(info.getUnit());
         trace.setWellboreUid(wellboreId);
+        trace.setWellUid(wellId);
         return trace;
     }
 

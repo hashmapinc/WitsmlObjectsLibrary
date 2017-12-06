@@ -12,6 +12,16 @@ public class ColumnarDataTrace <I, V> {
 
     private String logUid;
 
+    public String getWellUid() {
+        return wellUid;
+    }
+
+    public void setWellUid(String wellUid) {
+        this.wellUid = wellUid;
+    }
+
+    private String wellUid;
+
     public String getWellboreUid() {
         return wellboreUid;
     }
@@ -71,6 +81,7 @@ public class ColumnarDataTrace <I, V> {
         datapoint.setValue(value);
         datapoint.setLogName(logName);
         datapoint.setWellboreUid(wellboreUid);
+        datapoint.setWellUid(wellUid);
         this.dataPoints.add(datapoint);
     }
 }

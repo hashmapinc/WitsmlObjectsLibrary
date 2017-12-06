@@ -20,6 +20,16 @@ public class ColumnarDataPoint<I,V> {
 
     private String wellboreUid;
 
+    public String getWellUid() {
+        return wellUid;
+    }
+
+    public void setWellUid(String wellUid) {
+        this.wellUid = wellUid;
+    }
+
+    private String wellUid;
+
     public String getWellboreUid() {
         return wellboreUid;
     }
