@@ -3,6 +3,8 @@ package com.hashmapinc.tempus.WitsmlObjects.Util.log;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class ColumnarDataTrace <I, V> {
     private String mnemonic;
 
@@ -11,8 +13,30 @@ public class ColumnarDataTrace <I, V> {
     private String logName;
 
     private String logUid;
+    
+    private String index;
+    
+    private String indexString;
+    
+    
 
-    public String getWellUid() {
+    public String getIndexString() {
+		return indexString;
+	}
+
+	public void setIndexString(String indexString) {
+		this.indexString = indexString;
+	}
+
+	public String getIndex() {
+		return index;
+	}
+
+	public void setIndex(String index) {
+		this.index = index;
+	}
+
+	public String getWellUid() {
         return wellUid;
     }
 
@@ -77,11 +101,21 @@ public class ColumnarDataTrace <I, V> {
     public void createDataPoint(I index, V value){
         ColumnarDataPoint<I, V> datapoint = new ColumnarDataPoint<>();
         datapoint.setMneumoic(this.mnemonic);
+        
+        
         datapoint.setIndex(index);
         datapoint.setValue(value);
         datapoint.setLogName(logName);
         datapoint.setWellboreUid(wellboreUid);
         datapoint.setWellUid(wellUid);
+        
+       try{
+    	   datapoint.setIndexString(StringUtils.leftPad(String.valueOf(index), 10, "0"));
+       }catch(Exception exp){
+    	 exp.printStackTrace();
+       }
+        
+       
         this.dataPoints.add(datapoint);
     }
 }

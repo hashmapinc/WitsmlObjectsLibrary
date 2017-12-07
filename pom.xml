@@ -6,7 +6,7 @@
 
     <groupId>com.hashmapinc.tempus</groupId>
     <artifactId>WitsmlObjects</artifactId>
-    <version>1.0.11</version>
+    <version>1.0.12</version>
     <packaging>jar</packaging>
 
     <name>WITSML Objects Helper Library</name>
@@ -148,6 +148,11 @@
             <artifactId>xmlunit</artifactId>
             <version>1.4</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+        	<groupId>org.apache.commons</groupId>
+        	<artifactId>commons-lang3</artifactId>
+        	<version>3.7</version>
         </dependency>
     </dependencies>
 </project>

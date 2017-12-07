@@ -19,8 +19,20 @@ public class ColumnarDataPoint<I,V> {
     private String logName;
 
     private String wellboreUid;
+    
+    private String indexString;
+    
+    
 
-    public String getWellUid() {
+    public String getIndexString() {
+		return indexString;
+	}
+
+	public void setIndexString(String indexString) {
+		this.indexString = indexString;
+	}
+
+	public String getWellUid() {
         return wellUid;
     }
 
