@@ -56,6 +56,42 @@ public class LogDataHelper {
 
         return fillColumnarValues(logToProcess, traces, omitNulls);
     }
+    
+    //New method created to change the index type to String as specified length from the ListObjectProcessor "Data Type Convert Filter"
+    public static List<ColumnarDataTrace> getColumnarDataPoints(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLogs log, boolean omitNulls,String typeConvertFilter){
+        if (log.getLog().size() > 1)
+            throw new IllegalArgumentException("Object cannot contain more than one log per request");
+
+        List<ColumnarDataTrace> traces = new ArrayList<>();
+
+        ObjLog logToProcess = log.getLog().get(0);
+
+        for (int i = 0; i < logToProcess.getLogCurveInfo().size(); i++){
+            if (i == 0)
+                continue;
+            ColumnarDataTrace trace = createColumnarDataTrace(logToProcess.getIndexType(), logToProcess.getName(), logToProcess.getUid(), logToProcess.getLogCurveInfo().get(i), logToProcess.getUidWellbore(), logToProcess.getUidWell());
+            if (trace == null)
+                continue;
+            traces.add(trace);
+        }
+
+        return fillColumnarValues(logToProcess, traces, omitNulls,typeConvertFilter);
+    }
+    
+    //New method created to change the index type to String as specified length from the ListObjectProcessor "Data Type Convert Filter"
+    private static List<ColumnarDataTrace> fillColumnarValues(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLog log, List<ColumnarDataTrace> traces, boolean omitNulls,String typeConvertFilter){
+        log.getLogData().get(0).getData().forEach(logData -> {
+            String data[] = logData.split(",(?=([^\"]*\"[^\"]*\")*[^\"]*$)");
+            for(int i = 0; i < data.length - 1; i++){
+                if (i == 0)
+                    continue;
+                if (omitNulls && data[i].equals(""))
+                    continue;
+                traces.get(i).createDataPoint(data[0], data[i],typeConvertFilter);
+            }
+        });
+        return traces;
+    }
 
     private static List<ColumnarDataTrace> fillColumnarValues(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLog log, List<ColumnarDataTrace> traces, boolean omitNulls){
         log.getLogData().get(0).getData().forEach(logData -> {

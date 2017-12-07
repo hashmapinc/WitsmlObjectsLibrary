@@ -101,20 +101,34 @@ public class ColumnarDataTrace <I, V> {
     public void createDataPoint(I index, V value){
         ColumnarDataPoint<I, V> datapoint = new ColumnarDataPoint<>();
         datapoint.setMneumoic(this.mnemonic);
-        
-        
         datapoint.setIndex(index);
         datapoint.setValue(value);
         datapoint.setLogName(logName);
         datapoint.setWellboreUid(wellboreUid);
         datapoint.setWellUid(wellUid);
-        
-       try{
-    	   datapoint.setIndexString(StringUtils.leftPad(String.valueOf(index), 10, "0"));
+        this.dataPoints.add(datapoint);
+    }
+    
+    //New method overridden to accept the convert filter as parameter.
+    public void createDataPoint(I index, V value,String typeConvertFilter){
+        ColumnarDataPoint<I, V> datapoint = new ColumnarDataPoint<>();
+        datapoint.setMneumoic(this.mnemonic);
+        datapoint.setIndex(index);
+        datapoint.setValue(value);
+        datapoint.setLogName(logName);
+        datapoint.setWellboreUid(wellboreUid);
+        datapoint.setWellUid(wellUid);
+        try{
+    	   if(StringUtils.isNotEmpty(typeConvertFilter) && StringUtils.isNumeric(typeConvertFilter)){
+    		   int dataLength = Integer.valueOf(typeConvertFilter);
+    		   String indexvalue = String.valueOf(index);
+    		   if(StringUtils.isNotEmpty(indexvalue) && indexvalue.length() < dataLength){
+    			   datapoint.setIndexString(StringUtils.leftPad(indexvalue, dataLength, "0"));
+    		   }
+    	   }
        }catch(Exception exp){
     	 exp.printStackTrace();
        }
-        
        
         this.dataPoints.add(datapoint);
     }
