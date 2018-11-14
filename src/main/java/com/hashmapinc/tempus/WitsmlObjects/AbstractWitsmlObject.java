@@ -15,6 +15,24 @@
  */
 package com.hashmapinc.tempus.WitsmlObjects;
 
-public interface IWitsmlObject {
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
+abstract class AbstractWitsmlObject {
+    String name;
+    String uid;
+    String parentUid;
+
+    public String getObjectType() {
+        // Validate the className. The pattern is "Obj<type>"
+        String className = this.getClass().getSimpleName();
+        boolean isValidClassname = (
+            className.substring(0, 3).equals("Obj") && 
+            !className.substring(3).isEmpty()
+        );
+
+        // get the type if the classname is valid, otherwise null
+        String type = isValidClassname ? className.substring(3) : null;
+        return type;
+    }
 }
