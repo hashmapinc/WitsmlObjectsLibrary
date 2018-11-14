@@ -268,7 +268,7 @@ public enum StimFluidSubtype {
 
     /**
      * A water containing salt; general term for water that contains a significant 
-     * 					concentration of dissolved salts.  on a water with a salinity > 3000 ppm Cl, however many other 
+     * 					concentration of dissolved salts.  on a water with a salinity &gt; 3000 ppm Cl, however many other
      * 					salts ions may be present.
      * 
      */
