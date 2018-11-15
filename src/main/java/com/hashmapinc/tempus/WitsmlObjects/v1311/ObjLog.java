@@ -2,6 +2,9 @@ package com.hashmapinc.tempus.WitsmlObjects.v1311;
 
 import javax.xml.bind.annotation.*;
 import javax.xml.datatype.XMLGregorianCalendar;
+
+import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -58,7 +61,7 @@ import java.util.List;
         "commonData",
         "customData"
 })
-public class ObjLog {
+public class ObjLog extends AbstractWitsmlObject {
 
     @XmlElement(required = true)
     protected String nameWell;
@@ -99,6 +102,14 @@ public class ObjLog {
     protected String uidWellbore;
     @XmlAttribute(name = "uid")
     protected String uid;
+
+    /**
+     * get the parent uid as a string
+     */
+    @Override
+    public String getParentUid() {
+        return this.uidWellbore;
+    }
 
     /**
      * Gets the value of the nameWell property.

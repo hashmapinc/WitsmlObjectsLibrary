@@ -10,6 +10,7 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
 
 /**
  * <p>Java class for obj_trajectory complex type.
@@ -63,7 +64,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "commonData",
     "customData"
 })
-public class ObjTrajectory {
+public class ObjTrajectory extends AbstractWitsmlObject {
 
     @XmlElement(required = true)
     protected String nameWell;
@@ -99,6 +100,14 @@ public class ObjTrajectory {
     protected String uidWellbore;
     @XmlAttribute(name = "uid")
     protected String uid;
+
+    /**
+     * get the parent uid as a string
+     */
+    @Override
+    public String getParentUid() {
+        return this.uidWellbore;
+    }
 
     /**
      * Gets the value of the nameWell property.

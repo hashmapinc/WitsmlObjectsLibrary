@@ -8,6 +8,7 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
 
 /**
  * <p>Java class for obj_wellbore complex type.
@@ -60,7 +61,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "commonData",
     "customData"
 })
-public class ObjWellbore {
+public class ObjWellbore extends AbstractWitsmlObject {
 
     @XmlElement(required = true)
     protected String nameWell;
@@ -96,6 +97,14 @@ public class ObjWellbore {
     protected String uidWell;
     @XmlAttribute(name = "uid")
     protected String uid;
+
+    /**
+     * get the parent uid as a string
+     */
+    @Override
+    public String getParentUid() {
+        return this.uidWell;
+    }
 
     /**
      * Gets the value of the nameWell property.

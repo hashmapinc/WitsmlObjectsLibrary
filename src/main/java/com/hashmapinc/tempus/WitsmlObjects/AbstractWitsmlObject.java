@@ -15,14 +15,28 @@
  */
 package com.hashmapinc.tempus.WitsmlObjects;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+public abstract class AbstractWitsmlObject {
+    protected String name;
+    protected String uid;
 
-abstract class AbstractWitsmlObject {
-    String name;
-    String uid;
-    String parentUid;
+    /**
+     * This function will try to return the parentUid. If one does not exist, then
+     * null is returned.
+     * 
+     * @return parentUid - String value with the parentUid if it exists, otherwise null
+     */
+    public String getParentUid() {
+        return null; // default behavior if not overridden
+    }
 
+    /**
+     * This function inspects the concrete Class name and extracts
+     * a 'type' string from that name based on the conventional
+     * object class naming of "Obj<Type>".
+     * 
+     * @return type -   String value with the object type, or 
+     *                  null if a type cannot be determined
+     */
     public String getObjectType() {
         // Validate the className. The pattern is "Obj<type>"
         String className = this.getClass().getSimpleName();
