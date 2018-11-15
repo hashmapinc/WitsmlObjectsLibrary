@@ -18,6 +18,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
+
 
 /**
  * <p>Java class for obj_well complex type.
@@ -78,7 +80,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "commonData",
     "customData"
 })
-public class ObjWell {
+public class ObjWell extends AbstractWitsmlObject {
 
     @XmlElement(required = true)
     protected String name;
