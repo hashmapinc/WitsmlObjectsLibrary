@@ -20,6 +20,22 @@ public abstract class AbstractWitsmlObject {
     protected String uid;
 
     /**
+     * This function provides a string representation of the object
+     * 
+     * @return stringRep - string representing this object
+     */
+    public String toString() {
+        return (
+            "<AbstractWitsmlObject " + 
+            "[name=" + this.name + "]" +
+            "[uid=" + this.uid + "]" +
+            "[parentUID=" + this.getParentUid() + "]" +
+            "[objectType=" + this.getObjectType() + "]" +
+            ">"
+        );
+    }
+
+    /**
      * This function will try to return the parentUid. If one does not exist, then
      * null is returned.
      * 
