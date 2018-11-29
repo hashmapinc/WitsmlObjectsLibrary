@@ -49,6 +49,18 @@ public class ObjWells {
     protected String version;
 
     /**
+     * adds a well object to the well list. If list is null, it is instantiated
+     * 
+     * @param wellObj - well to add
+     */
+    public void addWell(ObjWell wellObj) {
+        if (well == null) {
+            well = new ArrayList<ObjWell>();
+        }
+        well.add(wellObj);
+    }
+
+    /**
      * Gets the value of the documentInfo property.
      * 
      * @return

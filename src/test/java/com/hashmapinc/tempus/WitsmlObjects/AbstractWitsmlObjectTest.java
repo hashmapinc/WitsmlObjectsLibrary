@@ -35,7 +35,7 @@ public class AbstractWitsmlObjectTest {
 
             String uid = obj1311.getUid();
 
-            assertEquals("f34a", uid);
+            assertEquals("pe84e", uid);
         } catch (Exception e) {
             e.printStackTrace();
             fail();
@@ -49,7 +49,7 @@ public class AbstractWitsmlObjectTest {
 
             String uid = obj1411.getUid();
 
-            assertEquals("f34a", uid);
+            assertEquals("pe84e", uid);
         } catch (Exception e) {
             e.printStackTrace();
             fail();
@@ -82,7 +82,7 @@ public class AbstractWitsmlObjectTest {
 
             String uid = obj1311.getUid();
 
-            assertEquals("f34a", uid);
+            assertEquals("W-12", uid);
         } catch (Exception e) {
             e.printStackTrace();
             fail();
@@ -96,7 +96,7 @@ public class AbstractWitsmlObjectTest {
 
             String uid = obj1411.getUid();
 
-            assertEquals("f34a", uid);
+            assertEquals("W-12", uid);
         } catch (Exception e) {
             e.printStackTrace();
             fail();
@@ -129,7 +129,7 @@ public class AbstractWitsmlObjectTest {
 
             String uid = obj1311.getUid();
 
-            assertEquals("f34a", uid);
+            assertEquals("w-12", uid);
         } catch (Exception e) {
             e.printStackTrace();
             fail();
@@ -143,7 +143,7 @@ public class AbstractWitsmlObjectTest {
 
             String uid = obj1411.getUid();
 
-            assertEquals("f34a", uid);
+            assertEquals("w-12", uid);
         } catch (Exception e) {
             e.printStackTrace();
             fail();
