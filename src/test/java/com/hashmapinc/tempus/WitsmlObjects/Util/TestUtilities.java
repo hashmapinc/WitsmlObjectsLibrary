@@ -1,3 +1,5 @@
+package com.hashmapinc.tempus.WitsmlObjects.Util;
+
 import org.custommonkey.xmlunit.DetailedDiff;
 import org.custommonkey.xmlunit.XMLUnit;
 import org.junit.Assert;

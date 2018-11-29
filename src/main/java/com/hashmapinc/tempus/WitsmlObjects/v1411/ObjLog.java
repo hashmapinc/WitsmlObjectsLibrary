@@ -79,7 +79,7 @@ import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
     "commonData",
     "customData"
 })
-public class ObjLog{
+public class ObjLog extends AbstractWitsmlObject {
 
     @XmlElement(required = true)
     protected String nameWell;
@@ -188,6 +188,7 @@ public class ObjLog{
      *     {@link String }
      *     
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -875,6 +876,7 @@ public class ObjLog{
      *     {@link String }
      *     
      */
+    @Override
     public String getUid() {
         return uid;
     }
@@ -889,6 +891,14 @@ public class ObjLog{
      */
     public void setUid(String value) {
         this.uid = value;
+    }
+
+    /**
+     * get the version as a string
+     */
+    @Override
+    public String getVersion() {
+        return "1.4.1.1";
     }
 
 }

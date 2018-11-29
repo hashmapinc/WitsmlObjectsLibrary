@@ -1,7 +1,8 @@
+package com.hashmapinc.tempus.WitsmlObjects.Util;
+
 import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlMarshal;
 import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlVersionTransformer;
 import com.hashmapinc.tempus.WitsmlObjects.Util.log.AbstractDataTrace;
-import com.hashmapinc.tempus.WitsmlObjects.Util.log.ColumnarDataPoint;
 import com.hashmapinc.tempus.WitsmlObjects.Util.log.ColumnarDataTrace;
 import com.hashmapinc.tempus.WitsmlObjects.Util.log.LogDataHelper;
 import com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLogs;
