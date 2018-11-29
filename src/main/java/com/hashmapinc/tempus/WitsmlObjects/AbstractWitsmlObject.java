@@ -27,11 +27,11 @@ public abstract class AbstractWitsmlObject {
     public String toString() {
         return (
             "<AbstractWitsmlObject " + 
-            "\t[name=" + this.getName() + "]" +
-            "\t[version=" + this.getVersion() + "]" +
-            "\t[uid=" + this.getUID() + "]" +
-            "\t[parentUID=" + this.getParentUid() + "]" +
-            "\t[objectType=" + this.getObjectType() + "]" +
+            "[name=" + this.getName() + "]" +
+            "[version=" + this.getVersion() + "]" +
+            "[uid=" + this.getUid() + "]" +
+            "[parentUID=" + this.getParentUid() + "]" +
+            "[objectType=" + this.getObjectType() + "]" +
             ">"
         );
     }
@@ -81,7 +81,7 @@ public abstract class AbstractWitsmlObject {
      * @param version - String containing the WITSML version to return the string in
      * @return type - String value of this object in json format
      */
-    abstract String getJSONString(String version);
+    public abstract String getJSONString(String version);
 
     /**
      * This function returns an xml string of the concrete object that implements
@@ -90,27 +90,27 @@ public abstract class AbstractWitsmlObject {
      * @param version - String containing the WITSML version to return the string in
      * @return type - String value of this object in json format
      */
-    abstract String getXMLString(String version);
+    public abstract String getXMLString(String version);
 
     /**
      * This function returns the uid of the object
      * 
      * @return uid - String value of the uid
      */
-    abstract String getUID();
+    public abstract String getUid();
 
     /**
      * This function returns the witsml version of the object
      * 
      * @return uid - String value of the WITMSL version, i.e. "1.3.1.1"
      */
-    abstract String getVersion();
+    public abstract String getVersion();
 
     /**
      * This function returns the name of the object
      * 
      * @return name - String value of the object name
      */
-    abstract String getName();
+    public abstract String getName();
     // =========================================================================
 }

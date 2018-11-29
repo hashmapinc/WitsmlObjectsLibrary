@@ -1,14 +1,21 @@
 package com.hashmapinc.tempus.WitsmlObjects.Util;
 
 import javax.xml.bind.*;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.lang.reflect.InvocationTargetException;
+import java.util.logging.Logger;
 
 /**
  * This class provides static methods for the serialization and deserialization of WITSML data objects.
  */
 public class WitsmlMarshal {
+    // get logger
+    private static final Logger LOG = Logger.getLogger(WitsmlMarshal.class.getName());
 
     /**
      * Deserializes an WITSML XML string into an Object. The object type is passed in via witsmlClass and the witsml is passed in as a string.
@@ -41,5 +48,15 @@ public class WitsmlMarshal {
         Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
         jaxbMarshaller.marshal(witsmlObj, witsmlWriter);
         return witsmlWriter.toString();
+    }
+
+    /**
+     * Serializes a WITSML object into a corresponding legal WITSML json string
+     * @param witsmlObj The witsml object to serialize into a json string
+     * @return a legal WITSML json string
+     */
+    public static <T> String serializeToJSON(T witsmlObj) throws JsonProcessingException{
+        ObjectMapper om = new ObjectMapper();
+        return om.writeValueAsString(witsmlObj);
     }
 }
