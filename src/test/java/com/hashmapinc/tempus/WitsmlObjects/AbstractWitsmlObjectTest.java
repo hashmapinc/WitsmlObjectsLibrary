@@ -28,6 +28,33 @@ public class AbstractWitsmlObjectTest {
 
     @Test
     public void testTrajectoryGetUid() {
+        // test 1311
+        try {
+            String xml1311 = TestUtilities.getResourceAsString("trajectory1311.xml");
+            AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectorys) WitsmlMarshal
+                    .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectory.class)).getTrajectory().get(0);
+
+            String uid = obj1311.getUid();
+
+            assertEquals("f34a", uid);
+        } catch (Exception e) {
+            e.printStackTrace();
+            fail();
+        }
+
+        // test 1411
+        try {
+            String xml1411 = TestUtilities.getResourceAsString("trajectory1411.xml");
+            AbstractWitsmlObject obj1411 = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectorys) WitsmlMarshal
+                    .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory.class)).getTrajectory().get(0);
+
+            String uid = obj1411.getUid();
+
+            assertEquals("f34a", uid);
+        } catch (Exception e) {
+            e.printStackTrace();
+            fail();
+        }
     }
     // =========================================================================
 
@@ -48,6 +75,33 @@ public class AbstractWitsmlObjectTest {
 
     @Test
     public void testWellboreGetUid() {
+        // test 1311
+        try {
+            String xml1311 = TestUtilities.getResourceAsString("wellbore1311.xml");
+            AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWellbores) WitsmlMarshal
+                    .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWellbore.class)).getWellbore().get(0);
+
+            String uid = obj1311.getUid();
+
+            assertEquals("f34a", uid);
+        } catch (Exception e) {
+            e.printStackTrace();
+            fail();
+        }
+
+        // test 1411
+        try {
+            String xml1411 = TestUtilities.getResourceAsString("wellbore1411.xml");
+            AbstractWitsmlObject obj1411 = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores) WitsmlMarshal
+                    .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore.class)).getWellbore().get(0);
+
+            String uid = obj1411.getUid();
+
+            assertEquals("f34a", uid);
+        } catch (Exception e) {
+            e.printStackTrace();
+            fail();
+        }
     }
     // =========================================================================
 
@@ -68,6 +122,33 @@ public class AbstractWitsmlObjectTest {
 
     @Test
     public void testWellGetUid() {
+        // test 1311
+        try {
+            String xml1311 = TestUtilities.getResourceAsString("well1311.xml");
+            AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWells) WitsmlMarshal
+                    .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell.class)).getWell().get(0);
+
+            String uid = obj1311.getUid();
+
+            assertEquals("f34a", uid);
+        } catch (Exception e) {
+            e.printStackTrace();
+            fail();
+        }
+
+        // test 1411
+        try {
+            String xml1411 = TestUtilities.getResourceAsString("well1411.xml");
+            AbstractWitsmlObject obj1411 = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWells) WitsmlMarshal
+                    .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell.class)).getWell().get(0);
+
+            String uid = obj1411.getUid();
+
+            assertEquals("f34a", uid);
+        } catch (Exception e) {
+            e.printStackTrace();
+            fail();
+        }
     }
     // =========================================================================
 
@@ -76,8 +157,9 @@ public class AbstractWitsmlObjectTest {
     //=========================================================================
     @Test
     public void testLogGetVersion() {
+        // test 1311
         try {
-            String xml1311 = TestUtilities.getResourceAsString("log_with_data_1311.xml");
+            String xml1311 = TestUtilities.getResourceAsString("log1311.xml");
             AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLogs) WitsmlMarshal.deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLog.class)).getLog().get(0);
             assertEquals("1.3.1.1", obj1311.getVersion());
         } catch (Exception e) {
@@ -85,8 +167,9 @@ public class AbstractWitsmlObjectTest {
             fail();
         }
 
+        // test 1411
         try {
-            String xml1411 = TestUtilities.getResourceAsString("log_with_data_1411.xml");
+            String xml1411 = TestUtilities.getResourceAsString("log1411.xml");
             AbstractWitsmlObject obj1411 = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLogs) WitsmlMarshal
                     .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLog.class)).getLog().get(0);
             assertEquals("1.4.1.1", obj1411.getVersion());
@@ -98,9 +181,26 @@ public class AbstractWitsmlObjectTest {
 
     @Test
     public void testLogGetJSONString() {
+        // test 1311
         try {
-            String xml1311 = TestUtilities.getResourceAsString("log_with_data_1311.xml");
+            String xml1311 = TestUtilities.getResourceAsString("log1311.xml");
             AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLogs) WitsmlMarshal.deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLog.class)).getLog().get(0);
+
+            String json1311 = obj1311.getJSONString("1.3.1.1");
+            String json1411 = obj1311.getJSONString("1.4.1.1");
+
+            assertNotNull(json1311);
+            assertNotNull(json1411);
+        } catch (Exception e) {
+            e.printStackTrace();
+            fail();
+        }
+
+        // test 1411
+        try {
+            String xml1311 = TestUtilities.getResourceAsString("log1411.xml");
+            AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLogs) WitsmlMarshal
+                    .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLog.class)).getLog().get(0);
 
             String json1311 = obj1311.getJSONString("1.3.1.1");
             String json1411 = obj1311.getJSONString("1.4.1.1");
@@ -115,8 +215,9 @@ public class AbstractWitsmlObjectTest {
 
     @Test
     public void testLogGetObjectType() {
+        // test 1311
         try {
-            String xml1311 = TestUtilities.getResourceAsString("log_with_data_1311.xml");
+            String xml1311 = TestUtilities.getResourceAsString("log1311.xml");
             AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLogs) WitsmlMarshal
                     .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLog.class)).getLog().get(0);
 
@@ -127,16 +228,45 @@ public class AbstractWitsmlObjectTest {
             e.printStackTrace();
             fail();
         }
+
+        // test 1411
+        try {
+            String xml1411 = TestUtilities.getResourceAsString("log1411.xml");
+            AbstractWitsmlObject obj1411 = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLogs) WitsmlMarshal
+                    .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLog.class)).getLog().get(0);
+
+            String objectType = obj1411.getObjectType();
+
+            assertEquals("log", objectType);
+        } catch (Exception e) {
+            e.printStackTrace();
+            fail();
+        }
     }
 
     @Test
     public void testLogGetUid() {
+        // test 1311
         try {
-            String xml1311 = TestUtilities.getResourceAsString("log_with_data_1311.xml");
+            String xml1311 = TestUtilities.getResourceAsString("log1311.xml");
             AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLogs) WitsmlMarshal
                     .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLog.class)).getLog().get(0);
 
             String uid = obj1311.getUid();
+
+            assertEquals("f34a", uid);
+        } catch (Exception e) {
+            e.printStackTrace();
+            fail();
+        }
+
+        // test 1411
+        try {
+            String xml1411 = TestUtilities.getResourceAsString("log1411.xml");
+            AbstractWitsmlObject obj1411 = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLogs) WitsmlMarshal
+                    .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLog.class)).getLog().get(0);
+
+            String uid = obj1411.getUid();
 
             assertEquals("f34a", uid);
         } catch (Exception e) {
