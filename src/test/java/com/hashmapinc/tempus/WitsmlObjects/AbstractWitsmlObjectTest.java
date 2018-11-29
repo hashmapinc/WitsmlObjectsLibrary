@@ -82,7 +82,7 @@ public class AbstractWitsmlObjectTest {
 
             String uid = obj1311.getUid();
 
-            assertEquals("W-12", uid);
+            assertEquals("B-001", uid);
         } catch (Exception e) {
             e.printStackTrace();
             fail();
@@ -96,7 +96,7 @@ public class AbstractWitsmlObjectTest {
 
             String uid = obj1411.getUid();
 
-            assertEquals("W-12", uid);
+            assertEquals("B-01", uid);
         } catch (Exception e) {
             e.printStackTrace();
             fail();
