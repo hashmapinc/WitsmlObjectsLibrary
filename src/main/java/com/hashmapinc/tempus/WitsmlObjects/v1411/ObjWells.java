@@ -40,14 +40,25 @@ import javax.xml.bind.annotation.*;
     "documentInfo",
     "well"
 })
-public class ObjWells
-    extends AbstractObject {
+public class ObjWells {
 
     protected CsDocumentInfo documentInfo;
     @XmlElement(required = true)
     protected List<ObjWell> well;
     @XmlAttribute(name = "version", required = true)
     protected String version;
+
+    /**
+     * adds a well object to the well list. If list is null, it is instantiated
+     * 
+     * @param wellObj - well to add
+     */
+    public void addWell(ObjWell wellObj) {
+        if (well == null) {
+            well = new ArrayList<ObjWell>();
+        }
+        well.add(wellObj);
+    }
 
     /**
      * Gets the value of the documentInfo property.

@@ -40,15 +40,25 @@ import javax.xml.bind.annotation.*;
     "documentInfo",
     "trajectory"
 })
-public class ObjTrajectorys
-    extends AbstractObject
-{
+public class ObjTrajectorys {
 
     protected CsDocumentInfo documentInfo;
     @XmlElement(required = true)
     protected List<ObjTrajectory> trajectory;
     @XmlAttribute(name = "version", required = true)
     protected String version;
+
+    /**
+     * adds a trajectory object to the trajectory list
+     * 
+     * @param trajObject - object to add to list
+     */
+    public void addTrajectory(ObjTrajectory trajObject) {
+        if (trajectory == null) {
+            trajectory = new ArrayList<ObjTrajectory>();
+        }
+        this.trajectory.add(trajObject);
+    }
 
     /**
      * Gets the value of the documentInfo property.

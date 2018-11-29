@@ -16,9 +16,9 @@
 package com.hashmapinc.tempus.WitsmlObjects;
 
 public abstract class AbstractWitsmlObject {
-    protected String name;
-    protected String uid;
-
+    //=========================================================================
+    // default implementations for all concrete subclasses
+    //=========================================================================
     /**
      * This function provides a string representation of the object
      * 
@@ -27,22 +27,13 @@ public abstract class AbstractWitsmlObject {
     public String toString() {
         return (
             "<AbstractWitsmlObject " + 
-            "[name=" + this.name + "]" +
-            "[uid=" + this.uid + "]" +
+            "[name=" + this.getName() + "]" +
+            "[version=" + this.getVersion() + "]" +
+            "[uid=" + this.getUid() + "]" +
             "[parentUID=" + this.getParentUid() + "]" +
             "[objectType=" + this.getObjectType() + "]" +
             ">"
         );
-    }
-
-    /**
-     * This function will try to return the parentUid. If one does not exist, then
-     * null is returned.
-     * 
-     * @return parentUid - String value with the parentUid if it exists, otherwise null
-     */
-    public String getParentUid() {
-        return null; // default behavior if not overridden
     }
 
     /**
@@ -63,6 +54,63 @@ public abstract class AbstractWitsmlObject {
 
         // get the type if the classname is valid, otherwise null
         String type = isValidClassname ? className.substring(3) : null;
-        return type;
+        return type.toLowerCase();
     }
+
+    /**
+     * This function will try to return the parentUid. If one does not exist, then
+     * null is returned.
+     * 
+     * @return parentUid - String value with the parentUid if it exists, otherwise
+     *         null
+     */
+    public String getParentUid() {
+        return null;
+    };
+    // =========================================================================
+
+
+    // =========================================================================
+    // empty functions to be implemented by subclasses
+    // =========================================================================
+
+    /**
+     * This function returns a json string of the concrete object that
+     * implements this abstract class in the requested version.
+     * 
+     * @param version - String containing the WITSML version to return the string in
+     * @return type - String value of this object in json format
+     */
+    public abstract String getJSONString(String version);
+
+    /**
+     * This function returns an xml string of the concrete object that implements
+     * this abstract class in the requested version.
+     * 
+     * @param version - String containing the WITSML version to return the string in
+     * @return type - String value of this object in json format
+     */
+    public abstract String getXMLString(String version);
+
+    /**
+     * This function returns the uid of the object
+     * 
+     * @return uid - String value of the uid
+     */
+    public abstract String getUid();
+
+    /**
+     * This function returns the witsml version of the object
+     * 
+     * @return uid - String value of the WITMSL version, i.e. "1.3.1.1"
+     */
+    public abstract String getVersion();
+
+    /**
+     * This function returns the name of the object
+     * 
+     * @return name - String value of the object name
+     */
+    public abstract String getName();
+    // =========================================================================
 }

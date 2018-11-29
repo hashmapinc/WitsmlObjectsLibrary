@@ -40,15 +40,26 @@ import javax.xml.bind.annotation.*;
     "documentInfo",
     "log"
 })
-public class ObjLogs
-    extends AbstractObject
-{
+public class ObjLogs {
 
     protected CsDocumentInfo documentInfo;
     @XmlElement(required = true)
     protected List<ObjLog> log;
     @XmlAttribute(name = "version", required = true)
     protected String version;
+
+    /**
+     * adds a log to log list.
+     * 
+     * @param logObj - ObjLog to add
+     * 
+     */
+    public void addLog(ObjLog logObj) {
+        if (log == null) {
+            log = new ArrayList<ObjLog>();
+        }
+        this.log.add(logObj);
+    }
 
     /**
      * Gets the value of the documentInfo property.

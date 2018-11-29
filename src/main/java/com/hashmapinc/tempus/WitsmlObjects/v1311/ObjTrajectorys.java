@@ -94,6 +94,17 @@ public class ObjTrajectorys {
     }
 
     /**
+     * adds a trajectory object to the trajectory list
+     * @param trajObject - object to add to list
+     */
+    public void addTrajectory(ObjTrajectory trajObject) {
+        if (trajectory == null) {
+            trajectory = new ArrayList<ObjTrajectory>();
+        }
+        this.trajectory.add(trajObject);
+    }
+
+    /**
      * Gets the value of the version property.
      * 
      * @return
