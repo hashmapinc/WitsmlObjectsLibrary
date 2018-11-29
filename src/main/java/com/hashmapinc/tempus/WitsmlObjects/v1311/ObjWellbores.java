@@ -94,6 +94,17 @@ public class ObjWellbores {
     }
 
     /**
+     * adds a wellbore to the wellbore list. 
+     * @param wellboreObj wellbore to add
+     */
+    public void addWellbore(ObjWellbore wellboreObj) {
+        if (wellbore == null) {
+            wellbore = new ArrayList<ObjWellbore>();
+        }
+        this.wellbore.add(wellboreObj);
+    }
+
+    /**
      * Gets the value of the version property.
      * 
      * @return
