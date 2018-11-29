@@ -49,6 +49,19 @@ public class ObjLogs {
     protected String version;
 
     /**
+     * adds a log to log list.
+     * 
+     * @param logObj - ObjLog to add
+     * 
+     */
+    public void addLog(ObjLog logObj) {
+        if (log == null) {
+            log = new ArrayList<ObjLog>();
+        }
+        this.log.add(logObj);
+    }
+
+    /**
      * Gets the value of the documentInfo property.
      * 
      * @return

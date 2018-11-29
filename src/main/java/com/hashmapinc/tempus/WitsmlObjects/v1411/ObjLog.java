@@ -19,6 +19,8 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
+import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlMarshal;
+import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlVersionTransformer;
 
 
 /**
@@ -899,6 +901,57 @@ public class ObjLog extends AbstractWitsmlObject {
     @Override
     public String getVersion() {
         return "1.4.1.1";
+    }
+
+    /**
+     * Gets this object as an xml string in the requested version format.
+     *
+     * @param version - WITSML version to serialize to
+     * @return xml - string value holding the xml string
+     */
+    @Override
+    public String getXMLString(String version) {
+        try {
+            ObjLogs logs = new ObjLogs();
+            logs.addLog(this);
+            String xml1411 = WitsmlMarshal.serialize(logs);
+            if ("1.3.1.1".equals(version)) {
+                return (new WitsmlVersionTransformer()).convertVersion(xml1411);
+            } else if ("1.4.1.1".equals(version)) {
+                return xml1411;
+            } else {
+                return null;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    /**
+     * Gets this object as an json string in the requested version format.
+     *
+     * @param version - WITSML version to serialize to
+     * @return json - String value holding the json string
+     */
+    @Override
+    public String getJSONString(String version) {
+        try {
+            if ("1.3.1.1".equals(version)) {
+                // convert to 1411 pojo and parse as json
+                String xml1311 = this.getXMLString("1.3.1.1");
+                com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLogs logs = WitsmlMarshal.deserialize(xml1311,
+                        com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLogs.class);
+                return WitsmlMarshal.serializeToJSON(logs.getLog().get(0));
+            } else if ("1.4.1.1".equals(version)) {
+                return WitsmlMarshal.serializeToJSON(this);
+            } else {
+                return null; // unsupported version
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
 }

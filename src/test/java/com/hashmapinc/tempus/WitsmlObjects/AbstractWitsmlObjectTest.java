@@ -10,7 +10,6 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.fail;
 
 public class AbstractWitsmlObjectTest {
-
     //=========================================================================
     // Trajectory testing
     //=========================================================================

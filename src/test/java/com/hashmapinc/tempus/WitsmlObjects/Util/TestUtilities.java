@@ -4,12 +4,10 @@ import org.custommonkey.xmlunit.DetailedDiff;
 import org.custommonkey.xmlunit.XMLUnit;
 import org.junit.Assert;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Created by Chris on 6/29/17.
@@ -26,11 +24,8 @@ public class TestUtilities {
         Assert.assertEquals("Differences found: "+ diff.toString(), 0, allDifferences.size());
     }
 
-    public static String getResourceAsString(String resourcePath) throws IOException {
-        InputStream stream = TestUtilities.class.getResourceAsStream(resourcePath);
-        BufferedReader reader = new BufferedReader(
-                new InputStreamReader(stream));
-        return reader.lines().collect(Collectors.joining(
-                System.getProperty("line.separator")));
+    public static String getResourceAsString(String resourceName) throws IOException {
+        String path = "src/test/resources/" + resourceName;
+        return new String(Files.readAllBytes(Paths.get(path)));
     }
 }
