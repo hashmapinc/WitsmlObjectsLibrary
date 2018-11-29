@@ -40,9 +40,7 @@ import javax.xml.bind.annotation.*;
     "documentInfo",
     "trajectory"
 })
-public class ObjTrajectorys
-    extends AbstractObject
-{
+public class ObjTrajectorys {
 
     protected CsDocumentInfo documentInfo;
     @XmlElement(required = true)

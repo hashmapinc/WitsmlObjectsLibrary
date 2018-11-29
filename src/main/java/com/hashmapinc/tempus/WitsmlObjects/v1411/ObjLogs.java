@@ -40,9 +40,7 @@ import javax.xml.bind.annotation.*;
     "documentInfo",
     "log"
 })
-public class ObjLogs
-    extends AbstractObject
-{
+public class ObjLogs {
 
     protected CsDocumentInfo documentInfo;
     @XmlElement(required = true)

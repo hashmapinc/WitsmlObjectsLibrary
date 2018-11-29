@@ -41,7 +41,6 @@ import javax.xml.bind.annotation.*;
     "wellbore"
 })
 public class ObjWellbores
-    extends AbstractObject
 {
 
     protected CsDocumentInfo documentInfo;

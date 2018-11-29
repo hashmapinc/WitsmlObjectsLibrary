@@ -40,8 +40,7 @@ import javax.xml.bind.annotation.*;
     "documentInfo",
     "well"
 })
-public class ObjWells
-    extends AbstractObject {
+public class ObjWells {
 
     protected CsDocumentInfo documentInfo;
     @XmlElement(required = true)

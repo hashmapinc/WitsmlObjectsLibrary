@@ -74,7 +74,7 @@ import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
     "commonData",
     "customData"
 })
-public class ObjTrajectory extends AbstractWitsmlObject {
+public class ObjTrajectory {
 
     @XmlElement(required = true)
     protected String nameWell;
@@ -115,7 +115,7 @@ public class ObjTrajectory extends AbstractWitsmlObject {
     /**
      * get the parent uid as a string
      */
-    @Override
+    //@Override
     public String getParentUid() {
         return this.uidWellbore;
     }

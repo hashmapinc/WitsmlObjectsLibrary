@@ -71,7 +71,7 @@ import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
     "commonData",
     "customData"
 })
-public class ObjWell extends AbstractWitsmlObject implements WitsmlObj {
+public class ObjWell implements WitsmlObj {
 
     @XmlElement(required = true)
     protected String name;
