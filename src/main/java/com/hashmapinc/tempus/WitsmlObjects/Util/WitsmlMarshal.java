@@ -3,9 +3,12 @@ package com.hashmapinc.tempus.WitsmlObjects.Util;
 import javax.xml.bind.*;
 
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.lang.reflect.InvocationTargetException;
@@ -60,5 +63,13 @@ public class WitsmlMarshal {
         ObjectMapper om = new ObjectMapper();
         om.setSerializationInclusion(Include.NON_NULL); // ignore null fields
         return om.writeValueAsString(witsmlObj);
+    }
+
+    public static <T> T deserializeFromJSON(
+        String json, 
+        Class witsmlClass
+    ) throws JsonParseException, JsonMappingException, IOException {
+        ObjectMapper om = new ObjectMapper();
+        return (T) om.readValue(json, witsmlClass);
     }
 }
