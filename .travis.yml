@@ -28,9 +28,9 @@ install: mvn install -P !build-extras -DskipTests=true -Dmaven.javadoc.skip=true
 script: mvn test -P !build-extras -B
 
 # Caches mvn repository in order to speed upbuilds
-cache:
-  directories:
-    - $HOME/.m2
+#cache:
+#  directories:
+#    - $HOME/.m2
 
 after_success:
   - ./cd/before-deploy.sh
