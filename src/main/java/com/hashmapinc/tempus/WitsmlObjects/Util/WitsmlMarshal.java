@@ -2,6 +2,7 @@ package com.hashmapinc.tempus.WitsmlObjects.Util;
 
 import javax.xml.bind.*;
 
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -57,6 +58,7 @@ public class WitsmlMarshal {
      */
     public static <T> String serializeToJSON(T witsmlObj) throws JsonProcessingException{
         ObjectMapper om = new ObjectMapper();
+        om.setSerializationInclusion(Include.NON_NULL); // ignore null fields
         return om.writeValueAsString(witsmlObj);
     }
 }
