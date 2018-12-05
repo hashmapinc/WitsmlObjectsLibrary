@@ -5,9 +5,7 @@ import com.hashmapinc.tempus.WitsmlObjects.Util.TestUtilities;
 import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
 public class AbstractWitsmlObjectTest {
     //=========================================================================
@@ -148,6 +146,45 @@ public class AbstractWitsmlObjectTest {
             e.printStackTrace();
             fail();
         }
+    }
+
+    @Test
+    public void testWellGetXML() throws Exception {
+        //=====================================================================
+        // test 1311
+        //=====================================================================
+        String xml1311 = TestUtilities.getResourceAsString("well1311.xml");
+        AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWells) WitsmlMarshal
+                .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell.class)).getWell().get(0);
+
+        // check same-version serialization
+        String serializedXML1311 = obj1311.getXMLString("1.3.1.1");
+        assertNotNull(serializedXML1311);
+        assertFalse(serializedXML1311.contains("ns0:wells"));
+
+        // check cross-version serialization
+        String translatedXML1411 = obj1311.getXMLString("1.4.1.1");
+        assertNotNull(translatedXML1411);
+        assertFalse(translatedXML1411.contains("ns0:wells"));
+        //=====================================================================
+
+        //=====================================================================
+        // test 1411
+        //=====================================================================
+        String xml1411 = TestUtilities.getResourceAsString("well1411.xml");
+        AbstractWitsmlObject obj1411 = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWells) WitsmlMarshal
+                .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell.class)).getWell().get(0);
+
+        // check same-version serialization
+        String serializedXML1411 = obj1411.getXMLString("1.4.1.1");
+        assertNotNull(serializedXML1411);
+        assertFalse(serializedXML1411.contains("ns0:wells"));
+
+        // check cross-version serialization
+        String translatedXML1311 = obj1311.getXMLString("1.3.1.1");
+        assertNotNull(translatedXML1311);
+        assertFalse(translatedXML1311.contains("ns0:wells"));
+        //=====================================================================
     }
     // =========================================================================
 
