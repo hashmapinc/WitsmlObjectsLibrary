@@ -181,7 +181,7 @@ public class AbstractWitsmlObjectTest {
         assertFalse(serializedXML1411.contains("ns0:wells"));
 
         // check cross-version serialization
-        String translatedXML1311 = obj1311.getXMLString("1.3.1.1");
+        String translatedXML1311 = obj1411.getXMLString("1.3.1.1");
         assertNotNull(translatedXML1311);
         assertFalse(translatedXML1311.contains("ns0:wells"));
         //=====================================================================
