@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<wells xmlns="http://www.witsml.org/schemas/131">
+    <well uid="randy">
+        <name>6507/7-A-42</name>
+        <country>US</country>
+        <state>TX</state>
+        <county>Montgomery</county>
+    </well>
+</wells>
