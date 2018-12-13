@@ -38,7 +38,7 @@ public class ObjLogs {
     @XmlElement(required = true)
     protected List<ObjLog> log;
     @XmlAttribute(name = "version", required = true)
-    protected String version;
+    protected String version = "1.3.1.1";
 
     /**
      * adds a log to log list.

@@ -46,7 +46,7 @@ public class ObjWells {
     @XmlElement(required = true)
     protected List<ObjWell> well;
     @XmlAttribute(name = "version", required = true)
-    protected String version;
+    protected String version = "1.4.1.1";
 
     /**
      * adds a well object to the well list. If list is null, it is instantiated

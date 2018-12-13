@@ -38,7 +38,7 @@ public class ObjWells {
     @XmlElement(required = true)
     protected List<ObjWell> well;
     @XmlAttribute(name = "version", required = true)
-    protected String version;
+    protected String version = "1.3.1.1";
 
     /**
      * Gets the value of the documentInfo property.

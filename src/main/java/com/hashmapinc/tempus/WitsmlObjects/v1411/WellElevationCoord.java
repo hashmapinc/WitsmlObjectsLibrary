@@ -44,7 +44,7 @@ public class WellElevationCoord
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected WellVerticalCoordinateUom uom;
+    protected String uom = "";
     @XmlAttribute(name = "datum")
     protected String datum;
 
@@ -56,7 +56,7 @@ public class WellElevationCoord
      *     {@link WellVerticalCoordinateUom }
      *     
      */
-    public WellVerticalCoordinateUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -68,7 +68,7 @@ public class WellElevationCoord
      *     {@link WellVerticalCoordinateUom }
      *     
      */
-    public void setUom(WellVerticalCoordinateUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 
