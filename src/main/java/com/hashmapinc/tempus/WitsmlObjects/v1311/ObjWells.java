@@ -1,5 +1,7 @@
 package com.hashmapinc.tempus.WitsmlObjects.v1311;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.*;
@@ -34,6 +36,7 @@ import javax.xml.bind.annotation.*;
 })
 public class ObjWells {
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     protected CsDocumentInfo documentInfo;
     @XmlElement(required = true)
     protected List<ObjWell> well;
