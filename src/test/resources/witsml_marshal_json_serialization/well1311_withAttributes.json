@@ -1,0 +1,111 @@
+{
+  "well" : [ {
+    "pcInterest" : {
+      "value" : 0.0,
+      "uom" : ""
+    },
+    "wellheadElevation" : {
+      "value" : 0.0,
+      "uom" : ""
+    },
+    "wellDatum" : [
+      {
+        "uid" : "",
+        "defaultElevation" : "",
+        "kind" : [],
+        "elevation" : {
+          "value" : "",
+          "uom" : ""
+        }
+      }
+    ],
+    "groundElevation" : {
+      "value" : 0.0,
+      "uom" : ""
+    },
+    "waterDepth" : {
+      "value" : 0.0
+    },
+    "wellLocation" : [
+      {
+        "wellCRS" : {
+          "value" : ""
+        },
+        "easting" : {
+          "value" : 0.0
+        },
+        "northing" : {
+          "value" : 0.0
+        }
+      }
+    ],
+    "referencePoint" : [
+      {
+        "location" : [
+          {
+            "wellCRS" : {
+              "value" : ""
+            },
+            "easting" : {
+              "value" : 0.0
+            },
+            "northing" : {
+              "value" : 0.0
+            }
+          }
+        ]
+      }
+    ],
+    "wellCRS" : [
+      {
+        "geographic" : {
+          "nameCRS" : {
+            "value" : ""
+          },
+          "ellipsoidSemiMajorAxis" : {
+            "value" : 0.0
+          },
+          "xtranslation" : {
+            "value" : 0.0
+          },
+          "ytranslation" : {
+            "value" : 0.0
+          },
+          "ztranslation" : {
+            "value" : 0.0
+          },
+          "xrotation" : {
+            "value" : 0.0
+          },
+          "yrotation" : {
+            "value" : 0.0
+          },
+          "zrotation" : {
+            "value" : 0.0
+          }
+        }
+      },
+      {
+        "mapProjection" : {
+          "nameCRS" : {
+            "value" : ""
+          },
+          "projectedFrom" : {
+            "value" : ""
+          },
+          "parameter" : []
+        }
+      },
+      {
+        "localCRS" : {
+          "yaxisAzimuth" : {
+            "value" : 0.0
+          }
+        }
+      }
+    ],
+    "version" : "1.3.1.1",
+    "objectType" : "well"
+  }],
+  "version" : "1.3.1.1"
+}
