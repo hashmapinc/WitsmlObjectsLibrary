@@ -64,56 +64,69 @@
       } ],
       "uid" : null
     } ],
-    "wellCRS" : [
-      {
-        "geographic" : {
-          "nameCRS" : {
-            "value" : null
-          },
-          "ellipsoidSemiMajorAxis" : {
-            "value" : null
-          },
-          "xtranslation" : {
-            "value" : null
-          },
-          "ytranslation" : {
-            "value" : null
-          },
-          "ztranslation" : {
-            "value" : null
-          },
-          "xrotation" : {
-            "value" : null
-          },
-          "yrotation" : {
-            "value" : null
-          },
-          "zrotation" : {
-            "value" : null
-          }
+    "wellCRS" : [ {
+      "geographic" : {
+        "nameCRS" : {
+          "value" : "",
+          "namingSystem" : null,
+          "code" : null
+        },
+        "ellipsoidSemiMajorAxis" : {
+          "value" : null,
+          "uom" : null
+        },
+        "xtranslation" : {
+          "value" : null,
+          "uom" : null
+        },
+        "ytranslation" : {
+          "value" : null,
+          "uom" : null
+        },
+        "ztranslation" : {
+          "value" : null,
+          "uom" : null
+        },
+        "xrotation" : {
+          "value" : null,
+          "uom" : null
+        },
+        "yrotation" : {
+          "value" : null,
+          "uom" : null
+        },
+        "zrotation" : {
+          "value" : null,
+          "uom" : null
         }
       },
-      {
-        "mapProjection" : {
-          "nameCRS" : {
-            "value" : null
-          },
-          "projectedFrom" : {
-            "value" : null
-          },
-          "parameter" : []
+      "uid" : null
+    }, {
+      "mapProjection" : {
+        "nameCRS" : {
+          "value" : "",
+          "namingSystem" : null,
+          "code" : null
+        },
+        "projectedFrom" : {
+          "value" : "",
+          "uidRef" : null
+        },
+        "parameter" : [ ]
+      },
+      "uid" : null
+    }, {
+      "localCRS" : {
+        "yaxisAzimuth" : {
+          "value" : null,
+          "uom" : null,
+          "northDirection" : null
         }
       },
-      {
-        "localCRS" : {
-          "yaxisAzimuth" : {
-            "value" : null
-          }
-        }
-      }
-    ],
+      "uid" : null
+    } ],
     "version" : "1.3.1.1",
     "objectType" : "well"
-  }],
+  } ],
   "version" : "1.3.1.1"
 }
