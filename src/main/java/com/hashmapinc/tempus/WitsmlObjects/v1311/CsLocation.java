@@ -1,5 +1,7 @@
 package com.hashmapinc.tempus.WitsmlObjects.v1311;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -71,6 +73,7 @@ import javax.xml.bind.annotation.XmlType;
     "original",
     "description"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CsLocation {
 
     protected RefNameString wellCRS;
@@ -87,6 +90,7 @@ public class CsLocation {
     protected Boolean original;
     protected String description;
     @XmlAttribute(name = "uid")
+    @JsonInclude(JsonInclude.Include.ALWAYS)
     protected String uid;
 
     /**

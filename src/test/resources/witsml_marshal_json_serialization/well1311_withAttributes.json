@@ -33,14 +33,18 @@
     },
     "wellLocation" : [ {
       "wellCRS" : {
-        "value" : null
+        "value" : "",
+        "uidRef" : null
       },
       "easting" : {
-        "value" : null
+        "value" : null,
+        "uom" : null
       },
       "northing" : {
-        "value" : null
-      }
+        "value" : null,
+        "uom" : null
+      },
+      "uid" : null
     } ],
     "referencePoint" : [
       {
