@@ -46,23 +46,24 @@
       },
       "uid" : null
     } ],
-    "referencePoint" : [
-      {
-        "location" : [
-          {
-            "wellCRS" : {
-              "value" : null
-            },
-            "easting" : {
-              "value" : null
-            },
-            "northing" : {
-              "value" : null
-            }
-          }
-        ]
-      }
-    ],
+    "referencePoint" : [ {
+      "location" : [ {
+        "wellCRS" : {
+          "value" : "",
+          "uidRef" : null
+        },
+        "easting" : {
+          "value" : null,
+          "uom" : null
+        },
+        "northing" : {
+          "value" : null,
+          "uom" : null
+        },
+        "uid" : null
+      } ],
+      "uid" : null
+    } ],
     "wellCRS" : [
       {
         "geographic" : {
