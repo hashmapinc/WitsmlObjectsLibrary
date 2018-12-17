@@ -81,14 +81,14 @@ import javax.xml.bind.annotation.XmlValue;
 public abstract class AbstractMeasure {
 
     @XmlValue
-    protected double value;
+    protected Double value;
 
     /**
      * This type disallows an "empty" double value.
      * 			This type should not be used directly except to derive another type.
      * @return returns the value as a Double
      */
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
 

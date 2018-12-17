@@ -1,56 +1,59 @@
 {
   "well" : [ {
     "pcInterest" : {
-      "value" : 0.0,
-      "uom" : ""
+      "value" : null,
+      "uom" : null
     },
     "wellheadElevation" : {
-      "value" : 0.0,
-      "uom" : ""
+      "value" : null,
+      "uom" : null,
+      "datum" : null
     },
-    "wellDatum" : [
-      {
-        "uid" : "",
-        "defaultElevation" : "",
-        "kind" : [],
-        "elevation" : {
-          "value" : "",
-          "uom" : ""
-        }
-      }
-    ],
+    "wellDatum" : [ {
+      "kind" : [ ],
+      "elevation" : {
+        "value" : null,
+        "uom" : null,
+        "datum" : null
+      },
+      "defaultMeasuredDepth" : null,
+      "defaultVerticalDepth" : null,
+      "defaultElevation" : null,
+      "uid" : null
+    } ],
     "groundElevation" : {
-      "value" : 0.0,
-      "uom" : ""
+      "value" : null,
+      "uom" : null,
+      "datum" : null
     },
     "waterDepth" : {
-      "value" : 0.0
+      "value" : null,
+      "uom" : null,
+      "datum" : null
     },
-    "wellLocation" : [
-      {
-        "wellCRS" : {
-          "value" : ""
-        },
-        "easting" : {
-          "value" : 0.0
-        },
-        "northing" : {
-          "value" : 0.0
-        }
+    "wellLocation" : [ {
+      "wellCRS" : {
+        "value" : null
+      },
+      "easting" : {
+        "value" : null
+      },
+      "northing" : {
+        "value" : null
       }
-    ],
+    } ],
     "referencePoint" : [
       {
         "location" : [
           {
             "wellCRS" : {
-              "value" : ""
+              "value" : null
             },
             "easting" : {
-              "value" : 0.0
+              "value" : null
             },
             "northing" : {
-              "value" : 0.0
+              "value" : null
             }
           }
         ]
@@ -60,38 +63,38 @@
       {
         "geographic" : {
           "nameCRS" : {
-            "value" : ""
+            "value" : null
           },
           "ellipsoidSemiMajorAxis" : {
-            "value" : 0.0
+            "value" : null
           },
           "xtranslation" : {
-            "value" : 0.0
+            "value" : null
           },
           "ytranslation" : {
-            "value" : 0.0
+            "value" : null
           },
           "ztranslation" : {
-            "value" : 0.0
+            "value" : null
           },
           "xrotation" : {
-            "value" : 0.0
+            "value" : null
           },
           "yrotation" : {
-            "value" : 0.0
+            "value" : null
           },
           "zrotation" : {
-            "value" : 0.0
+            "value" : null
           }
         }
       },
       {
         "mapProjection" : {
           "nameCRS" : {
-            "value" : ""
+            "value" : null
           },
           "projectedFrom" : {
-            "value" : ""
+            "value" : null
           },
           "parameter" : []
         }
@@ -99,7 +102,7 @@
       {
         "localCRS" : {
           "yaxisAzimuth" : {
-            "value" : 0.0
+            "value" : null
           }
         }
       }
