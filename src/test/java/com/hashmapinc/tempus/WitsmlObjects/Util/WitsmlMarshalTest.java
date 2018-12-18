@@ -1,6 +1,9 @@
 package com.hashmapinc.tempus.WitsmlObjects.Util;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
+
+import java.util.Map;
 
 import static org.junit.Assert.*;
 
@@ -41,7 +44,13 @@ public class WitsmlMarshalTest {
 
         String json1311 = WitsmlMarshal.serializeToJSON(obj1311);
         String expectedJson = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/well1311_withAttributes.json");
-        assertEquals(expectedJson, json1311);
+        assertEquals(expectedJson.length(), json1311.length()); // simple length check before more advanced comparision
+
+        // do a deep comparison of the json values
+        ObjectMapper om = new ObjectMapper();
+        Map<String, Object> map1311 = (Map<String, Object>) (om.readValue(json1311, Map.class));
+        Map<String, Object> expectedMap = (Map<String, Object>) (om.readValue(expectedJson, Map.class));
+        assertEquals(map1311, expectedMap);
     }
 
     @Test
@@ -52,7 +61,13 @@ public class WitsmlMarshalTest {
 
         String json1411 = WitsmlMarshal.serializeToJSON(obj1411);
         String expectedJson = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/well1411_withAttributes.json");
-        assertEquals(expectedJson, json1411);
+        assertEquals(expectedJson.length(), json1411.length()); // simple length check before more advanced comparision
+
+        // do a deep comparison of the json values
+        ObjectMapper om = new ObjectMapper();
+        Map<String, Object> map1411 = (Map<String, Object>) (om.readValue(json1411, Map.class));
+        Map<String, Object> expectedMap = (Map<String, Object>) (om.readValue(expectedJson, Map.class));
+        assertEquals(map1411, expectedMap);
     }
     //=========================================================================
 }
