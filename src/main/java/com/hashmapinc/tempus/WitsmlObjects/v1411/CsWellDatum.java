@@ -8,6 +8,8 @@
 
 package com.hashmapinc.tempus.WitsmlObjects.v1411;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -69,6 +71,7 @@ import javax.xml.bind.annotation.XmlType;
     "comment",
     "extensionNameValue"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CsWellDatum {
 
     @XmlElement(required = true)
@@ -86,6 +89,7 @@ public class CsWellDatum {
     protected String comment;
     protected List<CsExtensionNameValue> extensionNameValue;
     @XmlAttribute(name = "uid", required = true)
+    @JsonInclude(JsonInclude.Include.ALWAYS)
     protected String uid;
 
     /**

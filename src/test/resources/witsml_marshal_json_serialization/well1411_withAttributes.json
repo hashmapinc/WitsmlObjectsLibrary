@@ -1,24 +1,22 @@
 {
-  "documentInfo" : null,
   "well" : [ {
     "pcInterest" : {
-      "value" : 0.0,
+      "value" : null,
       "uom" : null
     },
     "wellheadElevation" : {
-      "value" : 0.0,
+      "value" : null,
       "uom" : null,
       "datum" : null
     },
     "wellDatum" : [ {
       "kind" : [ ],
-      "wellbore" : null,
-      "rig" : null,
       "elevation" : {
         "value" : null,
         "uom" : null,
         "datum" : null
       },
+      "extensionNameValue" : [ ],
       "uid" : null
     }, {
       "datumName" : {
@@ -149,7 +147,8 @@
       "defaultDatum" : {
         "value" : "",
         "uidRef" : null
-      }
+      },
+      "extensionNameValue" : [ ]
     },
     "uid" : null,
     "version" : "1.4.1.1",
