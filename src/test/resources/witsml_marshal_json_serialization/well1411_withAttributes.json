@@ -1,0 +1,159 @@
+{
+  "documentInfo" : null,
+  "well" : [ {
+    "pcInterest" : {
+      "value" : 0.0,
+      "uom" : null
+    },
+    "wellheadElevation" : {
+      "value" : 0.0,
+      "uom" : null,
+      "datum" : null
+    },
+    "wellDatum" : [ {
+      "kind" : [ ],
+      "wellbore" : null,
+      "rig" : null,
+      "elevation" : {
+        "value" : null,
+        "uom" : null,
+        "datum" : null
+      },
+      "uid" : null
+    }, {
+      "datumName" : {
+        "value" : "",
+        "namingSystem" : null,
+        "code" : null
+      },
+      "kind" : [ ],
+      "extensionNameValue" : [ ],
+      "uid" : null
+    } ],
+    "groundElevation" : {
+      "value" : null,
+      "uom" : null,
+      "datum" : null
+    },
+    "waterDepth" : {
+      "value" : null,
+      "uom" : null
+    },
+    "wellLocation" : [ {
+      "wellCRS" : {
+        "value" : "",
+        "uidRef" : null
+      },
+      "easting" : {
+        "value" : null,
+        "uom" : null
+      },
+      "northing" : {
+        "value" : null,
+        "uom" : null
+      },
+      "extensionNameValue" : [ ],
+      "uid" : null
+    } ],
+    "referencePoint" : [ {
+      "location" : [ {
+        "wellCRS" : {
+          "value" : "",
+          "uidRef" : null
+        },
+        "easting" : {
+          "value" : null,
+          "uom" : null
+        },
+        "northing" : {
+          "value" : null,
+          "uom" : null
+        },
+        "extensionNameValue" : [ ],
+        "uid" : null
+      } ],
+      "extensionNameValue" : [ ],
+      "uid" : null
+    }, {
+      "elevation" : {
+        "value" : null,
+        "uom" : null,
+        "datum" : null
+      },
+      "measuredDepth" : {
+        "value" : null,
+        "uom" : null,
+        "datum" : null
+      },
+      "location" : [ {
+        "wellCRS" : {
+          "value" : "",
+          "uidRef" : null
+        },
+        "easting" : {
+          "value" : null,
+          "uom" : null
+        },
+        "northing" : {
+          "value" : null,
+          "uom" : null
+        },
+        "extensionNameValue" : [ ],
+        "uid" : null
+      }, {
+        "wellCRS" : {
+          "value" : "",
+          "uidRef" : null
+        },
+        "latitude" : {
+          "value" : null,
+          "uom" : null
+        },
+        "longitude" : {
+          "value" : null,
+          "uom" : null
+        },
+        "extensionNameValue" : [ ],
+        "uid" : null
+      } ],
+      "extensionNameValue" : [ ],
+      "uid" : null
+    } ],
+    "wellCRS" : [ {
+      "geodeticCRS" : {
+        "value" : "",
+        "uidRef" : null
+      },
+      "extensionNameValue" : [ ],
+      "uid" : null
+    }, {
+      "mapProjectionCRS" : {
+        "value" : "",
+        "uidRef" : null
+      },
+      "extensionNameValue" : [ ],
+      "uid" : null
+    }, {
+      "localCRS" : {
+        "yaxisAzimuth" : {
+          "value" : null,
+          "uom" : null,
+          "northDirection" : null
+        }
+      },
+      "extensionNameValue" : [ ],
+      "uid" : null
+    } ],
+    "commonData" : {
+      "acquisitionTimeZone" : [ ],
+      "defaultDatum" : {
+        "value" : "",
+        "uidRef" : null
+      }
+    },
+    "uid" : null,
+    "version" : "1.4.1.1",
+    "objectType" : "well"
+  } ],
+  "version" : "1.4.1.1"
+}

@@ -46,14 +46,13 @@ public class WitsmlMarshalTest {
 
     @Test
     public void shouldSerialize1411WellToJSON() throws Exception {
-        String xml1311 = TestUtilities
-                .getResourceAsString("witsml_marshal_json_serialization/well1311_withoutAttributes.xml");
-        com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWells obj1311 = WitsmlMarshal
-                .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWells.class);
+        String xml1411 = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/well1411_withoutAttributes.xml");
+        com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWells obj1411 = WitsmlMarshal
+                .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWells.class);
 
-        String json1311 = WitsmlMarshal.serializeToJSON(obj1311);
-        String expectedJson = "";
-        assertEquals(expectedJson, json1311);
+        String json1411 = WitsmlMarshal.serializeToJSON(obj1411);
+        String expectedJson = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/well1411_withAttributes.json");
+        assertEquals(expectedJson, json1411);
     }
     //=========================================================================
 }
