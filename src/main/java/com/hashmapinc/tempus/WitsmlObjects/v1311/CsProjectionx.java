@@ -1,5 +1,7 @@
 package com.hashmapinc.tempus.WitsmlObjects.v1311;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -86,6 +88,7 @@ import javax.xml.bind.annotation.XmlType;
     "description",
     "parameter"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CsProjectionx {
 
     protected WellKnownNameStruct nameCRS;

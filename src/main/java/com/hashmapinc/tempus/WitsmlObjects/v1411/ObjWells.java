@@ -8,6 +8,8 @@
 
 package com.hashmapinc.tempus.WitsmlObjects.v1411;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.*;
@@ -40,13 +42,14 @@ import javax.xml.bind.annotation.*;
     "documentInfo",
     "well"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ObjWells {
 
     protected CsDocumentInfo documentInfo;
     @XmlElement(required = true)
     protected List<ObjWell> well;
     @XmlAttribute(name = "version", required = true)
-    protected String version;
+    protected String version = "1.4.1.1";
 
     /**
      * adds a well object to the well list. If list is null, it is instantiated

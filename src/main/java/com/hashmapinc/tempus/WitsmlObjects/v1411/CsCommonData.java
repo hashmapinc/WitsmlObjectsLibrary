@@ -8,6 +8,8 @@
 
 package com.hashmapinc.tempus.WitsmlObjects.v1411;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -62,6 +64,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "extensionAny",
     "extensionNameValue"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CsCommonData {
 
     protected String sourceName;

@@ -1,5 +1,7 @@
 package com.hashmapinc.tempus.WitsmlObjects.v1311;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlSchemaType;
@@ -53,6 +55,7 @@ import javax.xml.bind.annotation.XmlType;
     "ellipsoidSemiMajorAxis",
     "ellipsoidInverseFlattening"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CsGeodeticModel {
 
     protected WellKnownNameStruct nameCRS;

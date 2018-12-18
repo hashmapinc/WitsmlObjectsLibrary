@@ -1,5 +1,7 @@
 package com.hashmapinc.tempus.WitsmlObjects.v1311;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -45,6 +47,7 @@ import javax.xml.bind.annotation.XmlType;
     "location",
     "description"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CsReferencePoint {
 
     @XmlElement(required = true)
@@ -56,6 +59,7 @@ public class CsReferencePoint {
     protected List<CsLocation> location;
     protected String description;
     @XmlAttribute(name = "uid")
+    @JsonInclude(JsonInclude.Include.ALWAYS)
     protected String uid;
 
     /**

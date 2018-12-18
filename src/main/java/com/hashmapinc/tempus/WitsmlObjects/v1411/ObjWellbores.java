@@ -47,7 +47,7 @@ public class ObjWellbores
     @XmlElement(required = true)
     protected List<ObjWellbore> wellbore;
     @XmlAttribute(name = "version", required = true)
-    protected String version;
+    protected String version = "1.4.1.1";
 
     /**
      * adds a wellbore to the wellbore list.

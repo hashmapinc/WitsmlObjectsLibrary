@@ -8,6 +8,8 @@
 
 package com.hashmapinc.tempus.WitsmlObjects.v1411;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -52,6 +54,7 @@ import javax.xml.bind.annotation.XmlType;
     "yAxisDescription",
     "xRotationCounterClockwise"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CsLocalCRS {
 
     protected Boolean usesWellAsOrigin;

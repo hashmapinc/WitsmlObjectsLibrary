@@ -2,17 +2,14 @@ package com.hashmapinc.tempus.WitsmlObjects.Util;
 
 import javax.xml.bind.*;
 
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
-import java.lang.reflect.InvocationTargetException;
 import java.util.logging.Logger;
 
 /**
@@ -42,12 +39,8 @@ public class WitsmlMarshal {
      * @param witsmlObj The witsml object to serialize into a string
      * @return a legal WITSML string
      * @throws JAXBException
-     * @throws NoSuchMethodException
-     * @throws IllegalAccessException
-     * @throws InvocationTargetException
-     * @throws InstantiationException
      */
-    public static String serialize(Object witsmlObj) throws JAXBException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
+    public static String serialize(Object witsmlObj) throws JAXBException {
         StringWriter witsmlWriter = new StringWriter();
         JAXBContext jaxbContext = JAXBContext.newInstance(witsmlObj.getClass());
         Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
@@ -62,14 +55,14 @@ public class WitsmlMarshal {
      */
     public static <T> String serializeToJSON(T witsmlObj) throws JsonProcessingException{
         ObjectMapper om = new ObjectMapper();
-        om.setSerializationInclusion(Include.NON_NULL); // ignore null fields
-        return om.writeValueAsString(witsmlObj);
+        return om.writerWithDefaultPrettyPrinter().writeValueAsString(witsmlObj);
     }
+
 
     public static <T> T deserializeFromJSON(
         String json, 
         Class witsmlClass
-    ) throws JsonParseException, JsonMappingException, IOException {
+    ) throws IOException {
         ObjectMapper om = new ObjectMapper();
         om.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         return (T) om.readValue(json, witsmlClass);

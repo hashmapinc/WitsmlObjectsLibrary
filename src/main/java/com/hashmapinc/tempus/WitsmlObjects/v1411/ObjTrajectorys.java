@@ -46,7 +46,7 @@ public class ObjTrajectorys {
     @XmlElement(required = true)
     protected List<ObjTrajectory> trajectory;
     @XmlAttribute(name = "version", required = true)
-    protected String version;
+    protected String version = "1.4.1.1";
 
     /**
      * adds a trajectory object to the trajectory list

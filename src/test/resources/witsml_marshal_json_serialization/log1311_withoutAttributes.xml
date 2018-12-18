@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../stylesheets/log.xsl" type="text/xsl" media="screen"?>
+<!-- log data for testing. Only tags with attributes are included -->
+<logs>
+	<log>
+		<startIndex/>
+		<endIndex/>
+		<stepIncrement/>
+		<indexCurve/>
+		<logParam/>
+		<logParam/>
+		<logCurveInfo>
+			<minIndex/>
+			<maxIndex/>
+			<sensorOffset/>
+		</logCurveInfo>
+	</log>
+</logs>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="./stylesheets/generic.xsl" type="text/xsl" media="screen"?>
+<!-- data for testing. Only tags with attributes are included -->
+<wells 
+	xmlns="http://www.witsml.org/schemas/1series" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.witsml.org/schemas/1series  ../xsd_schemas/obj_well.xsd" 
+	version="1.4.1.1">
+	<well>
+		<pcInterest/>
+		<wellheadElevation/>
+		<wellDatum>
+			<elevation/>
+		</wellDatum>
+		<wellDatum>
+			<datumName/>
+		</wellDatum>
+		<groundElevation/>
+		<waterDepth/>
+		<wellLocation>
+			<wellCRS/>
+			<easting/>
+			<northing/>
+		</wellLocation>
+		<referencePoint>
+			<location>
+				<wellCRS/>
+				<easting/>
+				<northing/>
+			</location>
+		</referencePoint>
+		<referencePoint>
+			<elevation/>
+			<measuredDepth/>
+			<location>
+				<wellCRS/>
+				<easting/>
+				<northing/>
+			</location>
+			<location>
+				<wellCRS/>
+				<latitude/>
+				<longitude/>
+			</location>
+		</referencePoint>
+		<wellCRS>
+			<geodeticCRS/>
+		</wellCRS>
+		<wellCRS>
+			<mapProjectionCRS/>
+		</wellCRS>
+		<wellCRS>
+			<localCRS>
+				<yAxisAzimuth/>
+			</localCRS>
+		</wellCRS>
+		<commonData>
+			<defaultDatum/>
+		</commonData>
+	</well>
+</wells>

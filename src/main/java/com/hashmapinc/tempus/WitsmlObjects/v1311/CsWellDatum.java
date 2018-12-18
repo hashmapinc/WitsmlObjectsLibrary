@@ -1,5 +1,7 @@
 package com.hashmapinc.tempus.WitsmlObjects.v1311;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -55,6 +57,7 @@ import javax.xml.bind.annotation.XmlType;
     "measuredDepth",
     "comment"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CsWellDatum {
 
     protected String name;
@@ -68,12 +71,16 @@ public class CsWellDatum {
     protected MeasuredDepthCoord measuredDepth;
     protected String comment;
     @XmlAttribute(name = "defaultMeasuredDepth")
+    @JsonInclude(JsonInclude.Include.ALWAYS)
     protected Boolean defaultMeasuredDepth;
     @XmlAttribute(name = "defaultVerticalDepth")
+    @JsonInclude(JsonInclude.Include.ALWAYS)
     protected Boolean defaultVerticalDepth;
     @XmlAttribute(name = "defaultElevation")
+    @JsonInclude(JsonInclude.Include.ALWAYS)
     protected Boolean defaultElevation;
     @XmlAttribute(name = "uid")
+    @JsonInclude(JsonInclude.Include.ALWAYS)
     protected String uid;
 
     /**
