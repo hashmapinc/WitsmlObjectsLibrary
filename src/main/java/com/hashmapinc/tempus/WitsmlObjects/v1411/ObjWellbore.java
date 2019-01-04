@@ -16,6 +16,7 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
 import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlMarshal;
 import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlVersionTransformer;
@@ -75,6 +76,7 @@ import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlVersionTransformer;
     "commonData",
     "customData"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ObjWellbore extends AbstractWitsmlObject {
 
     @XmlElement(required = true)
@@ -111,8 +113,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
     protected CsCommonData commonData;
     protected CsCustomData customData;
     @XmlAttribute(name = "uidWell")
+    @JsonInclude(JsonInclude.Include.ALWAYS)
     protected String uidWell;
     @XmlAttribute(name = "uid")
+    @JsonInclude(JsonInclude.Include.ALWAYS)
     protected String uid;
 
     /**
