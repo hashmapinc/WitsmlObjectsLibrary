@@ -758,7 +758,7 @@ public class ObjTrajectory extends AbstractWitsmlObject {
      */
     @Override
     public String getVersion() {
-        return "1.3.1.1";
+        return "1.4.1.1";
     }
 
     /**
