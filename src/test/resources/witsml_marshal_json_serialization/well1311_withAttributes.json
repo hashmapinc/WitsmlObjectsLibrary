@@ -117,16 +117,14 @@
       "uid" : null
     }, {
       "localCRS" : {
-        "yaxisAzimuth" : {
+        "yAxisAzimuth" : {
           "value" : null,
           "uom" : null,
           "northDirection" : null
         }
       },
       "uid" : null
-    } ],
-    "version" : "1.3.1.1",
-    "objectType" : "well"
+    } ]
   } ],
   "version" : "1.3.1.1"
 }

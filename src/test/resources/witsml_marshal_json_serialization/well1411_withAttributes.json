@@ -133,7 +133,7 @@
       "uid" : null
     }, {
       "localCRS" : {
-        "yaxisAzimuth" : {
+        "yAxisAzimuth" : {
           "value" : null,
           "uom" : null,
           "northDirection" : null
@@ -150,9 +150,7 @@
       },
       "extensionNameValue" : [ ]
     },
-    "uid" : null,
-    "version" : "1.4.1.1",
-    "objectType" : "well"
+    "uid" : null
   } ],
   "version" : "1.4.1.1"
 }

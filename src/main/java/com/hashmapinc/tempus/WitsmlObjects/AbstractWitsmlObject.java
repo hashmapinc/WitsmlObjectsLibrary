@@ -15,6 +15,10 @@
  */
 package com.hashmapinc.tempus.WitsmlObjects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 public abstract class AbstractWitsmlObject {
     //=========================================================================
     // default implementations for all concrete subclasses
@@ -44,6 +48,7 @@ public abstract class AbstractWitsmlObject {
      * @return type -   String value with the object type, or 
      *                  null if a type cannot be determined
      */
+    @JsonIgnore
     public String getObjectType() {
         // Validate the className. The pattern is "Obj<type>"
         String className = this.getClass().getSimpleName();
@@ -104,6 +109,7 @@ public abstract class AbstractWitsmlObject {
      * 
      * @return uid - String value of the WITMSL version, i.e. "1.3.1.1"
      */
+    @JsonIgnore
     public abstract String getVersion();
 
     /**
