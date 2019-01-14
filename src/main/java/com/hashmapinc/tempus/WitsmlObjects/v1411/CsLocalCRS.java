@@ -9,6 +9,8 @@
 package com.hashmapinc.tempus.WitsmlObjects.v1411;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -146,6 +148,7 @@ public class CsLocalCRS {
      *     {@link YAxisAzimuth }
      *     
      */
+    @JsonProperty("yAxisAzimuth")
     public YAxisAzimuth getYAxisAzimuth() {
         return yAxisAzimuth;
     }
