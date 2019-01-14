@@ -158,6 +158,7 @@ public class CsLocalCRS {
      *     {@link String }
      *     
      */
+    @JsonProperty("yAxisDescription")
     public String getYAxisDescription() {
         return yAxisDescription;
     }

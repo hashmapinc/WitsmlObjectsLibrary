@@ -8,6 +8,8 @@
 
 package com.hashmapinc.tempus.WitsmlObjects.v1411;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlSchemaType;
@@ -136,6 +138,7 @@ public class CsGeodeticModel {
      *     {@link LengthMeasure }
      *     
      */
+    @JsonProperty("xTranslation")
     public LengthMeasure getXTranslation() {
         return xTranslation;
     }
@@ -160,6 +163,7 @@ public class CsGeodeticModel {
      *     {@link LengthMeasure }
      *     
      */
+    @JsonProperty("yTranslation")
     public LengthMeasure getYTranslation() {
         return yTranslation;
     }
@@ -184,6 +188,7 @@ public class CsGeodeticModel {
      *     {@link LengthMeasure }
      *     
      */
+    @JsonProperty("zTranslation")
     public LengthMeasure getZTranslation() {
         return zTranslation;
     }
@@ -208,6 +213,7 @@ public class CsGeodeticModel {
      *     {@link PlaneAngleMeasure }
      *     
      */
+    @JsonProperty("xRotation")
     public PlaneAngleMeasure getXRotation() {
         return xRotation;
     }
@@ -232,6 +238,7 @@ public class CsGeodeticModel {
      *     {@link PlaneAngleMeasure }
      *     
      */
+    @JsonProperty("yRotation")
     public PlaneAngleMeasure getYRotation() {
         return yRotation;
     }
@@ -256,6 +263,7 @@ public class CsGeodeticModel {
      *     {@link PlaneAngleMeasure }
      *     
      */
+    @JsonProperty("zRotation")
     public PlaneAngleMeasure getZRotation() {
         return zRotation;
     }

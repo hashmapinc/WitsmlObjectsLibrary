@@ -75,27 +75,27 @@
           "value" : null,
           "uom" : null
         },
-        "xtranslation" : {
+        "xTranslation" : {
           "value" : null,
           "uom" : null
         },
-        "ytranslation" : {
+        "yTranslation" : {
           "value" : null,
           "uom" : null
         },
-        "ztranslation" : {
+        "zTranslation" : {
           "value" : null,
           "uom" : null
         },
-        "xrotation" : {
+        "xRotation" : {
           "value" : null,
           "uom" : null
         },
-        "yrotation" : {
+        "yRotation" : {
           "value" : null,
           "uom" : null
         },
-        "zrotation" : {
+        "zRotation" : {
           "value" : null,
           "uom" : null
         }
