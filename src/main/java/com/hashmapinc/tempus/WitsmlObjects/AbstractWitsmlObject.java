@@ -16,8 +16,6 @@
 package com.hashmapinc.tempus.WitsmlObjects;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonInclude;
 
 public abstract class AbstractWitsmlObject {
     //=========================================================================

@@ -50,7 +50,24 @@ public class WitsmlMarshalTest {
         ObjectMapper om = new ObjectMapper();
         Map<String, Object> map1311 = (Map<String, Object>) (om.readValue(json1311, Map.class));
         Map<String, Object> expectedMap = (Map<String, Object>) (om.readValue(expectedJson, Map.class));
-        assertEquals(map1311, expectedMap);
+        assertEquals(expectedMap, map1311);
+    }
+
+    @Test
+    public void shouldSerialize1311FullWellToJSON() throws Exception {
+        String xml1311 = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/well1311_withAttributesFull.xml");
+        com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWells obj1311 = WitsmlMarshal
+                .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWells.class);
+
+        String json1311 = WitsmlMarshal.serializeToJSON(obj1311);
+        String expectedJson = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/well1311_withAttributesFull.json");
+        //assertEquals(expectedJson.length(), json1311.length()); // simple length check before more advanced comparision
+
+        // do a deep comparison of the json values
+        ObjectMapper om = new ObjectMapper();
+        Map<String, Object> map1311 = (Map<String, Object>) (om.readValue(json1311, Map.class));
+        Map<String, Object> expectedMap = (Map<String, Object>) (om.readValue(expectedJson, Map.class));
+        assertEquals(expectedMap, map1311);
     }
 
     @Test

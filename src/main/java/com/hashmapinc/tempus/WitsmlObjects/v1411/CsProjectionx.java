@@ -8,6 +8,8 @@
 
 package com.hashmapinc.tempus.WitsmlObjects.v1411;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -619,6 +621,7 @@ public class CsProjectionx {
      *     {@link NADTypes }
      *     
      */
+    @JsonProperty("nADType")
     public NADTypes getNADType() {
         return nadType;
     }

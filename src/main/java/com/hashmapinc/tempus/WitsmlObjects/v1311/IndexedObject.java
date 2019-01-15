@@ -1,5 +1,9 @@
 package com.hashmapinc.tempus.WitsmlObjects.v1311;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -31,12 +35,14 @@ import javax.xml.bind.annotation.XmlValue;
 @XmlType(name = "indexedObject", propOrder = {
     "value"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class IndexedObject {
 
     @XmlValue
     protected String value;
     @XmlAttribute(name = "index", required = true)
-    protected short index;
+    @JsonIgnore
+    protected String index;
     @XmlAttribute(name = "name")
     protected String name;
     @XmlAttribute(name = "uom")
@@ -75,16 +81,18 @@ public class IndexedObject {
      * Gets the value of the index property.
      * 
      */
-    public short getIndex() {
-        return index;
+    public String getIndex(){
+        return index.toString();
     }
 
     /**
      * Sets the value of the index property.
      * 
      */
-    public void setIndex(short value) {
-        this.index = value;
+    public void setIndex(String value) {
+        if (!"".equals(value)){
+            this.index = value;
+        }
     }
 
     /**

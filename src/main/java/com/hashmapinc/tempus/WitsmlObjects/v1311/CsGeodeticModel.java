@@ -1,6 +1,8 @@
 package com.hashmapinc.tempus.WitsmlObjects.v1311;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -61,8 +63,11 @@ public class CsGeodeticModel {
     protected WellKnownNameStruct nameCRS;
     @XmlSchemaType(name = "string")
     protected GeodeticDatum geodeticDatumCode;
+    @JsonProperty("xTranslation")
     protected LengthMeasure xTranslation;
+    @JsonProperty("yTranslation")
     protected LengthMeasure yTranslation;
+    @JsonProperty("zTranslation")
     protected LengthMeasure zTranslation;
     protected PlaneAngleMeasure xRotation;
     protected PlaneAngleMeasure yRotation;
@@ -129,6 +134,7 @@ public class CsGeodeticModel {
      *     {@link LengthMeasure }
      *     
      */
+    @JsonProperty("xTranslation")
     public LengthMeasure getXTranslation() {
         return xTranslation;
     }
@@ -153,6 +159,7 @@ public class CsGeodeticModel {
      *     {@link LengthMeasure }
      *     
      */
+    @JsonProperty("yTranslation")
     public LengthMeasure getYTranslation() {
         return yTranslation;
     }
@@ -177,6 +184,7 @@ public class CsGeodeticModel {
      *     {@link LengthMeasure }
      *     
      */
+    @JsonProperty("zTranslation")
     public LengthMeasure getZTranslation() {
         return zTranslation;
     }
@@ -201,6 +209,7 @@ public class CsGeodeticModel {
      *     {@link PlaneAngleMeasure }
      *     
      */
+    @JsonProperty("xRotation")
     public PlaneAngleMeasure getXRotation() {
         return xRotation;
     }
@@ -225,6 +234,7 @@ public class CsGeodeticModel {
      *     {@link PlaneAngleMeasure }
      *     
      */
+    @JsonProperty("yRotation")
     public PlaneAngleMeasure getYRotation() {
         return yRotation;
     }
@@ -249,6 +259,7 @@ public class CsGeodeticModel {
      *     {@link PlaneAngleMeasure }
      *     
      */
+    @JsonProperty("zRotation")
     public PlaneAngleMeasure getZRotation() {
         return zRotation;
     }
