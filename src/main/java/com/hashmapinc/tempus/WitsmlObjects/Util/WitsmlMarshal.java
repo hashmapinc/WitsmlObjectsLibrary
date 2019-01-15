@@ -6,6 +6,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.databind.util.StdDateFormat;
 
 import java.io.IOException;
 import java.io.StringReader;
@@ -55,6 +56,7 @@ public class WitsmlMarshal {
      */
     public static <T> String serializeToJSON(T witsmlObj) throws JsonProcessingException{
         ObjectMapper om = new ObjectMapper();
+        om.setDateFormat(new StdDateFormat());
         return om.writerWithDefaultPrettyPrinter().writeValueAsString(witsmlObj);
     }
 
