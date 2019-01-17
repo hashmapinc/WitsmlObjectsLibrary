@@ -2,7 +2,6 @@ package com.hashmapinc.tempus.WitsmlObjects;
 
 import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlMarshal;
 import com.hashmapinc.tempus.WitsmlObjects.Util.TestUtilities;
-import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
