@@ -1,6 +1,7 @@
 package com.hashmapinc.tempus.WitsmlObjects.Util;
 
 import com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWellbore;
+import com.hashmapinc.tempus.WitsmlObjects.v1311.RefNameString;
 import com.hashmapinc.tempus.WitsmlObjects.v20.Wellbore;
 
 /**
@@ -17,10 +18,59 @@ public class WellboreConverter {
     // conversions to 1.3.1.1
     //=========================================================================
     public static ObjWellbore convertTo1311(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore src) {
-        return null;
+        ObjWellbore dest = new ObjWellbore();
+        dest.setNameWell(src.getNameWell());
+        dest.setName(src.getName());
+        dest.setParentWellbore(src.getParentWellbore());
+        dest.setNumber(src.getNumber());
+        dest.setSuffixAPI(src.getSuffixAPI());
+        dest.setNumGovt(src.getNumGovt());
+        dest.setStatusWellbore(src.getStatusWellbore());
+        dest.setTypeWellbore(src.getTypeWellbore());
+        dest.setShape(src.getShape());
+        dest.setDTimKickoff(src.getDTimKickoff());
+        dest.setAchievedTD(src.isAchievedTD());
+        dest.setMdCurrent(src.getMd());
+        dest.setTvdCurrent(src.getTvd());
+        dest.setMdKickoff(src.getMdKickoff());
+        dest.setTvdKickoff(src.getTvdKickoff());
+        dest.setMdPlanned(src.getMdPlanned());
+        dest.setTvdPlanned(src.getMdPlanned());
+        dest.setMdSubSeaPlanned(src.getMdSubSeaPlanned());
+        dest.setTvdSubSeaPlanned(src.getTvdSubSeaPlanned());
+        dest.setDayTarget(src.getDayTarget());
+        dest.setCommonData(src.getCommonData());
+        dest.setCustomData(src.getCustomData());
+        dest.setUidWell(src.getUidWell());
+        dest.setUid(src.getUid());
+        return dest;
     }
     public static ObjWellbore convertTo1311(Wellbore src) {
-        return null;
+        ObjWellbore dest = new ObjWellbore();
+
+        // get well info
+        if (null != src.getWell())
+            dest.setNameWell(src.getWell().getTitle());
+
+        dest.setNumber(src.getNumber());
+        dest.setSuffixAPI(src.getSuffixAPI());
+        dest.setNumGovt(src.getNumGovt());
+        dest.setStatusWellbore(src.getStatusWellbore());
+        dest.setTypeWellbore(src.getTypeWellbore());
+        dest.setShape(src.getShape());
+        dest.setDTimKickoff(src.getDTimKickoff());
+        dest.setAchievedTD(src.isAchievedTD());
+        dest.setMdCurrent(src.getMd());
+        dest.setTvdCurrent(src.getTvd());
+        dest.setMdKickoff(src.getMdKickoff());
+        dest.setTvdKickoff(src.getTvdKickoff());
+        dest.setMdPlanned(src.getMdPlanned());
+        dest.setTvdPlanned(src.getMdPlanned());
+        dest.setMdSubSeaPlanned(src.getMdSubSeaPlanned());
+        dest.setTvdSubSeaPlanned(src.getTvdSubSeaPlanned());
+        dest.setDayTarget(src.getDayTarget());
+        dest.setCustomData(src.getCustomData());
+        return dest;
     }
     //=========================================================================
 
