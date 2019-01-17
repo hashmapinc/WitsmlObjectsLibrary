@@ -9,6 +9,7 @@
 package com.hashmapinc.tempus.WitsmlObjects.v1411;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,8 +70,10 @@ public class CsCommonData {
 
     protected String sourceName;
     @XmlSchemaType(name = "dateTime")
+    @JsonProperty("dTimCreation")
     protected XMLGregorianCalendar dTimCreation;
     @XmlSchemaType(name = "dateTime")
+    @JsonProperty("dTimLastChange")
     protected XMLGregorianCalendar dTimLastChange;
     @XmlSchemaType(name = "string")
     protected ItemState itemState;
@@ -114,6 +117,7 @@ public class CsCommonData {
      *     {@link XMLGregorianCalendar }
      *     
      */
+    @JsonProperty("dTimCreation")
     public XMLGregorianCalendar getDTimCreation() {
         return dTimCreation;
     }
@@ -138,6 +142,7 @@ public class CsCommonData {
      *     {@link XMLGregorianCalendar }
      *     
      */
+    @JsonProperty("dTimDTimLastChange")
     public XMLGregorianCalendar getDTimLastChange() {
         return dTimLastChange;
     }

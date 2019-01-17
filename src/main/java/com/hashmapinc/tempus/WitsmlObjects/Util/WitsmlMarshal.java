@@ -66,7 +66,8 @@ public class WitsmlMarshal {
         Class witsmlClass
     ) throws IOException {
         ObjectMapper om = new ObjectMapper();
-        om.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        om.setDateFormat(new StdDateFormat());
+        om.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, true);
         return (T) om.readValue(json, witsmlClass);
     }
 }

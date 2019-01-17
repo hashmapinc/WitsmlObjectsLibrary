@@ -358,8 +358,8 @@
       "sourceName" : null,
       "itemState" : null,
       "comments" : "",
-      "dtimCreation" : null,
-      "dtimLastChange" : null
+      "dTimCreation" : null,
+      "dTimLastChange" : null
     },
     "uid" : ""
   } ],

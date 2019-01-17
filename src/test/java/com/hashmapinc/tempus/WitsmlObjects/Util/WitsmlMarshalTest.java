@@ -71,6 +71,17 @@ public class WitsmlMarshalTest {
     }
 
     @Test
+    public void shouldDeserializeCommonData() throws Exception {
+        String json1411 = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/well1411_dTimLastChange.json");
+        com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell obj1411 = WitsmlMarshal.deserializeFromJSON(json1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell.class);
+
+        String expectedDTimLastChange = "2019-01-16T15:07:03.581Z";
+        String actualDTimLastChange = obj1411.getCommonData().getDTimLastChange().toString();
+
+        assertEquals(actualDTimLastChange, expectedDTimLastChange);
+    }
+
+    @Test
     public void shouldSerialize1411WellToJSON() throws Exception {
         String xml1411 = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/well1411_withoutAttributes.xml");
         com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWells obj1411 = WitsmlMarshal

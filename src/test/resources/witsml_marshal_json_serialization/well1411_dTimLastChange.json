@@ -1,0 +1,13 @@
+{
+  "country":"UnitedStates",
+  "operator":"HASHMAP",
+  "uid":"HM",
+  "commonData":
+  {
+    "dTimLastChange":"2019-01-16T15:07:03.5813763+00:00",
+    "dTimCreation":"2019-01-16T15:07:03.5813763+00:00"
+  },
+  "timeZone":"-06:00",
+  "field":"TestCases",
+  "name":"Zartan"
+}

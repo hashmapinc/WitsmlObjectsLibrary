@@ -1,5 +1,8 @@
 package com.hashmapinc.tempus.WitsmlObjects.v1311;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlSchemaType;
@@ -40,12 +43,15 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "itemState",
     "comments"
 })
+
 public class CsCommonData {
 
     protected String sourceName;
     @XmlSchemaType(name = "dateTime")
+    @JsonProperty("dTimCreation")
     protected XMLGregorianCalendar dTimCreation;
     @XmlSchemaType(name = "dateTime")
+    @JsonProperty("dTimLastChange")
     protected XMLGregorianCalendar dTimLastChange;
     @XmlSchemaType(name = "string")
     protected ItemState itemState;
@@ -83,6 +89,7 @@ public class CsCommonData {
      *     {@link XMLGregorianCalendar }
      *     
      */
+    @JsonProperty("dTimCreation")
     public XMLGregorianCalendar getDTimCreation() {
         return dTimCreation;
     }
@@ -107,6 +114,7 @@ public class CsCommonData {
      *     {@link XMLGregorianCalendar }
      *     
      */
+    @JsonProperty("dTimLastChange")
     public XMLGregorianCalendar getDTimLastChange() {
         return dTimLastChange;
     }
