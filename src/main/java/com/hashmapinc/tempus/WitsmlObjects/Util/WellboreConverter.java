@@ -209,6 +209,8 @@ public class WellboreConverter {
         dest.setUid(src.getUid());
         return dest;
     }
+
+
     public static com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore convertTo1411(Wellbore src) throws DatatypeConfigurationException {
         com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore dest = new com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore();
 
@@ -275,8 +277,58 @@ public class WellboreConverter {
     // conversions to 2.0
     //=========================================================================
     public static Wellbore convertTo20(ObjWellbore src) {
-        return null;
+        Wellbore dest = new Wellbore();
+
+        dest.setNumber(src.getNumber());
+        dest.setSuffixAPI(src.getSuffixAPI());
+        dest.setNumGovt(src.getNumGovt());
+
+        if (null != src.getStatusWellbore())
+            dest.setStatusWellbore(com.hashmapinc.tempus.WitsmlObjects.v20.WellStatus.fromValue(src.getStatusWellbore().value()));
+        if (null != src.getPurposeWellbore())
+            dest.setPurposeWellbore(com.hashmapinc.tempus.WitsmlObjects.v20.WellPurpose.fromValue(src.getPurposeWellbore().value()));
+        if (null != src.getTypeWellbore())
+            dest.setTypeWellbore(com.hashmapinc.tempus.WitsmlObjects.v20.WellboreType.fromValue(src.getTypeWellbore().value()));
+        if (null != src.getShape())
+            dest.setShape(com.hashmapinc.tempus.WitsmlObjects.v20.WellboreShape.fromValue(src.getShape().value()));
+        if (null != src.getDTimKickoff())
+            dest.setDTimKickoff(src.getDTimKickoff().toString());
+
+        dest.setAchievedTD(src.isAchievedTD());
+
+        if(null != src.getMdCurrent())
+            dest.setMd(src.getMdCurrent().to20DepthCoord());
+        if(null != src.getTvdCurrent())
+            dest.setTvd(src.getTvdCurrent().to20DepthCoord());
+        if(null != src.getMdKickoff())
+            dest.setMdKickoff(src.getMdKickoff().to20DepthCoord());
+        if(null != src.getTvdKickoff())
+            dest.setTvdKickoff(src.getTvdKickoff().to20DepthCoord());
+        if(null != src.getMdPlanned())
+            dest.setMdPlanned(src.getMdPlanned().to20DepthCoord());
+        if(null != src.getTvdPlanned())
+            dest.setTvdPlanned(src.getTvdPlanned().to20DepthCoord());
+        if(null != src.getMdSubSeaPlanned())
+            dest.setMdSubSeaPlanned(src.getMdSubSeaPlanned().to20DepthCoord());
+        if(null != src.getTvdSubSeaPlanned())
+            dest.setTvdSubSeaPlanned(src.getTvdSubSeaPlanned().to20DepthCoord());
+
+        if (null != src.getDayTarget()) {
+            com.hashmapinc.tempus.WitsmlObjects.v20.DimensionlessMeasure dayTarget = new com.hashmapinc.tempus.WitsmlObjects.v20.DimensionlessMeasure();
+            dayTarget.setUom(src.getDayTarget().getUom());
+            dayTarget.setValue(src.getDayTarget().getValue());
+            dest.setDayTarget(dayTarget);
+        }
+
+        // get custom data
+        if(null != src.getCustomData()) {
+            com.hashmapinc.tempus.WitsmlObjects.v20.CustomData customData = new com.hashmapinc.tempus.WitsmlObjects.v20.CustomData();
+            customData.setAny(src.getCustomData().getAny());
+            dest.setCustomData(customData);
+        }
+        return dest;
     }
+
     public static Wellbore convertTo20(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore src) {
         Wellbore dest = new Wellbore();
 
