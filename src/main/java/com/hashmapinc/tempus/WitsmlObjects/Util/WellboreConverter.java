@@ -37,22 +37,19 @@ public class WellboreConverter {
         dest.setNumGovt(src.getNumGovt());
 
         if (null != src.getStatusWellbore()) {
-            String statusWellbore = src.getStatusWellbore().value();
-            dest.setStatusWellbore(com.hashmapinc.tempus.WitsmlObjects.v1311.WellStatus.fromValue(statusWellbore));
-        }
+            dest.setStatusWellbore(com.hashmapinc.tempus.WitsmlObjects.v1311.WellStatus.fromValue(src.getStatusWellbore().value()));
         if (null != src.getPurposeWellbore()) {
-            String purposeWellbore = src.getPurposeWellbore().value();
-            dest.setPurposeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1311.WellPurpose.fromValue(purposeWellbore));
-        }
+            dest.setPurposeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1311.WellPurpose.fromValue(src.getPurposeWellbore().value()));
         if (null != src.getTypeWellbore()) {
-            String typeWellbore = src.getTypeWellbore().value();
-            dest.setTypeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1311.WellboreType.fromValue(typeWellbore));
-        }
+            dest.setTypeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1311.WellboreType.fromValue(src.getTypeWellbore().value()));
+        if (null != src.getShape()) {
+            dest.setShape(com.hashmapinc.tempus.WitsmlObjects.v1311.WellboreShape.fromValue(src.getShape().value()));
 
-        dest.setTypeWellbore(src.getTypeWellbore());
-        dest.setShape(src.getShape());
         dest.setDTimKickoff(src.getDTimKickoff());
         dest.setAchievedTD(src.isAchievedTD());
+
+        if (null != src.getMd())
+
         dest.setMdCurrent(src.getMd());
         dest.setTvdCurrent(src.getTvd());
         dest.setMdKickoff(src.getMdKickoff());
@@ -61,6 +58,7 @@ public class WellboreConverter {
         dest.setTvdPlanned(src.getMdPlanned());
         dest.setMdSubSeaPlanned(src.getMdSubSeaPlanned());
         dest.setTvdSubSeaPlanned(src.getTvdSubSeaPlanned());
+
         dest.setDayTarget(src.getDayTarget());
         dest.setCommonData(src.getCommonData());
         dest.setCustomData(src.getCustomData());
