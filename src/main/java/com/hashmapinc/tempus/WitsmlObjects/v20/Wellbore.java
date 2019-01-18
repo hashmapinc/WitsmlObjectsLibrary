@@ -92,18 +92,18 @@ public class Wellbore
     protected String numGovt;
     @XmlElement(name = "StatusWellbore")
     @XmlSchemaType(name = "string")
-    private WellStatus statusWellbore;
+    private com.hashmapinc.tempus.WitsmlObjects.v1411.WellStatus statusWellbore;
     @XmlElement(name = "IsActive")
     private Boolean isActive;
     @XmlElement(name = "PurposeWellbore")
     @XmlSchemaType(name = "string")
-    private WellPurpose purposeWellbore;
+    private com.hashmapinc.tempus.WitsmlObjects.v1411.WellPurpose purposeWellbore;
     @XmlElement(name = "TypeWellbore")
     @XmlSchemaType(name = "string")
-    private WellboreType typeWellbore;
+    private com.hashmapinc.tempus.WitsmlObjects.v1411.WellboreType typeWellbore;
     @XmlElement(name = "Shape")
     @XmlSchemaType(name = "string")
-    private WellboreShape shape;
+    private com.hashmapinc.tempus.WitsmlObjects.v1411.WellboreShape shape;
     @XmlElement(name = "DTimKickoff")
     private String dTimKickoff;
     @XmlElement(name = "AchievedTD")
@@ -215,7 +215,7 @@ public class Wellbore
      *     {@link WellStatus }
      *     
      */
-    public WellStatus getStatusWellbore() {
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.WellStatus getStatusWellbore() {
         return statusWellbore;
     }
 
@@ -227,7 +227,7 @@ public class Wellbore
      *     {@link WellStatus }
      *     
      */
-    public void setStatusWellbore(WellStatus value) {
+    public void setStatusWellbore(com.hashmapinc.tempus.WitsmlObjects.v1411.WellStatus value) {
         this.statusWellbore = value;
     }
 
@@ -263,7 +263,7 @@ public class Wellbore
      *     {@link WellPurpose }
      *     
      */
-    public WellPurpose getPurposeWellbore() {
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.WellPurpose getPurposeWellbore() {
         return purposeWellbore;
     }
 
@@ -275,7 +275,7 @@ public class Wellbore
      *     {@link WellPurpose }
      *     
      */
-    public void setPurposeWellbore(WellPurpose value) {
+    public void setPurposeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1411.WellPurpose value) {
         this.purposeWellbore = value;
     }
 
@@ -287,7 +287,7 @@ public class Wellbore
      *     {@link WellboreType }
      *     
      */
-    public WellboreType getTypeWellbore() {
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.WellboreType getTypeWellbore() {
         return typeWellbore;
     }
 
@@ -299,7 +299,7 @@ public class Wellbore
      *     {@link WellboreType }
      *     
      */
-    public void setTypeWellbore(WellboreType value) {
+    public void setTypeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1411.WellboreType value) {
         this.typeWellbore = value;
     }
 
@@ -311,7 +311,7 @@ public class Wellbore
      *     {@link WellboreShape }
      *     
      */
-    public WellboreShape getShape() {
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.WellboreShape getShape() {
         return shape;
     }
 
@@ -323,7 +323,7 @@ public class Wellbore
      *     {@link WellboreShape }
      *     
      */
-    public void setShape(WellboreShape value) {
+    public void setShape(com.hashmapinc.tempus.WitsmlObjects.v1411.WellboreShape value) {
         this.shape = value;
     }
 

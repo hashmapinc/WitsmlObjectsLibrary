@@ -1,8 +1,11 @@
 package com.hashmapinc.tempus.WitsmlObjects.Util;
 
 import com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWellbore;
-import com.hashmapinc.tempus.WitsmlObjects.v1311.RefNameString;
 import com.hashmapinc.tempus.WitsmlObjects.v20.Wellbore;
+
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 /**
  * This class converts wellbore singular
@@ -26,6 +29,7 @@ public class WellboreConverter {
         dest.setSuffixAPI(src.getSuffixAPI());
         dest.setNumGovt(src.getNumGovt());
         dest.setStatusWellbore(src.getStatusWellbore());
+        dest.setPurposeWellbore(src.getPurposeWellbore());
         dest.setTypeWellbore(src.getTypeWellbore());
         dest.setShape(src.getShape());
         dest.setDTimKickoff(src.getDTimKickoff());
@@ -45,7 +49,7 @@ public class WellboreConverter {
         dest.setUid(src.getUid());
         return dest;
     }
-    public static ObjWellbore convertTo1311(Wellbore src) {
+    public static ObjWellbore convertTo1311(Wellbore src) throws DatatypeConfigurationException {
         ObjWellbore dest = new ObjWellbore();
 
         // get well info
@@ -56,9 +60,17 @@ public class WellboreConverter {
         dest.setSuffixAPI(src.getSuffixAPI());
         dest.setNumGovt(src.getNumGovt());
         dest.setStatusWellbore(src.getStatusWellbore());
+        dest.setPurposeWellbore(src.getPurposeWellbore());
         dest.setTypeWellbore(src.getTypeWellbore());
         dest.setShape(src.getShape());
-        dest.setDTimKickoff(src.getDTimKickoff());
+
+        // convert dtim string to object
+        if (null != src.getDTimKickoff()) {// TODO: an adult should unit test the heck otu of this
+            XMLGregorianCalendar dtim = DatatypeFactory.newInstance().newXMLGregorianCalendar(src.getDTimKickoff());
+            dest.setDTimKickoff(dtim);
+        }
+
+
         dest.setAchievedTD(src.isAchievedTD());
         dest.setMdCurrent(src.getMd());
         dest.setTvdCurrent(src.getTvd());
@@ -69,7 +81,13 @@ public class WellboreConverter {
         dest.setMdSubSeaPlanned(src.getMdSubSeaPlanned());
         dest.setTvdSubSeaPlanned(src.getTvdSubSeaPlanned());
         dest.setDayTarget(src.getDayTarget());
-        dest.setCustomData(src.getCustomData());
+
+        // get custom data
+        if(null != src.getCustomData()) {
+            com.hashmapinc.tempus.WitsmlObjects.v1411.CsCustomData customData = new com.hashmapinc.tempus.WitsmlObjects.v1411.CsCustomData();
+            customData.setAny(src.getCustomData().getAny());
+            dest.setCustomData(customData);
+        }
         return dest;
     }
     //=========================================================================

@@ -13,7 +13,7 @@ public class WellboreConverterTest {
     @Test
     public void shouldConvert1411to1311() throws Exception {
         String srcXML = TestUtilities.getResourceAsString("wellbore_converter/wellbore1411.xml");
-        com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore src = WitsmlMarshal.deserialize(srcXML, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore.class);
+        com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore src = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores)WitsmlMarshal.deserialize(srcXML, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore.class)).getWellbore().get(0);
 
         // get converted wellbore
         ObjWellbore dest = WellboreConverter.convertTo1311(src);
