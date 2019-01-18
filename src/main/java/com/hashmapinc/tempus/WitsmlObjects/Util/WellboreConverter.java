@@ -89,32 +89,51 @@ public class WellboreConverter {
         dest.setNumber(src.getNumber());
         dest.setSuffixAPI(src.getSuffixAPI());
         dest.setNumGovt(src.getNumGovt());
-        dest.setStatusWellbore(src.getStatusWellbore());
-        dest.setPurposeWellbore(src.getPurposeWellbore());
-        dest.setTypeWellbore(src.getTypeWellbore());
-        dest.setShape(src.getShape());
+
+        if (null != src.getStatusWellbore())
+            dest.setStatusWellbore(com.hashmapinc.tempus.WitsmlObjects.v1311.WellStatus.fromValue(src.getStatusWellbore().value()));
+        if (null != src.getPurposeWellbore())
+            dest.setPurposeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1311.WellPurpose.fromValue(src.getPurposeWellbore().value()));
+        if (null != src.getTypeWellbore())
+            dest.setTypeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1311.WellboreType.fromValue(src.getTypeWellbore().value()));
+        if (null != src.getShape())
+            dest.setShape(com.hashmapinc.tempus.WitsmlObjects.v1311.WellboreShape.fromValue(src.getShape().value()));
 
         // convert dtim string to object
-        if (null != src.getDTimKickoff()) {// TODO: an adult should unit test the heck otu of this
+        if (null != src.getDTimKickoff()) {
             XMLGregorianCalendar dtim = DatatypeFactory.newInstance().newXMLGregorianCalendar(src.getDTimKickoff());
             dest.setDTimKickoff(dtim);
         }
 
-
         dest.setAchievedTD(src.isAchievedTD());
-        dest.setMdCurrent(src.getMd().to1311MeasuredDepthCoord());
-        dest.setTvdCurrent(src.getTvd());
-        dest.setMdKickoff(src.getMdKickoff().to1311MeasuredDepthCoord());
-        dest.setTvdKickoff(src.getTvdKickoff());
-        dest.setMdPlanned(src.getMdPlanned().to1311MeasuredDepthCoord());
-        dest.setTvdPlanned(src.getTvdPlanned());
-        dest.setMdSubSeaPlanned(src.getMdSubSeaPlanned().to1311MeasuredDepthCoord());
-        dest.setTvdSubSeaPlanned(src.getTvdSubSeaPlanned());
-        dest.setDayTarget(src.getDayTarget());
+        if(null != src.getMd())
+            dest.setMdCurrent(src.getMd().to1311MeasuredDepthCoord());
+        if(null != src.getTvd())
+            dest.setTvdCurrent(src.getTvd().to1311VerticalDepthCoord());
+        if(null != src.getMdKickoff())
+            dest.setMdKickoff(src.getMdKickoff().to1311MeasuredDepthCoord());
+        if(null != src.getTvdKickoff())
+            dest.setTvdKickoff(src.getTvdKickoff().to1311VerticalDepthCoord());
+        if(null != src.getMdPlanned())
+            dest.setMdPlanned(src.getMdPlanned().to1311MeasuredDepthCoord());
+        if(null != src.getTvdPlanned())
+            dest.setTvdPlanned(src.getTvdPlanned().to1311VerticalDepthCoord());
+        if(null != src.getMdSubSeaPlanned())
+            dest.setMdSubSeaPlanned(src.getMdSubSeaPlanned().to1311MeasuredDepthCoord());
+        if(null != src.getTvdSubSeaPlanned())
+            dest.setTvdSubSeaPlanned(src.getTvdSubSeaPlanned().to1311VerticalDepthCoord());
+
+        if (null != src.getDayTarget()) {
+            com.hashmapinc.tempus.WitsmlObjects.v1311.TimeMeasure dayTarget = new com.hashmapinc.tempus.WitsmlObjects.v1311.TimeMeasure();
+            dayTarget.setUom(src.getDayTarget().getUom());
+            dayTarget.setValue(src.getDayTarget().getValue());
+            dest.setDayTarget(dayTarget);
+        }
+
 
         // get custom data
         if(null != src.getCustomData()) {
-            com.hashmapinc.tempus.WitsmlObjects.v1411.CsCustomData customData = new com.hashmapinc.tempus.WitsmlObjects.v1411.CsCustomData();
+            com.hashmapinc.tempus.WitsmlObjects.v1311.CsCustomData customData = new com.hashmapinc.tempus.WitsmlObjects.v1311.CsCustomData();
             customData.setAny(src.getCustomData().getAny());
             dest.setCustomData(customData);
         }
