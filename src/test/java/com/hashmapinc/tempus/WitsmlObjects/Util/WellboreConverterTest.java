@@ -19,7 +19,7 @@ public class WellboreConverterTest {
         ObjWellbore dest = WellboreConverter.convertTo1311(src);
 
         // check fields
-        assertEquals(src.getMd(), dest.getMdCurrent());
+        assertEquals(src.getMd().getValue(), dest.getMdCurrent().getValue());
     }
 
     @Test
@@ -31,7 +31,7 @@ public class WellboreConverterTest {
         ObjWellbore dest = WellboreConverter.convertTo1311(src);
 
         // check fields
-        assertEquals(src.getMd(), dest.getMdCurrent());
+        assertEquals(src.getMd().getValue(), dest.getMdCurrent().getValue());
 
     }
     //=========================================================================

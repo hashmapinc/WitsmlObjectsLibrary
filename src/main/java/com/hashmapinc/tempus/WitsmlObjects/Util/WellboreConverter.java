@@ -72,8 +72,11 @@ public class WellboreConverter {
             dest.setDayTarget(dayTarget);
         }
 
-        dest.setCommonData(src.getCommonData().to1311CommonData());
-        dest.setCustomData(src.getCustomData().to1311CustomData());
+        if (null != src.getCommonData())
+            dest.setCommonData(src.getCommonData().to1311CommonData());
+        if (null != src.getCustomData())
+            dest.setCustomData(src.getCustomData().to1311CustomData());
+
         dest.setUidWell(src.getUidWell());
         dest.setUid(src.getUid());
         return dest;
