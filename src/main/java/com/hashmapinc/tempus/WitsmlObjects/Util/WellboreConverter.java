@@ -149,10 +149,125 @@ public class WellboreConverter {
     // conversions to 1.4.1.1
     //=========================================================================
     public static com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore convertTo1411(ObjWellbore src) {
-        return null;
+        com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore dest = new com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore();
+        dest.setNameWell(src.getNameWell());
+        dest.setName(src.getName());
+
+        if (null != src.getParentWellbore()) {
+            com.hashmapinc.tempus.WitsmlObjects.v1411.RefNameString parentWellbore = new com.hashmapinc.tempus.WitsmlObjects.v1411.RefNameString();
+            parentWellbore.setValue(src.getParentWellbore().getValue());
+            parentWellbore.setUidRef(src.getParentWellbore().getUidRef());
+            dest.setParentWellbore(parentWellbore);
+        }
+
+        dest.setNumber(src.getNumber());
+        dest.setSuffixAPI(src.getSuffixAPI());
+        dest.setNumGovt(src.getNumGovt());
+
+        if (null != src.getStatusWellbore())
+            dest.setStatusWellbore(com.hashmapinc.tempus.WitsmlObjects.v1411.WellStatus.fromValue(src.getStatusWellbore().value()));
+        if (null != src.getPurposeWellbore())
+            dest.setPurposeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1411.WellPurpose.fromValue(src.getPurposeWellbore().value()));
+        if (null != src.getTypeWellbore())
+            dest.setTypeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1411.WellboreType.fromValue(src.getTypeWellbore().value()));
+        if (null != src.getShape())
+            dest.setShape(com.hashmapinc.tempus.WitsmlObjects.v1411.WellboreShape.fromValue(src.getShape().value()));
+
+        dest.setDTimKickoff(src.getDTimKickoff());
+        dest.setAchievedTD(src.isAchievedTD());
+
+        if (null != src.getMdCurrent())
+            dest.setMd(src.getMdCurrent().to1411MeasuredDepthCoord());
+        if (null != src.getTvdCurrent())
+            dest.setTvd(src.getTvdCurrent().to1411VerticalDepthCoord());
+        if (null != src.getMdKickoff())
+            dest.setMdKickoff(src.getMdKickoff().to1411MeasuredDepthCoord());
+        if (null != src.getTvdKickoff())
+            dest.setTvdKickoff(src.getTvdKickoff().to1411VerticalDepthCoord());
+        if (null != src.getMdPlanned());
+        dest.setMdPlanned(src.getMdPlanned().to1411MeasuredDepthCoord());
+        if (null != src.getTvdPlanned())
+            dest.setTvdPlanned(src.getTvdPlanned().to1411VerticalDepthCoord());
+        if (null != src.getMdSubSeaPlanned())
+            dest.setMdSubSeaPlanned(src.getMdSubSeaPlanned().to1411MeasuredDepthCoord());
+        if (null != src.getTvdSubSeaPlanned())
+            dest.setTvdSubSeaPlanned(src.getTvdSubSeaPlanned().to1411VerticalDepthCoord());
+
+        if (null != src.getDayTarget()) {
+            com.hashmapinc.tempus.WitsmlObjects.v1411.TimeMeasure dayTarget = new com.hashmapinc.tempus.WitsmlObjects.v1411.TimeMeasure();
+            dayTarget.setUom(src.getDayTarget().getUom());
+            dayTarget.setValue(src.getDayTarget().getValue());
+            dest.setDayTarget(dayTarget);
+        }
+
+        if (null != src.getCommonData())
+            dest.setCommonData(src.getCommonData().to1411CommonData());
+        if (null != src.getCustomData())
+            dest.setCustomData(src.getCustomData().to1411CustomData());
+
+        dest.setUidWell(src.getUidWell());
+        dest.setUid(src.getUid());
+        return dest;
     }
-    public static com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore convertTo1411(Wellbore src) {
-        return null;
+    public static com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore convertTo1411(Wellbore src) throws DatatypeConfigurationException {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore dest = new com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore();
+
+        // get well info
+        if (null != src.getWell())
+            dest.setNameWell(src.getWell().getTitle());
+
+        dest.setNumber(src.getNumber());
+        dest.setSuffixAPI(src.getSuffixAPI());
+        dest.setNumGovt(src.getNumGovt());
+
+        if (null != src.getStatusWellbore())
+            dest.setStatusWellbore(com.hashmapinc.tempus.WitsmlObjects.v1411.WellStatus.fromValue(src.getStatusWellbore().value()));
+        if (null != src.getPurposeWellbore())
+            dest.setPurposeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1411.WellPurpose.fromValue(src.getPurposeWellbore().value()));
+        if (null != src.getTypeWellbore())
+            dest.setTypeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1411.WellboreType.fromValue(src.getTypeWellbore().value()));
+        if (null != src.getShape())
+            dest.setShape(com.hashmapinc.tempus.WitsmlObjects.v1411.WellboreShape.fromValue(src.getShape().value()));
+
+        // convert dtim string to object
+        if (null != src.getDTimKickoff()) {
+            XMLGregorianCalendar dtim = DatatypeFactory.newInstance().newXMLGregorianCalendar(src.getDTimKickoff());
+            dest.setDTimKickoff(dtim);
+        }
+
+        dest.setAchievedTD(src.isAchievedTD());
+        if(null != src.getMd())
+            dest.setMd(src.getMd().to1411MeasuredDepthCoord());
+        if(null != src.getTvd())
+            dest.setTvd(src.getTvd().to1411VerticalDepthCoord());
+        if(null != src.getMdKickoff())
+            dest.setMdKickoff(src.getMdKickoff().to1411MeasuredDepthCoord());
+        if(null != src.getTvdKickoff())
+            dest.setTvdKickoff(src.getTvdKickoff().to1411VerticalDepthCoord());
+        if(null != src.getMdPlanned())
+            dest.setMdPlanned(src.getMdPlanned().to1411MeasuredDepthCoord());
+        if(null != src.getTvdPlanned())
+            dest.setTvdPlanned(src.getTvdPlanned().to1411VerticalDepthCoord());
+        if(null != src.getMdSubSeaPlanned())
+            dest.setMdSubSeaPlanned(src.getMdSubSeaPlanned().to1411MeasuredDepthCoord());
+        if(null != src.getTvdSubSeaPlanned())
+            dest.setTvdSubSeaPlanned(src.getTvdSubSeaPlanned().to1411VerticalDepthCoord());
+
+        if (null != src.getDayTarget()) {
+            com.hashmapinc.tempus.WitsmlObjects.v1411.TimeMeasure dayTarget = new com.hashmapinc.tempus.WitsmlObjects.v1411.TimeMeasure();
+            dayTarget.setUom(src.getDayTarget().getUom());
+            dayTarget.setValue(src.getDayTarget().getValue());
+            dest.setDayTarget(dayTarget);
+        }
+
+
+        // get custom data
+        if(null != src.getCustomData()) {
+            com.hashmapinc.tempus.WitsmlObjects.v1411.CsCustomData customData = new com.hashmapinc.tempus.WitsmlObjects.v1411.CsCustomData();
+            customData.setAny(src.getCustomData().getAny());
+            dest.setCustomData(customData);
+        }
+        return dest;
     }
     //=========================================================================
 
