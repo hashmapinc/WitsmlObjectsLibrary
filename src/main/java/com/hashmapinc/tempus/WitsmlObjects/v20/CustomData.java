@@ -73,4 +73,7 @@ public class CustomData {
         return this.any;
     }
 
+    public void setAny(List<Object> anyList) {
+        this.any = anyList;
+    }
 }
