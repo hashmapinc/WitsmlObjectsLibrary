@@ -40,29 +40,29 @@ import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlVersionTransformer;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "obj_wellbore", propOrder = {
-    "nameWell",
-    "name",
-    "parentWellbore",
-    "number",
-    "suffixAPI",
-    "numGovt",
-    "statusWellbore",
-    "purposeWellbore",
-    "typeWellbore",
-    "shape",
-    "dTimKickoff",
-    "achievedTD",
-    "mdCurrent",
-    "tvdCurrent",
-    "mdKickoff",
-    "tvdKickoff",
-    "mdPlanned",
-    "tvdPlanned",
-    "mdSubSeaPlanned",
-    "tvdSubSeaPlanned",
-    "dayTarget",
-    "commonData",
-    "customData"
+        "nameWell",
+        "name",
+        "parentWellbore",
+        "number",
+        "suffixAPI",
+        "numGovt",
+        "statusWellbore",
+        "purposeWellbore",
+        "typeWellbore",
+        "shape",
+        "dTimKickoff",
+        "achievedTD",
+        "mdCurrent",
+        "tvdCurrent",
+        "mdKickoff",
+        "tvdKickoff",
+        "mdPlanned",
+        "tvdPlanned",
+        "mdSubSeaPlanned",
+        "tvdSubSeaPlanned",
+        "dayTarget",
+        "commonData",
+        "customData"
 })
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ObjWellbore extends AbstractWitsmlObject {
@@ -71,32 +71,32 @@ public class ObjWellbore extends AbstractWitsmlObject {
     protected String nameWell;
     @XmlElement(required = true)
     protected String name;
-    protected com.hashmapinc.tempus.WitsmlObjects.v1411.RefNameString parentWellbore;
+    protected RefNameString parentWellbore;
     protected String number;
     protected String suffixAPI;
     protected String numGovt;
     @XmlSchemaType(name = "string")
-    protected com.hashmapinc.tempus.WitsmlObjects.v1411.WellStatus statusWellbore;
+    protected WellStatus statusWellbore;
     @XmlSchemaType(name = "string")
-    protected com.hashmapinc.tempus.WitsmlObjects.v1411.WellPurpose purposeWellbore;
+    protected WellPurpose purposeWellbore;
     @XmlSchemaType(name = "string")
-    protected com.hashmapinc.tempus.WitsmlObjects.v1411.WellboreType typeWellbore;
+    protected WellboreType typeWellbore;
     @XmlSchemaType(name = "string")
-    protected com.hashmapinc.tempus.WitsmlObjects.v1411.WellboreShape shape;
+    protected WellboreShape shape;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar dTimKickoff;
     protected Boolean achievedTD;
-    protected com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord mdCurrent;
-    protected com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord tvdCurrent;
-    protected com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord mdKickoff;
-    protected com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord tvdKickoff;
-    protected com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord mdPlanned;
-    protected com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord tvdPlanned;
-    protected com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord mdSubSeaPlanned;
-    protected com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord tvdSubSeaPlanned;
-    protected com.hashmapinc.tempus.WitsmlObjects.v20.DimensionlessMeasure dayTarget;
-    protected com.hashmapinc.tempus.WitsmlObjects.v1411.CsCommonData commonData;
-    protected com.hashmapinc.tempus.WitsmlObjects.v1411.CsCustomData customData;
+    protected MeasuredDepthCoord mdCurrent;
+    protected WellVerticalDepthCoord tvdCurrent;
+    protected MeasuredDepthCoord mdKickoff;
+    protected WellVerticalDepthCoord tvdKickoff;
+    protected MeasuredDepthCoord mdPlanned;
+    protected WellVerticalDepthCoord tvdPlanned;
+    protected MeasuredDepthCoord mdSubSeaPlanned;
+    protected WellVerticalDepthCoord tvdSubSeaPlanned;
+    protected TimeMeasure dayTarget;
+    protected CsCommonData commonData;
+    protected CsCustomData customData;
     @XmlAttribute(name = "uidWell")
     @JsonInclude(JsonInclude.Include.ALWAYS)
     protected String uidWell;
@@ -169,7 +169,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link RefNameString }
      *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v1411.RefNameString getParentWellbore() {
+    public RefNameString getParentWellbore() {
         return parentWellbore;
     }
 
@@ -181,7 +181,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link RefNameString }
      *
      */
-    public void setParentWellbore(com.hashmapinc.tempus.WitsmlObjects.v1411.RefNameString value) {
+    public void setParentWellbore(RefNameString value) {
         this.parentWellbore = value;
     }
 
@@ -265,7 +265,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link WellStatus }
      *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v1411.WellStatus getStatusWellbore() {
+    public WellStatus getStatusWellbore() {
         return statusWellbore;
     }
 
@@ -277,7 +277,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link WellStatus }
      *
      */
-    public void setStatusWellbore(com.hashmapinc.tempus.WitsmlObjects.v1411.WellStatus value) {
+    public void setStatusWellbore(WellStatus value) {
         this.statusWellbore = value;
     }
 
@@ -289,7 +289,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link WellPurpose }
      *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v1411.WellPurpose getPurposeWellbore() {
+    public WellPurpose getPurposeWellbore() {
         return purposeWellbore;
     }
 
@@ -301,7 +301,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link WellPurpose }
      *
      */
-    public void setPurposeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1411.WellPurpose value) {
+    public void setPurposeWellbore(WellPurpose value) {
         this.purposeWellbore = value;
     }
 
@@ -313,7 +313,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link WellboreType }
      *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v1411.WellboreType getTypeWellbore() {
+    public WellboreType getTypeWellbore() {
         return typeWellbore;
     }
 
@@ -325,7 +325,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link WellboreType }
      *
      */
-    public void setTypeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1411.WellboreType value) {
+    public void setTypeWellbore(WellboreType value) {
         this.typeWellbore = value;
     }
 
@@ -337,7 +337,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link WellboreShape }
      *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v1411.WellboreShape getShape() {
+    public WellboreShape getShape() {
         return shape;
     }
 
@@ -349,7 +349,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link WellboreShape }
      *
      */
-    public void setShape(com.hashmapinc.tempus.WitsmlObjects.v1411.WellboreShape value) {
+    public void setShape(WellboreShape value) {
         this.shape = value;
     }
 
@@ -406,10 +406,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @return
      *     possible object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
+     *     {@link MeasuredDepthCoord }
      *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord getMdCurrent() {
+    public MeasuredDepthCoord getMdCurrent() {
         return mdCurrent;
     }
 
@@ -418,10 +418,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @param value
      *     allowed object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
+     *     {@link MeasuredDepthCoord }
      *
      */
-    public void setMdCurrent(com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord value) {
+    public void setMdCurrent(MeasuredDepthCoord value) {
         this.mdCurrent = value;
     }
 
@@ -430,10 +430,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @return
      *     possible object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
+     *     {@link WellVerticalDepthCoord }
      *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord getTvdCurrent() {
+    public WellVerticalDepthCoord getTvdCurrent() {
         return tvdCurrent;
     }
 
@@ -442,10 +442,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @param value
      *     allowed object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
+     *     {@link WellVerticalDepthCoord }
      *
      */
-    public void setTvdCurrent(com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord value) {
+    public void setTvdCurrent(WellVerticalDepthCoord value) {
         this.tvdCurrent = value;
     }
 
@@ -454,10 +454,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @return
      *     possible object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
+     *     {@link MeasuredDepthCoord }
      *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord getMdKickoff() {
+    public MeasuredDepthCoord getMdKickoff() {
         return mdKickoff;
     }
 
@@ -466,10 +466,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @param value
      *     allowed object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
+     *     {@link MeasuredDepthCoord }
      *
      */
-    public void setMdKickoff(com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord value) {
+    public void setMdKickoff(MeasuredDepthCoord value) {
         this.mdKickoff = value;
     }
 
@@ -478,10 +478,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @return
      *     possible object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
+     *     {@link WellVerticalDepthCoord }
      *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord getTvdKickoff() {
+    public WellVerticalDepthCoord getTvdKickoff() {
         return tvdKickoff;
     }
 
@@ -490,10 +490,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @param value
      *     allowed object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
+     *     {@link WellVerticalDepthCoord }
      *
      */
-    public void setTvdKickoff(com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord value) {
+    public void setTvdKickoff(WellVerticalDepthCoord value) {
         this.tvdKickoff = value;
     }
 
@@ -502,10 +502,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @return
      *     possible object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
+     *     {@link MeasuredDepthCoord }
      *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord getMdPlanned() {
+    public MeasuredDepthCoord getMdPlanned() {
         return mdPlanned;
     }
 
@@ -514,10 +514,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @param value
      *     allowed object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
+     *     {@link MeasuredDepthCoord }
      *
      */
-    public void setMdPlanned(com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord value) {
+    public void setMdPlanned(MeasuredDepthCoord value) {
         this.mdPlanned = value;
     }
 
@@ -526,10 +526,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @return
      *     possible object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
+     *     {@link WellVerticalDepthCoord }
      *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord getTvdPlanned() {
+    public WellVerticalDepthCoord getTvdPlanned() {
         return tvdPlanned;
     }
 
@@ -538,10 +538,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @param value
      *     allowed object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
+     *     {@link WellVerticalDepthCoord }
      *
      */
-    public void setTvdPlanned(com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord value) {
+    public void setTvdPlanned(WellVerticalDepthCoord value) {
         this.tvdPlanned = value;
     }
 
@@ -550,10 +550,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @return
      *     possible object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
+     *     {@link MeasuredDepthCoord }
      *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord getMdSubSeaPlanned() {
+    public MeasuredDepthCoord getMdSubSeaPlanned() {
         return mdSubSeaPlanned;
     }
 
@@ -562,10 +562,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @param value
      *     allowed object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
+     *     {@link MeasuredDepthCoord }
      *
      */
-    public void setMdSubSeaPlanned(com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord value) {
+    public void setMdSubSeaPlanned(MeasuredDepthCoord value) {
         this.mdSubSeaPlanned = value;
     }
 
@@ -574,10 +574,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @return
      *     possible object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
+     *     {@link WellVerticalDepthCoord }
      *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord getTvdSubSeaPlanned() {
+    public WellVerticalDepthCoord getTvdSubSeaPlanned() {
         return tvdSubSeaPlanned;
     }
 
@@ -586,10 +586,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @param value
      *     allowed object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
+     *     {@link WellVerticalDepthCoord }
      *
      */
-    public void setTvdSubSeaPlanned(com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord value) {
+    public void setTvdSubSeaPlanned(WellVerticalDepthCoord value) {
         this.tvdSubSeaPlanned = value;
     }
 
@@ -598,10 +598,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @return
      *     possible object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DimensionlessMeasure }
+     *     {@link TimeMeasure }
      *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v20.DimensionlessMeasure getDayTarget() {
+    public TimeMeasure getDayTarget() {
         return dayTarget;
     }
 
@@ -610,10 +610,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @param value
      *     allowed object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DimensionlessMeasure }
+     *     {@link TimeMeasure }
      *
      */
-    public void setDayTarget(com.hashmapinc.tempus.WitsmlObjects.v20.DimensionlessMeasure value) {
+    public void setDayTarget(TimeMeasure value) {
         this.dayTarget = value;
     }
 
@@ -622,10 +622,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @return
      *     possible object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v1411.CsCommonData }
+     *     {@link CsCommonData }
      *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v1411.CsCommonData getCommonData() {
+    public CsCommonData getCommonData() {
         return commonData;
     }
 
@@ -634,10 +634,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @param value
      *     allowed object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v1411.CsCommonData }
+     *     {@link CsCommonData }
      *
      */
-    public void setCommonData(com.hashmapinc.tempus.WitsmlObjects.v1411.CsCommonData value) {
+    public void setCommonData(CsCommonData value) {
         this.commonData = value;
     }
 
@@ -646,10 +646,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @return
      *     possible object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v1411.CsCustomData }
+     *     {@link CsCustomData }
      *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v1411.CsCustomData getCustomData() {
+    public CsCustomData getCustomData() {
         return customData;
     }
 
@@ -658,10 +658,10 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @param value
      *     allowed object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v1411.CsCustomData }
+     *     {@link CsCustomData }
      *
      */
-    public void setCustomData(com.hashmapinc.tempus.WitsmlObjects.v1411.CsCustomData value) {
+    public void setCustomData(CsCustomData value) {
         this.customData = value;
     }
 

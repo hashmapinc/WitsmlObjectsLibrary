@@ -24,12 +24,31 @@ public class WellboreConverter {
         ObjWellbore dest = new ObjWellbore();
         dest.setNameWell(src.getNameWell());
         dest.setName(src.getName());
-        dest.setParentWellbore(src.getParentWellbore());
+
+        if (null != src.getParentWellbore()) {
+            com.hashmapinc.tempus.WitsmlObjects.v1311.RefNameString parentWellbore = new com.hashmapinc.tempus.WitsmlObjects.v1311.RefNameString();
+            parentWellbore.setValue(src.getParentWellbore().getValue());
+            parentWellbore.setUidRef(src.getParentWellbore().getUidRef());
+            dest.setParentWellbore(parentWellbore);
+        }
+
         dest.setNumber(src.getNumber());
         dest.setSuffixAPI(src.getSuffixAPI());
         dest.setNumGovt(src.getNumGovt());
-        dest.setStatusWellbore(src.getStatusWellbore());
-        dest.setPurposeWellbore(src.getPurposeWellbore());
+
+        if (null != src.getStatusWellbore()) {
+            String statusWellbore = src.getStatusWellbore().value();
+            dest.setStatusWellbore(com.hashmapinc.tempus.WitsmlObjects.v1311.WellStatus.fromValue(statusWellbore));
+        }
+        if (null != src.getPurposeWellbore()) {
+            String purposeWellbore = src.getPurposeWellbore().value();
+            dest.setPurposeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1311.WellPurpose.fromValue(purposeWellbore));
+        }
+        if (null != src.getTypeWellbore()) {
+            String typeWellbore = src.getTypeWellbore().value();
+            dest.setTypeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1311.WellboreType.fromValue(typeWellbore));
+        }
+
         dest.setTypeWellbore(src.getTypeWellbore());
         dest.setShape(src.getShape());
         dest.setDTimKickoff(src.getDTimKickoff());
