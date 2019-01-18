@@ -116,10 +116,8 @@ public class MeasuredDepthCoord
     public com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthCoord to1311MeasuredDepthCoord() {
         com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthCoord mdCoord = new com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthCoord();
 
-        if (null != this.uom) {
-            com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthUom mdUom = com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthUom.fromValue(this.uom.value());
-            mdCoord.setUom(mdUom);
-        }
+        if (null != this.uom)
+            mdCoord.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthUom.fromValue(this.uom.value()));
 
         mdCoord.setDatum(this.datum);
         mdCoord.setValue(this.value);

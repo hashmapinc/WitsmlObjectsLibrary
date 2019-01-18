@@ -36,13 +36,13 @@ public class WellboreConverter {
         dest.setSuffixAPI(src.getSuffixAPI());
         dest.setNumGovt(src.getNumGovt());
 
-        if (null != src.getStatusWellbore()) {
+        if (null != src.getStatusWellbore())
             dest.setStatusWellbore(com.hashmapinc.tempus.WitsmlObjects.v1311.WellStatus.fromValue(src.getStatusWellbore().value()));
-        if (null != src.getPurposeWellbore()) {
+        if (null != src.getPurposeWellbore())
             dest.setPurposeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1311.WellPurpose.fromValue(src.getPurposeWellbore().value()));
-        if (null != src.getTypeWellbore()) {
+        if (null != src.getTypeWellbore())
             dest.setTypeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1311.WellboreType.fromValue(src.getTypeWellbore().value()));
-        if (null != src.getShape()) {
+        if (null != src.getShape())
             dest.setShape(com.hashmapinc.tempus.WitsmlObjects.v1311.WellboreShape.fromValue(src.getShape().value()));
 
         dest.setDTimKickoff(src.getDTimKickoff());
@@ -73,7 +73,7 @@ public class WellboreConverter {
         }
 
         dest.setCommonData(src.getCommonData().to1311CommonData());
-        dest.setCustomData(src.getCustomData());
+        dest.setCustomData(src.getCustomData().to1311CustomData());
         dest.setUidWell(src.getUidWell());
         dest.setUid(src.getUid());
         return dest;
