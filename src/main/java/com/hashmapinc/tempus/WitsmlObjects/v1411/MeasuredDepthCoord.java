@@ -96,4 +96,36 @@ public class MeasuredDepthCoord
         this.datum = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord to20DepthCoord() {
+        com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord mdCoord = new com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord();
+
+        mdCoord.setDatum(this.datum);
+        if (null != this.uom)
+            mdCoord.setUom(this.uom.value());
+        mdCoord.setValue(this.value);
+
+        return mdCoord;
+    }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthCoord to1311MeasuredDepthCoord() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthCoord mdCoord = new com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthCoord();
+
+        if (null != this.uom) {
+            com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthUom mdUom = com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthUom.fromValue(this.uom.value());
+            mdCoord.setUom(mdUom);
+        }
+
+        mdCoord.setDatum(this.datum);
+        mdCoord.setValue(this.value);
+
+        return mdCoord;
+    }
+    //=========================================================================
+
 }
