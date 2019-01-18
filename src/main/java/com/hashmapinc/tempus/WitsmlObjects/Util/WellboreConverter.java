@@ -50,13 +50,13 @@ public class WellboreConverter {
 
         if (null != src.getMd())
 
-        dest.setMdCurrent(src.getMd());
+        dest.setMdCurrent(src.getMd().to1311MeasuredDepthCoord());
         dest.setTvdCurrent(src.getTvd());
-        dest.setMdKickoff(src.getMdKickoff());
+        dest.setMdKickoff(src.getMdKickoff().to1311MeasuredDepthCoord());
         dest.setTvdKickoff(src.getTvdKickoff());
-        dest.setMdPlanned(src.getMdPlanned());
-        dest.setTvdPlanned(src.getMdPlanned());
-        dest.setMdSubSeaPlanned(src.getMdSubSeaPlanned());
+        dest.setMdPlanned(src.getMdPlanned().to1311MeasuredDepthCoord());
+        dest.setTvdPlanned(src.getTvdPlanned());
+        dest.setMdSubSeaPlanned(src.getMdSubSeaPlanned().to1311MeasuredDepthCoord());
         dest.setTvdSubSeaPlanned(src.getTvdSubSeaPlanned());
 
         dest.setDayTarget(src.getDayTarget());
@@ -89,13 +89,13 @@ public class WellboreConverter {
 
 
         dest.setAchievedTD(src.isAchievedTD());
-        dest.setMdCurrent(src.getMd());
+        dest.setMdCurrent(src.getMd().to1311MeasuredDepthCoord());
         dest.setTvdCurrent(src.getTvd());
-        dest.setMdKickoff(src.getMdKickoff());
+        dest.setMdKickoff(src.getMdKickoff().to1311MeasuredDepthCoord());
         dest.setTvdKickoff(src.getTvdKickoff());
-        dest.setMdPlanned(src.getMdPlanned());
-        dest.setTvdPlanned(src.getMdPlanned());
-        dest.setMdSubSeaPlanned(src.getMdSubSeaPlanned());
+        dest.setMdPlanned(src.getMdPlanned().to1311MeasuredDepthCoord());
+        dest.setTvdPlanned(src.getTvdPlanned());
+        dest.setMdSubSeaPlanned(src.getMdSubSeaPlanned().to1311MeasuredDepthCoord());
         dest.setTvdSubSeaPlanned(src.getTvdSubSeaPlanned());
         dest.setDayTarget(src.getDayTarget());
 
