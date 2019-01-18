@@ -361,4 +361,24 @@ public class CsCommonData {
         return this.extensionNameValue;
     }
 
+
+
+    //=========================================================================
+    // conversion helpers
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.CsCommonData to1311CommonData() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.CsCommonData common = new com.hashmapinc.tempus.WitsmlObjects.v1311.CsCommonData();
+
+        if (null != this.itemState)
+            common.setItemState(com.hashmapinc.tempus.WitsmlObjects.v1311.ItemState.fromValue(this.itemState.value()));
+
+        common.setSourceName(this.sourceName);
+        common.setDTimCreation(this.dTimCreation);
+        common.setDTimLastChange(this.dTimLastChange);
+        common.setComments(this.comments);
+
+        return common;
+    }
+    //=========================================================================
+
 }

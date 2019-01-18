@@ -1,6 +1,5 @@
 package com.hashmapinc.tempus.WitsmlObjects.v1311;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -179,4 +178,23 @@ public class CsCommonData {
         this.comments = value;
     }
 
+
+
+    //=========================================================================
+    // conversion helpers
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.CsCommonData to1411CommonData() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.CsCommonData common = new com.hashmapinc.tempus.WitsmlObjects.v1411.CsCommonData();
+
+        if (null != this.itemState)
+            common.setItemState(com.hashmapinc.tempus.WitsmlObjects.v1411.ItemState.fromValue(this.itemState.value()));
+
+        common.setSourceName(this.sourceName);
+        common.setDTimCreation(this.dTimCreation);
+        common.setDTimLastChange(this.dTimLastChange);
+        common.setComments(this.comments);
+
+        return common;
+    }
+    //=========================================================================
 }

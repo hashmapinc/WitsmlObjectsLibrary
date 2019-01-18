@@ -49,23 +49,36 @@ public class WellboreConverter {
         dest.setAchievedTD(src.isAchievedTD());
 
         if (null != src.getMd())
+            dest.setMdCurrent(src.getMd().to1311MeasuredDepthCoord());
+        if (null != src.getTvd())
+            dest.setTvdCurrent(src.getTvd().to1311VerticalDepthCoord());
+        if (null != src.getMdKickoff())
+            dest.setMdKickoff(src.getMdKickoff().to1311MeasuredDepthCoord());
+        if (null != src.getTvdKickoff())
+            dest.setTvdKickoff(src.getTvdKickoff().to1311VerticalDepthCoord());
+        if (null != src.getMdPlanned());
+            dest.setMdPlanned(src.getMdPlanned().to1311MeasuredDepthCoord());
+        if (null != src.getTvdPlanned())
+            dest.setTvdPlanned(src.getTvdPlanned().to1311VerticalDepthCoord());
+        if (null != src.getMdSubSeaPlanned())
+            dest.setMdSubSeaPlanned(src.getMdSubSeaPlanned().to1311MeasuredDepthCoord());
+        if (null != src.getTvdSubSeaPlanned())
+            dest.setTvdSubSeaPlanned(src.getTvdSubSeaPlanned().to1311VerticalDepthCoord());
 
-        dest.setMdCurrent(src.getMd().to1311MeasuredDepthCoord());
-        dest.setTvdCurrent(src.getTvd());
-        dest.setMdKickoff(src.getMdKickoff().to1311MeasuredDepthCoord());
-        dest.setTvdKickoff(src.getTvdKickoff());
-        dest.setMdPlanned(src.getMdPlanned().to1311MeasuredDepthCoord());
-        dest.setTvdPlanned(src.getTvdPlanned());
-        dest.setMdSubSeaPlanned(src.getMdSubSeaPlanned().to1311MeasuredDepthCoord());
-        dest.setTvdSubSeaPlanned(src.getTvdSubSeaPlanned());
+        if (null != src.getDayTarget()) {
+            com.hashmapinc.tempus.WitsmlObjects.v1311.TimeMeasure dayTarget = new com.hashmapinc.tempus.WitsmlObjects.v1311.TimeMeasure();
+            dayTarget.setUom(src.getDayTarget().getUom());
+            dayTarget.setValue(src.getDayTarget().getValue());
+            dest.setDayTarget(dayTarget);
+        }
 
-        dest.setDayTarget(src.getDayTarget());
-        dest.setCommonData(src.getCommonData());
+        dest.setCommonData(src.getCommonData().to1311CommonData());
         dest.setCustomData(src.getCustomData());
         dest.setUidWell(src.getUidWell());
         dest.setUid(src.getUid());
         return dest;
     }
+
     public static ObjWellbore convertTo1311(Wellbore src) throws DatatypeConfigurationException {
         ObjWellbore dest = new ObjWellbore();
 

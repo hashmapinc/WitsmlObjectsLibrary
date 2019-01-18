@@ -24,9 +24,9 @@ import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlVersionTransformer;
 
 /**
  * <p>Java class for obj_wellbore complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre> {@code
  * <complexType name="obj_wellbore">
  *   <complexContent>
@@ -44,37 +44,37 @@ import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlVersionTransformer;
  *   </complexContent>
  * </complexType>
  * } </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "obj_wellbore", propOrder = {
-    "nameWell",
-    "name",
-    "parentWellbore",
-    "number",
-    "suffixAPI",
-    "numGovt",
-    "statusWellbore",
-    "isActive",
-    "purposeWellbore",
-    "typeWellbore",
-    "shape",
-    "dTimKickoff",
-    "achievedTD",
-    "md",
-    "tvd",
-    "mdBit",
-    "tvdBit",
-    "mdKickoff",
-    "tvdKickoff",
-    "mdPlanned",
-    "tvdPlanned",
-    "mdSubSeaPlanned",
-    "tvdSubSeaPlanned",
-    "dayTarget",
-    "commonData",
-    "customData"
+        "nameWell",
+        "name",
+        "parentWellbore",
+        "number",
+        "suffixAPI",
+        "numGovt",
+        "statusWellbore",
+        "isActive",
+        "purposeWellbore",
+        "typeWellbore",
+        "shape",
+        "dTimKickoff",
+        "achievedTD",
+        "md",
+        "tvd",
+        "mdBit",
+        "tvdBit",
+        "mdKickoff",
+        "tvdKickoff",
+        "mdPlanned",
+        "tvdPlanned",
+        "mdSubSeaPlanned",
+        "tvdSubSeaPlanned",
+        "dayTarget",
+        "commonData",
+        "customData"
 })
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ObjWellbore extends AbstractWitsmlObject {
@@ -99,17 +99,17 @@ public class ObjWellbore extends AbstractWitsmlObject {
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar dTimKickoff;
     protected Boolean achievedTD;
-    protected com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord md;
-    protected com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord tvd;
-    protected com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord mdBit;
-    protected com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord tvdBit;
-    protected com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord mdKickoff;
-    protected com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord tvdKickoff;
-    protected com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord mdPlanned;
-    protected com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord tvdPlanned;
-    protected com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord mdSubSeaPlanned;
-    protected com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord tvdSubSeaPlanned;
-    protected com.hashmapinc.tempus.WitsmlObjects.v20.DimensionlessMeasure dayTarget;
+    protected MeasuredDepthCoord md;
+    protected WellVerticalDepthCoord tvd;
+    protected MeasuredDepthCoord mdBit;
+    protected WellVerticalDepthCoord tvdBit;
+    protected MeasuredDepthCoord mdKickoff;
+    protected WellVerticalDepthCoord tvdKickoff;
+    protected MeasuredDepthCoord mdPlanned;
+    protected WellVerticalDepthCoord tvdPlanned;
+    protected MeasuredDepthCoord mdSubSeaPlanned;
+    protected WellVerticalDepthCoord tvdSubSeaPlanned;
+    protected TimeMeasure dayTarget;
     protected CsCommonData commonData;
     protected CsCustomData customData;
     @XmlAttribute(name = "uidWell")
@@ -129,11 +129,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the nameWell property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getNameWell() {
         return nameWell;
@@ -141,11 +141,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the nameWell property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setNameWell(String value) {
         this.nameWell = value;
@@ -153,11 +153,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the name property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     @Override
     public String getName() {
@@ -166,11 +166,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the name property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setName(String value) {
         this.name = value;
@@ -178,11 +178,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the parentWellbore property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link RefNameString }
-     *     
+     *
      */
     public RefNameString getParentWellbore() {
         return parentWellbore;
@@ -190,11 +190,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the parentWellbore property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link RefNameString }
-     *     
+     *
      */
     public void setParentWellbore(RefNameString value) {
         this.parentWellbore = value;
@@ -202,11 +202,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the number property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getNumber() {
         return number;
@@ -214,11 +214,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the number property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setNumber(String value) {
         this.number = value;
@@ -226,11 +226,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the suffixAPI property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getSuffixAPI() {
         return suffixAPI;
@@ -238,11 +238,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the suffixAPI property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setSuffixAPI(String value) {
         this.suffixAPI = value;
@@ -250,11 +250,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the numGovt property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getNumGovt() {
         return numGovt;
@@ -262,11 +262,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the numGovt property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setNumGovt(String value) {
         this.numGovt = value;
@@ -274,11 +274,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the statusWellbore property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link WellStatus }
-     *     
+     *
      */
     public WellStatus getStatusWellbore() {
         return statusWellbore;
@@ -286,11 +286,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the statusWellbore property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link WellStatus }
-     *     
+     *
      */
     public void setStatusWellbore(WellStatus value) {
         this.statusWellbore = value;
@@ -298,11 +298,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the isActive property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public Boolean isIsActive() {
         return isActive;
@@ -310,11 +310,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the isActive property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setIsActive(Boolean value) {
         this.isActive = value;
@@ -322,11 +322,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the purposeWellbore property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link WellPurpose }
-     *     
+     *
      */
     public WellPurpose getPurposeWellbore() {
         return purposeWellbore;
@@ -334,11 +334,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the purposeWellbore property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link WellPurpose }
-     *     
+     *
      */
     public void setPurposeWellbore(WellPurpose value) {
         this.purposeWellbore = value;
@@ -346,11 +346,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the typeWellbore property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link WellboreType }
-     *     
+     *
      */
     public WellboreType getTypeWellbore() {
         return typeWellbore;
@@ -358,11 +358,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the typeWellbore property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link WellboreType }
-     *     
+     *
      */
     public void setTypeWellbore(WellboreType value) {
         this.typeWellbore = value;
@@ -370,11 +370,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the shape property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link WellboreShape }
-     *     
+     *
      */
     public WellboreShape getShape() {
         return shape;
@@ -382,11 +382,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the shape property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link WellboreShape }
-     *     
+     *
      */
     public void setShape(WellboreShape value) {
         this.shape = value;
@@ -394,11 +394,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the dTimKickoff property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link XMLGregorianCalendar }
-     *     
+     *
      */
     public XMLGregorianCalendar getDTimKickoff() {
         return dTimKickoff;
@@ -406,11 +406,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the dTimKickoff property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link XMLGregorianCalendar }
-     *     
+     *
      */
     public void setDTimKickoff(XMLGregorianCalendar value) {
         this.dTimKickoff = value;
@@ -418,11 +418,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the achievedTD property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public Boolean isAchievedTD() {
         return achievedTD;
@@ -430,11 +430,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the achievedTD property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setAchievedTD(Boolean value) {
         this.achievedTD = value;
@@ -442,275 +442,275 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the md property.
-     * 
+     *
      * @return
      *     possible object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
-     *     
+     *     {@link MeasuredDepthCoord }
+     *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord getMd() {
+    public MeasuredDepthCoord getMd() {
         return md;
     }
 
     /**
      * Sets the value of the md property.
-     * 
+     *
      * @param value
      *     allowed object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
-     *     
+     *     {@link MeasuredDepthCoord }
+     *
      */
-    public void setMd(com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord value) {
+    public void setMd(MeasuredDepthCoord value) {
         this.md = value;
     }
 
     /**
      * Gets the value of the tvd property.
-     * 
+     *
      * @return
      *     possible object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
-     *     
+     *     {@link WellVerticalDepthCoord }
+     *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord getTvd() {
+    public WellVerticalDepthCoord getTvd() {
         return tvd;
     }
 
     /**
      * Sets the value of the tvd property.
-     * 
+     *
      * @param value
      *     allowed object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
-     *     
+     *     {@link WellVerticalDepthCoord }
+     *
      */
-    public void setTvd(com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord value) {
+    public void setTvd(WellVerticalDepthCoord value) {
         this.tvd = value;
     }
 
     /**
      * Gets the value of the mdBit property.
-     * 
+     *
      * @return
      *     possible object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
-     *     
+     *     {@link MeasuredDepthCoord }
+     *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord getMdBit() {
+    public MeasuredDepthCoord getMdBit() {
         return mdBit;
     }
 
     /**
      * Sets the value of the mdBit property.
-     * 
+     *
      * @param value
      *     allowed object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
-     *     
+     *     {@link MeasuredDepthCoord }
+     *
      */
-    public void setMdBit(com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord value) {
+    public void setMdBit(MeasuredDepthCoord value) {
         this.mdBit = value;
     }
 
     /**
      * Gets the value of the tvdBit property.
-     * 
+     *
      * @return
      *     possible object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
-     *     
+     *     {@link WellVerticalDepthCoord }
+     *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord getTvdBit() {
+    public WellVerticalDepthCoord getTvdBit() {
         return tvdBit;
     }
 
     /**
      * Sets the value of the tvdBit property.
-     * 
+     *
      * @param value
      *     allowed object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
-     *     
+     *     {@link WellVerticalDepthCoord }
+     *
      */
-    public void setTvdBit(com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord value) {
+    public void setTvdBit(WellVerticalDepthCoord value) {
         this.tvdBit = value;
     }
 
     /**
      * Gets the value of the mdKickoff property.
-     * 
+     *
      * @return
      *     possible object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
-     *     
+     *     {@link MeasuredDepthCoord }
+     *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord getMdKickoff() {
+    public MeasuredDepthCoord getMdKickoff() {
         return mdKickoff;
     }
 
     /**
      * Sets the value of the mdKickoff property.
-     * 
+     *
      * @param value
      *     allowed object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
-     *     
+     *     {@link MeasuredDepthCoord }
+     *
      */
-    public void setMdKickoff(com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord value) {
+    public void setMdKickoff(MeasuredDepthCoord value) {
         this.mdKickoff = value;
     }
 
     /**
      * Gets the value of the tvdKickoff property.
-     * 
+     *
      * @return
      *     possible object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
-     *     
+     *     {@link WellVerticalDepthCoord }
+     *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord getTvdKickoff() {
+    public WellVerticalDepthCoord getTvdKickoff() {
         return tvdKickoff;
     }
 
     /**
      * Sets the value of the tvdKickoff property.
-     * 
+     *
      * @param value
      *     allowed object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
-     *     
+     *     {@link WellVerticalDepthCoord }
+     *
      */
-    public void setTvdKickoff(com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord value) {
+    public void setTvdKickoff(WellVerticalDepthCoord value) {
         this.tvdKickoff = value;
     }
 
     /**
      * Gets the value of the mdPlanned property.
-     * 
+     *
      * @return
      *     possible object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
-     *     
+     *     {@link MeasuredDepthCoord }
+     *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord getMdPlanned() {
+    public MeasuredDepthCoord getMdPlanned() {
         return mdPlanned;
     }
 
     /**
      * Sets the value of the mdPlanned property.
-     * 
+     *
      * @param value
      *     allowed object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
-     *     
+     *     {@link MeasuredDepthCoord }
+     *
      */
-    public void setMdPlanned(com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord value) {
+    public void setMdPlanned(MeasuredDepthCoord value) {
         this.mdPlanned = value;
     }
 
     /**
      * Gets the value of the tvdPlanned property.
-     * 
+     *
      * @return
      *     possible object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
-     *     
+     *     {@link WellVerticalDepthCoord }
+     *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord getTvdPlanned() {
+    public WellVerticalDepthCoord getTvdPlanned() {
         return tvdPlanned;
     }
 
     /**
      * Sets the value of the tvdPlanned property.
-     * 
+     *
      * @param value
      *     allowed object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
-     *     
+     *     {@link WellVerticalDepthCoord }
+     *
      */
-    public void setTvdPlanned(com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord value) {
+    public void setTvdPlanned(WellVerticalDepthCoord value) {
         this.tvdPlanned = value;
     }
 
     /**
      * Gets the value of the mdSubSeaPlanned property.
-     * 
+     *
      * @return
      *     possible object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
-     *     
+     *     {@link MeasuredDepthCoord }
+     *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord getMdSubSeaPlanned() {
+    public MeasuredDepthCoord getMdSubSeaPlanned() {
         return mdSubSeaPlanned;
     }
 
     /**
      * Sets the value of the mdSubSeaPlanned property.
-     * 
+     *
      * @param value
      *     allowed object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
-     *     
+     *     {@link MeasuredDepthCoord }
+     *
      */
-    public void setMdSubSeaPlanned(com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord value) {
+    public void setMdSubSeaPlanned(MeasuredDepthCoord value) {
         this.mdSubSeaPlanned = value;
     }
 
     /**
      * Gets the value of the tvdSubSeaPlanned property.
-     * 
+     *
      * @return
      *     possible object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
-     *     
+     *     {@link WellVerticalDepthCoord }
+     *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord getTvdSubSeaPlanned() {
+    public WellVerticalDepthCoord getTvdSubSeaPlanned() {
         return tvdSubSeaPlanned;
     }
 
     /**
      * Sets the value of the tvdSubSeaPlanned property.
-     * 
+     *
      * @param value
      *     allowed object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord }
-     *     
+     *     {@link WellVerticalDepthCoord }
+     *
      */
-    public void setTvdSubSeaPlanned(com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord value) {
+    public void setTvdSubSeaPlanned(WellVerticalDepthCoord value) {
         this.tvdSubSeaPlanned = value;
     }
 
     /**
      * Gets the value of the dayTarget property.
-     * 
+     *
      * @return
      *     possible object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DimensionlessMeasure }
-     *     
+     *     {@link TimeMeasure }
+     *
      */
-    public com.hashmapinc.tempus.WitsmlObjects.v20.DimensionlessMeasure getDayTarget() {
+    public TimeMeasure getDayTarget() {
         return dayTarget;
     }
 
     /**
      * Sets the value of the dayTarget property.
-     * 
+     *
      * @param value
      *     allowed object is
-     *     {@link com.hashmapinc.tempus.WitsmlObjects.v20.DimensionlessMeasure }
-     *     
+     *     {@link TimeMeasure }
+     *
      */
-    public void setDayTarget(com.hashmapinc.tempus.WitsmlObjects.v20.DimensionlessMeasure value) {
+    public void setDayTarget(TimeMeasure value) {
         this.dayTarget = value;
     }
 
     /**
      * Gets the value of the commonData property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CsCommonData }
-     *     
+     *
      */
     public CsCommonData getCommonData() {
         return commonData;
@@ -718,11 +718,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the commonData property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CsCommonData }
-     *     
+     *
      */
     public void setCommonData(CsCommonData value) {
         this.commonData = value;
@@ -730,11 +730,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the customData property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CsCustomData }
-     *     
+     *
      */
     public CsCustomData getCustomData() {
         return customData;
@@ -742,11 +742,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the customData property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CsCustomData }
-     *     
+     *
      */
     public void setCustomData(CsCustomData value) {
         this.customData = value;
@@ -754,11 +754,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the uidWell property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getUidWell() {
         return uidWell;
@@ -766,11 +766,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the uidWell property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setUidWell(String value) {
         this.uidWell = value;
@@ -778,11 +778,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the uid property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     @Override
     public String getUid() {
@@ -791,11 +791,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the uid property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setUid(String value) {
         this.uid = value;
