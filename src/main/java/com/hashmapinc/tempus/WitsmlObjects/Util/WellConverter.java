@@ -10,10 +10,12 @@ package com.hashmapinc.tempus.WitsmlObjects.Util;
  * create valid WITSML objects.
  */
 public class WellConverter {
-    public com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell convertTo1311(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell src) {
+    public static com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell convertTo1311(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell src) {
         return null;
     }
-    public com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell convertTo1411(com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell src) {
+
+
+    public static com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell convertTo1411(com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell src) {
         return null;
     }
 }
