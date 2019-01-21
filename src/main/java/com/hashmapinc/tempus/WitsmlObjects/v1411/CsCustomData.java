@@ -78,4 +78,21 @@ public class CsCustomData {
         return this.any;
     }
 
+
+    public void setAny(List<Object> anyList) {
+        this.any = anyList;
+    }
+
+
+
+    //=========================================================================
+    // conversion helpers
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.CsCustomData to1311CustomData() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.CsCustomData custom = new com.hashmapinc.tempus.WitsmlObjects.v1311.CsCustomData();
+        custom.setAny(this.any);
+        return custom;
+    }
+    //=========================================================================
+
 }

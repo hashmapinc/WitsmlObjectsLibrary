@@ -24,9 +24,9 @@ import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlVersionTransformer;
 
 /**
  * <p>Java class for obj_wellbore complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre> {@code
  * <complexType name="obj_wellbore">
  *   <complexContent>
@@ -44,37 +44,37 @@ import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlVersionTransformer;
  *   </complexContent>
  * </complexType>
  * } </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "obj_wellbore", propOrder = {
-    "nameWell",
-    "name",
-    "parentWellbore",
-    "number",
-    "suffixAPI",
-    "numGovt",
-    "statusWellbore",
-    "isActive",
-    "purposeWellbore",
-    "typeWellbore",
-    "shape",
-    "dTimKickoff",
-    "achievedTD",
-    "md",
-    "tvd",
-    "mdBit",
-    "tvdBit",
-    "mdKickoff",
-    "tvdKickoff",
-    "mdPlanned",
-    "tvdPlanned",
-    "mdSubSeaPlanned",
-    "tvdSubSeaPlanned",
-    "dayTarget",
-    "commonData",
-    "customData"
+        "nameWell",
+        "name",
+        "parentWellbore",
+        "number",
+        "suffixAPI",
+        "numGovt",
+        "statusWellbore",
+        "isActive",
+        "purposeWellbore",
+        "typeWellbore",
+        "shape",
+        "dTimKickoff",
+        "achievedTD",
+        "md",
+        "tvd",
+        "mdBit",
+        "tvdBit",
+        "mdKickoff",
+        "tvdKickoff",
+        "mdPlanned",
+        "tvdPlanned",
+        "mdSubSeaPlanned",
+        "tvdSubSeaPlanned",
+        "dayTarget",
+        "commonData",
+        "customData"
 })
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ObjWellbore extends AbstractWitsmlObject {
@@ -129,11 +129,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the nameWell property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getNameWell() {
         return nameWell;
@@ -141,11 +141,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the nameWell property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setNameWell(String value) {
         this.nameWell = value;
@@ -153,11 +153,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the name property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     @Override
     public String getName() {
@@ -166,11 +166,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the name property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setName(String value) {
         this.name = value;
@@ -178,11 +178,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the parentWellbore property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link RefNameString }
-     *     
+     *
      */
     public RefNameString getParentWellbore() {
         return parentWellbore;
@@ -190,11 +190,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the parentWellbore property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link RefNameString }
-     *     
+     *
      */
     public void setParentWellbore(RefNameString value) {
         this.parentWellbore = value;
@@ -202,11 +202,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the number property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getNumber() {
         return number;
@@ -214,11 +214,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the number property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setNumber(String value) {
         this.number = value;
@@ -226,11 +226,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the suffixAPI property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getSuffixAPI() {
         return suffixAPI;
@@ -238,11 +238,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the suffixAPI property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setSuffixAPI(String value) {
         this.suffixAPI = value;
@@ -250,11 +250,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the numGovt property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getNumGovt() {
         return numGovt;
@@ -262,11 +262,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the numGovt property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setNumGovt(String value) {
         this.numGovt = value;
@@ -274,11 +274,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the statusWellbore property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link WellStatus }
-     *     
+     *
      */
     public WellStatus getStatusWellbore() {
         return statusWellbore;
@@ -286,11 +286,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the statusWellbore property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link WellStatus }
-     *     
+     *
      */
     public void setStatusWellbore(WellStatus value) {
         this.statusWellbore = value;
@@ -298,11 +298,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the isActive property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public Boolean isIsActive() {
         return isActive;
@@ -310,11 +310,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the isActive property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setIsActive(Boolean value) {
         this.isActive = value;
@@ -322,11 +322,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the purposeWellbore property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link WellPurpose }
-     *     
+     *
      */
     public WellPurpose getPurposeWellbore() {
         return purposeWellbore;
@@ -334,11 +334,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the purposeWellbore property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link WellPurpose }
-     *     
+     *
      */
     public void setPurposeWellbore(WellPurpose value) {
         this.purposeWellbore = value;
@@ -346,11 +346,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the typeWellbore property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link WellboreType }
-     *     
+     *
      */
     public WellboreType getTypeWellbore() {
         return typeWellbore;
@@ -358,11 +358,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the typeWellbore property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link WellboreType }
-     *     
+     *
      */
     public void setTypeWellbore(WellboreType value) {
         this.typeWellbore = value;
@@ -370,11 +370,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the shape property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link WellboreShape }
-     *     
+     *
      */
     public WellboreShape getShape() {
         return shape;
@@ -382,11 +382,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the shape property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link WellboreShape }
-     *     
+     *
      */
     public void setShape(WellboreShape value) {
         this.shape = value;
@@ -394,11 +394,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the dTimKickoff property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link XMLGregorianCalendar }
-     *     
+     *
      */
     public XMLGregorianCalendar getDTimKickoff() {
         return dTimKickoff;
@@ -406,11 +406,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the dTimKickoff property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link XMLGregorianCalendar }
-     *     
+     *
      */
     public void setDTimKickoff(XMLGregorianCalendar value) {
         this.dTimKickoff = value;
@@ -418,11 +418,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the achievedTD property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public Boolean isAchievedTD() {
         return achievedTD;
@@ -430,11 +430,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the achievedTD property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setAchievedTD(Boolean value) {
         this.achievedTD = value;
@@ -442,11 +442,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the md property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link MeasuredDepthCoord }
-     *     
+     *
      */
     public MeasuredDepthCoord getMd() {
         return md;
@@ -454,11 +454,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the md property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link MeasuredDepthCoord }
-     *     
+     *
      */
     public void setMd(MeasuredDepthCoord value) {
         this.md = value;
@@ -466,11 +466,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the tvd property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link WellVerticalDepthCoord }
-     *     
+     *
      */
     public WellVerticalDepthCoord getTvd() {
         return tvd;
@@ -478,11 +478,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the tvd property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link WellVerticalDepthCoord }
-     *     
+     *
      */
     public void setTvd(WellVerticalDepthCoord value) {
         this.tvd = value;
@@ -490,11 +490,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the mdBit property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link MeasuredDepthCoord }
-     *     
+     *
      */
     public MeasuredDepthCoord getMdBit() {
         return mdBit;
@@ -502,11 +502,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the mdBit property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link MeasuredDepthCoord }
-     *     
+     *
      */
     public void setMdBit(MeasuredDepthCoord value) {
         this.mdBit = value;
@@ -514,11 +514,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the tvdBit property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link WellVerticalDepthCoord }
-     *     
+     *
      */
     public WellVerticalDepthCoord getTvdBit() {
         return tvdBit;
@@ -526,11 +526,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the tvdBit property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link WellVerticalDepthCoord }
-     *     
+     *
      */
     public void setTvdBit(WellVerticalDepthCoord value) {
         this.tvdBit = value;
@@ -538,11 +538,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the mdKickoff property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link MeasuredDepthCoord }
-     *     
+     *
      */
     public MeasuredDepthCoord getMdKickoff() {
         return mdKickoff;
@@ -550,11 +550,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the mdKickoff property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link MeasuredDepthCoord }
-     *     
+     *
      */
     public void setMdKickoff(MeasuredDepthCoord value) {
         this.mdKickoff = value;
@@ -562,11 +562,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the tvdKickoff property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link WellVerticalDepthCoord }
-     *     
+     *
      */
     public WellVerticalDepthCoord getTvdKickoff() {
         return tvdKickoff;
@@ -574,11 +574,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the tvdKickoff property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link WellVerticalDepthCoord }
-     *     
+     *
      */
     public void setTvdKickoff(WellVerticalDepthCoord value) {
         this.tvdKickoff = value;
@@ -586,11 +586,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the mdPlanned property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link MeasuredDepthCoord }
-     *     
+     *
      */
     public MeasuredDepthCoord getMdPlanned() {
         return mdPlanned;
@@ -598,11 +598,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the mdPlanned property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link MeasuredDepthCoord }
-     *     
+     *
      */
     public void setMdPlanned(MeasuredDepthCoord value) {
         this.mdPlanned = value;
@@ -610,11 +610,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the tvdPlanned property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link WellVerticalDepthCoord }
-     *     
+     *
      */
     public WellVerticalDepthCoord getTvdPlanned() {
         return tvdPlanned;
@@ -622,11 +622,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the tvdPlanned property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link WellVerticalDepthCoord }
-     *     
+     *
      */
     public void setTvdPlanned(WellVerticalDepthCoord value) {
         this.tvdPlanned = value;
@@ -634,11 +634,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the mdSubSeaPlanned property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link MeasuredDepthCoord }
-     *     
+     *
      */
     public MeasuredDepthCoord getMdSubSeaPlanned() {
         return mdSubSeaPlanned;
@@ -646,11 +646,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the mdSubSeaPlanned property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link MeasuredDepthCoord }
-     *     
+     *
      */
     public void setMdSubSeaPlanned(MeasuredDepthCoord value) {
         this.mdSubSeaPlanned = value;
@@ -658,11 +658,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the tvdSubSeaPlanned property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link WellVerticalDepthCoord }
-     *     
+     *
      */
     public WellVerticalDepthCoord getTvdSubSeaPlanned() {
         return tvdSubSeaPlanned;
@@ -670,11 +670,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the tvdSubSeaPlanned property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link WellVerticalDepthCoord }
-     *     
+     *
      */
     public void setTvdSubSeaPlanned(WellVerticalDepthCoord value) {
         this.tvdSubSeaPlanned = value;
@@ -682,11 +682,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the dayTarget property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link TimeMeasure }
-     *     
+     *
      */
     public TimeMeasure getDayTarget() {
         return dayTarget;
@@ -694,11 +694,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the dayTarget property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link TimeMeasure }
-     *     
+     *
      */
     public void setDayTarget(TimeMeasure value) {
         this.dayTarget = value;
@@ -706,11 +706,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the commonData property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CsCommonData }
-     *     
+     *
      */
     public CsCommonData getCommonData() {
         return commonData;
@@ -718,11 +718,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the commonData property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CsCommonData }
-     *     
+     *
      */
     public void setCommonData(CsCommonData value) {
         this.commonData = value;
@@ -730,11 +730,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the customData property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CsCustomData }
-     *     
+     *
      */
     public CsCustomData getCustomData() {
         return customData;
@@ -742,11 +742,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the customData property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CsCustomData }
-     *     
+     *
      */
     public void setCustomData(CsCustomData value) {
         this.customData = value;
@@ -754,11 +754,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the uidWell property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getUidWell() {
         return uidWell;
@@ -766,11 +766,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the uidWell property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setUidWell(String value) {
         this.uidWell = value;
@@ -778,11 +778,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Gets the value of the uid property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     @Override
     public String getUid() {
@@ -791,11 +791,11 @@ public class ObjWellbore extends AbstractWitsmlObject {
 
     /**
      * Sets the value of the uid property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setUid(String value) {
         this.uid = value;

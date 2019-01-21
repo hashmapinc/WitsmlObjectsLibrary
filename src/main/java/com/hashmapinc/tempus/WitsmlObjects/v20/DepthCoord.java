@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlValue;
 public class DepthCoord {
 
     @XmlValue
-    protected double value;
+    protected Double value;
     @XmlAttribute(name = "uom", required = true)
     protected String uom;
     @XmlAttribute(name = "datum", required = true)
@@ -49,7 +49,7 @@ public class DepthCoord {
      * This type allows all quantities to be profiled to be a 'float' instead of a 'double'.
      * 
      */
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -57,7 +57,7 @@ public class DepthCoord {
      * Sets the value of the value property.
      * 
      */
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
@@ -109,4 +109,55 @@ public class DepthCoord {
         this.datum = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthCoord to1311MeasuredDepthCoord() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthCoord mdCoord = new com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthCoord();
+        com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthUom mdUom = com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthUom.fromValue(this.uom);
+
+        mdCoord.setDatum(this.datum);
+        mdCoord.setUom(mdUom);
+        mdCoord.setValue(this.value);
+
+        return mdCoord;
+    }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.MeasuredDepthCoord to1411MeasuredDepthCoord() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.MeasuredDepthCoord mdCoord = new com.hashmapinc.tempus.WitsmlObjects.v1411.MeasuredDepthCoord();
+        com.hashmapinc.tempus.WitsmlObjects.v1411.MeasuredDepthUom mdUom = com.hashmapinc.tempus.WitsmlObjects.v1411.MeasuredDepthUom.fromValue(this.uom);
+
+        mdCoord.setDatum(this.datum);
+        mdCoord.setUom(mdUom);
+        mdCoord.setValue(this.value);
+
+        return mdCoord;
+    }
+
+
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalDepthCoord to1311VerticalDepthCoord() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalDepthCoord vdCoord = new com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalDepthCoord();
+        com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalCoordinateUom vdUom = com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalCoordinateUom.fromValue(this.uom);
+
+        vdCoord.setDatum(this.datum);
+        vdCoord.setUom(vdUom);
+        vdCoord.setValue(this.value);
+
+        return vdCoord;
+    }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalDepthCoord to1411VerticalDepthCoord() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalDepthCoord vdCoord = new com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalDepthCoord();
+        com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalCoordinateUom vdUom = com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalCoordinateUom.fromValue(this.uom);
+
+        vdCoord.setDatum(this.datum);
+        vdCoord.setUom(vdUom);
+        vdCoord.setValue(this.value);
+
+        return vdCoord;
+    }
+    //=========================================================================
 }
