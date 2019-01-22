@@ -781,4 +781,127 @@ public class CsProjectionx {
         return this.parameter;
     }
 
+    public void setParameter(List<IndexedObject> paramList) {
+        this.parameter = paramList;
+    }
+
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.CsProjectionx to1411CsProjectionx() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.CsProjectionx projection = new com.hashmapinc.tempus.WitsmlObjects.v1411.CsProjectionx();
+
+        // assign fields
+        projection.setScaleFactor(this.getScaleFactor());
+        projection.setZone(this.getZone());
+        projection.setDescription(this.getDescription());
+
+        // nameCRS
+        if (null != this.getNameCRS())
+            projection.setNameCRS(this.getNameCRS().to1411WellKnownNameStruct());
+
+        // projectionCode
+        if (null != this.getProjectionCode())
+            projection.setProjectionCode(com.hashmapinc.tempus.WitsmlObjects.v1411.Projection.fromValue(this.getProjectionCode().value()));
+
+        // projectedFrom
+        if (null != this.getProjectedFrom())
+            projection.setProjectedFrom(this.getProjectedFrom().to1411RefNameString());
+
+        // stdParallel1
+        if (null != this.getStdParallel1())
+            projection.setStdParallel1(this.getStdParallel1().to1411PlaneAngleMeasure());
+
+        // stdParallel2
+        if (null != this.getStdParallel2())
+            projection.setStdParallel2(this.getStdParallel2().to1411PlaneAngleMeasure());
+
+        // centralMeridian
+        if (null != this.getCentralMeridian())
+            projection.setCentralMeridian(this.getCentralMeridian().to1411PlaneAngleMeasure());
+
+        // originLatitude
+        if (null != this.getOriginLatitude())
+            projection.setOriginLatitude(this.getOriginLatitude().to1411PlaneAngleMeasure());
+
+        // originLongitude
+        if (null != this.getOriginLongitude())
+            projection.setOriginLongitude(this.getOriginLongitude().to1411PlaneAngleMeasure());
+
+        // latitude1
+        if (null != this.getLatitude1())
+            projection.setLatitude1(this.getLatitude1().to1411PlaneAngleMeasure());
+
+        // longitude1
+        if (null != this.getLongitude1())
+            projection.setLongitude1(this.getLongitude1().to1411PlaneAngleMeasure());
+
+        // latitude2
+        if (null != this.getLatitude2())
+            projection.setLatitude2(this.getLatitude2().to1411PlaneAngleMeasure());
+
+        // longitude2
+        if (null != this.getLongitude2())
+            projection.setLongitude2(this.getLongitude2().to1411PlaneAngleMeasure());
+
+        // latitudeForScale
+        if (null != this.getLatitudeForScale())
+            projection.setLatitudeForScale(this.getLatitudeForScale().to1411PlaneAngleMeasure());
+
+        // longitudeForScale
+        if (null != this.getLongitudeForScale())
+            projection.setLongitudeForScale(this.getLongitudeForScale().to1411PlaneAngleMeasure());
+
+        // trueScaleLatitude
+        if (null != this.getTrueScaleLatitude())
+            projection.setTrueScaleLatitude(this.getTrueScaleLatitude().to1411PlaneAngleMeasure());
+
+        // spheroidRadius
+        if (null != this.getSpheroidRadius())
+            projection.setSpheroidRadius(this.getSpheroidRadius().to1411Length());
+
+        // methodVariant
+        if (null != this.getMethodVariant())
+            projection.setMethodVariant(com.hashmapinc.tempus.WitsmlObjects.v1411.ProjectionVariantsObliqueMercator.fromValue(this.getMethodVariant().value()));
+
+        // perspectiveHeight
+        if (null != this.getPerspectiveHeight())
+            projection.setPerspectiveHeight(this.getPerspectiveHeight().to1411Length());
+
+        // nadType
+        if (null != this.getNADType())
+            projection.setNADType(com.hashmapinc.tempus.WitsmlObjects.v1411.NADTypes.fromValue(this.getNADType().value()));
+
+        // falseEasting
+        if (null != this.getFalseEasting())
+            projection.setFalseEasting(this.getFalseEasting().to1411Length());
+
+        // falseNorthing
+        if (null != this.getFalseNorthing())
+            projection.setFalseNorthing(this.getFalseNorthing().to1411Length());
+
+        // bearing
+        if (null != this.getBearing())
+            projection.setBearing(this.getBearing().to1411PlaneAngleMeasure());
+
+        // hemisphere
+        if (null != this.getHemisphere())
+            projection.setHemisphere(com.hashmapinc.tempus.WitsmlObjects.v1411.Hemispheres.fromValue(this.getHemisphere().value()));
+
+        // parameter
+        if (null != this.getParameter()) {
+            List<com.hashmapinc.tempus.WitsmlObjects.v1411.IndexedObject> destWellCRSParamList = new ArrayList<>();
+            for (com.hashmapinc.tempus.WitsmlObjects.v1311.IndexedObject srcWellCRSParam: this.getParameter())
+                destWellCRSParamList.add(srcWellCRSParam.to1411IndexedObject());
+
+            projection.setParameter(destWellCRSParamList);
+        }
+
+        return projection;
+    }
+    //=========================================================================
+
 }
