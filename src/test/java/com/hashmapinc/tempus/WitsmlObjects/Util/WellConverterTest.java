@@ -11,7 +11,7 @@ public class WellConverterTest {
         String srcXML = TestUtilities.getResourceAsString("well_converter/well1311.xml");
         com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell src = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWells)WitsmlMarshal.deserialize(srcXML, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell.class)).getWell().get(0);
 
-        // get converted wellbore
+        // get converted well
         com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell dest = WellConverter.convertTo1411(src);
 
         // check equality for non complex, non repeating fields
@@ -586,7 +586,7 @@ public class WellConverterTest {
         String srcXML = TestUtilities.getResourceAsString("well_converter/well1411.xml");
         com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell src = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWells)WitsmlMarshal.deserialize(srcXML, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell.class)).getWell().get(0);
 
-        // get converted wellbore
+        // get converted well
         com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell dest = WellConverter.convertTo1311(src);
 
         // check equality for non complex, non repeating fields
