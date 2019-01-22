@@ -89,79 +89,12 @@ public class WellConverter {
 
         // wellLocation
         if (null != src.getWellLocation()) {
-            List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsLocation> srcWellLoc = src.getWellLocation();
-            List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation> destWellLoc = dest.getWellLocation();
-            for (int i = 0; i < srcWellLoc.size(); i++) {
-                // well crs
-                if (null != srcWellLoc.get(i).getWellCRS()) {
-                    assertEquals(srcWellLoc.get(i).getWellCRS().getUidRef(), destWellLoc.get(i).getWellCRS().getUidRef());
-                    assertEquals(srcWellLoc.get(i).getWellCRS().getValue(), destWellLoc.get(i).getWellCRS().getValue());
-                }
+            List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsLocation> srcWellLocList = src.getWellLocation();
+            List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation> destWellLocList = new ArrayList<>();
+            for (com.hashmapinc.tempus.WitsmlObjects.v1311.CsLocation srcWellLoc: srcWellLocList)
+                destWellLocList.add(srcWellLoc.to1411CsLocation());
 
-                // latitude
-                if (null != srcWellLoc.get(i).getLatitude()) {
-                    assertEquals(srcWellLoc.get(i).getLatitude().getUom(), destWellLoc.get(i).getLatitude().getUom());
-                    assertEquals(srcWellLoc.get(i).getLatitude().getValue(), destWellLoc.get(i).getLatitude().getValue());
-                }
-
-                // longitude
-                if (null != srcWellLoc.get(i).getLongitude()) {
-                    assertEquals(srcWellLoc.get(i).getLongitude().getUom(), destWellLoc.get(i).getLatitude().getUom());
-                    assertEquals(srcWellLoc.get(i).getLongitude().getValue(), destWellLoc.get(i).getLatitude().getValue());
-                }
-
-                // easting
-                if (null != srcWellLoc.get(i).getEasting()) {
-                    assertEquals(srcWellLoc.get(i).getEasting().getUom(), destWellLoc.get(i).getLatitude().getUom());
-                    assertEquals(srcWellLoc.get(i).getEasting().getValue(), destWellLoc.get(i).getLatitude().getValue());
-                }
-
-                // northing
-                if (null != srcWellLoc.get(i).getNorthing()) {
-                    assertEquals(srcWellLoc.get(i).getNorthing().getUom(), destWellLoc.get(i).getLatitude().getUom());
-                    assertEquals(srcWellLoc.get(i).getNorthing().getValue(), destWellLoc.get(i).getLatitude().getValue());
-                }
-
-                // westing
-                if (null != srcWellLoc.get(i).getWesting()) {
-                    assertEquals(srcWellLoc.get(i).getWesting().getUom(), destWellLoc.get(i).getLatitude().getUom());
-                    assertEquals(srcWellLoc.get(i).getWesting().getValue(), destWellLoc.get(i).getLatitude().getValue());
-                }
-
-                // southing
-                if (null != srcWellLoc.get(i).getSouthing()) {
-                    assertEquals(srcWellLoc.get(i).getSouthing().getUom(), destWellLoc.get(i).getLatitude().getUom());
-                    assertEquals(srcWellLoc.get(i).getSouthing().getValue(), destWellLoc.get(i).getLatitude().getValue());
-                }
-
-                // projectedX
-                if (null != srcWellLoc.get(i).getProjectedX()) {
-                    assertEquals(srcWellLoc.get(i).getProjectedX().getUom(), destWellLoc.get(i).getLatitude().getUom());
-                    assertEquals(srcWellLoc.get(i).getProjectedX().getValue(), destWellLoc.get(i).getLatitude().getValue());
-                }
-
-                // projectedY
-                if (null != srcWellLoc.get(i).getProjectedY()) {
-                    assertEquals(srcWellLoc.get(i).getProjectedY().getUom(), destWellLoc.get(i).getLatitude().getUom());
-                    assertEquals(srcWellLoc.get(i).getProjectedY().getValue(), destWellLoc.get(i).getLatitude().getValue());
-                }
-
-                // localX
-                if (null != srcWellLoc.get(i).getLocalX()) {
-                    assertEquals(srcWellLoc.get(i).getLocalX().getUom(), destWellLoc.get(i).getLatitude().getUom());
-                    assertEquals(srcWellLoc.get(i).getLocalX().getValue(), destWellLoc.get(i).getLatitude().getValue());
-                }
-
-                // localY
-                if (null != srcWellLoc.get(i).getLocalY()) {
-                    assertEquals(srcWellLoc.get(i).getLocalY().getUom(), destWellLoc.get(i).getLatitude().getUom());
-                    assertEquals(srcWellLoc.get(i).getLocalY().getValue(), destWellLoc.get(i).getLatitude().getValue());
-                }
-
-                assertEquals(srcWellLoc.get(i).isOriginal(), destWellLoc.get(i).isOriginal());
-                assertEquals(srcWellLoc.get(i).getDescription(), destWellLoc.get(i).getDescription());
-                assertEquals(srcWellLoc.get(i).getUid(), destWellLoc.get(i).getUid());
-            }
+            dest.setWellLocation(destWellLocList);
         }
 
         // referencePoint

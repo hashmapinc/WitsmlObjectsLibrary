@@ -107,9 +107,9 @@ public class CsRefWellWellbore {
 
         // assign fields
         if (null != this.getWellboreReference())
-            crww.setWellboreReference(this.getWellboreReference().to1311RefNameStrign());
+            crww.setWellboreReference(this.getWellboreReference().to1311RefNameString());
         if (null != this.getWellParent())
-            crww.setWellParent(this.getWellParent().to1311RefNameStrign());
+            crww.setWellParent(this.getWellParent().to1311RefNameString());
 
         return crww;
     }

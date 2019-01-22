@@ -64,4 +64,21 @@ public class LengthMeasure
         this.uom = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.LengthMeasure to1311Length() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.LengthMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v1311.LengthMeasure();
+
+        // assign fields
+        measure.setUom(this.uom);
+        measure.setValue(this.value);
+
+        return measure;
+    }
+    //=========================================================================
+
 }

@@ -103,7 +103,7 @@ public class RefNameString {
     //=========================================================================
     // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
     //=========================================================================
-    public com.hashmapinc.tempus.WitsmlObjects.v1311.RefNameString to1311RefNameStrign() {
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.RefNameString to1311RefNameString() {
         com.hashmapinc.tempus.WitsmlObjects.v1311.RefNameString rnString = new com.hashmapinc.tempus.WitsmlObjects.v1311.RefNameString();
 
         // assign fields

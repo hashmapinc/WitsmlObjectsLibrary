@@ -806,6 +806,11 @@ public class ObjWell extends AbstractWitsmlObject implements WitsmlObj {
         return this.wellLocation;
     }
 
+
+    public void setWellLocation(List<CsLocation> wellLocationList) {
+        this.wellLocation = wellLocationList;
+    }
+
     /**
      * Gets the value of the referencePoint property.
      * 

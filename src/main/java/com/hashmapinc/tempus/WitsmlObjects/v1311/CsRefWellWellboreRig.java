@@ -127,11 +127,11 @@ public class CsRefWellWellboreRig {
 
         // assign fields
         if (null != this.getRigReference())
-            ref.setRigReference(this.getRigReference().to1411RefNameStrign());
+            ref.setRigReference(this.getRigReference().to1411RefNameString());
         if (null != this.getWellParent())
-            ref.setWellParent(this.getWellParent().to1411RefNameStrign());
+            ref.setWellParent(this.getWellParent().to1411RefNameString());
         if (null != this.getWellboreParent())
-            ref.setWellboreParent(this.getWellboreParent().to1411RefNameStrign());
+            ref.setWellboreParent(this.getWellboreParent().to1411RefNameString());
 
         return ref;
     }

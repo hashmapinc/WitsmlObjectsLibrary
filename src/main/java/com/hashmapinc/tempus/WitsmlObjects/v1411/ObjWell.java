@@ -818,6 +818,11 @@ public class ObjWell extends AbstractWitsmlObject {
         return this.wellLocation;
     }
 
+
+    public void setWellLocation(List<CsLocation> wellLocationList) {
+        this.wellLocation = wellLocationList;
+    }
+
     /**
      * Gets the value of the wellPublicLandSurveySystemLocation property.
      * 
