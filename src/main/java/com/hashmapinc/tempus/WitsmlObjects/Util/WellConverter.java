@@ -14,7 +14,101 @@ import java.util.List;
  */
 public class WellConverter {
     public static com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell convertTo1311(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell src) {
-        return null;
+        // create destination well
+        com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell dest = new com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell();
+
+        // assign non complex, non repeating fields
+        dest.setName(src.getName());
+        dest.setNameLegal(src.getNameLegal());
+        dest.setNumLicense(src.getNumLicense());
+        dest.setNumGovt(src.getNumGovt());
+        dest.setDTimLicense(src.getDTimLicense());
+        dest.setField(src.getField());
+        dest.setCountry(src.getCountry());
+        dest.setState(src.getState());
+        dest.setCounty(src.getCounty());
+        dest.setRegion(src.getRegion());
+        dest.setDistrict(src.getDistrict());
+        dest.setBlock(src.getBlock());
+        dest.setTimeZone(src.getTimeZone());
+        dest.setOperator(src.getOperator());
+        dest.setOperatorDiv(src.getOperatorDiv());
+        dest.setNumAPI(src.getNumAPI());
+        dest.setDTimSpud(src.getDTimSpud());
+        dest.setDTimPa(src.getDTimPa());
+
+
+        // assign complex fields
+        if (null != src.getPcInterest()) {
+            com.hashmapinc.tempus.WitsmlObjects.v1311.DimensionlessMeasure pcInterest = new com.hashmapinc.tempus.WitsmlObjects.v1311.DimensionlessMeasure();
+            pcInterest.setUom(src.getPcInterest().getUom());
+            pcInterest.setValue(src.getPcInterest().getValue());
+            dest.setPcInterest(pcInterest);
+        }
+
+        if (null != src.getStatusWell())
+            dest.setStatusWell(com.hashmapinc.tempus.WitsmlObjects.v1311.WellStatus.fromValue(src.getStatusWell().value()));
+
+        if (null != src.getPurposeWell())
+            dest.setPurposeWell(com.hashmapinc.tempus.WitsmlObjects.v1311.WellPurpose.fromValue(src.getPurposeWell().value()));
+
+        if (null != src.getFluidWell())
+            dest.setFluidWell(com.hashmapinc.tempus.WitsmlObjects.v1311.WellFluid.fromValue(src.getFluidWell().value()));
+
+        if (null != src.getDirectionWell())
+            dest.setDirectionWell(com.hashmapinc.tempus.WitsmlObjects.v1311.WellDirection.fromValue(src.getDirectionWell().value()));
+
+        if (null != src.getWellheadElevation())
+            dest.setWellheadElevation(src.getWellheadElevation().to1311WellElevationCoord());
+
+        if (null != src.getGroundElevation())
+            dest.setGroundElevation(src.getGroundElevation().to1311WellElevationCoord());
+
+        if (null != src.getWaterDepth())
+            dest.setWaterDepth(src.getWaterDepth().to1311WellVerticalDepthCoord());
+
+        if (null != src.getCommonData())
+            dest.setCommonData(src.getCommonData().to1311CommonData());
+
+
+        // assign repeating fields
+        // well datum
+        if (null != src.getWellDatum()) {
+            List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsWellDatum> destWellDatumList = new ArrayList<>();
+            for (com.hashmapinc.tempus.WitsmlObjects.v1411.CsWellDatum srcWellDatum: src.getWellDatum())
+                destWellDatumList.add(srcWellDatum.to1311CsWellDatum());
+
+            dest.setWellDatum(destWellDatumList);
+        }
+
+        // wellLocation
+        if (null != src.getWellLocation()) {
+            List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsLocation> destWellLocList = new ArrayList<>();
+            for (com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation srcWellLoc: src.getWellLocation())
+                destWellLocList.add(srcWellLoc.to1311CsLocation());
+
+            dest.setWellLocation(destWellLocList);
+        }
+
+        // referencePoint
+        if (null != src.getReferencePoint()) {
+            List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsReferencePoint> destRefPointList = new ArrayList<>();
+            for (com.hashmapinc.tempus.WitsmlObjects.v1411.CsReferencePoint srcRefPoint: src.getReferencePoint())
+                destRefPointList.add(srcRefPoint.to1311CsReferencePoint());
+
+            dest.setReferencePoint(destRefPointList);
+        }
+
+        // wellCRS
+        if (null != src.getWellCRS()) {
+            List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsWellCRS> destWellCRSList = new ArrayList<>();
+            for (com.hashmapinc.tempus.WitsmlObjects.v1411.CsWellCRS srcWellCRS: src.getWellCRS())
+                destWellCRSList.add(srcWellCRS.to1311CsWellCRS());
+
+            dest.setWellCRS(destWellCRSList);
+        }
+
+        return dest;
     }
 
 
@@ -79,9 +173,8 @@ public class WellConverter {
         // assign repeating fields
         // well datum
         if (null != src.getWellDatum()) {
-            List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsWellDatum> srcWellDatumList = src.getWellDatum();
             List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsWellDatum> destWellDatumList = new ArrayList<>();
-            for (com.hashmapinc.tempus.WitsmlObjects.v1311.CsWellDatum srcWellDatum: srcWellDatumList)
+            for (com.hashmapinc.tempus.WitsmlObjects.v1311.CsWellDatum srcWellDatum: src.getWellDatum())
                 destWellDatumList.add(srcWellDatum.to1411CsWellDatum());
 
             dest.setWellDatum(destWellDatumList);
@@ -89,9 +182,8 @@ public class WellConverter {
 
         // wellLocation
         if (null != src.getWellLocation()) {
-            List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsLocation> srcWellLocList = src.getWellLocation();
             List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation> destWellLocList = new ArrayList<>();
-            for (com.hashmapinc.tempus.WitsmlObjects.v1311.CsLocation srcWellLoc: srcWellLocList)
+            for (com.hashmapinc.tempus.WitsmlObjects.v1311.CsLocation srcWellLoc: src.getWellLocation())
                 destWellLocList.add(srcWellLoc.to1411CsLocation());
 
             dest.setWellLocation(destWellLocList);
@@ -99,9 +191,8 @@ public class WellConverter {
 
         // referencePoint
         if (null != src.getReferencePoint()) {
-            List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsReferencePoint> srcRefPointList = src.getReferencePoint();
             List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsReferencePoint> destRefPointList = new ArrayList<>();
-            for (com.hashmapinc.tempus.WitsmlObjects.v1311.CsReferencePoint srcRefPoint: srcRefPointList)
+            for (com.hashmapinc.tempus.WitsmlObjects.v1311.CsReferencePoint srcRefPoint: src.getReferencePoint())
                 destRefPointList.add(srcRefPoint.to1411CsReferencePoint());
 
             dest.setReferencePoint(destRefPointList);

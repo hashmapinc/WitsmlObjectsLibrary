@@ -79,6 +79,16 @@ public class LengthMeasure
 
         return measure;
     }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalDepthCoord to1311WellVerticalDepthCoord() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalDepthCoord coord = new com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalDepthCoord();
+
+        // assign fields
+        coord.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalCoordinateUom.fromValue(this.getUom()));
+        coord.setValue(this.getValue());
+
+        return coord;
+    }
     //=========================================================================
 
 }

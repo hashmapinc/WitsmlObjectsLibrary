@@ -184,6 +184,10 @@ public class CsWellDatum {
         return this.kind;
     }
 
+    public void setKind(List<String> kindList) {
+        this.kind = kindList;
+    }
+
     /**
      * Gets the value of the wellbore property.
      * 
