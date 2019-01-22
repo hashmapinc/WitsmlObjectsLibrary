@@ -418,22 +418,53 @@ public class WellConverterTest {
                         assertEquals(srcWellCRS.get(i).getMapProjection().getMethodVariant().value(), destWellCRS.get(i).getMapProjection().getMethodVariant().value());
 
                     // perspectiveHeight
+                    if (null != srcWellCRS.get(i).getMapProjection().getPerspectiveHeight()) {
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getPerspectiveHeight().getValue(), destWellCRS.get(i).getMapProjection().getPerspectiveHeight().getValue());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getPerspectiveHeight().getUom(), destWellCRS.get(i).getMapProjection().getPerspectiveHeight().getUom());
+                    }
 
                     assertEquals(srcWellCRS.get(i).getMapProjection().getZone(), destWellCRS.get(i).getMapProjection().getZone());
 
                     // nadType
+                    if (null != srcWellCRS.get(i).getMapProjection().getNADType())
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getNADType().value(), destWellCRS.get(i).getMapProjection().getNADType().value());
 
                     // falseEasting
+                    if (null != srcWellCRS.get(i).getMapProjection().getFalseEasting()) {
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getFalseEasting().getValue(), destWellCRS.get(i).getMapProjection().getFalseEasting().getValue());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getFalseEasting().getUom(), destWellCRS.get(i).getMapProjection().getFalseEasting().getUom());
+                    }
 
                     // falseNorthing
+                    if (null != srcWellCRS.get(i).getMapProjection().getFalseNorthing()) {
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getFalseNorthing().getValue(), destWellCRS.get(i).getMapProjection().getFalseNorthing().getValue());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getFalseNorthing().getUom(), destWellCRS.get(i).getMapProjection().getFalseNorthing().getUom());
+                    }
 
                     // bearing
+                    if (null != srcWellCRS.get(i).getMapProjection().getBearing()) {
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getBearing().getValue(), destWellCRS.get(i).getMapProjection().getBearing().getValue());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getBearing().getUom(), destWellCRS.get(i).getMapProjection().getBearing().getUom());
+                    }
 
                     // hemisphere
+                    if (null != srcWellCRS.get(i).getMapProjection().getHemisphere())
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getHemisphere().value(), destWellCRS.get(i).getMapProjection().getHemisphere().value());
 
                     assertEquals(srcWellCRS.get(i).getMapProjection().getDescription(), destWellCRS.get(i).getMapProjection().getDescription());
 
                     // parameter
+                    if (null != srcWellCRS.get(i).getMapProjection().getParameter()) {
+                        List<com.hashmapinc.tempus.WitsmlObjects.v1311.IndexedObject> srcWellCRSParam = srcWellCRS.get(i).getMapProjection().getParameter();
+                        List<com.hashmapinc.tempus.WitsmlObjects.v1411.IndexedObject> destWellCRSParam = destWellCRS.get(i).getMapProjection().getParameter();
+                        for (int j = 0; j < srcWellCRSParam.size(); j++) {
+                            assertEquals(srcWellCRSParam.get(j).getValue(), destWellCRSParam.get(j).getValue());
+                            assertEquals(srcWellCRSParam.get(j).getIndex(), destWellCRSParam.get(j).getIndex());
+                            assertEquals(srcWellCRSParam.get(j).getName(), destWellCRSParam.get(j).getName());
+                            assertEquals(srcWellCRSParam.get(j).getUom(), destWellCRSParam.get(j).getUom());
+                            assertEquals(srcWellCRSParam.get(j).getDescription(), destWellCRSParam.get(j).getDescription());
+                        }
+                    }
                 }
 
                 // geographic
