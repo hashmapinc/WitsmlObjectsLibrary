@@ -737,6 +737,10 @@ public class ObjWell extends AbstractWitsmlObject {
         return this.wellDatum;
     }
 
+    public void setWellDatum(List<CsWellDatum> wellDatumList) {
+        this.wellDatum = wellDatumList;
+    }
+
     /**
      * Gets the value of the groundElevation property.
      * 

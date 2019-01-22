@@ -89,4 +89,21 @@ public class RefNameString {
         this.uidRef = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.RefNameString to1411RefNameStrign() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.RefNameString rnString = new com.hashmapinc.tempus.WitsmlObjects.v1411.RefNameString();
+
+        // assign fields
+        rnString.setUidRef(this.uidRef);
+        rnString.setValue(this.value);
+
+        return rnString;
+    }
+    //=========================================================================
+
 }

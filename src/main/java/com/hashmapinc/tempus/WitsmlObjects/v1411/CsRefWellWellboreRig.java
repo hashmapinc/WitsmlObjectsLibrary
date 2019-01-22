@@ -124,4 +124,25 @@ public class CsRefWellWellboreRig {
         this.wellParent = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.CsRefWellWellboreRig to1311CsRefWellWellboreRig() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.CsRefWellWellboreRig ref = new com.hashmapinc.tempus.WitsmlObjects.v1311.CsRefWellWellboreRig();
+
+        // assign fields
+        if (null != this.getRigReference())
+            ref.setRigReference(this.getRigReference().to1311RefNameStrign());
+        if (null != this.getWellParent())
+            ref.setWellParent(this.getWellParent().to1311RefNameStrign());
+        if (null != this.getWellboreParent())
+            ref.setWellboreParent(this.getWellboreParent().to1311RefNameStrign());
+
+        return ref;
+    }
+    //=========================================================================
+
 }

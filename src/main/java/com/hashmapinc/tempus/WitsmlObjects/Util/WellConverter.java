@@ -81,65 +81,10 @@ public class WellConverter {
         if (null != src.getWellDatum()) {
             List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsWellDatum> srcWellDatumList = src.getWellDatum();
             List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsWellDatum> destWellDatumList = new ArrayList<>();
-            for (com.hashmapinc.tempus.WitsmlObjects.v1311.CsWellDatum srcWellDatum: srcWellDatumList) {
-                com.hashmapinc.tempus.WitsmlObjects.v1411.CsWellDatum destWellDatum = new com.hashmapinc.tempus.WitsmlObjects.v1411.CsWellDatum();
+            for (com.hashmapinc.tempus.WitsmlObjects.v1311.CsWellDatum srcWellDatum: srcWellDatumList)
+                destWellDatumList.add(srcWellDatum.to1411CsWellDatum());
 
-                // non complex objects
-                destWellDatum.setName(srcWellDatum.getName());
-                destWellDatum.setKind(srcWellDatum.getKind());
-                destWellDatum.setComment(srcWellDatum.getComment());
-                destWellDatum.setUid(srcWellDatum.getUid());
-
-                // code
-                if (null != srcWellDatum.getCode())
-                    destWellDatum.setCode(com.hashmapinc.tempus.WitsmlObjects.v1411.ElevCodeEnum.fromValue(srcWellDatum.getCode().value()));
-
-                // datum name
-                if (null != srcWellDatum.getDatumName())
-                    destWellDatum.setDatumName(srcWellDatum.getDatumName().to1411WellKnownNameStruct());
-
-                // wellbore
-                if (null != srcWellDatum.get(i).getWellbore()) {
-                    if (null != srcWellDatum.get(i).getWellbore().getWellboreReference()) {
-                        assertEquals(srcWellDatum.get(i).getWellbore().getWellboreReference().getUidRef(), destWellDatum.get(i).getWellbore().getWellboreReference().getUidRef());
-                        assertEquals(srcWellDatum.get(i).getWellbore().getWellboreReference().getValue(), destWellDatum.get(i).getWellbore().getWellboreReference().getValue());
-                    }
-                    if (null != srcWellDatum.get(i).getWellbore().getWellParent()) {
-                        assertEquals(srcWellDatum.get(i).getWellbore().getWellParent().getValue(), destWellDatum.get(i).getWellbore().getWellParent().getValue());
-                        assertEquals(srcWellDatum.get(i).getWellbore().getWellParent().getUidRef(), destWellDatum.get(i).getWellbore().getWellParent().getUidRef());
-                    }
-                }
-
-                // rig
-                if (null != src.getWellDatum().get(i).getRig()) {
-                    if (null != src.getWellDatum().get(i).getRig().getRigReference()) {
-                        assertEquals(srcWellDatum.get(i).getRig().getRigReference().getUidRef(), destWellDatum.get(i).getRig().getRigReference().getUidRef());
-                        assertEquals(srcWellDatum.get(i).getRig().getRigReference().getValue(), destWellDatum.get(i).getRig().getRigReference().getValue());
-                    }
-                    if (null != src.getWellDatum().get(i).getRig().getWellboreParent()) {
-                        assertEquals(srcWellDatum.get(i).getRig().getWellboreParent().getUidRef(), destWellDatum.get(i).getRig().getWellboreParent().getUidRef());
-                        assertEquals(srcWellDatum.get(i).getRig().getWellboreParent().getValue(), destWellDatum.get(i).getRig().getWellboreParent().getValue());
-                    }
-                    if (null != src.getWellDatum().get(i).getRig().getWellParent()) {
-                        assertEquals(srcWellDatum.get(i).getRig().getWellParent().getUidRef(), destWellDatum.get(i).getRig().getWellParent().getUidRef());
-                        assertEquals(srcWellDatum.get(i).getRig().getWellParent().getValue(), destWellDatum.get(i).getRig().getWellParent().getValue());
-                    }
-                }
-
-                // elevation
-                if (null != srcWellDatum.get(i).getElevation()) {
-                    assertEquals(srcWellDatum.get(i).getElevation().getDatum(), destWellDatum.get(i).getElevation().getDatum());
-                    assertEquals(srcWellDatum.get(i).getElevation().getUom().value(), destWellDatum.get(i).getElevation().getUom().value());
-                    assertEquals(srcWellDatum.get(i).getElevation().getValue(), destWellDatum.get(i).getElevation().getValue());
-                }
-
-                // measured depth
-                if (null != srcWellDatum.get(i).getMeasuredDepth()) {
-                    assertEquals(srcWellDatum.get(i).getMeasuredDepth().getDatum(), destWellDatum.get(i).getMeasuredDepth().getDatum());
-                    assertEquals(srcWellDatum.get(i).getMeasuredDepth().getUom().value(), destWellDatum.get(i).getMeasuredDepth().getUom().value());
-                    assertEquals(srcWellDatum.get(i).getMeasuredDepth().getValue(), destWellDatum.get(i).getMeasuredDepth().getValue());
-                }
-            }
+            dest.setWellDatum(destWellDatumList);
         }
 
         // wellLocation

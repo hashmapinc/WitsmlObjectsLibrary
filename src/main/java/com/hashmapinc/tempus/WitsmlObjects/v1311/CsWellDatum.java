@@ -400,4 +400,53 @@ public class CsWellDatum {
         this.uid = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.CsWellDatum to1411CsWellDatum() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.CsWellDatum datum = new com.hashmapinc.tempus.WitsmlObjects.v1411.CsWellDatum(); // datum, I hardly know 'em!
+
+        // non complex objects
+        datum.setName(this.getName());
+        datum.setKind(this.getKind());
+        datum.setComment(this.getComment());
+        datum.setUid(this.getUid());
+
+
+        // complex objects
+        // code
+        if (null != this.getCode())
+            datum.setCode(com.hashmapinc.tempus.WitsmlObjects.v1411.ElevCodeEnum.fromValue(this.getCode().value()));
+
+        // datum name
+        if (null != this.getDatumName())
+            datum.setDatumName(this.getDatumName().to1411WellKnownNameStruct());
+
+        // wellbore
+        if (null != this.getWellbore())
+            datum.setDatumName(this.getDatumName().to1411WellKnownNameStruct());
+
+        // wellbore
+        if (null != this.getWellbore())
+            datum.setWellbore(this.getWellbore().to1411CsRefWellWellbore());
+
+        // rig
+        if (null != this.getRig())
+            datum.setRig(this.getRig().to1411CsRefWellWellboreRig());
+
+        // elevation
+        if (null != this.getElevation())
+            datum.setElevation(this.getElevation().to1411WellElevationCoord());
+
+        // measured depth
+        if (null != this.getMeasuredDepth())
+            datum.setMeasuredDepth(this.getMeasuredDepth().to1411MeasuredDepthCoord());
+
+        return datum;
+    }
+    //=========================================================================
+
 }
