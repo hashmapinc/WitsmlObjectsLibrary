@@ -109,13 +109,12 @@ public class WellConverter {
 
         // wellCRS
         if (null != src.getWellCRS()) {
-            List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsWellCRS> srcWellCRS = src.getWellCRS();
-            List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsWellCRS> destWellCRS = dest.getWellCRS();
-            for (int i = 0; i < srcWellCRS.size(); i++) {
-            }
+            List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsWellCRS> destWellCRSList = new ArrayList<>();
+            for (com.hashmapinc.tempus.WitsmlObjects.v1311.CsWellCRS srcWellCRS: src.getWellCRS())
+                destWellCRSList.add(srcWellCRS.to1411CsWellCRS());
+
+            dest.setWellCRS(destWellCRSList);
         }
-
-
 
         return dest;
     }

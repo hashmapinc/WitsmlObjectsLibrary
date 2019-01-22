@@ -230,29 +230,8 @@ public class CsWellCRS {
             crs.setGeographic(this.getGeographic().to1411CsGeodeticModel());
 
         // localCRS
-        if (null != this.getLocalCRS()) {
-            assertEquals(srcWellCRS.get(i).getLocalCRS().isUsesWellAsOrigin(), destWellCRS.get(i).getLocalCRS().isUsesWellAsOrigin());
-
-            // origin
-            if (null != srcWellCRS.get(i).getLocalCRS().getOrigin()) {
-                assertEquals(srcWellCRS.get(i).getLocalCRS().getOrigin().getUidRef(), destWellCRS.get(i).getLocalCRS().getOrigin().getUidRef());
-                assertEquals(srcWellCRS.get(i).getLocalCRS().getOrigin().getValue(), destWellCRS.get(i).getLocalCRS().getOrigin().getValue());
-            }
-
-            assertEquals(srcWellCRS.get(i).getLocalCRS().getOriginDescription(), destWellCRS.get(i).getLocalCRS().getOriginDescription());
-
-            // yAxisAzimuth
-            if (null != srcWellCRS.get(i).getLocalCRS().getYAxisAzimuth()) {
-                assertEquals(srcWellCRS.get(i).getLocalCRS().getYAxisAzimuth().getUom(), destWellCRS.get(i).getLocalCRS().getYAxisAzimuth().getUom());
-
-                // northDirection
-                if (null != srcWellCRS.get(i).getLocalCRS().getYAxisAzimuth().getNorthDirection())
-                    assertEquals(srcWellCRS.get(i).getLocalCRS().getYAxisAzimuth().getNorthDirection().value(), destWellCRS.get(i).getLocalCRS().getYAxisAzimuth().getNorthDirection().value());
-            }
-
-            assertEquals(srcWellCRS.get(i).getLocalCRS().getYAxisDescription(), destWellCRS.get(i).getLocalCRS().getYAxisDescription());
-            assertEquals(srcWellCRS.get(i).getLocalCRS().isXRotationCounterClockwise(), destWellCRS.get(i).getLocalCRS().isXRotationCounterClockwise());
-        }
+        if (null != this.getLocalCRS())
+            crs.setLocalCRS(this.getLocalCRS().to1411CsLocalCRS());
 
         return crs;
     }

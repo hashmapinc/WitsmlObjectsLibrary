@@ -165,56 +165,56 @@ public class WellConverterTest {
 
                 // longitude
                 if (null != srcWellLoc.get(i).getLongitude()) {
-                    assertEquals(srcWellLoc.get(i).getLongitude().getUom(), destWellLoc.get(i).getLatitude().getUom());
-                    assertEquals(srcWellLoc.get(i).getLongitude().getValue(), destWellLoc.get(i).getLatitude().getValue());
+                    assertEquals(srcWellLoc.get(i).getLongitude().getUom(), destWellLoc.get(i).getLongitude().getUom());
+                    assertEquals(srcWellLoc.get(i).getLongitude().getValue(), destWellLoc.get(i).getLongitude().getValue());
                 }
 
                 // easting
                 if (null != srcWellLoc.get(i).getEasting()) {
-                    assertEquals(srcWellLoc.get(i).getEasting().getUom(), destWellLoc.get(i).getLatitude().getUom());
-                    assertEquals(srcWellLoc.get(i).getEasting().getValue(), destWellLoc.get(i).getLatitude().getValue());
+                    assertEquals(srcWellLoc.get(i).getEasting().getUom(), destWellLoc.get(i).getEasting().getUom());
+                    assertEquals(srcWellLoc.get(i).getEasting().getValue(), destWellLoc.get(i).getEasting().getValue());
                 }
 
                 // northing
                 if (null != srcWellLoc.get(i).getNorthing()) {
-                    assertEquals(srcWellLoc.get(i).getNorthing().getUom(), destWellLoc.get(i).getLatitude().getUom());
-                    assertEquals(srcWellLoc.get(i).getNorthing().getValue(), destWellLoc.get(i).getLatitude().getValue());
+                    assertEquals(srcWellLoc.get(i).getNorthing().getUom(), destWellLoc.get(i).getNorthing().getUom());
+                    assertEquals(srcWellLoc.get(i).getNorthing().getValue(), destWellLoc.get(i).getNorthing().getValue());
                 }
 
                 // westing
                 if (null != srcWellLoc.get(i).getWesting()) {
-                    assertEquals(srcWellLoc.get(i).getWesting().getUom(), destWellLoc.get(i).getLatitude().getUom());
-                    assertEquals(srcWellLoc.get(i).getWesting().getValue(), destWellLoc.get(i).getLatitude().getValue());
+                    assertEquals(srcWellLoc.get(i).getWesting().getUom(), destWellLoc.get(i).getWesting().getUom());
+                    assertEquals(srcWellLoc.get(i).getWesting().getValue(), destWellLoc.get(i).getWesting().getValue());
                 }
 
                 // southing
                 if (null != srcWellLoc.get(i).getSouthing()) {
-                    assertEquals(srcWellLoc.get(i).getSouthing().getUom(), destWellLoc.get(i).getLatitude().getUom());
-                    assertEquals(srcWellLoc.get(i).getSouthing().getValue(), destWellLoc.get(i).getLatitude().getValue());
+                    assertEquals(srcWellLoc.get(i).getSouthing().getUom(), destWellLoc.get(i).getSouthing().getUom());
+                    assertEquals(srcWellLoc.get(i).getSouthing().getValue(), destWellLoc.get(i).getSouthing().getValue());
                 }
 
                 // projectedX
                 if (null != srcWellLoc.get(i).getProjectedX()) {
-                    assertEquals(srcWellLoc.get(i).getProjectedX().getUom(), destWellLoc.get(i).getLatitude().getUom());
-                    assertEquals(srcWellLoc.get(i).getProjectedX().getValue(), destWellLoc.get(i).getLatitude().getValue());
+                    assertEquals(srcWellLoc.get(i).getProjectedX().getUom(), destWellLoc.get(i).getProjectedX().getUom());
+                    assertEquals(srcWellLoc.get(i).getProjectedX().getValue(), destWellLoc.get(i).getProjectedX().getValue());
                 }
 
                 // projectedY
                 if (null != srcWellLoc.get(i).getProjectedY()) {
-                    assertEquals(srcWellLoc.get(i).getProjectedY().getUom(), destWellLoc.get(i).getLatitude().getUom());
-                    assertEquals(srcWellLoc.get(i).getProjectedY().getValue(), destWellLoc.get(i).getLatitude().getValue());
+                    assertEquals(srcWellLoc.get(i).getProjectedY().getUom(), destWellLoc.get(i).getProjectedY().getUom());
+                    assertEquals(srcWellLoc.get(i).getProjectedY().getValue(), destWellLoc.get(i).getProjectedY().getValue());
                 }
 
                 // localX
                 if (null != srcWellLoc.get(i).getLocalX()) {
-                    assertEquals(srcWellLoc.get(i).getLocalX().getUom(), destWellLoc.get(i).getLatitude().getUom());
-                    assertEquals(srcWellLoc.get(i).getLocalX().getValue(), destWellLoc.get(i).getLatitude().getValue());
+                    assertEquals(srcWellLoc.get(i).getLocalX().getUom(), destWellLoc.get(i).getLocalX().getUom());
+                    assertEquals(srcWellLoc.get(i).getLocalX().getValue(), destWellLoc.get(i).getLocalX().getValue());
                 }
 
                 // localY
                 if (null != srcWellLoc.get(i).getLocalY()) {
-                    assertEquals(srcWellLoc.get(i).getLocalY().getUom(), destWellLoc.get(i).getLatitude().getUom());
-                    assertEquals(srcWellLoc.get(i).getLocalY().getValue(), destWellLoc.get(i).getLatitude().getValue());
+                    assertEquals(srcWellLoc.get(i).getLocalY().getUom(), destWellLoc.get(i).getLocalY().getUom());
+                    assertEquals(srcWellLoc.get(i).getLocalY().getValue(), destWellLoc.get(i).getLocalY().getValue());
                 }
 
                 assertEquals(srcWellLoc.get(i).isOriginal(), destWellLoc.get(i).isOriginal());
@@ -267,56 +267,56 @@ public class WellConverterTest {
 
                         // longitude
                         if (null != srcRefPointLocation.get(j).getLongitude()) {
-                            assertEquals(srcRefPointLocation.get(j).getLongitude().getUom(), destRefPointLocation.get(j).getLatitude().getUom());
-                            assertEquals(srcRefPointLocation.get(j).getLongitude().getValue(), destRefPointLocation.get(j).getLatitude().getValue());
+                            assertEquals(srcRefPointLocation.get(j).getLongitude().getUom(), destRefPointLocation.get(j).getLongitude().getUom());
+                            assertEquals(srcRefPointLocation.get(j).getLongitude().getValue(), destRefPointLocation.get(j).getLongitude().getValue());
                         }
 
                         // easting
                         if (null != srcRefPointLocation.get(j).getEasting()) {
-                            assertEquals(srcRefPointLocation.get(j).getEasting().getUom(), destRefPointLocation.get(j).getLatitude().getUom());
-                            assertEquals(srcRefPointLocation.get(j).getEasting().getValue(), destRefPointLocation.get(j).getLatitude().getValue());
+                            assertEquals(srcRefPointLocation.get(j).getEasting().getUom(), destRefPointLocation.get(j).getEasting().getUom());
+                            assertEquals(srcRefPointLocation.get(j).getEasting().getValue(), destRefPointLocation.get(j).getEasting().getValue());
                         }
 
                         // northing
                         if (null != srcRefPointLocation.get(j).getNorthing()) {
-                            assertEquals(srcRefPointLocation.get(j).getNorthing().getUom(), destRefPointLocation.get(j).getLatitude().getUom());
-                            assertEquals(srcRefPointLocation.get(j).getNorthing().getValue(), destRefPointLocation.get(j).getLatitude().getValue());
+                            assertEquals(srcRefPointLocation.get(j).getNorthing().getUom(), destRefPointLocation.get(j).getNorthing().getUom());
+                            assertEquals(srcRefPointLocation.get(j).getNorthing().getValue(), destRefPointLocation.get(j).getNorthing().getValue());
                         }
 
                         // westing
                         if (null != srcRefPointLocation.get(j).getWesting()) {
-                            assertEquals(srcRefPointLocation.get(j).getWesting().getUom(), destRefPointLocation.get(j).getLatitude().getUom());
-                            assertEquals(srcRefPointLocation.get(j).getWesting().getValue(), destRefPointLocation.get(j).getLatitude().getValue());
+                            assertEquals(srcRefPointLocation.get(j).getWesting().getUom(), destRefPointLocation.get(j).getWesting().getUom());
+                            assertEquals(srcRefPointLocation.get(j).getWesting().getValue(), destRefPointLocation.get(j).getWesting().getValue());
                         }
 
                         // southing
                         if (null != srcRefPointLocation.get(j).getSouthing()) {
-                            assertEquals(srcRefPointLocation.get(j).getSouthing().getUom(), destRefPointLocation.get(j).getLatitude().getUom());
-                            assertEquals(srcRefPointLocation.get(j).getSouthing().getValue(), destRefPointLocation.get(j).getLatitude().getValue());
+                            assertEquals(srcRefPointLocation.get(j).getSouthing().getUom(), destRefPointLocation.get(j).getSouthing().getUom());
+                            assertEquals(srcRefPointLocation.get(j).getSouthing().getValue(), destRefPointLocation.get(j).getSouthing().getValue());
                         }
 
                         // projectedX
                         if (null != srcRefPointLocation.get(j).getProjectedX()) {
-                            assertEquals(srcRefPointLocation.get(j).getProjectedX().getUom(), destRefPointLocation.get(j).getLatitude().getUom());
-                            assertEquals(srcRefPointLocation.get(j).getProjectedX().getValue(), destRefPointLocation.get(j).getLatitude().getValue());
+                            assertEquals(srcRefPointLocation.get(j).getProjectedX().getUom(), destRefPointLocation.get(j).getProjectedX().getUom());
+                            assertEquals(srcRefPointLocation.get(j).getProjectedX().getValue(), destRefPointLocation.get(j).getProjectedX().getValue());
                         }
 
                         // projectedY
                         if (null != srcRefPointLocation.get(j).getProjectedY()) {
-                            assertEquals(srcRefPointLocation.get(j).getProjectedY().getUom(), destRefPointLocation.get(j).getLatitude().getUom());
-                            assertEquals(srcRefPointLocation.get(j).getProjectedY().getValue(), destRefPointLocation.get(j).getLatitude().getValue());
+                            assertEquals(srcRefPointLocation.get(j).getProjectedY().getUom(), destRefPointLocation.get(j).getProjectedY().getUom());
+                            assertEquals(srcRefPointLocation.get(j).getProjectedY().getValue(), destRefPointLocation.get(j).getProjectedY().getValue());
                         }
 
                         // localX
                         if (null != srcRefPointLocation.get(j).getLocalX()) {
-                            assertEquals(srcRefPointLocation.get(j).getLocalX().getUom(), destRefPointLocation.get(j).getLatitude().getUom());
-                            assertEquals(srcRefPointLocation.get(j).getLocalX().getValue(), destRefPointLocation.get(j).getLatitude().getValue());
+                            assertEquals(srcRefPointLocation.get(j).getLocalX().getUom(), destRefPointLocation.get(j).getLocalX().getUom());
+                            assertEquals(srcRefPointLocation.get(j).getLocalX().getValue(), destRefPointLocation.get(j).getLocalX().getValue());
                         }
 
                         // localY
                         if (null != srcRefPointLocation.get(j).getLocalY()) {
-                            assertEquals(srcRefPointLocation.get(j).getLocalY().getUom(), destRefPointLocation.get(j).getLatitude().getUom());
-                            assertEquals(srcRefPointLocation.get(j).getLocalY().getValue(), destRefPointLocation.get(j).getLatitude().getValue());
+                            assertEquals(srcRefPointLocation.get(j).getLocalY().getUom(), destRefPointLocation.get(j).getLocalY().getUom());
+                            assertEquals(srcRefPointLocation.get(j).getLocalY().getValue(), destRefPointLocation.get(j).getLocalY().getValue());
                         }
 
                         assertEquals(srcRefPointLocation.get(j).isOriginal(), destRefPointLocation.get(j).isOriginal());

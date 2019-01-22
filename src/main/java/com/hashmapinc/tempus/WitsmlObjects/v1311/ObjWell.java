@@ -873,6 +873,11 @@ public class ObjWell extends AbstractWitsmlObject implements WitsmlObj {
         return this.wellCRS;
     }
 
+    public void setWellCRS(List<CsWellCRS> wellCRSList) {
+        this.wellCRS = wellCRSList;
+    }
+
+
     /**
      * Gets the value of the commonData property.
      * 

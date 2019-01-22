@@ -87,4 +87,22 @@ public class YAxisAzimuth
         this.northDirection = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.YAxisAzimuth to1411YAxisAzimuth() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.YAxisAzimuth azi = new com.hashmapinc.tempus.WitsmlObjects.v1411.YAxisAzimuth();
+
+        // assign fields
+        azi.setUom(this.getUom());
+        azi.setValue(this.getValue());
+        azi.setNorthDirection(com.hashmapinc.tempus.WitsmlObjects.v1411.AziRef.fromValue(this.getNorthDirection().value()));
+
+        return azi;
+    }
+    //=========================================================================
+
 }
