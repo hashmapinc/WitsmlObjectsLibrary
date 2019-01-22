@@ -164,7 +164,7 @@ public class AbstractWitsmlObjectTest {
         // check cross-version serialization
         String translatedXML1411 = obj1311.getXMLString("1.4.1.1");
         assertNotNull(translatedXML1411);
-        //assertFalse(translatedXML1411.contains("ns0:wells")); TODO: fix namespacey junk
+        assertFalse(translatedXML1411.contains("ns0:wells"));
         //=====================================================================
 
         //=====================================================================
@@ -177,12 +177,12 @@ public class AbstractWitsmlObjectTest {
         // check same-version serialization
         String serializedXML1411 = obj1411.getXMLString("1.4.1.1");
         assertNotNull(serializedXML1411);
-        //assertFalse(serializedXML1411.contains("ns0:wells")); TODO: fix namespacey junk
+        assertFalse(serializedXML1411.contains("ns0:wells"));
 
         // check cross-version serialization
         String translatedXML1311 = obj1411.getXMLString("1.3.1.1");
         assertNotNull(translatedXML1311);
-        //assertFalse(translatedXML1311.contains("ns0:wells")); TODO: fix namespacey junk
+        assertFalse(translatedXML1311.contains("ns0:wells"));
         //=====================================================================
     }
     // =========================================================================

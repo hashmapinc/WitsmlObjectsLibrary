@@ -13,7 +13,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
 import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlMarshal;
-import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlVersionTransformer;
+import com.hashmapinc.tempus.WitsmlObjects.Util.WellConverter;
 
 
 /**
@@ -968,13 +968,16 @@ public class ObjWell extends AbstractWitsmlObject implements WitsmlObj {
     @Override
     public String getXMLString(String version) {
         try {
-            ObjWells wells = new ObjWells();
-            wells.addWell(this);
-            String xml1311 = WitsmlMarshal.serialize(wells);
             if ("1.4.1.1".equals(version)) {
-                return (new WitsmlVersionTransformer()).convertVersion(xml1311);
+                // convert then serialize to plural
+                com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWells wells = new com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWells();
+                wells.addWell(WellConverter.convertTo1411(this));
+                return WitsmlMarshal.serialize(wells);
             } else if ("1.3.1.1".equals(version)) {
-                return xml1311;
+                // serialize to plural
+                ObjWells wells = new ObjWells();
+                wells.addWell(this);
+                return WitsmlMarshal.serialize(wells);
             } else {
                 return null;
             }
@@ -995,10 +998,7 @@ public class ObjWell extends AbstractWitsmlObject implements WitsmlObj {
         try {
             if ("1.4.1.1".equals(version)) {
                 // convert to 1411 pojo and parse as json
-                String xml1411 = this.getXMLString("1.4.1.1");
-                com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWells wells = WitsmlMarshal.deserialize(xml1411,
-                        com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWells.class);
-                return WitsmlMarshal.serializeToJSON(wells.getWell().get(0));
+                return WitsmlMarshal.serializeToJSON(WellConverter.convertTo1411(this));
             } else if ("1.3.1.1".equals(version)) {
                 return WitsmlMarshal.serializeToJSON(this);
             } else {
