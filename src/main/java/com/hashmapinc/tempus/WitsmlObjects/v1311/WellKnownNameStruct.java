@@ -116,4 +116,21 @@ public class WellKnownNameStruct {
         this.code = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.WellKnownNameStruct to1411WellKnownNameStruct() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.WellKnownNameStruct struct = new com.hashmapinc.tempus.WitsmlObjects.v1411.WellKnownNameStruct();
+
+        struct.setCode(this.code);
+        struct.setNamingSystem(this.namingSystem);
+        struct.setValue(this.value);
+
+        return struct;
+    }
+    //=========================================================================
+
 }

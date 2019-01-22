@@ -1,7 +1,6 @@
 package com.hashmapinc.tempus.WitsmlObjects.Util;
 
-import com.hashmapinc.tempus.WitsmlObjects.v1311.CsWellDatum;
-
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -77,29 +76,27 @@ public class WellConverter {
             dest.setCommonData(src.getCommonData().to1411CommonData());
 
 
-        // check equality for repeating fields
+        // assign repeating fields
         // well datum
         if (null != src.getWellDatum()) {
-            List<CsWellDatum> srcWellDatum = src.getWellDatum();
-            List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsWellDatum> destWellDatum = dest.getWellDatum();
-            assertEquals(srcWellDatum.size(), destWellDatum.size());
-            for (int i = 0; i < srcWellDatum.size(); i++) {
+            List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsWellDatum> srcWellDatumList = src.getWellDatum();
+            List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsWellDatum> destWellDatumList = new ArrayList<>();
+            for (com.hashmapinc.tempus.WitsmlObjects.v1311.CsWellDatum srcWellDatum: srcWellDatumList) {
+                com.hashmapinc.tempus.WitsmlObjects.v1411.CsWellDatum destWellDatum = new com.hashmapinc.tempus.WitsmlObjects.v1411.CsWellDatum();
+
                 // non complex objects
-                assertEquals(srcWellDatum.get(i).getName(), destWellDatum.get(i).getName());
-                assertEquals(srcWellDatum.get(i).getKind(), destWellDatum.get(i).getKind());
-                assertEquals(srcWellDatum.get(i).getComment(), destWellDatum.get(i).getComment());
-                assertEquals(srcWellDatum.get(i).getUid(), destWellDatum.get(i).getUid());
+                destWellDatum.setName(srcWellDatum.getName());
+                destWellDatum.setKind(srcWellDatum.getKind());
+                destWellDatum.setComment(srcWellDatum.getComment());
+                destWellDatum.setUid(srcWellDatum.getUid());
 
                 // code
-                if (null != srcWellDatum.get(i).getCode())
-                    assertEquals(srcWellDatum.get(i).getCode().value(), destWellDatum.get(i).getCode().value());
+                if (null != srcWellDatum.getCode())
+                    destWellDatum.setCode(com.hashmapinc.tempus.WitsmlObjects.v1411.ElevCodeEnum.fromValue(srcWellDatum.getCode().value()));
 
                 // datum name
-                if (null != srcWellDatum.get(i).getDatumName()) {
-                    assertEquals(srcWellDatum.get(i).getDatumName().getCode(), destWellDatum.get(i).getDatumName().getCode());
-                    assertEquals(srcWellDatum.get(i).getDatumName().getValue(), destWellDatum.get(i).getDatumName().getValue());
-                    assertEquals(srcWellDatum.get(i).getDatumName().getNamingSystem(), destWellDatum.get(i).getDatumName().getNamingSystem());
-                }
+                if (null != srcWellDatum.getDatumName())
+                    destWellDatum.setDatumName(srcWellDatum.getDatumName().to1411WellKnownNameStruct());
 
                 // wellbore
                 if (null != srcWellDatum.get(i).getWellbore()) {
