@@ -99,106 +99,12 @@ public class WellConverter {
 
         // referencePoint
         if (null != src.getReferencePoint()) {
-            List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsReferencePoint> srcRefPoint = src.getReferencePoint();
-            List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsReferencePoint> destRefPoint = dest.getReferencePoint();
-            for (int i = 0; i < srcRefPoint.size(); i++) {
-                assertEquals(srcRefPoint.get(i).getName(), destRefPoint.get(i).getName());
-                assertEquals(srcRefPoint.get(i).getType(), destRefPoint.get(i).getType());
-                assertEquals(srcRefPoint.get(i).getDescription(), destRefPoint.get(i).getDescription());
-                assertEquals(srcRefPoint.get(i).getUid(), destRefPoint.get(i).getUid());
+            List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsReferencePoint> srcRefPointList = src.getReferencePoint();
+            List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsReferencePoint> destRefPointList = new ArrayList<>();
+            for (com.hashmapinc.tempus.WitsmlObjects.v1311.CsReferencePoint srcRefPoint: srcRefPointList)
+                destRefPointList.add(srcRefPoint.to1411CsReferencePoint());
 
-                // elevation
-                if (null != srcRefPoint.get(i).getElevation()) {
-                    assertEquals(srcRefPoint.get(i).getElevation().getDatum(), destRefPoint.get(i).getElevation().getDatum());
-                    assertEquals(srcRefPoint.get(i).getElevation().getUom().value(), destRefPoint.get(i).getElevation().getUom().value());
-                    assertEquals(srcRefPoint.get(i).getElevation().getValue(), destRefPoint.get(i).getElevation().getValue());
-                }
-
-                // measuredDepth
-                if (null != srcRefPoint.get(i).getMeasuredDepth()) {
-                    assertEquals(srcRefPoint.get(i).getMeasuredDepth().getDatum(), destRefPoint.get(i).getMeasuredDepth().getDatum());
-                    assertEquals(srcRefPoint.get(i).getMeasuredDepth().getUom().value(), destRefPoint.get(i).getMeasuredDepth().getUom().value());
-                    assertEquals(srcRefPoint.get(i).getMeasuredDepth().getValue(), destRefPoint.get(i).getMeasuredDepth().getValue());
-                }
-
-                // location
-                if (null != srcRefPoint.get(i).getLocation()) {
-                    List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsLocation> srcRefPointLocation = srcRefPoint.get(i).getLocation();
-                    List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation> destRefPointLocation = destRefPoint.get(i).getLocation();
-                    for (int j = 0; j < srcRefPointLocation.size(); j++) {
-
-                        // well crs
-                        if (null != srcRefPointLocation.get(j).getWellCRS()) {
-                            assertEquals(srcRefPointLocation.get(j).getWellCRS().getUidRef(), destRefPointLocation.get(j).getWellCRS().getUidRef());
-                            assertEquals(srcRefPointLocation.get(j).getWellCRS().getValue(), destRefPointLocation.get(j).getWellCRS().getValue());
-                        }
-
-                        // latitude
-                        if (null != srcRefPointLocation.get(j).getLatitude()) {
-                            assertEquals(srcRefPointLocation.get(j).getLatitude().getUom(), destRefPointLocation.get(j).getLatitude().getUom());
-                            assertEquals(srcRefPointLocation.get(j).getLatitude().getValue(), destRefPointLocation.get(j).getLatitude().getValue());
-                        }
-
-                        // longitude
-                        if (null != srcRefPointLocation.get(j).getLongitude()) {
-                            assertEquals(srcRefPointLocation.get(j).getLongitude().getUom(), destRefPointLocation.get(j).getLatitude().getUom());
-                            assertEquals(srcRefPointLocation.get(j).getLongitude().getValue(), destRefPointLocation.get(j).getLatitude().getValue());
-                        }
-
-                        // easting
-                        if (null != srcRefPointLocation.get(j).getEasting()) {
-                            assertEquals(srcRefPointLocation.get(j).getEasting().getUom(), destRefPointLocation.get(j).getLatitude().getUom());
-                            assertEquals(srcRefPointLocation.get(j).getEasting().getValue(), destRefPointLocation.get(j).getLatitude().getValue());
-                        }
-
-                        // northing
-                        if (null != srcRefPointLocation.get(j).getNorthing()) {
-                            assertEquals(srcRefPointLocation.get(j).getNorthing().getUom(), destRefPointLocation.get(j).getLatitude().getUom());
-                            assertEquals(srcRefPointLocation.get(j).getNorthing().getValue(), destRefPointLocation.get(j).getLatitude().getValue());
-                        }
-
-                        // westing
-                        if (null != srcRefPointLocation.get(j).getWesting()) {
-                            assertEquals(srcRefPointLocation.get(j).getWesting().getUom(), destRefPointLocation.get(j).getLatitude().getUom());
-                            assertEquals(srcRefPointLocation.get(j).getWesting().getValue(), destRefPointLocation.get(j).getLatitude().getValue());
-                        }
-
-                        // southing
-                        if (null != srcRefPointLocation.get(j).getSouthing()) {
-                            assertEquals(srcRefPointLocation.get(j).getSouthing().getUom(), destRefPointLocation.get(j).getLatitude().getUom());
-                            assertEquals(srcRefPointLocation.get(j).getSouthing().getValue(), destRefPointLocation.get(j).getLatitude().getValue());
-                        }
-
-                        // projectedX
-                        if (null != srcRefPointLocation.get(j).getProjectedX()) {
-                            assertEquals(srcRefPointLocation.get(j).getProjectedX().getUom(), destRefPointLocation.get(j).getLatitude().getUom());
-                            assertEquals(srcRefPointLocation.get(j).getProjectedX().getValue(), destRefPointLocation.get(j).getLatitude().getValue());
-                        }
-
-                        // projectedY
-                        if (null != srcRefPointLocation.get(j).getProjectedY()) {
-                            assertEquals(srcRefPointLocation.get(j).getProjectedY().getUom(), destRefPointLocation.get(j).getLatitude().getUom());
-                            assertEquals(srcRefPointLocation.get(j).getProjectedY().getValue(), destRefPointLocation.get(j).getLatitude().getValue());
-                        }
-
-                        // localX
-                        if (null != srcRefPointLocation.get(j).getLocalX()) {
-                            assertEquals(srcRefPointLocation.get(j).getLocalX().getUom(), destRefPointLocation.get(j).getLatitude().getUom());
-                            assertEquals(srcRefPointLocation.get(j).getLocalX().getValue(), destRefPointLocation.get(j).getLatitude().getValue());
-                        }
-
-                        // localY
-                        if (null != srcRefPointLocation.get(j).getLocalY()) {
-                            assertEquals(srcRefPointLocation.get(j).getLocalY().getUom(), destRefPointLocation.get(j).getLatitude().getUom());
-                            assertEquals(srcRefPointLocation.get(j).getLocalY().getValue(), destRefPointLocation.get(j).getLatitude().getValue());
-                        }
-
-                        assertEquals(srcRefPointLocation.get(j).isOriginal(), destRefPointLocation.get(j).isOriginal());
-                        assertEquals(srcRefPointLocation.get(j).getDescription(), destRefPointLocation.get(j).getDescription());
-                        assertEquals(srcRefPointLocation.get(j).getUid(), destRefPointLocation.get(j).getUid());
-                    }
-                }
-            }
+            dest.setReferencePoint(destRefPointList);
         }
 
         // wellCRS

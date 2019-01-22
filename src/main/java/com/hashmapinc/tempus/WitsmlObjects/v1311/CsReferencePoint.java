@@ -187,6 +187,10 @@ public class CsReferencePoint {
         return this.location;
     }
 
+    public void setLocation(List<CsLocation> locationList) {
+        this.location = locationList;
+    }
+
     /**
      * Gets the value of the description property.
      * 
@@ -234,5 +238,41 @@ public class CsReferencePoint {
     public void setUid(String value) {
         this.uid = value;
     }
+
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.CsReferencePoint to1411CsReferencePoint() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.CsReferencePoint point = new com.hashmapinc.tempus.WitsmlObjects.v1411.CsReferencePoint();
+
+        // assign fields
+        point.setName(this.getName());
+        point.setType(this.getType());
+        point.setDescription(this.getDescription());
+        point.setUid(this.getUid());
+
+        // elevation
+        if (null != this.getElevation())
+            point.setElevation(this.getElevation().to1411WellElevationCoord());
+
+        // measuredDepth
+        if (null != this.getMeasuredDepth())
+            point.setMeasuredDepth(this.getMeasuredDepth().to1411MeasuredDepthCoord());
+
+        // location
+        if (null != this.getLocation()) {
+            List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation> pointLocationList = new ArrayList<>();
+            for (CsLocation location: this.getLocation())
+                pointLocationList.add(location.to1411CsLocation());
+
+            point.setLocation(pointLocationList);
+        }
+
+        return point;
+    }
+    //=========================================================================
 
 }

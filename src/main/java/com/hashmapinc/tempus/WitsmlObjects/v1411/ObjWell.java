@@ -876,6 +876,10 @@ public class ObjWell extends AbstractWitsmlObject {
         return this.referencePoint;
     }
 
+    public void setReferencePoint(List<CsReferencePoint> refPointList) {
+        this.referencePoint = refPointList;
+    }
+
     /**
      * Gets the value of the wellCRS property.
      * 
