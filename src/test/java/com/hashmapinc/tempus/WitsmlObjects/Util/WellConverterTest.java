@@ -324,16 +324,98 @@ public class WellConverterTest {
                     }
 
                     // projectionCode
+                    if (null != srcWellCRS.get(i).getMapProjection().getProjectionCode())
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getProjectionCode().value(), destWellCRS.get(i).getMapProjection().getProjectionCode().value());
 
                     // projectedFrom
+                    if (null != srcWellCRS.get(i).getMapProjection().getProjectedFrom()) {
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getProjectedFrom().getValue(), destWellCRS.get(i).getMapProjection().getProjectedFrom().getValue());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getProjectedFrom().getUidRef(), destWellCRS.get(i).getMapProjection().getProjectedFrom().getUidRef());
+                    }
 
                     // stdParallel1
+                    if (null != srcWellCRS.get(i).getMapProjection().getStdParallel1()) {
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getStdParallel1().getValue(), destWellCRS.get(i).getMapProjection().getStdParallel1().getValue());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getStdParallel1().getUom(), destWellCRS.get(i).getMapProjection().getStdParallel1().getUom());
+                    }
+
+                    // stdParallel2
+                    if (null != srcWellCRS.get(i).getMapProjection().getStdParallel2()) {
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getStdParallel2().getValue(), destWellCRS.get(i).getMapProjection().getStdParallel2().getValue());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getStdParallel2().getUom(), destWellCRS.get(i).getMapProjection().getStdParallel2().getUom());
+                    }
+
+                    // centralMeridian
+                    if (null != srcWellCRS.get(i).getMapProjection().getCentralMeridian()) {
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getCentralMeridian().getValue(), destWellCRS.get(i).getMapProjection().getCentralMeridian().getValue());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getCentralMeridian().getUom(), destWellCRS.get(i).getMapProjection().getCentralMeridian().getUom());
+                    }
+
+                    // originLatitude
+                    if (null != srcWellCRS.get(i).getMapProjection().getOriginLatitude()) {
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getOriginLatitude().getValue(), destWellCRS.get(i).getMapProjection().getOriginLatitude().getValue());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getOriginLatitude().getUom(), destWellCRS.get(i).getMapProjection().getOriginLatitude().getUom());
+                    }
+
+                    // originLongitude
+                    if (null != srcWellCRS.get(i).getMapProjection().getOriginLongitude()) {
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getOriginLongitude().getValue(), destWellCRS.get(i).getMapProjection().getOriginLongitude().getValue());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getOriginLongitude().getUom(), destWellCRS.get(i).getMapProjection().getOriginLongitude().getUom());
+                    }
+
+                    // latitude1
+                    if (null != srcWellCRS.get(i).getMapProjection().getLatitude1()) {
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getLatitude1().getValue(), destWellCRS.get(i).getMapProjection().getLatitude1().getValue());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getLatitude1().getUom(), destWellCRS.get(i).getMapProjection().getLatitude1().getUom());
+                    }
+
+                    // longitude1
+                    if (null != srcWellCRS.get(i).getMapProjection().getLongitude1()) {
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getLongitude1().getValue(), destWellCRS.get(i).getMapProjection().getLongitude1().getValue());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getLongitude1().getUom(), destWellCRS.get(i).getMapProjection().getLongitude1().getUom());
+                    }
+
+                    // latitude2
+                    if (null != srcWellCRS.get(i).getMapProjection().getLatitude2()) {
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getLatitude2().getValue(), destWellCRS.get(i).getMapProjection().getLatitude2().getValue());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getLatitude2().getUom(), destWellCRS.get(i).getMapProjection().getLatitude2().getUom());
+                    }
+
+                    // longitude2
+                    if (null != srcWellCRS.get(i).getMapProjection().getLongitude2()) {
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getLongitude2().getValue(), destWellCRS.get(i).getMapProjection().getLongitude2().getValue());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getLongitude2().getUom(), destWellCRS.get(i).getMapProjection().getLongitude2().getUom());
+                    }
+
+                    // latitudeForScale
+                    if (null != srcWellCRS.get(i).getMapProjection().getLatitudeForScale()) {
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getLatitudeForScale().getValue(), destWellCRS.get(i).getMapProjection().getLatitudeForScale().getValue());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getLatitudeForScale().getUom(), destWellCRS.get(i).getMapProjection().getLatitudeForScale().getUom());
+                    }
+
+                    // longitudeForScale
+                    if (null != srcWellCRS.get(i).getMapProjection().getLongitudeForScale()) {
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getLongitudeForScale().getValue(), destWellCRS.get(i).getMapProjection().getLongitudeForScale().getValue());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getLongitudeForScale().getUom(), destWellCRS.get(i).getMapProjection().getLongitudeForScale().getUom());
+                    }
+
+                    // trueScaleLatitude
+                    if (null != srcWellCRS.get(i).getMapProjection().getTrueScaleLatitude()) {
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getTrueScaleLatitude().getValue(), destWellCRS.get(i).getMapProjection().getTrueScaleLatitude().getValue());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getTrueScaleLatitude().getUom(), destWellCRS.get(i).getMapProjection().getTrueScaleLatitude().getUom());
+                    }
 
                     // spheroidRadius
+                    if (null != srcWellCRS.get(i).getMapProjection().getSpheroidRadius()) {
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getSpheroidRadius().getValue(), destWellCRS.get(i).getMapProjection().getSpheroidRadius().getValue());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getSpheroidRadius().getUom(), destWellCRS.get(i).getMapProjection().getSpheroidRadius().getUom());
+                    }
 
                     assertEquals(srcWellCRS.get(i).getMapProjection().getScaleFactor(), destWellCRS.get(i).getMapProjection().getScaleFactor());
 
                     // methodVariant
+                    if (null != srcWellCRS.get(i).getMapProjection().getMethodVariant())
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getMethodVariant().value(), destWellCRS.get(i).getMapProjection().getMethodVariant().value());
 
                     // perspectiveHeight
 
