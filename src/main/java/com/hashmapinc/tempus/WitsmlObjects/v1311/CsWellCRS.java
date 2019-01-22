@@ -226,68 +226,8 @@ public class CsWellCRS {
             crs.setMapProjection(this.getMapProjection().to1411CsProjectionx());
 
         // geographic
-        if (null != this.getGeographic()) {
-            // nameCRS
-            if (null != srcWellCRS.get(i).getGeographic().getNameCRS()) {
-                assertEquals(srcWellCRS.get(i).getGeographic().getNameCRS().getValue(), destWellCRS.get(i).getGeographic().getNameCRS().getValue());
-                assertEquals(srcWellCRS.get(i).getGeographic().getNameCRS().getNamingSystem(), destWellCRS.get(i).getGeographic().getNameCRS().getNamingSystem());
-                assertEquals(srcWellCRS.get(i).getGeographic().getNameCRS().getCode(), destWellCRS.get(i).getGeographic().getNameCRS().getCode());
-            }
-
-            // geodeticDatumCode
-            if (null != srcWellCRS.get(i).getGeographic().getGeodeticDatumCode())
-                assertEquals(srcWellCRS.get(i).getGeographic().getGeodeticDatumCode().value(), destWellCRS.get(i).getGeographic().getGeodeticDatumCode().value());
-
-            // xTranslation
-            if (null != srcWellCRS.get(i).getGeographic().getXTranslation()) {
-                assertEquals(srcWellCRS.get(i).getGeographic().getXTranslation().getUom(), destWellCRS.get(i).getGeographic().getXTranslation().getUom());
-                assertEquals(srcWellCRS.get(i).getGeographic().getXTranslation().getValue(), destWellCRS.get(i).getGeographic().getXTranslation().getValue());
-            }
-
-            // yTranslation
-            if (null != srcWellCRS.get(i).getGeographic().getYTranslation()) {
-                assertEquals(srcWellCRS.get(i).getGeographic().getYTranslation().getUom(), destWellCRS.get(i).getGeographic().getYTranslation().getUom());
-                assertEquals(srcWellCRS.get(i).getGeographic().getYTranslation().getValue(), destWellCRS.get(i).getGeographic().getYTranslation().getValue());
-            }
-
-            // zTranslation
-            if (null != srcWellCRS.get(i).getGeographic().getZTranslation()) {
-                assertEquals(srcWellCRS.get(i).getGeographic().getZTranslation().getUom(), destWellCRS.get(i).getGeographic().getZTranslation().getUom());
-                assertEquals(srcWellCRS.get(i).getGeographic().getZTranslation().getValue(), destWellCRS.get(i).getGeographic().getZTranslation().getValue());
-            }
-
-            // xRotation
-            if (null != srcWellCRS.get(i).getGeographic().getXRotation()) {
-                assertEquals(srcWellCRS.get(i).getGeographic().getXRotation().getUom(), destWellCRS.get(i).getGeographic().getXRotation().getUom());
-                assertEquals(srcWellCRS.get(i).getGeographic().getXRotation().getValue(), destWellCRS.get(i).getGeographic().getXRotation().getValue());
-            }
-
-            // yRotation
-            if (null != srcWellCRS.get(i).getGeographic().getYRotation()) {
-                assertEquals(srcWellCRS.get(i).getGeographic().getYRotation().getUom(), destWellCRS.get(i).getGeographic().getYRotation().getUom());
-                assertEquals(srcWellCRS.get(i).getGeographic().getYRotation().getValue(), destWellCRS.get(i).getGeographic().getYRotation().getValue());
-            }
-
-            // zRotation
-            if (null != srcWellCRS.get(i).getGeographic().getZRotation()) {
-                assertEquals(srcWellCRS.get(i).getGeographic().getZRotation().getUom(), destWellCRS.get(i).getGeographic().getZRotation().getUom());
-                assertEquals(srcWellCRS.get(i).getGeographic().getZRotation().getValue(), destWellCRS.get(i).getGeographic().getZRotation().getValue());
-            }
-
-            assertEquals(srcWellCRS.get(i).getGeographic().getScaleFactor(), destWellCRS.get(i).getGeographic().getScaleFactor());
-
-            // ellipsoidCode
-            if (null != srcWellCRS.get(i).getGeographic().getEllipsoidCode())
-                assertEquals(srcWellCRS.get(i).getGeographic().getEllipsoidCode().value(), destWellCRS.get(i).getGeographic().getEllipsoidCode().value());
-
-            // ellipsoidSemiMajorAxis
-            if (null != srcWellCRS.get(i).getGeographic().getEllipsoidSemiMajorAxis()) {
-                assertEquals(srcWellCRS.get(i).getGeographic().getEllipsoidSemiMajorAxis().getUom(), destWellCRS.get(i).getGeographic().getEllipsoidSemiMajorAxis().getUom());
-                assertEquals(srcWellCRS.get(i).getGeographic().getEllipsoidSemiMajorAxis().getValue(), destWellCRS.get(i).getGeographic().getEllipsoidSemiMajorAxis().getValue());
-            }
-
-            assertEquals(srcWellCRS.get(i).getGeographic().getEllipsoidInverseFlattening(), destWellCRS.get(i).getGeographic().getEllipsoidInverseFlattening());
-        }
+        if (null != this.getGeographic())
+            crs.setGeographic(this.getGeographic().to1411CsGeodeticModel());
 
         // localCRS
         if (null != this.getLocalCRS()) {
