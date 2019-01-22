@@ -30,30 +30,52 @@ public class WellConverterTest {
         assertEquals(src.getTimeZone(), dest.getTimeZone());
         assertEquals(src.getOperator(), dest.getOperator());
         assertEquals(src.getOperatorDiv(), dest.getOperatorDiv());
-
-
-        assertEquals(src.getPcInterest().getUom(), dest.getPcInterest().getUom());
-        assertEquals(src.getPcInterest().getValue(), dest.getPcInterest().getValue());
         assertEquals(src.getNumAPI(), dest.getNumAPI());
-        assertEquals(src.getStatusWell().value(), dest.getStatusWell().value());
-        assertEquals(src.getPurposeWell().value(), dest.getPurposeWell().value());
-        assertEquals(src.getFluidWell().value(), dest.getFluidWell().value());
-        assertEquals(src.getDirectionWell().value(), dest.getDirectionWell().value());
         assertEquals(src.getDTimSpud(), dest.getDTimSpud());
         assertEquals(src.getDTimPa(), dest.getDTimPa());
-        assertEquals(src.getWellheadElevation().getDatum(), dest.getWellheadElevation().getDatum());
-        assertEquals(src.getWellheadElevation().getValue(), dest.getWellheadElevation().getValue());
-        assertEquals(src.getWellheadElevation().getUom().value(), dest.getWellheadElevation().getUom().value());
-        assertEquals(src.getGroundElevation().getDatum(), dest.getGroundElevation().getDatum());
-        assertEquals(src.getGroundElevation().getUom().value(), dest.getGroundElevation().getUom().value());
-        assertEquals(src.getGroundElevation().getValue(), dest.getGroundElevation().getValue());
-        assertEquals(src.getWaterDepth().getUom().value(), dest.getWaterDepth().getUom());
-        assertEquals(src.getWaterDepth().getValue(), dest.getWaterDepth().getValue());
-        assertEquals(src.getCommonData().getSourceName(), dest.getCommonData().getSourceName());
-        assertEquals(src.getCommonData().getDTimCreation(), dest.getCommonData().getDTimCreation());
-        assertEquals(src.getCommonData().getDTimLastChange(), dest.getCommonData().getDTimLastChange());
-        assertEquals(src.getCommonData().getItemState().value(), dest.getCommonData().getItemState().value());
-        assertEquals(src.getCommonData().getComments(), dest.getCommonData().getComments());
+
+
+        // check equality for complex fields
+        if (null != src.getPcInterest()) {
+            assertEquals(src.getPcInterest().getUom(), dest.getPcInterest().getUom());
+            assertEquals(src.getPcInterest().getValue(), dest.getPcInterest().getValue());
+        }
+
+        if (null != src.getStatusWell())
+            assertEquals(src.getStatusWell().value(), dest.getStatusWell().value());
+        if (null != src.getPurposeWell())
+            assertEquals(src.getPurposeWell().value(), dest.getPurposeWell().value());
+
+        if (null != src.getFluidWell())
+            assertEquals(src.getFluidWell().value(), dest.getFluidWell().value());
+
+        if (null != src.getDirectionWell())
+            assertEquals(src.getDirectionWell().value(), dest.getDirectionWell().value());
+
+        if (null != src.getWellheadElevation()) {
+            assertEquals(src.getWellheadElevation().getDatum(), dest.getWellheadElevation().getDatum());
+            assertEquals(src.getWellheadElevation().getValue(), dest.getWellheadElevation().getValue());
+            assertEquals(src.getWellheadElevation().getUom().value(), dest.getWellheadElevation().getUom().value());
+        }
+
+        if (null != src.getGroundElevation()) {
+            assertEquals(src.getGroundElevation().getDatum(), dest.getGroundElevation().getDatum());
+            assertEquals(src.getGroundElevation().getUom().value(), dest.getGroundElevation().getUom().value());
+            assertEquals(src.getGroundElevation().getValue(), dest.getGroundElevation().getValue());
+        }
+
+        if (null != src.getWaterDepth()) {
+            assertEquals(src.getWaterDepth().getUom().value(), dest.getWaterDepth().getUom());
+            assertEquals(src.getWaterDepth().getValue(), dest.getWaterDepth().getValue());
+        }
+
+        if (null != src.getCommonData()) {
+            assertEquals(src.getCommonData().getSourceName(), dest.getCommonData().getSourceName());
+            assertEquals(src.getCommonData().getDTimCreation(), dest.getCommonData().getDTimCreation());
+            assertEquals(src.getCommonData().getDTimLastChange(), dest.getCommonData().getDTimLastChange());
+            assertEquals(src.getCommonData().getItemState().value(), dest.getCommonData().getItemState().value());
+            assertEquals(src.getCommonData().getComments(), dest.getCommonData().getComments());
+        }
 
 
         // check equality for repeating fields
@@ -531,11 +553,29 @@ public class WellConverterTest {
                     assertEquals(srcWellCRS.get(i).getGeographic().getEllipsoidInverseFlattening(), destWellCRS.get(i).getGeographic().getEllipsoidInverseFlattening());
                 }
 
-
-
                 // localCRS
                 if (null != srcWellCRS.get(i).getLocalCRS()) {
+                    assertEquals(srcWellCRS.get(i).getLocalCRS().isUsesWellAsOrigin(), destWellCRS.get(i).getLocalCRS().isUsesWellAsOrigin());
 
+                    // origin
+                    if (null != srcWellCRS.get(i).getLocalCRS().getOrigin()) {
+                        assertEquals(srcWellCRS.get(i).getLocalCRS().getOrigin().getUidRef(), destWellCRS.get(i).getLocalCRS().getOrigin().getUidRef());
+                        assertEquals(srcWellCRS.get(i).getLocalCRS().getOrigin().getValue(), destWellCRS.get(i).getLocalCRS().getOrigin().getValue());
+                    }
+
+                    assertEquals(srcWellCRS.get(i).getLocalCRS().getOriginDescription(), destWellCRS.get(i).getLocalCRS().getOriginDescription());
+
+                    // yAxisAzimuth
+                    if (null != srcWellCRS.get(i).getLocalCRS().getYAxisAzimuth()) {
+                        assertEquals(srcWellCRS.get(i).getLocalCRS().getYAxisAzimuth().getUom(), destWellCRS.get(i).getLocalCRS().getYAxisAzimuth().getUom());
+
+                        // northDirection
+                        if (null != srcWellCRS.get(i).getLocalCRS().getYAxisAzimuth().getNorthDirection())
+                            assertEquals(srcWellCRS.get(i).getLocalCRS().getYAxisAzimuth().getNorthDirection().value(), destWellCRS.get(i).getLocalCRS().getYAxisAzimuth().getNorthDirection().value());
+                    }
+
+                    assertEquals(srcWellCRS.get(i).getLocalCRS().getYAxisDescription(), destWellCRS.get(i).getLocalCRS().getYAxisDescription());
+                    assertEquals(srcWellCRS.get(i).getLocalCRS().isXRotationCounterClockwise(), destWellCRS.get(i).getLocalCRS().isXRotationCounterClockwise());
                 }
             }
         }
