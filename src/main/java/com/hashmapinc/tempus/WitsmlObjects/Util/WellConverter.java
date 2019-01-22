@@ -44,47 +44,37 @@ public class WellConverter {
         dest.setDTimPa(src.getDTimPa());
 
 
-        // check equality for complex fields
+        // assign complex fields
         if (null != src.getPcInterest()) {
-            assertEquals(src.getPcInterest().getUom(), dest.getPcInterest().getUom());
-            assertEquals(src.getPcInterest().getValue(), dest.getPcInterest().getValue());
+            com.hashmapinc.tempus.WitsmlObjects.v1411.DimensionlessMeasure pcInterest = new com.hashmapinc.tempus.WitsmlObjects.v1411.DimensionlessMeasure();
+            pcInterest.setUom(src.getPcInterest().getUom());
+            pcInterest.setValue(src.getPcInterest().getValue());
+            dest.setPcInterest(pcInterest);
         }
 
         if (null != src.getStatusWell())
-            assertEquals(src.getStatusWell().value(), dest.getStatusWell().value());
+            dest.setStatusWell(com.hashmapinc.tempus.WitsmlObjects.v1411.WellStatus.fromValue(src.getStatusWell().value()));
+
         if (null != src.getPurposeWell())
-            assertEquals(src.getPurposeWell().value(), dest.getPurposeWell().value());
+            dest.setPurposeWell(com.hashmapinc.tempus.WitsmlObjects.v1411.WellPurpose.fromValue(src.getPurposeWell().value()));
 
         if (null != src.getFluidWell())
-            assertEquals(src.getFluidWell().value(), dest.getFluidWell().value());
+            dest.setFluidWell(com.hashmapinc.tempus.WitsmlObjects.v1411.WellFluid.fromValue(src.getFluidWell().value()));
 
         if (null != src.getDirectionWell())
-            assertEquals(src.getDirectionWell().value(), dest.getDirectionWell().value());
+            dest.setDirectionWell(com.hashmapinc.tempus.WitsmlObjects.v1411.WellDirection.fromValue(src.getDirectionWell().value()));
 
-        if (null != src.getWellheadElevation()) {
-            assertEquals(src.getWellheadElevation().getDatum(), dest.getWellheadElevation().getDatum());
-            assertEquals(src.getWellheadElevation().getValue(), dest.getWellheadElevation().getValue());
-            assertEquals(src.getWellheadElevation().getUom().value(), dest.getWellheadElevation().getUom().value());
-        }
+        if (null != src.getWellheadElevation())
+            dest.setWellheadElevation(src.getWellheadElevation().to1411WellElevationCoord());
 
-        if (null != src.getGroundElevation()) {
-            assertEquals(src.getGroundElevation().getDatum(), dest.getGroundElevation().getDatum());
-            assertEquals(src.getGroundElevation().getUom().value(), dest.getGroundElevation().getUom().value());
-            assertEquals(src.getGroundElevation().getValue(), dest.getGroundElevation().getValue());
-        }
+        if (null != src.getGroundElevation())
+            dest.setGroundElevation(src.getGroundElevation().to1411WellElevationCoord());
 
-        if (null != src.getWaterDepth()) {
-            assertEquals(src.getWaterDepth().getUom().value(), dest.getWaterDepth().getUom());
-            assertEquals(src.getWaterDepth().getValue(), dest.getWaterDepth().getValue());
-        }
+        if (null != src.getWaterDepth())
+            dest.setWaterDepth(src.getWaterDepth().to1411LengthMeasure());
 
-        if (null != src.getCommonData()) {
-            assertEquals(src.getCommonData().getSourceName(), dest.getCommonData().getSourceName());
-            assertEquals(src.getCommonData().getDTimCreation(), dest.getCommonData().getDTimCreation());
-            assertEquals(src.getCommonData().getDTimLastChange(), dest.getCommonData().getDTimLastChange());
-            assertEquals(src.getCommonData().getItemState().value(), dest.getCommonData().getItemState().value());
-            assertEquals(src.getCommonData().getComments(), dest.getCommonData().getComments());
-        }
+        if (null != src.getCommonData())
+            dest.setCommonData(src.getCommonData().to1411CommonData());
 
 
         // check equality for repeating fields

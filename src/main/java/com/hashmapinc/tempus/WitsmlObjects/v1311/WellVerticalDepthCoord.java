@@ -106,6 +106,17 @@ public class WellVerticalDepthCoord
         return vdCoord;
     }
 
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.LengthMeasure to1411LengthMeasure() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.LengthMeasure length = new com.hashmapinc.tempus.WitsmlObjects.v1411.LengthMeasure();
+
+        if (null != this.uom)
+            length.setUom(this.uom.value());
+
+        length.setValue(this.value);
+
+        return length;
+    }
+
     public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord to20DepthCoord() {
         com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord vdCoord = new com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord();
 
