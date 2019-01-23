@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../stylesheets/wellbore.xsl" type="text/xsl" media="screen"?>
+<!-- data for testing. Only tags with attributes are included -->
+<wellbores
+        xmlns="http://www.witsml.org/schemas/131" version="1.3.1.1">
+    <wellbore uidWell="testUidWell" uid="testuid">
+        <nameWell>test</nameWell>
+        <name>testwb</name>
+        <number>123456</number>
+        <suffixAPI>02</suffixAPI>
+        <numGovt>23424</numGovt>
+        <statusWellbore>active</statusWellbore>
+        <purposeWellbore>exploration</purposeWellbore>
+        <typeWellbore>inital</typeWellbore>
+        <shape>horizontal</shape>
+        <dTimKickoff>2001-02-15T13:20:00Z</dTimKickoff>
+        <mdCurrent uom="ft">0.0</mdCurrent>
+        <tvdCurrent uom="ft">0.0</tvdCurrent>
+        <mdKickoff uom="ft">0.0</mdKickoff>
+        <tvdKickoff uom="ft">0.0</tvdKickoff>
+        <mdPlanned uom="ft">0.0</mdPlanned>
+        <tvdPlanned uom="ft">0.0</tvdPlanned>
+        <mdSubSeaPlanned uom="ft">0.0</mdSubSeaPlanned>
+        <tvdSubSeaPlanned uom="ft">0.0</tvdSubSeaPlanned>
+        <dayTarget uom="d">128.0</dayTarget>
+    </wellbore>
+</wellbores>

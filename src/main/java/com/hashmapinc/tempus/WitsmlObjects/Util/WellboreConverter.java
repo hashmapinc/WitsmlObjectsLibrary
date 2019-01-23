@@ -4,8 +4,6 @@ import com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWellbore;
 import com.hashmapinc.tempus.WitsmlObjects.v20.Wellbore;
 
 import javax.xml.datatype.DatatypeConfigurationException;
-import javax.xml.datatype.DatatypeFactory;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 /**
  * This class converts wellbore singular
@@ -20,7 +18,7 @@ public class WellboreConverter {
     //=========================================================================
     // conversions to 1.3.1.1
     //=========================================================================
-    public static ObjWellbore convertTo1311(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore src) {
+    public static ObjWellbore convertTo1311(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore src) throws DatatypeConfigurationException {
         ObjWellbore dest = new ObjWellbore();
         dest.setNameWell(src.getNameWell());
         dest.setName(src.getName());
@@ -39,7 +37,7 @@ public class WellboreConverter {
         dest.setPurposeWellbore(src.getPurposeWellbore());
         dest.setTypeWellbore(src.getTypeWellbore());
         dest.setShape(src.getShape());
-        //dest.setDTimKickoff(src.getDTimKickoff());
+        dest.setDTimKickoff(src.getDTimKickoff());
         dest.setAchievedTD(src.isAchievedTD());
 
         if (null != src.getMd())
@@ -91,11 +89,7 @@ public class WellboreConverter {
         dest.setTypeWellbore(src.getTypeWellbore());
         dest.setShape(src.getShape());
         // convert dtim string to object
-        if (null != src.getDTimKickoff()) {
-            XMLGregorianCalendar dtim = DatatypeFactory.newInstance().newXMLGregorianCalendar(src.getDTimKickoff());
-            //dest.setDTimKickoff(dtim);
-        }
-
+        dest.setDTimKickoff(src.getDTimKickoff());
         dest.setAchievedTD(src.isAchievedTD());
         if(null != src.getMd())
             dest.setMdCurrent(src.getMd().to1311MeasuredDepthCoord());
@@ -136,7 +130,7 @@ public class WellboreConverter {
     //=========================================================================
     // conversions to 1.4.1.1
     //=========================================================================
-    public static com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore convertTo1411(ObjWellbore src) {
+    public static com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore convertTo1411(ObjWellbore src) throws DatatypeConfigurationException {
         com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore dest = new com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore();
         dest.setNameWell(src.getNameWell());
         dest.setName(src.getName());
@@ -155,7 +149,7 @@ public class WellboreConverter {
         dest.setPurposeWellbore(src.getPurposeWellbore());
         dest.setTypeWellbore(src.getTypeWellbore());
         dest.setShape(src.getShape());
-        //dest.setDTimKickoff(src.getDTimKickoff());
+        dest.setDTimKickoff(src.getDTimKickoff());
         dest.setAchievedTD(src.isAchievedTD());
 
         if (null != src.getMdCurrent())
@@ -207,11 +201,7 @@ public class WellboreConverter {
         dest.setPurposeWellbore(src.getPurposeWellbore());
         dest.setTypeWellbore(src.getTypeWellbore());
         dest.setShape(src.getShape());
-        // convert dtim string to object
-        if (null != src.getDTimKickoff()) {
-            XMLGregorianCalendar dtim = DatatypeFactory.newInstance().newXMLGregorianCalendar(src.getDTimKickoff());
-            //dest.setDTimKickoff(dtim);
-        }
+        dest.setDTimKickoff(src.getDTimKickoff());
 
         dest.setAchievedTD(src.isAchievedTD());
         if(null != src.getMd())
