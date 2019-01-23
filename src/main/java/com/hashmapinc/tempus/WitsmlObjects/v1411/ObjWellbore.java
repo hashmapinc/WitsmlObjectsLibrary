@@ -9,6 +9,7 @@
 package com.hashmapinc.tempus.WitsmlObjects.v1411;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
 import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlMarshal;
 import com.hashmapinc.tempus.WitsmlObjects.Util.WellboreConverter;
@@ -90,6 +91,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
     protected String typeWellbore;
     protected String shape;
     @XmlSchemaType(name = "dateTime")
+    @JsonProperty("dTimKickoff")
     protected String dTimKickoff;
     protected Boolean achievedTD;
     protected MeasuredDepthCoord md;
@@ -393,6 +395,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link XMLGregorianCalendar }
      *
      */
+    @JsonProperty("dTimKickoff")
     public String getDTimKickoff() throws DatatypeConfigurationException {
         return dTimKickoff;
     }
@@ -406,6 +409,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      */
     public void setDTimKickoff(String value) throws DatatypeConfigurationException {
+        if (value == null) return;
         if (value.isEmpty()){
             this.dTimKickoff = value;
         } else {
