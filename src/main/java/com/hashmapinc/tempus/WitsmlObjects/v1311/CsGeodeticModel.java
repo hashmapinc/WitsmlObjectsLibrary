@@ -372,4 +372,61 @@ public class CsGeodeticModel {
         this.ellipsoidInverseFlattening = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.CsGeodeticModel to1411CsGeodeticModel() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.CsGeodeticModel model = new com.hashmapinc.tempus.WitsmlObjects.v1411.CsGeodeticModel();
+
+        // assign fields
+        model.setScaleFactor(this.getScaleFactor());
+        model.setEllipsoidInverseFlattening(this.getEllipsoidInverseFlattening());
+
+        // nameCRS
+        if (null != this.getNameCRS())
+            model.setNameCRS(this.getNameCRS().to1411WellKnownNameStruct());
+
+        // geodeticDatumCode
+        if (null != this.getGeodeticDatumCode())
+            model.setGeodeticDatumCode(com.hashmapinc.tempus.WitsmlObjects.v1411.GeodeticDatum.fromValue(this.getGeodeticDatumCode().value()));
+
+        // xTranslation
+        if (null != this.getXTranslation())
+            model.setXTranslation(this.getXTranslation().to1411Length());
+
+        // yTranslation
+        if (null != this.getYTranslation())
+            model.setYTranslation(this.getYTranslation().to1411Length());
+
+        // zTranslation
+        if (null != this.getZTranslation())
+            model.setZTranslation(this.getZTranslation().to1411Length());
+
+        // xRotation
+        if (null != this.getXRotation())
+            model.setXRotation(this.getXRotation().to1411PlaneAngleMeasure());
+
+        // yRotation
+        if (null != this.getYRotation())
+            model.setYRotation(this.getYRotation().to1411PlaneAngleMeasure());
+
+        // zRotation
+        if (null != this.getZRotation())
+            model.setZRotation(this.getZRotation().to1411PlaneAngleMeasure());
+
+        // ellipsoidCode
+        if (null != this.getEllipsoidCode())
+            model.setEllipsoidCode(com.hashmapinc.tempus.WitsmlObjects.v1411.Ellipsoid.fromValue(this.getEllipsoidCode().value()));
+
+        // ellipsoidSemiMajorAxis
+        if (null != this.getEllipsoidSemiMajorAxis())
+            model.setEllipsoidSemiMajorAxis(this.getEllipsoidSemiMajorAxis().to1411Length());
+
+        return model;
+    }
+    //=========================================================================
+
 }

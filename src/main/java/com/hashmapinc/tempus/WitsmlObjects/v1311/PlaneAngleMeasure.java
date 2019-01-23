@@ -56,4 +56,21 @@ public class PlaneAngleMeasure
         this.uom = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.PlaneAngleMeasure to1411PlaneAngleMeasure() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.PlaneAngleMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v1411.PlaneAngleMeasure();
+
+        // assign fields
+        measure.setUom(this.uom);
+        measure.setValue(this.value);
+
+        return measure;
+    }
+    //=========================================================================
+
 }

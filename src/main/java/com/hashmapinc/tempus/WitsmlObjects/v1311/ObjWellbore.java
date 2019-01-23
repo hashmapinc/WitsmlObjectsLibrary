@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
 import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlMarshal;
-import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlVersionTransformer;
+import com.hashmapinc.tempus.WitsmlObjects.Util.WellboreConverter;
 
 import javax.xml.bind.annotation.*;
 import javax.xml.datatype.DatatypeConfigurationException;
@@ -736,13 +736,14 @@ public class ObjWellbore extends AbstractWitsmlObject {
     @Override
     public String getXMLString(String version) {
         try {
-            ObjWellbores wellbores = new ObjWellbores();
-            wellbores.addWellbore(this);
-            String xml1311 = WitsmlMarshal.serialize(wellbores);
             if ("1.4.1.1".equals(version)) {
-                return (new WitsmlVersionTransformer()).convertVersion(xml1311);
+                com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores wellbores = new com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores();
+                wellbores.addWellbore(WellboreConverter.convertTo1411(this));
+                return WitsmlMarshal.serialize(wellbores);
             } else if ("1.3.1.1".equals(version)) {
-                return xml1311;
+                ObjWellbores wellbores = new ObjWellbores();
+                wellbores.addWellbore(this);
+                return WitsmlMarshal.serialize(wellbores);
             } else {
                 return null;
             }
@@ -763,10 +764,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
         try {
             if ("1.4.1.1".equals(version)) {
                 // convert to 1411 pojo and parse as json
-                String xml1411 = this.getXMLString("1.4.1.1");
-                com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores wellbores = WitsmlMarshal.deserialize(xml1411,
-                        com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores.class);
-                return WitsmlMarshal.serializeToJSON(wellbores.getWellbore().get(0));
+                return WitsmlMarshal.serializeToJSON(WellboreConverter.convertTo1411(this));
             } else if ("1.3.1.1".equals(version)) {
                 return WitsmlMarshal.serializeToJSON(this);
             } else {

@@ -88,4 +88,25 @@ public class WellElevationCoord
         this.datum = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.WellElevationCoord to1411WellElevationCoord() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.WellElevationCoord wellElevationCoord = new com.hashmapinc.tempus.WitsmlObjects.v1411.WellElevationCoord();
+
+        if (null != this.uom) {
+            com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalCoordinateUom uom = com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalCoordinateUom.fromValue(this.uom.value());
+            wellElevationCoord.setUom(uom);
+        }
+
+        wellElevationCoord.setDatum(this.datum);
+        wellElevationCoord.setValue(this.value);
+
+        return wellElevationCoord;
+    }
+    //=========================================================================
+
 }

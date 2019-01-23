@@ -303,4 +303,34 @@ public class CsWellCRS {
         this.uid = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.CsWellCRS to1311CsWellCRS() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.CsWellCRS crs = new com.hashmapinc.tempus.WitsmlObjects.v1311.CsWellCRS();
+
+        // assign fields
+        crs.setName(this.getName());
+        crs.setDescription(this.getDescription());
+        crs.setUid(this.getUid());
+
+        // mapProjection
+        if (null != this.getMapProjection())
+            crs.setMapProjection(this.getMapProjection().to1311CsProjectionx());
+
+        // geographic
+        if (null != this.getGeographic())
+            crs.setGeographic(this.getGeographic().to1311CsGeodeticModel());
+
+        // localCRS
+        if (null != this.getLocalCRS())
+            crs.setLocalCRS(this.getLocalCRS().to1311CsLocalCRS());
+
+        return crs;
+    }
+    //=========================================================================
+
 }
