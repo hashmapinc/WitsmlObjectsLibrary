@@ -1,20 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="./stylesheets/generic.xsl" type="text/xsl" media="screen"?>
-<!-- data for testing. Only tags with attributes are included -->
-<wellbores 
-	xmlns="http://www.witsml.org/schemas/1series" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:schemaLocation="http://www.witsml.org/schemas/1series  ../xsd_schemas/obj_wellbore.xsd" 
-	version="1.4.1.1">
-	<wellbore>
-		<md/>
-		<tvd/>
-		<mdKickoff/>
-		<tvdKickoff/>
-		<mdPlanned/>
-		<tvdPlanned/>
-		<mdSubSeaPlanned/>
-		<tvdSubSeaPlanned/>
-		<dayTarget/>
+<wellbores xmlns="http://www.witsml.org/schemas/1series"
+		   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		   xsi:schemaLocation="http://www.witsml.org/schemas/1series  ../xsd_schemas/obj_wellbore.xsd"
+		   version="1.4.1.1">
+	<wellbore uidWell="" uid="">
+		<nameWell></nameWell>
+		<name></name>
+		<number></number>
+		<suffixAPI></suffixAPI>
+		<numGovt></numGovt>
+		<statusWellbore></statusWellbore>
+		<purposeWellbore></purposeWellbore>
+		<typeWellbore></typeWellbore>
+		<shape></shape>
+		<dTimKickoff></dTimKickoff>
+		<md uom=""></md>
+		<tvd uom=""></tvd>
+		<mdKickoff uom=""></mdKickoff>
+		<tvdKickoff uom=""></tvdKickoff>
+		<mdPlanned uom=""></mdPlanned>
+		<tvdPlanned uom=""></tvdPlanned>
+		<mdSubSeaPlanned uom=""></mdSubSeaPlanned>
+		<tvdSubSeaPlanned uom=""></tvdSubSeaPlanned>
+		<dayTarget uom=""></dayTarget>
+		<commonData>
+			<dTimCreation></dTimCreation>
+			<dTimLastChange></dTimLastChange>
+			<itemState></itemState>
+			<comments></comments>
+		</commonData>
 	</wellbore>
 </wellbores>

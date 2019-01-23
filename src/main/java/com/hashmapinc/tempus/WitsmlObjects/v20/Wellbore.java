@@ -91,19 +91,15 @@ public class Wellbore
     @XmlElement(name = "NumGovt")
     protected String numGovt;
     @XmlElement(name = "StatusWellbore")
-    @XmlSchemaType(name = "string")
-    private WellStatus statusWellbore;
+    private String statusWellbore;
     @XmlElement(name = "IsActive")
     private Boolean isActive;
     @XmlElement(name = "PurposeWellbore")
-    @XmlSchemaType(name = "string")
-    private WellPurpose purposeWellbore;
+    private String purposeWellbore;
     @XmlElement(name = "TypeWellbore")
-    @XmlSchemaType(name = "string")
-    private WellboreType typeWellbore;
+    private String typeWellbore;
     @XmlElement(name = "Shape")
-    @XmlSchemaType(name = "string")
-    private WellboreShape shape;
+    private String shape;
     @XmlElement(name = "DTimKickoff")
     private String dTimKickoff;
     @XmlElement(name = "AchievedTD")
@@ -215,7 +211,7 @@ public class Wellbore
      *     {@link WellStatus }
      *
      */
-    public WellStatus getStatusWellbore() {
+    public String getStatusWellbore() {
         return statusWellbore;
     }
 
@@ -227,7 +223,7 @@ public class Wellbore
      *     {@link WellStatus }
      *
      */
-    public void setStatusWellbore(WellStatus value) {
+    public void setStatusWellbore(String value) {
         this.statusWellbore = value;
     }
 
@@ -263,7 +259,7 @@ public class Wellbore
      *     {@link WellPurpose }
      *
      */
-    public WellPurpose getPurposeWellbore() {
+    public String getPurposeWellbore() {
         return purposeWellbore;
     }
 
@@ -275,7 +271,7 @@ public class Wellbore
      *     {@link WellPurpose }
      *
      */
-    public void setPurposeWellbore(WellPurpose value) {
+    public void setPurposeWellbore(String value) {
         this.purposeWellbore = value;
     }
 
@@ -287,7 +283,7 @@ public class Wellbore
      *     {@link WellboreType }
      *
      */
-    public WellboreType getTypeWellbore() {
+    public String getTypeWellbore() {
         return typeWellbore;
     }
 
@@ -299,7 +295,7 @@ public class Wellbore
      *     {@link WellboreType }
      *
      */
-    public void setTypeWellbore(WellboreType value) {
+    public void setTypeWellbore(String value) {
         this.typeWellbore = value;
     }
 
@@ -311,7 +307,7 @@ public class Wellbore
      *     {@link WellboreShape }
      *
      */
-    public WellboreShape getShape() {
+    public String getShape() {
         return shape;
     }
 
@@ -323,7 +319,7 @@ public class Wellbore
      *     {@link WellboreShape }
      *
      */
-    public void setShape(WellboreShape value) {
+    public void setShape(String value) {
         this.shape = value;
     }
 

@@ -35,17 +35,11 @@ public class WellboreConverter {
         dest.setNumber(src.getNumber());
         dest.setSuffixAPI(src.getSuffixAPI());
         dest.setNumGovt(src.getNumGovt());
-
-        if (null != src.getStatusWellbore())
-            dest.setStatusWellbore(com.hashmapinc.tempus.WitsmlObjects.v1311.WellStatus.fromValue(src.getStatusWellbore().value()));
-        if (null != src.getPurposeWellbore())
-            dest.setPurposeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1311.WellPurpose.fromValue(src.getPurposeWellbore().value()));
-        if (null != src.getTypeWellbore())
-            dest.setTypeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1311.WellboreType.fromValue(src.getTypeWellbore().value()));
-        if (null != src.getShape())
-            dest.setShape(com.hashmapinc.tempus.WitsmlObjects.v1311.WellboreShape.fromValue(src.getShape().value()));
-
-        dest.setDTimKickoff(src.getDTimKickoff());
+        dest.setStatusWellbore(src.getStatusWellbore());
+        dest.setPurposeWellbore(src.getPurposeWellbore());
+        dest.setTypeWellbore(src.getTypeWellbore());
+        dest.setShape(src.getShape());
+        //dest.setDTimKickoff(src.getDTimKickoff());
         dest.setAchievedTD(src.isAchievedTD());
 
         if (null != src.getMd())
@@ -92,20 +86,14 @@ public class WellboreConverter {
         dest.setNumber(src.getNumber());
         dest.setSuffixAPI(src.getSuffixAPI());
         dest.setNumGovt(src.getNumGovt());
-
-        if (null != src.getStatusWellbore())
-            dest.setStatusWellbore(com.hashmapinc.tempus.WitsmlObjects.v1311.WellStatus.fromValue(src.getStatusWellbore().value()));
-        if (null != src.getPurposeWellbore())
-            dest.setPurposeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1311.WellPurpose.fromValue(src.getPurposeWellbore().value()));
-        if (null != src.getTypeWellbore())
-            dest.setTypeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1311.WellboreType.fromValue(src.getTypeWellbore().value()));
-        if (null != src.getShape())
-            dest.setShape(com.hashmapinc.tempus.WitsmlObjects.v1311.WellboreShape.fromValue(src.getShape().value()));
-
+        dest.setStatusWellbore(src.getStatusWellbore());
+        dest.setPurposeWellbore(src.getPurposeWellbore());
+        dest.setTypeWellbore(src.getTypeWellbore());
+        dest.setShape(src.getShape());
         // convert dtim string to object
         if (null != src.getDTimKickoff()) {
             XMLGregorianCalendar dtim = DatatypeFactory.newInstance().newXMLGregorianCalendar(src.getDTimKickoff());
-            dest.setDTimKickoff(dtim);
+            //dest.setDTimKickoff(dtim);
         }
 
         dest.setAchievedTD(src.isAchievedTD());
@@ -163,17 +151,11 @@ public class WellboreConverter {
         dest.setNumber(src.getNumber());
         dest.setSuffixAPI(src.getSuffixAPI());
         dest.setNumGovt(src.getNumGovt());
-
-        if (null != src.getStatusWellbore())
-            dest.setStatusWellbore(com.hashmapinc.tempus.WitsmlObjects.v1411.WellStatus.fromValue(src.getStatusWellbore().value()));
-        if (null != src.getPurposeWellbore())
-            dest.setPurposeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1411.WellPurpose.fromValue(src.getPurposeWellbore().value()));
-        if (null != src.getTypeWellbore())
-            dest.setTypeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1411.WellboreType.fromValue(src.getTypeWellbore().value()));
-        if (null != src.getShape())
-            dest.setShape(com.hashmapinc.tempus.WitsmlObjects.v1411.WellboreShape.fromValue(src.getShape().value()));
-
-        dest.setDTimKickoff(src.getDTimKickoff());
+        dest.setStatusWellbore(src.getStatusWellbore());
+        dest.setPurposeWellbore(src.getPurposeWellbore());
+        dest.setTypeWellbore(src.getTypeWellbore());
+        dest.setShape(src.getShape());
+        //dest.setDTimKickoff(src.getDTimKickoff());
         dest.setAchievedTD(src.isAchievedTD());
 
         if (null != src.getMdCurrent())
@@ -221,20 +203,14 @@ public class WellboreConverter {
         dest.setNumber(src.getNumber());
         dest.setSuffixAPI(src.getSuffixAPI());
         dest.setNumGovt(src.getNumGovt());
-
-        if (null != src.getStatusWellbore())
-            dest.setStatusWellbore(com.hashmapinc.tempus.WitsmlObjects.v1411.WellStatus.fromValue(src.getStatusWellbore().value()));
-        if (null != src.getPurposeWellbore())
-            dest.setPurposeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1411.WellPurpose.fromValue(src.getPurposeWellbore().value()));
-        if (null != src.getTypeWellbore())
-            dest.setTypeWellbore(com.hashmapinc.tempus.WitsmlObjects.v1411.WellboreType.fromValue(src.getTypeWellbore().value()));
-        if (null != src.getShape())
-            dest.setShape(com.hashmapinc.tempus.WitsmlObjects.v1411.WellboreShape.fromValue(src.getShape().value()));
-
+        dest.setStatusWellbore(src.getStatusWellbore());
+        dest.setPurposeWellbore(src.getPurposeWellbore());
+        dest.setTypeWellbore(src.getTypeWellbore());
+        dest.setShape(src.getShape());
         // convert dtim string to object
         if (null != src.getDTimKickoff()) {
             XMLGregorianCalendar dtim = DatatypeFactory.newInstance().newXMLGregorianCalendar(src.getDTimKickoff());
-            dest.setDTimKickoff(dtim);
+            //dest.setDTimKickoff(dtim);
         }
 
         dest.setAchievedTD(src.isAchievedTD());
@@ -282,18 +258,10 @@ public class WellboreConverter {
         dest.setNumber(src.getNumber());
         dest.setSuffixAPI(src.getSuffixAPI());
         dest.setNumGovt(src.getNumGovt());
-
-        if (null != src.getStatusWellbore())
-            dest.setStatusWellbore(com.hashmapinc.tempus.WitsmlObjects.v20.WellStatus.fromValue(src.getStatusWellbore().value()));
-        if (null != src.getPurposeWellbore())
-            dest.setPurposeWellbore(com.hashmapinc.tempus.WitsmlObjects.v20.WellPurpose.fromValue(src.getPurposeWellbore().value()));
-        if (null != src.getTypeWellbore())
-            dest.setTypeWellbore(com.hashmapinc.tempus.WitsmlObjects.v20.WellboreType.fromValue(src.getTypeWellbore().value()));
-        if (null != src.getShape())
-            dest.setShape(com.hashmapinc.tempus.WitsmlObjects.v20.WellboreShape.fromValue(src.getShape().value()));
-        if (null != src.getDTimKickoff())
-            dest.setDTimKickoff(src.getDTimKickoff().toString());
-
+        dest.setStatusWellbore(src.getStatusWellbore());
+        dest.setPurposeWellbore(src.getPurposeWellbore());
+        dest.setTypeWellbore(src.getTypeWellbore());
+        dest.setShape(src.getShape());
         dest.setAchievedTD(src.isAchievedTD());
 
         if(null != src.getMdCurrent())
@@ -335,18 +303,10 @@ public class WellboreConverter {
         dest.setNumber(src.getNumber());
         dest.setSuffixAPI(src.getSuffixAPI());
         dest.setNumGovt(src.getNumGovt());
-
-        if (null != src.getStatusWellbore())
-            dest.setStatusWellbore(com.hashmapinc.tempus.WitsmlObjects.v20.WellStatus.fromValue(src.getStatusWellbore().value()));
-        if (null != src.getPurposeWellbore())
-            dest.setPurposeWellbore(com.hashmapinc.tempus.WitsmlObjects.v20.WellPurpose.fromValue(src.getPurposeWellbore().value()));
-        if (null != src.getTypeWellbore())
-            dest.setTypeWellbore(com.hashmapinc.tempus.WitsmlObjects.v20.WellboreType.fromValue(src.getTypeWellbore().value()));
-        if (null != src.getShape())
-            dest.setShape(com.hashmapinc.tempus.WitsmlObjects.v20.WellboreShape.fromValue(src.getShape().value()));
-        if (null != src.getDTimKickoff())
-            dest.setDTimKickoff(src.getDTimKickoff().toString());
-
+        dest.setStatusWellbore(src.getStatusWellbore());
+        dest.setPurposeWellbore(src.getPurposeWellbore());
+        dest.setTypeWellbore(src.getTypeWellbore());
+        dest.setShape(src.getShape());
         dest.setAchievedTD(src.isAchievedTD());
 
         if(null != src.getMd())

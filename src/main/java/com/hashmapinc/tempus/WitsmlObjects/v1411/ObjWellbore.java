@@ -14,9 +14,13 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
 import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlMarshal;
 import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlVersionTransformer;
@@ -87,17 +91,13 @@ public class ObjWellbore extends AbstractWitsmlObject {
     protected String number;
     protected String suffixAPI;
     protected String numGovt;
-    @XmlSchemaType(name = "string")
-    protected WellStatus statusWellbore;
+    protected String statusWellbore;
     protected Boolean isActive;
-    @XmlSchemaType(name = "string")
-    protected WellPurpose purposeWellbore;
-    @XmlSchemaType(name = "string")
-    protected WellboreType typeWellbore;
-    @XmlSchemaType(name = "string")
-    protected WellboreShape shape;
+    protected String purposeWellbore;
+    protected String typeWellbore;
+    protected String shape;
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar dTimKickoff;
+    protected String dTimKickoff;
     protected Boolean achievedTD;
     protected MeasuredDepthCoord md;
     protected WellVerticalDepthCoord tvd;
@@ -280,7 +280,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link WellStatus }
      *
      */
-    public WellStatus getStatusWellbore() {
+    public String getStatusWellbore() {
         return statusWellbore;
     }
 
@@ -292,7 +292,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link WellStatus }
      *
      */
-    public void setStatusWellbore(WellStatus value) {
+    public void setStatusWellbore(String value) {
         this.statusWellbore = value;
     }
 
@@ -328,7 +328,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link WellPurpose }
      *
      */
-    public WellPurpose getPurposeWellbore() {
+    public String getPurposeWellbore() {
         return purposeWellbore;
     }
 
@@ -340,7 +340,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link WellPurpose }
      *
      */
-    public void setPurposeWellbore(WellPurpose value) {
+    public void setPurposeWellbore(String value) {
         this.purposeWellbore = value;
     }
 
@@ -352,7 +352,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link WellboreType }
      *
      */
-    public WellboreType getTypeWellbore() {
+    public String getTypeWellbore() {
         return typeWellbore;
     }
 
@@ -364,7 +364,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link WellboreType }
      *
      */
-    public void setTypeWellbore(WellboreType value) {
+    public void setTypeWellbore(String value) {
         this.typeWellbore = value;
     }
 
@@ -376,7 +376,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link WellboreShape }
      *
      */
-    public WellboreShape getShape() {
+    public String getShape() {
         return shape;
     }
 
@@ -388,7 +388,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link WellboreShape }
      *
      */
-    public void setShape(WellboreShape value) {
+    public void setShape(String value) {
         this.shape = value;
     }
 
@@ -400,7 +400,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link XMLGregorianCalendar }
      *
      */
-    public XMLGregorianCalendar getDTimKickoff() {
+    public String getDTimKickoff() throws DatatypeConfigurationException {
         return dTimKickoff;
     }
 
@@ -412,10 +412,17 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link XMLGregorianCalendar }
      *
      */
-    public void setDTimKickoff(XMLGregorianCalendar value) {
-        this.dTimKickoff = value;
+    public void setDTimKickoff(String value) throws DatatypeConfigurationException {
+        if (value.isEmpty()){
+            this.dTimKickoff = value;
+        } else {
+            this.dTimKickoff =
+                    DatatypeFactory
+                            .newInstance()
+                            .newXMLGregorianCalendar(value)
+                            .toXMLFormat();
+        }
     }
-
     /**
      * Gets the value of the achievedTD property.
      *

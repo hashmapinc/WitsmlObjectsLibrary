@@ -112,18 +112,35 @@ public class WitsmlMarshalTest {
 
         String json1311 = WitsmlMarshal.serializeToJSON(obj1311);
         String expectedJson = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/wellbore1311_withAttributes.json");
-        assertEquals(expectedJson.length(), json1311.length()); // simple length check before more advanced comparision
+        //assertEquals(expectedJson.length(), json1311.length()); // simple length check before more advanced comparision
 
         // do a deep comparison of the json values
         ObjectMapper om = new ObjectMapper();
         Map<String, Object> map1311 = (Map<String, Object>) (om.readValue(json1311, Map.class));
         Map<String, Object> expectedMap = (Map<String, Object>) (om.readValue(expectedJson, Map.class));
-        assertEquals(map1311, expectedMap);
+        assertEquals(expectedMap, map1311);
     }
 
     @Test
     public void shouldSerialize1411WellboreToJSON() throws Exception {
         String xml1411 = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/wellbore1411_withoutAttributes.xml");
+        com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores obj1411 = WitsmlMarshal
+                .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores.class);
+
+        String json1411 = WitsmlMarshal.serializeToJSON(obj1411);
+        String expectedJson = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/wellbore1411_withAttributes.json");
+        assertEquals(expectedJson.length(), json1411.length()); // simple length check before more advanced comparision
+
+        // do a deep comparison of the json values
+        ObjectMapper om = new ObjectMapper();
+        Map<String, Object> map1411 = (Map<String, Object>) (om.readValue(json1411, Map.class));
+        Map<String, Object> expectedMap = (Map<String, Object>) (om.readValue(expectedJson, Map.class));
+        assertEquals(map1411, expectedMap);
+    }
+
+    @Test
+    public void shouldSerializeFull1411WellboreToJSON() throws Exception {
+        String xml1411 = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/test.xml");
         com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores obj1411 = WitsmlMarshal
                 .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores.class);
 
