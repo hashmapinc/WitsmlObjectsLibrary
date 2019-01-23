@@ -1,6 +1,7 @@
 package com.hashmapinc.tempus.WitsmlObjects.Util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore;
 import org.junit.Test;
 
 import java.util.Map;
@@ -156,6 +157,13 @@ public class WitsmlMarshalTest {
 
         String value = WitsmlMarshal.serialize(obj1311);
         TestUtilities.assertXMLEquals(xml1311, value);
+    }
+
+    @Test
+    public void canSerializeNulldTimKickoffForWellbore() throws Exception {
+        String json1411 = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/wellbore1311_problematic.json");
+        ObjWellbore wb1411 = WitsmlMarshal.deserializeFromJSON(json1411, ObjWellbore.class);
+        assertEquals(wb1411.getName(), "Mike");
     }
     //=========================================================================
 }

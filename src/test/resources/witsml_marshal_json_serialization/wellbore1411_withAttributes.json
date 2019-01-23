@@ -61,7 +61,7 @@
     "uidWell" : "",
     "uid" : "",
     "parentUid" : "",
-    "dtimKickoff" : ""
+    "dTimKickoff" : ""
   } ],
   "version" : "1.4.1.1"
 }
