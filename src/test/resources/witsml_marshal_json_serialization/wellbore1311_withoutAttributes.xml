@@ -7,14 +7,30 @@
 	xsi:schemaLocation="http://www.witsml.org/schemas/131  ../obj_wellbore.xsd" 
 	version="1.3.1.1">
 	<wellbore>
-		<mdCurrent/>
-		<tvdCurrent/>
-		<mdKickoff/>
-		<tvdKickoff/>
-		<mdPlanned/>
-		<tvdPlanned/>
-		<mdSubSeaPlanned/>
-		<tvdSubSeaPlanned/>
-		<dayTarget/>
+		<nameWell></nameWell>
+		<name></name>
+		<number></number>
+		<suffixAPI></suffixAPI>
+		<numGovt></numGovt>
+		<statusWellbore></statusWellbore>
+		<purposeWellbore></purposeWellbore>
+		<typeWellbore></typeWellbore>
+		<shape></shape>
+		<dTimKickoff></dTimKickoff>
+		<mdCurrent uom=""></mdCurrent>
+		<tvdCurrent uom=""></tvdCurrent>
+		<mdKickoff uom=""></mdKickoff>
+		<tvdKickoff uom=""></tvdKickoff>
+		<mdPlanned uom=""></mdPlanned>
+		<tvdPlanned uom=""></tvdPlanned>
+		<mdSubSeaPlanned uom=""></mdSubSeaPlanned>
+		<tvdSubSeaPlanned uom=""></tvdSubSeaPlanned>
+		<dayTarget uom=""></dayTarget>
+		<commonData>
+			<dTimCreation></dTimCreation>
+			<dTimLastChange></dTimLastChange>
+			<itemState></itemState>
+			<comments></comments>
+		</commonData>
 	</wellbore>
 </wellbores>

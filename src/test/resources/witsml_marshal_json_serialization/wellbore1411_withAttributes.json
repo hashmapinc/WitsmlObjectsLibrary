@@ -1,5 +1,14 @@
 {
   "wellbore" : [ {
+    "nameWell" : "",
+    "name" : "",
+    "number" : "",
+    "suffixAPI" : "",
+    "numGovt" : "",
+    "statusWellbore" : "",
+    "purposeWellbore" : "",
+    "typeWellbore" : "",
+    "shape" : "",
     "md" : {
       "value" : null,
       "uom" : null,
@@ -42,10 +51,17 @@
     },
     "dayTarget" : {
       "value" : null,
-      "uom" : null
+      "uom" : ""
     },
-    "uidWell" : null,
-    "uid" : null
+    "commonData" : {
+      "comments" : "",
+      "acquisitionTimeZone" : [ ],
+      "extensionNameValue" : [ ]
+    },
+    "uidWell" : "",
+    "uid" : "",
+    "parentUid" : "",
+    "dtimKickoff" : ""
   } ],
   "version" : "1.4.1.1"
 }
