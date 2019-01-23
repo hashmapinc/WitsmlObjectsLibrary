@@ -1,0 +1,62 @@
+{
+  "wellbore" : [ {
+    "nameWell" : "test",
+    "name" : "testwb",
+    "number" : "123456",
+    "suffixAPI" : "02",
+    "numGovt" : "23424",
+    "statusWellbore" : "active",
+    "purposeWellbore" : "exploration",
+    "typeWellbore" : "inital",
+    "shape" : "horizontal",
+    "mdCurrent" : {
+      "value" : 0.0,
+      "uom" : "FT",
+      "datum" : null
+    },
+    "tvdCurrent" : {
+      "value" : 0.0,
+      "uom" : "FT",
+      "datum" : null
+    },
+    "mdKickoff" : {
+      "value" : 0.0,
+      "uom" : "FT",
+      "datum" : null
+    },
+    "tvdKickoff" : {
+      "value" : 0.0,
+      "uom" : "FT",
+      "datum" : null
+    },
+    "mdPlanned" : {
+      "value" : 0.0,
+      "uom" : "FT",
+      "datum" : null
+    },
+    "tvdPlanned" : {
+      "value" : 0.0,
+      "uom" : "FT",
+      "datum" : null
+    },
+    "mdSubSeaPlanned" : {
+      "value" : 0.0,
+      "uom" : "FT",
+      "datum" : null
+    },
+    "tvdSubSeaPlanned" : {
+      "value" : 0.0,
+      "uom" : "FT",
+      "datum" : null
+    },
+    "dayTarget" : {
+      "value" : 128.0,
+      "uom" : "d"
+    },
+    "uidWell" : "testUidWell",
+    "uid" : "testuid",
+    "parentUid" : "testUidWell",
+    "dtimKickoff" : "2001-02-15T13:20:00Z"
+  } ],
+  "version" : "1.3.1.1"
+}
