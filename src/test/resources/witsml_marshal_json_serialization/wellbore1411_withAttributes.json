@@ -54,9 +54,17 @@
       "uom" : ""
     },
     "commonData" : {
+      "sourceName" : null,
+      "itemState" : null,
+      "serviceCategory" : null,
       "comments" : "",
       "acquisitionTimeZone" : [ ],
-      "extensionNameValue" : [ ]
+      "defaultDatum" : null,
+      "privateGroupOnly" : null,
+      "extensionAny" : null,
+      "extensionNameValue" : [ ],
+      "dTimCreation" : null,
+      "dTimLastChange" : null
     },
     "uidWell" : "",
     "uid" : "",

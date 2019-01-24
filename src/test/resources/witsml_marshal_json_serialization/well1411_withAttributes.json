@@ -143,12 +143,20 @@
       "uid" : null
     } ],
     "commonData" : {
+      "sourceName" : null,
+      "itemState" : null,
+      "serviceCategory" : null,
+      "comments" : null,
       "acquisitionTimeZone" : [ ],
       "defaultDatum" : {
         "value" : "",
         "uidRef" : null
       },
-      "extensionNameValue" : [ ]
+      "privateGroupOnly" : null,
+      "extensionAny" : null,
+      "extensionNameValue" : [ ],
+      "dTimCreation" : null,
+      "dTimLastChange" : null
     },
     "uid" : null
   } ],
