@@ -105,10 +105,56 @@ public class TrajectoryConverterTest {
                 com.hashmapinc.tempus.WitsmlObjects.v1411.CsTrajectoryStation destStation = dest.getTrajectoryStation().get(i);
 
                 // check non-complex, non-repeating fields
+                assertEquals(srcStation.getDTimStn(), destStation.getDTimStn());
+                assertEquals(srcStation.getModelToolError(), destStation.getModelToolError());
+                assertEquals(srcStation.isGravAccelCorUsed(), destStation.isGravAccelCorUsed());
+                assertEquals(srcStation.isMagXAxialCorUsed(), destStation.isMagXAxialCorUsed());
+                assertEquals(srcStation.isSagCorUsed(), destStation.isSagCorUsed());
+                assertEquals(srcStation.isMagDrlstrCorUsed(), destStation.isMagDrlstrCorUsed());
+                assertEquals(srcStation.getMagModelUsed(), destStation.getMagModelUsed());
+                assertEquals(srcStation.getMagModelValid(), destStation.getMagModelValid());
+                assertEquals(srcStation.getGeoModelUsed(), destStation.getGeoModelUsed());
+                assertEquals(srcStation.getUid(), destStation.getUid());
 
                 // check complex fields
+                protected RefNameString target;
+                protected TrajStationType typeTrajStation;
+                protected TypeSurveyTool typeSurveyTool;
+                protected MeasuredDepthCoord md;
+                protected WellVerticalDepthCoord tvd;
+                protected PlaneAngleMeasure incl;
+                protected PlaneAngleMeasure azi;
+                protected PlaneAngleMeasure mtf;
+                protected PlaneAngleMeasure gtf;
+                protected LengthMeasure dispNs;
+                protected LengthMeasure dispEw;
+                protected LengthMeasure vertSect;
+                protected AnglePerLengthMeasure dls;
+                protected AnglePerLengthMeasure rateTurn;
+                protected AnglePerLengthMeasure rateBuild;
+                protected MeasuredDepthCoord mdDelta;
+                protected WellVerticalDepthCoord tvdDelta;
+                protected AccelerationLinearMeasure gravTotalUncert;
+                protected PlaneAngleMeasure dipAngleUncert;
+                protected MagneticInductionMeasure magTotalUncert;
+                protected AccelerationLinearMeasure gravTotalFieldReference;
+                protected MagneticInductionMeasure magTotalFieldReference;
+                protected PlaneAngleMeasure magDipAngleReference;
+                protected TrajStationStatus statusTrajStation;
+                protected CsStnTrajRawData rawData;
+                protected CsStnTrajCorUsed corUsed;
+                protected CsStnTrajValid valid;
+                protected CsStnTrajMatrixCov matrixCov;
+                protected CsRefWellboreTrajectoryStation sourceStation;
+                protected CsCommonData commonData;
 
                 // check repeating fields
+                protected List<CsLocation> location;
+                if (null != srcStation.getLocation()) {
+                    for (int j = 0; j < srcStation.getLocation().size(); j++) {
+
+                    }
+                }
 
             }
         }
