@@ -37,8 +37,36 @@ public class TrajectoryConverterTest {
         // get converted object
         com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory dest = TrajectoryConverter.convertTo1411(src);
 
-        // check fields
+        // check non-complex, non-repeating fields
         assertEquals(src.getNameWell(), dest.getNameWell());
+        assertEquals(src.getNameWellbore(), dest.getNameWellbore());
+        assertEquals(src.getName(), dest.getName());
+        assertEquals(src.isObjectGrowing(), dest.isObjectGrowing());
+        assertEquals(src.getDTimTrajStart(), dest.getDTimTrajStart());
+        assertEquals(src.getServiceCompany(), dest.getServiceCompany());
+        assertEquals(src.isDefinitive(), dest.isDefinitive());
+        assertEquals(src.isMemory(), dest.isMemory());
+        assertEquals(src.isFinalTraj(), dest.isFinalTraj());
+        assertEquals(src.getDTimTrajEnd(), dest.getDTimTrajEnd());
+        assertEquals(src.getUidWell(), dest.getUidWell());
+        assertEquals(src.getUidWellbore(), dest.getUidWellbore());
+        assertEquals(src.getUid(), dest.getUid());
+
+        // check complex fields
+        protected MeasuredDepthCoord mdMn;
+        protected MeasuredDepthCoord mdMx;
+        protected PlaneAngleMeasure magDeclUsed;
+        protected PlaneAngleMeasure gridCorUsed;
+        protected PlaneAngleMeasure aziVertSect;
+        protected LengthMeasure dispNsVertSectOrig;
+        protected LengthMeasure dispEwVertSectOrig;
+        protected AziRef aziRef;
+        protected CsCommonData commonData;
+        protected CsCustomData customData;
+
+        // check repeating fields
+        protected List<CsTrajectoryStation> trajectoryStation;
+
     }
 
     @Test
