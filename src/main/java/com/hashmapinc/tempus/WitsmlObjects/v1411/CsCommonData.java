@@ -65,7 +65,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "extensionAny",
     "extensionNameValue"
 })
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.ALWAYS)
 public class CsCommonData {
 
     protected String sourceName;
@@ -142,7 +142,7 @@ public class CsCommonData {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    @JsonProperty("dTimDTimLastChange")
+    @JsonProperty("dTimLastChange")
     public XMLGregorianCalendar getDTimLastChange() {
         return dTimLastChange;
     }

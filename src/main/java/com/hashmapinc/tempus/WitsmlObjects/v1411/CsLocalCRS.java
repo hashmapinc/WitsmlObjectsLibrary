@@ -262,4 +262,31 @@ public class CsLocalCRS {
         this.xRotationCounterClockwise = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.CsLocalCRS to1311CsLocalCRS() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.CsLocalCRS crs = new com.hashmapinc.tempus.WitsmlObjects.v1311.CsLocalCRS();
+
+        // assign fields
+        crs.setUsesWellAsOrigin(this.isUsesWellAsOrigin());
+        crs.setOriginDescription(this.getOriginDescription());
+        crs.setYAxisDescription(this.getYAxisDescription());
+        crs.setXRotationCounterClockwise(this.isXRotationCounterClockwise());
+
+        // origin
+        if (null != this.getOrigin())
+            crs.setOrigin(this.getOrigin().to1311RefNameString());
+
+        // yAxisAzimuth
+        if (null != this.getYAxisAzimuth())
+            crs.setYAxisAzimuth(this.getYAxisAzimuth().to1311YAxisAzimuth());
+
+        return crs;
+    }
+    //=========================================================================
+
 }

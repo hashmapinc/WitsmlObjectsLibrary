@@ -1,6 +1,7 @@
 package com.hashmapinc.tempus.WitsmlObjects.Util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell;
 import com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore;
 import org.junit.Test;
 
@@ -91,6 +92,30 @@ public class WitsmlMarshalTest {
         String json1411 = WitsmlMarshal.serializeToJSON(obj1411);
         String expectedJson = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/well1411_withAttributes.json");
         assertEquals(expectedJson.length(), json1411.length()); // simple length check before more advanced comparision
+
+        // do a deep comparison of the json values
+        ObjectMapper om = new ObjectMapper();
+        Map<String, Object> map1411 = (Map<String, Object>) (om.readValue(json1411, Map.class));
+        Map<String, Object> expectedMap = (Map<String, Object>) (om.readValue(expectedJson, Map.class));
+        assertEquals(map1411, expectedMap);
+    }
+
+    @Test
+    public void shouldSerializeAndConvert1411EmptyWell() throws Exception {
+        String xml1311 = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/well1311_FullEmpty.xml");
+        com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWells obj1311 = WitsmlMarshal
+                .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWells.class);
+
+        String json1311 = WitsmlMarshal.serializeToJSON(obj1311);
+        assertNotNull(json1311);
+        ObjWell singularWell = obj1311.getWell().get(0);
+        assertNotNull(singularWell);
+
+        String json1411 = singularWell.getJSONString("1.4.1.1");
+        assertNotNull(json1411);
+
+        String expectedJson = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/well1311_Convertedto1411FullEmpty.json");
+        //assertEquals(expectedJson.length(), json1411.length()); // simple length check before more advanced comparision
 
         // do a deep comparison of the json values
         ObjectMapper om = new ObjectMapper();

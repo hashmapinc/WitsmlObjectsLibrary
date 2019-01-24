@@ -20,8 +20,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
+import com.hashmapinc.tempus.WitsmlObjects.Util.WellConverter;
 import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlMarshal;
-import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlVersionTransformer;
 
 
 /**
@@ -737,6 +737,10 @@ public class ObjWell extends AbstractWitsmlObject {
         return this.wellDatum;
     }
 
+    public void setWellDatum(List<CsWellDatum> wellDatumList) {
+        this.wellDatum = wellDatumList;
+    }
+
     /**
      * Gets the value of the groundElevation property.
      * 
@@ -814,6 +818,11 @@ public class ObjWell extends AbstractWitsmlObject {
         return this.wellLocation;
     }
 
+
+    public void setWellLocation(List<CsLocation> wellLocationList) {
+        this.wellLocation = wellLocationList;
+    }
+
     /**
      * Gets the value of the wellPublicLandSurveySystemLocation property.
      * 
@@ -867,6 +876,10 @@ public class ObjWell extends AbstractWitsmlObject {
         return this.referencePoint;
     }
 
+    public void setReferencePoint(List<CsReferencePoint> refPointList) {
+        this.referencePoint = refPointList;
+    }
+
     /**
      * Gets the value of the wellCRS property.
      * 
@@ -894,6 +907,10 @@ public class ObjWell extends AbstractWitsmlObject {
             wellCRS = new ArrayList<CsWellCRS>();
         }
         return this.wellCRS;
+    }
+
+    public void setWellCRS(List<CsWellCRS> wellCRSList) {
+        this.wellCRS = wellCRSList;
     }
 
     /**
@@ -986,13 +1003,16 @@ public class ObjWell extends AbstractWitsmlObject {
     @Override
     public String getXMLString(String version) {
         try {
-            ObjWells wells = new ObjWells();
-            wells.addWell(this);
-            String xml1411 = WitsmlMarshal.serialize(wells);
             if ("1.3.1.1".equals(version)) {
-                return (new WitsmlVersionTransformer()).convertVersion(xml1411);
+                // convert then serialize to plural
+                com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWells wells = new com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWells();
+                wells.addWell(WellConverter.convertTo1311(this));
+                return WitsmlMarshal.serialize(wells);
             } else if ("1.4.1.1".equals(version)) {
-                return xml1411;
+                // serialize to plural
+                ObjWells wells = new ObjWells();
+                wells.addWell(this);
+                return WitsmlMarshal.serialize(wells);
             } else {
                 return null;
             }
@@ -1013,10 +1033,7 @@ public class ObjWell extends AbstractWitsmlObject {
         try {
             if ("1.3.1.1".equals(version)) {
                 // convert to 1311 pojo and parse as json
-                String xml1311 = this.getXMLString("1.3.1.1");
-                com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWells wells = WitsmlMarshal.deserialize(xml1311,
-                        com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWells.class);
-                return WitsmlMarshal.serializeToJSON(wells.getWell().get(0));
+                return WitsmlMarshal.serializeToJSON(WellConverter.convertTo1311(this));
             } else if ("1.4.1.1".equals(version)) {
                 return WitsmlMarshal.serializeToJSON(this);
             } else {

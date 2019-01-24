@@ -167,4 +167,24 @@ public class IndexedObject {
         this.description = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.IndexedObject to1411IndexedObject() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.IndexedObject indexedObject = new com.hashmapinc.tempus.WitsmlObjects.v1411.IndexedObject();
+
+        // assign fields
+        indexedObject.setDescription(this.getDescription());
+        indexedObject.setName(this.getName());
+        indexedObject.setUom(this.getUom());
+        indexedObject.setValue(this.getValue());
+        indexedObject.setIndex(this.getIndex());
+
+        return indexedObject;
+    }
+    //=========================================================================
+
 }

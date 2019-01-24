@@ -217,6 +217,11 @@ public class CsWellDatum {
         return this.kind;
     }
 
+    public void setKind(List<String> kindList) {
+        this.kind = kindList;
+    }
+
+
     /**
      * Gets the value of the wellbore property.
      * 
@@ -413,5 +418,54 @@ public class CsWellDatum {
     public void setUid(String value) {
         this.uid = value;
     }
+
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.CsWellDatum to1311CsWellDatum() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.CsWellDatum datum = new com.hashmapinc.tempus.WitsmlObjects.v1311.CsWellDatum(); // datum, I hardly know 'em!
+
+        // non complex objects
+        datum.setName(this.getName());
+        datum.setKind(this.getKind());
+        datum.setComment(this.getComment());
+        datum.setUid(this.getUid());
+
+
+        // complex objects
+        // code
+        if (null != this.getCode())
+            datum.setCode(com.hashmapinc.tempus.WitsmlObjects.v1311.ElevCodeEnum.fromValue(this.getCode().value()));
+
+        // datum name
+        if (null != this.getDatumName())
+            datum.setDatumName(this.getDatumName().to1311WellKnownNameStruct());
+
+        // wellbore
+        if (null != this.getWellbore())
+            datum.setDatumName(this.getDatumName().to1311WellKnownNameStruct());
+
+        // wellbore
+        if (null != this.getWellbore())
+            datum.setWellbore(this.getWellbore().to1311CsRefWellWellbore());
+
+        // rig
+        if (null != this.getRig())
+            datum.setRig(this.getRig().to1311CsRefWellWellboreRig());
+
+        // elevation
+        if (null != this.getElevation())
+            datum.setElevation(this.getElevation().to1311WellElevationCoord());
+
+        // measured depth
+        if (null != this.getMeasuredDepth())
+            datum.setMeasuredDepth(this.getMeasuredDepth().to1311MeasuredDepthCoord());
+
+        return datum;
+    }
+    //=========================================================================
 
 }

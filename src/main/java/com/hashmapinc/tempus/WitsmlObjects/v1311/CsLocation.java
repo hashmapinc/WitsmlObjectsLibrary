@@ -429,4 +429,66 @@ public class CsLocation {
         this.uid = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation to1411CsLocation() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation location = new com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation();
+
+        // assign fields
+        location.setOriginal(this.isOriginal());
+        location.setDescription(this.getDescription());
+        location.setUid(this.getUid());
+
+        // well crs
+        if (null != this.getWellCRS())
+            location.setWellCRS(this.getWellCRS().to1411RefNameString());
+
+        // latitude
+        if (null != this.getLatitude())
+            location.setLatitude(this.getLatitude().to1411PlaneAngleMeasure());
+
+        // longitude
+        if (null != this.getLongitude())
+            location.setLongitude(this.getLongitude().to1411PlaneAngleMeasure());
+
+        // easting
+        if (null != this.getEasting())
+            location.setEasting(this.getEasting().to1411Length());
+
+        // northing
+        if (null != this.getNorthing())
+            location.setNorthing(this.getNorthing().to1411Length());
+
+        // westing
+        if (null != this.getWesting())
+            location.setWesting(this.getWesting().to1411Length());
+
+        // southing
+        if (null != this.getSouthing())
+            location.setSouthing(this.getSouthing().to1411Length());
+
+        // projectedX
+        if (null != this.getProjectedX())
+            location.setProjectedX(this.getProjectedX().to1411Length());
+
+        // projectedY
+        if (null != this.getProjectedY())
+            location.setProjectedY(this.getProjectedY().to1411Length());
+
+        // localX
+        if (null != this.getLocalX())
+            location.setLocalX(this.getLocalX().to1411Length());
+
+        // localY
+        if (null != this.getLocalY())
+            location.setLocalY(this.getLocalY().to1411Length());
+
+        return location;
+    }
+    //=========================================================================
+
 }
