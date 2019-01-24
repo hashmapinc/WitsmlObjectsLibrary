@@ -99,7 +99,9 @@ public class YAxisAzimuth
         // assign fields
         azi.setUom(this.getUom());
         azi.setValue(this.getValue());
-        azi.setNorthDirection(com.hashmapinc.tempus.WitsmlObjects.v1411.AziRef.fromValue(this.getNorthDirection().value()));
+        if (null != this.getNorthDirection()) {
+            azi.setNorthDirection(com.hashmapinc.tempus.WitsmlObjects.v1411.AziRef.fromValue(this.getNorthDirection().value()));
+        }
 
         return azi;
     }
