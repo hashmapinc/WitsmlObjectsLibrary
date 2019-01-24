@@ -236,7 +236,53 @@ public class TrajectoryConverterTest {
                     }
 
                 }
-                protected CsStnTrajCorUsed corUsed;
+                if (null != srcStation.getCorUsed()) {
+                    if (null != srcStation.getCorUsed().getGravAxialAccelCor()) {
+                        assertEquals(srcStation.getCorUsed().getGravAxialAccelCor().getValue(), destStation.getCorUsed().getGravAxialAccelCor().getValue());
+                        assertEquals(srcStation.getCorUsed().getGravAxialAccelCor().getUom().value(), destStation.getCorUsed().getGravAxialAccelCor().getUom().value());
+                    }
+                    if (null != srcStation.getCorUsed().getGravTran1AccelCor()) {
+                        assertEquals(srcStation.getCorUsed().getGravTran1AccelCor().getValue(), destStation.getCorUsed().getGravTran1AccelCor().getValue());
+                        assertEquals(srcStation.getCorUsed().getGravTran1AccelCor().getUom().value(), destStation.getCorUsed().getGravTran1AccelCor().getUom().value());
+                    }
+                    if (null != srcStation.getCorUsed().getGravTran2AccelCor()) {
+                        assertEquals(srcStation.getCorUsed().getGravTran2AccelCor().getValue(), destStation.getCorUsed().getGravTran2AccelCor().getValue());
+                        assertEquals(srcStation.getCorUsed().getGravTran2AccelCor().getUom().value(), destStation.getCorUsed().getGravTran2AccelCor().getUom().value());
+                    }
+                    if (null != srcStation.getCorUsed().getMagAxialDrlstrCor()) {
+                        assertEquals(srcStation.getCorUsed().getMagAxialDrlstrCor().getValue(), destStation.getCorUsed().getMagAxialDrlstrCor().getValue());
+                        assertEquals(srcStation.getCorUsed().getMagAxialDrlstrCor().getUom().value(), destStation.getCorUsed().getMagAxialDrlstrCor().getUom().value());
+                    }
+                    if (null != srcStation.getCorUsed().getMagTran1DrlstrCor()) {
+                        assertEquals(srcStation.getCorUsed().getMagTran1DrlstrCor().getValue(), destStation.getCorUsed().getMagTran1DrlstrCor().getValue());
+                        assertEquals(srcStation.getCorUsed().getMagTran1DrlstrCor().getUom().value(), destStation.getCorUsed().getMagTran1DrlstrCor().getUom().value());
+                    }
+                    if (null != srcStation.getCorUsed().getMagTran2DrlstrCor()) {
+                        assertEquals(srcStation.getCorUsed().getMagTran2DrlstrCor().getValue(), destStation.getCorUsed().getMagTran2DrlstrCor().getValue());
+                        assertEquals(srcStation.getCorUsed().getMagTran2DrlstrCor().getUom().value(), destStation.getCorUsed().getMagTran2DrlstrCor().getUom().value());
+                    }
+                    if (null != srcStation.getCorUsed().getSagIncCor()) {
+                        assertEquals(srcStation.getCorUsed().getSagIncCor().getValue(), destStation.getCorUsed().getSagIncCor().getValue());
+                        assertEquals(srcStation.getCorUsed().getSagIncCor().getUom(), destStation.getCorUsed().getSagIncCor().getUom());
+                    }
+                    if (null != srcStation.getCorUsed().getSagAziCor()) {
+                        assertEquals(srcStation.getCorUsed().getSagAziCor().getValue(), destStation.getCorUsed().getSagAziCor().getValue());
+                        assertEquals(srcStation.getCorUsed().getSagAziCor().getUom(), destStation.getCorUsed().getSagAziCor().getUom());
+                    }
+                    if (null != srcStation.getCorUsed().getStnMagDeclUsed()) {
+                        assertEquals(srcStation.getCorUsed().getStnMagDeclUsed().getValue(), destStation.getCorUsed().getStnMagDeclUsed().getValue());
+                        assertEquals(srcStation.getCorUsed().getStnMagDeclUsed().getUom(), destStation.getCorUsed().getStnMagDeclUsed().getUom());
+                    }
+                    if (null != srcStation.getCorUsed().getStnGridCorUsed()) {
+                        assertEquals(srcStation.getCorUsed().getStnGridCorUsed().getValue(), destStation.getCorUsed().getStnGridCorUsed().getValue());
+                        assertEquals(srcStation.getCorUsed().getStnGridCorUsed().getUom(), destStation.getCorUsed().getStnGridCorUsed().getUom());
+                    }
+                    protected LengthMeasure dirSensorOffset;
+                    if (null != srcStation.getCorUsed().getDirSensorOffset()) {
+                        assertEquals(srcStation.getCorUsed().getDirSensorOffset().getValue(), destStation.getCorUsed().getDirSensorOffset().getValue());
+                        assertEquals(srcStation.getCorUsed().getDirSensorOffset().getUom(), destStation.getCorUsed().getDirSensorOffset().getUom());
+                    }
+                }
                 protected CsStnTrajValid valid;
                 protected CsStnTrajMatrixCov matrixCov;
                 protected CsRefWellboreTrajectoryStation sourceStation;
