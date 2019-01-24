@@ -18,6 +18,7 @@ public class WellConverter {
         com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell dest = new com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell();
 
         // assign non complex, non repeating fields
+        dest.setUid(src.getUid());
         dest.setName(src.getName());
         dest.setNameLegal(src.getNameLegal());
         dest.setNumLicense(src.getNumLicense());
@@ -117,6 +118,7 @@ public class WellConverter {
         com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell dest = new com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell();
 
         // assign non complex, non repeating fields
+        dest.setUid(src.getUid());
         dest.setName(src.getName());
         dest.setNameLegal(src.getNameLegal());
         dest.setNumLicense(src.getNumLicense());

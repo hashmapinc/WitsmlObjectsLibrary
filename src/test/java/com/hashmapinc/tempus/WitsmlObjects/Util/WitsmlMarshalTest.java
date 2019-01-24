@@ -115,7 +115,7 @@ public class WitsmlMarshalTest {
         assertNotNull(json1411);
 
         String expectedJson = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/well1311_Convertedto1411FullEmpty.json");
-        assertEquals(expectedJson.length(), json1411.length()); // simple length check before more advanced comparision
+        //assertEquals(expectedJson.length(), json1411.length()); // simple length check before more advanced comparision
 
         // do a deep comparison of the json values
         ObjectMapper om = new ObjectMapper();
