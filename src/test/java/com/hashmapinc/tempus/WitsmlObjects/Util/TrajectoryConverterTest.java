@@ -53,19 +53,65 @@ public class TrajectoryConverterTest {
         assertEquals(src.getUid(), dest.getUid());
 
         // check complex fields
-        protected MeasuredDepthCoord mdMn;
-        protected MeasuredDepthCoord mdMx;
-        protected PlaneAngleMeasure magDeclUsed;
-        protected PlaneAngleMeasure gridCorUsed;
-        protected PlaneAngleMeasure aziVertSect;
-        protected LengthMeasure dispNsVertSectOrig;
-        protected LengthMeasure dispEwVertSectOrig;
-        protected AziRef aziRef;
-        protected CsCommonData commonData;
-        protected CsCustomData customData;
+        if (null != src.getMdMn()) {
+            assertEquals(src.getMdMn().getValue(), dest.getMdMn().getValue());
+            assertEquals(src.getMdMn().getDatum(), dest.getMdMn().getDatum());
+            assertEquals(src.getMdMn().getUom().value(), dest.getMdMn().getUom().value());
+        }
+        if (null != src.getMdMx()) {
+            assertEquals(src.getMdMx().getValue(), dest.getMdMx().getValue());
+            assertEquals(src.getMdMx().getDatum(), dest.getMdMx().getDatum());
+            assertEquals(src.getMdMx().getUom().value(), dest.getMdMx().getUom().value());
+        }
+        if (null != src.getMagDeclUsed()) {
+            assertEquals(src.getMagDeclUsed().getValue(), dest.getMagDeclUsed().getValue());
+            assertEquals(src.getMagDeclUsed().getUom(), dest.getMagDeclUsed().getUom());
+        }
+        if (null != src.getGridCorUsed()) {
+            assertEquals(src.getGridCorUsed().getValue(), dest.getGridCorUsed().getValue());
+            assertEquals(src.getGridCorUsed().getUom(), dest.getGridCorUsed().getUom());
+        }
+        if (null != src.getAziVertSect()) {
+            assertEquals(src.getAziVertSect().getValue(), dest.getAziVertSect().getValue());
+            assertEquals(src.getAziVertSect().getUom(), dest.getAziVertSect().getUom());
+        }
+        if (null != src.getDispNsVertSectOrig()) {
+            assertEquals(src.getDispNsVertSectOrig().getValue(), dest.getDispNsVertSectOrig().getValue());
+            assertEquals(src.getDispNsVertSectOrig().getUom(), dest.getDispNsVertSectOrig().getUom());
+        }
+        if (null != src.getDispEwVertSectOrig()) {
+            assertEquals(src.getDispEwVertSectOrig().getValue(), dest.getDispEwVertSectOrig().getValue());
+            assertEquals(src.getDispEwVertSectOrig().getUom(), dest.getDispEwVertSectOrig().getUom());
+        }
+        if (null != src.getAziRef())
+            assertEquals(src.getAziRef().value(), dest.getAziRef().value());
+
+        if (null != src.getCommonData()) {
+            assertEquals(src.getCommonData().getSourceName(), dest.getCommonData().getSourceName());
+            assertEquals(src.getCommonData().getDTimCreation(), dest.getCommonData().getDTimCreation());
+            assertEquals(src.getCommonData().getDTimLastChange(), dest.getCommonData().getDTimLastChange());
+            assertEquals(src.getCommonData().getItemState().value(), dest.getCommonData().getItemState().value());
+            assertEquals(src.getCommonData().getComments(), dest.getCommonData().getComments());
+        }
+        if (null != src.getCustomData() && null != src.getCustomData().getAny()){
+            for (int i = 0; i < src.getCustomData().getAny().size(); i++)
+                assertEquals(src.getCustomData().getAny().get(i), dest.getCustomData().getAny().get(i));
+        }
 
         // check repeating fields
-        protected List<CsTrajectoryStation> trajectoryStation;
+        if (null != src.getTrajectoryStation()) {
+            for (int i = 0; i < src.getTrajectoryStation().size(); i++) {
+                com.hashmapinc.tempus.WitsmlObjects.v1311.CsTrajectoryStation srcStation = src.getTrajectoryStation().get(i);
+                com.hashmapinc.tempus.WitsmlObjects.v1411.CsTrajectoryStation destStation = dest.getTrajectoryStation().get(i);
+
+                // check non-complex, non-repeating fields
+
+                // check complex fields
+
+                // check repeating fields
+
+            }
+        }
 
     }
 
