@@ -37,50 +37,45 @@ public class TrajectoryConverter {
         dest.setUid(src.getUid());
 
         // check complex fields
-        if (null != src.getMdMn()) {
-            assertEquals(src.getMdMn().getValue(), dest.getMdMn().getValue());
-            assertEquals(src.getMdMn().getDatum(), dest.getMdMn().getDatum());
-            assertEquals(src.getMdMn().getUom().value(), dest.getMdMn().getUom().value());
-        }
-        if (null != src.getMdMx()) {
-            assertEquals(src.getMdMx().getValue(), dest.getMdMx().getValue());
-            assertEquals(src.getMdMx().getDatum(), dest.getMdMx().getDatum());
-            assertEquals(src.getMdMx().getUom().value(), dest.getMdMx().getUom().value());
-        }
-        if (null != src.getMagDeclUsed()) {
-            assertEquals(src.getMagDeclUsed().getValue(), dest.getMagDeclUsed().getValue());
-            assertEquals(src.getMagDeclUsed().getUom(), dest.getMagDeclUsed().getUom());
-        }
-        if (null != src.getGridCorUsed()) {
-            assertEquals(src.getGridCorUsed().getValue(), dest.getGridCorUsed().getValue());
-            assertEquals(src.getGridCorUsed().getUom(), dest.getGridCorUsed().getUom());
-        }
-        if (null != src.getAziVertSect()) {
-            assertEquals(src.getAziVertSect().getValue(), dest.getAziVertSect().getValue());
-            assertEquals(src.getAziVertSect().getUom(), dest.getAziVertSect().getUom());
-        }
-        if (null != src.getDispNsVertSectOrig()) {
-            assertEquals(src.getDispNsVertSectOrig().getValue(), dest.getDispNsVertSectOrig().getValue());
-            assertEquals(src.getDispNsVertSectOrig().getUom(), dest.getDispNsVertSectOrig().getUom());
-        }
-        if (null != src.getDispEwVertSectOrig()) {
-            assertEquals(src.getDispEwVertSectOrig().getValue(), dest.getDispEwVertSectOrig().getValue());
-            assertEquals(src.getDispEwVertSectOrig().getUom(), dest.getDispEwVertSectOrig().getUom());
-        }
-        if (null != src.getAziRef())
-            assertEquals(src.getAziRef().value(), dest.getAziRef().value());
+        // mdMn
+        if (null != src.getMdMn())
+            dest.setMdMn(src.getMdMn().to1411MeasuredDepthCoord());
 
-        if (null != src.getCommonData()) {
-            assertEquals(src.getCommonData().getSourceName(), dest.getCommonData().getSourceName());
-            assertEquals(src.getCommonData().getDTimCreation(), dest.getCommonData().getDTimCreation());
-            assertEquals(src.getCommonData().getDTimLastChange(), dest.getCommonData().getDTimLastChange());
-            assertEquals(src.getCommonData().getItemState().value(), dest.getCommonData().getItemState().value());
-            assertEquals(src.getCommonData().getComments(), dest.getCommonData().getComments());
-        }
-        if (null != src.getCustomData() && null != src.getCustomData().getAny()){
-            for (int i = 0; i < src.getCustomData().getAny().size(); i++)
-                assertEquals(src.getCustomData().getAny().get(i), dest.getCustomData().getAny().get(i));
-        }
+        // mdMx
+        if (null != src.getMdMx())
+            dest.setMdMx(src.getMdMx().to1411MeasuredDepthCoord());
+
+        // magDeclUsed
+        if (null != src.getMagDeclUsed())
+            dest.setMagDeclUsed(src.getMagDeclUsed().to1411PlaneAngleMeasure());
+
+        // gridCorUsed
+        if (null != src.getGridCorUsed())
+            dest.setGridCorUsed(src.getGridCorUsed().to1411PlaneAngleMeasure());
+
+        // aziVertSec
+        if (null != src.getAziVertSect())
+            dest.setAziVertSect(src.getAziVertSect().to1411PlaneAngleMeasure());
+
+        // dispNsVertSectOrig
+        if (null != src.getDispNsVertSectOrig())
+            dest.setDispNsVertSectOrig(src.getDispNsVertSectOrig().to1411Length());
+
+        // dispEwVertSectOrig
+        if (null != src.getDispEwVertSectOrig())
+            dest.setDispEwVertSectOrig(src.getDispEwVertSectOrig().to1411Length());
+
+        // aziRef
+        if (null != src.getAziRef())
+            dest.setAziRef(com.hashmapinc.tempus.WitsmlObjects.v1411.AziRef.fromValue(src.getAziRef().value()));
+
+        // commonData
+        if (null != src.getCommonData())
+            dest.setCommonData(src.getCommonData().to1411CommonData());
+
+        // custom data
+        if (null != src.getCustomData())
+            dest.setCustomData(src.getCustomData().to1411CustomData());
 
         // check repeating fields
         if (null != src.getTrajectoryStation()) {
@@ -414,7 +409,6 @@ public class TrajectoryConverter {
                         assertEquals(srcStationLoc.get(j).getUid(), destStationLoc.get(j).getUid());
                     }
                 }
-
             }
         }
 
