@@ -1214,21 +1214,10 @@ public class CsTrajectoryStation {
 
         if (null != this.getCorUsed())
             station.setCorUsed(this.getCorUsed().to1411CsStnTrajCorUsed());
-        
-        if (null != srcStation.getValid()) {
-            if (null != srcStation.getValid().getMagTotalFieldCalc()) {
-                assertEquals(srcStation.getValid().getMagTotalFieldCalc().getValue(), destStation.getValid().getMagTotalFieldCalc().getValue());
-                assertEquals(srcStation.getValid().getMagTotalFieldCalc().getUom().value(), destStation.getValid().getMagTotalFieldCalc().getUom().value());
-            }
-            if (null != srcStation.getValid().getMagDipAngleCalc()) {
-                assertEquals(srcStation.getValid().getMagDipAngleCalc().getValue(), destStation.getValid().getMagDipAngleCalc().getValue());
-                assertEquals(srcStation.getValid().getMagDipAngleCalc().getUom(), destStation.getValid().getMagDipAngleCalc().getUom());
-            }
-            if (null != srcStation.getValid().getGravTotalFieldCalc()) {
-                assertEquals(srcStation.getValid().getGravTotalFieldCalc().getValue(), destStation.getValid().getGravTotalFieldCalc().getValue());
-                assertEquals(srcStation.getValid().getGravTotalFieldCalc().getUom().value(), destStation.getValid().getGravTotalFieldCalc().getUom().value());
-            }
-        }
+
+        if (null != this.getValid())
+            station.setValid(this.getValid().to1411CsStnTrajValid());
+
         if (null != srcStation.getMatrixCov()) {
             if (null != srcStation.getMatrixCov().getVarianceNN()) {
                 assertEquals(srcStation.getMatrixCov().getVarianceNN().getValue(), destStation.getMatrixCov().getVarianceNN().getValue());
