@@ -293,8 +293,8 @@ public class CsStnTrajMatrixCov {
         if (null != this.getVarianceNVert())
             cov.setVarianceNVert(this.getVarianceNVert().to1411AreaMeasure());
 
-        if (null != this.getVarianceNVert())
-            cov.setVarianceNVert(this.getVarianceNVert().to1411AreaMeasure());
+        if (null != this.getVarianceEE())
+            cov.setVarianceEE(this.getVarianceEE().to1411AreaMeasure());
 
         if (null != this.getVarianceEVert())
             cov.setVarianceEVert(this.getVarianceEVert().to1411AreaMeasure());

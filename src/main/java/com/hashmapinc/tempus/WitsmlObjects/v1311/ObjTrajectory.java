@@ -597,6 +597,10 @@ public class ObjTrajectory extends AbstractWitsmlObject {
         return this.trajectoryStation;
     }
 
+    public void setTrajectoryStation(List<CsTrajectoryStation> stationList) {
+        this.trajectoryStation = stationList;
+    }
+
     /**
      * Gets the value of the commonData property.
      * 

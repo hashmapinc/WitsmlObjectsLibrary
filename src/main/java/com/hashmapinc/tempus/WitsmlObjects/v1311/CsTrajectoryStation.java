@@ -1042,6 +1042,10 @@ public class CsTrajectoryStation {
         return this.location;
     }
 
+    public void setLocation(List<CsLocation> locationList) {
+        this.location = locationList;
+    }
+
     /**
      * Gets the value of the sourceStation property.
      * 
@@ -1221,102 +1225,19 @@ public class CsTrajectoryStation {
         if (null != this.getMatrixCov())
             station.setMatrixCov(this.getMatrixCov().to1411CsStnTrajMatrixCov());
 
+        if (null != this.getSourceStation())
+            station.setSourceStation(this.getSourceStation().to1411CsRefWellboreTrajectoryStation());
 
-
-        if (null != srcStation.getSourceStation()) {
-            assertEquals(srcStation.getSourceStation().getStationReference(), destStation.getSourceStation().getStationReference());
-            if (null != srcStation.getSourceStation().getTrajectoryParent()) {
-                assertEquals(srcStation.getSourceStation().getTrajectoryParent().getValue(), destStation.getSourceStation().getTrajectoryParent().getValue());
-                assertEquals(srcStation.getSourceStation().getTrajectoryParent().getUidRef(), destStation.getSourceStation().getTrajectoryParent().getUidRef());
-            }
-            if (null != srcStation.getSourceStation().getWellboreParent()) {
-                assertEquals(srcStation.getSourceStation().getWellboreParent().getValue(), destStation.getSourceStation().getWellboreParent().getValue());
-                assertEquals(srcStation.getSourceStation().getWellboreParent().getUidRef(), destStation.getSourceStation().getWellboreParent().getUidRef());
-            }
-        }
-        if (null != srcStation.getCommonData()) {
-            assertEquals(src.getCommonData().getSourceName(), dest.getCommonData().getSourceName());
-            assertEquals(src.getCommonData().getDTimCreation(), dest.getCommonData().getDTimCreation());
-            assertEquals(src.getCommonData().getDTimLastChange(), dest.getCommonData().getDTimLastChange());
-            assertEquals(src.getCommonData().getItemState().value(), dest.getCommonData().getItemState().value());
-            assertEquals(src.getCommonData().getComments(), dest.getCommonData().getComments());
-        }
+        if (null != this.getCommonData())
+            station.setCommonData(this.getCommonData().to1411CommonData());
 
         // check repeating fields
-        if (null != srcStation.getLocation()) {
-            List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsLocation> srcStationLoc = srcStation.getLocation();
-            List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation> destStationLoc = destStation.getLocation();
-            for (int j = 0; j < srcStationLoc.size(); j++) {
-                // well crs
-                if (null != srcStationLoc.get(j).getWellCRS()) {
-                    assertEquals(srcStationLoc.get(j).getWellCRS().getUidRef(), destStationLoc.get(j).getWellCRS().getUidRef());
-                    assertEquals(srcStationLoc.get(j).getWellCRS().getValue(), destStationLoc.get(j).getWellCRS().getValue());
-                }
+        if (null != this.getLocation()) {
+            List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation> stationLoc = new ArrayList<>();
+            for (int j = 0; j < this.getLocation().size(); j++)
+                stationLoc.add(this.getLocation().get(j).to1411CsLocation());
 
-                // latitude
-                if (null != srcStationLoc.get(j).getLatitude()) {
-                    assertEquals(srcStationLoc.get(j).getLatitude().getUom(), destStationLoc.get(j).getLatitude().getUom());
-                    assertEquals(srcStationLoc.get(j).getLatitude().getValue(), destStationLoc.get(j).getLatitude().getValue());
-                }
-
-                // longitude
-                if (null != srcStationLoc.get(j).getLongitude()) {
-                    assertEquals(srcStationLoc.get(j).getLongitude().getUom(), destStationLoc.get(j).getLongitude().getUom());
-                    assertEquals(srcStationLoc.get(j).getLongitude().getValue(), destStationLoc.get(j).getLongitude().getValue());
-                }
-
-                // easting
-                if (null != srcStationLoc.get(j).getEasting()) {
-                    assertEquals(srcStationLoc.get(j).getEasting().getUom(), destStationLoc.get(j).getEasting().getUom());
-                    assertEquals(srcStationLoc.get(j).getEasting().getValue(), destStationLoc.get(j).getEasting().getValue());
-                }
-
-                // northing
-                if (null != srcStationLoc.get(j).getNorthing()) {
-                    assertEquals(srcStationLoc.get(j).getNorthing().getUom(), destStationLoc.get(j).getNorthing().getUom());
-                    assertEquals(srcStationLoc.get(j).getNorthing().getValue(), destStationLoc.get(j).getNorthing().getValue());
-                }
-
-                // westing
-                if (null != srcStationLoc.get(j).getWesting()) {
-                    assertEquals(srcStationLoc.get(j).getWesting().getUom(), destStationLoc.get(j).getWesting().getUom());
-                    assertEquals(srcStationLoc.get(j).getWesting().getValue(), destStationLoc.get(j).getWesting().getValue());
-                }
-
-                // southing
-                if (null != srcStationLoc.get(j).getSouthing()) {
-                    assertEquals(srcStationLoc.get(j).getSouthing().getUom(), destStationLoc.get(j).getSouthing().getUom());
-                    assertEquals(srcStationLoc.get(j).getSouthing().getValue(), destStationLoc.get(j).getSouthing().getValue());
-                }
-
-                // projectedX
-                if (null != srcStationLoc.get(j).getProjectedX()) {
-                    assertEquals(srcStationLoc.get(j).getProjectedX().getUom(), destStationLoc.get(j).getProjectedX().getUom());
-                    assertEquals(srcStationLoc.get(j).getProjectedX().getValue(), destStationLoc.get(j).getProjectedX().getValue());
-                }
-
-                // projectedY
-                if (null != srcStationLoc.get(j).getProjectedY()) {
-                    assertEquals(srcStationLoc.get(j).getProjectedY().getUom(), destStationLoc.get(j).getProjectedY().getUom());
-                    assertEquals(srcStationLoc.get(j).getProjectedY().getValue(), destStationLoc.get(j).getProjectedY().getValue());
-                }
-
-                // localX
-                if (null != srcStationLoc.get(j).getLocalX()) {
-                    assertEquals(srcStationLoc.get(j).getLocalX().getUom(), destStationLoc.get(j).getLocalX().getUom());
-                    assertEquals(srcStationLoc.get(j).getLocalX().getValue(), destStationLoc.get(j).getLocalX().getValue());
-                }
-
-                // localY
-                if (null != srcStationLoc.get(j).getLocalY()) {
-                    assertEquals(srcStationLoc.get(j).getLocalY().getUom(), destStationLoc.get(j).getLocalY().getUom());
-                    assertEquals(srcStationLoc.get(j).getLocalY().getValue(), destStationLoc.get(j).getLocalY().getValue());
-                }
-
-                assertEquals(srcStationLoc.get(j).isOriginal(), destStationLoc.get(j).isOriginal());
-                assertEquals(srcStationLoc.get(j).getDescription(), destStationLoc.get(j).getDescription());
-                assertEquals(srcStationLoc.get(j).getUid(), destStationLoc.get(j).getUid());
-            }
+            station.setLocation(stationLoc);
         }
 
         return station;
