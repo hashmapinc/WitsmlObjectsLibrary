@@ -1218,45 +1218,11 @@ public class CsTrajectoryStation {
         if (null != this.getValid())
             station.setValid(this.getValid().to1411CsStnTrajValid());
 
-        if (null != srcStation.getMatrixCov()) {
-            if (null != srcStation.getMatrixCov().getVarianceNN()) {
-                assertEquals(srcStation.getMatrixCov().getVarianceNN().getValue(), destStation.getMatrixCov().getVarianceNN().getValue());
-                assertEquals(srcStation.getMatrixCov().getVarianceNN().getUom().value(), destStation.getMatrixCov().getVarianceNN().getUom().value());
-            }
-            if (null != srcStation.getMatrixCov().getVarianceNE()) {
-                assertEquals(srcStation.getMatrixCov().getVarianceNE().getValue(), destStation.getMatrixCov().getVarianceNE().getValue());
-                assertEquals(srcStation.getMatrixCov().getVarianceNE().getUom().value(), destStation.getMatrixCov().getVarianceNE().getUom().value());
-            }
-            if (null != srcStation.getMatrixCov().getVarianceNVert()) {
-                assertEquals(srcStation.getMatrixCov().getVarianceNVert().getValue(), destStation.getMatrixCov().getVarianceNVert().getValue());
-                assertEquals(srcStation.getMatrixCov().getVarianceNVert().getUom().value(), destStation.getMatrixCov().getVarianceNVert().getUom().value());
-            }
-            if (null != srcStation.getMatrixCov().getVarianceEE()) {
-                assertEquals(srcStation.getMatrixCov().getVarianceEE().getValue(), destStation.getMatrixCov().getVarianceEE().getValue());
-                assertEquals(srcStation.getMatrixCov().getVarianceEE().getUom().value(), destStation.getMatrixCov().getVarianceEE().getUom().value());
-            }
-            if (null != srcStation.getMatrixCov().getVarianceEVert()) {
-                assertEquals(srcStation.getMatrixCov().getVarianceEVert().getValue(), destStation.getMatrixCov().getVarianceEVert().getValue());
-                assertEquals(srcStation.getMatrixCov().getVarianceEVert().getUom().value(), destStation.getMatrixCov().getVarianceEVert().getUom().value());
-            }
-            if (null != srcStation.getMatrixCov().getVarianceVertVert()) {
-                assertEquals(srcStation.getMatrixCov().getVarianceVertVert().getValue(), destStation.getMatrixCov().getVarianceVertVert().getValue());
-                assertEquals(srcStation.getMatrixCov().getVarianceVertVert().getUom().value(), destStation.getMatrixCov().getVarianceVertVert().getUom().value());
-            }
-            if (null != srcStation.getMatrixCov().getBiasN()) {
-                assertEquals(srcStation.getMatrixCov().getBiasN().getValue(), destStation.getMatrixCov().getBiasN().getValue());
-                assertEquals(srcStation.getMatrixCov().getBiasN().getUom(), destStation.getMatrixCov().getBiasN().getUom());
-            }
-            if (null != srcStation.getMatrixCov().getBiasE()) {
-                assertEquals(srcStation.getMatrixCov().getBiasE().getValue(), destStation.getMatrixCov().getBiasE().getValue());
-                assertEquals(srcStation.getMatrixCov().getBiasE().getUom(), destStation.getMatrixCov().getBiasE().getUom());
-            }
-            if (null != srcStation.getMatrixCov().getBiasVert()) {
-                assertEquals(srcStation.getMatrixCov().getBiasVert().getValue(), destStation.getMatrixCov().getBiasVert().getValue());
-                assertEquals(srcStation.getMatrixCov().getBiasVert().getUom(), destStation.getMatrixCov().getBiasVert().getUom());
-            }
+        if (null != this.getMatrixCov())
+            station.setMatrixCov(this.getMatrixCov().to1411CsStnTrajMatrixCov());
 
-        }
+
+
         if (null != srcStation.getSourceStation()) {
             assertEquals(srcStation.getSourceStation().getStationReference(), destStation.getSourceStation().getStationReference());
             if (null != srcStation.getSourceStation().getTrajectoryParent()) {

@@ -282,4 +282,45 @@ public class CsStnTrajMatrixCov {
         this.biasVert = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.CsStnTrajMatrixCov to1311CsStnTrajMatrixCov() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.CsStnTrajMatrixCov cov = new com.hashmapinc.tempus.WitsmlObjects.v1311.CsStnTrajMatrixCov();
+
+        // assign fields
+        if (null != this.getVarianceNN())
+            cov.setVarianceNN(this.getVarianceNN().to1311AreaMeasure());
+
+        if (null != this.getVarianceNE())
+            cov.setVarianceNE(this.getVarianceNE().to1311AreaMeasure());
+
+        if (null != this.getVarianceNVert())
+            cov.setVarianceNVert(this.getVarianceNVert().to1311AreaMeasure());
+
+        if (null != this.getVarianceNVert())
+            cov.setVarianceNVert(this.getVarianceNVert().to1311AreaMeasure());
+
+        if (null != this.getVarianceEVert())
+            cov.setVarianceEVert(this.getVarianceEVert().to1311AreaMeasure());
+
+        if (null != this.getVarianceVertVert())
+            cov.setVarianceVertVert(this.getVarianceVertVert().to1311AreaMeasure());
+
+        if (null != this.getBiasN())
+            cov.setBiasN(this.getBiasN().to1311Length());
+
+        if (null != this.getBiasE())
+            cov.setBiasE(this.getBiasE().to1311Length());
+
+        if (null != this.getBiasVert())
+            cov.setBiasVert(this.getBiasVert().to1311Length());
+
+        return cov;
+    }
+    //=========================================================================
+
 }
