@@ -328,4 +328,51 @@ public class CsStnTrajCorUsed {
         this.dirSensorOffset = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.CsStnTrajCorUsed to1411CsStnTrajCorUsed() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.CsStnTrajCorUsed cor = new com.hashmapinc.tempus.WitsmlObjects.v1411.CsStnTrajCorUsed();
+
+        // assign fields
+        if (null != this.getGravAxialAccelCor())
+            cor.setGravAxialAccelCor(this.getGravAxialAccelCor().to1411AnglePerLengthMeasure());
+
+        if (null != this.getGravTran1AccelCor())
+            cor.setGravTran1AccelCor(this.getGravTran1AccelCor().to1411AnglePerLengthMeasure());
+
+        if (null != this.getGravTran2AccelCor())
+            cor.setGravTran2AccelCor(this.getGravTran2AccelCor().to1411AnglePerLengthMeasure());
+
+        if (null != this.getMagAxialDrlstrCor())
+            cor.setMagAxialDrlstrCor(this.getMagAxialDrlstrCor().to1411MagneticInductionMeasure());
+
+        if (null != this.getMagTran1DrlstrCor())
+            cor.setMagTran1DrlstrCor(this.getMagTran1DrlstrCor().to1411MagneticInductionMeasure());
+
+        if (null != this.getMagTran2DrlstrCor())
+            cor.setMagTran2DrlstrCor(this.getMagTran2DrlstrCor().to1411MagneticInductionMeasure());
+
+        if (null != this.getSagIncCor())
+            cor.setSagIncCor(this.getSagIncCor().to1411PlaneAngleMeasure());
+
+        if (null != this.getSagAziCor())
+            cor.setSagAziCor(this.getSagAziCor().to1411PlaneAngleMeasure());
+
+        if (null != this.getStnMagDeclUsed())
+            cor.setStnMagDeclUsed(this.getStnMagDeclUsed().to1411PlaneAngleMeasure());
+
+        if (null != this.getStnGridCorUsed())
+            cor.setStnGridCorUsed(this.getStnGridCorUsed().to1411PlaneAngleMeasure());
+
+        if (null != this.getDirSensorOffset())
+            cor.setDirSensorOffset(this.getDirSensorOffset().to1411Length());
+
+        return cor;
+    }
+    //=========================================================================
+
 }
