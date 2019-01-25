@@ -201,4 +201,36 @@ public class CsStnTrajRawData {
         this.magTran2Raw = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.CsStnTrajRawData to1311CsStnTrajRawData() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.CsStnTrajRawData rawData = new com.hashmapinc.tempus.WitsmlObjects.v1311.CsStnTrajRawData();
+
+        // assign fields
+        if (null != this.getGravAxialRaw())
+            rawData.setGravAxialRaw(this.getGravAxialRaw().to1311AnglePerLengthMeasure());
+
+        if (null != this.getGravTran1Raw())
+            rawData.setGravTran1Raw(this.getGravTran1Raw().to1311AnglePerLengthMeasure());
+
+        if (null != this.getGravTran2Raw())
+            rawData.setGravTran2Raw(this.getGravTran2Raw().to1311AnglePerLengthMeasure());
+
+        if (null != this.getMagAxialRaw())
+            rawData.setMagAxialRaw(this.getMagAxialRaw().to1311MagneticInductionMeasure());
+
+        if (null != this.getMagTran1Raw())
+            rawData.setMagTran1Raw(this.getMagTran1Raw().to1311MagneticInductionMeasure());
+
+        if (null != this.getMagTran2Raw())
+            rawData.setMagTran2Raw(this.getMagTran2Raw().to1311MagneticInductionMeasure());
+
+        return rawData;
+    }
+    //=========================================================================
+
 }

@@ -1209,31 +1209,8 @@ public class CsTrajectoryStation {
         if (null != this.getStatusTrajStation())
             station.setStatusTrajStation(com.hashmapinc.tempus.WitsmlObjects.v1411.TrajStationStatus.fromValue(this.getStatusTrajStation().value()));
 
-        if (null != srcStation.getRawData()) {
-            if (null != srcStation.getRawData().getGravAxialRaw()) {
-                assertEquals(srcStation.getRawData().getGravAxialRaw().getValue(), destStation.getRawData().getGravAxialRaw().getValue());
-                assertEquals(srcStation.getRawData().getGravAxialRaw().getUom().value(), destStation.getRawData().getGravAxialRaw().getUom().value());
-            }
-            if (null != srcStation.getRawData().getGravTran1Raw()) {
-                assertEquals(srcStation.getRawData().getGravTran1Raw().getValue(), destStation.getRawData().getGravTran1Raw().getValue());
-                assertEquals(srcStation.getRawData().getGravTran1Raw().getUom().value(), destStation.getRawData().getGravTran1Raw().getUom().value());
-            }
-            if (null != srcStation.getRawData().getGravTran2Raw()) {
-                assertEquals(srcStation.getRawData().getGravTran2Raw().getValue(), destStation.getRawData().getGravTran2Raw().getValue());
-                assertEquals(srcStation.getRawData().getGravTran2Raw().getUom().value(), destStation.getRawData().getGravTran2Raw().getUom().value());
-            }
-            if (null != srcStation.getRawData().getMagAxialRaw()) {
-                assertEquals(srcStation.getRawData().getMagAxialRaw().getValue(), destStation.getRawData().getMagAxialRaw().getValue());
-                assertEquals(srcStation.getRawData().getMagAxialRaw().getUom().value(), destStation.getRawData().getMagAxialRaw().getUom().value());
-            }
-            if (null != srcStation.getRawData().getMagTran1Raw()) {
-                assertEquals(srcStation.getRawData().getMagTran1Raw().getValue(), destStation.getRawData().getMagTran1Raw().getValue());
-                assertEquals(srcStation.getRawData().getMagTran1Raw().getUom().value(), destStation.getRawData().getMagTran1Raw().getUom().value());
-            }
-            if (null != srcStation.getRawData().getMagTran2Raw()) {
-                assertEquals(srcStation.getRawData().getMagTran2Raw().getValue(), destStation.getRawData().getMagTran2Raw().getValue());
-                assertEquals(srcStation.getRawData().getMagTran2Raw().getUom().value(), destStation.getRawData().getMagTran2Raw().getUom().value());
-            }
+        if (null != this.getRawData()) {
+            station.setRawData(this.getRawData());
 
         }
         if (null != srcStation.getCorUsed()) {
