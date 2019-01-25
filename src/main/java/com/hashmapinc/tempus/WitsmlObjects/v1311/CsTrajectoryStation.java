@@ -1174,40 +1174,40 @@ public class CsTrajectoryStation {
             station.setVertSect(this.getVertSect().to1411Length());
 
         if (null != this.getDls())
-            station.setDls(this.getDls());
+            station.setDls(this.getDls().to1411AnglePerLengthMeasure());
 
-        if (null != srcStation.getRateTurn())
-            station.setTvd(this.getTvd().to1411VerticalDepthCoord());
+        if (null != this.getRateTurn())
+            station.setRateTurn(this.getRateTurn().to1411AnglePerLengthMeasure());
 
-        if (null != srcStation.getRateBuild())
-            station.setTvd(this.getTvd().to1411VerticalDepthCoord());
+        if (null != this.getRateBuild())
+            station.setRateBuild(this.getRateBuild().to1411AnglePerLengthMeasure());
 
-        if (null != srcStation.getMdDelta())
-            station.setTvd(this.getTvd().to1411VerticalDepthCoord());
+        if (null != this.getMdDelta())
+            station.setMdDelta(this.getMdDelta().to1411LengthMeasure());
 
-        if (null != srcStation.getTvdDelta())
-            station.setTvd(this.getTvd().to1411VerticalDepthCoord());
+        if (null != this.getTvdDelta())
+            station.setTvdDelta(this.getTvdDelta().to1411LengthMeasure());
 
-        if (null != srcStation.getGravTotalUncert())
-            station.setTvd(this.getTvd().to1411VerticalDepthCoord());
+        if (null != this.getGravTotalUncert())
+            station.setGravTotalUncert(this.getGravTotalUncert().to1411AnglePerLengthMeasure());
 
-        if (null != srcStation.getDipAngleUncert())
-            station.setTvd(this.getTvd().to1411VerticalDepthCoord());
+        if (null != this.getDipAngleUncert())
+            station.setDipAngleUncert(this.getDipAngleUncert().to1411PlaneAngleMeasure());
 
-        if (null != srcStation.getMagTotalUncert())
-            station.setTvd(this.getTvd().to1411VerticalDepthCoord());
+        if (null != this.getMagTotalUncert())
+            station.setMagTotalUncert(this.getMagTotalUncert().to1411MagneticInductionMeasure());
 
-        if (null != srcStation.getGravTotalFieldReference())
-            station.setTvd(this.getTvd().to1411VerticalDepthCoord());
+        if (null != this.getGravTotalFieldReference())
+            station.setGravTotalFieldReference(this.getGravTotalFieldReference().to1411AnglePerLengthMeasure());
 
-        if (null != srcStation.getMagTotalFieldReference())
-            station.setTvd(this.getTvd().to1411VerticalDepthCoord());
+        if (null != this.getMagTotalFieldReference())
+            station.setMagTotalFieldReference(this.getMagTotalFieldReference().to1411MagneticInductionMeasure());
 
-        if (null != srcStation.getMagDipAngleReference())
-            station.setTvd(this.getTvd().to1411VerticalDepthCoord());
+        if (null != this.getMagDipAngleReference())
+            station.setMagDipAngleReference(this.getMagDipAngleReference().to1411PlaneAngleMeasure());
 
-        if (null != srcStation.getStatusTrajStation())
-            assertEquals(srcStation.getStatusTrajStation().value(), destStation.getStatusTrajStation().value());
+        if (null != this.getStatusTrajStation())
+            station.setStatusTrajStation(com.hashmapinc.tempus.WitsmlObjects.v1411.TrajStationStatus.fromValue(this.getStatusTrajStation().value()));
 
         if (null != srcStation.getRawData()) {
             if (null != srcStation.getRawData().getGravAxialRaw()) {

@@ -118,6 +118,17 @@ public class MeasuredDepthCoord
 
         return mdCoord;
     }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.LengthMeasure to1411LengthMeasure() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.LengthMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v1411.LengthMeasure();
+
+        if (null != this.getUom())
+            measure.setUom(this.getUom().value());
+
+        measure.setValue(this.value);
+
+        return measure;
+    }
     //=========================================================================
 
 }
