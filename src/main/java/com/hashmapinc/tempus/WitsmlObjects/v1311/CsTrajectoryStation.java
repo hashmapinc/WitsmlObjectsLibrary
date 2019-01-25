@@ -1114,4 +1114,325 @@ public class CsTrajectoryStation {
         this.uid = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.CsTrajectoryStation to1411CsTrajectoryStation() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.CsTrajectoryStation station = new com.hashmapinc.tempus.WitsmlObjects.v1411.CsTrajectoryStation();
+
+        // assign fields
+        // check non-complex, non-repeating fields
+        station.setDTimStn(this.getDTimStn());
+        station.setModelToolError(this.getModelToolError());
+        station.setGravAccelCorUsed(this.isGravAccelCorUsed());
+        station.setMagXAxialCorUsed(this.isMagXAxialCorUsed());
+        station.setSagCorUsed(this.isSagCorUsed());
+        station.setMagDrlstrCorUsed(this.isMagDrlstrCorUsed());
+        station.setMagModelUsed(this.getMagModelUsed());
+        station.setMagModelValid(this.getMagModelValid());
+        station.setGeoModelUsed(this.getGeoModelUsed());
+        station.setUid(this.getUid());
+
+        // check complex fields
+        if (null != this.getTarget())
+            station.setTarget(this.getTarget().to1411RefNameString());
+
+        if (null != this.getTypeTrajStation())
+            station.setTypeTrajStation(com.hashmapinc.tempus.WitsmlObjects.v1411.TrajStationType.fromValue(this.getTypeTrajStation().value()));
+
+        if (null != this.getTypeSurveyTool())
+            station.setTypeSurveyTool(this.getTypeSurveyTool().value());
+
+        if (null != this.getMd())
+            station.setMd(this.getMd().to1411MeasuredDepthCoord());
+
+        if (null != this.getTvd())
+            station.setTvd(this.getTvd().to1411VerticalDepthCoord());
+
+        if (null != this.getIncl())
+            station.setIncl(this.getIncl().to1411PlaneAngleMeasure());
+
+        if (null != this.getAzi())
+            station.setAzi(this.getAzi().to1411PlaneAngleMeasure());
+
+        if (null != this.getMtf())
+            station.setMtf(this.getMtf().to1411PlaneAngleMeasure());
+
+        if (null != this.getGtf())
+            station.setGtf(this.getGtf().to1411PlaneAngleMeasure());
+
+        if (null != this.getDispNs())
+            station.setDispNs(this.getDispNs().to1411Length());
+
+        if (null != this.getDispEw())
+            station.setDispEw(this.getDispEw().to1411Length());
+
+        if (null != this.getVertSect())
+            station.setVertSect(this.getVertSect().to1411Length());
+
+        if (null != this.getDls())
+            station.setDls(this.getDls());
+
+        if (null != srcStation.getRateTurn())
+            station.setTvd(this.getTvd().to1411VerticalDepthCoord());
+
+        if (null != srcStation.getRateBuild())
+            station.setTvd(this.getTvd().to1411VerticalDepthCoord());
+
+        if (null != srcStation.getMdDelta())
+            station.setTvd(this.getTvd().to1411VerticalDepthCoord());
+
+        if (null != srcStation.getTvdDelta())
+            station.setTvd(this.getTvd().to1411VerticalDepthCoord());
+
+        if (null != srcStation.getGravTotalUncert())
+            station.setTvd(this.getTvd().to1411VerticalDepthCoord());
+
+        if (null != srcStation.getDipAngleUncert())
+            station.setTvd(this.getTvd().to1411VerticalDepthCoord());
+
+        if (null != srcStation.getMagTotalUncert())
+            station.setTvd(this.getTvd().to1411VerticalDepthCoord());
+
+        if (null != srcStation.getGravTotalFieldReference())
+            station.setTvd(this.getTvd().to1411VerticalDepthCoord());
+
+        if (null != srcStation.getMagTotalFieldReference())
+            station.setTvd(this.getTvd().to1411VerticalDepthCoord());
+
+        if (null != srcStation.getMagDipAngleReference())
+            station.setTvd(this.getTvd().to1411VerticalDepthCoord());
+
+        if (null != srcStation.getStatusTrajStation())
+            assertEquals(srcStation.getStatusTrajStation().value(), destStation.getStatusTrajStation().value());
+
+        if (null != srcStation.getRawData()) {
+            if (null != srcStation.getRawData().getGravAxialRaw()) {
+                assertEquals(srcStation.getRawData().getGravAxialRaw().getValue(), destStation.getRawData().getGravAxialRaw().getValue());
+                assertEquals(srcStation.getRawData().getGravAxialRaw().getUom().value(), destStation.getRawData().getGravAxialRaw().getUom().value());
+            }
+            if (null != srcStation.getRawData().getGravTran1Raw()) {
+                assertEquals(srcStation.getRawData().getGravTran1Raw().getValue(), destStation.getRawData().getGravTran1Raw().getValue());
+                assertEquals(srcStation.getRawData().getGravTran1Raw().getUom().value(), destStation.getRawData().getGravTran1Raw().getUom().value());
+            }
+            if (null != srcStation.getRawData().getGravTran2Raw()) {
+                assertEquals(srcStation.getRawData().getGravTran2Raw().getValue(), destStation.getRawData().getGravTran2Raw().getValue());
+                assertEquals(srcStation.getRawData().getGravTran2Raw().getUom().value(), destStation.getRawData().getGravTran2Raw().getUom().value());
+            }
+            if (null != srcStation.getRawData().getMagAxialRaw()) {
+                assertEquals(srcStation.getRawData().getMagAxialRaw().getValue(), destStation.getRawData().getMagAxialRaw().getValue());
+                assertEquals(srcStation.getRawData().getMagAxialRaw().getUom().value(), destStation.getRawData().getMagAxialRaw().getUom().value());
+            }
+            if (null != srcStation.getRawData().getMagTran1Raw()) {
+                assertEquals(srcStation.getRawData().getMagTran1Raw().getValue(), destStation.getRawData().getMagTran1Raw().getValue());
+                assertEquals(srcStation.getRawData().getMagTran1Raw().getUom().value(), destStation.getRawData().getMagTran1Raw().getUom().value());
+            }
+            if (null != srcStation.getRawData().getMagTran2Raw()) {
+                assertEquals(srcStation.getRawData().getMagTran2Raw().getValue(), destStation.getRawData().getMagTran2Raw().getValue());
+                assertEquals(srcStation.getRawData().getMagTran2Raw().getUom().value(), destStation.getRawData().getMagTran2Raw().getUom().value());
+            }
+
+        }
+        if (null != srcStation.getCorUsed()) {
+            if (null != srcStation.getCorUsed().getGravAxialAccelCor()) {
+                assertEquals(srcStation.getCorUsed().getGravAxialAccelCor().getValue(), destStation.getCorUsed().getGravAxialAccelCor().getValue());
+                assertEquals(srcStation.getCorUsed().getGravAxialAccelCor().getUom().value(), destStation.getCorUsed().getGravAxialAccelCor().getUom().value());
+            }
+            if (null != srcStation.getCorUsed().getGravTran1AccelCor()) {
+                assertEquals(srcStation.getCorUsed().getGravTran1AccelCor().getValue(), destStation.getCorUsed().getGravTran1AccelCor().getValue());
+                assertEquals(srcStation.getCorUsed().getGravTran1AccelCor().getUom().value(), destStation.getCorUsed().getGravTran1AccelCor().getUom().value());
+            }
+            if (null != srcStation.getCorUsed().getGravTran2AccelCor()) {
+                assertEquals(srcStation.getCorUsed().getGravTran2AccelCor().getValue(), destStation.getCorUsed().getGravTran2AccelCor().getValue());
+                assertEquals(srcStation.getCorUsed().getGravTran2AccelCor().getUom().value(), destStation.getCorUsed().getGravTran2AccelCor().getUom().value());
+            }
+            if (null != srcStation.getCorUsed().getMagAxialDrlstrCor()) {
+                assertEquals(srcStation.getCorUsed().getMagAxialDrlstrCor().getValue(), destStation.getCorUsed().getMagAxialDrlstrCor().getValue());
+                assertEquals(srcStation.getCorUsed().getMagAxialDrlstrCor().getUom().value(), destStation.getCorUsed().getMagAxialDrlstrCor().getUom().value());
+            }
+            if (null != srcStation.getCorUsed().getMagTran1DrlstrCor()) {
+                assertEquals(srcStation.getCorUsed().getMagTran1DrlstrCor().getValue(), destStation.getCorUsed().getMagTran1DrlstrCor().getValue());
+                assertEquals(srcStation.getCorUsed().getMagTran1DrlstrCor().getUom().value(), destStation.getCorUsed().getMagTran1DrlstrCor().getUom().value());
+            }
+            if (null != srcStation.getCorUsed().getMagTran2DrlstrCor()) {
+                assertEquals(srcStation.getCorUsed().getMagTran2DrlstrCor().getValue(), destStation.getCorUsed().getMagTran2DrlstrCor().getValue());
+                assertEquals(srcStation.getCorUsed().getMagTran2DrlstrCor().getUom().value(), destStation.getCorUsed().getMagTran2DrlstrCor().getUom().value());
+            }
+            if (null != srcStation.getCorUsed().getSagIncCor()) {
+                assertEquals(srcStation.getCorUsed().getSagIncCor().getValue(), destStation.getCorUsed().getSagIncCor().getValue());
+                assertEquals(srcStation.getCorUsed().getSagIncCor().getUom(), destStation.getCorUsed().getSagIncCor().getUom());
+            }
+            if (null != srcStation.getCorUsed().getSagAziCor()) {
+                assertEquals(srcStation.getCorUsed().getSagAziCor().getValue(), destStation.getCorUsed().getSagAziCor().getValue());
+                assertEquals(srcStation.getCorUsed().getSagAziCor().getUom(), destStation.getCorUsed().getSagAziCor().getUom());
+            }
+            if (null != srcStation.getCorUsed().getStnMagDeclUsed()) {
+                assertEquals(srcStation.getCorUsed().getStnMagDeclUsed().getValue(), destStation.getCorUsed().getStnMagDeclUsed().getValue());
+                assertEquals(srcStation.getCorUsed().getStnMagDeclUsed().getUom(), destStation.getCorUsed().getStnMagDeclUsed().getUom());
+            }
+            if (null != srcStation.getCorUsed().getStnGridCorUsed()) {
+                assertEquals(srcStation.getCorUsed().getStnGridCorUsed().getValue(), destStation.getCorUsed().getStnGridCorUsed().getValue());
+                assertEquals(srcStation.getCorUsed().getStnGridCorUsed().getUom(), destStation.getCorUsed().getStnGridCorUsed().getUom());
+            }
+            if (null != srcStation.getCorUsed().getDirSensorOffset()) {
+                assertEquals(srcStation.getCorUsed().getDirSensorOffset().getValue(), destStation.getCorUsed().getDirSensorOffset().getValue());
+                assertEquals(srcStation.getCorUsed().getDirSensorOffset().getUom(), destStation.getCorUsed().getDirSensorOffset().getUom());
+            }
+        }
+        if (null != srcStation.getValid()) {
+            if (null != srcStation.getValid().getMagTotalFieldCalc()) {
+                assertEquals(srcStation.getValid().getMagTotalFieldCalc().getValue(), destStation.getValid().getMagTotalFieldCalc().getValue());
+                assertEquals(srcStation.getValid().getMagTotalFieldCalc().getUom().value(), destStation.getValid().getMagTotalFieldCalc().getUom().value());
+            }
+            if (null != srcStation.getValid().getMagDipAngleCalc()) {
+                assertEquals(srcStation.getValid().getMagDipAngleCalc().getValue(), destStation.getValid().getMagDipAngleCalc().getValue());
+                assertEquals(srcStation.getValid().getMagDipAngleCalc().getUom(), destStation.getValid().getMagDipAngleCalc().getUom());
+            }
+            if (null != srcStation.getValid().getGravTotalFieldCalc()) {
+                assertEquals(srcStation.getValid().getGravTotalFieldCalc().getValue(), destStation.getValid().getGravTotalFieldCalc().getValue());
+                assertEquals(srcStation.getValid().getGravTotalFieldCalc().getUom().value(), destStation.getValid().getGravTotalFieldCalc().getUom().value());
+            }
+        }
+        if (null != srcStation.getMatrixCov()) {
+            if (null != srcStation.getMatrixCov().getVarianceNN()) {
+                assertEquals(srcStation.getMatrixCov().getVarianceNN().getValue(), destStation.getMatrixCov().getVarianceNN().getValue());
+                assertEquals(srcStation.getMatrixCov().getVarianceNN().getUom().value(), destStation.getMatrixCov().getVarianceNN().getUom().value());
+            }
+            if (null != srcStation.getMatrixCov().getVarianceNE()) {
+                assertEquals(srcStation.getMatrixCov().getVarianceNE().getValue(), destStation.getMatrixCov().getVarianceNE().getValue());
+                assertEquals(srcStation.getMatrixCov().getVarianceNE().getUom().value(), destStation.getMatrixCov().getVarianceNE().getUom().value());
+            }
+            if (null != srcStation.getMatrixCov().getVarianceNVert()) {
+                assertEquals(srcStation.getMatrixCov().getVarianceNVert().getValue(), destStation.getMatrixCov().getVarianceNVert().getValue());
+                assertEquals(srcStation.getMatrixCov().getVarianceNVert().getUom().value(), destStation.getMatrixCov().getVarianceNVert().getUom().value());
+            }
+            if (null != srcStation.getMatrixCov().getVarianceEE()) {
+                assertEquals(srcStation.getMatrixCov().getVarianceEE().getValue(), destStation.getMatrixCov().getVarianceEE().getValue());
+                assertEquals(srcStation.getMatrixCov().getVarianceEE().getUom().value(), destStation.getMatrixCov().getVarianceEE().getUom().value());
+            }
+            if (null != srcStation.getMatrixCov().getVarianceEVert()) {
+                assertEquals(srcStation.getMatrixCov().getVarianceEVert().getValue(), destStation.getMatrixCov().getVarianceEVert().getValue());
+                assertEquals(srcStation.getMatrixCov().getVarianceEVert().getUom().value(), destStation.getMatrixCov().getVarianceEVert().getUom().value());
+            }
+            if (null != srcStation.getMatrixCov().getVarianceVertVert()) {
+                assertEquals(srcStation.getMatrixCov().getVarianceVertVert().getValue(), destStation.getMatrixCov().getVarianceVertVert().getValue());
+                assertEquals(srcStation.getMatrixCov().getVarianceVertVert().getUom().value(), destStation.getMatrixCov().getVarianceVertVert().getUom().value());
+            }
+            if (null != srcStation.getMatrixCov().getBiasN()) {
+                assertEquals(srcStation.getMatrixCov().getBiasN().getValue(), destStation.getMatrixCov().getBiasN().getValue());
+                assertEquals(srcStation.getMatrixCov().getBiasN().getUom(), destStation.getMatrixCov().getBiasN().getUom());
+            }
+            if (null != srcStation.getMatrixCov().getBiasE()) {
+                assertEquals(srcStation.getMatrixCov().getBiasE().getValue(), destStation.getMatrixCov().getBiasE().getValue());
+                assertEquals(srcStation.getMatrixCov().getBiasE().getUom(), destStation.getMatrixCov().getBiasE().getUom());
+            }
+            if (null != srcStation.getMatrixCov().getBiasVert()) {
+                assertEquals(srcStation.getMatrixCov().getBiasVert().getValue(), destStation.getMatrixCov().getBiasVert().getValue());
+                assertEquals(srcStation.getMatrixCov().getBiasVert().getUom(), destStation.getMatrixCov().getBiasVert().getUom());
+            }
+
+        }
+        if (null != srcStation.getSourceStation()) {
+            assertEquals(srcStation.getSourceStation().getStationReference(), destStation.getSourceStation().getStationReference());
+            if (null != srcStation.getSourceStation().getTrajectoryParent()) {
+                assertEquals(srcStation.getSourceStation().getTrajectoryParent().getValue(), destStation.getSourceStation().getTrajectoryParent().getValue());
+                assertEquals(srcStation.getSourceStation().getTrajectoryParent().getUidRef(), destStation.getSourceStation().getTrajectoryParent().getUidRef());
+            }
+            if (null != srcStation.getSourceStation().getWellboreParent()) {
+                assertEquals(srcStation.getSourceStation().getWellboreParent().getValue(), destStation.getSourceStation().getWellboreParent().getValue());
+                assertEquals(srcStation.getSourceStation().getWellboreParent().getUidRef(), destStation.getSourceStation().getWellboreParent().getUidRef());
+            }
+        }
+        if (null != srcStation.getCommonData()) {
+            assertEquals(src.getCommonData().getSourceName(), dest.getCommonData().getSourceName());
+            assertEquals(src.getCommonData().getDTimCreation(), dest.getCommonData().getDTimCreation());
+            assertEquals(src.getCommonData().getDTimLastChange(), dest.getCommonData().getDTimLastChange());
+            assertEquals(src.getCommonData().getItemState().value(), dest.getCommonData().getItemState().value());
+            assertEquals(src.getCommonData().getComments(), dest.getCommonData().getComments());
+        }
+
+        // check repeating fields
+        if (null != srcStation.getLocation()) {
+            List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsLocation> srcStationLoc = srcStation.getLocation();
+            List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation> destStationLoc = destStation.getLocation();
+            for (int j = 0; j < srcStationLoc.size(); j++) {
+                // well crs
+                if (null != srcStationLoc.get(j).getWellCRS()) {
+                    assertEquals(srcStationLoc.get(j).getWellCRS().getUidRef(), destStationLoc.get(j).getWellCRS().getUidRef());
+                    assertEquals(srcStationLoc.get(j).getWellCRS().getValue(), destStationLoc.get(j).getWellCRS().getValue());
+                }
+
+                // latitude
+                if (null != srcStationLoc.get(j).getLatitude()) {
+                    assertEquals(srcStationLoc.get(j).getLatitude().getUom(), destStationLoc.get(j).getLatitude().getUom());
+                    assertEquals(srcStationLoc.get(j).getLatitude().getValue(), destStationLoc.get(j).getLatitude().getValue());
+                }
+
+                // longitude
+                if (null != srcStationLoc.get(j).getLongitude()) {
+                    assertEquals(srcStationLoc.get(j).getLongitude().getUom(), destStationLoc.get(j).getLongitude().getUom());
+                    assertEquals(srcStationLoc.get(j).getLongitude().getValue(), destStationLoc.get(j).getLongitude().getValue());
+                }
+
+                // easting
+                if (null != srcStationLoc.get(j).getEasting()) {
+                    assertEquals(srcStationLoc.get(j).getEasting().getUom(), destStationLoc.get(j).getEasting().getUom());
+                    assertEquals(srcStationLoc.get(j).getEasting().getValue(), destStationLoc.get(j).getEasting().getValue());
+                }
+
+                // northing
+                if (null != srcStationLoc.get(j).getNorthing()) {
+                    assertEquals(srcStationLoc.get(j).getNorthing().getUom(), destStationLoc.get(j).getNorthing().getUom());
+                    assertEquals(srcStationLoc.get(j).getNorthing().getValue(), destStationLoc.get(j).getNorthing().getValue());
+                }
+
+                // westing
+                if (null != srcStationLoc.get(j).getWesting()) {
+                    assertEquals(srcStationLoc.get(j).getWesting().getUom(), destStationLoc.get(j).getWesting().getUom());
+                    assertEquals(srcStationLoc.get(j).getWesting().getValue(), destStationLoc.get(j).getWesting().getValue());
+                }
+
+                // southing
+                if (null != srcStationLoc.get(j).getSouthing()) {
+                    assertEquals(srcStationLoc.get(j).getSouthing().getUom(), destStationLoc.get(j).getSouthing().getUom());
+                    assertEquals(srcStationLoc.get(j).getSouthing().getValue(), destStationLoc.get(j).getSouthing().getValue());
+                }
+
+                // projectedX
+                if (null != srcStationLoc.get(j).getProjectedX()) {
+                    assertEquals(srcStationLoc.get(j).getProjectedX().getUom(), destStationLoc.get(j).getProjectedX().getUom());
+                    assertEquals(srcStationLoc.get(j).getProjectedX().getValue(), destStationLoc.get(j).getProjectedX().getValue());
+                }
+
+                // projectedY
+                if (null != srcStationLoc.get(j).getProjectedY()) {
+                    assertEquals(srcStationLoc.get(j).getProjectedY().getUom(), destStationLoc.get(j).getProjectedY().getUom());
+                    assertEquals(srcStationLoc.get(j).getProjectedY().getValue(), destStationLoc.get(j).getProjectedY().getValue());
+                }
+
+                // localX
+                if (null != srcStationLoc.get(j).getLocalX()) {
+                    assertEquals(srcStationLoc.get(j).getLocalX().getUom(), destStationLoc.get(j).getLocalX().getUom());
+                    assertEquals(srcStationLoc.get(j).getLocalX().getValue(), destStationLoc.get(j).getLocalX().getValue());
+                }
+
+                // localY
+                if (null != srcStationLoc.get(j).getLocalY()) {
+                    assertEquals(srcStationLoc.get(j).getLocalY().getUom(), destStationLoc.get(j).getLocalY().getUom());
+                    assertEquals(srcStationLoc.get(j).getLocalY().getValue(), destStationLoc.get(j).getLocalY().getValue());
+                }
+
+                assertEquals(srcStationLoc.get(j).isOriginal(), destStationLoc.get(j).isOriginal());
+                assertEquals(srcStationLoc.get(j).getDescription(), destStationLoc.get(j).getDescription());
+                assertEquals(srcStationLoc.get(j).getUid(), destStationLoc.get(j).getUid());
+            }
+        }
+
+        return station;
+    }
+    //=========================================================================
+
 }
