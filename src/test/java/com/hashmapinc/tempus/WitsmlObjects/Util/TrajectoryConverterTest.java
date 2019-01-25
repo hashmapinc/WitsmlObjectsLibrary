@@ -911,7 +911,7 @@ public class TrajectoryConverterTest {
                 if (null != srcStation.getTypeTrajStation())
                     assertEquals(srcStation.getTypeTrajStation().value(), destStation.getTypeTrajStation().value());
                 if (null != srcStation.getTypeSurveyTool())
-                    assertEquals(srcStation.getTypeSurveyTool().value(), destStation.getTypeSurveyTool().value());
+                    assertEquals(srcStation.getTypeSurveyTool().value(), destStation.getTypeSurveyTool());
                 if (null != srcStation.getMd()) {
                     assertEquals(srcStation.getMd().getValue(), destStation.getMd().getValue());
                     assertEquals(srcStation.getMd().getUom(), destStation.getMd().getUom().value());
@@ -952,15 +952,15 @@ public class TrajectoryConverterTest {
                 }
                 if (null != srcStation.getDls()) {
                     assertEquals(srcStation.getDls().getValue(), destStation.getDls().getValue());
-                    assertEquals(srcStation.getDls().getUom().value(), destStation.getDls().getUom());
+                    assertEquals(srcStation.getDls().getUom(), destStation.getDls().getUom().value());
                 }
                 if (null != srcStation.getRateTurn()) {
                     assertEquals(srcStation.getRateTurn().getValue(), destStation.getRateTurn().getValue());
-                    assertEquals(srcStation.getRateTurn().getUom().value(), destStation.getRateTurn().getUom());
+                    assertEquals(srcStation.getRateTurn().getUom(), destStation.getRateTurn().getUom().value());
                 }
                 if (null != srcStation.getRateBuild()) {
                     assertEquals(srcStation.getRateBuild().getValue(), destStation.getRateBuild().getValue());
-                    assertEquals(srcStation.getRateBuild().getUom().value(), destStation.getRateBuild().getUom());
+                    assertEquals(srcStation.getRateBuild().getUom(), destStation.getRateBuild().getUom().value());
                 }
                 if (null != srcStation.getMdDelta()) {
                     assertEquals(srcStation.getMdDelta().getValue(), destStation.getMdDelta().getValue());
@@ -980,7 +980,7 @@ public class TrajectoryConverterTest {
                 }
                 if (null != srcStation.getMagTotalUncert()) {
                     assertEquals(srcStation.getMagTotalUncert().getValue(), destStation.getMagTotalUncert().getValue());
-                    assertEquals(srcStation.getMagTotalUncert().getUom().value(), destStation.getMagTotalUncert().getUom());
+                    assertEquals(srcStation.getMagTotalUncert().getUom(), destStation.getMagTotalUncert().getUom().value());
                 }
                 if (null != srcStation.getGravTotalFieldReference()) {
                     assertEquals(srcStation.getGravTotalFieldReference().getValue(), destStation.getGravTotalFieldReference().getValue());
@@ -988,7 +988,7 @@ public class TrajectoryConverterTest {
                 }
                 if (null != srcStation.getMagTotalFieldReference()) {
                     assertEquals(srcStation.getMagTotalFieldReference().getValue(), destStation.getMagTotalFieldReference().getValue());
-                    assertEquals(srcStation.getMagTotalFieldReference().getUom().value(), destStation.getMagTotalFieldReference().getUom());
+                    assertEquals(srcStation.getMagTotalFieldReference().getUom(), destStation.getMagTotalFieldReference().getUom().value());
                 }
                 if (null != srcStation.getMagDipAngleReference()) {
                     assertEquals(srcStation.getMagDipAngleReference().getValue(), destStation.getMagDipAngleReference().getValue());
@@ -1011,15 +1011,15 @@ public class TrajectoryConverterTest {
                     }
                     if (null != srcStation.getRawData().getMagAxialRaw()) {
                         assertEquals(srcStation.getRawData().getMagAxialRaw().getValue(), destStation.getRawData().getMagAxialRaw().getValue());
-                        assertEquals(srcStation.getRawData().getMagAxialRaw().getUom().value(), destStation.getRawData().getMagAxialRaw().getUom());
+                        assertEquals(srcStation.getRawData().getMagAxialRaw().getUom(), destStation.getRawData().getMagAxialRaw().getUom().value());
                     }
                     if (null != srcStation.getRawData().getMagTran1Raw()) {
                         assertEquals(srcStation.getRawData().getMagTran1Raw().getValue(), destStation.getRawData().getMagTran1Raw().getValue());
-                        assertEquals(srcStation.getRawData().getMagTran1Raw().getUom().value(), destStation.getRawData().getMagTran1Raw().getUom());
+                        assertEquals(srcStation.getRawData().getMagTran1Raw().getUom(), destStation.getRawData().getMagTran1Raw().getUom().value());
                     }
                     if (null != srcStation.getRawData().getMagTran2Raw()) {
                         assertEquals(srcStation.getRawData().getMagTran2Raw().getValue(), destStation.getRawData().getMagTran2Raw().getValue());
-                        assertEquals(srcStation.getRawData().getMagTran2Raw().getUom().value(), destStation.getRawData().getMagTran2Raw().getUom());
+                        assertEquals(srcStation.getRawData().getMagTran2Raw().getUom(), destStation.getRawData().getMagTran2Raw().getUom().value());
                     }
 
                 }
@@ -1038,15 +1038,15 @@ public class TrajectoryConverterTest {
                     }
                     if (null != srcStation.getCorUsed().getMagAxialDrlstrCor()) {
                         assertEquals(srcStation.getCorUsed().getMagAxialDrlstrCor().getValue(), destStation.getCorUsed().getMagAxialDrlstrCor().getValue());
-                        assertEquals(srcStation.getCorUsed().getMagAxialDrlstrCor().getUom().value(), destStation.getCorUsed().getMagAxialDrlstrCor().getUom());
+                        assertEquals(srcStation.getCorUsed().getMagAxialDrlstrCor().getUom(), destStation.getCorUsed().getMagAxialDrlstrCor().getUom().value());
                     }
                     if (null != srcStation.getCorUsed().getMagTran1DrlstrCor()) {
                         assertEquals(srcStation.getCorUsed().getMagTran1DrlstrCor().getValue(), destStation.getCorUsed().getMagTran1DrlstrCor().getValue());
-                        assertEquals(srcStation.getCorUsed().getMagTran1DrlstrCor().getUom().value(), destStation.getCorUsed().getMagTran1DrlstrCor().getUom());
+                        assertEquals(srcStation.getCorUsed().getMagTran1DrlstrCor().getUom(), destStation.getCorUsed().getMagTran1DrlstrCor().getUom().value());
                     }
                     if (null != srcStation.getCorUsed().getMagTran2DrlstrCor()) {
                         assertEquals(srcStation.getCorUsed().getMagTran2DrlstrCor().getValue(), destStation.getCorUsed().getMagTran2DrlstrCor().getValue());
-                        assertEquals(srcStation.getCorUsed().getMagTran2DrlstrCor().getUom().value(), destStation.getCorUsed().getMagTran2DrlstrCor().getUom());
+                        assertEquals(srcStation.getCorUsed().getMagTran2DrlstrCor().getUom(), destStation.getCorUsed().getMagTran2DrlstrCor().getUom().value());
                     }
                     if (null != srcStation.getCorUsed().getSagIncCor()) {
                         assertEquals(srcStation.getCorUsed().getSagIncCor().getValue(), destStation.getCorUsed().getSagIncCor().getValue());
@@ -1068,7 +1068,7 @@ public class TrajectoryConverterTest {
                 if (null != srcStation.getValid()) {
                     if (null != srcStation.getValid().getMagTotalFieldCalc()) {
                         assertEquals(srcStation.getValid().getMagTotalFieldCalc().getValue(), destStation.getValid().getMagTotalFieldCalc().getValue());
-                        assertEquals(srcStation.getValid().getMagTotalFieldCalc().getUom().value(), destStation.getValid().getMagTotalFieldCalc().getUom());
+                        assertEquals(srcStation.getValid().getMagTotalFieldCalc().getUom(), destStation.getValid().getMagTotalFieldCalc().getUom().value());
                     }
                     if (null != srcStation.getValid().getMagDipAngleCalc()) {
                         assertEquals(srcStation.getValid().getMagDipAngleCalc().getValue(), destStation.getValid().getMagDipAngleCalc().getValue());
@@ -1121,17 +1121,16 @@ public class TrajectoryConverterTest {
                 if (null != srcStation.getSourceStation()) {
                     assertEquals(srcStation.getSourceStation().getStationReference(), destStation.getSourceStation().getStationReference());
                     if (null != srcStation.getSourceStation().getTrajectoryParent()) {
-                        assertEquals(srcStation.getSourceStation().getTrajectoryParent().getValue(), destStation.getSourceStation().getTrajectoryParent());
-                        assertEquals(srcStation.getSourceStation().getTrajectoryParent().getUidRef(), destStation.getSourceStation().getTrajectoryParent());
+                        assertEquals(srcStation.getSourceStation().getTrajectoryParent(), destStation.getSourceStation().getTrajectoryParent().getValue());
                     }
                     if (null != srcStation.getSourceStation().getWellboreParent())
-                        assertEquals(srcStation.getSourceStation().getWellboreParent().getValue(), destStation.getSourceStation().getWellboreParent());
+                        assertEquals(srcStation.getSourceStation().getWellboreParent(), destStation.getSourceStation().getWellboreParent().getValue());
                 }
 
                 // check repeating fields
                 if (null != srcStation.getLocation()) {
-                    List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation> srcStationLoc = srcStation.getLocation();
-                    List<com.hashmapinc.tempus.WitsmlObjects.v20.AbstractWellLocation> destStationLoc = destStation.getLocation();
+                    List<com.hashmapinc.tempus.WitsmlObjects.v20.AbstractWellLocation> srcStationLoc = srcStation.getLocation();
+                    List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation> destStationLoc = destStation.getLocation();
                     for (int j = 0; j < srcStationLoc.size(); j++) {
                         assertEquals(srcStationLoc.get(j).isOriginal(), destStationLoc.get(j).isOriginal());
                         assertEquals(srcStationLoc.get(j).getDescription(), destStationLoc.get(j).getDescription());
@@ -1443,7 +1442,6 @@ public class TrajectoryConverterTest {
                     assertEquals(srcStation.getSourceStation().getStationReference(), destStation.getSourceStation().getStationReference());
                     if (null != srcStation.getSourceStation().getTrajectoryParent()) {
                         assertEquals(srcStation.getSourceStation().getTrajectoryParent().getValue(), destStation.getSourceStation().getTrajectoryParent());
-                        assertEquals(srcStation.getSourceStation().getTrajectoryParent().getUidRef(), destStation.getSourceStation().getTrajectoryParent());
                     }
                     if (null != srcStation.getSourceStation().getWellboreParent())
                         assertEquals(srcStation.getSourceStation().getWellboreParent().getValue(), destStation.getSourceStation().getWellboreParent());
