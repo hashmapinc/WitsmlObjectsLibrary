@@ -76,4 +76,22 @@ public class CustomData {
     public void setAny(List<Object> anyList) {
         this.any = anyList;
     }
+
+
+
+    //=========================================================================
+    // conversion helpers
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.CsCustomData to1311CustomData() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.CsCustomData custom = new com.hashmapinc.tempus.WitsmlObjects.v1311.CsCustomData();
+        custom.setAny(this.any);
+        return custom;
+    }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.CsCustomData to1411CustomData() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.CsCustomData custom = new com.hashmapinc.tempus.WitsmlObjects.v1411.CsCustomData();
+        custom.setAny(this.any);
+        return custom;
+    }
+    //=========================================================================
 }

@@ -1466,13 +1466,13 @@ public class CsTrajectoryStation {
             station.setGtf(this.getGtf().to1311PlaneAngleMeasure());
 
         if (null != this.getDispNs())
-            station.setDispNs(this.getDispNs().to1311Length());
+            station.setDispNs(this.getDispNs().to1311LengthMeasure());
 
         if (null != this.getDispEw())
-            station.setDispEw(this.getDispEw().to1311Length());
+            station.setDispEw(this.getDispEw().to1311LengthMeasure());
 
         if (null != this.getVertSect())
-            station.setVertSect(this.getVertSect().to1311Length());
+            station.setVertSect(this.getVertSect().to1311LengthMeasure());
 
         if (null != this.getDls())
             station.setDls(this.getDls().to1311AnglePerLengthMeasure());

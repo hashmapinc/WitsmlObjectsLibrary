@@ -79,6 +79,16 @@ public class PlaneAngleMeasure
 
         return measure;
     }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v20.PlaneAngleMeasure to20PlaneAngleMeasure() {
+        com.hashmapinc.tempus.WitsmlObjects.v20.PlaneAngleMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v20.PlaneAngleMeasure();
+
+        // assign fields
+        measure.setUom(this.uom);
+        measure.setValue(this.value);
+
+        return measure;
+    }
     //=========================================================================
 
 }

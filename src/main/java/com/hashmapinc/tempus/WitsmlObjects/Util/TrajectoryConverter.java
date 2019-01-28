@@ -49,11 +49,11 @@ public class TrajectoryConverter {
 
         // dispNsVertSectOrig
         if (null != src.getDispNsVertSectOrig())
-            dest.setDispNsVertSectOrig(src.getDispNsVertSectOrig().to1311Length());
+            dest.setDispNsVertSectOrig(src.getDispNsVertSectOrig().to1311LengthMeasure());
 
         // dispEwVertSectOrig
         if (null != src.getDispEwVertSectOrig())
-            dest.setDispEwVertSectOrig(src.getDispEwVertSectOrig().to1311Length());
+            dest.setDispEwVertSectOrig(src.getDispEwVertSectOrig().to1311LengthMeasure());
 
         // aziRef
         if (null != src.getAziRef())
@@ -184,46 +184,49 @@ public class TrajectoryConverter {
         dest.setFinalTraj(src.isFinalTraj());
 
         // check complex fields
+        // dTimTrajStart
         if (null != dest.getDTimTrajStart())
-            assertEquals(src.getDTimTrajStart().toString(), dest.getDTimTrajStart());
+            dest.setDTimTrajStart(src.getDTimTrajStart().toString());
+
+        // dtimTrajEnd
         if (null != dest.getDTimTrajEnd())
-            assertEquals(src.getDTimTrajEnd().toString(), dest.getDTimTrajEnd());
-        if (null != src.getMdMn()) {
-            assertEquals(src.getMdMn().getValue(), dest.getMdMn().getValue());
-            assertEquals(src.getMdMn().getDatum(), dest.getMdMn().getDatum());
-            assertEquals(src.getMdMn().getUom().value(), dest.getMdMn().getUom());
-        }
-        if (null != src.getMdMx()) {
-            assertEquals(src.getMdMx().getValue(), dest.getMdMx().getValue());
-            assertEquals(src.getMdMx().getDatum(), dest.getMdMx().getDatum());
-            assertEquals(src.getMdMx().getUom().value(), dest.getMdMx().getUom());
-        }
-        if (null != src.getMagDeclUsed()) {
-            assertEquals(src.getMagDeclUsed().getValue(), dest.getMagDeclUsed().getValue());
-            assertEquals(src.getMagDeclUsed().getUom(), dest.getMagDeclUsed().getUom());
-        }
-        if (null != src.getGridConUsed()) {
-            assertEquals(src.getGridConUsed().getValue(), dest.getGridConUsed().getValue());
-            assertEquals(src.getGridConUsed().getUom(), dest.getGridConUsed().getUom());
-        }
-        if (null != src.getAziVertSect()) {
-            assertEquals(src.getAziVertSect().getValue(), dest.getAziVertSect().getValue());
-            assertEquals(src.getAziVertSect().getUom(), dest.getAziVertSect().getUom());
-        }
-        if (null != src.getDispNsVertSectOrig()) {
-            assertEquals(src.getDispNsVertSectOrig().getValue(), dest.getDispNsVertSectOrig().getValue());
-            assertEquals(src.getDispNsVertSectOrig().getUom(), dest.getDispNsVertSectOrig().getUom());
-        }
-        if (null != src.getDispEwVertSectOrig()) {
-            assertEquals(src.getDispEwVertSectOrig().getValue(), dest.getDispEwVertSectOrig().getValue());
-            assertEquals(src.getDispEwVertSectOrig().getUom(), dest.getDispEwVertSectOrig().getUom());
-        }
+            dest.setDTimTrajEnd(src.getDTimTrajEnd().toString());
+
+        // mdMn
+        if (null != src.getMdMn())
+            dest.setMdMn(src.getMdMn().to20DepthCoord());
+
+        // mdMx
+        if (null != src.getMdMx())
+            dest.setMdMx(src.getMdMn().to20DepthCoord());
+
+        // magDeclUsed
+        if (null != src.getMagDeclUsed())
+            dest.setMagDeclUsed(src.getMagDeclUsed().to20PlaneAngleMeasure());
+
+        // gridConUsed
+        if (null != src.getGridConUsed())
+            dest.setGridConUsed(src.getGridConUsed().to20PlaneAngleMeasure());
+
+        // aziVertSect
+        if (null != src.getAziVertSect())
+            dest.setAziVertSect(src.getAziVertSect().to20PlaneAngleMeasure());
+
+        // dispNsVertSectOrig
+        if (null != src.getDispNsVertSectOrig())
+            dest.setDispNsVertSectOrig(src.getDispNsVertSectOrig().to20LengthMeasure());
+
+        // dispEwVertSectOrig
+        if (null != src.getDispEwVertSectOrig())
+            dest.setDispEwVertSectOrig(src.getDispEwVertSectOrig().to20LengthMeasure());
+
+        // aziRef
         if (null != src.getAziRef())
-            assertEquals(src.getAziRef().value(), dest.getAziRef().value());
-        if (null != src.getCustomData() && null != src.getCustomData().getAny()){
-            for (int i = 0; i < src.getCustomData().getAny().size(); i++)
-                assertEquals(src.getCustomData().getAny().get(i), dest.getCustomData().getAny().get(i));
-        }
+            dest.setAziRef(com.hashmapinc.tempus.WitsmlObjects.v20.AziRef.fromValue(src.getAziRef().value()));
+
+        // customData
+        if (null != src.getCustomData() && null != src.getCustomData().getAny())
+            dest.setCustomData(src.getCustomData().to20CustomData());
 
         // check repeating fields
         if (null != src.getTrajectoryStation()) {

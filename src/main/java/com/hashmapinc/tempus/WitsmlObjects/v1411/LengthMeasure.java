@@ -70,7 +70,7 @@ public class LengthMeasure
     //=========================================================================
     // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
     //=========================================================================
-    public com.hashmapinc.tempus.WitsmlObjects.v1311.LengthMeasure to1311Length() {
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.LengthMeasure to1311LengthMeasure() {
         com.hashmapinc.tempus.WitsmlObjects.v1311.LengthMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v1311.LengthMeasure();
 
         // assign fields
@@ -98,6 +98,16 @@ public class LengthMeasure
         coord.setValue(this.getValue());
 
         return coord;
+    }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v20.LengthMeasure to20LengthMeasure() {
+        com.hashmapinc.tempus.WitsmlObjects.v20.LengthMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v20.LengthMeasure();
+
+        // assign fields
+        measure.setUom(this.getUom());
+        measure.setValue(this.getValue());
+
+        return measure;
     }
     //=========================================================================
 

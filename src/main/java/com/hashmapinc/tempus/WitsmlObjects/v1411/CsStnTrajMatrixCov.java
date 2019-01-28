@@ -311,13 +311,13 @@ public class CsStnTrajMatrixCov {
             cov.setVarianceVertVert(this.getVarianceVertVert().to1311AreaMeasure());
 
         if (null != this.getBiasN())
-            cov.setBiasN(this.getBiasN().to1311Length());
+            cov.setBiasN(this.getBiasN().to1311LengthMeasure());
 
         if (null != this.getBiasE())
-            cov.setBiasE(this.getBiasE().to1311Length());
+            cov.setBiasE(this.getBiasE().to1311LengthMeasure());
 
         if (null != this.getBiasVert())
-            cov.setBiasVert(this.getBiasVert().to1311Length());
+            cov.setBiasVert(this.getBiasVert().to1311LengthMeasure());
 
         return cov;
     }

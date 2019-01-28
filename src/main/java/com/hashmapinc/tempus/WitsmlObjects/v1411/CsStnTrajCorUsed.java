@@ -485,7 +485,7 @@ public class CsStnTrajCorUsed {
             cor.setStnGridCorUsed(this.getStnGridCorUsed().to1311PlaneAngleMeasure());
 
         if (null != this.getDirSensorOffset())
-            cor.setDirSensorOffset(this.getDirSensorOffset().to1311Length());
+            cor.setDirSensorOffset(this.getDirSensorOffset().to1311LengthMeasure());
 
         return cor;
     }
