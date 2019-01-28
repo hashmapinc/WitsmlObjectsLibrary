@@ -2063,7 +2063,6 @@ public class TrajectoryConverterTest {
                         assertEquals(srcStationLoc.get(j).getUid(), destStationLoc.get(j).getUid());
                     }
                 }
-
             }
         }
     }
