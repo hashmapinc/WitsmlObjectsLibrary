@@ -21,6 +21,7 @@ import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
+import com.hashmapinc.tempus.WitsmlObjects.Util.TrajectoryConverter;
 import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlMarshal;
 import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlVersionTransformer;
 
@@ -802,13 +803,14 @@ public class ObjTrajectory extends AbstractWitsmlObject {
     @Override
     public String getXMLString(String version) {
         try {
-            ObjTrajectorys trajectorys = new ObjTrajectorys();
-            trajectorys.addTrajectory(this);
-            String xml1411 = WitsmlMarshal.serialize(trajectorys);
             if ("1.3.1.1".equals(version)) {
-                return (new WitsmlVersionTransformer()).convertVersion(xml1411);
+                com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectorys trajectorys = new com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectorys();
+                trajectorys.addTrajectory(TrajectoryConverter.convertTo1311(this));
+                return WitsmlMarshal.serialize(trajectorys);
             } else if ("1.4.1.1".equals(version)) {
-                return xml1411;
+                ObjTrajectorys trajectorys = new ObjTrajectorys();
+                trajectorys.addTrajectory(this);
+                return WitsmlMarshal.serialize(trajectorys);
             } else {
                 return null;
             }
@@ -828,11 +830,7 @@ public class ObjTrajectory extends AbstractWitsmlObject {
     public String getJSONString(String version) {
         try {
             if ("1.3.1.1".equals(version)) {
-                // convert to 1411 pojo and parse as json
-                String xml1311 = this.getXMLString("1.3.1.1");
-                com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectorys trajectorys = WitsmlMarshal
-                        .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectorys.class);
-                return WitsmlMarshal.serializeToJSON(trajectorys.getTrajectory().get(0));
+                return WitsmlMarshal.serializeToJSON(TrajectoryConverter.convertTo1311(this));
             } else if ("1.4.1.1".equals(version)) {
                 return WitsmlMarshal.serializeToJSON(this);
             } else {
