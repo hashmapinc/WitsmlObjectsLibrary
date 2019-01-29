@@ -119,4 +119,43 @@ public class StnTrajValid {
         this.gravTotalFieldCalc = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.CsStnTrajValid to1311CsStnTrajValid() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.CsStnTrajValid valid = new com.hashmapinc.tempus.WitsmlObjects.v1311.CsStnTrajValid();
+
+        // assign fields
+        if (null != this.getMagTotalFieldCalc())
+            valid.setMagTotalFieldCalc(this.getMagTotalFieldCalc().to1311MagneticInductionMeasure());
+
+        if (null != this.getMagDipAngleCalc())
+            valid.setMagDipAngleCalc(this.getMagDipAngleCalc().to1311PlaneAngleMeasure());
+
+        if (null != this.getGravTotalFieldCalc())
+            valid.setGravTotalFieldCalc(this.getGravTotalFieldCalc().to1311AnglePerLengthMeasure());
+
+        return valid;
+    }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.CsStnTrajValid to1411CsStnTrajValid() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.CsStnTrajValid valid = new com.hashmapinc.tempus.WitsmlObjects.v1411.CsStnTrajValid();
+
+        // assign fields
+        if (null != this.getMagTotalFieldCalc())
+            valid.setMagTotalFieldCalc(this.getMagTotalFieldCalc().to1411MagneticInductionMeasure());
+
+        if (null != this.getMagDipAngleCalc())
+            valid.setMagDipAngleCalc(this.getMagDipAngleCalc().to1411PlaneAngleMeasure());
+
+        if (null != this.getGravTotalFieldCalc())
+            valid.setGravTotalFieldCalc(this.getGravTotalFieldCalc().to1411AnglePerLengthMeasure());
+
+        return valid;
+    }
+    //=========================================================================
+
 }

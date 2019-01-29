@@ -489,6 +489,44 @@ public class CsStnTrajCorUsed {
 
         return cor;
     }
+
+
+    public com.hashmapinc.tempus.WitsmlObjects.v20.StnTrajCorUsed to20StnTrajCorUsed() {
+        com.hashmapinc.tempus.WitsmlObjects.v20.StnTrajCorUsed cor = new com.hashmapinc.tempus.WitsmlObjects.v20.StnTrajCorUsed();
+
+        // assign fields
+        if (null != this.getGravAxialAccelCor())
+            cor.setGravAxialAccelCor(this.getGravAxialAccelCor().to20LinearAccelerationMeasure());
+
+        if (null != this.getGravTran1AccelCor())
+            cor.setGravTran1AccelCor(this.getGravTran1AccelCor().to20LinearAccelerationMeasure());
+
+        if (null != this.getGravTran2AccelCor())
+            cor.setGravTran2AccelCor(this.getGravTran2AccelCor().to20LinearAccelerationMeasure());
+
+        if (null != this.getMagAxialDrlstrCor())
+            cor.setMagAxialDrlstrCor(this.getMagAxialDrlstrCor().to20MagneticFluxDensityMeasure());
+
+        if (null != this.getMagTran1DrlstrCor())
+            cor.setMagTran1DrlstrCor(this.getMagTran1DrlstrCor().to20MagneticFluxDensityMeasure());
+
+        if (null != this.getMagTran2DrlstrCor())
+            cor.setMagTran2DrlstrCor(this.getMagTran2DrlstrCor().to20MagneticFluxDensityMeasure());
+
+        if (null != this.getSagIncCor())
+            cor.setSagIncCor(this.getSagIncCor().to20PlaneAngleMeasure());
+
+        if (null != this.getSagAziCor())
+            cor.setSagAziCor(this.getSagAziCor().to20PlaneAngleMeasure());
+
+        if (null != this.getStnMagDeclUsed())
+            cor.setStnMagDeclUsed(this.getStnMagDeclUsed().to20PlaneAngleMeasure());
+
+        if (null != this.getDirSensorOffset())
+            cor.setDirSensorOffset(this.getDirSensorOffset().to20LengthMeasure());
+
+        return cor;
+    }
     //=========================================================================
 
 }

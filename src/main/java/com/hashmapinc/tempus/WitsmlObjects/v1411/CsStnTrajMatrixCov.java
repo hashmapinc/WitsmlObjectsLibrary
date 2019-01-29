@@ -321,6 +321,41 @@ public class CsStnTrajMatrixCov {
 
         return cov;
     }
+
+
+    public com.hashmapinc.tempus.WitsmlObjects.v20.StnTrajMatrixCov to20StnTrajMatrixCov() {
+        com.hashmapinc.tempus.WitsmlObjects.v20.StnTrajMatrixCov cov = new com.hashmapinc.tempus.WitsmlObjects.v20.StnTrajMatrixCov();
+
+        // assign fields
+        if (null != this.getVarianceNN())
+            cov.setVarianceNN(this.getVarianceNN().to20AreaMeasure());
+
+        if (null != this.getVarianceNE())
+            cov.setVarianceNE(this.getVarianceNE().to20AreaMeasure());
+
+        if (null != this.getVarianceNVert())
+            cov.setVarianceNVert(this.getVarianceNVert().to20AreaMeasure());
+
+        if (null != this.getVarianceEE())
+            cov.setVarianceEE(this.getVarianceEE().to20AreaMeasure());
+
+        if (null != this.getVarianceEVert())
+            cov.setVarianceEVert(this.getVarianceEVert().to20AreaMeasure());
+
+        if (null != this.getVarianceVertVert())
+            cov.setVarianceVertVert(this.getVarianceVertVert().to20AreaMeasure());
+
+        if (null != this.getBiasN())
+            cov.setBiasN(this.getBiasN().to20LengthMeasure());
+
+        if (null != this.getBiasE())
+            cov.setBiasE(this.getBiasE().to20LengthMeasure());
+
+        if (null != this.getBiasVert())
+            cov.setBiasVert(this.getBiasVert().to20LengthMeasure());
+
+        return cov;
+    }
     //=========================================================================
 
 }

@@ -74,9 +74,20 @@ public class AreaMeasure
         com.hashmapinc.tempus.WitsmlObjects.v1311.AreaMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v1311.AreaMeasure();
 
         // assign fields
-        measure.setValue(this.value);
+        measure.setValue(this.getValue());
         if (null != this.getUom())
             measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.AreaUom.fromValue(this.getUom().value()));
+
+        return measure;
+    }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v20.AreaMeasure to20AreaMeasure() {
+        com.hashmapinc.tempus.WitsmlObjects.v20.AreaMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v20.AreaMeasure();
+
+        // assign fields
+        measure.setValue(this.getValue());
+        if (null != this.getUom())
+            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v20.AreaUom.fromValue(this.getUom().value()));
 
         return measure;
     }

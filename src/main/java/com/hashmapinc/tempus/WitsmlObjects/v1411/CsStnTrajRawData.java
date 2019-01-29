@@ -231,6 +231,31 @@ public class CsStnTrajRawData {
 
         return rawData;
     }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v20.StnTrajRawData to20StnTrajRawData() {
+        com.hashmapinc.tempus.WitsmlObjects.v20.StnTrajRawData rawData = new com.hashmapinc.tempus.WitsmlObjects.v20.StnTrajRawData();
+
+        // assign fields
+        if (null != this.getGravAxialRaw())
+            rawData.setGravAxialRaw(this.getGravAxialRaw().to20LinearAccelerationMeasure());
+
+        if (null != this.getGravTran1Raw())
+            rawData.setGravTran1Raw(this.getGravTran1Raw().to20LinearAccelerationMeasure());
+
+        if (null != this.getGravTran2Raw())
+            rawData.setGravTran2Raw(this.getGravTran2Raw().to20LinearAccelerationMeasure());
+
+        if (null != this.getMagAxialRaw())
+            rawData.setMagAxialRaw(this.getMagAxialRaw().to20MagneticFluxDensityMeasure());
+
+        if (null != this.getMagTran1Raw())
+            rawData.setMagTran1Raw(this.getMagTran1Raw().to20MagneticFluxDensityMeasure());
+
+        if (null != this.getMagTran2Raw())
+            rawData.setMagTran2Raw(this.getMagTran2Raw().to20MagneticFluxDensityMeasure());
+
+        return rawData;
+    }
     //=========================================================================
 
 }

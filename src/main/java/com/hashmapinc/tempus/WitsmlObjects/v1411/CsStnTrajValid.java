@@ -141,6 +141,22 @@ public class CsStnTrajValid {
 
         return valid;
     }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v20.StnTrajValid to20StnTrajValid() {
+        com.hashmapinc.tempus.WitsmlObjects.v20.StnTrajValid valid = new com.hashmapinc.tempus.WitsmlObjects.v20.StnTrajValid();
+
+        // assign fields
+        if (null != this.getMagTotalFieldCalc())
+            valid.setMagTotalFieldCalc(this.getMagTotalFieldCalc().to20MagneticFluxDensityMeasure());
+
+        if (null != this.getMagDipAngleCalc())
+            valid.setMagDipAngleCalc(this.getMagDipAngleCalc().to20PlaneAngleMeasure());
+
+        if (null != this.getGravTotalFieldCalc())
+            valid.setGravTotalFieldCalc(this.getGravTotalFieldCalc().to20LinearAccelerationMeasure());
+
+        return valid;
+    }
     //=========================================================================
 
 }
