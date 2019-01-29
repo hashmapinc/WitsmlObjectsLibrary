@@ -88,7 +88,7 @@ public class TrajectoryConverter {
     //=========================================================================
     // conversions to 1.4.1.1
     //=========================================================================
-    public static com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory convertTo1411(com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectory src) throws Exception{
+    public static com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory convertTo1411(com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectory src) {
         // get converted object
         com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory dest = new com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory();
 
@@ -170,7 +170,7 @@ public class TrajectoryConverter {
     // conversions to 2.0
     //=========================================================================
     public static com.hashmapinc.tempus.WitsmlObjects.v20.Trajectory convertTo20(com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectory src) {
-        return null;
+        return convertTo20(convertTo1411(src));
     }
 
     public static com.hashmapinc.tempus.WitsmlObjects.v20.Trajectory convertTo20(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory src) {
