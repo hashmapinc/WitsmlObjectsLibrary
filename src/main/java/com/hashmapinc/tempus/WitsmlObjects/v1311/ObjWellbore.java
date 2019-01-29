@@ -366,7 +366,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *
      */
     public void setDTimKickoff(String value) throws DatatypeConfigurationException {

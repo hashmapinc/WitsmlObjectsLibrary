@@ -11,6 +11,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.DatatypeConfigurationException;
 
 
 /**
@@ -1427,5 +1428,161 @@ public class TrajectoryStation {
     public void setUid(String value) {
         this.uid = value;
     }
+
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.CsTrajectoryStation to1411CsTrajectoryStation() throws DatatypeConfigurationException {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.CsTrajectoryStation station = new com.hashmapinc.tempus.WitsmlObjects.v1411.CsTrajectoryStation();
+
+        // check non-complex, non-repeating fields
+        station.setGravAccelCorUsed(this.isGravAccelCorUsed());
+        station.setMagXAxialCorUsed(this.isMagXAxialCorUsed());
+        station.setSagCorUsed(this.isSagCorUsed());
+        station.setMagDrlstrCorUsed(this.isMagDrlstrCorUsed());
+        station.setMagModelUsed(this.getMagModelUsed());
+        station.setMagModelValid(this.getMagModelValid());
+        station.setGeoModelUsed(this.getGeoModelUsed());
+        station.setUid(this.getUid());
+
+        // check complex fields
+        // dtimStn
+        if (null != this.getDTimStn())
+            station.setDTimStn(this.getDTimStn());
+
+        // target
+        if (null != this.getTarget()) {
+            com.hashmapinc.tempus.WitsmlObjects.v1411.RefNameString ref = new com.hashmapinc.tempus.WitsmlObjects.v1411.RefNameString();
+            ref.setValue(this.getTarget());
+            station.setTarget(ref);
+        }
+
+        // typeTrajStation
+        if (null != this.getTypeTrajStation())
+            station.setTypeTrajStation(com.hashmapinc.tempus.WitsmlObjects.v1411.TrajStationType.fromValue(this.getTypeTrajStation().value()));
+
+        // typeSurveyTool
+        if (null != this.getTypeSurveyTool())
+            station.setTypeSurveyTool(this.getTypeSurveyTool().value());
+
+        // md
+        if (null != this.getMd())
+            station.setMd(this.getMd().to1411MeasuredDepthCoord());
+
+        // tvd
+        if (null != this.getTvd())
+            station.setTvd(this.getTvd().to1411WellVerticalDepthCoord());
+
+        // incl
+        if (null != this.getIncl())
+            station.setIncl(this.getIncl().to1411PlaneAngleMeasure());
+
+        // azi
+        if (null != this.getAzi())
+            station.setAzi(this.getAzi().to1411PlaneAngleMeasure());
+
+        // mtf
+        if (null != this.getMtf())
+            station.setMtf(this.getMtf().to1411PlaneAngleMeasure());
+
+        // gtf
+        if (null != this.getGtf())
+            station.setGtf(this.getGtf().to1411PlaneAngleMeasure());
+
+        // dispNs
+        if (null != this.getDispNs())
+            station.setDispNs(this.getDispNs().to1411LengthMeasure());
+
+        // dispEw
+        if (null != this.getDispEw())
+            station.setDispEw(this.getDispEw().to1411LengthMeasure());
+
+        // vertSect
+        if (null != this.getVertSect())
+            station.setVertSect(this.getVertSect().to1411LengthMeasure());
+
+        // dls
+        if (null != this.getDls())
+            station.setDls(this.getDls().to1411AnglePerLengthMeasure());
+
+        // rateTurn
+        if (null != this.getRateTurn())
+            station.setRateTurn(this.getRateTurn().to1411AnglePerLengthMeasure());
+
+        // rateBuild
+        if (null != this.getRateBuild())
+            station.setRateBuild(this.getRateBuild().to1411AnglePerLengthMeasure());
+
+        // mdDelta
+        if (null != this.getMdDelta())
+            station.setMdDelta(this.getMdDelta().to1411LengthMeasure());
+
+        // tvdDelta
+        if (null != this.getTvdDelta())
+            station.setTvdDelta(this.getTvdDelta().to1411LengthMeasure());
+
+        // gravTotalUncert
+        if (null != this.getGravTotalUncert())
+            station.setGravTotalUncert(this.getGravTotalUncert().to1411AnglePerLengthMeasure());
+
+        // dipAngleUncert
+        if (null != this.getDipAngleUncert())
+            station.setDipAngleUncert(this.getDipAngleUncert().to1411PlaneAngleMeasure());
+
+        // magtotalUncert
+        if (null != this.getMagTotalUncert())
+            station.setMagTotalUncert(this.getMagTotalUncert().to1411MagneticInductionMeasure());
+
+        // gravTotalFieldReference
+        if (null != this.getGravTotalFieldReference())
+            station.setGravTotalFieldReference(this.getGravTotalFieldReference().to1411AnglePerLengthMeasure());
+
+        // magTotalFieldReference
+        if (null != this.getMagTotalFieldReference())
+            station.setMagTotalFieldReference(this.getMagTotalFieldReference().to1411MagneticInductionMeasure());
+
+        // magDipAngleReference
+        if (null != this.getMagDipAngleReference())
+            station.setMagDipAngleReference(this.getMagDipAngleReference().to1411PlaneAngleMeasure());
+
+        // statusTrajStation
+        if (null != this.getStatusTrajStation())
+            station.setStatusTrajStation(com.hashmapinc.tempus.WitsmlObjects.v1411.TrajStationStatus.fromValue(this.getStatusTrajStation().value()));
+
+        // rawData
+        if (null != this.getRawData())
+            station.setRawData(this.getRawData().to1411CsStnTrajRawData());
+
+        // corUsed
+        if (null != this.getCorUsed())
+            station.setCorUsed(this.getCorUsed().to1411CsStnTrajCorUsed());
+
+        // valid
+        if (null != this.getValid())
+            station.setValid(this.getValid().to1411CsStnTrajValid());
+
+        // matrixConv
+        if (null != this.getMatrixCov())
+            station.setMatrixCov(this.getMatrixCov().to1411CsStnTrajMatrixCov());
+
+        // sourceStation
+        if (null != this.getSourceStation())
+            station.setSourceStation(this.getSourceStation().to1411CsRefWellboreTrajectoryStation());
+
+        // check repeating fields
+        if (null != this.getLocation()) {
+            List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation> destLocations = new ArrayList<>();
+            for (com.hashmapinc.tempus.WitsmlObjects.v20.AbstractWellLocation srcLocation : this.getLocation())
+                destLocations.add(srcLocation.to1411CsLocation());
+
+            station.setLocation(destLocations);
+        }
+
+        return station;
+    }
+    //=========================================================================
 
 }

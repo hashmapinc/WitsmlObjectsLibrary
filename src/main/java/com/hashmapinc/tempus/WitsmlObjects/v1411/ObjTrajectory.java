@@ -16,6 +16,8 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
@@ -268,6 +270,19 @@ public class ObjTrajectory extends AbstractWitsmlObject {
     }
 
     /**
+     * Sets the value of the dTimTrajStart property.
+     *
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *
+     */
+    public void setDTimTrajStart(String value) throws DatatypeConfigurationException {
+        if (null != value && !value.isEmpty())
+            this.dTimTrajStart =DatatypeFactory.newInstance().newXMLGregorianCalendar(value);
+    }
+
+    /**
      * Gets the value of the dTimTrajEnd property.
      * 
      * @return
@@ -289,6 +304,19 @@ public class ObjTrajectory extends AbstractWitsmlObject {
      */
     public void setDTimTrajEnd(XMLGregorianCalendar value) {
         this.dTimTrajEnd = value;
+    }
+
+    /**
+     * Sets the value of the dTimTrajEnd property.
+     *
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *
+     */
+    public void setDTimTrajEnd(String value) throws DatatypeConfigurationException {
+        if (null != value && !value.isEmpty())
+            this.dTimTrajEnd =DatatypeFactory.newInstance().newXMLGregorianCalendar(value);
     }
 
     /**

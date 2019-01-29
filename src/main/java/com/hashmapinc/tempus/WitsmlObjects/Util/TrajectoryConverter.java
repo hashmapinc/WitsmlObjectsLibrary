@@ -1,5 +1,6 @@
 package com.hashmapinc.tempus.WitsmlObjects.Util;
 
+import javax.xml.datatype.DatatypeConfigurationException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -160,8 +161,71 @@ public class TrajectoryConverter {
         return dest;
     }
 
-    public static com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory convertTo1411(com.hashmapinc.tempus.WitsmlObjects.v20.Trajectory src) {
-        return null;
+    public static com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory convertTo1411(com.hashmapinc.tempus.WitsmlObjects.v20.Trajectory src) throws DatatypeConfigurationException {
+        // get converted object
+        com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory dest = new com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory();
+
+        // check non-complex, non-repeating fields
+        dest.setServiceCompany(src.getServiceCompany());
+        dest.setDefinitive(src.isDefinitive());
+        dest.setMemory(src.isMemory());
+        dest.setFinalTraj(src.isFinalTraj());
+
+        // check complex fields
+        // dTimTrajStart
+        if (null != dest.getDTimTrajStart())
+            dest.setDTimTrajStart(src.getDTimTrajStart());
+
+        // dtimTrajEnd
+        if (null != dest.getDTimTrajEnd())
+            dest.setDTimTrajEnd(src.getDTimTrajEnd());
+
+        // mdMn
+        if (null != src.getMdMn())
+            dest.setMdMn(src.getMdMn().to1411MeasuredDepthCoord());
+
+        // mdMx
+        if (null != src.getMdMx())
+            dest.setMdMx(src.getMdMx().to1411MeasuredDepthCoord());
+
+        // magDeclUsed
+        if (null != src.getMagDeclUsed())
+            dest.setMagDeclUsed(src.getMagDeclUsed().to1411PlaneAngleMeasure());
+
+        // gridConUsed
+        if (null != src.getGridConUsed())
+            dest.setGridConUsed(src.getGridConUsed().to1411PlaneAngleMeasure());
+
+        // aziVertSect
+        if (null != src.getAziVertSect())
+            dest.setAziVertSect(src.getAziVertSect().to1411PlaneAngleMeasure());
+
+        // dispNsVertSectOrig
+        if (null != src.getDispNsVertSectOrig())
+            dest.setDispNsVertSectOrig(src.getDispNsVertSectOrig().to1411LengthMeasure());
+
+        // dispEwVertSectOrig
+        if (null != src.getDispEwVertSectOrig())
+            dest.setDispEwVertSectOrig(src.getDispEwVertSectOrig().to1411LengthMeasure());
+
+        // aziRef
+        if (null != src.getAziRef())
+            dest.setAziRef(com.hashmapinc.tempus.WitsmlObjects.v1411.AziRef.fromValue(src.getAziRef().value()));
+
+        // customData
+        if (null != src.getCustomData() && null != src.getCustomData().getAny())
+            dest.setCustomData(src.getCustomData().to1411CustomData());
+
+        // check repeating fields
+        if (null != src.getTrajectoryStation()) {
+            List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsTrajectoryStation> destStations = new ArrayList<>();
+            for (com.hashmapinc.tempus.WitsmlObjects.v20.TrajectoryStation srcStation : src.getTrajectoryStation())
+                destStations.add(srcStation.to1411CsTrajectoryStation());
+
+            dest.setTrajectoryStation(destStations);
+        }
+
+        return dest;
     }
     //=========================================================================
 

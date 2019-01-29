@@ -16,6 +16,8 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 
@@ -248,6 +250,20 @@ public class CsTrajectoryStation {
     public void setDTimStn(XMLGregorianCalendar value) {
         this.dTimStn = value;
     }
+
+    /**
+     * Sets the value of the dTimStn property.
+     *
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *
+     */
+    public void setDTimStn(String value) throws DatatypeConfigurationException {
+        if (null != value && !value.isEmpty())
+            this.dTimStn = DatatypeFactory.newInstance().newXMLGregorianCalendar(value);
+    }
+
 
     /**
      * Gets the value of the typeTrajStation property.
@@ -1681,7 +1697,6 @@ public class CsTrajectoryStation {
                 destLocations.add(srcLocation.to20AbstractWellLocation());
 
             station.setLocation(destLocations);
-            station.getLocation();
         }
 
         return station;
