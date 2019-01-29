@@ -159,4 +159,33 @@ public abstract class AbstractWellLocation {
         this.uid = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.CsLocation to1311CsLocation() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.CsLocation location = new com.hashmapinc.tempus.WitsmlObjects.v1311.CsLocation();
+
+        // assign fields
+        location.setOriginal(this.isOriginal());
+        location.setDescription(this.getDescription());
+        location.setUid(this.getUid());
+
+        return location;
+    }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation to1411CsLocation() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation location = new com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation();
+
+        // assign fields
+        location.setOriginal(this.isOriginal());
+        location.setDescription(this.getDescription());
+        location.setUid(this.getUid());
+
+        return location;
+    }
+    //=========================================================================
+
 }

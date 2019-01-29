@@ -399,15 +399,15 @@ public class CsGeodeticModel {
 
         // xTranslation
         if (null != this.getXTranslation())
-            model.setXTranslation(this.getXTranslation().to1311Length());
+            model.setXTranslation(this.getXTranslation().to1311LengthMeasure());
 
         // yTranslation
         if (null != this.getYTranslation())
-            model.setYTranslation(this.getYTranslation().to1311Length());
+            model.setYTranslation(this.getYTranslation().to1311LengthMeasure());
 
         // zTranslation
         if (null != this.getZTranslation())
-            model.setZTranslation(this.getZTranslation().to1311Length());
+            model.setZTranslation(this.getZTranslation().to1311LengthMeasure());
 
         // xRotation
         if (null != this.getXRotation())
@@ -427,7 +427,7 @@ public class CsGeodeticModel {
 
         // ellipsoidSemiMajorAxis
         if (null != this.getEllipsoidSemiMajorAxis())
-            model.setEllipsoidSemiMajorAxis(this.getEllipsoidSemiMajorAxis().to1311Length());
+            model.setEllipsoidSemiMajorAxis(this.getEllipsoidSemiMajorAxis().to1311LengthMeasure());
 
         return model;
     }

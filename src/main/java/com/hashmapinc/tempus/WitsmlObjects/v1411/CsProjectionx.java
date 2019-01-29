@@ -867,7 +867,7 @@ public class CsProjectionx {
 
         // spheroidRadius
         if (null != this.getSpheroidRadius())
-            projection.setSpheroidRadius(this.getSpheroidRadius().to1311Length());
+            projection.setSpheroidRadius(this.getSpheroidRadius().to1311LengthMeasure());
 
         // methodVariant
         if (null != this.getMethodVariant())
@@ -875,7 +875,7 @@ public class CsProjectionx {
 
         // perspectiveHeight
         if (null != this.getPerspectiveHeight())
-            projection.setPerspectiveHeight(this.getPerspectiveHeight().to1311Length());
+            projection.setPerspectiveHeight(this.getPerspectiveHeight().to1311LengthMeasure());
 
         // nadType
         if (null != this.getNADType())
@@ -883,11 +883,11 @@ public class CsProjectionx {
 
         // falseEasting
         if (null != this.getFalseEasting())
-            projection.setFalseEasting(this.getFalseEasting().to1311Length());
+            projection.setFalseEasting(this.getFalseEasting().to1311LengthMeasure());
 
         // falseNorthing
         if (null != this.getFalseNorthing())
-            projection.setFalseNorthing(this.getFalseNorthing().to1311Length());
+            projection.setFalseNorthing(this.getFalseNorthing().to1311LengthMeasure());
 
         // bearing
         if (null != this.getBearing())

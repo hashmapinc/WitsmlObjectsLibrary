@@ -117,4 +117,25 @@ public class CsRefWellboreTrajectoryStation {
         this.wellboreParent = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.CsRefWellboreTrajectoryStation to1411CsRefWellboreTrajectoryStation() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.CsRefWellboreTrajectoryStation station = new com.hashmapinc.tempus.WitsmlObjects.v1411.CsRefWellboreTrajectoryStation();
+
+        // assign fields
+        station.setStationReference(this.getStationReference());
+        if (null != this.getTrajectoryParent())
+            station.setTrajectoryParent(this.getTrajectoryParent().to1411RefNameString());
+
+        if (null != this.getWellboreParent())
+            station.setWellboreParent(this.getWellboreParent().to1411RefNameString());
+
+        return station;
+    }
+    //=========================================================================
+
 }

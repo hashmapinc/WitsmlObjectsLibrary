@@ -40,6 +40,84 @@ public class AbstractWitsmlObjectTest {
             fail();
         }
     }
+
+    @Test
+    public void testTrajectoryGetXML() throws Exception {
+        //=====================================================================
+        // test 1311
+        //=====================================================================
+        String xml1311 = TestUtilities.getResourceAsString("trajectory1311.xml");
+        AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectorys) WitsmlMarshal
+                .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectory.class)).getTrajectory().get(0);
+
+        // check same-version serialization
+        String serializedXML1311 = obj1311.getXMLString("1.3.1.1");
+        assertNotNull(serializedXML1311);
+        assertFalse(serializedXML1311.contains("ns0:wells"));
+
+        // check cross-version serialization
+        String translatedXML1411 = obj1311.getXMLString("1.4.1.1");
+        assertNotNull(translatedXML1411);
+        assertFalse(translatedXML1411.contains("ns0:wells"));
+        //=====================================================================
+
+        //=====================================================================
+        // test 1411
+        //=====================================================================
+        String xml1411 = TestUtilities.getResourceAsString("trajectory1411.xml");
+        AbstractWitsmlObject obj1411 = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectorys) WitsmlMarshal
+                .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory.class)).getTrajectory().get(0);
+
+        // check same-version serialization
+        String serializedXML1411 = obj1411.getXMLString("1.4.1.1");
+        assertNotNull(serializedXML1411);
+        assertFalse(serializedXML1411.contains("ns0:wells"));
+
+        // check cross-version serialization
+        String translatedXML1311 = obj1411.getXMLString("1.3.1.1");
+        assertNotNull(translatedXML1311);
+        assertFalse(translatedXML1311.contains("ns0:wells"));
+        //=====================================================================
+    }
+
+    @Test
+    public void testTrajectoryGetJSONString() throws Exception {
+        //=====================================================================
+        // test 1311
+        //=====================================================================
+        String xml1311 = TestUtilities.getResourceAsString("trajectory1311.xml");
+        AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectorys) WitsmlMarshal
+                .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectory.class)).getTrajectory().get(0);
+
+        // check same-version serialization
+        String serializedJSON1311 = obj1311.getJSONString("1.3.1.1");
+        assertNotNull(serializedJSON1311);
+        assertNotEquals(0, serializedJSON1311.length());
+
+        // check cross-version serialization
+        String translatedJSON1411 = obj1311.getJSONString("1.4.1.1");
+        assertNotNull(translatedJSON1411);
+        assertNotEquals(0, translatedJSON1411.length());
+        //=====================================================================
+
+        //=====================================================================
+        // test 1411
+        //=====================================================================
+        String xml1411 = TestUtilities.getResourceAsString("trajectory1411.xml");
+        AbstractWitsmlObject obj1411 = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectorys) WitsmlMarshal
+                .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory.class)).getTrajectory().get(0);
+
+        // check same-version serialization
+        String serializedJSON1411 = obj1411.getJSONString("1.4.1.1");
+        assertNotNull(serializedJSON1411);
+        assertNotEquals(0, serializedJSON1411.length());
+
+        // check cross-version serialization
+        String translatedJSON1311 = obj1411.getJSONString("1.3.1.1");
+        assertNotNull(translatedJSON1311);
+        assertNotEquals(0, translatedJSON1311.length());
+        //=====================================================================
+    }
     // =========================================================================
 
     //=========================================================================
@@ -57,12 +135,12 @@ public class AbstractWitsmlObjectTest {
         // check same-version serialization
         String serializedJSON1311 = obj1311.getJSONString("1.3.1.1");
         assertNotNull(serializedJSON1311);
-        assertFalse(serializedJSON1311.length() == 0);
+        assertNotEquals(0, serializedJSON1311.length());
 
         // check cross-version serialization
         String translatedJSON1411 = obj1311.getJSONString("1.4.1.1");
         assertNotNull(translatedJSON1411);
-        assertFalse(translatedJSON1411.length() == 0);
+        assertNotEquals(0, translatedJSON1411.length());
         //=====================================================================
 
         //=====================================================================
@@ -75,12 +153,12 @@ public class AbstractWitsmlObjectTest {
         // check same-version serialization
         String serializedJSON1411 = obj1411.getJSONString("1.4.1.1");
         assertNotNull(serializedJSON1411);
-        assertFalse(serializedJSON1411.length() == 0);
+        assertNotEquals(0, serializedJSON1411.length());
 
         // check cross-version serialization
         String translatedJSON1311 = obj1411.getJSONString("1.3.1.1");
         assertNotNull(translatedJSON1311);
-        assertFalse(translatedJSON1311.length() == 0);
+        assertNotEquals(0, translatedJSON1311.length());
         //=====================================================================
     }
 
@@ -170,12 +248,12 @@ public class AbstractWitsmlObjectTest {
         // check same-version serialization
         String serializedJSON1311 = obj1311.getJSONString("1.3.1.1");
         assertNotNull(serializedJSON1311);
-        assertFalse(serializedJSON1311.length() == 0);
+        assertNotEquals(0, serializedJSON1311.length());
 
         // check cross-version serialization
         String translatedJSON1411 = obj1311.getJSONString("1.4.1.1");
         assertNotNull(translatedJSON1411);
-        assertFalse(translatedJSON1411.length() == 0);
+        assertNotEquals(0, translatedJSON1411.length());
         //=====================================================================
 
         //=====================================================================
@@ -188,12 +266,12 @@ public class AbstractWitsmlObjectTest {
         // check same-version serialization
         String serializedJSON1411 = obj1411.getJSONString("1.4.1.1");
         assertNotNull(serializedJSON1411);
-        assertFalse(serializedJSON1411.length() == 0);
+        assertNotEquals(0, serializedJSON1411.length());
 
         // check cross-version serialization
         String translatedJSON1311 = obj1411.getJSONString("1.3.1.1");
         assertNotNull(translatedJSON1311);
-        assertFalse(translatedJSON1311.length() == 0);
+        assertNotEquals(0, translatedJSON1311.length());
         //=====================================================================
     }
 

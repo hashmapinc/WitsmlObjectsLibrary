@@ -93,6 +93,12 @@ public class CsCustomData {
         custom.setAny(this.any);
         return custom;
     }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v20.CustomData to20CustomData() {
+        com.hashmapinc.tempus.WitsmlObjects.v20.CustomData custom = new com.hashmapinc.tempus.WitsmlObjects.v20.CustomData();
+        custom.setAny(this.any);
+        return custom;
+    }
     //=========================================================================
 
 }

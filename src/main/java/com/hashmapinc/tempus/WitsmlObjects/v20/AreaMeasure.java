@@ -80,4 +80,33 @@ public class AreaMeasure {
         this.uom = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.AreaMeasure to1311AreaMeasure() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.AreaMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v1311.AreaMeasure();
+
+        // assign fields
+        measure.setValue(this.getValue());
+        if (null != this.getUom())
+            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.AreaUom.fromValue(this.getUom().value()));
+
+        return measure;
+    }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.AreaMeasure to1411AreaMeasure() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.AreaMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v1411.AreaMeasure();
+
+        // assign fields
+        measure.setValue(this.getValue());
+        if (null != this.getUom())
+            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1411.AreaUom.fromValue(this.getUom().value()));
+
+        return measure;
+    }
+    //=========================================================================
+
 }

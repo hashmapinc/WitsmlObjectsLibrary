@@ -119,4 +119,53 @@ public class RefWellboreTrajectoryStation {
         this.wellboreParent = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.CsRefWellboreTrajectoryStation to1311CsRefWellboreTrajectoryStation() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.CsRefWellboreTrajectoryStation station = new com.hashmapinc.tempus.WitsmlObjects.v1311.CsRefWellboreTrajectoryStation();
+
+        // assign fields
+        station.setStationReference(this.getStationReference());
+
+        if (null != this.getTrajectoryParent()) {
+            com.hashmapinc.tempus.WitsmlObjects.v1311.RefNameString ref = new com.hashmapinc.tempus.WitsmlObjects.v1311.RefNameString();
+            ref.setValue(this.getTrajectoryParent());
+            station.setTrajectoryParent(ref);
+        }
+
+        if (null != this.getWellboreParent()) {
+            com.hashmapinc.tempus.WitsmlObjects.v1311.RefNameString ref = new com.hashmapinc.tempus.WitsmlObjects.v1311.RefNameString();
+            ref.setValue(this.getWellboreParent());
+            station.setWellboreParent(ref);
+        }
+
+        return station;
+    }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.CsRefWellboreTrajectoryStation to1411CsRefWellboreTrajectoryStation() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.CsRefWellboreTrajectoryStation station = new com.hashmapinc.tempus.WitsmlObjects.v1411.CsRefWellboreTrajectoryStation();
+
+        // assign fields
+        station.setStationReference(this.getStationReference());
+
+        if (null != this.getTrajectoryParent()) {
+            com.hashmapinc.tempus.WitsmlObjects.v1411.RefNameString ref = new com.hashmapinc.tempus.WitsmlObjects.v1411.RefNameString();
+            ref.setValue(this.getTrajectoryParent());
+            station.setTrajectoryParent(ref);
+        }
+
+        if (null != this.getWellboreParent()) {
+            com.hashmapinc.tempus.WitsmlObjects.v1411.RefNameString ref = new com.hashmapinc.tempus.WitsmlObjects.v1411.RefNameString();
+            ref.setValue(this.getWellboreParent());
+            station.setWellboreParent(ref);
+        }
+
+        return station;
+    }
+    //=========================================================================
+
 }

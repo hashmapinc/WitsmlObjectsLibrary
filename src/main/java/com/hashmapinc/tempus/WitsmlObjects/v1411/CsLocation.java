@@ -506,35 +506,46 @@ public class CsLocation {
 
         // easting
         if (null != this.getEasting())
-            location.setEasting(this.getEasting().to1311Length());
+            location.setEasting(this.getEasting().to1311LengthMeasure());
 
         // northing
         if (null != this.getNorthing())
-            location.setNorthing(this.getNorthing().to1311Length());
+            location.setNorthing(this.getNorthing().to1311LengthMeasure());
 
         // westing
         if (null != this.getWesting())
-            location.setWesting(this.getWesting().to1311Length());
+            location.setWesting(this.getWesting().to1311LengthMeasure());
 
         // southing
         if (null != this.getSouthing())
-            location.setSouthing(this.getSouthing().to1311Length());
+            location.setSouthing(this.getSouthing().to1311LengthMeasure());
 
         // projectedX
         if (null != this.getProjectedX())
-            location.setProjectedX(this.getProjectedX().to1311Length());
+            location.setProjectedX(this.getProjectedX().to1311LengthMeasure());
 
         // projectedY
         if (null != this.getProjectedY())
-            location.setProjectedY(this.getProjectedY().to1311Length());
+            location.setProjectedY(this.getProjectedY().to1311LengthMeasure());
 
         // localX
         if (null != this.getLocalX())
-            location.setLocalX(this.getLocalX().to1311Length());
+            location.setLocalX(this.getLocalX().to1311LengthMeasure());
 
         // localY
         if (null != this.getLocalY())
-            location.setLocalY(this.getLocalY().to1311Length());
+            location.setLocalY(this.getLocalY().to1311LengthMeasure());
+
+        return location;
+    }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v20.AbstractWellLocation to20AbstractWellLocation() {
+        com.hashmapinc.tempus.WitsmlObjects.v20.AbstractWellLocation location = new com.hashmapinc.tempus.WitsmlObjects.v20.GeodeticWellLocation();
+
+        // assign fields
+        location.setOriginal(this.isOriginal());
+        location.setDescription(this.getDescription());
+        location.setUid(this.getUid());
 
         return location;
     }

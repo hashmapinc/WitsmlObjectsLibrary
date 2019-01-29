@@ -64,4 +64,33 @@ public class MagneticInductionMeasure
         this.uom = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.MagneticInductionMeasure to1311MagneticInductionMeasure() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.MagneticInductionMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v1311.MagneticInductionMeasure();
+
+        // assign fields
+        measure.setValue(this.getValue());
+        if (null != this.getUom())
+            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.MagneticInductionUom.fromValue(this.getUom().value()));
+
+        return measure;
+    }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v20.MagneticFluxDensityMeasure to20MagneticFluxDensityMeasure() {
+        com.hashmapinc.tempus.WitsmlObjects.v20.MagneticFluxDensityMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v20.MagneticFluxDensityMeasure();
+
+        // assign fields
+        measure.setValue(this.getValue());
+        if (null != this.getUom())
+            measure.setUom(this.getUom().value());
+
+        return measure;
+    }
+    //=========================================================================
+
 }
