@@ -8,7 +8,7 @@ public class TrajectoryConverter {
     //=========================================================================
     // conversions to 1.3.1.1
     //=========================================================================
-    public static com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectory convertTo1311(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory src)  throws Exception {
+    public static com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectory convertTo1311(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory src) {
         // get converted object
         com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectory dest = new com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectory();
 
@@ -80,8 +80,8 @@ public class TrajectoryConverter {
         return dest;
     }
 
-    public static com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectory convertTo1311(com.hashmapinc.tempus.WitsmlObjects.v20.Trajectory src) {
-        return null;
+    public static com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectory convertTo1311(com.hashmapinc.tempus.WitsmlObjects.v20.Trajectory src) throws DatatypeConfigurationException {
+        return convertTo1311(convertTo1411(src));
     }
     //=========================================================================
 
