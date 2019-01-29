@@ -80,4 +80,35 @@ public class AnglePerLengthMeasure {
         this.uom = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.AnglePerLengthMeasure to1311AnglePerLengthMeasure() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.AnglePerLengthMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v1311.AnglePerLengthMeasure();
+
+        // assign fields
+        if (null != this.getUom())
+            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.AnglePerLengthUom.fromValue(this.getUom()));
+
+        measure.setValue(this.getValue());
+
+        return measure;
+    }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.AnglePerLengthMeasure to1411AnglePerLengthMeasure() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.AnglePerLengthMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v1411.AnglePerLengthMeasure();
+
+        // assign fields
+        if (null != this.getUom())
+            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1411.AnglePerLengthUom.fromValue(this.getUom()));
+
+        measure.setValue(this.getValue());
+
+        return measure;
+    }
+    //=========================================================================
+
 }

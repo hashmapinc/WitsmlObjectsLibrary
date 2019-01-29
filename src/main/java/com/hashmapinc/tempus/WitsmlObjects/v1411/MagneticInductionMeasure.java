@@ -74,9 +74,20 @@ public class MagneticInductionMeasure
         com.hashmapinc.tempus.WitsmlObjects.v1311.MagneticInductionMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v1311.MagneticInductionMeasure();
 
         // assign fields
-        measure.setValue(this.value);
+        measure.setValue(this.getValue());
         if (null != this.getUom())
             measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.MagneticInductionUom.fromValue(this.getUom().value()));
+
+        return measure;
+    }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v20.MagneticFluxDensityMeasure to20MagneticFluxDensityMeasure() {
+        com.hashmapinc.tempus.WitsmlObjects.v20.MagneticFluxDensityMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v20.MagneticFluxDensityMeasure();
+
+        // assign fields
+        measure.setValue(this.getValue());
+        if (null != this.getUom())
+            measure.setUom(this.getUom().value());
 
         return measure;
     }

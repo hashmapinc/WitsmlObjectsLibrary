@@ -74,9 +74,20 @@ public class AccelerationLinearMeasure
         com.hashmapinc.tempus.WitsmlObjects.v1311.AccelerationLinearMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v1311.AccelerationLinearMeasure();
 
         // assign fields
-        measure.setValue(this.value);
+        measure.setValue(this.getValue());
         if (null != this.getUom())
             measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.AccelerationLinearUom.fromValue(this.getUom().value()));
+
+        return measure;
+    }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v20.LinearAccelerationMeasure to20LinearAccelerationMeasure() {
+        com.hashmapinc.tempus.WitsmlObjects.v20.LinearAccelerationMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v20.LinearAccelerationMeasure();
+
+        // assign fields
+        measure.setValue(this.getValue());
+        if (null != this.getUom())
+            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v20.LinearAccelerationUom.fromValue(this.getUom().value()));
 
         return measure;
     }

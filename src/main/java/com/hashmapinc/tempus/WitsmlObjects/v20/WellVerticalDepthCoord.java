@@ -109,4 +109,34 @@ public class WellVerticalDepthCoord {
         this.datum = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalDepthCoord to1311VerticalDepthCoord() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalDepthCoord coord = new com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalDepthCoord();
+
+        if (null != this.getUom())
+            coord.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalCoordinateUom.fromValue(this.getUom()));
+
+        coord.setDatum(this.getDatum());
+        coord.setValue(this.getValue());
+
+        return coord;
+    }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalDepthCoord to1411WellVerticalDepthCoord() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalDepthCoord coord = new com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalDepthCoord();
+
+        if (null != this.getUom())
+            coord.setUom(com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalCoordinateUom.fromValue(this.getUom()));
+        coord.setDatum(this.getDatum());
+        coord.setValue(this.getValue());
+
+        return coord;
+    }
+    //=========================================================================
+
 }

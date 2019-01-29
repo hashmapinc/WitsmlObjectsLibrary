@@ -95,38 +95,38 @@ public class WellVerticalDepthCoord
     // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
     //=========================================================================
     public com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalDepthCoord to1411VerticalDepthCoord() {
-        com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalDepthCoord vdCoord = new com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalDepthCoord();
+        com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalDepthCoord coord = new com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalDepthCoord();
 
-        if (null != this.uom)
-            vdCoord.setUom(com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalCoordinateUom.fromValue(this.uom.value()));
+        if (null != this.getUom())
+            coord.setUom(com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalCoordinateUom.fromValue(this.getUom().value()));
 
-        vdCoord.setDatum(this.datum);
-        vdCoord.setValue(this.value);
+        coord.setDatum(this.getDatum());
+        coord.setValue(this.getValue());
 
-        return vdCoord;
+        return coord;
     }
 
     public com.hashmapinc.tempus.WitsmlObjects.v1411.LengthMeasure to1411LengthMeasure() {
         com.hashmapinc.tempus.WitsmlObjects.v1411.LengthMeasure length = new com.hashmapinc.tempus.WitsmlObjects.v1411.LengthMeasure();
 
-        if (null != this.uom)
-            length.setUom(this.uom.value());
+        if (null != this.getUom())
+            length.setUom(this.getUom().value());
 
-        length.setValue(this.value);
+        length.setValue(this.getValue());
 
         return length;
     }
 
     public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord to20DepthCoord() {
-        com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord vdCoord = new com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord();
+        com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord coord = new com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord();
 
-        if (null != this.uom)
-            vdCoord.setUom(this.uom.value());
+        if (null != this.getUom())
+            coord.setUom(this.getUom().value());
 
-        vdCoord.setDatum(this.datum);
-        vdCoord.setValue(this.value);
+        coord.setDatum(this.getDatum());
+        coord.setValue(this.getValue());
 
-        return vdCoord;
+        return coord;
     }
     //=========================================================================
 }
