@@ -503,6 +503,10 @@ public class Trajectory
         return this.trajectoryStation;
     }
 
+    public void setTrajectoryStation(List<TrajectoryStation> stationList) {
+        this.trajectoryStation = stationList;
+    }
+
     /**
      * Gets the value of the wellbore property.
      * 

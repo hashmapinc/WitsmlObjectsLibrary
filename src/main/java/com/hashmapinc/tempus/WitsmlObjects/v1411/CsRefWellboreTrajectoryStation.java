@@ -144,6 +144,20 @@ public class CsRefWellboreTrajectoryStation {
 
         return station;
     }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v20.RefWellboreTrajectoryStation to20RefWellboreTrajectoryStation() {
+        com.hashmapinc.tempus.WitsmlObjects.v20.RefWellboreTrajectoryStation station = new com.hashmapinc.tempus.WitsmlObjects.v20.RefWellboreTrajectoryStation();
+
+        // assign fields
+        station.setStationReference(this.getStationReference());
+        if (null != this.getTrajectoryParent())
+            station.setTrajectoryParent(this.getTrajectoryParent().getValue());
+
+        if (null != this.getWellboreParent())
+            station.setWellboreParent(this.getWellboreParent().getValue());
+
+        return station;
+    }
     //=========================================================================
 
 }

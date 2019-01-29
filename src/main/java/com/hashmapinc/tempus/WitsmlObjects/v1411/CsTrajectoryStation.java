@@ -1667,30 +1667,24 @@ public class CsTrajectoryStation {
             station.setValid(this.getValid().to20StnTrajValid());
 
         // matrixConv
-        if (null != srcStation.getMatrixCov())
-            station.setMatrixCov(this.getMatrixCov().to1311CsStnTrajMatrixCov());
+        if (null != this.getMatrixCov())
+            station.setMatrixCov(this.getMatrixCov().to20StnTrajMatrixCov());
 
-        if (null != srcStation.getSourceStation()) {
-            assertEquals(srcStation.getSourceStation().getStationReference(), destStation.getSourceStation().getStationReference());
-            if (null != srcStation.getSourceStation().getTrajectoryParent()) {
-                assertEquals(srcStation.getSourceStation().getTrajectoryParent().getValue(), destStation.getSourceStation().getTrajectoryParent());
-            }
-
-            if (null != srcStation.getSourceStation().getWellboreParent())
-                assertEquals(srcStation.getSourceStation().getWellboreParent().getValue(), destStation.getSourceStation().getWellboreParent());
-        }
+        // sourceStation
+        if (null != this.getSourceStation())
+            station.setSourceStation(this.getSourceStation().to20RefWellboreTrajectoryStation());
 
         // check repeating fields
-        if (null != srcStation.getLocation()) {
-            List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation> srcStationLoc = srcStation.getLocation();
-            List<com.hashmapinc.tempus.WitsmlObjects.v20.AbstractWellLocation> destStationLoc = destStation.getLocation();
-            for (int j = 0; j < srcStationLoc.size(); j++) {
-                assertEquals(srcStationLoc.get(j).isOriginal(), destStationLoc.get(j).isOriginal());
-                assertEquals(srcStationLoc.get(j).getDescription(), destStationLoc.get(j).getDescription());
-                assertEquals(srcStationLoc.get(j).getUid(), destStationLoc.get(j).getUid());
-            }
+        if (null != this.getLocation()) {
+            List<com.hashmapinc.tempus.WitsmlObjects.v20.AbstractWellLocation> destLocations = new ArrayList<>();
+            for (com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation srcLocation : this.getLocation())
+                destLocations.add(srcLocation.to20AbstractWellLocation());
+
+            station.setLocation(destLocations);
+            station.getLocation();
         }
-    }
+
+        return station;
     }
     //=========================================================================
 

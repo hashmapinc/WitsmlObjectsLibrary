@@ -538,6 +538,17 @@ public class CsLocation {
 
         return location;
     }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v20.AbstractWellLocation to20AbstractWellLocation() {
+        com.hashmapinc.tempus.WitsmlObjects.v20.AbstractWellLocation location = new com.hashmapinc.tempus.WitsmlObjects.v20.GeodeticWellLocation();
+
+        // assign fields
+        location.setOriginal(this.isOriginal());
+        location.setDescription(this.getDescription());
+        location.setUid(this.getUid());
+
+        return location;
+    }
     //=========================================================================
 
 }

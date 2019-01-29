@@ -103,26 +103,26 @@ public class MeasuredDepthCoord
     // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
     //=========================================================================
     public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord to20DepthCoord() {
-        com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord mdCoord = new com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord();
+        com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord coord = new com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord();
 
-        mdCoord.setDatum(this.datum);
-        if (null != this.uom)
-            mdCoord.setUom(this.uom.value());
-        mdCoord.setValue(this.value);
+        coord.setDatum(this.getDatum());
+        if (null != this.getUom())
+            coord.setUom(this.getUom().value());
+        coord.setValue(this.getValue());
 
-        return mdCoord;
+        return coord;
     }
 
     public com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthCoord to1311MeasuredDepthCoord() {
-        com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthCoord mdCoord = new com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthCoord();
+        com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthCoord coord = new com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthCoord();
 
-        if (null != this.uom)
-            mdCoord.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthUom.fromValue(this.uom.value()));
+        if (null != this.getUom())
+            coord.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthUom.fromValue(this.getUom().value()));
 
-        mdCoord.setDatum(this.datum);
-        mdCoord.setValue(this.value);
+        coord.setDatum(this.getDatum());
+        coord.setValue(this.getValue());
 
-        return mdCoord;
+        return coord;
     }
     //=========================================================================
 

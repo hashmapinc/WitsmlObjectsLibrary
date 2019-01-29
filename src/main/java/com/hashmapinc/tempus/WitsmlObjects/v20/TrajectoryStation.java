@@ -1304,6 +1304,10 @@ public class TrajectoryStation {
         return this.location;
     }
 
+    public void setLocation(List<AbstractWellLocation> locList) {
+        this.location = locList;
+    }
+
     /**
      * Gets the value of the sourceStation property.
      * 
