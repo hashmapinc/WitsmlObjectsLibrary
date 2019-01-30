@@ -34,6 +34,29 @@ public class WitsmlMarshalTest {
         assertFalse(serializedXML1411.contains("ns0:wells")); // weird namespacing shouldn't happen
     }
 
+    @Test
+    public void shouldDeserialize1411WellboreToPOJOWithoutIndexEqualZero() throws Exception {
+        String xml1411 = TestUtilities.getResourceAsString("wellboreOpenQueryWithExtensionNameValue1411.xml");
+        com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores obj1411 = WitsmlMarshal
+                .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores.class);
+
+        assertNotNull(obj1411);
+        ObjWellbore wellbore = obj1411.getWellbore().get(0);
+        assertNull(wellbore.getCommonData().getExtensionNameValue().get(0).getIndex());
+    }
+
+    @Test
+    public void shouldDeserialize1411WellboreToPOJOWithoutIndexEqual1() throws Exception {
+        String xml1411 = TestUtilities.getResourceAsString("wellboreOpenQueryWithExtensionNameValue1411Equal1.xml");
+        com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores obj1411 = WitsmlMarshal
+                .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores.class);
+
+        assertNotNull(obj1411);
+        ObjWellbore wellbore = obj1411.getWellbore().get(0);
+        assertEquals((long)1,(long)wellbore.getCommonData().getExtensionNameValue().get(0).getIndex());
+    }
+
+
 
     //=========================================================================
     // JSON serialization for WELL
