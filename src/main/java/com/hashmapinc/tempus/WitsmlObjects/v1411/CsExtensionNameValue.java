@@ -8,6 +8,8 @@
 
 package com.hashmapinc.tempus.WitsmlObjects.v1411;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -70,9 +72,11 @@ public class CsExtensionNameValue {
     @XmlSchemaType(name = "string")
     protected PrimitiveType dataType;
     @XmlSchemaType(name = "dateTime")
+    @JsonProperty("dTim")
     protected XMLGregorianCalendar dTim;
     protected MeasuredDepthCoord md;
-    protected Short index;
+    @XmlElement(nillable=true)
+    protected Long index;
     protected String measureClass;
     protected String description;
     @XmlAttribute(name = "uid")
@@ -158,6 +162,7 @@ public class CsExtensionNameValue {
      *     {@link XMLGregorianCalendar }
      *     
      */
+    @JsonProperty("dTim")
     public XMLGregorianCalendar getDTim() {
         return dTim;
     }
@@ -206,7 +211,7 @@ public class CsExtensionNameValue {
      *     {@link Short }
      *     
      */
-    public Short getIndex() {
+    public Long getIndex() {
         return index;
     }
 
@@ -218,7 +223,7 @@ public class CsExtensionNameValue {
      *     {@link Short }
      *     
      */
-    public void setIndex(Short value) {
+    public void setIndex(Long value) {
         this.index = value;
     }
 

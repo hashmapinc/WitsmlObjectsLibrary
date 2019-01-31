@@ -8,6 +8,8 @@
 
 package com.hashmapinc.tempus.WitsmlObjects.v1411;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -47,6 +49,7 @@ public class TimestampedTimeZone {
     @XmlValue
     protected String value;
     @XmlAttribute(name = "dTim")
+    @JsonProperty("dTim")
     protected XMLGregorianCalendar dTim;
 
     /**
@@ -85,6 +88,7 @@ public class TimestampedTimeZone {
      *     {@link XMLGregorianCalendar }
      *     
      */
+    @JsonProperty("dTimCreation")
     public XMLGregorianCalendar getDTim() {
         return dTim;
     }

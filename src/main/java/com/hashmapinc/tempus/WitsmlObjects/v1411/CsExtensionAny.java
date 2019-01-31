@@ -14,6 +14,8 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAnyElement;
 import javax.xml.bind.annotation.XmlType;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
 import org.w3c.dom.Element;
 
 
@@ -45,6 +47,7 @@ import org.w3c.dom.Element;
 @XmlType(name = "cs_extensionAny", propOrder = {
     "any"
 })
+@JsonInclude(JsonInclude.Include.ALWAYS)
 public class CsExtensionAny {
 
     @XmlAnyElement(lax = true)
