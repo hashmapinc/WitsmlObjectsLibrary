@@ -8,7 +8,91 @@ public class LogConverter {
     // conversions to 1.3.1.1
     //=========================================================================
     public static com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLog convertTo1311(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLog src) {
-        return null;
+        // get converted log
+        com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLog dest = new com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLog();
+
+        // check equality for non complex, non repeating fields
+        dest.setNameWell(src.getNameWell());
+        dest.setNameWellbore(src.getNameWellbore());
+        dest.setName(src.getName());
+        dest.setObjectGrowing(src.isObjectGrowing());
+        dest.setServiceCompany(src.getServiceCompany());
+        dest.setRunNumber(src.getRunNumber());
+        dest.setBhaRunNumber(src.getBhaRunNumber());
+        dest.setPass(src.getPass());
+        dest.setUidWell(src.getUidWell());
+        dest.setUidWellbore(src.getUidWellbore());
+        dest.setUid(src.getUid());
+        dest.setCreationDate(src.getCreationDate());
+        dest.setDescription(src.getDescription());
+        dest.setNullValue(src.getNullValue());
+        dest.setStartDateTimeIndex(src.getStartDateTimeIndex());
+        dest.setEndDateTimeIndex(src.getEndDateTimeIndex());
+
+        // check complex fields
+        // indexType
+        if (null != src.getIndexType())
+            dest.setIndexType(com.hashmapinc.tempus.WitsmlObjects.v1311.LogIndexType.fromValue(src.getIndexType().value()));
+
+        // startIndex
+        if (null != src.getStartIndex())
+            dest.setStartIndex(src.getStartIndex().to1311GenericMeasure());
+
+        // endIndex
+        if (null != src.getEndIndex())
+            dest.setEndIndex(src.getEndIndex().to1311GenericMeasure());
+
+        // stepIncrement
+        if (null != src.getStepIncrement())
+            dest.setStepIncrement(src.getStepIncrement().to1311RatioGenericMeasure());
+
+        // direction
+        if (null != src.getDirection())
+            dest.setDirection(com.hashmapinc.tempus.WitsmlObjects.v1311.LogIndexDirection.fromValue(src.getDirection().value()));
+
+        // indexCurve
+        if (null != src.getIndexCurve()) {
+            com.hashmapinc.tempus.WitsmlObjects.v1311.IndexCurve destCurve = new com.hashmapinc.tempus.WitsmlObjects.v1311.IndexCurve();
+            destCurve.setValue(src.getIndexCurve());
+            dest.setIndexCurve(destCurve);
+        }
+
+        // logData
+        if (null != src.getLogData() && 0 < src.getLogData().size() && null != src.getLogData().get(0).getData()) { // TODO: confirm this conversion
+            com.hashmapinc.tempus.WitsmlObjects.v1311.CsLogData destLogData = new com.hashmapinc.tempus.WitsmlObjects.v1311.CsLogData();
+            destLogData.setData(src.getLogData().get(0).getData());
+            dest.setLogData(destLogData);
+        }
+
+        // commonData
+        if (null != src.getCommonData())
+            dest.setCommonData(src.getCommonData().to1311CommonData());
+
+        // customData
+        if (null != src.getCustomData() && null != src.getCustomData().getAny())
+            dest.setCustomData(src.getCustomData().to1311CustomData());
+
+        // check repeating fields
+        // logParam
+        if (null != src.getLogParam()) {
+            List<com.hashmapinc.tempus.WitsmlObjects.v1311.IndexedObject> destParams = new ArrayList<>();
+            for (com.hashmapinc.tempus.WitsmlObjects.v1411.IndexedObject srcParam : src.getLogParam())
+                destParams.add(srcParam.to1311IndexedObject());
+
+            dest.setLogParam(destParams);
+        }
+
+        // logCurveInfo
+        if (null != src.getLogCurveInfo()) {
+            List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsLogCurveInfo> destInfos = new ArrayList<>();
+            for (com.hashmapinc.tempus.WitsmlObjects.v1411.CsLogCurveInfo srcInfo : src.getLogCurveInfo())
+                destInfos.add(srcInfo.to1311CsLogCurveInfo());
+
+            dest.setLogCurveInfo(destInfos);
+        }
+
+
+        return dest;
     }
 
     public static com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLog convertTo1311(com.hashmapinc.tempus.WitsmlObjects.v20.Log src) {

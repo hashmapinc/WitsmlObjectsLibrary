@@ -683,11 +683,11 @@ public class CsLogCurveInfo {
         // complex fields
         // mnemonic
         if (null != this.getMnemonic())
-            mnemonic.setValue(this.getMnemonic().getValue());
+            info.setMnemonic(this.getMnemonic().getValue());
 
         // mnemAlias
         if (null != this.getMnemAlias())
-            mnemAlias.setValue(this.getMnemonic().getValue());
+            info.setMnemAlias(this.getMnemAlias().getValue());
 
         // wellDatum
         if (null != this.getWellDatum())
