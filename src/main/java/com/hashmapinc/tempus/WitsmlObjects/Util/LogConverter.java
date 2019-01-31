@@ -1,5 +1,8 @@
 package com.hashmapinc.tempus.WitsmlObjects.Util;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LogConverter {
     //=========================================================================
     // conversions to 1.3.1.1
@@ -42,54 +45,43 @@ public class LogConverter {
         // check complex fields
         // indexType
         if (null != src.getIndexType())
-            assertEquals(src.getIndexType().value(), dest.getIndexType().value());
+            dest.setIndexType(com.hashmapinc.tempus.WitsmlObjects.v1411.LogIndexType.fromValue(src.getIndexType().value()));
 
         // startIndex
-        if (null != src.getStartIndex()) {
-            assertEquals(src.getStartIndex().getUom(), dest.getStartIndex().getUom());
-            assertEquals(src.getStartIndex().getValue(), dest.getStartIndex().getValue());
-        }
+        if (null != src.getStartIndex())
+            dest.setStartIndex(src.getStartIndex().to1411GenericMeasure());
 
         // endIndex
-        if (null != src.getEndIndex()) {
-            assertEquals(src.getEndIndex().getUom(), dest.getEndIndex().getUom());
-            assertEquals(src.getEndIndex().getValue(), dest.getEndIndex().getValue());
-        }
+        if (null != src.getEndIndex())
+            dest.setEndIndex(src.getEndIndex().to1411GenericMeasure());
 
         // stepIncrement
-        if (null != src.getStepIncrement()) {
-            assertEquals(src.getStepIncrement().getUom(), dest.getStepIncrement().getUom());
-            assertEquals(src.getStepIncrement().getValue(), dest.getStepIncrement().getValue());
-            assertEquals(src.getStepIncrement().getNumerator(), dest.getStepIncrement().getNumerator());
-            assertEquals(src.getStepIncrement().getDenominator(), dest.getStepIncrement().getDenominator());
-        }
+        if (null != src.getStepIncrement())
+            dest.setStepIncrement(src.getStepIncrement().to1411RatioGenericMeasure());
 
         // direction
         if (null != src.getDirection())
-            assertEquals(src.getDirection().value(), dest.getDirection().value());
+            dest.setDirection(com.hashmapinc.tempus.WitsmlObjects.v1411.LogIndexDirection.fromValue(src.getDirection().value()));
 
         // indexCurve
         if (null != src.getIndexCurve())
-            assertEquals(src.getIndexCurve().getValue(), dest.getIndexCurve());
+            dest.setIndexCurve(src.getIndexCurve().getValue());
 
         // logData
-        if (null != src.getLogData())
-            assertEquals(src.getLogData().getData(), dest.getLogData().get(0).getData()); // TODO: confirm this conversion
+        if (null != src.getLogData()) { // TODO: confirm this conversion
+            List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsLogData> destLogData = new ArrayList<>();
+            destLogData.add(new com.hashmapinc.tempus.WitsmlObjects.v1411.CsLogData());
+            destLogData.get(0).setData(src.getLogData().getData());
+            dest.setLogData(destLogData);
+        }
 
         // commonData
-        if (null != src.getCommonData()) {
-            assertEquals(src.getCommonData().getSourceName(), dest.getCommonData().getSourceName());
-            assertEquals(src.getCommonData().getDTimCreation(), dest.getCommonData().getDTimCreation());
-            assertEquals(src.getCommonData().getDTimLastChange(), dest.getCommonData().getDTimLastChange());
-            assertEquals(src.getCommonData().getItemState().value(), dest.getCommonData().getItemState().value());
-            assertEquals(src.getCommonData().getComments(), dest.getCommonData().getComments());
-        }
+        if (null != src.getCommonData())
+            dest.setCommonData(src.getCommonData().to1411CommonData());
 
         // customData
-        if (null != src.getCustomData() && null != src.getCustomData().getAny()){
-            for (int i = 0; i < src.getCustomData().getAny().size(); i++)
-                assertEquals(src.getCustomData().getAny().get(i), dest.getCustomData().getAny().get(i));
-        }
+        if (null != src.getCustomData() && null != src.getCustomData().getAny())
+            dest.setCustomData(src.getCustomData().to1411CustomData());
 
         // check repeating fields
         // logParam

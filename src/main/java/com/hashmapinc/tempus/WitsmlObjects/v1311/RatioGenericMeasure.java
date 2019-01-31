@@ -120,4 +120,22 @@ public class RatioGenericMeasure
         this.denominator = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.RatioGenericMeasure to1411RatioGenericMeasure() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.RatioGenericMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v1411.RatioGenericMeasure();
+
+        measure.setValue(this.getValue());
+        measure.setUom(this.getUom());
+        measure.setDenominator(this.getDenominator());
+        measure.setNumerator(this.getNumerator());
+
+        return measure;
+    }
+    //=========================================================================
+
 }

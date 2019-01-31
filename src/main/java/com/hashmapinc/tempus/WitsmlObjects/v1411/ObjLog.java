@@ -774,6 +774,10 @@ public class ObjLog extends AbstractWitsmlObject {
         return this.logData;
     }
 
+    public void setLogData(List<CsLogData> dataList) {
+        this.logData = dataList;
+    }
+
     /**
      * Gets the value of the commonData property.
      * 
