@@ -716,6 +716,10 @@ public class ObjLog extends AbstractWitsmlObject {
         return this.logParam;
     }
 
+    public void setLogParam(List<IndexedObject> value) {
+        this.logParam = value;
+    }
+
     /**
      * Gets the value of the logCurveInfo property.
      * 
@@ -743,6 +747,10 @@ public class ObjLog extends AbstractWitsmlObject {
             logCurveInfo = new ArrayList<CsLogCurveInfo>();
         }
         return this.logCurveInfo;
+    }
+
+    public void setLogCurveInfo(List<CsLogCurveInfo> values) {
+        this.logCurveInfo = values;
     }
 
     /**

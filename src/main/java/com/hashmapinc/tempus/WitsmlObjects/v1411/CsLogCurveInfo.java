@@ -603,6 +603,10 @@ public class CsLogCurveInfo {
         return this.axisDefinition;
     }
 
+    public void setAxisDefinition(List<CsAxisDefinition> values) {
+        this.axisDefinition = values;
+    }
+
     /**
      * Gets the value of the extensionNameValue property.
      * 
@@ -655,5 +659,79 @@ public class CsLogCurveInfo {
     public void setUid(String value) {
         this.uid = value;
     }
+
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.CsLogCurveInfo to1311CsLogCurveInfo() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.CsLogCurveInfo info = new com.hashmapinc.tempus.WitsmlObjects.v1311.CsLogCurveInfo();
+
+        // simple fields
+        info.setClassWitsml(this.getClassWitsml());
+        info.setUnit(this.getUnit());
+        info.setNullValue(this.getNullValue());
+        info.setAlternateIndex(this.isAlternateIndex());
+        info.setMinDateTimeIndex(this.getMinDateTimeIndex());
+        info.setMaxDateTimeIndex(this.getMaxDateTimeIndex());
+        info.setCurveDescription(this.getCurveDescription());
+        info.setDataSource(this.getDataSource());
+        info.setUid(this.getUid());
+
+        // complex fields
+        // mnemonic
+        if (null != this.getMnemonic())
+            mnemonic.setValue(this.getMnemonic().getValue());
+
+        // mnemAlias
+        if (null != this.getMnemAlias())
+            mnemAlias.setValue(this.getMnemonic().getValue());
+
+        // wellDatum
+        if (null != this.getWellDatum())
+            info.setWellDatum(this.getWellDatum().to1311RefNameString());
+
+        // minIndex
+        if (null != this.getMinIndex())
+            info.setMinIndex(this.getMinIndex().to1311GenericMeasure());
+
+        // maxIndex
+        if (null != this.getMaxIndex())
+            info.setMaxIndex(this.getMaxIndex().to1311GenericMeasure());
+
+        // sensorOffset
+        if (null != this.getSensorOffset())
+            info.setSensorOffset(this.getSensorOffset().to1311LengthMeasure());
+
+        // densData
+        if (null != this.getDensData())
+            info.setDensData(this.getDensData().to1311PerLengthMeasure());
+
+        // traceState
+        if (null != this.getTraceState())
+            info.setTraceState(com.hashmapinc.tempus.WitsmlObjects.v1311.LogTraceState.fromValue(this.getTraceState().value()));
+
+        // traceOrigin
+        if (null != this.getTraceOrigin())
+            info.setTraceOrigin(com.hashmapinc.tempus.WitsmlObjects.v1311.LogTraceOrigin.fromValue(this.getTraceOrigin().value()));
+
+        // typeLogData
+        if (null != this.getTypeLogData())
+            info.setTypeLogData(com.hashmapinc.tempus.WitsmlObjects.v1311.LogDataType.fromValue(this.getTypeLogData().value()));
+
+        // repeating fields
+        if (null != this.getAxisDefinition()) {
+            List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsAxisDefinition> destDefs = new ArrayList<>();
+            for (com.hashmapinc.tempus.WitsmlObjects.v1411.CsAxisDefinition srcDef : this.getAxisDefinition())
+                destDefs.add(srcDef.to1311CsAxisDefinition());
+
+            info.setAxisDefinition(destDefs);
+        }
+
+        return info;
+    }
+    //=========================================================================
 
 }

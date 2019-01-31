@@ -202,6 +202,13 @@ public class CsAxisDefinition {
         return this.doubleValues;
     }
 
+    public void setDoubleValues(List<String> values) {
+        this.doubleValues = new ArrayList<>();
+        for (String value : values) {
+            this.doubleValues.add(Double.parseDouble(value));
+        }
+    }
+
     /**
      * Gets the value of the stringValues property.
      * 
@@ -231,6 +238,10 @@ public class CsAxisDefinition {
         return this.stringValues;
     }
 
+    public void setStringValues(List<String> values) {
+        this.stringValues = values;
+    }
+
     /**
      * Gets the value of the uid property.
      * 
@@ -254,5 +265,28 @@ public class CsAxisDefinition {
     public void setUid(String value) {
         this.uid = value;
     }
+
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.CsAxisDefinition to1411CsAxisDefinition() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.CsAxisDefinition def = new com.hashmapinc.tempus.WitsmlObjects.v1411.CsAxisDefinition();
+
+        // assign fields
+        def.setOrder(this.getOrder());
+        def.setCount(this.getCount());
+        def.setName(this.getName());
+        def.setPropertyType(this.getPropertyType());
+        def.setUom(this.getUom());
+        def.setUid(this.getUid());
+        def.setDoubleValues(this.getDoubleValues());
+        def.setStringValues(this.getStringValues());
+
+        return def;
+    }
+    //=========================================================================
 
 }

@@ -99,7 +99,7 @@ public class LogConverterTest {
             }
         }
 
-        // logParam
+        // logCurveInfo
         if (null != src.getLogCurveInfo()) {
             for (int i = 0; i < src.getLogCurveInfo().size(); i++) {
                 com.hashmapinc.tempus.WitsmlObjects.v1411.CsLogCurveInfo srcInfo = src.getLogCurveInfo().get(i);
@@ -300,7 +300,7 @@ public class LogConverterTest {
             }
         }
 
-        // logParam
+        // logCurveInfo
         if (null != src.getLogCurveInfo()) {
             for (int i = 0; i < src.getLogCurveInfo().size(); i++) {
                 com.hashmapinc.tempus.WitsmlObjects.v1311.CsLogCurveInfo srcInfo = src.getLogCurveInfo().get(i);
@@ -325,6 +325,7 @@ public class LogConverterTest {
                 // mnemAlias
                 if (null != srcInfo.getMnemAlias())
                     assertEquals(srcInfo.getMnemAlias(), destInfo.getMnemAlias().getValue());
+
                 // wellDatum
                 if (null != srcInfo.getWellDatum()) {
                     assertEquals(srcInfo.getWellDatum().getValue(), destInfo.getWellDatum().getValue());

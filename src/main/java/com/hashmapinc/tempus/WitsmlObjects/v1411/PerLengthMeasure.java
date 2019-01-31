@@ -64,4 +64,21 @@ public class PerLengthMeasure
         this.uom = value;
     }
 
+
+
+
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.PerLengthMeasure to1311PerLengthMeasure() {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.PerLengthMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v1311.PerLengthMeasure();
+
+        // assign fields
+        measure.setValue(this.getValue());
+        measure.setUom(this.getUom());
+
+        return measure;
+    }
+    //=========================================================================
+
 }
