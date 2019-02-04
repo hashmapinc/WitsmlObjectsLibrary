@@ -748,6 +748,8 @@ public class ObjTrajectory extends AbstractWitsmlObject {
                 ObjTrajectorys trajectorys = new ObjTrajectorys();
                 trajectorys.addTrajectory(this);
                 return WitsmlMarshal.serialize(trajectorys);
+            } else if ("2.0".equals(version)) {
+                return WitsmlMarshal.serialize(TrajectoryConverter.convertTo20(this));
             } else {
                 return null;
             }
