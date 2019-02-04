@@ -54,11 +54,19 @@ public class AbstractWitsmlObjectTest {
         String serializedXML1311 = obj1311.getXMLString("1.3.1.1");
         assertNotNull(serializedXML1311);
         assertFalse(serializedXML1311.contains("ns0:wells"));
+        assertNotEquals(0, serializedXML1311.length());
 
         // check cross-version serialization
         String translatedXML1411 = obj1311.getXMLString("1.4.1.1");
         assertNotNull(translatedXML1411);
         assertFalse(translatedXML1411.contains("ns0:wells"));
+        assertNotEquals(0, translatedXML1411.length());
+
+        // check 20 serialization
+        String serializedXML20from1311 = obj1311.getXMLString("2.0");
+        assertNotNull(serializedXML20from1311);
+        assertFalse(serializedXML20from1311.contains("ns0:wells"));
+        assertNotEquals(0, serializedXML20from1311.length());
         //=====================================================================
 
         //=====================================================================
@@ -72,11 +80,19 @@ public class AbstractWitsmlObjectTest {
         String serializedXML1411 = obj1411.getXMLString("1.4.1.1");
         assertNotNull(serializedXML1411);
         assertFalse(serializedXML1411.contains("ns0:wells"));
+        assertNotEquals(0, serializedXML1411.length());
 
         // check cross-version serialization
         String translatedXML1311 = obj1411.getXMLString("1.3.1.1");
         assertNotNull(translatedXML1311);
         assertFalse(translatedXML1311.contains("ns0:wells"));
+        assertNotEquals(0, translatedXML1311.length());
+
+        // check 20 serialization
+        String serializedXML20from1411 = obj1411.getXMLString("2.0");
+        assertNotNull(serializedXML20from1411);
+        assertFalse(serializedXML20from1411.contains("ns0:wells"));
+        assertNotEquals(0, serializedXML20from1411.length());
         //=====================================================================
     }
 
@@ -98,6 +114,12 @@ public class AbstractWitsmlObjectTest {
         String translatedJSON1411 = obj1311.getJSONString("1.4.1.1");
         assertNotNull(translatedJSON1411);
         assertNotEquals(0, translatedJSON1411.length());
+
+        // check 20 serialization
+        String serializedJSON20from1311 = obj1311.getJSONString("2.0");
+        assertNotNull(serializedJSON20from1311);
+        assertFalse(serializedJSON20from1311.contains("ns0:wells"));
+        assertNotEquals(0, serializedJSON20from1311.length());
         //=====================================================================
 
         //=====================================================================
@@ -115,6 +137,11 @@ public class AbstractWitsmlObjectTest {
         // check cross-version serialization
         String translatedJSON1311 = obj1411.getJSONString("1.3.1.1");
         assertNotNull(translatedJSON1311);
+        assertNotEquals(0, translatedJSON1311.length());
+
+        // check 20 serialization
+        String serializedJSON20from1411 = obj1411.getJSONString("2.0");
+        assertNotNull(serializedJSON20from1411);
         assertNotEquals(0, translatedJSON1311.length());
         //=====================================================================
     }

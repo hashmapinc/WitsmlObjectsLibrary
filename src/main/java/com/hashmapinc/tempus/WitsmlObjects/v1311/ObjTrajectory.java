@@ -770,6 +770,8 @@ public class ObjTrajectory extends AbstractWitsmlObject {
                 return WitsmlMarshal.serializeToJSON(TrajectoryConverter.convertTo1411(this));
             } else if ("1.3.1.1".equals(version)) {
                 return WitsmlMarshal.serializeToJSON(this);
+            } else if ("2.0".equals(version)) {
+                return WitsmlMarshal.serializeToJSON(TrajectoryConverter.convertTo20(this));
             } else {
                 return null; // unsupported version
             }
