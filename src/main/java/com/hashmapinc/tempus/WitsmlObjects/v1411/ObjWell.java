@@ -16,9 +16,12 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
 import com.hashmapinc.tempus.WitsmlObjects.Util.WellConverter;
 import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlMarshal;
@@ -92,7 +95,8 @@ public class ObjWell extends AbstractWitsmlObject {
     protected String numLicense;
     protected String numGovt;
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar dTimLicense;
+    @JsonProperty("dTimLicense")
+    protected String dTimLicense;
     protected String field;
     protected String country;
     protected String state;
@@ -105,18 +109,16 @@ public class ObjWell extends AbstractWitsmlObject {
     protected String operatorDiv;
     protected DimensionlessMeasure pcInterest;
     protected String numAPI;
-    @XmlSchemaType(name = "string")
-    protected WellStatus statusWell;
-    @XmlSchemaType(name = "string")
-    protected WellPurpose purposeWell;
-    @XmlSchemaType(name = "string")
-    protected WellFluid fluidWell;
-    @XmlSchemaType(name = "string")
-    protected WellDirection directionWell;
+    protected String statusWell;
+    protected String purposeWell;
+    protected String fluidWell;
+    protected String directionWell;
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar dTimSpud;
+    @JsonProperty("dTimSpud")
+    protected String dTimSpud;
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar dTimPa;
+    @JsonProperty("dTimPa")
+    protected String dTimPa;
     protected WellElevationCoord wellheadElevation;
     protected List<CsWellDatum> wellDatum;
     protected WellElevationCoord groundElevation;
@@ -236,7 +238,8 @@ public class ObjWell extends AbstractWitsmlObject {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public XMLGregorianCalendar getDTimLicense() {
+    @JsonProperty("dTimLicense")
+    public String getDTimLicense() {
         return dTimLicense;
     }
 
@@ -248,8 +251,17 @@ public class ObjWell extends AbstractWitsmlObject {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setDTimLicense(XMLGregorianCalendar value) {
-        this.dTimLicense = value;
+    public void setDTimLicense(String value) throws DatatypeConfigurationException {
+        if (value == null) return;
+        if (value.isEmpty()){
+            this.dTimLicense = value;
+        } else {
+            this.dTimLicense =
+                    DatatypeFactory
+                            .newInstance()
+                            .newXMLGregorianCalendar(value)
+                            .toXMLFormat();
+        }
     }
 
     /**
@@ -548,7 +560,7 @@ public class ObjWell extends AbstractWitsmlObject {
      *     {@link WellStatus }
      *     
      */
-    public WellStatus getStatusWell() {
+    public String getStatusWell() {
         return statusWell;
     }
 
@@ -560,7 +572,7 @@ public class ObjWell extends AbstractWitsmlObject {
      *     {@link WellStatus }
      *     
      */
-    public void setStatusWell(WellStatus value) {
+    public void setStatusWell(String value) {
         this.statusWell = value;
     }
 
@@ -572,7 +584,7 @@ public class ObjWell extends AbstractWitsmlObject {
      *     {@link WellPurpose }
      *     
      */
-    public WellPurpose getPurposeWell() {
+    public String getPurposeWell() {
         return purposeWell;
     }
 
@@ -584,7 +596,7 @@ public class ObjWell extends AbstractWitsmlObject {
      *     {@link WellPurpose }
      *     
      */
-    public void setPurposeWell(WellPurpose value) {
+    public void setPurposeWell(String value) {
         this.purposeWell = value;
     }
 
@@ -596,7 +608,7 @@ public class ObjWell extends AbstractWitsmlObject {
      *     {@link WellFluid }
      *     
      */
-    public WellFluid getFluidWell() {
+    public String getFluidWell() {
         return fluidWell;
     }
 
@@ -608,7 +620,7 @@ public class ObjWell extends AbstractWitsmlObject {
      *     {@link WellFluid }
      *     
      */
-    public void setFluidWell(WellFluid value) {
+    public void setFluidWell(String value) {
         this.fluidWell = value;
     }
 
@@ -620,7 +632,7 @@ public class ObjWell extends AbstractWitsmlObject {
      *     {@link WellDirection }
      *     
      */
-    public WellDirection getDirectionWell() {
+    public String getDirectionWell() {
         return directionWell;
     }
 
@@ -632,7 +644,7 @@ public class ObjWell extends AbstractWitsmlObject {
      *     {@link WellDirection }
      *     
      */
-    public void setDirectionWell(WellDirection value) {
+    public void setDirectionWell(String value) {
         this.directionWell = value;
     }
 
@@ -644,7 +656,8 @@ public class ObjWell extends AbstractWitsmlObject {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public XMLGregorianCalendar getDTimSpud() {
+    @JsonProperty("dTimSpud")
+    public String getDTimSpud() {
         return dTimSpud;
     }
 
@@ -656,8 +669,17 @@ public class ObjWell extends AbstractWitsmlObject {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setDTimSpud(XMLGregorianCalendar value) {
-        this.dTimSpud = value;
+    public void setDTimSpud(String value) throws DatatypeConfigurationException {
+        if (value == null) return;
+        if (value.isEmpty()){
+            this.dTimSpud = value;
+        } else {
+            this.dTimSpud =
+                    DatatypeFactory
+                            .newInstance()
+                            .newXMLGregorianCalendar(value)
+                            .toXMLFormat();
+        }
     }
 
     /**
@@ -668,7 +690,8 @@ public class ObjWell extends AbstractWitsmlObject {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public XMLGregorianCalendar getDTimPa() {
+    @JsonProperty("dTimPa")
+    public String getDTimPa() {
         return dTimPa;
     }
 
@@ -680,8 +703,17 @@ public class ObjWell extends AbstractWitsmlObject {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setDTimPa(XMLGregorianCalendar value) {
-        this.dTimPa = value;
+    public void setDTimPa(String value) throws DatatypeConfigurationException{
+        if (value == null) return;
+        if (value.isEmpty()){
+            this.dTimPa = value;
+        } else {
+            this.dTimPa =
+                    DatatypeFactory
+                            .newInstance()
+                            .newXMLGregorianCalendar(value)
+                            .toXMLFormat();
+        }
     }
 
     /**

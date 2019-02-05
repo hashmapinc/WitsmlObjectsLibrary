@@ -42,15 +42,15 @@ public class WellConverterTest {
         }
 
         if (null != src.getStatusWell())
-            assertEquals(src.getStatusWell().value(), dest.getStatusWell().value());
+            assertEquals(src.getStatusWell(), dest.getStatusWell());
         if (null != src.getPurposeWell())
-            assertEquals(src.getPurposeWell().value(), dest.getPurposeWell().value());
+            assertEquals(src.getPurposeWell(), dest.getPurposeWell());
 
         if (null != src.getFluidWell())
-            assertEquals(src.getFluidWell().value(), dest.getFluidWell().value());
+            assertEquals(src.getFluidWell(), dest.getFluidWell());
 
         if (null != src.getDirectionWell())
-            assertEquals(src.getDirectionWell().value(), dest.getDirectionWell().value());
+            assertEquals(src.getDirectionWell(), dest.getDirectionWell());
 
         if (null != src.getWellheadElevation()) {
             assertEquals(src.getWellheadElevation().getDatum(), dest.getWellheadElevation().getDatum());
@@ -617,15 +617,15 @@ public class WellConverterTest {
         }
 
         if (null != src.getStatusWell())
-            assertEquals(src.getStatusWell().value(), dest.getStatusWell().value());
+            assertEquals(src.getStatusWell(), dest.getStatusWell());
         if (null != src.getPurposeWell())
-            assertEquals(src.getPurposeWell().value(), dest.getPurposeWell().value());
+            assertEquals(src.getPurposeWell(), dest.getPurposeWell());
 
         if (null != src.getFluidWell())
-            assertEquals(src.getFluidWell().value(), dest.getFluidWell().value());
+            assertEquals(src.getFluidWell(), dest.getFluidWell());
 
         if (null != src.getDirectionWell())
-            assertEquals(src.getDirectionWell().value(), dest.getDirectionWell().value());
+            assertEquals(src.getDirectionWell(), dest.getDirectionWell());
 
         if (null != src.getWellheadElevation()) {
             assertEquals(src.getWellheadElevation().getDatum(), dest.getWellheadElevation().getDatum());

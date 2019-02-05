@@ -18,6 +18,10 @@
     "uom" : ""
   },
   "numAPI" : "",
+  "statusWell" : "",
+  "purposeWell" : "",
+  "fluidWell" : "",
+  "directionWell" : "",
   "wellheadElevation" : {
     "value" : null,
     "uom" : null,
@@ -356,5 +360,8 @@
     "dTimCreation" : null,
     "dTimLastChange" : null
   },
-  "uid" : ""
+  "uid" : "",
+  "dTimLicense" : "",
+  "dTimSpud" : "",
+  "dTimPa" : ""
 }
