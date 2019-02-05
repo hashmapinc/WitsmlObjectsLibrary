@@ -131,4 +131,8 @@ public class CsLogData {
         return this.data;
     }
 
+
+    public void setData(List<String> value) {
+        this.data = value;
+    }
 }

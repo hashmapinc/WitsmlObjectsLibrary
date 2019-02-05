@@ -66,4 +66,8 @@ public class CsLogData {
         return this.data;
     }
 
+    public void setData(List<String> values) {
+        this.data = values;
+    }
+
 }
