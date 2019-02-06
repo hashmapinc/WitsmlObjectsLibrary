@@ -74,8 +74,8 @@ public class PlaneAngleMeasure
         com.hashmapinc.tempus.WitsmlObjects.v1311.PlaneAngleMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v1311.PlaneAngleMeasure();
 
         // assign fields
-        measure.setUom(this.uom);
-        measure.setValue(this.value);
+        measure.setUom(this.getUom());
+        measure.setValue(this.getValue());
 
         return measure;
     }
@@ -84,8 +84,8 @@ public class PlaneAngleMeasure
         com.hashmapinc.tempus.WitsmlObjects.v20.PlaneAngleMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v20.PlaneAngleMeasure();
 
         // assign fields
-        measure.setUom(this.uom);
-        measure.setValue(this.value);
+        measure.setUom(this.getUom());
+        measure.setValue(this.getValue());
 
         return measure;
     }
