@@ -1,5 +1,6 @@
 package com.hashmapinc.tempus.WitsmlObjects.Util;
 
+import javax.xml.datatype.DatatypeConfigurationException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +14,7 @@ import java.util.List;
  * create valid WITSML objects.
  */
 public class WellConverter {
-    public static com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell convertTo1311(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell src) {
+    public static com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell convertTo1311(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell src) throws DatatypeConfigurationException {
         // create destination well
         com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell dest = new com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell();
 
@@ -48,16 +49,16 @@ public class WellConverter {
         }
 
         if (null != src.getStatusWell())
-            dest.setStatusWell(com.hashmapinc.tempus.WitsmlObjects.v1311.WellStatus.fromValue(src.getStatusWell().value()));
+            dest.setStatusWell(src.getStatusWell());
 
         if (null != src.getPurposeWell())
-            dest.setPurposeWell(com.hashmapinc.tempus.WitsmlObjects.v1311.WellPurpose.fromValue(src.getPurposeWell().value()));
+            dest.setPurposeWell(src.getPurposeWell());
 
         if (null != src.getFluidWell())
-            dest.setFluidWell(com.hashmapinc.tempus.WitsmlObjects.v1311.WellFluid.fromValue(src.getFluidWell().value()));
+            dest.setFluidWell(src.getFluidWell());
 
         if (null != src.getDirectionWell())
-            dest.setDirectionWell(com.hashmapinc.tempus.WitsmlObjects.v1311.WellDirection.fromValue(src.getDirectionWell().value()));
+            dest.setDirectionWell(src.getDirectionWell());
 
         if (null != src.getWellheadElevation())
             dest.setWellheadElevation(src.getWellheadElevation().to1311WellElevationCoord());
@@ -113,7 +114,7 @@ public class WellConverter {
     }
 
 
-    public static com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell convertTo1411(com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell src) {
+    public static com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell convertTo1411(com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell src) throws DatatypeConfigurationException {
         // create destination well
         com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell dest = new com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell();
 
@@ -148,16 +149,16 @@ public class WellConverter {
         }
 
         if (null != src.getStatusWell())
-            dest.setStatusWell(com.hashmapinc.tempus.WitsmlObjects.v1411.WellStatus.fromValue(src.getStatusWell().value()));
+            dest.setStatusWell(src.getStatusWell());
 
         if (null != src.getPurposeWell())
-            dest.setPurposeWell(com.hashmapinc.tempus.WitsmlObjects.v1411.WellPurpose.fromValue(src.getPurposeWell().value()));
+            dest.setPurposeWell(src.getPurposeWell());
 
         if (null != src.getFluidWell())
-            dest.setFluidWell(com.hashmapinc.tempus.WitsmlObjects.v1411.WellFluid.fromValue(src.getFluidWell().value()));
+            dest.setFluidWell(src.getFluidWell());
 
         if (null != src.getDirectionWell())
-            dest.setDirectionWell(com.hashmapinc.tempus.WitsmlObjects.v1411.WellDirection.fromValue(src.getDirectionWell().value()));
+            dest.setDirectionWell(src.getDirectionWell());
 
         if (null != src.getWellheadElevation())
             dest.setWellheadElevation(src.getWellheadElevation().to1411WellElevationCoord());
