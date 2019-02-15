@@ -112,7 +112,7 @@ public class TrajectoryConverterTest {
                 }
                 if (null != srcStation.getTvd()) {
                     assertEquals(srcStation.getTvd().getValue(), destStation.getTvd().getValue());
-                    assertEquals(srcStation.getTvd().getUom().value(), destStation.getTvd().getUom().value());
+                    assertEquals(srcStation.getTvd().getUom(), destStation.getTvd().getUom());
                     assertEquals(srcStation.getTvd().getDatum(), destStation.getTvd().getDatum());
                 }
                 if (null != srcStation.getIncl()) {
@@ -161,7 +161,7 @@ public class TrajectoryConverterTest {
                 }
                 if (null != srcStation.getTvdDelta()) {
                     assertEquals(srcStation.getTvdDelta().getValue(), destStation.getTvdDelta().getValue());
-                    assertEquals(srcStation.getTvdDelta().getUom(), destStation.getTvdDelta().getUom().value());
+                    assertEquals(srcStation.getTvdDelta().getUom(), destStation.getTvdDelta().getUom());
                 }
                 if (null != srcStation.getGravTotalUncert()) {
                     assertEquals(srcStation.getGravTotalUncert().getValue(), destStation.getGravTotalUncert().getValue());
@@ -499,7 +499,7 @@ public class TrajectoryConverterTest {
                 }
                 if (null != srcStation.getTvd()) {
                     assertEquals(srcStation.getTvd().getValue(), destStation.getTvd().getValue());
-                    assertEquals(srcStation.getTvd().getUom(), destStation.getTvd().getUom().value());
+                    assertEquals(srcStation.getTvd().getUom(), destStation.getTvd().getUom());
                     assertEquals(srcStation.getTvd().getDatum(), destStation.getTvd().getDatum());
                 }
                 if (null != srcStation.getIncl()) {
@@ -548,7 +548,7 @@ public class TrajectoryConverterTest {
                 }
                 if (null != srcStation.getTvdDelta()) {
                     assertEquals(srcStation.getTvdDelta().getValue(), destStation.getTvdDelta().getValue());
-                    assertEquals(srcStation.getTvdDelta().getUom(), destStation.getTvdDelta().getUom().value());
+                    assertEquals(srcStation.getTvdDelta().getUom(), destStation.getTvdDelta().getUom());
                 }
                 if (null != srcStation.getGravTotalUncert()) {
                     assertEquals(srcStation.getGravTotalUncert().getValue(), destStation.getGravTotalUncert().getValue());
@@ -830,7 +830,7 @@ public class TrajectoryConverterTest {
                 }
                 if (null != srcStation.getTvd()) {
                     assertEquals(srcStation.getTvd().getValue(), destStation.getTvd().getValue());
-                    assertEquals(srcStation.getTvd().getUom().value(), destStation.getTvd().getUom().value());
+                    assertEquals(srcStation.getTvd().getUom(), destStation.getTvd().getUom());
                     assertEquals(srcStation.getTvd().getDatum(), destStation.getTvd().getDatum());
                 }
                 if (null != srcStation.getIncl()) {
@@ -879,7 +879,7 @@ public class TrajectoryConverterTest {
                 }
                 if (null != srcStation.getTvdDelta()) {
                     assertEquals(srcStation.getTvdDelta().getValue(), destStation.getTvdDelta().getValue());
-                    assertEquals(srcStation.getTvdDelta().getUom().value(), destStation.getTvdDelta().getUom());
+                    assertEquals(srcStation.getTvdDelta().getUom(), destStation.getTvdDelta().getUom());
                 }
                 if (null != srcStation.getGravTotalUncert()) {
                     assertEquals(srcStation.getGravTotalUncert().getValue(), destStation.getGravTotalUncert().getValue());
@@ -1222,7 +1222,7 @@ public class TrajectoryConverterTest {
                 }
                 if (null != srcStation.getTvd()) {
                     assertEquals(srcStation.getTvd().getValue(), destStation.getTvd().getValue());
-                    assertEquals(srcStation.getTvd().getUom(), destStation.getTvd().getUom().value());
+                    assertEquals(srcStation.getTvd().getUom(), destStation.getTvd().getUom());
                     assertEquals(srcStation.getTvd().getDatum(), destStation.getTvd().getDatum());
                 }
                 if (null != srcStation.getIncl()) {
@@ -1534,7 +1534,7 @@ public class TrajectoryConverterTest {
                 }
                 if (null != srcStation.getTvd()) {
                     assertEquals(srcStation.getTvd().getValue(), destStation.getTvd().getValue());
-                    assertEquals(srcStation.getTvd().getUom().value(), destStation.getTvd().getUom());
+                    assertEquals(srcStation.getTvd().getUom(), destStation.getTvd().getUom());
                     assertEquals(srcStation.getTvd().getDatum(), destStation.getTvd().getDatum());
                 }
                 if (null != srcStation.getIncl()) {
@@ -1583,7 +1583,7 @@ public class TrajectoryConverterTest {
                 }
                 if (null != srcStation.getTvdDelta()) {
                     assertEquals(srcStation.getTvdDelta().getValue(), destStation.getTvdDelta().getValue());
-                    assertEquals(srcStation.getTvdDelta().getUom().value(), destStation.getTvdDelta().getUom());
+                    assertEquals(srcStation.getTvdDelta().getUom(), destStation.getTvdDelta().getUom());
                 }
                 if (null != srcStation.getGravTotalUncert()) {
                     assertEquals(srcStation.getGravTotalUncert().getValue(), destStation.getGravTotalUncert().getValue());
@@ -1845,7 +1845,7 @@ public class TrajectoryConverterTest {
                 }
                 if (null != srcStation.getTvd()) {
                     assertEquals(srcStation.getTvd().getValue(), destStation.getTvd().getValue());
-                    assertEquals(srcStation.getTvd().getUom().value(), destStation.getTvd().getUom());
+                    assertEquals(srcStation.getTvd().getUom(), destStation.getTvd().getUom());
                     assertEquals(srcStation.getTvd().getDatum(), destStation.getTvd().getDatum());
                 }
                 if (null != srcStation.getIncl()) {

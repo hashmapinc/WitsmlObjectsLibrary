@@ -45,7 +45,7 @@
     "directionWell" : "",
     "wellheadElevation" : {
       "value" : null,
-      "uom" : null,
+      "uom" : "",
       "datum" : null
     },
     "wellDatum" : [ {
@@ -82,7 +82,7 @@
       },
       "elevation" : {
         "value" : null,
-        "uom" : null,
+        "uom" : "",
         "datum" : ""
       },
       "measuredDepth" : {
@@ -98,12 +98,12 @@
     } ],
     "groundElevation" : {
       "value" : null,
-      "uom" : null,
+      "uom" : "",
       "datum" : ""
     },
     "waterDepth" : {
       "value" : null,
-      "uom" : null,
+      "uom" : "",
       "datum" : ""
     },
     "wellLocation" : [ {
@@ -159,7 +159,7 @@
       "type" : "",
       "elevation" : {
         "value" : null,
-        "uom" : null,
+        "uom" : "",
         "datum" : ""
       },
       "measuredDepth" : {

@@ -3,6 +3,7 @@ package com.hashmapinc.tempus.WitsmlObjects.Util;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell;
 import com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore;
+import com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWells;
 import org.junit.Test;
 
 import java.util.Map;
@@ -135,14 +136,17 @@ public class WitsmlMarshalTest {
         assertNotNull(singularWell);
 
         String json1411 = singularWell.getJSONString("1.4.1.1");
-        assertNotNull(json1411);
+        ObjWells wells = new ObjWells();
+        wells.addWell(WitsmlMarshal.deserializeFromJSON(json1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell.class));
+        String full1411Wells = WitsmlMarshal.serializeToJSON(wells);
+        assertNotNull(full1411Wells);
 
         String expectedJson = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/well1311_Convertedto1411FullEmpty.json");
         //assertEquals(expectedJson.length(), json1411.length()); // simple length check before more advanced comparision
 
         // do a deep comparison of the json values
         ObjectMapper om = new ObjectMapper();
-        Map<String, Object> map1411 = (Map<String, Object>) (om.readValue(json1411, Map.class));
+        Map<String, Object> map1411 = (Map<String, Object>) (om.readValue(full1411Wells, Map.class));
         Map<String, Object> expectedMap = (Map<String, Object>) (om.readValue(expectedJson, Map.class));
         assertEquals(map1411, expectedMap);
     }
@@ -161,7 +165,7 @@ public class WitsmlMarshalTest {
 
         String json1311 = WitsmlMarshal.serializeToJSON(obj1311);
         String expectedJson = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/wellbore1311_withAttributes.json");
-        //assertEquals(expectedJson.length(), json1311.length()); // simple length check before more advanced comparision
+        assertEquals(expectedJson.length(), json1311.length()); // simple length check before more advanced comparision
 
         // do a deep comparison of the json values
         ObjectMapper om = new ObjectMapper();

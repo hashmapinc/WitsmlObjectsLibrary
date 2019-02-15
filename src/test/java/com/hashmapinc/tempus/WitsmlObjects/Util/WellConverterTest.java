@@ -55,17 +55,17 @@ public class WellConverterTest {
         if (null != src.getWellheadElevation()) {
             assertEquals(src.getWellheadElevation().getDatum(), dest.getWellheadElevation().getDatum());
             assertEquals(src.getWellheadElevation().getValue(), dest.getWellheadElevation().getValue());
-            assertEquals(src.getWellheadElevation().getUom().value(), dest.getWellheadElevation().getUom().value());
+            assertEquals(src.getWellheadElevation().getUom(), dest.getWellheadElevation().getUom());
         }
 
         if (null != src.getGroundElevation()) {
             assertEquals(src.getGroundElevation().getDatum(), dest.getGroundElevation().getDatum());
-            assertEquals(src.getGroundElevation().getUom().value(), dest.getGroundElevation().getUom().value());
+            assertEquals(src.getGroundElevation().getUom(), dest.getGroundElevation().getUom());
             assertEquals(src.getGroundElevation().getValue(), dest.getGroundElevation().getValue());
         }
 
         if (null != src.getWaterDepth()) {
-            assertEquals(src.getWaterDepth().getUom().value(), dest.getWaterDepth().getUom());
+            assertEquals(src.getWaterDepth().getUom(), dest.getWaterDepth().getUom());
             assertEquals(src.getWaterDepth().getValue(), dest.getWaterDepth().getValue());
         }
 
@@ -133,7 +133,7 @@ public class WellConverterTest {
                 // elevation
                 if (null != srcWellDatum.get(i).getElevation()) {
                     assertEquals(srcWellDatum.get(i).getElevation().getDatum(), destWellDatum.get(i).getElevation().getDatum());
-                    assertEquals(srcWellDatum.get(i).getElevation().getUom().value(), destWellDatum.get(i).getElevation().getUom().value());
+                    assertEquals(srcWellDatum.get(i).getElevation().getUom(), destWellDatum.get(i).getElevation().getUom());
                     assertEquals(srcWellDatum.get(i).getElevation().getValue(), destWellDatum.get(i).getElevation().getValue());
                 }
 
@@ -236,7 +236,7 @@ public class WellConverterTest {
                 // elevation
                 if (null != srcRefPoint.get(i).getElevation()) {
                     assertEquals(srcRefPoint.get(i).getElevation().getDatum(), destRefPoint.get(i).getElevation().getDatum());
-                    assertEquals(srcRefPoint.get(i).getElevation().getUom().value(), destRefPoint.get(i).getElevation().getUom().value());
+                    assertEquals(srcRefPoint.get(i).getElevation().getUom(), destRefPoint.get(i).getElevation().getUom());
                     assertEquals(srcRefPoint.get(i).getElevation().getValue(), destRefPoint.get(i).getElevation().getValue());
                 }
 
@@ -630,17 +630,17 @@ public class WellConverterTest {
         if (null != src.getWellheadElevation()) {
             assertEquals(src.getWellheadElevation().getDatum(), dest.getWellheadElevation().getDatum());
             assertEquals(src.getWellheadElevation().getValue(), dest.getWellheadElevation().getValue());
-            assertEquals(src.getWellheadElevation().getUom().value(), dest.getWellheadElevation().getUom().value());
+            assertEquals(src.getWellheadElevation().getUom(), dest.getWellheadElevation().getUom());
         }
 
         if (null != src.getGroundElevation()) {
             assertEquals(src.getGroundElevation().getDatum(), dest.getGroundElevation().getDatum());
-            assertEquals(src.getGroundElevation().getUom().value(), dest.getGroundElevation().getUom().value());
+            assertEquals(src.getGroundElevation().getUom(), dest.getGroundElevation().getUom());
             assertEquals(src.getGroundElevation().getValue(), dest.getGroundElevation().getValue());
         }
 
         if (null != src.getWaterDepth()) {
-            assertEquals(src.getWaterDepth().getUom(), dest.getWaterDepth().getUom().value());
+            assertEquals(src.getWaterDepth().getUom(), dest.getWaterDepth().getUom());
             assertEquals(src.getWaterDepth().getValue(), dest.getWaterDepth().getValue());
         }
 
@@ -708,7 +708,7 @@ public class WellConverterTest {
                 // elevation
                 if (null != srcWellDatum.get(i).getElevation()) {
                     assertEquals(srcWellDatum.get(i).getElevation().getDatum(), destWellDatum.get(i).getElevation().getDatum());
-                    assertEquals(srcWellDatum.get(i).getElevation().getUom().value(), destWellDatum.get(i).getElevation().getUom().value());
+                    assertEquals(srcWellDatum.get(i).getElevation().getUom(), destWellDatum.get(i).getElevation().getUom());
                     assertEquals(srcWellDatum.get(i).getElevation().getValue(), destWellDatum.get(i).getElevation().getValue());
                 }
 
@@ -811,7 +811,7 @@ public class WellConverterTest {
                 // elevation
                 if (null != srcRefPoint.get(i).getElevation()) {
                     assertEquals(srcRefPoint.get(i).getElevation().getDatum(), destRefPoint.get(i).getElevation().getDatum());
-                    assertEquals(srcRefPoint.get(i).getElevation().getUom().value(), destRefPoint.get(i).getElevation().getUom().value());
+                    assertEquals(srcRefPoint.get(i).getElevation().getUom(), destRefPoint.get(i).getElevation().getUom());
                     assertEquals(srcRefPoint.get(i).getElevation().getValue(), destRefPoint.get(i).getElevation().getValue());
                 }
 
