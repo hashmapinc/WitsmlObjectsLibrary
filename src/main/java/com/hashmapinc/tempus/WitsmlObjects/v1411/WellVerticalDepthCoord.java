@@ -28,7 +28,7 @@ import javax.xml.bind.annotation.XmlType;
  * <complexType name="wellVerticalDepthCoord">
  *   <simpleContent>
  *     <extension base="<http://www.witsml.org/schemas/1series>abstractMeasure">
- *       <attribute name="uom" use="required" type="{http://www.witsml.org/schemas/1series}WellVerticalCoordinateUom" />
+ *       <attribute name="uom" use="required" type="String" />
  *       <attribute name="datum" type="{http://www.witsml.org/schemas/1series}refWellDatum" />
  *     </extension>
  *   </simpleContent>
@@ -44,7 +44,7 @@ public class WellVerticalDepthCoord
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected WellVerticalCoordinateUom uom;
+    protected String uom;
     @XmlAttribute(name = "datum")
     protected String datum;
 
@@ -53,10 +53,10 @@ public class WellVerticalDepthCoord
      * 
      * @return
      *     possible object is
-     *     {@link WellVerticalCoordinateUom }
+     *     {@link String }
      *     
      */
-    public WellVerticalCoordinateUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -65,10 +65,10 @@ public class WellVerticalDepthCoord
      * 
      * @param value
      *     allowed object is
-     *     {@link WellVerticalCoordinateUom }
+     *     {@link String }
      *     
      */
-    public void setUom(WellVerticalCoordinateUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 
@@ -105,9 +105,7 @@ public class WellVerticalDepthCoord
     public com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalDepthCoord to1311VerticalDepthCoord() {
         com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalDepthCoord coord = new com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalDepthCoord();
 
-        if (null != this.getUom())
-            coord.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalCoordinateUom.fromValue(this.getUom().value()));
-
+        coord.setUom(this.getUom());
         coord.setDatum(this.getDatum());
         coord.setValue(this.getValue());
 
@@ -117,9 +115,7 @@ public class WellVerticalDepthCoord
     public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord to20DepthCoord() {
         com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord coord = new com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord();
 
-        if (null != this.getUom())
-            coord.setUom(this.getUom().value());
-
+        coord.setUom(this.getUom());
         coord.setDatum(this.getDatum());
         coord.setValue(this.getValue());
 
@@ -129,9 +125,7 @@ public class WellVerticalDepthCoord
     public com.hashmapinc.tempus.WitsmlObjects.v20.WellVerticalDepthCoord to20WellVerticalDepthCoord() {
         com.hashmapinc.tempus.WitsmlObjects.v20.WellVerticalDepthCoord coord = new com.hashmapinc.tempus.WitsmlObjects.v20.WellVerticalDepthCoord();
 
-        if (null != this.getUom())
-            coord.setUom(this.getUom().value());
-
+        coord.setUom(this.getUom());
         coord.setDatum(this.getDatum());
         coord.setValue(this.getValue());
 

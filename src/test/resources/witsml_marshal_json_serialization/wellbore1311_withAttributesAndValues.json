@@ -16,7 +16,7 @@
     },
     "tvdCurrent" : {
       "value" : 0.0,
-      "uom" : "FT",
+      "uom" : "ft",
       "datum" : null
     },
     "mdKickoff" : {
@@ -26,7 +26,7 @@
     },
     "tvdKickoff" : {
       "value" : 0.0,
-      "uom" : "FT",
+      "uom" : "ft",
       "datum" : null
     },
     "mdPlanned" : {
@@ -36,7 +36,7 @@
     },
     "tvdPlanned" : {
       "value" : 0.0,
-      "uom" : "FT",
+      "uom" : "ft",
       "datum" : null
     },
     "mdSubSeaPlanned" : {
@@ -46,7 +46,7 @@
     },
     "tvdSubSeaPlanned" : {
       "value" : 0.0,
-      "uom" : "FT",
+      "uom" : "ft",
       "datum" : null
     },
     "dayTarget" : {

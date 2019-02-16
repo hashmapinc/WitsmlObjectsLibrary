@@ -100,7 +100,7 @@ public class LengthMeasure {
         com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalDepthCoord coord = new com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalDepthCoord();
 
         // assign fields
-        coord.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalCoordinateUom.fromValue(this.getUom()));
+        coord.setUom(this.getUom());
         coord.setValue(this.getValue());
 
         return coord;
