@@ -76,7 +76,7 @@ public class CsCommonData {
     @JsonProperty("dTimLastChange")
     protected XMLGregorianCalendar dTimLastChange;
     @XmlSchemaType(name = "string")
-    protected ItemState itemState;
+    protected String itemState;
     protected String serviceCategory;
     protected String comments;
     protected List<TimestampedTimeZone> acquisitionTimeZone;
@@ -164,10 +164,10 @@ public class CsCommonData {
      * 
      * @return
      *     possible object is
-     *     {@link ItemState }
+     *     {@link String }
      *     
      */
-    public ItemState getItemState() {
+    public String getItemState() {
         return itemState;
     }
 
@@ -176,10 +176,10 @@ public class CsCommonData {
      * 
      * @param value
      *     allowed object is
-     *     {@link ItemState }
+     *     {@link String }
      *     
      */
-    public void setItemState(ItemState value) {
+    public void setItemState(String value) {
         this.itemState = value;
     }
 
@@ -369,13 +369,11 @@ public class CsCommonData {
     public com.hashmapinc.tempus.WitsmlObjects.v1311.CsCommonData to1311CommonData() {
         com.hashmapinc.tempus.WitsmlObjects.v1311.CsCommonData common = new com.hashmapinc.tempus.WitsmlObjects.v1311.CsCommonData();
 
-        if (null != this.itemState)
-            common.setItemState(com.hashmapinc.tempus.WitsmlObjects.v1311.ItemState.fromValue(this.itemState.value()));
-
-        common.setSourceName(this.sourceName);
-        common.setDTimCreation(this.dTimCreation);
-        common.setDTimLastChange(this.dTimLastChange);
-        common.setComments(this.comments);
+        common.setItemState(this.getItemState());
+        common.setSourceName(this.getSourceName());
+        common.setDTimCreation(this.getDTimCreation());
+        common.setDTimLastChange(this.getDTimLastChange());
+        common.setComments(this.getComments());
 
         return common;
     }

@@ -45,7 +45,7 @@ public class CsSingleInstalledPoint {
     @XmlElement(required = true)
     protected LengthMeasure lengthAlongFiber;
     @XmlSchemaType(name = "string")
-    protected InstalledFiberPoint type;
+    protected String type;
     @XmlAttribute(name = "uid")
     protected String uid;
 
@@ -102,10 +102,10 @@ public class CsSingleInstalledPoint {
      * 
      * @return
      *     possible object is
-     *     {@link InstalledFiberPoint }
+     *     {@link String }
      *     
      */
-    public InstalledFiberPoint getType() {
+    public String getType() {
         return type;
     }
 
@@ -114,10 +114,10 @@ public class CsSingleInstalledPoint {
      * 
      * @param value
      *     allowed object is
-     *     {@link InstalledFiberPoint }
+     *     {@link String }
      *     
      */
-    public void setType(InstalledFiberPoint value) {
+    public void setType(String value) {
         this.type = value;
     }
 

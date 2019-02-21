@@ -38,17 +38,17 @@ public class IlluminanceMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected IlluminanceUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link IlluminanceUom }
+     *     {@link String }
      *     
      */
-    public IlluminanceUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -57,10 +57,10 @@ public class IlluminanceMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link IlluminanceUom }
+     *     {@link String }
      *     
      */
-    public void setUom(IlluminanceUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

@@ -61,12 +61,12 @@ public class PublicLandSurveySystem {
     protected Integer range;
     @XmlElement(name = "RangeDir")
     @XmlSchemaType(name = "string")
-    protected EastOrWest rangeDir;
+    protected String rangeDir;
     @XmlElement(name = "Township")
     protected Integer township;
     @XmlElement(name = "TownshipDir")
     @XmlSchemaType(name = "string")
-    protected NorthOrSouth townshipDir;
+    protected String townshipDir;
     @XmlElement(name = "Section")
     protected String section;
     @XmlElement(name = "QuarterSection")
@@ -131,10 +131,10 @@ public class PublicLandSurveySystem {
      * 
      * @return
      *     possible object is
-     *     {@link EastOrWest }
+     *     {@link String }
      *     
      */
-    public EastOrWest getRangeDir() {
+    public String getRangeDir() {
         return rangeDir;
     }
 
@@ -143,10 +143,10 @@ public class PublicLandSurveySystem {
      * 
      * @param value
      *     allowed object is
-     *     {@link EastOrWest }
+     *     {@link String }
      *     
      */
-    public void setRangeDir(EastOrWest value) {
+    public void setRangeDir(String value) {
         this.rangeDir = value;
     }
 
@@ -179,10 +179,10 @@ public class PublicLandSurveySystem {
      * 
      * @return
      *     possible object is
-     *     {@link NorthOrSouth }
+     *     {@link String }
      *     
      */
-    public NorthOrSouth getTownshipDir() {
+    public String getTownshipDir() {
         return townshipDir;
     }
 
@@ -191,10 +191,10 @@ public class PublicLandSurveySystem {
      * 
      * @param value
      *     allowed object is
-     *     {@link NorthOrSouth }
+     *     {@link String }
      *     
      */
-    public void setTownshipDir(NorthOrSouth value) {
+    public void setTownshipDir(String value) {
         this.townshipDir = value;
     }
 

@@ -66,7 +66,7 @@ public class WellDatum {
     protected String name;
     @XmlElement(name = "Code")
     @XmlSchemaType(name = "string")
-    protected WellboreDatumReference code;
+    protected String code;
     @XmlElement(name = "Kind")
     protected List<String> kind;
     @XmlElement(name = "MeasuredDepth")
@@ -117,10 +117,10 @@ public class WellDatum {
      * 
      * @return
      *     possible object is
-     *     {@link WellboreDatumReference }
+     *     {@link String }
      *     
      */
-    public WellboreDatumReference getCode() {
+    public String getCode() {
         return code;
     }
 
@@ -129,10 +129,10 @@ public class WellDatum {
      * 
      * @param value
      *     allowed object is
-     *     {@link WellboreDatumReference }
+     *     {@link String }
      *     
      */
-    public void setCode(WellboreDatumReference value) {
+    public void setCode(String value) {
         this.code = value;
     }
 

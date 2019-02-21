@@ -74,7 +74,7 @@ public class CsMotor {
     protected Short lobesRotor;
     protected Short lobesStator;
     @XmlSchemaType(name = "string")
-    protected BearingType typeBearing;
+    protected String typeBearing;
     protected ThermodynamicTemperatureMeasure tempOpMx;
     protected Boolean rotorCatcher;
     protected Boolean dumpValve;
@@ -281,10 +281,10 @@ public class CsMotor {
      * 
      * @return
      *     possible object is
-     *     {@link BearingType }
+     *     {@link String }
      *     
      */
-    public BearingType getTypeBearing() {
+    public String getTypeBearing() {
         return typeBearing;
     }
 
@@ -293,10 +293,10 @@ public class CsMotor {
      * 
      * @param value
      *     allowed object is
-     *     {@link BearingType }
+     *     {@link String }
      *     
      */
-    public void setTypeBearing(BearingType value) {
+    public void setTypeBearing(String value) {
         this.typeBearing = value;
     }
 

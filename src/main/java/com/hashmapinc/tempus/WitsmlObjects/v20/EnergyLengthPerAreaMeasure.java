@@ -36,7 +36,7 @@ public class EnergyLengthPerAreaMeasure {
     @XmlValue
     protected double value;
     @XmlAttribute(name = "uom", required = true)
-    protected EnergyLengthPerAreaUom uom;
+    protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -61,10 +61,10 @@ public class EnergyLengthPerAreaMeasure {
      * 
      * @return
      *     possible object is
-     *     {@link EnergyLengthPerAreaUom }
+     *     {@link String }
      *     
      */
-    public EnergyLengthPerAreaUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -73,10 +73,10 @@ public class EnergyLengthPerAreaMeasure {
      * 
      * @param value
      *     allowed object is
-     *     {@link EnergyLengthPerAreaUom }
+     *     {@link String }
      *     
      */
-    public void setUom(EnergyLengthPerAreaUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

@@ -36,7 +36,7 @@ public class AmountOfSubstancePerAreaMeasure {
     @XmlValue
     protected double value;
     @XmlAttribute(name = "uom", required = true)
-    protected AmountOfSubstancePerAreaUom uom;
+    protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -61,10 +61,10 @@ public class AmountOfSubstancePerAreaMeasure {
      * 
      * @return
      *     possible object is
-     *     {@link AmountOfSubstancePerAreaUom }
+     *     {@link String }
      *     
      */
-    public AmountOfSubstancePerAreaUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -73,10 +73,10 @@ public class AmountOfSubstancePerAreaMeasure {
      * 
      * @param value
      *     allowed object is
-     *     {@link AmountOfSubstancePerAreaUom }
+     *     {@link String }
      *     
      */
-    public void setUom(AmountOfSubstancePerAreaUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

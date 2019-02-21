@@ -85,7 +85,7 @@ public abstract class AbstractObject {
     @XmlAttribute(name = "uuid", required = true)
     protected String uuid;
     @XmlAttribute(name = "existenceKind")
-    protected ExistenceKind existenceKind;
+    protected String existenceKind;
 
     /**
      * Gets the value of the aliases property.
@@ -270,10 +270,10 @@ public abstract class AbstractObject {
      * 
      * @return
      *     possible object is
-     *     {@link ExistenceKind }
+     *     {@link String }
      *     
      */
-    public ExistenceKind getExistenceKind() {
+    public String getExistenceKind() {
         return existenceKind;
     }
 
@@ -282,10 +282,10 @@ public abstract class AbstractObject {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExistenceKind }
+     *     {@link String }
      *     
      */
-    public void setExistenceKind(ExistenceKind value) {
+    public void setExistenceKind(String value) {
         this.existenceKind = value;
     }
 

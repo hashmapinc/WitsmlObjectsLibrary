@@ -30,17 +30,17 @@ public class AccelerationLinearMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected AccelerationLinearUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link AccelerationLinearUom }
+     *     {@link String }
      *     
      */
-    public AccelerationLinearUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -49,10 +49,10 @@ public class AccelerationLinearMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link AccelerationLinearUom }
+     *     {@link String }
      *     
      */
-    public void setUom(AccelerationLinearUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 
@@ -67,8 +67,7 @@ public class AccelerationLinearMeasure
 
         // assign fields
         measure.setValue(this.value);
-        if (null != this.getUom())
-            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1411.AccelerationLinearUom.fromValue(this.getUom().value()));
+        measure.setUom(this.getUom());
 
         return measure;
     }

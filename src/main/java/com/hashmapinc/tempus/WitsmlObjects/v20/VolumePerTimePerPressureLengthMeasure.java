@@ -36,7 +36,7 @@ public class VolumePerTimePerPressureLengthMeasure {
     @XmlValue
     protected double value;
     @XmlAttribute(name = "uom", required = true)
-    protected VolumePerTimePerPressureLengthUom uom;
+    protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -61,10 +61,10 @@ public class VolumePerTimePerPressureLengthMeasure {
      * 
      * @return
      *     possible object is
-     *     {@link VolumePerTimePerPressureLengthUom }
+     *     {@link String }
      *     
      */
-    public VolumePerTimePerPressureLengthUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -73,10 +73,10 @@ public class VolumePerTimePerPressureLengthMeasure {
      * 
      * @param value
      *     allowed object is
-     *     {@link VolumePerTimePerPressureLengthUom }
+     *     {@link String }
      *     
      */
-    public void setUom(VolumePerTimePerPressureLengthUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

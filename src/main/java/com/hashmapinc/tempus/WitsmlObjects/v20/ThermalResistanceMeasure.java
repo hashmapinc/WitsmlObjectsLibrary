@@ -36,7 +36,7 @@ public class ThermalResistanceMeasure {
     @XmlValue
     protected double value;
     @XmlAttribute(name = "uom", required = true)
-    protected ThermalResistanceUom uom;
+    protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -61,10 +61,10 @@ public class ThermalResistanceMeasure {
      * 
      * @return
      *     possible object is
-     *     {@link ThermalResistanceUom }
+     *     {@link String }
      *     
      */
-    public ThermalResistanceUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -73,10 +73,10 @@ public class ThermalResistanceMeasure {
      * 
      * @param value
      *     allowed object is
-     *     {@link ThermalResistanceUom }
+     *     {@link String }
      *     
      */
-    public void setUom(ThermalResistanceUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 
