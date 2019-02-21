@@ -1580,11 +1580,11 @@ public class CsTrajectoryStation {
 
         // typeTrajStation
         if (null != this.getTypeTrajStation())
-            station.setTypeTrajStation(com.hashmapinc.tempus.WitsmlObjects.v20.TrajStationType.fromValue(this.getTypeTrajStation().value()));
+            station.setTypeTrajStation(this.getTypeTrajStation().value());
 
         // typeSurveyTool
         if (null != this.getTypeSurveyTool())
-            station.setTypeSurveyTool(com.hashmapinc.tempus.WitsmlObjects.v20.TypeSurveyTool.fromValue(this.getTypeSurveyTool()));
+            station.setTypeSurveyTool(this.getTypeSurveyTool());
 
         // md
         if (null != this.getMd())
@@ -1668,7 +1668,7 @@ public class CsTrajectoryStation {
 
         // statusTrajStation
         if (null != this.getStatusTrajStation())
-            station.setStatusTrajStation(com.hashmapinc.tempus.WitsmlObjects.v20.TrajStationStatus.fromValue(this.getStatusTrajStation().value()));
+            station.setStatusTrajStation(this.getStatusTrajStation().value());
 
         // rawData
         if (null != this.getRawData())

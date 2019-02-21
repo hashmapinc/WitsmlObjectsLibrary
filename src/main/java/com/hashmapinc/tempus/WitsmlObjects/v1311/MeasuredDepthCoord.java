@@ -36,7 +36,7 @@ public class MeasuredDepthCoord
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected MeasuredDepthUom uom;
+    protected String uom;
     @XmlAttribute(name = "datum")
     protected String datum;
 
@@ -45,10 +45,10 @@ public class MeasuredDepthCoord
      * 
      * @return
      *     possible object is
-     *     {@link MeasuredDepthUom }
+     *     {@link String }
      *     
      */
-    public MeasuredDepthUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -57,10 +57,10 @@ public class MeasuredDepthCoord
      * 
      * @param value
      *     allowed object is
-     *     {@link MeasuredDepthUom }
+     *     {@link String }
      *     
      */
-    public void setUom(MeasuredDepthUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 
@@ -97,10 +97,9 @@ public class MeasuredDepthCoord
     public com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord to20DepthCoord() {
         com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord mdCoord = new com.hashmapinc.tempus.WitsmlObjects.v20.DepthCoord();
 
-        mdCoord.setDatum(this.datum);
-        if (null != this.uom)
-            mdCoord.setUom(this.uom.value());
-        mdCoord.setValue(this.value);
+        mdCoord.setDatum(this.getDatum());
+        mdCoord.setUom(this.getUom());
+        mdCoord.setValue(this.getValue());
 
         return mdCoord;
     }
@@ -108,13 +107,9 @@ public class MeasuredDepthCoord
     public com.hashmapinc.tempus.WitsmlObjects.v1411.MeasuredDepthCoord to1411MeasuredDepthCoord() {
         com.hashmapinc.tempus.WitsmlObjects.v1411.MeasuredDepthCoord mdCoord = new com.hashmapinc.tempus.WitsmlObjects.v1411.MeasuredDepthCoord();
 
-        if (null != this.uom) {
-            com.hashmapinc.tempus.WitsmlObjects.v1411.MeasuredDepthUom mdUom = com.hashmapinc.tempus.WitsmlObjects.v1411.MeasuredDepthUom.fromValue(this.uom.value());
-            mdCoord.setUom(mdUom);
-        }
-
-        mdCoord.setDatum(this.datum);
-        mdCoord.setValue(this.value);
+        mdCoord.setUom(this.getUom());
+        mdCoord.setDatum(this.getDatum());
+        mdCoord.setValue(this.getValue());
 
         return mdCoord;
     }
@@ -122,10 +117,8 @@ public class MeasuredDepthCoord
     public com.hashmapinc.tempus.WitsmlObjects.v1411.LengthMeasure to1411LengthMeasure() {
         com.hashmapinc.tempus.WitsmlObjects.v1411.LengthMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v1411.LengthMeasure();
 
-        if (null != this.getUom())
-            measure.setUom(this.getUom().value());
-
-        measure.setValue(this.value);
+        measure.setUom(this.getUom());
+        measure.setValue(this.getValue());
 
         return measure;
     }

@@ -94,7 +94,7 @@ public class LengthMeasure
         com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthCoord coord = new com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthCoord();
 
         // assign fields
-        coord.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthUom.fromValue(this.getUom()));
+        coord.setUom(this.getUom());
         coord.setValue(this.getValue());
 
         return coord;

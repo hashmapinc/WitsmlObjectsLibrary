@@ -140,7 +140,7 @@ public class WellConverterTest {
                 // measured depth
                 if (null != srcWellDatum.get(i).getMeasuredDepth()) {
                     assertEquals(srcWellDatum.get(i).getMeasuredDepth().getDatum(), destWellDatum.get(i).getMeasuredDepth().getDatum());
-                    assertEquals(srcWellDatum.get(i).getMeasuredDepth().getUom().value(), destWellDatum.get(i).getMeasuredDepth().getUom().value());
+                    assertEquals(srcWellDatum.get(i).getMeasuredDepth().getUom(), destWellDatum.get(i).getMeasuredDepth().getUom());
                     assertEquals(srcWellDatum.get(i).getMeasuredDepth().getValue(), destWellDatum.get(i).getMeasuredDepth().getValue());
                 }
             }
@@ -243,7 +243,7 @@ public class WellConverterTest {
                 // measuredDepth
                 if (null != srcRefPoint.get(i).getMeasuredDepth()) {
                     assertEquals(srcRefPoint.get(i).getMeasuredDepth().getDatum(), destRefPoint.get(i).getMeasuredDepth().getDatum());
-                    assertEquals(srcRefPoint.get(i).getMeasuredDepth().getUom().value(), destRefPoint.get(i).getMeasuredDepth().getUom().value());
+                    assertEquals(srcRefPoint.get(i).getMeasuredDepth().getUom(), destRefPoint.get(i).getMeasuredDepth().getUom());
                     assertEquals(srcRefPoint.get(i).getMeasuredDepth().getValue(), destRefPoint.get(i).getMeasuredDepth().getValue());
                 }
 
@@ -715,7 +715,7 @@ public class WellConverterTest {
                 // measured depth
                 if (null != srcWellDatum.get(i).getMeasuredDepth()) {
                     assertEquals(srcWellDatum.get(i).getMeasuredDepth().getDatum(), destWellDatum.get(i).getMeasuredDepth().getDatum());
-                    assertEquals(srcWellDatum.get(i).getMeasuredDepth().getUom().value(), destWellDatum.get(i).getMeasuredDepth().getUom().value());
+                    assertEquals(srcWellDatum.get(i).getMeasuredDepth().getUom(), destWellDatum.get(i).getMeasuredDepth().getUom());
                     assertEquals(srcWellDatum.get(i).getMeasuredDepth().getValue(), destWellDatum.get(i).getMeasuredDepth().getValue());
                 }
             }
@@ -818,7 +818,7 @@ public class WellConverterTest {
                 // measuredDepth
                 if (null != srcRefPoint.get(i).getMeasuredDepth()) {
                     assertEquals(srcRefPoint.get(i).getMeasuredDepth().getDatum(), destRefPoint.get(i).getMeasuredDepth().getDatum());
-                    assertEquals(srcRefPoint.get(i).getMeasuredDepth().getUom().value(), destRefPoint.get(i).getMeasuredDepth().getUom().value());
+                    assertEquals(srcRefPoint.get(i).getMeasuredDepth().getUom(), destRefPoint.get(i).getMeasuredDepth().getUom());
                     assertEquals(srcRefPoint.get(i).getMeasuredDepth().getValue(), destRefPoint.get(i).getMeasuredDepth().getValue());
                 }
 

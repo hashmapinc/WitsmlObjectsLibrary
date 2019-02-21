@@ -210,7 +210,7 @@ public class TrajectoryConverter {
 
         // aziRef
         if (null != src.getAziRef())
-            dest.setAziRef(com.hashmapinc.tempus.WitsmlObjects.v1411.AziRef.fromValue(src.getAziRef().value()));
+            dest.setAziRef(com.hashmapinc.tempus.WitsmlObjects.v1411.AziRef.fromValue(src.getAziRef()));
 
         // customData
         if (null != src.getCustomData() && null != src.getCustomData().getAny())
@@ -286,7 +286,7 @@ public class TrajectoryConverter {
 
         // aziRef
         if (null != src.getAziRef())
-            dest.setAziRef(com.hashmapinc.tempus.WitsmlObjects.v20.AziRef.fromValue(src.getAziRef().value()));
+            dest.setAziRef(src.getAziRef().value());
 
         // customData
         if (null != src.getCustomData() && null != src.getCustomData().getAny())

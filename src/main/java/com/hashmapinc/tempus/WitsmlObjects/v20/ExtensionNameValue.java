@@ -56,7 +56,7 @@ public class ExtensionNameValue {
     protected StringMeasure value;
     @XmlElement(name = "MeasureClass")
     @XmlSchemaType(name = "string")
-    protected MeasureClass measureClass;
+    protected String measureClass;
     @XmlElement(name = "DTim")
     protected String dTim;
     @XmlElement(name = "Index")
@@ -117,10 +117,10 @@ public class ExtensionNameValue {
      * 
      * @return
      *     possible object is
-     *     {@link MeasureClass }
+     *     {@link String }
      *     
      */
-    public MeasureClass getMeasureClass() {
+    public String getMeasureClass() {
         return measureClass;
     }
 
@@ -129,10 +129,10 @@ public class ExtensionNameValue {
      * 
      * @param value
      *     allowed object is
-     *     {@link MeasureClass }
+     *     {@link String }
      *     
      */
-    public void setMeasureClass(MeasureClass value) {
+    public void setMeasureClass(String value) {
         this.measureClass = value;
     }
 

@@ -87,7 +87,7 @@ public class AreaMeasure
         // assign fields
         measure.setValue(this.getValue());
         if (null != this.getUom())
-            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v20.AreaUom.fromValue(this.getUom().value()));
+            measure.setUom(this.getUom().value());
 
         return measure;
     }
