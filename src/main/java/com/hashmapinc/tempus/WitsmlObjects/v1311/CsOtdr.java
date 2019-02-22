@@ -50,7 +50,7 @@ public class CsOtdr {
 
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected OTDRReason reasonForRun;
+    protected String reasonForRun;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar dTimRun;
     @XmlElement(required = true)
@@ -65,10 +65,10 @@ public class CsOtdr {
      * 
      * @return
      *     possible object is
-     *     {@link OTDRReason }
+     *     {@link String }
      *     
      */
-    public OTDRReason getReasonForRun() {
+    public String getReasonForRun() {
         return reasonForRun;
     }
 
@@ -77,10 +77,10 @@ public class CsOtdr {
      * 
      * @param value
      *     allowed object is
-     *     {@link OTDRReason }
+     *     {@link String }
      *     
      */
-    public void setReasonForRun(OTDRReason value) {
+    public void setReasonForRun(String value) {
         this.reasonForRun = value;
     }
 

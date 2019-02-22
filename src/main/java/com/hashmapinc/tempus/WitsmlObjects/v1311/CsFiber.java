@@ -75,7 +75,7 @@ public class CsFiber {
     protected String name;
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected FiberMode mode;
+    protected String mode;
     protected List<TypeOptionalClassString> type;
     protected String coating;
     protected String jacket;
@@ -124,10 +124,10 @@ public class CsFiber {
      * 
      * @return
      *     possible object is
-     *     {@link FiberMode }
+     *     {@link String }
      *     
      */
-    public FiberMode getMode() {
+    public String getMode() {
         return mode;
     }
 
@@ -136,10 +136,10 @@ public class CsFiber {
      * 
      * @param value
      *     allowed object is
-     *     {@link FiberMode }
+     *     {@link String }
      *     
      */
-    public void setMode(FiberMode value) {
+    public void setMode(String value) {
         this.mode = value;
     }
 

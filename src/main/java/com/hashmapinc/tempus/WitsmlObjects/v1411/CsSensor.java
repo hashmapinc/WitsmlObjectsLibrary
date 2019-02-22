@@ -56,7 +56,7 @@ import javax.xml.bind.annotation.XmlType;
 public class CsSensor {
 
     @XmlSchemaType(name = "string")
-    protected MeasurementType typeMeasurement;
+    protected String typeMeasurement;
     protected LengthMeasure offsetBot;
     protected String comments;
     protected CsCustomData customData;
@@ -70,10 +70,10 @@ public class CsSensor {
      * 
      * @return
      *     possible object is
-     *     {@link MeasurementType }
+     *     {@link String }
      *     
      */
-    public MeasurementType getTypeMeasurement() {
+    public String getTypeMeasurement() {
         return typeMeasurement;
     }
 
@@ -82,10 +82,10 @@ public class CsSensor {
      * 
      * @param value
      *     allowed object is
-     *     {@link MeasurementType }
+     *     {@link String }
      *     
      */
-    public void setTypeMeasurement(MeasurementType value) {
+    public void setTypeMeasurement(String value) {
         this.typeMeasurement = value;
     }
 

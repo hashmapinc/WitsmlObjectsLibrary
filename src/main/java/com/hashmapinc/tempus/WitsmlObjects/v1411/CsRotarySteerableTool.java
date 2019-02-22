@@ -90,7 +90,7 @@ public class CsRotarySteerableTool {
 
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected DeflectionMethod deflectionMethod;
+    protected String deflectionMethod;
     protected PlaneAngleMeasure bendAngle;
     protected LengthMeasure bendOffset;
     protected LengthMeasure holeSizeMn;
@@ -118,10 +118,10 @@ public class CsRotarySteerableTool {
      * 
      * @return
      *     possible object is
-     *     {@link DeflectionMethod }
+     *     {@link String }
      *     
      */
-    public DeflectionMethod getDeflectionMethod() {
+    public String getDeflectionMethod() {
         return deflectionMethod;
     }
 
@@ -130,10 +130,10 @@ public class CsRotarySteerableTool {
      * 
      * @param value
      *     allowed object is
-     *     {@link DeflectionMethod }
+     *     {@link String }
      *     
      */
-    public void setDeflectionMethod(DeflectionMethod value) {
+    public void setDeflectionMethod(String value) {
         this.deflectionMethod = value;
     }
 

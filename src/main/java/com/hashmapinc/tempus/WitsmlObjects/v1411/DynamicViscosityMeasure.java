@@ -38,17 +38,17 @@ public class DynamicViscosityMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected DynamicViscosityUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link DynamicViscosityUom }
+     *     {@link String }
      *     
      */
-    public DynamicViscosityUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -57,10 +57,10 @@ public class DynamicViscosityMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link DynamicViscosityUom }
+     *     {@link String }
      *     
      */
-    public void setUom(DynamicViscosityUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 
