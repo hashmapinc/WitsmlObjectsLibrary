@@ -11,7 +11,7 @@
     "shape" : "horizontal",
     "mdCurrent" : {
       "value" : 0.0,
-      "uom" : "FT",
+      "uom" : "ft",
       "datum" : null
     },
     "tvdCurrent" : {
@@ -21,7 +21,7 @@
     },
     "mdKickoff" : {
       "value" : 0.0,
-      "uom" : "FT",
+      "uom" : "ft",
       "datum" : null
     },
     "tvdKickoff" : {
@@ -31,7 +31,7 @@
     },
     "mdPlanned" : {
       "value" : 0.0,
-      "uom" : "FT",
+      "uom" : "ft",
       "datum" : null
     },
     "tvdPlanned" : {
@@ -41,7 +41,7 @@
     },
     "mdSubSeaPlanned" : {
       "value" : 0.0,
-      "uom" : "FT",
+      "uom" : "ft",
       "datum" : null
     },
     "tvdSubSeaPlanned" : {

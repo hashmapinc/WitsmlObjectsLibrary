@@ -30,6 +30,7 @@
     },
     "wellDatum" : [ {
       "name" : "",
+      "code" : "",
       "datumName" : {
         "value" : "",
         "namingSystem" : null,
@@ -67,7 +68,7 @@
       },
       "measuredDepth" : {
         "value" : null,
-        "uom" : null,
+        "uom" : "",
         "datum" : ""
       },
       "comment" : "",
@@ -142,7 +143,7 @@
       },
       "measuredDepth" : {
         "value" : null,
-        "uom" : null,
+        "uom" : "",
         "datum" : ""
       },
       "location" : [ {
@@ -206,7 +207,7 @@
           "namingSystem" : "",
           "code" : ""
         },
-        "projectionCode" : null,
+        "projectionCode" : "",
         "projectedFrom" : {
           "value" : "",
           "uidRef" : ""
@@ -264,7 +265,7 @@
           "uom" : ""
         },
         "scaleFactor" : null,
-        "methodVariant" : null,
+        "methodVariant" : "",
         "perspectiveHeight" : {
           "value" : null,
           "uom" : ""
@@ -282,7 +283,7 @@
           "value" : null,
           "uom" : ""
         },
-        "hemisphere" : null,
+        "hemisphere" : "",
         "description" : "",
         "parameter" : [ {
           "value" : "",
@@ -290,7 +291,7 @@
           "uom" : "",
           "description" : ""
         } ],
-        "nADType" : null
+        "nADType" : ""
       },
       "geographic" : {
         "nameCRS" : {
@@ -298,9 +299,9 @@
           "namingSystem" : "",
           "code" : ""
         },
-        "geodeticDatumCode" : null,
+        "geodeticDatumCode" : "",
         "scaleFactor" : null,
-        "ellipsoidCode" : null,
+        "ellipsoidCode" : "",
         "ellipsoidSemiMajorAxis" : {
           "value" : null,
           "uom" : ""
@@ -350,7 +351,7 @@
     } ],
     "commonData" : {
       "sourceName" : null,
-      "itemState" : null,
+      "itemState" : "",
       "serviceCategory" : null,
       "comments" : "",
       "acquisitionTimeZone" : [ ],

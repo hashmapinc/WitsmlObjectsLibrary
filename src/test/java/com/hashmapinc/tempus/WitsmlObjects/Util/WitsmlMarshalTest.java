@@ -87,7 +87,6 @@ public class WitsmlMarshalTest {
 
         String json1311 = WitsmlMarshal.serializeToJSON(obj1311);
         String expectedJson = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/well1311_withAttributesFull.json");
-        //assertEquals(expectedJson.length(), json1311.length()); // simple length check before more advanced comparision
 
         // do a deep comparison of the json values
         ObjectMapper om = new ObjectMapper();
@@ -142,13 +141,12 @@ public class WitsmlMarshalTest {
         assertNotNull(full1411Wells);
 
         String expectedJson = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/well1311_Convertedto1411FullEmpty.json");
-        //assertEquals(expectedJson.length(), json1411.length()); // simple length check before more advanced comparision
 
         // do a deep comparison of the json values
         ObjectMapper om = new ObjectMapper();
         Map<String, Object> map1411 = (Map<String, Object>) (om.readValue(full1411Wells, Map.class));
         Map<String, Object> expectedMap = (Map<String, Object>) (om.readValue(expectedJson, Map.class));
-        assertEquals(map1411, expectedMap);
+        assertEquals(expectedMap, map1411);
     }
     //=========================================================================
 

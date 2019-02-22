@@ -11,7 +11,7 @@
     "shape" : "",
     "mdCurrent" : {
       "value" : null,
-      "uom" : null,
+      "uom" : "",
       "datum" : null
     },
     "tvdCurrent" : {
@@ -21,7 +21,7 @@
     },
     "mdKickoff" : {
       "value" : null,
-      "uom" : null,
+      "uom" : "",
       "datum" : null
     },
     "tvdKickoff" : {
@@ -31,7 +31,7 @@
     },
     "mdPlanned" : {
       "value" : null,
-      "uom" : null,
+      "uom" : "",
       "datum" : null
     },
     "tvdPlanned" : {
@@ -41,7 +41,7 @@
     },
     "mdSubSeaPlanned" : {
       "value" : null,
-      "uom" : null,
+      "uom" : "",
       "datum" : null
     },
     "tvdSubSeaPlanned" : {
@@ -55,7 +55,7 @@
     },
     "commonData" : {
       "sourceName" : null,
-      "itemState" : null,
+      "itemState" : "",
       "comments" : "",
       "dTimCreation" : null,
       "dTimLastChange" : null
