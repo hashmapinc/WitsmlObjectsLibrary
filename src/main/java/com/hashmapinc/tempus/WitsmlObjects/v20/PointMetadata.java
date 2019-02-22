@@ -46,7 +46,7 @@ public class PointMetadata {
     protected String name;
     @XmlElement(name = "EtpDataType", required = true)
     @XmlSchemaType(name = "string")
-    protected EtpDataType etpDataType;
+    protected String etpDataType;
     @XmlElement(name = "Description", required = true)
     protected String description;
 
@@ -79,10 +79,10 @@ public class PointMetadata {
      * 
      * @return
      *     possible object is
-     *     {@link EtpDataType }
+     *     {@link String }
      *     
      */
-    public EtpDataType getEtpDataType() {
+    public String getEtpDataType() {
         return etpDataType;
     }
 
@@ -91,10 +91,10 @@ public class PointMetadata {
      * 
      * @param value
      *     allowed object is
-     *     {@link EtpDataType }
+     *     {@link String }
      *     
      */
-    public void setEtpDataType(EtpDataType value) {
+    public void setEtpDataType(String value) {
         this.etpDataType = value;
     }
 

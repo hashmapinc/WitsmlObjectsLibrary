@@ -37,7 +37,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         <element name="diaPilot" type="{http://www.witsml.org/schemas/1series}lengthMeasure" minOccurs="0"/>
  *         <element name="mdDiaPilotPlan" type="{http://www.witsml.org/schemas/1series}measuredDepthCoord" minOccurs="0"/>
  *         <element name="tvdDiaPilotPlan" type="{http://www.witsml.org/schemas/1series}wellVerticalDepthCoord" minOccurs="0"/>
- *         <element name="typeWellbore" type="{http://www.witsml.org/schemas/1series}WellboreType" minOccurs="0"/>
+ *         <element name="typeWellbore" type="{http://www.witsml.org/schemas/1series}String" minOccurs="0"/>
  *         <element name="mdKickoff" type="{http://www.witsml.org/schemas/1series}measuredDepthCoord" minOccurs="0"/>
  *         <element name="tvdKickoff" type="{http://www.witsml.org/schemas/1series}measuredDepthCoord" minOccurs="0"/>
  *         <element name="parentWellbore" type="{http://www.witsml.org/schemas/1series}cs_wellAlias" maxOccurs="unbounded" minOccurs="0"/>
@@ -175,7 +175,7 @@ public class CsDrillReportStatusInfo {
     protected MeasuredDepthCoord mdDiaPilotPlan;
     protected WellVerticalDepthCoord tvdDiaPilotPlan;
     @XmlSchemaType(name = "string")
-    protected WellboreType typeWellbore;
+    protected String typeWellbore;
     protected MeasuredDepthCoord mdKickoff;
     protected MeasuredDepthCoord tvdKickoff;
     protected List<CsWellAlias> parentWellbore;
@@ -186,7 +186,7 @@ public class CsDrillReportStatusInfo {
     protected MeasuredDepthCoord mdCsgLast;
     protected WellVerticalDepthCoord tvdCsgLast;
     @XmlSchemaType(name = "string")
-    protected PresTestType presTestType;
+    protected String presTestType;
     protected MeasuredDepthCoord mdPlanned;
     protected LengthMeasure distDrill;
     protected WellElevationCoord elevKelly;
@@ -452,10 +452,10 @@ public class CsDrillReportStatusInfo {
      * 
      * @return
      *     possible object is
-     *     {@link WellboreType }
+     *     {@link String }
      *     
      */
-    public WellboreType getTypeWellbore() {
+    public String getTypeWellbore() {
         return typeWellbore;
     }
 
@@ -464,10 +464,10 @@ public class CsDrillReportStatusInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link WellboreType }
+     *     {@link String }
      *     
      */
-    public void setTypeWellbore(WellboreType value) {
+    public void setTypeWellbore(String value) {
         this.typeWellbore = value;
     }
 
@@ -697,10 +697,10 @@ public class CsDrillReportStatusInfo {
      * 
      * @return
      *     possible object is
-     *     {@link PresTestType }
+     *     {@link String }
      *     
      */
-    public PresTestType getPresTestType() {
+    public String getPresTestType() {
         return presTestType;
     }
 
@@ -709,10 +709,10 @@ public class CsDrillReportStatusInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link PresTestType }
+     *     {@link String }
      *     
      */
-    public void setPresTestType(PresTestType value) {
+    public void setPresTestType(String value) {
         this.presTestType = value;
     }
 

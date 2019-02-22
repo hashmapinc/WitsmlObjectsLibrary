@@ -21,7 +21,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="type" type="{http://www.witsml.org/schemas/131}MudLogParameterType"/>
+ *         <element name="type" type="{http://www.witsml.org/schemas/131}String"/>
  *         <element name="dTime" type="{http://www.witsml.org/schemas/131}timestamp" minOccurs="0"/>
  *         <sequence minOccurs="0">
  *           <element name="mdTop" type="{http://www.witsml.org/schemas/131}measuredDepthCoord"/>
@@ -59,7 +59,7 @@ public class CsMudLogParameter {
 
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected MudLogParameterType type;
+    protected String type;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar dTime;
     protected MeasuredDepthCoord mdTop;
@@ -77,10 +77,10 @@ public class CsMudLogParameter {
      * 
      * @return
      *     possible object is
-     *     {@link MudLogParameterType }
+     *     {@link String }
      *     
      */
-    public MudLogParameterType getType() {
+    public String getType() {
         return type;
     }
 
@@ -89,10 +89,10 @@ public class CsMudLogParameter {
      * 
      * @param value
      *     allowed object is
-     *     {@link MudLogParameterType }
+     *     {@link String }
      *     
      */
-    public void setType(MudLogParameterType value) {
+    public void setType(String value) {
         this.type = value;
     }
 

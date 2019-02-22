@@ -30,17 +30,17 @@ public class MagneticFieldStrengthMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected MagneticFieldStrengthUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link MagneticFieldStrengthUom }
+     *     {@link String }
      *     
      */
-    public MagneticFieldStrengthUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -49,10 +49,10 @@ public class MagneticFieldStrengthMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link MagneticFieldStrengthUom }
+     *     {@link String }
      *     
      */
-    public void setUom(MagneticFieldStrengthUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

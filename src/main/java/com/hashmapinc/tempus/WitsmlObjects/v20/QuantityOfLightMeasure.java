@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlValue;
  * <complexType name="QuantityOfLightMeasure">
  *   <simpleContent>
  *     <extension base="<http://www.energistics.org/energyml/data/commonv2>AbstractMeasure">
- *       <attribute name="uom" use="required" type="{http://www.energistics.org/energyml/data/commonv2}QuantityOfLightUom" />
+ *       <attribute name="uom" use="required" type="{http://www.energistics.org/energyml/data/commonv2}String" />
  *     </extension>
  *   </simpleContent>
  * </complexType>
@@ -36,7 +36,7 @@ public class QuantityOfLightMeasure {
     @XmlValue
     protected double value;
     @XmlAttribute(name = "uom", required = true)
-    protected QuantityOfLightUom uom;
+    protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -61,10 +61,10 @@ public class QuantityOfLightMeasure {
      * 
      * @return
      *     possible object is
-     *     {@link QuantityOfLightUom }
+     *     {@link String }
      *     
      */
-    public QuantityOfLightUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -73,10 +73,10 @@ public class QuantityOfLightMeasure {
      * 
      * @param value
      *     allowed object is
-     *     {@link QuantityOfLightUom }
+     *     {@link String }
      *     
      */
-    public void setUom(QuantityOfLightUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

@@ -30,17 +30,17 @@ public class SpecificVolumeMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected SpecificVolumeUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link SpecificVolumeUom }
+     *     {@link String }
      *     
      */
-    public SpecificVolumeUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -49,10 +49,10 @@ public class SpecificVolumeMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link SpecificVolumeUom }
+     *     {@link String }
      *     
      */
-    public void setUom(SpecificVolumeUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlValue;
  * <complexType name="SolidAngleMeasure">
  *   <simpleContent>
  *     <extension base="<http://www.energistics.org/energyml/data/commonv2>AbstractMeasure">
- *       <attribute name="uom" use="required" type="{http://www.energistics.org/energyml/data/commonv2}SolidAngleUom" />
+ *       <attribute name="uom" use="required" type="{http://www.energistics.org/energyml/data/commonv2}String" />
  *     </extension>
  *   </simpleContent>
  * </complexType>
@@ -36,7 +36,7 @@ public class SolidAngleMeasure {
     @XmlValue
     protected double value;
     @XmlAttribute(name = "uom", required = true)
-    protected SolidAngleUom uom;
+    protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -61,10 +61,10 @@ public class SolidAngleMeasure {
      * 
      * @return
      *     possible object is
-     *     {@link SolidAngleUom }
+     *     {@link String }
      *     
      */
-    public SolidAngleUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -73,10 +73,10 @@ public class SolidAngleMeasure {
      * 
      * @param value
      *     allowed object is
-     *     {@link SolidAngleUom }
+     *     {@link String }
      *     
      */
-    public void setUom(SolidAngleUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

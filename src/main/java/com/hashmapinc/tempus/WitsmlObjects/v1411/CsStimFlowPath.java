@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.XmlType;
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="kind" type="{http://www.witsml.org/schemas/1series}StimStageFlowPathType"/>
+ *         <element name="kind" type="{http://www.witsml.org/schemas/1series}String"/>
  *         <element name="name" type="{http://www.witsml.org/schemas/1series}nameString" minOccurs="0"/>
  *         <element name="description" type="{http://www.witsml.org/schemas/1series}descriptionString" minOccurs="0"/>
  *         <element name="maxTreatmentPres" type="{http://www.witsml.org/schemas/1series}pressureMeasure" minOccurs="0"/>
@@ -158,7 +158,7 @@ public class CsStimFlowPath {
 
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected StimStageFlowPathType kind;
+    protected String kind;
     protected String name;
     protected String description;
     protected PressureMeasure maxTreatmentPres;
@@ -222,10 +222,10 @@ public class CsStimFlowPath {
      * 
      * @return
      *     possible object is
-     *     {@link StimStageFlowPathType }
+     *     {@link String }
      *     
      */
-    public StimStageFlowPathType getKind() {
+    public String getKind() {
         return kind;
     }
 
@@ -234,10 +234,10 @@ public class CsStimFlowPath {
      * 
      * @param value
      *     allowed object is
-     *     {@link StimStageFlowPathType }
+     *     {@link String }
      *     
      */
-    public void setKind(StimStageFlowPathType value) {
+    public void setKind(String value) {
         this.kind = value;
     }
 

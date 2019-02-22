@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.XmlType;
  *         <element name="author" type="{http://www.witsml.org/schemas/1series}nameString" minOccurs="0"/>
  *         <element name="source" type="{http://www.witsml.org/schemas/1series}nameString" minOccurs="0"/>
  *         <element name="authority" type="{http://www.witsml.org/schemas/1series}nameString"/>
- *         <element name="status" type="{http://www.witsml.org/schemas/1series}AuthorizationStatus"/>
+ *         <element name="status" type="{http://www.witsml.org/schemas/1series}String"/>
  *         <element name="version" type="{http://www.witsml.org/schemas/1series}nameString" minOccurs="0"/>
  *         <element name="comment" type="{http://www.witsml.org/schemas/1series}commentString" minOccurs="0"/>
  *       </sequence>
@@ -58,7 +58,7 @@ public class CsIscwsaAuthorizationData {
     protected String authority;
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected AuthorizationStatus status;
+    protected String status;
     protected String version;
     protected String comment;
 
@@ -139,10 +139,10 @@ public class CsIscwsaAuthorizationData {
      * 
      * @return
      *     possible object is
-     *     {@link AuthorizationStatus }
+     *     {@link String }
      *     
      */
-    public AuthorizationStatus getStatus() {
+    public String getStatus() {
         return status;
     }
 
@@ -151,10 +151,10 @@ public class CsIscwsaAuthorizationData {
      * 
      * @param value
      *     allowed object is
-     *     {@link AuthorizationStatus }
+     *     {@link String }
      *     
      */
-    public void setStatus(AuthorizationStatus value) {
+    public void setStatus(String value) {
         this.status = value;
     }
 

@@ -79,7 +79,7 @@ public class ObjBhaRun {
     protected AnglePerLengthMeasure actDogleg;
     protected AnglePerLengthMeasure actDoglegMx;
     @XmlSchemaType(name = "string")
-    protected BhaStatus statusBha;
+    protected String statusBha;
     protected String numBitRun;
     protected Short numStringRun;
     protected String reasonTrip;
@@ -363,10 +363,10 @@ public class ObjBhaRun {
      * 
      * @return
      *     possible object is
-     *     {@link BhaStatus }
+     *     {@link String }
      *     
      */
-    public BhaStatus getStatusBha() {
+    public String getStatusBha() {
         return statusBha;
     }
 
@@ -375,10 +375,10 @@ public class ObjBhaRun {
      * 
      * @param value
      *     allowed object is
-     *     {@link BhaStatus }
+     *     {@link String }
      *     
      */
-    public void setStatusBha(BhaStatus value) {
+    public void setStatusBha(String value) {
         this.statusBha = value;
     }
 

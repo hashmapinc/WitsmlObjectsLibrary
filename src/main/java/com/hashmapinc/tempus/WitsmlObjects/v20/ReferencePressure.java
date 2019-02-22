@@ -91,7 +91,7 @@ public class ReferencePressure {
      *     {@link String }
      *     
      */
-    public String getString() {
+    public String getReferencePressureKind() {
         return referencePressureKind;
     }
 
@@ -103,7 +103,7 @@ public class ReferencePressure {
      *     {@link String }
      *     
      */
-    public void setString(String value) {
+    public void setReferencePressureKind(String value) {
         this.referencePressureKind = value;
     }
 

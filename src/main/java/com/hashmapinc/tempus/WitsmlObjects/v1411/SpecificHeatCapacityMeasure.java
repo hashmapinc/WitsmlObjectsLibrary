@@ -23,7 +23,7 @@ import javax.xml.bind.annotation.XmlType;
  * <complexType name="specificHeatCapacityMeasure">
  *   <simpleContent>
  *     <extension base="<http://www.witsml.org/schemas/1series>abstractMeasure">
- *       <attribute name="uom" use="required" type="{http://www.witsml.org/schemas/1series}SpecificHeatCapacityUom" />
+ *       <attribute name="uom" use="required" type="{http://www.witsml.org/schemas/1series}String" />
  *     </extension>
  *   </simpleContent>
  * </complexType>
@@ -38,17 +38,17 @@ public class SpecificHeatCapacityMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected SpecificHeatCapacityUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link SpecificHeatCapacityUom }
+     *     {@link String }
      *     
      */
-    public SpecificHeatCapacityUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -57,10 +57,10 @@ public class SpecificHeatCapacityMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link SpecificHeatCapacityUom }
+     *     {@link String }
      *     
      */
-    public void setUom(SpecificHeatCapacityUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

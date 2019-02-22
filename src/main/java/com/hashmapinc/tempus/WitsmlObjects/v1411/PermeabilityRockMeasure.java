@@ -23,7 +23,7 @@ import javax.xml.bind.annotation.XmlType;
  * <complexType name="permeabilityRockMeasure">
  *   <simpleContent>
  *     <extension base="<http://www.witsml.org/schemas/1series>abstractMeasure">
- *       <attribute name="uom" use="required" type="{http://www.witsml.org/schemas/1series}PermeabilityRockUom" />
+ *       <attribute name="uom" use="required" type="{http://www.witsml.org/schemas/1series}String" />
  *     </extension>
  *   </simpleContent>
  * </complexType>
@@ -38,17 +38,17 @@ public class PermeabilityRockMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected PermeabilityRockUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link PermeabilityRockUom }
+     *     {@link String }
      *     
      */
-    public PermeabilityRockUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -57,10 +57,10 @@ public class PermeabilityRockMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link PermeabilityRockUom }
+     *     {@link String }
      *     
      */
-    public void setUom(PermeabilityRockUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

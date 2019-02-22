@@ -85,7 +85,7 @@ public class CsSurveySection {
     protected String modelError;
     protected Boolean overwrite;
     protected LengthMeasure frequencyMx;
-    @XmlSchemaType(name = "string")
+    @XmlSchemaType(name = "itemState")
     protected String itemState;
     protected String comments;
     protected List<CsExtensionNameValue> extensionNameValue;
@@ -332,7 +332,7 @@ public class CsSurveySection {
      *     {@link String }
      *     
      */
-    public String getString() {
+    public String getItemState() {
         return itemState;
     }
 
@@ -344,7 +344,7 @@ public class CsSurveySection {
      *     {@link String }
      *     
      */
-    public void setString(String value) {
+    public void setItemState(String value) {
         this.itemState = value;
     }
 

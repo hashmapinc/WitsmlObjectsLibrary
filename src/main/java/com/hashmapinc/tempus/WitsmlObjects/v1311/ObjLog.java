@@ -81,7 +81,7 @@ public class ObjLog extends AbstractWitsmlObject {
     private XMLGregorianCalendar creationDate;
     protected String description;
     @XmlSchemaType(name = "string")
-    private LogIndexType indexType;
+    private String indexType;
     private GenericMeasure startIndex;
     private GenericMeasure endIndex;
     private RatioGenericMeasure stepIncrement;
@@ -90,7 +90,7 @@ public class ObjLog extends AbstractWitsmlObject {
     @XmlSchemaType(name = "dateTime")
     private XMLGregorianCalendar endDateTimeIndex;
     @XmlSchemaType(name = "string")
-    protected LogIndexDirection direction;
+    protected String direction;
     private IndexCurve indexCurve;
     private String nullValue;
     private List<IndexedObject> logParam;
@@ -346,9 +346,9 @@ public class ObjLog extends AbstractWitsmlObject {
      * Gets the value of the indexType property.
      *
      * @return possible object is
-     * {@link LogIndexType }
+     * {@link String }
      */
-    public LogIndexType getIndexType() {
+    public String getIndexType() {
         return indexType;
     }
 
@@ -356,9 +356,9 @@ public class ObjLog extends AbstractWitsmlObject {
      * Sets the value of the indexType property.
      *
      * @param value allowed object is
-     *              {@link LogIndexType }
+     *              {@link String }
      */
-    public void setIndexType(LogIndexType value) {
+    public void setIndexType(String value) {
         this.indexType = value;
     }
 
@@ -466,9 +466,9 @@ public class ObjLog extends AbstractWitsmlObject {
      * Gets the value of the direction property.
      *
      * @return possible object is
-     * {@link LogIndexDirection }
+     * {@link String }
      */
-    public LogIndexDirection getDirection() {
+    public String getDirection() {
         return direction;
     }
 
@@ -476,9 +476,9 @@ public class ObjLog extends AbstractWitsmlObject {
      * Sets the value of the direction property.
      *
      * @param value allowed object is
-     *              {@link LogIndexDirection }
+     *              {@link String }
      */
-    public void setDirection(LogIndexDirection value) {
+    public void setDirection(String value) {
         this.direction = value;
     }
 
