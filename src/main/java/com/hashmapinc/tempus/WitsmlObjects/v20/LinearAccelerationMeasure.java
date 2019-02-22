@@ -91,8 +91,7 @@ public class LinearAccelerationMeasure {
 
         // assign fields
         measure.setValue(this.getValue());
-        if (null != this.getUom())
-            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.AccelerationLinearUom.fromValue(this.getUom()));
+        measure.setUom(this.getUom());
 
         return measure;
     }
@@ -102,8 +101,7 @@ public class LinearAccelerationMeasure {
 
         // assign fields
         measure.setValue(this.getValue());
-        if (null != this.getUom())
-            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1411.AccelerationLinearUom.fromValue(this.getUom()));
+        measure.setUom(this.getUom());
 
         return measure;
     }

@@ -40,7 +40,7 @@ import javax.xml.bind.annotation.XmlType;
  *         <element name="modelError" type="{http://www.witsml.org/schemas/1series}nameString" minOccurs="0"/>
  *         <element name="overwrite" type="{http://www.witsml.org/schemas/1series}logicalBoolean" minOccurs="0"/>
  *         <element name="frequencyMx" type="{http://www.witsml.org/schemas/1series}lengthMeasure" minOccurs="0"/>
- *         <element name="itemState" type="{http://www.witsml.org/schemas/1series}String" minOccurs="0"/>
+ *         <element name="itemState" type="{http://www.witsml.org/schemas/1series}ItemState" minOccurs="0"/>
  *         <element name="comments" type="{http://www.witsml.org/schemas/1series}commentString" minOccurs="0"/>
  *         <element name="extensionNameValue" type="{http://www.witsml.org/schemas/1series}cs_extensionNameValue" maxOccurs="unbounded" minOccurs="0"/>
  *       </sequence>
@@ -85,7 +85,7 @@ public class CsSurveySection {
     protected String modelError;
     protected Boolean overwrite;
     protected LengthMeasure frequencyMx;
-    @XmlSchemaType(name = "itemState")
+    @XmlSchemaType(name = "string")
     protected String itemState;
     protected String comments;
     protected List<CsExtensionNameValue> extensionNameValue;

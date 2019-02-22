@@ -20,7 +20,7 @@ import javax.xml.bind.annotation.XmlType;
  *       <sequence>
  *         <element name="gasAv" type="{http://www.witsml.org/schemas/131}volumePerVolumeMeasure" minOccurs="0"/>
  *         <element name="gasPeak" type="{http://www.witsml.org/schemas/131}volumePerVolumeMeasure" minOccurs="0"/>
- *         <element name="gasPeakType" type="{http://www.witsml.org/schemas/131}String" minOccurs="0"/>
+ *         <element name="gasPeakType" type="{http://www.witsml.org/schemas/131}GasPeakType" minOccurs="0"/>
  *         <element name="gasBackgnd" type="{http://www.witsml.org/schemas/131}volumePerVolumeMeasure" minOccurs="0"/>
  *         <element name="gasConAv" type="{http://www.witsml.org/schemas/131}volumePerVolumeMeasure" minOccurs="0"/>
  *         <element name="gasConMx" type="{http://www.witsml.org/schemas/131}volumePerVolumeMeasure" minOccurs="0"/>
@@ -110,7 +110,7 @@ public class CsMudGas {
      *     {@link String }
      *     
      */
-    public String getString() {
+    public String getGasPeakType() {
         return gasPeakType;
     }
 
@@ -122,7 +122,7 @@ public class CsMudGas {
      *     {@link String }
      *     
      */
-    public void setString(String value) {
+    public void setGasPeakType(String value) {
         this.gasPeakType = value;
     }
 

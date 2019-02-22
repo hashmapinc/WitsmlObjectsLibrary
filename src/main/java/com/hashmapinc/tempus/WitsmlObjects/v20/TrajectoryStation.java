@@ -1447,6 +1447,8 @@ public class TrajectoryStation {
         station.setMagModelValid(this.getMagModelValid());
         station.setGeoModelUsed(this.getGeoModelUsed());
         station.setUid(this.getUid());
+        station.setTypeTrajStation(this.getTypeTrajStation());
+        station.setStatusTrajStation(this.getStatusTrajStation());
 
         // check complex fields
         // dtimStn
@@ -1459,10 +1461,6 @@ public class TrajectoryStation {
             ref.setValue(this.getTarget());
             station.setTarget(ref);
         }
-
-        // typeTrajStation
-        if (null != this.getTypeTrajStation())
-            station.setTypeTrajStation(com.hashmapinc.tempus.WitsmlObjects.v1411.TrajStationType.fromValue(this.getTypeTrajStation()));
 
         // typeSurveyTool
         if (null != this.getTypeSurveyTool())
@@ -1547,10 +1545,6 @@ public class TrajectoryStation {
         // magDipAngleReference
         if (null != this.getMagDipAngleReference())
             station.setMagDipAngleReference(this.getMagDipAngleReference().to1411PlaneAngleMeasure());
-
-        // statusTrajStation
-        if (null != this.getStatusTrajStation())
-            station.setStatusTrajStation(com.hashmapinc.tempus.WitsmlObjects.v1411.TrajStationStatus.fromValue(this.getStatusTrajStation()));
 
         // rawData
         if (null != this.getRawData())

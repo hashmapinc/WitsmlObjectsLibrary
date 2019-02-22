@@ -73,7 +73,7 @@ public class WellConverterTest {
             assertEquals(src.getCommonData().getSourceName(), dest.getCommonData().getSourceName());
             assertEquals(src.getCommonData().getDTimCreation(), dest.getCommonData().getDTimCreation());
             assertEquals(src.getCommonData().getDTimLastChange(), dest.getCommonData().getDTimLastChange());
-            assertEquals(src.getCommonData().getItemState().value(), dest.getCommonData().getItemState().value());
+            assertEquals(src.getCommonData().getItemState(), dest.getCommonData().getItemState());
             assertEquals(src.getCommonData().getComments(), dest.getCommonData().getComments());
         }
 
@@ -93,7 +93,7 @@ public class WellConverterTest {
 
                 // code
                 if (null != srcWellDatum.get(i).getCode())
-                    assertEquals(srcWellDatum.get(i).getCode().value(), destWellDatum.get(i).getCode().value());
+                    assertEquals(srcWellDatum.get(i).getCode(), destWellDatum.get(i).getCode());
 
                 // datum name
                 if (null != srcWellDatum.get(i).getDatumName()) {
@@ -347,7 +347,7 @@ public class WellConverterTest {
 
                     // projectionCode
                     if (null != srcWellCRS.get(i).getMapProjection().getProjectionCode())
-                        assertEquals(srcWellCRS.get(i).getMapProjection().getProjectionCode().value(), destWellCRS.get(i).getMapProjection().getProjectionCode().value());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getProjectionCode(), destWellCRS.get(i).getMapProjection().getProjectionCode());
 
                     // projectedFrom
                     if (null != srcWellCRS.get(i).getMapProjection().getProjectedFrom()) {
@@ -437,7 +437,7 @@ public class WellConverterTest {
 
                     // methodVariant
                     if (null != srcWellCRS.get(i).getMapProjection().getMethodVariant())
-                        assertEquals(srcWellCRS.get(i).getMapProjection().getMethodVariant().value(), destWellCRS.get(i).getMapProjection().getMethodVariant().value());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getMethodVariant(), destWellCRS.get(i).getMapProjection().getMethodVariant());
 
                     // perspectiveHeight
                     if (null != srcWellCRS.get(i).getMapProjection().getPerspectiveHeight()) {
@@ -449,7 +449,7 @@ public class WellConverterTest {
 
                     // nadType
                     if (null != srcWellCRS.get(i).getMapProjection().getNADType())
-                        assertEquals(srcWellCRS.get(i).getMapProjection().getNADType().value(), destWellCRS.get(i).getMapProjection().getNADType().value());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getNADType(), destWellCRS.get(i).getMapProjection().getNADType());
 
                     // falseEasting
                     if (null != srcWellCRS.get(i).getMapProjection().getFalseEasting()) {
@@ -471,7 +471,7 @@ public class WellConverterTest {
 
                     // hemisphere
                     if (null != srcWellCRS.get(i).getMapProjection().getHemisphere())
-                        assertEquals(srcWellCRS.get(i).getMapProjection().getHemisphere().value(), destWellCRS.get(i).getMapProjection().getHemisphere().value());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getHemisphere(), destWellCRS.get(i).getMapProjection().getHemisphere());
 
                     assertEquals(srcWellCRS.get(i).getMapProjection().getDescription(), destWellCRS.get(i).getMapProjection().getDescription());
 
@@ -500,7 +500,7 @@ public class WellConverterTest {
 
                     // geodeticDatumCode
                     if (null != srcWellCRS.get(i).getGeographic().getGeodeticDatumCode())
-                        assertEquals(srcWellCRS.get(i).getGeographic().getGeodeticDatumCode().value(), destWellCRS.get(i).getGeographic().getGeodeticDatumCode().value());
+                        assertEquals(srcWellCRS.get(i).getGeographic().getGeodeticDatumCode(), destWellCRS.get(i).getGeographic().getGeodeticDatumCode());
 
                     // xTranslation
                     if (null != srcWellCRS.get(i).getGeographic().getXTranslation()) {
@@ -542,7 +542,7 @@ public class WellConverterTest {
 
                     // ellipsoidCode
                     if (null != srcWellCRS.get(i).getGeographic().getEllipsoidCode())
-                        assertEquals(srcWellCRS.get(i).getGeographic().getEllipsoidCode().value(), destWellCRS.get(i).getGeographic().getEllipsoidCode().value());
+                        assertEquals(srcWellCRS.get(i).getGeographic().getEllipsoidCode(), destWellCRS.get(i).getGeographic().getEllipsoidCode());
 
                     // ellipsoidSemiMajorAxis
                     if (null != srcWellCRS.get(i).getGeographic().getEllipsoidSemiMajorAxis()) {
@@ -571,7 +571,7 @@ public class WellConverterTest {
 
                         // northDirection
                         if (null != srcWellCRS.get(i).getLocalCRS().getYAxisAzimuth().getNorthDirection())
-                            assertEquals(srcWellCRS.get(i).getLocalCRS().getYAxisAzimuth().getNorthDirection().value(), destWellCRS.get(i).getLocalCRS().getYAxisAzimuth().getNorthDirection().value());
+                            assertEquals(srcWellCRS.get(i).getLocalCRS().getYAxisAzimuth().getNorthDirection(), destWellCRS.get(i).getLocalCRS().getYAxisAzimuth().getNorthDirection());
                     }
 
                     assertEquals(srcWellCRS.get(i).getLocalCRS().getYAxisDescription(), destWellCRS.get(i).getLocalCRS().getYAxisDescription());
@@ -648,7 +648,7 @@ public class WellConverterTest {
             assertEquals(src.getCommonData().getSourceName(), dest.getCommonData().getSourceName());
             assertEquals(src.getCommonData().getDTimCreation(), dest.getCommonData().getDTimCreation());
             assertEquals(src.getCommonData().getDTimLastChange(), dest.getCommonData().getDTimLastChange());
-            assertEquals(src.getCommonData().getItemState().value(), dest.getCommonData().getItemState().value());
+            assertEquals(src.getCommonData().getItemState(), dest.getCommonData().getItemState());
             assertEquals(src.getCommonData().getComments(), dest.getCommonData().getComments());
         }
 
@@ -668,7 +668,7 @@ public class WellConverterTest {
 
                 // code
                 if (null != srcWellDatum.get(i).getCode())
-                    assertEquals(srcWellDatum.get(i).getCode().value(), destWellDatum.get(i).getCode().value());
+                    assertEquals(srcWellDatum.get(i).getCode(), destWellDatum.get(i).getCode());
 
                 // datum name
                 if (null != srcWellDatum.get(i).getDatumName()) {
@@ -922,7 +922,7 @@ public class WellConverterTest {
 
                     // projectionCode
                     if (null != srcWellCRS.get(i).getMapProjection().getProjectionCode())
-                        assertEquals(srcWellCRS.get(i).getMapProjection().getProjectionCode().value(), destWellCRS.get(i).getMapProjection().getProjectionCode().value());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getProjectionCode(), destWellCRS.get(i).getMapProjection().getProjectionCode());
 
                     // projectedFrom
                     if (null != srcWellCRS.get(i).getMapProjection().getProjectedFrom()) {
@@ -1012,7 +1012,7 @@ public class WellConverterTest {
 
                     // methodVariant
                     if (null != srcWellCRS.get(i).getMapProjection().getMethodVariant())
-                        assertEquals(srcWellCRS.get(i).getMapProjection().getMethodVariant().value(), destWellCRS.get(i).getMapProjection().getMethodVariant().value());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getMethodVariant(), destWellCRS.get(i).getMapProjection().getMethodVariant());
 
                     // perspectiveHeight
                     if (null != srcWellCRS.get(i).getMapProjection().getPerspectiveHeight()) {
@@ -1024,7 +1024,7 @@ public class WellConverterTest {
 
                     // nadType
                     if (null != srcWellCRS.get(i).getMapProjection().getNADType())
-                        assertEquals(srcWellCRS.get(i).getMapProjection().getNADType().value(), destWellCRS.get(i).getMapProjection().getNADType().value());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getNADType(), destWellCRS.get(i).getMapProjection().getNADType());
 
                     // falseEasting
                     if (null != srcWellCRS.get(i).getMapProjection().getFalseEasting()) {
@@ -1046,7 +1046,7 @@ public class WellConverterTest {
 
                     // hemisphere
                     if (null != srcWellCRS.get(i).getMapProjection().getHemisphere())
-                        assertEquals(srcWellCRS.get(i).getMapProjection().getHemisphere().value(), destWellCRS.get(i).getMapProjection().getHemisphere().value());
+                        assertEquals(srcWellCRS.get(i).getMapProjection().getHemisphere(), destWellCRS.get(i).getMapProjection().getHemisphere());
 
                     assertEquals(srcWellCRS.get(i).getMapProjection().getDescription(), destWellCRS.get(i).getMapProjection().getDescription());
 
@@ -1075,7 +1075,7 @@ public class WellConverterTest {
 
                     // geodeticDatumCode
                     if (null != srcWellCRS.get(i).getGeographic().getGeodeticDatumCode())
-                        assertEquals(srcWellCRS.get(i).getGeographic().getGeodeticDatumCode().value(), destWellCRS.get(i).getGeographic().getGeodeticDatumCode().value());
+                        assertEquals(srcWellCRS.get(i).getGeographic().getGeodeticDatumCode(), destWellCRS.get(i).getGeographic().getGeodeticDatumCode());
 
                     // xTranslation
                     if (null != srcWellCRS.get(i).getGeographic().getXTranslation()) {
@@ -1117,7 +1117,7 @@ public class WellConverterTest {
 
                     // ellipsoidCode
                     if (null != srcWellCRS.get(i).getGeographic().getEllipsoidCode())
-                        assertEquals(srcWellCRS.get(i).getGeographic().getEllipsoidCode().value(), destWellCRS.get(i).getGeographic().getEllipsoidCode().value());
+                        assertEquals(srcWellCRS.get(i).getGeographic().getEllipsoidCode(), destWellCRS.get(i).getGeographic().getEllipsoidCode());
 
                     // ellipsoidSemiMajorAxis
                     if (null != srcWellCRS.get(i).getGeographic().getEllipsoidSemiMajorAxis()) {
@@ -1146,7 +1146,7 @@ public class WellConverterTest {
 
                         // northDirection
                         if (null != srcWellCRS.get(i).getLocalCRS().getYAxisAzimuth().getNorthDirection())
-                            assertEquals(srcWellCRS.get(i).getLocalCRS().getYAxisAzimuth().getNorthDirection().value(), destWellCRS.get(i).getLocalCRS().getYAxisAzimuth().getNorthDirection().value());
+                            assertEquals(srcWellCRS.get(i).getLocalCRS().getYAxisAzimuth().getNorthDirection(), destWellCRS.get(i).getLocalCRS().getYAxisAzimuth().getNorthDirection());
                     }
 
                     assertEquals(srcWellCRS.get(i).getLocalCRS().getYAxisDescription(), destWellCRS.get(i).getLocalCRS().getYAxisDescription());

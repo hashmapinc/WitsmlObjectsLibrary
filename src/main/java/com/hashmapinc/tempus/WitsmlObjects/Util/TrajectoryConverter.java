@@ -26,6 +26,7 @@ public class TrajectoryConverter {
         dest.setUidWell(src.getUidWell());
         dest.setUidWellbore(src.getUidWellbore());
         dest.setUid(src.getUid());
+        dest.setAziRef(src.getAziRef());
 
         // check complex fields
         // mdMn
@@ -55,10 +56,6 @@ public class TrajectoryConverter {
         // dispEwVertSectOrig
         if (null != src.getDispEwVertSectOrig())
             dest.setDispEwVertSectOrig(src.getDispEwVertSectOrig().to1311LengthMeasure());
-
-        // aziRef
-        if (null != src.getAziRef())
-            dest.setAziRef(com.hashmapinc.tempus.WitsmlObjects.v1311.AziRef.fromValue(src.getAziRef().value()));
 
         // commonData
         if (null != src.getCommonData())
@@ -107,6 +104,7 @@ public class TrajectoryConverter {
         dest.setUidWell(src.getUidWell());
         dest.setUidWellbore(src.getUidWellbore());
         dest.setUid(src.getUid());
+        dest.setAziRef(src.getAziRef());
 
         // check complex fields
         // mdMn
@@ -137,10 +135,6 @@ public class TrajectoryConverter {
         if (null != src.getDispEwVertSectOrig())
             dest.setDispEwVertSectOrig(src.getDispEwVertSectOrig().to1411Length());
 
-        // aziRef
-        if (null != src.getAziRef())
-            dest.setAziRef(com.hashmapinc.tempus.WitsmlObjects.v1411.AziRef.fromValue(src.getAziRef().value()));
-
         // commonData
         if (null != src.getCommonData())
             dest.setCommonData(src.getCommonData().to1411CommonData());
@@ -170,6 +164,7 @@ public class TrajectoryConverter {
         dest.setDefinitive(src.isDefinitive());
         dest.setMemory(src.isMemory());
         dest.setFinalTraj(src.isFinalTraj());
+        dest.setAziRef(src.getAziRef());
 
         // check complex fields
         // dTimTrajStart
@@ -208,10 +203,6 @@ public class TrajectoryConverter {
         if (null != src.getDispEwVertSectOrig())
             dest.setDispEwVertSectOrig(src.getDispEwVertSectOrig().to1411LengthMeasure());
 
-        // aziRef
-        if (null != src.getAziRef())
-            dest.setAziRef(com.hashmapinc.tempus.WitsmlObjects.v1411.AziRef.fromValue(src.getAziRef()));
-
         // customData
         if (null != src.getCustomData() && null != src.getCustomData().getAny())
             dest.setCustomData(src.getCustomData().to1411CustomData());
@@ -246,6 +237,7 @@ public class TrajectoryConverter {
         dest.setDefinitive(src.isDefinitive());
         dest.setMemory(src.isMemory());
         dest.setFinalTraj(src.isFinalTraj());
+        dest.setAziRef(src.getAziRef());
 
         // check complex fields
         // dTimTrajStart
@@ -283,10 +275,6 @@ public class TrajectoryConverter {
         // dispEwVertSectOrig
         if (null != src.getDispEwVertSectOrig())
             dest.setDispEwVertSectOrig(src.getDispEwVertSectOrig().to20LengthMeasure());
-
-        // aziRef
-        if (null != src.getAziRef())
-            dest.setAziRef(src.getAziRef().value());
 
         // customData
         if (null != src.getCustomData() && null != src.getCustomData().getAny())

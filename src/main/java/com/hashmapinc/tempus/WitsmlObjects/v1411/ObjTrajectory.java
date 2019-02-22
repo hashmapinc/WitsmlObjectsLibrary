@@ -616,7 +616,7 @@ public class ObjTrajectory extends AbstractWitsmlObject {
      *     {@link String }
      *     
      */
-    public String getString() {
+    public String getAziRef() {
         return aziRef;
     }
 
@@ -628,7 +628,7 @@ public class ObjTrajectory extends AbstractWitsmlObject {
      *     {@link String }
      *     
      */
-    public void setString(String value) {
+    public void setAziRef(String value) {
         this.aziRef = value;
     }
 
