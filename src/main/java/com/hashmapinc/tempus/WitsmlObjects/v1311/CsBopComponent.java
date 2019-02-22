@@ -50,7 +50,7 @@ import javax.xml.bind.annotation.XmlType;
 public class CsBopComponent {
 
     @XmlSchemaType(name = "string")
-    protected BopType typeBopComp;
+    protected String typeBopComp;
     protected String descComp;
     protected LengthMeasure idPassThru;
     protected PressureMeasure presWork;
@@ -66,10 +66,10 @@ public class CsBopComponent {
      * 
      * @return
      *     possible object is
-     *     {@link BopType }
+     *     {@link String }
      *     
      */
-    public BopType getTypeBopComp() {
+    public String getTypeBopComp() {
         return typeBopComp;
     }
 
@@ -78,10 +78,10 @@ public class CsBopComponent {
      * 
      * @param value
      *     allowed object is
-     *     {@link BopType }
+     *     {@link String }
      *     
      */
-    public void setTypeBopComp(BopType value) {
+    public void setTypeBopComp(String value) {
         this.typeBopComp = value;
     }
 

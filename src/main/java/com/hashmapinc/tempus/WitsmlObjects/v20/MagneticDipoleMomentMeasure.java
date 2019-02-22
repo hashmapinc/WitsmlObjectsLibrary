@@ -36,7 +36,7 @@ public class MagneticDipoleMomentMeasure {
     @XmlValue
     protected double value;
     @XmlAttribute(name = "uom", required = true)
-    protected MagneticDipoleMomentUom uom;
+    protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -61,10 +61,10 @@ public class MagneticDipoleMomentMeasure {
      * 
      * @return
      *     possible object is
-     *     {@link MagneticDipoleMomentUom }
+     *     {@link String }
      *     
      */
-    public MagneticDipoleMomentUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -73,10 +73,10 @@ public class MagneticDipoleMomentMeasure {
      * 
      * @param value
      *     allowed object is
-     *     {@link MagneticDipoleMomentUom }
+     *     {@link String }
      *     
      */
-    public void setUom(MagneticDipoleMomentUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

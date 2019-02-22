@@ -56,9 +56,9 @@ public class CsJar {
     protected ForceMeasure forPmpOpen;
     protected ForceMeasure forSealFric;
     @XmlSchemaType(name = "string")
-    protected JarType typeJar;
+    protected String typeJar;
     @XmlSchemaType(name = "string")
-    protected JarAction jarAction;
+    protected String jarAction;
     protected CsCustomData customData;
 
     /**
@@ -210,10 +210,10 @@ public class CsJar {
      * 
      * @return
      *     possible object is
-     *     {@link JarType }
+     *     {@link String }
      *     
      */
-    public JarType getTypeJar() {
+    public String getTypeJar() {
         return typeJar;
     }
 
@@ -222,10 +222,10 @@ public class CsJar {
      * 
      * @param value
      *     allowed object is
-     *     {@link JarType }
+     *     {@link String }
      *     
      */
-    public void setTypeJar(JarType value) {
+    public void setTypeJar(String value) {
         this.typeJar = value;
     }
 
@@ -234,10 +234,10 @@ public class CsJar {
      * 
      * @return
      *     possible object is
-     *     {@link JarAction }
+     *     {@link String }
      *     
      */
-    public JarAction getJarAction() {
+    public String getJarAction() {
         return jarAction;
     }
 
@@ -246,10 +246,10 @@ public class CsJar {
      * 
      * @param value
      *     allowed object is
-     *     {@link JarAction }
+     *     {@link String }
      *     
      */
-    public void setJarAction(JarAction value) {
+    public void setJarAction(String value) {
         this.jarAction = value;
     }
 

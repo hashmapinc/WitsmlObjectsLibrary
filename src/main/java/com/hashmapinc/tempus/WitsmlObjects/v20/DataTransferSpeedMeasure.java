@@ -36,7 +36,7 @@ public class DataTransferSpeedMeasure {
     @XmlValue
     protected double value;
     @XmlAttribute(name = "uom", required = true)
-    protected DataTransferSpeedUom uom;
+    protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -61,10 +61,10 @@ public class DataTransferSpeedMeasure {
      * 
      * @return
      *     possible object is
-     *     {@link DataTransferSpeedUom }
+     *     {@link String }
      *     
      */
-    public DataTransferSpeedUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -73,10 +73,10 @@ public class DataTransferSpeedMeasure {
      * 
      * @param value
      *     allowed object is
-     *     {@link DataTransferSpeedUom }
+     *     {@link String }
      *     
      */
-    public void setUom(DataTransferSpeedUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

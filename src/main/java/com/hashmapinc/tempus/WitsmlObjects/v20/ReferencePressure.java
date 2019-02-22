@@ -20,7 +20,7 @@ import javax.xml.bind.annotation.XmlValue;
  *   <simpleContent>
  *     <extension base="<http://www.energistics.org/energyml/data/commonv2>AbstractMeasure">
  *       <attribute name="uom" use="required" type="{http://www.energistics.org/energyml/data/commonv2}PressureUom" />
- *       <attribute name="referencePressureKind" type="{http://www.energistics.org/energyml/data/commonv2}ReferencePressureKind" />
+ *       <attribute name="referencePressureKind" type="{http://www.energistics.org/energyml/data/commonv2}String" />
  *     </extension>
  *   </simpleContent>
  * </complexType>
@@ -39,7 +39,7 @@ public class ReferencePressure {
     @XmlAttribute(name = "uom", required = true)
     protected String uom;
     @XmlAttribute(name = "referencePressureKind")
-    protected ReferencePressureKind referencePressureKind;
+    protected String referencePressureKind;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -88,10 +88,10 @@ public class ReferencePressure {
      * 
      * @return
      *     possible object is
-     *     {@link ReferencePressureKind }
+     *     {@link String }
      *     
      */
-    public ReferencePressureKind getReferencePressureKind() {
+    public String getString() {
         return referencePressureKind;
     }
 
@@ -100,10 +100,10 @@ public class ReferencePressure {
      * 
      * @param value
      *     allowed object is
-     *     {@link ReferencePressureKind }
+     *     {@link String }
      *     
      */
-    public void setReferencePressureKind(ReferencePressureKind value) {
+    public void setString(String value) {
         this.referencePressureKind = value;
     }
 

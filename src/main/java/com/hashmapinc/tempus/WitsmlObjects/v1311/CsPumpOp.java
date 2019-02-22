@@ -60,7 +60,7 @@ public class CsPumpOp {
     @XmlElement(required = true)
     protected RefPositiveCount pump;
     @XmlSchemaType(name = "string")
-    protected PumpOpType typeOperation;
+    protected String typeOperation;
     protected LengthMeasure idLiner;
     protected LengthMeasure lenStroke;
     @XmlElement(required = true)
@@ -126,10 +126,10 @@ public class CsPumpOp {
      * 
      * @return
      *     possible object is
-     *     {@link PumpOpType }
+     *     {@link String }
      *     
      */
-    public PumpOpType getTypeOperation() {
+    public String getTypeOperation() {
         return typeOperation;
     }
 
@@ -138,10 +138,10 @@ public class CsPumpOp {
      * 
      * @param value
      *     allowed object is
-     *     {@link PumpOpType }
+     *     {@link String }
      *     
      */
-    public void setTypeOperation(PumpOpType value) {
+    public void setTypeOperation(String value) {
         this.typeOperation = value;
     }
 

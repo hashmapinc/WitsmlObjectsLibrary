@@ -36,7 +36,7 @@ public class MassPerVolumePerTemperatureMeasure {
     @XmlValue
     protected double value;
     @XmlAttribute(name = "uom", required = true)
-    protected MassPerVolumePerTemperatureUom uom;
+    protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -61,10 +61,10 @@ public class MassPerVolumePerTemperatureMeasure {
      * 
      * @return
      *     possible object is
-     *     {@link MassPerVolumePerTemperatureUom }
+     *     {@link String }
      *     
      */
-    public MassPerVolumePerTemperatureUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -73,10 +73,10 @@ public class MassPerVolumePerTemperatureMeasure {
      * 
      * @param value
      *     allowed object is
-     *     {@link MassPerVolumePerTemperatureUom }
+     *     {@link String }
      *     
      */
-    public void setUom(MassPerVolumePerTemperatureUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

@@ -28,7 +28,7 @@ import javax.xml.bind.annotation.XmlType;
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
  *         <element name="name" type="{http://www.witsml.org/schemas/1series}nameString"/>
- *         <element name="kind" type="{http://www.witsml.org/schemas/1series}StimProppantType" minOccurs="0"/>
+ *         <element name="kind" type="{http://www.witsml.org/schemas/1series}String" minOccurs="0"/>
  *         <element name="weight" type="{http://www.witsml.org/schemas/1series}massMeasure" minOccurs="0"/>
  *         <element name="sieveSize" type="{http://www.witsml.org/schemas/1series}str32" minOccurs="0"/>
  *       </sequence>
@@ -51,7 +51,7 @@ public class CsStimProppant {
     @XmlElement(required = true)
     protected String name;
     @XmlSchemaType(name = "string")
-    protected StimProppantType kind;
+    protected String kind;
     protected MassMeasure weight;
     protected String sieveSize;
 
@@ -84,10 +84,10 @@ public class CsStimProppant {
      * 
      * @return
      *     possible object is
-     *     {@link StimProppantType }
+     *     {@link String }
      *     
      */
-    public StimProppantType getKind() {
+    public String getKind() {
         return kind;
     }
 
@@ -96,10 +96,10 @@ public class CsStimProppant {
      * 
      * @param value
      *     allowed object is
-     *     {@link StimProppantType }
+     *     {@link String }
      *     
      */
-    public void setKind(StimProppantType value) {
+    public void setKind(String value) {
         this.kind = value;
     }
 

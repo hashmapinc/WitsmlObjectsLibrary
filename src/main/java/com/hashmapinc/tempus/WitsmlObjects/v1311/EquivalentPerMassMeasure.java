@@ -30,17 +30,17 @@ public class EquivalentPerMassMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected EquivalentPerMassUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link EquivalentPerMassUom }
+     *     {@link String }
      *     
      */
-    public EquivalentPerMassUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -49,10 +49,10 @@ public class EquivalentPerMassMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link EquivalentPerMassUom }
+     *     {@link String }
      *     
      */
-    public void setUom(EquivalentPerMassUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

@@ -30,17 +30,17 @@ public class PowerMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected PowerUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link PowerUom }
+     *     {@link String }
      *     
      */
-    public PowerUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -49,10 +49,10 @@ public class PowerMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link PowerUom }
+     *     {@link String }
      *     
      */
-    public void setUom(PowerUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

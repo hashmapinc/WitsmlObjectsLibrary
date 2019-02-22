@@ -20,7 +20,7 @@ import javax.xml.bind.annotation.XmlType;
  *       <sequence>
  *         <element name="gasAv" type="{http://www.witsml.org/schemas/131}volumePerVolumeMeasure" minOccurs="0"/>
  *         <element name="gasPeak" type="{http://www.witsml.org/schemas/131}volumePerVolumeMeasure" minOccurs="0"/>
- *         <element name="gasPeakType" type="{http://www.witsml.org/schemas/131}GasPeakType" minOccurs="0"/>
+ *         <element name="gasPeakType" type="{http://www.witsml.org/schemas/131}String" minOccurs="0"/>
  *         <element name="gasBackgnd" type="{http://www.witsml.org/schemas/131}volumePerVolumeMeasure" minOccurs="0"/>
  *         <element name="gasConAv" type="{http://www.witsml.org/schemas/131}volumePerVolumeMeasure" minOccurs="0"/>
  *         <element name="gasConMx" type="{http://www.witsml.org/schemas/131}volumePerVolumeMeasure" minOccurs="0"/>
@@ -48,7 +48,7 @@ public class CsMudGas {
     protected VolumePerVolumeMeasure gasAv;
     protected VolumePerVolumeMeasure gasPeak;
     @XmlSchemaType(name = "string")
-    protected GasPeakType gasPeakType;
+    protected String gasPeakType;
     protected VolumePerVolumeMeasure gasBackgnd;
     protected VolumePerVolumeMeasure gasConAv;
     protected VolumePerVolumeMeasure gasConMx;
@@ -107,10 +107,10 @@ public class CsMudGas {
      * 
      * @return
      *     possible object is
-     *     {@link GasPeakType }
+     *     {@link String }
      *     
      */
-    public GasPeakType getGasPeakType() {
+    public String getString() {
         return gasPeakType;
     }
 
@@ -119,10 +119,10 @@ public class CsMudGas {
      * 
      * @param value
      *     allowed object is
-     *     {@link GasPeakType }
+     *     {@link String }
      *     
      */
-    public void setGasPeakType(GasPeakType value) {
+    public void setString(String value) {
         this.gasPeakType = value;
     }
 

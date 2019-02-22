@@ -36,7 +36,7 @@ public class MolecularWeightMeasure {
     @XmlValue
     protected double value;
     @XmlAttribute(name = "uom", required = true)
-    protected MolecularWeightUom uom;
+    protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -61,10 +61,10 @@ public class MolecularWeightMeasure {
      * 
      * @return
      *     possible object is
-     *     {@link MolecularWeightUom }
+     *     {@link String }
      *     
      */
-    public MolecularWeightUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -73,10 +73,10 @@ public class MolecularWeightMeasure {
      * 
      * @param value
      *     allowed object is
-     *     {@link MolecularWeightUom }
+     *     {@link String }
      *     
      */
-    public void setUom(MolecularWeightUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

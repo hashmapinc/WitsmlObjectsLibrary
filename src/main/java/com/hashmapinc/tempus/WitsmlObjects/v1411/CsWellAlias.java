@@ -56,7 +56,7 @@ public class CsWellAlias {
     protected String name;
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected WellNamingSystem namingSystem;
+    protected String namingSystem;
     protected List<CsExtensionNameValue> extensionNameValue;
     @XmlAttribute(name = "uid")
     protected String uid;
@@ -90,10 +90,10 @@ public class CsWellAlias {
      * 
      * @return
      *     possible object is
-     *     {@link WellNamingSystem }
+     *     {@link String }
      *     
      */
-    public WellNamingSystem getNamingSystem() {
+    public String getNamingSystem() {
         return namingSystem;
     }
 
@@ -102,10 +102,10 @@ public class CsWellAlias {
      * 
      * @param value
      *     allowed object is
-     *     {@link WellNamingSystem }
+     *     {@link String }
      *     
      */
-    public void setNamingSystem(WellNamingSystem value) {
+    public void setNamingSystem(String value) {
         this.namingSystem = value;
     }
 

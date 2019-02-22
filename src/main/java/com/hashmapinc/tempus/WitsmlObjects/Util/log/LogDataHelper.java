@@ -1,7 +1,6 @@
 package com.hashmapinc.tempus.WitsmlObjects.Util.log;
 
 import com.hashmapinc.tempus.WitsmlObjects.v1411.CsLogCurveInfo;
-import com.hashmapinc.tempus.WitsmlObjects.v1411.LogIndexType;
 import com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLog;
 
 import java.util.ArrayList;
@@ -107,67 +106,67 @@ public class LogDataHelper {
         return traces;
     }
 
-    private static ColumnarDataTrace createColumnarDataTrace(com.hashmapinc.tempus.WitsmlObjects.v1411.LogIndexType indexType, String logName, String logUid, CsLogCurveInfo info, String wellboreId, String wellId){
+    private static ColumnarDataTrace createColumnarDataTrace(String indexType, String logName, String logUid, CsLogCurveInfo info, String wellboreId, String wellId){
 
         ColumnarDataTrace trace = null;
 
-        if (indexType.equals(com.hashmapinc.tempus.WitsmlObjects.v1411.LogIndexType.MEASURED_DEPTH) ||
-                indexType.equals(LogIndexType.VERTICAL_DEPTH) ||
-                indexType.equals(LogIndexType.LENGTH)){
+        if (indexType.equals("measured depth") ||
+                indexType.equals("vertical depth") ||
+                indexType.equals("length")){
             switch (info.getTypeLogData()){
-                case INT:
+                case "int":
                     trace = new ColumnarDataTrace<Double, Integer>();
                     break;
-                case BYTE:
+                case "byte":
                     trace = new ColumnarDataTrace<Double, Byte>();
                     break;
-                case LONG:
+                case "long":
                     trace = new ColumnarDataTrace<Double, Long>();
                     break;
-                case FLOAT:
+                case "float":
                     trace = new ColumnarDataTrace<Double, Float>();
                     break;
-                case SHORT:
+                case "short":
                     trace = new ColumnarDataTrace<Double, Short>();
                     break;
-                case DOUBLE:
+                case "double":
                     trace = new ColumnarDataTrace<Double, Double>();
                     break;
-                case STRING:
-                case DATE_TIME:
-                case UNKNOWN:
-                case STRING_16:
-                case STRING_40:
+                case "string":
+                case "date time":
+                case "unknown":
+                case "string16":
+                case "string40":
                     trace = new ColumnarDataTrace<Double, String>();
                     break;
             }
         }
-        else if (indexType.equals(LogIndexType.DATE_TIME) ||
-                indexType.equals(LogIndexType.ELAPSED_TIME)) {
+        else if (indexType.equals("date time") ||
+                indexType.equals("elapsed time")) {
             switch (info.getTypeLogData()) {
-                case INT:
+                case "int":
                     trace = new ColumnarDataTrace<String, Integer>();
                     break;
-                case BYTE:
+                case "byte":
                     trace = new ColumnarDataTrace<String, Byte>();
                     break;
-                case LONG:
+                case "long":
                     trace = new ColumnarDataTrace<String, Long>();
                     break;
-                case FLOAT:
+                case "float":
                     trace = new ColumnarDataTrace<String, Float>();
                     break;
-                case SHORT:
+                case "short":
                     trace = new ColumnarDataTrace<String, Short>();
                     break;
-                case DOUBLE:
+                case "double":
                     trace = new ColumnarDataTrace<String, Double>();
                     break;
-                case STRING:
-                case DATE_TIME:
-                case UNKNOWN:
-                case STRING_16:
-                case STRING_40:
+                case "string":
+                case "date time":
+                case "unknown":
+                case "string16":
+                case "string40":
                     trace = new ColumnarDataTrace<String, String>();
                     break;
             }
@@ -207,67 +206,67 @@ public class LogDataHelper {
     }
 
     // Creates the correct type of data trace depending on the metadata of the log
-    private static AbstractDataTrace createDataTrace(com.hashmapinc.tempus.WitsmlObjects.v1411.LogIndexType indexType, CsLogCurveInfo info){
+    private static AbstractDataTrace createDataTrace(String indexType, CsLogCurveInfo info){
 
         AbstractDataTrace trace = null;
 
-        if (indexType.equals(com.hashmapinc.tempus.WitsmlObjects.v1411.LogIndexType.MEASURED_DEPTH) ||
-                indexType.equals(LogIndexType.VERTICAL_DEPTH) ||
-                indexType.equals(LogIndexType.LENGTH)){
+        if ("measured depth".equals(indexType) ||
+                "vertical depth".equals(indexType) ||
+                "length".equals(indexType)) {
             switch (info.getTypeLogData()){
-                case INT:
+                case "int":
                     trace = new DepthLogTrace<Integer>();
                     break;
-                case BYTE:
+                case "byte":
                     trace = new DepthLogTrace<Byte>();
                     break;
-                case LONG:
+                case "long":
                     trace = new DepthLogTrace<Long>();
                     break;
-                case FLOAT:
+                case "float":
                     trace = new DepthLogTrace<Float>();
                     break;
-                case SHORT:
+                case "short":
                     trace = new DepthLogTrace<Short>();
                     break;
-                case DOUBLE:
+                case "double":
                     trace = new DepthLogTrace<Double>();
                     break;
-                case STRING:
-                case DATE_TIME:
-                case UNKNOWN:
-                case STRING_16:
-                case STRING_40:
+                case "string":
+                case "date time":
+                case "unknown":
+                case "string16":
+                case "string40":
                     trace = new DepthLogTrace<String>();
                     break;
             }
         }
-        else if (indexType.equals(LogIndexType.DATE_TIME) ||
-                indexType.equals(LogIndexType.ELAPSED_TIME)) {
+        else if ("date time".equals(indexType) ||
+                "elapsed time".equals(indexType)) {
             switch (info.getTypeLogData()) {
-                case INT:
+                case "int":
                     trace = new TimeLogTrace<Integer>();
                     break;
-                case BYTE:
+                case "byte":
                     trace = new TimeLogTrace<Byte>();
                     break;
-                case LONG:
+                case "long":
                     trace = new TimeLogTrace<Long>();
                     break;
-                case FLOAT:
+                case "float":
                     trace = new TimeLogTrace<Float>();
                     break;
-                case SHORT:
+                case "short":
                     trace = new TimeLogTrace<Short>();
                     break;
-                case DOUBLE:
+                case "double":
                     trace = new TimeLogTrace<Double>();
                     break;
-                case STRING:
-                case DATE_TIME:
-                case UNKNOWN:
-                case STRING_16:
-                case STRING_40:
+                case "string":
+                case "date time":
+                case "unknown":
+                case "string16":
+                case "string40":
                     trace = new TimeLogTrace<String>();
                     break;
             }

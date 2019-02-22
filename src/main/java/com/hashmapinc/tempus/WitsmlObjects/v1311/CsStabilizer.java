@@ -57,10 +57,10 @@ public class CsStabilizer {
     protected LengthMeasure odBladeMn;
     protected LengthMeasure distBladeBot;
     @XmlSchemaType(name = "string")
-    protected BladeShapeType shapeBlade;
+    protected String shapeBlade;
     protected Double factFric;
     @XmlSchemaType(name = "string")
-    protected BladeType typeBlade;
+    protected String typeBlade;
     protected CsCustomData customData;
     @XmlAttribute(name = "uid")
     protected String uid;
@@ -190,10 +190,10 @@ public class CsStabilizer {
      * 
      * @return
      *     possible object is
-     *     {@link BladeShapeType }
+     *     {@link String }
      *     
      */
-    public BladeShapeType getShapeBlade() {
+    public String getShapeBlade() {
         return shapeBlade;
     }
 
@@ -202,10 +202,10 @@ public class CsStabilizer {
      * 
      * @param value
      *     allowed object is
-     *     {@link BladeShapeType }
+     *     {@link String }
      *     
      */
-    public void setShapeBlade(BladeShapeType value) {
+    public void setShapeBlade(String value) {
         this.shapeBlade = value;
     }
 
@@ -238,10 +238,10 @@ public class CsStabilizer {
      * 
      * @return
      *     possible object is
-     *     {@link BladeType }
+     *     {@link String }
      *     
      */
-    public BladeType getTypeBlade() {
+    public String getTypeBlade() {
         return typeBlade;
     }
 
@@ -250,10 +250,10 @@ public class CsStabilizer {
      * 
      * @param value
      *     allowed object is
-     *     {@link BladeType }
+     *     {@link String }
      *     
      */
-    public void setTypeBlade(BladeType value) {
+    public void setTypeBlade(String value) {
         this.typeBlade = value;
     }
 
