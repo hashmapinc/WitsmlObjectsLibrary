@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlValue;
  *   <simpleContent>
  *     <extension base="<http://www.energistics.org/energyml/data/commonv2>AbstractMeasure">
  *       <attribute name="uom" use="required" type="{http://www.energistics.org/energyml/data/commonv2}LengthUom" />
- *       <attribute name="reference" use="required" type="{http://www.energistics.org/energyml/data/witsmlv2}NorthOrSouth" />
+ *       <attribute name="reference" use="required" type="{http://www.energistics.org/energyml/data/witsmlv2}String" />
  *     </extension>
  *   </simpleContent>
  * </complexType>
@@ -41,7 +41,7 @@ public class DistanceNorthSouth {
     @XmlAttribute(name = "uom", required = true)
     protected String uom;
     @XmlAttribute(name = "reference", required = true)
-    protected NorthOrSouth reference;
+    protected String reference;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -90,10 +90,10 @@ public class DistanceNorthSouth {
      * 
      * @return
      *     possible object is
-     *     {@link NorthOrSouth }
+     *     {@link String }
      *     
      */
-    public NorthOrSouth getReference() {
+    public String getReference() {
         return reference;
     }
 
@@ -102,10 +102,10 @@ public class DistanceNorthSouth {
      * 
      * @param value
      *     allowed object is
-     *     {@link NorthOrSouth }
+     *     {@link String }
      *     
      */
-    public void setReference(NorthOrSouth value) {
+    public void setReference(String value) {
         this.reference = value;
     }
 

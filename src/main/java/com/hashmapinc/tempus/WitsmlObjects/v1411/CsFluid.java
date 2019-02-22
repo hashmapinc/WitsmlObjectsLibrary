@@ -168,7 +168,7 @@ public class CsFluid {
     protected WellVerticalDepthCoord tvd;
     protected PressureMeasure presBopRating;
     @XmlSchemaType(name = "string")
-    protected MudClass mudClass;
+    protected String mudClass;
     protected DensityMeasure density;
     protected TimeMeasure visFunnel;
     protected ThermodynamicTemperatureMeasure tempVis;
@@ -372,10 +372,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link MudClass }
+     *     {@link String }
      *     
      */
-    public MudClass getMudClass() {
+    public String getMudClass() {
         return mudClass;
     }
 
@@ -384,10 +384,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link MudClass }
+     *     {@link String }
      *     
      */
-    public void setMudClass(MudClass value) {
+    public void setMudClass(String value) {
         this.mudClass = value;
     }
 

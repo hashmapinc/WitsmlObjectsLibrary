@@ -44,7 +44,7 @@ public class ChronostratigraphyStruct {
     @XmlValue
     protected String value;
     @XmlAttribute(name = "kind")
-    protected ChronostratigraphyUnit kind;
+    protected String kind;
 
     /**
      * The intended abstract supertype of all user assigned human 
@@ -78,10 +78,10 @@ public class ChronostratigraphyStruct {
      * 
      * @return
      *     possible object is
-     *     {@link ChronostratigraphyUnit }
+     *     {@link String }
      *     
      */
-    public ChronostratigraphyUnit getKind() {
+    public String getKind() {
         return kind;
     }
 
@@ -90,10 +90,10 @@ public class ChronostratigraphyStruct {
      * 
      * @param value
      *     allowed object is
-     *     {@link ChronostratigraphyUnit }
+     *     {@link String }
      *     
      */
-    public void setKind(ChronostratigraphyUnit value) {
+    public void setKind(String value) {
         this.kind = value;
     }
 

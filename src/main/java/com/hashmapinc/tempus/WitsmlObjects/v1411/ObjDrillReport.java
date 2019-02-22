@@ -93,7 +93,7 @@ public class ObjDrillReport {
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar dTimEnd;
     @XmlSchemaType(name = "string")
-    protected OpsReportVersion versionKind;
+    protected String versionKind;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar createDate;
     protected CsWellAlias wellAlias;
@@ -252,10 +252,10 @@ public class ObjDrillReport {
      * 
      * @return
      *     possible object is
-     *     {@link OpsReportVersion }
+     *     {@link String }
      *     
      */
-    public OpsReportVersion getVersionKind() {
+    public String getVersionKind() {
         return versionKind;
     }
 
@@ -264,10 +264,10 @@ public class ObjDrillReport {
      * 
      * @param value
      *     allowed object is
-     *     {@link OpsReportVersion }
+     *     {@link String }
      *     
      */
-    public void setVersionKind(OpsReportVersion value) {
+    public void setVersionKind(String value) {
         this.versionKind = value;
     }
 

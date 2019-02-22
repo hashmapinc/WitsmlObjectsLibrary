@@ -26,13 +26,13 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         <element name="dataRowCount" type="{http://www.witsml.org/schemas/131}positiveBigCount" minOccurs="0"/>
  *         <element name="pass" type="{http://www.witsml.org/schemas/131}str16" minOccurs="0"/>
  *         <element name="description" type="{http://www.witsml.org/schemas/131}descriptionString" minOccurs="0"/>
- *         <element name="indexType" type="{http://www.witsml.org/schemas/131}LogIndexType"/>
+ *         <element name="indexType" type="{http://www.witsml.org/schemas/131}String"/>
  *         <element name="startIndex" type="{http://www.witsml.org/schemas/131}genericMeasure" minOccurs="0"/>
  *         <element name="endIndex" type="{http://www.witsml.org/schemas/131}genericMeasure" minOccurs="0"/>
  *         <element name="stepIncrement" type="{http://www.witsml.org/schemas/131}ratioGenericMeasure" minOccurs="0"/>
  *         <element name="startDateTimeIndex" type="{http://www.witsml.org/schemas/131}timestamp" minOccurs="0"/>
  *         <element name="endDateTimeIndex" type="{http://www.witsml.org/schemas/131}timestamp" minOccurs="0"/>
- *         <element name="direction" type="{http://www.witsml.org/schemas/131}LogIndexDirection" minOccurs="0"/>
+ *         <element name="direction" type="{http://www.witsml.org/schemas/131}String" minOccurs="0"/>
  *         <element name="indexCurve" type="{http://www.witsml.org/schemas/131}indexCurve" minOccurs="0"/>
  *         <element name="nullValue" type="{http://www.witsml.org/schemas/131}str32" minOccurs="0"/>
  *         <element name="logParam" type="{http://www.witsml.org/schemas/131}indexedObject" maxOccurs="unbounded" minOccurs="0"/>
@@ -70,7 +70,7 @@ public class CsBlockInfo {
     protected String description;
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected LogIndexType indexType;
+    protected String indexType;
     protected GenericMeasure startIndex;
     protected GenericMeasure endIndex;
     protected RatioGenericMeasure stepIncrement;
@@ -79,7 +79,7 @@ public class CsBlockInfo {
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar endDateTimeIndex;
     @XmlSchemaType(name = "string")
-    protected LogIndexDirection direction;
+    protected String direction;
     protected IndexCurve indexCurve;
     protected String nullValue;
     protected List<IndexedObject> logParam;
@@ -165,10 +165,10 @@ public class CsBlockInfo {
      * 
      * @return
      *     possible object is
-     *     {@link LogIndexType }
+     *     {@link String }
      *     
      */
-    public LogIndexType getIndexType() {
+    public String getIndexType() {
         return indexType;
     }
 
@@ -177,10 +177,10 @@ public class CsBlockInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link LogIndexType }
+     *     {@link String }
      *     
      */
-    public void setIndexType(LogIndexType value) {
+    public void setIndexType(String value) {
         this.indexType = value;
     }
 
@@ -309,10 +309,10 @@ public class CsBlockInfo {
      * 
      * @return
      *     possible object is
-     *     {@link LogIndexDirection }
+     *     {@link String }
      *     
      */
-    public LogIndexDirection getDirection() {
+    public String getDirection() {
         return direction;
     }
 
@@ -321,10 +321,10 @@ public class CsBlockInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link LogIndexDirection }
+     *     {@link String }
      *     
      */
-    public void setDirection(LogIndexDirection value) {
+    public void setDirection(String value) {
         this.direction = value;
     }
 

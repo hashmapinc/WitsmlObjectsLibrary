@@ -45,7 +45,7 @@ public class YAxisAzimuth
     @XmlAttribute(name = "uom", required = true)
     protected String uom;
     @XmlAttribute(name = "northDirection")
-    protected AziRef northDirection;
+    protected String northDirection;
 
     /**
      * Gets the value of the uom property.
@@ -76,10 +76,10 @@ public class YAxisAzimuth
      * 
      * @return
      *     possible object is
-     *     {@link AziRef }
+     *     {@link String }
      *     
      */
-    public AziRef getNorthDirection() {
+    public String getNorthDirection() {
         return northDirection;
     }
 
@@ -88,10 +88,10 @@ public class YAxisAzimuth
      * 
      * @param value
      *     allowed object is
-     *     {@link AziRef }
+     *     {@link String }
      *     
      */
-    public void setNorthDirection(AziRef value) {
+    public void setNorthDirection(String value) {
         this.northDirection = value;
     }
 
@@ -107,7 +107,7 @@ public class YAxisAzimuth
         // assign fields
         azi.setUom(this.getUom());
         azi.setValue(this.getValue());
-        azi.setNorthDirection(com.hashmapinc.tempus.WitsmlObjects.v1311.AziRef.fromValue(this.getNorthDirection().value()));
+        azi.setNorthDirection(this.getNorthDirection());
 
         return azi;
     }

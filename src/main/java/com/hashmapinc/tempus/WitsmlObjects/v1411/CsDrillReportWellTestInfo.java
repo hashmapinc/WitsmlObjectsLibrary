@@ -29,7 +29,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
  *         <element name="dTim" type="{http://www.witsml.org/schemas/1series}timestamp" minOccurs="0"/>
- *         <element name="testType" type="{http://www.witsml.org/schemas/1series}WellTestType" minOccurs="0"/>
+ *         <element name="testType" type="{http://www.witsml.org/schemas/1series}String" minOccurs="0"/>
  *         <element name="testNumber" type="{http://www.witsml.org/schemas/1series}positiveCount" minOccurs="0"/>
  *         <element name="mdTop" type="{http://www.witsml.org/schemas/1series}measuredDepthCoord" minOccurs="0"/>
  *         <element name="mdBottom" type="{http://www.witsml.org/schemas/1series}measuredDepthCoord" minOccurs="0"/>
@@ -99,7 +99,7 @@ public class CsDrillReportWellTestInfo {
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar dTim;
     @XmlSchemaType(name = "string")
-    protected WellTestType testType;
+    protected String testType;
     protected Short testNumber;
     protected MeasuredDepthCoord mdTop;
     protected MeasuredDepthCoord mdBottom;
@@ -157,10 +157,10 @@ public class CsDrillReportWellTestInfo {
      * 
      * @return
      *     possible object is
-     *     {@link WellTestType }
+     *     {@link String }
      *     
      */
-    public WellTestType getTestType() {
+    public String getTestType() {
         return testType;
     }
 
@@ -169,10 +169,10 @@ public class CsDrillReportWellTestInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link WellTestType }
+     *     {@link String }
      *     
      */
-    public void setTestType(WellTestType value) {
+    public void setTestType(String value) {
         this.testType = value;
     }
 

@@ -62,7 +62,7 @@ public class CsPit {
     protected VolumeMeasure capMx;
     protected String owner;
     @XmlSchemaType(name = "string")
-    protected PitType typePit;
+    protected String typePit;
     protected Boolean isActive;
     protected List<CsNameTag> nameTag;
     @XmlAttribute(name = "uid")
@@ -185,10 +185,10 @@ public class CsPit {
      * 
      * @return
      *     possible object is
-     *     {@link PitType }
+     *     {@link String }
      *     
      */
-    public PitType getTypePit() {
+    public String getTypePit() {
         return typePit;
     }
 
@@ -197,10 +197,10 @@ public class CsPit {
      * 
      * @param value
      *     allowed object is
-     *     {@link PitType }
+     *     {@link String }
      *     
      */
-    public void setTypePit(PitType value) {
+    public void setTypePit(String value) {
         this.typePit = value;
     }
 

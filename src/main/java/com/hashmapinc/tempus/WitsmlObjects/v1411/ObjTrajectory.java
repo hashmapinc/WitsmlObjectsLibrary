@@ -106,7 +106,7 @@ public class ObjTrajectory extends AbstractWitsmlObject {
     protected Boolean memory;
     protected Boolean finalTraj;
     @XmlSchemaType(name = "string")
-    protected AziRef aziRef;
+    protected String aziRef;
     protected List<CsTrajectoryStation> trajectoryStation;
     protected CsCommonData commonData;
     protected CsCustomData customData;
@@ -613,10 +613,10 @@ public class ObjTrajectory extends AbstractWitsmlObject {
      * 
      * @return
      *     possible object is
-     *     {@link AziRef }
+     *     {@link String }
      *     
      */
-    public AziRef getAziRef() {
+    public String getAziRef() {
         return aziRef;
     }
 
@@ -625,10 +625,10 @@ public class ObjTrajectory extends AbstractWitsmlObject {
      * 
      * @param value
      *     allowed object is
-     *     {@link AziRef }
+     *     {@link String }
      *     
      */
-    public void setAziRef(AziRef value) {
+    public void setAziRef(String value) {
         this.aziRef = value;
     }
 

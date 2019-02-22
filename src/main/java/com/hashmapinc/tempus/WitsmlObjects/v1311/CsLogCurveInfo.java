@@ -97,11 +97,11 @@ public class CsLogCurveInfo {
     protected String dataSource;
     protected PerLengthMeasure densData;
     @XmlSchemaType(name = "string")
-    protected LogTraceState traceState;
+    protected String traceState;
     @XmlSchemaType(name = "string")
-    protected LogTraceOrigin traceOrigin;
+    protected String traceOrigin;
     @XmlSchemaType(name = "string")
-    protected LogDataType typeLogData;
+    protected String typeLogData;
     protected List<CsAxisDefinition> axisDefinition;
     @XmlAttribute(name = "uid")
     protected String uid;
@@ -487,10 +487,10 @@ public class CsLogCurveInfo {
      * 
      * @return
      *     possible object is
-     *     {@link LogTraceState }
+     *     {@link String }
      *     
      */
-    public LogTraceState getTraceState() {
+    public String getTraceState() {
         return traceState;
     }
 
@@ -499,10 +499,10 @@ public class CsLogCurveInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link LogTraceState }
+     *     {@link String }
      *     
      */
-    public void setTraceState(LogTraceState value) {
+    public void setTraceState(String value) {
         this.traceState = value;
     }
 
@@ -511,10 +511,10 @@ public class CsLogCurveInfo {
      * 
      * @return
      *     possible object is
-     *     {@link LogTraceOrigin }
+     *     {@link String }
      *     
      */
-    public LogTraceOrigin getTraceOrigin() {
+    public String getTraceOrigin() {
         return traceOrigin;
     }
 
@@ -523,10 +523,10 @@ public class CsLogCurveInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link LogTraceOrigin }
+     *     {@link String }
      *     
      */
-    public void setTraceOrigin(LogTraceOrigin value) {
+    public void setTraceOrigin(String value) {
         this.traceOrigin = value;
     }
 
@@ -535,10 +535,10 @@ public class CsLogCurveInfo {
      * 
      * @return
      *     possible object is
-     *     {@link LogDataType }
+     *     {@link String }
      *     
      */
-    public LogDataType getTypeLogData() {
+    public String getTypeLogData() {
         return typeLogData;
     }
 
@@ -547,10 +547,10 @@ public class CsLogCurveInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link LogDataType }
+     *     {@link String }
      *     
      */
-    public void setTypeLogData(LogDataType value) {
+    public void setTypeLogData(String value) {
         this.typeLogData = value;
     }
 
@@ -630,6 +630,9 @@ public class CsLogCurveInfo {
         info.setCurveDescription(this.getCurveDescription());
         info.setDataSource(this.getDataSource());
         info.setUid(this.getUid());
+        info.setTraceState(this.getTraceState());
+        info.setTraceOrigin(this.getTraceOrigin());
+        info.setTypeLogData(this.getTypeLogData());
 
         // complex fields
         // mnemonic
@@ -665,18 +668,6 @@ public class CsLogCurveInfo {
         // densData
         if (null != this.getDensData())
             info.setDensData(this.getDensData().to1411PerLengthMeasure());
-
-        // traceState
-        if (null != this.getTraceState())
-            info.setTraceState(com.hashmapinc.tempus.WitsmlObjects.v1411.LogTraceState.fromValue(this.getTraceState().value()));
-
-        // traceOrigin
-        if (null != this.getTraceOrigin())
-            info.setTraceOrigin(com.hashmapinc.tempus.WitsmlObjects.v1411.LogTraceOrigin.fromValue(this.getTraceOrigin().value()));
-
-        // typeLogData
-        if (null != this.getTypeLogData())
-            info.setTypeLogData(com.hashmapinc.tempus.WitsmlObjects.v1411.LogDataType.fromValue(this.getTypeLogData().value()));
 
         // repeating fields
         if (null != this.getAxisDefinition()) {

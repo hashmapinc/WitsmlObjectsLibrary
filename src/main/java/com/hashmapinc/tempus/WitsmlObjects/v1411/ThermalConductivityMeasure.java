@@ -38,17 +38,17 @@ public class ThermalConductivityMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected ThermalConductivityUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link ThermalConductivityUom }
+     *     {@link String }
      *     
      */
-    public ThermalConductivityUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -57,10 +57,10 @@ public class ThermalConductivityMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link ThermalConductivityUom }
+     *     {@link String }
      *     
      */
-    public void setUom(ThermalConductivityUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

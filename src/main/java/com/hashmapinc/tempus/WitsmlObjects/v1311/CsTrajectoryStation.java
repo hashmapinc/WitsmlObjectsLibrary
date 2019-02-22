@@ -82,9 +82,9 @@ public class CsTrajectoryStation {
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar dTimStn;
     @XmlSchemaType(name = "string")
-    protected TrajStationType typeTrajStation;
+    protected String typeTrajStation;
     @XmlSchemaType(name = "string")
-    protected TypeSurveyTool typeSurveyTool;
+    protected String typeSurveyTool;
     protected MeasuredDepthCoord md;
     protected WellVerticalDepthCoord tvd;
     protected PlaneAngleMeasure incl;
@@ -114,7 +114,7 @@ public class CsTrajectoryStation {
     protected String magModelValid;
     protected String geoModelUsed;
     @XmlSchemaType(name = "string")
-    protected TrajStationStatus statusTrajStation;
+    protected String statusTrajStation;
     protected CsStnTrajRawData rawData;
     protected CsStnTrajCorUsed corUsed;
     protected CsStnTrajValid valid;
@@ -178,10 +178,10 @@ public class CsTrajectoryStation {
      * 
      * @return
      *     possible object is
-     *     {@link TrajStationType }
+     *     {@link String }
      *     
      */
-    public TrajStationType getTypeTrajStation() {
+    public String getTypeTrajStation() {
         return typeTrajStation;
     }
 
@@ -190,10 +190,10 @@ public class CsTrajectoryStation {
      * 
      * @param value
      *     allowed object is
-     *     {@link TrajStationType }
+     *     {@link String }
      *     
      */
-    public void setTypeTrajStation(TrajStationType value) {
+    public void setTypeTrajStation(String value) {
         this.typeTrajStation = value;
     }
 
@@ -202,10 +202,10 @@ public class CsTrajectoryStation {
      * 
      * @return
      *     possible object is
-     *     {@link TypeSurveyTool }
+     *     {@link String }
      *     
      */
-    public TypeSurveyTool getTypeSurveyTool() {
+    public String getTypeSurveyTool() {
         return typeSurveyTool;
     }
 
@@ -214,10 +214,10 @@ public class CsTrajectoryStation {
      * 
      * @param value
      *     allowed object is
-     *     {@link TypeSurveyTool }
+     *     {@link String }
      *     
      */
-    public void setTypeSurveyTool(TypeSurveyTool value) {
+    public void setTypeSurveyTool(String value) {
         this.typeSurveyTool = value;
     }
 
@@ -898,10 +898,10 @@ public class CsTrajectoryStation {
      * 
      * @return
      *     possible object is
-     *     {@link TrajStationStatus }
+     *     {@link String }
      *     
      */
-    public TrajStationStatus getStatusTrajStation() {
+    public String getStatusTrajStation() {
         return statusTrajStation;
     }
 
@@ -910,10 +910,10 @@ public class CsTrajectoryStation {
      * 
      * @param value
      *     allowed object is
-     *     {@link TrajStationStatus }
+     *     {@link String }
      *     
      */
-    public void setStatusTrajStation(TrajStationStatus value) {
+    public void setStatusTrajStation(String value) {
         this.statusTrajStation = value;
     }
 
@@ -1139,16 +1139,13 @@ public class CsTrajectoryStation {
         station.setMagModelValid(this.getMagModelValid());
         station.setGeoModelUsed(this.getGeoModelUsed());
         station.setUid(this.getUid());
+        station.setTypeTrajStation(this.getTypeTrajStation());
+        station.setTypeSurveyTool(this.getTypeSurveyTool());
+        station.setStatusTrajStation(this.getStatusTrajStation());
 
         // check complex fields
         if (null != this.getTarget())
             station.setTarget(this.getTarget().to1411RefNameString());
-
-        if (null != this.getTypeTrajStation())
-            station.setTypeTrajStation(com.hashmapinc.tempus.WitsmlObjects.v1411.TrajStationType.fromValue(this.getTypeTrajStation().value()));
-
-        if (null != this.getTypeSurveyTool())
-            station.setTypeSurveyTool(this.getTypeSurveyTool().value());
 
         if (null != this.getMd())
             station.setMd(this.getMd().to1411MeasuredDepthCoord());
@@ -1209,9 +1206,6 @@ public class CsTrajectoryStation {
 
         if (null != this.getMagDipAngleReference())
             station.setMagDipAngleReference(this.getMagDipAngleReference().to1411PlaneAngleMeasure());
-
-        if (null != this.getStatusTrajStation())
-            station.setStatusTrajStation(com.hashmapinc.tempus.WitsmlObjects.v1411.TrajStationStatus.fromValue(this.getStatusTrajStation().value()));
 
         if (null != this.getRawData())
             station.setRawData(this.getRawData().to1411CsStnTrajRawData());

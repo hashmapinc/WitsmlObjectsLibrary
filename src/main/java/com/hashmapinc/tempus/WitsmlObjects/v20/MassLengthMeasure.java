@@ -36,7 +36,7 @@ public class MassLengthMeasure {
     @XmlValue
     protected double value;
     @XmlAttribute(name = "uom", required = true)
-    protected MassLengthUom uom;
+    protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -61,10 +61,10 @@ public class MassLengthMeasure {
      * 
      * @return
      *     possible object is
-     *     {@link MassLengthUom }
+     *     {@link String }
      *     
      */
-    public MassLengthUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -73,10 +73,10 @@ public class MassLengthMeasure {
      * 
      * @param value
      *     allowed object is
-     *     {@link MassLengthUom }
+     *     {@link String }
      *     
      */
-    public void setUom(MassLengthUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlValue;
  * <complexType name="AmountOfSubstancePerVolumeMeasure">
  *   <simpleContent>
  *     <extension base="<http://www.energistics.org/energyml/data/commonv2>AbstractMeasure">
- *       <attribute name="uom" use="required" type="{http://www.energistics.org/energyml/data/commonv2}AmountOfSubstancePerVolumeUom" />
+ *       <attribute name="uom" use="required" type="{http://www.energistics.org/energyml/data/commonv2}String" />
  *     </extension>
  *   </simpleContent>
  * </complexType>
@@ -36,7 +36,7 @@ public class AmountOfSubstancePerVolumeMeasure {
     @XmlValue
     protected double value;
     @XmlAttribute(name = "uom", required = true)
-    protected AmountOfSubstancePerVolumeUom uom;
+    protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -61,10 +61,10 @@ public class AmountOfSubstancePerVolumeMeasure {
      * 
      * @return
      *     possible object is
-     *     {@link AmountOfSubstancePerVolumeUom }
+     *     {@link String }
      *     
      */
-    public AmountOfSubstancePerVolumeUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -73,10 +73,10 @@ public class AmountOfSubstancePerVolumeMeasure {
      * 
      * @param value
      *     allowed object is
-     *     {@link AmountOfSubstancePerVolumeUom }
+     *     {@link String }
      *     
      */
-    public void setUom(AmountOfSubstancePerVolumeUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

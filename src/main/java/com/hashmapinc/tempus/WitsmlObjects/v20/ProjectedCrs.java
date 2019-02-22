@@ -45,7 +45,7 @@ public class ProjectedCrs
 
     @XmlElement(name = "AxisOrder", required = true)
     @XmlSchemaType(name = "string")
-    protected AxisOrder2D axisOrder;
+    protected String axisOrder;
     @XmlElement(name = "AbstractProjectedCrs", required = true)
     protected AbstractProjectedCrs abstractProjectedCrs;
     @XmlAttribute(name = "uom")
@@ -56,10 +56,10 @@ public class ProjectedCrs
      * 
      * @return
      *     possible object is
-     *     {@link AxisOrder2D }
+     *     {@link String }
      *     
      */
-    public AxisOrder2D getAxisOrder() {
+    public String getAxisOrder() {
         return axisOrder;
     }
 
@@ -68,10 +68,10 @@ public class ProjectedCrs
      * 
      * @param value
      *     allowed object is
-     *     {@link AxisOrder2D }
+     *     {@link String }
      *     
      */
-    public void setAxisOrder(AxisOrder2D value) {
+    public void setAxisOrder(String value) {
         this.axisOrder = value;
     }
 

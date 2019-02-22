@@ -30,17 +30,17 @@ public class VelocityMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected VelocityUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link VelocityUom }
+     *     {@link String }
      *     
      */
-    public VelocityUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -49,10 +49,10 @@ public class VelocityMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link VelocityUom }
+     *     {@link String }
      *     
      */
-    public void setUom(VelocityUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

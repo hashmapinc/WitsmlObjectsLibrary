@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="AllowedKind" type="{http://www.energistics.org/energyml/data/commonv2}ParameterKind" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="AllowedKind" type="{http://www.energistics.org/energyml/data/commonv2}String" maxOccurs="unbounded" minOccurs="0"/>
  *         <element name="IsInput" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         <element name="KeyConstraint" type="{http://www.energistics.org/energyml/data/commonv2}String2000" maxOccurs="unbounded" minOccurs="0"/>
  *         <element name="IsOutput" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
@@ -59,7 +59,7 @@ public class ParameterTemplate {
 
     @XmlElement(name = "AllowedKind")
     @XmlSchemaType(name = "string")
-    protected List<ParameterKind> allowedKind;
+    protected List<String> allowedKind;
     @XmlElement(name = "IsInput")
     protected boolean isInput;
     @XmlElement(name = "KeyConstraint")
@@ -97,13 +97,13 @@ public class ParameterTemplate {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link ParameterKind }
+     * {@link String }
      * 
      * 
      */
-    public List<ParameterKind> getAllowedKind() {
+    public List<String> getAllowedKind() {
         if (allowedKind == null) {
-            allowedKind = new ArrayList<ParameterKind>();
+            allowedKind = new ArrayList<String>();
         }
         return this.allowedKind;
     }

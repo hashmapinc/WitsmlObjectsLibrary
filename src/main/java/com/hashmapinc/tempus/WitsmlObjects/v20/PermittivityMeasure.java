@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlValue;
  * <complexType name="PermittivityMeasure">
  *   <simpleContent>
  *     <extension base="<http://www.energistics.org/energyml/data/commonv2>AbstractMeasure">
- *       <attribute name="uom" use="required" type="{http://www.energistics.org/energyml/data/commonv2}PermittivityUom" />
+ *       <attribute name="uom" use="required" type="{http://www.energistics.org/energyml/data/commonv2}String" />
  *     </extension>
  *   </simpleContent>
  * </complexType>
@@ -36,7 +36,7 @@ public class PermittivityMeasure {
     @XmlValue
     protected double value;
     @XmlAttribute(name = "uom", required = true)
-    protected PermittivityUom uom;
+    protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -61,10 +61,10 @@ public class PermittivityMeasure {
      * 
      * @return
      *     possible object is
-     *     {@link PermittivityUom }
+     *     {@link String }
      *     
      */
-    public PermittivityUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -73,10 +73,10 @@ public class PermittivityMeasure {
      * 
      * @param value
      *     allowed object is
-     *     {@link PermittivityUom }
+     *     {@link String }
      *     
      */
-    public void setUom(PermittivityUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

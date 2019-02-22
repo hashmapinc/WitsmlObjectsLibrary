@@ -91,8 +91,7 @@ public class MagneticFluxDensityMeasure {
 
         // assign fields
         measure.setValue(this.getValue());
-        if (null != this.getUom())
-            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.MagneticInductionUom.fromValue(this.getUom()));
+        measure.setUom(this.getUom());
 
         return measure;
     }
@@ -102,8 +101,7 @@ public class MagneticFluxDensityMeasure {
 
         // assign fields
         measure.setValue(this.getValue());
-        if (null != this.getUom())
-            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1411.MagneticInductionUom.fromValue(this.getUom()));
+        measure.setUom(this.getUom());
 
         return measure;
     }

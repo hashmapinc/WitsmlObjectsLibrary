@@ -55,7 +55,7 @@ public class IscwsaSurveyToolOperatingInterval {
 
     @XmlElement(name = "Mode", required = true)
     @XmlSchemaType(name = "string")
-    protected SurveyToolOperatingMode mode;
+    protected String mode;
     @XmlElement(name = "Start", required = true)
     protected PlaneAngleMeasure start;
     @XmlElement(name = "End", required = true)
@@ -74,10 +74,10 @@ public class IscwsaSurveyToolOperatingInterval {
      * 
      * @return
      *     possible object is
-     *     {@link SurveyToolOperatingMode }
+     *     {@link String }
      *     
      */
-    public SurveyToolOperatingMode getMode() {
+    public String getMode() {
         return mode;
     }
 
@@ -86,10 +86,10 @@ public class IscwsaSurveyToolOperatingInterval {
      * 
      * @param value
      *     allowed object is
-     *     {@link SurveyToolOperatingMode }
+     *     {@link String }
      *     
      */
-    public void setMode(SurveyToolOperatingMode value) {
+    public void setMode(String value) {
         this.mode = value;
     }
 

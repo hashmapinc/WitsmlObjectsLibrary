@@ -50,7 +50,7 @@ public abstract class AbstractCoordinateSystemType
     @XmlElement(required = true)
     protected List<CoordinateSystemAxisPropertyType> axis;
     @XmlAttribute(name = "aggregationType")
-    protected AggregationType aggregationType;
+    protected String aggregationType;
 
     /**
      * Gets the value of the axis property.
@@ -86,10 +86,10 @@ public abstract class AbstractCoordinateSystemType
      * 
      * @return
      *     possible object is
-     *     {@link AggregationType }
+     *     {@link String }
      *     
      */
-    public AggregationType getAggregationType() {
+    public String getAggregationType() {
         return aggregationType;
     }
 
@@ -98,10 +98,10 @@ public abstract class AbstractCoordinateSystemType
      * 
      * @param value
      *     allowed object is
-     *     {@link AggregationType }
+     *     {@link String }
      *     
      */
-    public void setAggregationType(AggregationType value) {
+    public void setAggregationType(String value) {
         this.aggregationType = value;
     }
 

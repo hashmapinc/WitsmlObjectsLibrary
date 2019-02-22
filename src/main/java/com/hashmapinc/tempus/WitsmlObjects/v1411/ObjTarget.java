@@ -98,9 +98,9 @@ public class ObjTarget {
     protected LengthMeasure dispNsSectOrig;
     protected LengthMeasure dispEwSectOrig;
     @XmlSchemaType(name = "string")
-    protected AziRef aziRef;
+    protected String aziRef;
     @XmlSchemaType(name = "string")
-    protected TargetCategory catTarg;
+    protected String catTarg;
     protected List<CsLocation> location;
     protected List<CsTargetSection> targetSection;
     protected CsCommonData commonData;
@@ -573,10 +573,10 @@ public class ObjTarget {
      * 
      * @return
      *     possible object is
-     *     {@link AziRef }
+     *     {@link String }
      *     
      */
-    public AziRef getAziRef() {
+    public String getAziRef() {
         return aziRef;
     }
 
@@ -585,10 +585,10 @@ public class ObjTarget {
      * 
      * @param value
      *     allowed object is
-     *     {@link AziRef }
+     *     {@link String }
      *     
      */
-    public void setAziRef(AziRef value) {
+    public void setAziRef(String value) {
         this.aziRef = value;
     }
 
@@ -597,10 +597,10 @@ public class ObjTarget {
      * 
      * @return
      *     possible object is
-     *     {@link TargetCategory }
+     *     {@link String }
      *     
      */
-    public TargetCategory getCatTarg() {
+    public String getCatTarg() {
         return catTarg;
     }
 
@@ -609,10 +609,10 @@ public class ObjTarget {
      * 
      * @param value
      *     allowed object is
-     *     {@link TargetCategory }
+     *     {@link String }
      *     
      */
-    public void setCatTarg(TargetCategory value) {
+    public void setCatTarg(String value) {
         this.catTarg = value;
     }
 

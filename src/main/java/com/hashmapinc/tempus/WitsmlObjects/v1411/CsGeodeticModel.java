@@ -69,7 +69,7 @@ public class CsGeodeticModel {
 
     protected WellKnownNameStruct nameCRS;
     @XmlSchemaType(name = "string")
-    protected GeodeticDatum geodeticDatumCode;
+    protected String geodeticDatumCode;
     protected LengthMeasure xTranslation;
     protected LengthMeasure yTranslation;
     protected LengthMeasure zTranslation;
@@ -78,7 +78,7 @@ public class CsGeodeticModel {
     protected PlaneAngleMeasure zRotation;
     protected Double scaleFactor;
     @XmlSchemaType(name = "string")
-    protected Ellipsoid ellipsoidCode;
+    protected String ellipsoidCode;
     protected LengthMeasure ellipsoidSemiMajorAxis;
     protected Double ellipsoidInverseFlattening;
 
@@ -111,10 +111,10 @@ public class CsGeodeticModel {
      * 
      * @return
      *     possible object is
-     *     {@link GeodeticDatum }
+     *     {@link String }
      *     
      */
-    public GeodeticDatum getGeodeticDatumCode() {
+    public String getGeodeticDatumCode() {
         return geodeticDatumCode;
     }
 
@@ -123,10 +123,10 @@ public class CsGeodeticModel {
      * 
      * @param value
      *     allowed object is
-     *     {@link GeodeticDatum }
+     *     {@link String }
      *     
      */
-    public void setGeodeticDatumCode(GeodeticDatum value) {
+    public void setGeodeticDatumCode(String value) {
         this.geodeticDatumCode = value;
     }
 
@@ -309,10 +309,10 @@ public class CsGeodeticModel {
      * 
      * @return
      *     possible object is
-     *     {@link Ellipsoid }
+     *     {@link String }
      *     
      */
-    public Ellipsoid getEllipsoidCode() {
+    public String getEllipsoidCode() {
         return ellipsoidCode;
     }
 
@@ -321,10 +321,10 @@ public class CsGeodeticModel {
      * 
      * @param value
      *     allowed object is
-     *     {@link Ellipsoid }
+     *     {@link String }
      *     
      */
-    public void setEllipsoidCode(Ellipsoid value) {
+    public void setEllipsoidCode(String value) {
         this.ellipsoidCode = value;
     }
 
@@ -388,14 +388,12 @@ public class CsGeodeticModel {
         // assign fields
         model.setScaleFactor(this.getScaleFactor());
         model.setEllipsoidInverseFlattening(this.getEllipsoidInverseFlattening());
+        model.setGeodeticDatumCode(this.getGeodeticDatumCode());
+        model.setEllipsoidCode(this.getEllipsoidCode());
 
         // nameCRS
         if (null != this.getNameCRS())
             model.setNameCRS(this.getNameCRS().to1311WellKnownNameStruct());
-
-        // geodeticDatumCode
-        if (null != this.getGeodeticDatumCode())
-            model.setGeodeticDatumCode(com.hashmapinc.tempus.WitsmlObjects.v1311.GeodeticDatum.fromValue(this.getGeodeticDatumCode().value()));
 
         // xTranslation
         if (null != this.getXTranslation())
@@ -420,10 +418,6 @@ public class CsGeodeticModel {
         // zRotation
         if (null != this.getZRotation())
             model.setZRotation(this.getZRotation().to1311PlaneAngleMeasure());
-
-        // ellipsoidCode
-        if (null != this.getEllipsoidCode())
-            model.setEllipsoidCode(com.hashmapinc.tempus.WitsmlObjects.v1311.Ellipsoid.fromValue(this.getEllipsoidCode().value()));
 
         // ellipsoidSemiMajorAxis
         if (null != this.getEllipsoidSemiMajorAxis())

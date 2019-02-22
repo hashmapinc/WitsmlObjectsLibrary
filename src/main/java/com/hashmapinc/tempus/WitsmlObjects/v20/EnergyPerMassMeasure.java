@@ -36,7 +36,7 @@ public class EnergyPerMassMeasure {
     @XmlValue
     protected double value;
     @XmlAttribute(name = "uom", required = true)
-    protected EnergyPerMassUom uom;
+    protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -61,10 +61,10 @@ public class EnergyPerMassMeasure {
      * 
      * @return
      *     possible object is
-     *     {@link EnergyPerMassUom }
+     *     {@link String }
      *     
      */
-    public EnergyPerMassUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -73,10 +73,10 @@ public class EnergyPerMassMeasure {
      * 
      * @param value
      *     allowed object is
-     *     {@link EnergyPerMassUom }
+     *     {@link String }
      *     
      */
-    public void setUom(EnergyPerMassUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

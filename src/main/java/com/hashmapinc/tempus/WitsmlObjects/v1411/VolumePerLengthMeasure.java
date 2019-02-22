@@ -23,7 +23,7 @@ import javax.xml.bind.annotation.XmlType;
  * <complexType name="volumePerLengthMeasure">
  *   <simpleContent>
  *     <extension base="<http://www.witsml.org/schemas/1series>abstractMeasure">
- *       <attribute name="uom" use="required" type="{http://www.witsml.org/schemas/1series}VolumePerLengthUom" />
+ *       <attribute name="uom" use="required" type="{http://www.witsml.org/schemas/1series}String" />
  *     </extension>
  *   </simpleContent>
  * </complexType>
@@ -38,17 +38,17 @@ public class VolumePerLengthMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected VolumePerLengthUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link VolumePerLengthUom }
+     *     {@link String }
      *     
      */
-    public VolumePerLengthUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -57,10 +57,10 @@ public class VolumePerLengthMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link VolumePerLengthUom }
+     *     {@link String }
      *     
      */
-    public void setUom(VolumePerLengthUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

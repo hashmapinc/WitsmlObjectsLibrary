@@ -60,7 +60,7 @@ public class Log
 
     @XmlElement(name = "ChannelState")
     @XmlSchemaType(name = "string")
-    protected ChannelState channelState;
+    protected String channelState;
     @XmlElement(name = "TimeDepth")
     protected String timeDepth;
     @XmlElement(name = "ChannelClass")
@@ -83,10 +83,10 @@ public class Log
     protected String toolClass;
     @XmlElement(name = "Derivation")
     @XmlSchemaType(name = "string")
-    protected ChannelDerivation derivation;
+    protected String derivation;
     @XmlElement(name = "LoggingMethod")
     @XmlSchemaType(name = "string")
-    protected LoggingMethod loggingMethod;
+    protected String loggingMethod;
     @XmlElement(name = "NominalHoleSize")
     protected LengthMeasureExt nominalHoleSize;
     @XmlElement(name = "Wellbore", required = true)
@@ -99,10 +99,10 @@ public class Log
      * 
      * @return
      *     possible object is
-     *     {@link ChannelState }
+     *     {@link String }
      *     
      */
-    public ChannelState getChannelState() {
+    public String getChannelState() {
         return channelState;
     }
 
@@ -111,10 +111,10 @@ public class Log
      * 
      * @param value
      *     allowed object is
-     *     {@link ChannelState }
+     *     {@link String }
      *     
      */
-    public void setChannelState(ChannelState value) {
+    public void setChannelState(String value) {
         this.channelState = value;
     }
 
@@ -363,10 +363,10 @@ public class Log
      * 
      * @return
      *     possible object is
-     *     {@link ChannelDerivation }
+     *     {@link String }
      *     
      */
-    public ChannelDerivation getDerivation() {
+    public String getDerivation() {
         return derivation;
     }
 
@@ -375,10 +375,10 @@ public class Log
      * 
      * @param value
      *     allowed object is
-     *     {@link ChannelDerivation }
+     *     {@link String }
      *     
      */
-    public void setDerivation(ChannelDerivation value) {
+    public void setDerivation(String value) {
         this.derivation = value;
     }
 
@@ -387,10 +387,10 @@ public class Log
      * 
      * @return
      *     possible object is
-     *     {@link LoggingMethod }
+     *     {@link String }
      *     
      */
-    public LoggingMethod getLoggingMethod() {
+    public String getLoggingMethod() {
         return loggingMethod;
     }
 
@@ -399,10 +399,10 @@ public class Log
      * 
      * @param value
      *     allowed object is
-     *     {@link LoggingMethod }
+     *     {@link String }
      *     
      */
-    public void setLoggingMethod(LoggingMethod value) {
+    public void setLoggingMethod(String value) {
         this.loggingMethod = value;
     }
 

@@ -23,7 +23,7 @@ import javax.xml.bind.annotation.XmlType;
  * <complexType name="standardVolumePerTimeMeasure">
  *   <simpleContent>
  *     <extension base="<http://www.witsml.org/schemas/1series>abstractMeasure">
- *       <attribute name="uom" use="required" type="{http://www.witsml.org/schemas/1series}StandardVolumePerTimeUom" />
+ *       <attribute name="uom" use="required" type="{http://www.witsml.org/schemas/1series}String" />
  *     </extension>
  *   </simpleContent>
  * </complexType>
@@ -38,17 +38,17 @@ public class StandardVolumePerTimeMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected StandardVolumePerTimeUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link StandardVolumePerTimeUom }
+     *     {@link String }
      *     
      */
-    public StandardVolumePerTimeUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -57,10 +57,10 @@ public class StandardVolumePerTimeMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link StandardVolumePerTimeUom }
+     *     {@link String }
      *     
      */
-    public void setUom(StandardVolumePerTimeUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

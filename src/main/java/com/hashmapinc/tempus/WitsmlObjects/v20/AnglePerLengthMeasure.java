@@ -90,9 +90,7 @@ public class AnglePerLengthMeasure {
         com.hashmapinc.tempus.WitsmlObjects.v1311.AnglePerLengthMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v1311.AnglePerLengthMeasure();
 
         // assign fields
-        if (null != this.getUom())
-            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.AnglePerLengthUom.fromValue(this.getUom()));
-
+        measure.setUom(this.getUom());
         measure.setValue(this.getValue());
 
         return measure;
@@ -102,9 +100,7 @@ public class AnglePerLengthMeasure {
         com.hashmapinc.tempus.WitsmlObjects.v1411.AnglePerLengthMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v1411.AnglePerLengthMeasure();
 
         // assign fields
-        if (null != this.getUom())
-            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1411.AnglePerLengthUom.fromValue(this.getUom()));
-
+        measure.setUom(this.getUom());
         measure.setValue(this.getValue());
 
         return measure;

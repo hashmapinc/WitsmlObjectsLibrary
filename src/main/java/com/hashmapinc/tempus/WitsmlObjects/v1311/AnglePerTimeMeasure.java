@@ -30,17 +30,17 @@ public class AnglePerTimeMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected AnglePerTimeUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link AnglePerTimeUom }
+     *     {@link String }
      *     
      */
-    public AnglePerTimeUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -49,10 +49,10 @@ public class AnglePerTimeMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link AnglePerTimeUom }
+     *     {@link String }
      *     
      */
-    public void setUom(AnglePerTimeUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

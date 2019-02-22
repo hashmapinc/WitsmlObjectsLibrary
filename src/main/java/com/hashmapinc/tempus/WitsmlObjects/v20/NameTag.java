@@ -26,9 +26,9 @@ import javax.xml.bind.annotation.XmlType;
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
  *         <element name="Name" type="{http://www.energistics.org/energyml/data/commonv2}String64"/>
- *         <element name="NumberingScheme" type="{http://www.energistics.org/energyml/data/witsmlv2}NameTagNumberingScheme"/>
- *         <element name="Technology" type="{http://www.energistics.org/energyml/data/witsmlv2}NameTagTechnology" minOccurs="0"/>
- *         <element name="Location" type="{http://www.energistics.org/energyml/data/witsmlv2}NameTagLocation" minOccurs="0"/>
+ *         <element name="NumberingScheme" type="{http://www.energistics.org/energyml/data/witsmlv2}String"/>
+ *         <element name="Technology" type="{http://www.energistics.org/energyml/data/witsmlv2}String" minOccurs="0"/>
+ *         <element name="Location" type="{http://www.energistics.org/energyml/data/witsmlv2}String" minOccurs="0"/>
  *         <element name="InstallationDate" type="{http://www.energistics.org/energyml/data/commonv2}TimeStamp" minOccurs="0"/>
  *         <element name="InstallationCompany" type="{http://www.energistics.org/energyml/data/commonv2}String64" minOccurs="0"/>
  *         <element name="MountingCode" type="{http://www.energistics.org/energyml/data/commonv2}String64" minOccurs="0"/>
@@ -61,13 +61,13 @@ public class NameTag {
     protected String name;
     @XmlElement(name = "NumberingScheme", required = true)
     @XmlSchemaType(name = "string")
-    protected NameTagNumberingScheme numberingScheme;
+    protected String numberingScheme;
     @XmlElement(name = "Technology")
     @XmlSchemaType(name = "string")
-    protected NameTagTechnology technology;
+    protected String technology;
     @XmlElement(name = "Location")
     @XmlSchemaType(name = "string")
-    protected NameTagLocation location;
+    protected String location;
     @XmlElement(name = "InstallationDate")
     protected String installationDate;
     @XmlElement(name = "InstallationCompany")
@@ -110,10 +110,10 @@ public class NameTag {
      * 
      * @return
      *     possible object is
-     *     {@link NameTagNumberingScheme }
+     *     {@link String }
      *     
      */
-    public NameTagNumberingScheme getNumberingScheme() {
+    public String getNumberingScheme() {
         return numberingScheme;
     }
 
@@ -122,10 +122,10 @@ public class NameTag {
      * 
      * @param value
      *     allowed object is
-     *     {@link NameTagNumberingScheme }
+     *     {@link String }
      *     
      */
-    public void setNumberingScheme(NameTagNumberingScheme value) {
+    public void setNumberingScheme(String value) {
         this.numberingScheme = value;
     }
 
@@ -134,10 +134,10 @@ public class NameTag {
      * 
      * @return
      *     possible object is
-     *     {@link NameTagTechnology }
+     *     {@link String }
      *     
      */
-    public NameTagTechnology getTechnology() {
+    public String getTechnology() {
         return technology;
     }
 
@@ -146,10 +146,10 @@ public class NameTag {
      * 
      * @param value
      *     allowed object is
-     *     {@link NameTagTechnology }
+     *     {@link String }
      *     
      */
-    public void setTechnology(NameTagTechnology value) {
+    public void setTechnology(String value) {
         this.technology = value;
     }
 
@@ -158,10 +158,10 @@ public class NameTag {
      * 
      * @return
      *     possible object is
-     *     {@link NameTagLocation }
+     *     {@link String }
      *     
      */
-    public NameTagLocation getLocation() {
+    public String getLocation() {
         return location;
     }
 
@@ -170,10 +170,10 @@ public class NameTag {
      * 
      * @param value
      *     allowed object is
-     *     {@link NameTagLocation }
+     *     {@link String }
      *     
      */
-    public void setLocation(NameTagLocation value) {
+    public void setLocation(String value) {
         this.location = value;
     }
 

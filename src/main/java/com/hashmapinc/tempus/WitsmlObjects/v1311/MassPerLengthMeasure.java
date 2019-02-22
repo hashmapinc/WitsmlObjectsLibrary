@@ -30,17 +30,17 @@ public class MassPerLengthMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected MassPerLengthUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link MassPerLengthUom }
+     *     {@link String }
      *     
      */
-    public MassPerLengthUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -49,10 +49,10 @@ public class MassPerLengthMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link MassPerLengthUom }
+     *     {@link String }
      *     
      */
-    public void setUom(MassPerLengthUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

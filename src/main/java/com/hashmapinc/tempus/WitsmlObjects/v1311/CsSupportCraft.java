@@ -48,7 +48,7 @@ public class CsSupportCraft {
     @XmlElement(required = true)
     protected String name;
     @XmlSchemaType(name = "string")
-    protected SupportCraft typeSuppCraft;
+    protected String typeSuppCraft;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar dTimArrived;
     @XmlSchemaType(name = "dateTime")
@@ -86,10 +86,10 @@ public class CsSupportCraft {
      * 
      * @return
      *     possible object is
-     *     {@link SupportCraft }
+     *     {@link String }
      *     
      */
-    public SupportCraft getTypeSuppCraft() {
+    public String getTypeSuppCraft() {
         return typeSuppCraft;
     }
 
@@ -98,10 +98,10 @@ public class CsSupportCraft {
      * 
      * @param value
      *     allowed object is
-     *     {@link SupportCraft }
+     *     {@link String }
      *     
      */
-    public void setTypeSuppCraft(SupportCraft value) {
+    public void setTypeSuppCraft(String value) {
         this.typeSuppCraft = value;
     }
 

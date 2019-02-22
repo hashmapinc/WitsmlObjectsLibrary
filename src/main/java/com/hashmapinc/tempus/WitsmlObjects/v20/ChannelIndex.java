@@ -22,9 +22,9 @@ import javax.xml.bind.annotation.XmlType;
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="IndexType" type="{http://www.energistics.org/energyml/data/witsmlv2}ChannelIndexType"/>
+ *         <element name="IndexType" type="{http://www.energistics.org/energyml/data/witsmlv2}String"/>
  *         <element name="Uom" type="{http://www.energistics.org/energyml/data/commonv2}UnitOfMeasureExt"/>
- *         <element name="Direction" type="{http://www.energistics.org/energyml/data/witsmlv2}IndexDirection"/>
+ *         <element name="Direction" type="{http://www.energistics.org/energyml/data/witsmlv2}String"/>
  *         <element name="Mnemonic" type="{http://www.energistics.org/energyml/data/commonv2}String64"/>
  *         <element name="DatumReference" type="{http://www.energistics.org/energyml/data/commonv2}String64" minOccurs="0"/>
  *       </sequence>
@@ -47,12 +47,12 @@ public class ChannelIndex {
 
     @XmlElement(name = "IndexType", required = true)
     @XmlSchemaType(name = "string")
-    protected ChannelIndexType indexType;
+    protected String indexType;
     @XmlElement(name = "Uom", required = true)
     protected String uom;
     @XmlElement(name = "Direction", required = true)
     @XmlSchemaType(name = "string")
-    protected IndexDirection direction;
+    protected String direction;
     @XmlElement(name = "Mnemonic", required = true)
     protected String mnemonic;
     @XmlElement(name = "DatumReference")
@@ -63,10 +63,10 @@ public class ChannelIndex {
      * 
      * @return
      *     possible object is
-     *     {@link ChannelIndexType }
+     *     {@link String }
      *     
      */
-    public ChannelIndexType getIndexType() {
+    public String getIndexType() {
         return indexType;
     }
 
@@ -75,10 +75,10 @@ public class ChannelIndex {
      * 
      * @param value
      *     allowed object is
-     *     {@link ChannelIndexType }
+     *     {@link String }
      *     
      */
-    public void setIndexType(ChannelIndexType value) {
+    public void setIndexType(String value) {
         this.indexType = value;
     }
 
@@ -111,10 +111,10 @@ public class ChannelIndex {
      * 
      * @return
      *     possible object is
-     *     {@link IndexDirection }
+     *     {@link String }
      *     
      */
-    public IndexDirection getDirection() {
+    public String getDirection() {
         return direction;
     }
 
@@ -123,10 +123,10 @@ public class ChannelIndex {
      * 
      * @param value
      *     allowed object is
-     *     {@link IndexDirection }
+     *     {@link String }
      *     
      */
-    public void setDirection(IndexDirection value) {
+    public void setDirection(String value) {
         this.direction = value;
     }
 

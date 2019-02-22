@@ -36,7 +36,7 @@ public class LinearAccelerationMeasure {
     @XmlValue
     protected double value;
     @XmlAttribute(name = "uom", required = true)
-    protected LinearAccelerationUom uom;
+    protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -61,10 +61,10 @@ public class LinearAccelerationMeasure {
      * 
      * @return
      *     possible object is
-     *     {@link LinearAccelerationUom }
+     *     {@link String }
      *     
      */
-    public LinearAccelerationUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -73,10 +73,10 @@ public class LinearAccelerationMeasure {
      * 
      * @param value
      *     allowed object is
-     *     {@link LinearAccelerationUom }
+     *     {@link String }
      *     
      */
-    public void setUom(LinearAccelerationUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 
@@ -91,8 +91,7 @@ public class LinearAccelerationMeasure {
 
         // assign fields
         measure.setValue(this.getValue());
-        if (null != this.getUom())
-            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.AccelerationLinearUom.fromValue(this.getUom().value()));
+        measure.setUom(this.getUom());
 
         return measure;
     }
@@ -102,8 +101,7 @@ public class LinearAccelerationMeasure {
 
         // assign fields
         measure.setValue(this.getValue());
-        if (null != this.getUom())
-            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1411.AccelerationLinearUom.fromValue(this.getUom().value()));
+        measure.setUom(this.getUom());
 
         return measure;
     }

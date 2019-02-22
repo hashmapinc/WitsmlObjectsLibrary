@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlValue;
  * <complexType name="LuminousFluxMeasure">
  *   <simpleContent>
  *     <extension base="<http://www.energistics.org/energyml/data/commonv2>AbstractMeasure">
- *       <attribute name="uom" use="required" type="{http://www.energistics.org/energyml/data/commonv2}LuminousFluxUom" />
+ *       <attribute name="uom" use="required" type="{http://www.energistics.org/energyml/data/commonv2}String" />
  *     </extension>
  *   </simpleContent>
  * </complexType>
@@ -36,7 +36,7 @@ public class LuminousFluxMeasure {
     @XmlValue
     protected double value;
     @XmlAttribute(name = "uom", required = true)
-    protected LuminousFluxUom uom;
+    protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -61,10 +61,10 @@ public class LuminousFluxMeasure {
      * 
      * @return
      *     possible object is
-     *     {@link LuminousFluxUom }
+     *     {@link String }
      *     
      */
-    public LuminousFluxUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -73,10 +73,10 @@ public class LuminousFluxMeasure {
      * 
      * @param value
      *     allowed object is
-     *     {@link LuminousFluxUom }
+     *     {@link String }
      *     
      */
-    public void setUom(LuminousFluxUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

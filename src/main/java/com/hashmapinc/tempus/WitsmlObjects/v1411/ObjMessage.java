@@ -83,13 +83,13 @@ public class ObjMessage {
     protected MeasuredDepthCoord md;
     protected MeasuredDepthCoord mdBit;
     @XmlSchemaType(name = "string")
-    protected MessageType typeMessage;
+    protected String typeMessage;
     protected String messageText;
     protected List<IndexedObject> param;
     @XmlSchemaType(name = "string")
-    protected MessageSeverity severity;
+    protected String severity;
     @XmlSchemaType(name = "string")
-    protected MessageProbability warnProbability;
+    protected String warnProbability;
     protected CsCommonData commonData;
     protected CsCustomData customData;
     @XmlAttribute(name = "uidWell")
@@ -344,10 +344,10 @@ public class ObjMessage {
      * 
      * @return
      *     possible object is
-     *     {@link MessageType }
+     *     {@link String }
      *     
      */
-    public MessageType getTypeMessage() {
+    public String getTypeMessage() {
         return typeMessage;
     }
 
@@ -356,10 +356,10 @@ public class ObjMessage {
      * 
      * @param value
      *     allowed object is
-     *     {@link MessageType }
+     *     {@link String }
      *     
      */
-    public void setTypeMessage(MessageType value) {
+    public void setTypeMessage(String value) {
         this.typeMessage = value;
     }
 
@@ -421,10 +421,10 @@ public class ObjMessage {
      * 
      * @return
      *     possible object is
-     *     {@link MessageSeverity }
+     *     {@link String }
      *     
      */
-    public MessageSeverity getSeverity() {
+    public String getSeverity() {
         return severity;
     }
 
@@ -433,10 +433,10 @@ public class ObjMessage {
      * 
      * @param value
      *     allowed object is
-     *     {@link MessageSeverity }
+     *     {@link String }
      *     
      */
-    public void setSeverity(MessageSeverity value) {
+    public void setSeverity(String value) {
         this.severity = value;
     }
 
@@ -445,10 +445,10 @@ public class ObjMessage {
      * 
      * @return
      *     possible object is
-     *     {@link MessageProbability }
+     *     {@link String }
      *     
      */
-    public MessageProbability getWarnProbability() {
+    public String getWarnProbability() {
         return warnProbability;
     }
 
@@ -457,10 +457,10 @@ public class ObjMessage {
      * 
      * @param value
      *     allowed object is
-     *     {@link MessageProbability }
+     *     {@link String }
      *     
      */
-    public void setWarnProbability(MessageProbability value) {
+    public void setWarnProbability(String value) {
         this.warnProbability = value;
     }
 

@@ -131,7 +131,7 @@ public class CsTubularComponent {
 
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected TubularComponent typeTubularComp;
+    protected String typeTubularComp;
     protected short sequence;
     protected String description;
     @XmlElement(required = true)
@@ -159,12 +159,12 @@ public class CsTubularComponent {
     protected LengthPerLengthMeasure wearWall;
     protected LengthMeasure thickWall;
     @XmlSchemaType(name = "string")
-    protected BoxPinConfig configCon;
+    protected String configCon;
     protected ForcePerLengthMeasure bendStiffness;
     protected ForcePerLengthMeasure axialStiffness;
     protected ForcePerLengthMeasure torsionalStiffness;
     @XmlSchemaType(name = "string")
-    protected MaterialType typeMaterial;
+    protected String typeMaterial;
     protected AnglePerLengthMeasure doglegMx;
     protected String vendor;
     protected String model;
@@ -189,10 +189,10 @@ public class CsTubularComponent {
      * 
      * @return
      *     possible object is
-     *     {@link TubularComponent }
+     *     {@link String }
      *     
      */
-    public TubularComponent getTypeTubularComp() {
+    public String getTypeTubularComp() {
         return typeTubularComp;
     }
 
@@ -201,10 +201,10 @@ public class CsTubularComponent {
      * 
      * @param value
      *     allowed object is
-     *     {@link TubularComponent }
+     *     {@link String }
      *     
      */
-    public void setTypeTubularComp(TubularComponent value) {
+    public void setTypeTubularComp(String value) {
         this.typeTubularComp = value;
     }
 
@@ -757,10 +757,10 @@ public class CsTubularComponent {
      * 
      * @return
      *     possible object is
-     *     {@link BoxPinConfig }
+     *     {@link String }
      *     
      */
-    public BoxPinConfig getConfigCon() {
+    public String getConfigCon() {
         return configCon;
     }
 
@@ -769,10 +769,10 @@ public class CsTubularComponent {
      * 
      * @param value
      *     allowed object is
-     *     {@link BoxPinConfig }
+     *     {@link String }
      *     
      */
-    public void setConfigCon(BoxPinConfig value) {
+    public void setConfigCon(String value) {
         this.configCon = value;
     }
 
@@ -853,10 +853,10 @@ public class CsTubularComponent {
      * 
      * @return
      *     possible object is
-     *     {@link MaterialType }
+     *     {@link String }
      *     
      */
-    public MaterialType getTypeMaterial() {
+    public String getTypeMaterial() {
         return typeMaterial;
     }
 
@@ -865,10 +865,10 @@ public class CsTubularComponent {
      * 
      * @param value
      *     allowed object is
-     *     {@link MaterialType }
+     *     {@link String }
      *     
      */
-    public void setTypeMaterial(MaterialType value) {
+    public void setTypeMaterial(String value) {
         this.typeMaterial = value;
     }
 

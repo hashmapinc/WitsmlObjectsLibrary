@@ -55,7 +55,7 @@ public class ToolErrorModel
 
     @XmlElement(name = "TypeSurveyTool")
     @XmlSchemaType(name = "string")
-    protected TypeSurveyTool typeSurveyTool;
+    protected String typeSurveyTool;
     @XmlElement(name = "UseErrorTermSet")
     protected String useErrorTermSet;
     @XmlElement(name = "Authorization")
@@ -74,10 +74,10 @@ public class ToolErrorModel
      * 
      * @return
      *     possible object is
-     *     {@link TypeSurveyTool }
+     *     {@link String }
      *     
      */
-    public TypeSurveyTool getTypeSurveyTool() {
+    public String getTypeSurveyTool() {
         return typeSurveyTool;
     }
 
@@ -86,10 +86,10 @@ public class ToolErrorModel
      * 
      * @param value
      *     allowed object is
-     *     {@link TypeSurveyTool }
+     *     {@link String }
      *     
      */
-    public void setTypeSurveyTool(TypeSurveyTool value) {
+    public void setTypeSurveyTool(String value) {
         this.typeSurveyTool = value;
     }
 

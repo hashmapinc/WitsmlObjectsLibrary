@@ -23,7 +23,7 @@ import javax.xml.bind.annotation.XmlType;
  * <complexType name="standardVolumeMeasure">
  *   <simpleContent>
  *     <extension base="<http://www.witsml.org/schemas/1series>abstractMeasure">
- *       <attribute name="uom" use="required" type="{http://www.witsml.org/schemas/1series}StandardVolumeUom" />
+ *       <attribute name="uom" use="required" type="{http://www.witsml.org/schemas/1series}String" />
  *     </extension>
  *   </simpleContent>
  * </complexType>
@@ -38,17 +38,17 @@ public class StandardVolumeMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected StandardVolumeUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link StandardVolumeUom }
+     *     {@link String }
      *     
      */
-    public StandardVolumeUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -57,10 +57,10 @@ public class StandardVolumeMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link StandardVolumeUom }
+     *     {@link String }
      *     
      */
-    public void setUom(StandardVolumeUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

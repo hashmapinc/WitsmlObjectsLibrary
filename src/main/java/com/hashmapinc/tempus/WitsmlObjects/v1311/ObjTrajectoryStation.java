@@ -97,9 +97,9 @@ public class ObjTrajectoryStation {
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar dTimStn;
     @XmlSchemaType(name = "string")
-    protected TrajStationType typeTrajStation;
+    protected String typeTrajStation;
     @XmlSchemaType(name = "string")
-    protected TypeSurveyTool typeSurveyTool;
+    protected String typeSurveyTool;
     protected MeasuredDepthCoord md;
     protected WellVerticalDepthCoord tvd;
     protected PlaneAngleMeasure incl;
@@ -129,7 +129,7 @@ public class ObjTrajectoryStation {
     protected String magModelValid;
     protected String geoModelUsed;
     @XmlSchemaType(name = "string")
-    protected TrajStationStatus statusTrajStation;
+    protected String statusTrajStation;
     protected CsStnTrajRawData rawData;
     protected CsStnTrajCorUsed corUsed;
     protected CsStnTrajValid valid;
@@ -272,10 +272,10 @@ public class ObjTrajectoryStation {
      * 
      * @return
      *     possible object is
-     *     {@link TrajStationType }
+     *     {@link String }
      *     
      */
-    public TrajStationType getTypeTrajStation() {
+    public String getTypeTrajStation() {
         return typeTrajStation;
     }
 
@@ -284,10 +284,10 @@ public class ObjTrajectoryStation {
      * 
      * @param value
      *     allowed object is
-     *     {@link TrajStationType }
+     *     {@link String }
      *     
      */
-    public void setTypeTrajStation(TrajStationType value) {
+    public void setTypeTrajStation(String value) {
         this.typeTrajStation = value;
     }
 
@@ -296,10 +296,10 @@ public class ObjTrajectoryStation {
      * 
      * @return
      *     possible object is
-     *     {@link TypeSurveyTool }
+     *     {@link String }
      *     
      */
-    public TypeSurveyTool getTypeSurveyTool() {
+    public String getTypeSurveyTool() {
         return typeSurveyTool;
     }
 
@@ -308,10 +308,10 @@ public class ObjTrajectoryStation {
      * 
      * @param value
      *     allowed object is
-     *     {@link TypeSurveyTool }
+     *     {@link String }
      *     
      */
-    public void setTypeSurveyTool(TypeSurveyTool value) {
+    public void setTypeSurveyTool(String value) {
         this.typeSurveyTool = value;
     }
 
@@ -992,10 +992,10 @@ public class ObjTrajectoryStation {
      * 
      * @return
      *     possible object is
-     *     {@link TrajStationStatus }
+     *     {@link String }
      *     
      */
-    public TrajStationStatus getStatusTrajStation() {
+    public String getStatusTrajStation() {
         return statusTrajStation;
     }
 
@@ -1004,10 +1004,10 @@ public class ObjTrajectoryStation {
      * 
      * @param value
      *     allowed object is
-     *     {@link TrajStationStatus }
+     *     {@link String }
      *     
      */
-    public void setStatusTrajStation(TrajStationStatus value) {
+    public void setStatusTrajStation(String value) {
         this.statusTrajStation = value;
     }
 

@@ -32,7 +32,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
  *         <element name="dTimChange" type="{http://www.witsml.org/schemas/1series}timestamp"/>
- *         <element name="changeType" type="{http://www.witsml.org/schemas/1series}ChangeInfoType"/>
+ *         <element name="changeType" type="{http://www.witsml.org/schemas/1series}String"/>
  *         <element name="objectGrowingState" type="{http://www.witsml.org/schemas/1series}logicalBoolean" minOccurs="0"/>
  *         <element name="updatedHeader" type="{http://www.witsml.org/schemas/1series}logicalBoolean" minOccurs="0"/>
  *         <element name="changeInfo" type="{http://www.witsml.org/schemas/1series}commentString" minOccurs="0"/>
@@ -72,7 +72,7 @@ public class CsChangeHistory {
     protected XMLGregorianCalendar dTimChange;
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected ChangeInfoType changeType;
+    protected String changeType;
     protected Boolean objectGrowingState;
     protected Boolean updatedHeader;
     protected String changeInfo;
@@ -116,10 +116,10 @@ public class CsChangeHistory {
      * 
      * @return
      *     possible object is
-     *     {@link ChangeInfoType }
+     *     {@link String }
      *     
      */
-    public ChangeInfoType getChangeType() {
+    public String getChangeType() {
         return changeType;
     }
 
@@ -128,10 +128,10 @@ public class CsChangeHistory {
      * 
      * @param value
      *     allowed object is
-     *     {@link ChangeInfoType }
+     *     {@link String }
      *     
      */
-    public void setChangeType(ChangeInfoType value) {
+    public void setChangeType(String value) {
         this.changeType = value;
     }
 

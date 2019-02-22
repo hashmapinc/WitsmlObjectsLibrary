@@ -53,7 +53,7 @@ public class CsTargetSection {
     protected short sectNumber;
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected TargetSectionScope typeTargetSectionScope;
+    protected String typeTargetSectionScope;
     protected LengthMeasure lenRadius;
     protected PlaneAngleMeasure angleArc;
     protected LengthMeasure thickAbove;
@@ -83,10 +83,10 @@ public class CsTargetSection {
      * 
      * @return
      *     possible object is
-     *     {@link TargetSectionScope }
+     *     {@link String }
      *     
      */
-    public TargetSectionScope getTypeTargetSectionScope() {
+    public String getTypeTargetSectionScope() {
         return typeTargetSectionScope;
     }
 
@@ -95,10 +95,10 @@ public class CsTargetSection {
      * 
      * @param value
      *     allowed object is
-     *     {@link TargetSectionScope }
+     *     {@link String }
      *     
      */
-    public void setTypeTargetSectionScope(TargetSectionScope value) {
+    public void setTypeTargetSectionScope(String value) {
         this.typeTargetSectionScope = value;
     }
 

@@ -26,9 +26,9 @@ import javax.xml.bind.annotation.XmlType;
  *     <extension base="{http://www.energistics.org/energyml/data/commonv2}AbstractObject">
  *       <sequence>
  *         <element name="Mnemonic" type="{http://www.energistics.org/energyml/data/commonv2}String64"/>
- *         <element name="DataType" type="{http://www.energistics.org/energyml/data/witsmlv2}EtpDataType"/>
+ *         <element name="DataType" type="{http://www.energistics.org/energyml/data/witsmlv2}String"/>
  *         <element name="Uom" type="{http://www.energistics.org/energyml/data/commonv2}UnitOfMeasureExt"/>
- *         <element name="GrowingStatus" type="{http://www.energistics.org/energyml/data/witsmlv2}ChannelStatus"/>
+ *         <element name="GrowingStatus" type="{http://www.energistics.org/energyml/data/witsmlv2}String"/>
  *         <element name="Source" type="{http://www.energistics.org/energyml/data/commonv2}String64" minOccurs="0"/>
  *         <element name="Wellbore" type="{http://www.energistics.org/energyml/data/commonv2}DataObjectReference" minOccurs="0"/>
  *         <element name="AxisDefinition" type="{http://www.energistics.org/energyml/data/witsmlv2}LogChannelAxis" maxOccurs="unbounded" minOccurs="0"/>
@@ -81,12 +81,12 @@ public class Channel
     protected String mnemonic;
     @XmlElement(name = "DataType", required = true)
     @XmlSchemaType(name = "string")
-    protected EtpDataType dataType;
+    protected String dataType;
     @XmlElement(name = "Uom", required = true)
     protected String uom;
     @XmlElement(name = "GrowingStatus", required = true)
     @XmlSchemaType(name = "string")
-    protected ChannelStatus growingStatus;
+    protected String growingStatus;
     @XmlElement(name = "Source")
     protected String source;
     @XmlElement(name = "Wellbore")
@@ -95,7 +95,7 @@ public class Channel
     protected List<LogChannelAxis> axisDefinition;
     @XmlElement(name = "ChannelState")
     @XmlSchemaType(name = "string")
-    protected ChannelState channelState;
+    protected String channelState;
     @XmlElement(name = "TimeDepth", required = true)
     protected String timeDepth;
     @XmlElement(name = "ChannelClass", required = true)
@@ -118,10 +118,10 @@ public class Channel
     protected String toolClass;
     @XmlElement(name = "Derivation")
     @XmlSchemaType(name = "string")
-    protected ChannelDerivation derivation;
+    protected String derivation;
     @XmlElement(name = "LoggingMethod")
     @XmlSchemaType(name = "string")
-    protected LoggingMethod loggingMethod;
+    protected String loggingMethod;
     @XmlElement(name = "NominalHoleSize")
     protected LengthMeasureExt nominalHoleSize;
     @XmlElement(name = "PointMetadata")
@@ -162,10 +162,10 @@ public class Channel
      * 
      * @return
      *     possible object is
-     *     {@link EtpDataType }
+     *     {@link String }
      *     
      */
-    public EtpDataType getDataType() {
+    public String getDataType() {
         return dataType;
     }
 
@@ -174,10 +174,10 @@ public class Channel
      * 
      * @param value
      *     allowed object is
-     *     {@link EtpDataType }
+     *     {@link String }
      *     
      */
-    public void setDataType(EtpDataType value) {
+    public void setDataType(String value) {
         this.dataType = value;
     }
 
@@ -210,10 +210,10 @@ public class Channel
      * 
      * @return
      *     possible object is
-     *     {@link ChannelStatus }
+     *     {@link String }
      *     
      */
-    public ChannelStatus getGrowingStatus() {
+    public String getGrowingStatus() {
         return growingStatus;
     }
 
@@ -222,10 +222,10 @@ public class Channel
      * 
      * @param value
      *     allowed object is
-     *     {@link ChannelStatus }
+     *     {@link String }
      *     
      */
-    public void setGrowingStatus(ChannelStatus value) {
+    public void setGrowingStatus(String value) {
         this.growingStatus = value;
     }
 
@@ -311,10 +311,10 @@ public class Channel
      * 
      * @return
      *     possible object is
-     *     {@link ChannelState }
+     *     {@link String }
      *     
      */
-    public ChannelState getChannelState() {
+    public String getChannelState() {
         return channelState;
     }
 
@@ -323,10 +323,10 @@ public class Channel
      * 
      * @param value
      *     allowed object is
-     *     {@link ChannelState }
+     *     {@link String }
      *     
      */
-    public void setChannelState(ChannelState value) {
+    public void setChannelState(String value) {
         this.channelState = value;
     }
 
@@ -575,10 +575,10 @@ public class Channel
      * 
      * @return
      *     possible object is
-     *     {@link ChannelDerivation }
+     *     {@link String }
      *     
      */
-    public ChannelDerivation getDerivation() {
+    public String getDerivation() {
         return derivation;
     }
 
@@ -587,10 +587,10 @@ public class Channel
      * 
      * @param value
      *     allowed object is
-     *     {@link ChannelDerivation }
+     *     {@link String }
      *     
      */
-    public void setDerivation(ChannelDerivation value) {
+    public void setDerivation(String value) {
         this.derivation = value;
     }
 
@@ -599,10 +599,10 @@ public class Channel
      * 
      * @return
      *     possible object is
-     *     {@link LoggingMethod }
+     *     {@link String }
      *     
      */
-    public LoggingMethod getLoggingMethod() {
+    public String getLoggingMethod() {
         return loggingMethod;
     }
 
@@ -611,10 +611,10 @@ public class Channel
      * 
      * @param value
      *     allowed object is
-     *     {@link LoggingMethod }
+     *     {@link String }
      *     
      */
-    public void setLoggingMethod(LoggingMethod value) {
+    public void setLoggingMethod(String value) {
         this.loggingMethod = value;
     }
 

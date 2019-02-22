@@ -106,7 +106,7 @@ public class CsActivity {
     protected List<NameStruct> proprietaryCode;
     protected String detailActivity;
     @XmlSchemaType(name = "string")
-    protected ActivityClassType typeActivityClass;
+    protected String typeActivityClass;
     protected MeasuredDepthCoord mdHoleStart;
     protected WellVerticalDepthCoord tvdHoleStart;
     protected MeasuredDepthCoord mdHoleEnd;
@@ -115,13 +115,13 @@ public class CsActivity {
     protected MeasuredDepthCoord mdBitEnd;
     protected String state;
     @XmlSchemaType(name = "string")
-    protected StateDetailActivity stateDetailActivity;
+    protected String stateDetailActivity;
     protected String operator;
     protected RefNameString tubular;
     protected Boolean optimum;
     protected Boolean productive;
     @XmlSchemaType(name = "string")
-    protected ItemState itemState;
+    protected String itemState;
     protected String comments;
     protected List<CsExtensionNameValue> extensionNameValue;
     @XmlAttribute(name = "uid")
@@ -353,10 +353,10 @@ public class CsActivity {
      * 
      * @return
      *     possible object is
-     *     {@link ActivityClassType }
+     *     {@link String }
      *     
      */
-    public ActivityClassType getTypeActivityClass() {
+    public String getTypeActivityClass() {
         return typeActivityClass;
     }
 
@@ -365,10 +365,10 @@ public class CsActivity {
      * 
      * @param value
      *     allowed object is
-     *     {@link ActivityClassType }
+     *     {@link String }
      *     
      */
-    public void setTypeActivityClass(ActivityClassType value) {
+    public void setTypeActivityClass(String value) {
         this.typeActivityClass = value;
     }
 
@@ -545,10 +545,10 @@ public class CsActivity {
      * 
      * @return
      *     possible object is
-     *     {@link StateDetailActivity }
+     *     {@link String }
      *     
      */
-    public StateDetailActivity getStateDetailActivity() {
+    public String getStateDetailActivity() {
         return stateDetailActivity;
     }
 
@@ -557,10 +557,10 @@ public class CsActivity {
      * 
      * @param value
      *     allowed object is
-     *     {@link StateDetailActivity }
+     *     {@link String }
      *     
      */
-    public void setStateDetailActivity(StateDetailActivity value) {
+    public void setStateDetailActivity(String value) {
         this.stateDetailActivity = value;
     }
 
@@ -665,10 +665,10 @@ public class CsActivity {
      * 
      * @return
      *     possible object is
-     *     {@link ItemState }
+     *     {@link String }
      *     
      */
-    public ItemState getItemState() {
+    public String getItemState() {
         return itemState;
     }
 
@@ -677,10 +677,10 @@ public class CsActivity {
      * 
      * @param value
      *     allowed object is
-     *     {@link ItemState }
+     *     {@link String }
      *     
      */
-    public void setItemState(ItemState value) {
+    public void setItemState(String value) {
         this.itemState = value;
     }
 

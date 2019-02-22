@@ -74,7 +74,7 @@ public class Trajectory
 
     @XmlElement(name = "GrowingStatus", required = true)
     @XmlSchemaType(name = "string")
-    protected ChannelStatus growingStatus;
+    protected String growingStatus;
     @XmlElement(name = "DTimTrajStart")
     protected String dTimTrajStart;
     @XmlElement(name = "DTimTrajEnd")
@@ -103,7 +103,7 @@ public class Trajectory
     protected Boolean finalTraj;
     @XmlElement(name = "AziRef")
     @XmlSchemaType(name = "string")
-    protected AziRef aziRef;
+    protected String aziRef;
     @XmlElement(name = "TrajectoryStation")
     protected List<TrajectoryStation> trajectoryStation;
     @XmlElement(name = "Wellbore", required = true)
@@ -116,10 +116,10 @@ public class Trajectory
      * 
      * @return
      *     possible object is
-     *     {@link ChannelStatus }
+     *     {@link String }
      *     
      */
-    public ChannelStatus getGrowingStatus() {
+    public String getGrowingStatus() {
         return growingStatus;
     }
 
@@ -128,10 +128,10 @@ public class Trajectory
      * 
      * @param value
      *     allowed object is
-     *     {@link ChannelStatus }
+     *     {@link String }
      *     
      */
-    public void setGrowingStatus(ChannelStatus value) {
+    public void setGrowingStatus(String value) {
         this.growingStatus = value;
     }
 
@@ -452,10 +452,10 @@ public class Trajectory
      * 
      * @return
      *     possible object is
-     *     {@link AziRef }
+     *     {@link String }
      *     
      */
-    public AziRef getAziRef() {
+    public String getAziRef() {
         return aziRef;
     }
 
@@ -464,10 +464,10 @@ public class Trajectory
      * 
      * @param value
      *     allowed object is
-     *     {@link AziRef }
+     *     {@link String }
      *     
      */
-    public void setAziRef(AziRef value) {
+    public void setAziRef(String value) {
         this.aziRef = value;
     }
 

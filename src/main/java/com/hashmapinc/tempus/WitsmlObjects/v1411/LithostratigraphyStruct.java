@@ -47,7 +47,7 @@ public class LithostratigraphyStruct {
     @XmlValue
     protected String value;
     @XmlAttribute(name = "kind")
-    protected LithostratigraphyUnit kind;
+    protected String kind;
 
     /**
      * The intended abstract supertype of all user assigned human 
@@ -81,10 +81,10 @@ public class LithostratigraphyStruct {
      * 
      * @return
      *     possible object is
-     *     {@link LithostratigraphyUnit }
+     *     {@link String }
      *     
      */
-    public LithostratigraphyUnit getKind() {
+    public String getKind() {
         return kind;
     }
 
@@ -93,10 +93,10 @@ public class LithostratigraphyStruct {
      * 
      * @param value
      *     allowed object is
-     *     {@link LithostratigraphyUnit }
+     *     {@link String }
      *     
      */
-    public void setKind(LithostratigraphyUnit value) {
+    public void setKind(String value) {
         this.kind = value;
     }
 

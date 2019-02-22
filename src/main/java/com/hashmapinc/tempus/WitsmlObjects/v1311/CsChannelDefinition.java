@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlType;
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
  *         <element name="mnemonic" type="{http://www.witsml.org/schemas/131}str32"/>
- *         <element name="dataType" type="{http://www.witsml.org/schemas/131}LogDataType" minOccurs="0"/>
+ *         <element name="dataType" type="{http://www.witsml.org/schemas/131}String" minOccurs="0"/>
  *         <element name="classWitsml" type="{http://www.witsml.org/schemas/131}RealtimeData" minOccurs="0"/>
  *         <element name="columnIndex" type="{http://www.witsml.org/schemas/131}nonNegativeCount" minOccurs="0"/>
  *         <element name="unit" type="{http://www.witsml.org/schemas/131}uomString" minOccurs="0"/>
@@ -59,7 +59,7 @@ public class CsChannelDefinition {
     @XmlElement(required = true)
     protected String mnemonic;
     @XmlSchemaType(name = "string")
-    protected LogDataType dataType;
+    protected String dataType;
     protected String classWitsml;
     protected Short columnIndex;
     protected String unit;
@@ -99,10 +99,10 @@ public class CsChannelDefinition {
      * 
      * @return
      *     possible object is
-     *     {@link LogDataType }
+     *     {@link String }
      *     
      */
-    public LogDataType getDataType() {
+    public String getDataType() {
         return dataType;
     }
 
@@ -111,10 +111,10 @@ public class CsChannelDefinition {
      * 
      * @param value
      *     allowed object is
-     *     {@link LogDataType }
+     *     {@link String }
      *     
      */
-    public void setDataType(LogDataType value) {
+    public void setDataType(String value) {
         this.dataType = value;
     }
 

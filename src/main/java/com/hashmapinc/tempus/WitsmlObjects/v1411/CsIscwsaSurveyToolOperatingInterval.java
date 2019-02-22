@@ -33,7 +33,7 @@ import javax.xml.bind.annotation.XmlType;
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="mode" type="{http://www.witsml.org/schemas/1series}SurveyToolOperatingMode"/>
+ *         <element name="mode" type="{http://www.witsml.org/schemas/1series}String"/>
  *         <element name="start" type="{http://www.witsml.org/schemas/1series}planeAngleMeasure"/>
  *         <element name="end" type="{http://www.witsml.org/schemas/1series}planeAngleMeasure"/>
  *         <element name="speed" type="{http://www.witsml.org/schemas/1series}velocityMeasure" minOccurs="0"/>
@@ -61,7 +61,7 @@ public class CsIscwsaSurveyToolOperatingInterval {
 
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected SurveyToolOperatingMode mode;
+    protected String mode;
     @XmlElement(required = true)
     protected PlaneAngleMeasure start;
     @XmlElement(required = true)
@@ -77,10 +77,10 @@ public class CsIscwsaSurveyToolOperatingInterval {
      * 
      * @return
      *     possible object is
-     *     {@link SurveyToolOperatingMode }
+     *     {@link String }
      *     
      */
-    public SurveyToolOperatingMode getMode() {
+    public String getMode() {
         return mode;
     }
 
@@ -89,10 +89,10 @@ public class CsIscwsaSurveyToolOperatingInterval {
      * 
      * @param value
      *     allowed object is
-     *     {@link SurveyToolOperatingMode }
+     *     {@link String }
      *     
      */
-    public void setMode(SurveyToolOperatingMode value) {
+    public void setMode(String value) {
         this.mode = value;
     }
 

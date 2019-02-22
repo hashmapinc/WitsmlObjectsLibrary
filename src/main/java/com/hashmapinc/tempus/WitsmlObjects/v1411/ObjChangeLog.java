@@ -72,7 +72,7 @@ public class ObjChangeLog {
     protected String objectType;
     protected String sourceName;
     @XmlSchemaType(name = "string")
-    protected ChangeInfoType lastChangeType;
+    protected String lastChangeType;
     protected String lastChangeInfo;
     protected List<CsChangeHistory> changeHistory;
     protected CsCommonData commonData;
@@ -211,10 +211,10 @@ public class ObjChangeLog {
      * 
      * @return
      *     possible object is
-     *     {@link ChangeInfoType }
+     *     {@link String }
      *     
      */
-    public ChangeInfoType getLastChangeType() {
+    public String getLastChangeType() {
         return lastChangeType;
     }
 
@@ -223,10 +223,10 @@ public class ObjChangeLog {
      * 
      * @param value
      *     allowed object is
-     *     {@link ChangeInfoType }
+     *     {@link String }
      *     
      */
-    public void setLastChangeType(ChangeInfoType value) {
+    public void setLastChangeType(String value) {
         this.lastChangeType = value;
     }
 

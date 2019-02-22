@@ -36,7 +36,7 @@ public class LogarithmicPowerRatioPerLengthMeasure {
     @XmlValue
     protected double value;
     @XmlAttribute(name = "uom", required = true)
-    protected LogarithmicPowerRatioPerLengthUom uom;
+    protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -61,10 +61,10 @@ public class LogarithmicPowerRatioPerLengthMeasure {
      * 
      * @return
      *     possible object is
-     *     {@link LogarithmicPowerRatioPerLengthUom }
+     *     {@link String }
      *     
      */
-    public LogarithmicPowerRatioPerLengthUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -73,10 +73,10 @@ public class LogarithmicPowerRatioPerLengthMeasure {
      * 
      * @param value
      *     allowed object is
-     *     {@link LogarithmicPowerRatioPerLengthUom }
+     *     {@link String }
      *     
      */
-    public void setUom(LogarithmicPowerRatioPerLengthUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

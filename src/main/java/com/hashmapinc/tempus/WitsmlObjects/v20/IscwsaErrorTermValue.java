@@ -55,7 +55,7 @@ public class IscwsaErrorTermValue {
     protected String term;
     @XmlElement(name = "Prop", required = true)
     @XmlSchemaType(name = "string")
-    protected ErrorPropagationMode prop;
+    protected String prop;
     @XmlElement(name = "Bias")
     protected Double bias;
     @XmlElement(name = "Comment")
@@ -96,10 +96,10 @@ public class IscwsaErrorTermValue {
      * 
      * @return
      *     possible object is
-     *     {@link ErrorPropagationMode }
+     *     {@link String }
      *     
      */
-    public ErrorPropagationMode getProp() {
+    public String getProp() {
         return prop;
     }
 
@@ -108,10 +108,10 @@ public class IscwsaErrorTermValue {
      * 
      * @param value
      *     allowed object is
-     *     {@link ErrorPropagationMode }
+     *     {@link String }
      *     
      */
-    public void setProp(ErrorPropagationMode value) {
+    public void setProp(String value) {
         this.prop = value;
     }
 

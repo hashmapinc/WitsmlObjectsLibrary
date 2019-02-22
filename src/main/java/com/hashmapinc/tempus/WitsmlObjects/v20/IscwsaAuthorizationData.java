@@ -55,7 +55,7 @@ public class IscwsaAuthorizationData {
     protected String authority;
     @XmlElement(name = "Status", required = true)
     @XmlSchemaType(name = "string")
-    protected AuthorizationStatus status;
+    protected String status;
     @XmlElement(name = "Version")
     protected String version;
     @XmlElement(name = "Comment")
@@ -138,10 +138,10 @@ public class IscwsaAuthorizationData {
      * 
      * @return
      *     possible object is
-     *     {@link AuthorizationStatus }
+     *     {@link String }
      *     
      */
-    public AuthorizationStatus getStatus() {
+    public String getStatus() {
         return status;
     }
 
@@ -150,10 +150,10 @@ public class IscwsaAuthorizationData {
      * 
      * @param value
      *     allowed object is
-     *     {@link AuthorizationStatus }
+     *     {@link String }
      *     
      */
-    public void setStatus(AuthorizationStatus value) {
+    public void setStatus(String value) {
         this.status = value;
     }
 

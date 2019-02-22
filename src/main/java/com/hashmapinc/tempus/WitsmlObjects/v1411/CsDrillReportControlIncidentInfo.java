@@ -47,8 +47,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         <element name="volMudGained" type="{http://www.witsml.org/schemas/1series}volumeMeasure" minOccurs="0"/>
  *         <element name="presShutInCasing" type="{http://www.witsml.org/schemas/1series}pressureMeasure" minOccurs="0"/>
  *         <element name="presShutInDrill" type="{http://www.witsml.org/schemas/1series}pressureMeasure" minOccurs="0"/>
- *         <element name="incidentType" type="{http://www.witsml.org/schemas/1series}WellControlIncidentType" minOccurs="0"/>
- *         <element name="killingType" type="{http://www.witsml.org/schemas/1series}WellKillingProcedureType" minOccurs="0"/>
+ *         <element name="incidentType" type="{http://www.witsml.org/schemas/1series}String" minOccurs="0"/>
+ *         <element name="killingType" type="{http://www.witsml.org/schemas/1series}String" minOccurs="0"/>
  *         <element name="formation" type="{http://www.witsml.org/schemas/1series}descriptionString" minOccurs="0"/>
  *         <element name="tempBottom" type="{http://www.witsml.org/schemas/1series}thermodynamicTemperatureMeasure" minOccurs="0"/>
  *         <element name="presMaxChoke" type="{http://www.witsml.org/schemas/1series}pressureMeasure" minOccurs="0"/>
@@ -60,8 +60,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   </complexContent>
  * </complexType>
  * } </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "cs_drillReportControlIncidentInfo", propOrder = {
@@ -115,9 +115,9 @@ public class CsDrillReportControlIncidentInfo {
     protected PressureMeasure presShutInCasing;
     protected PressureMeasure presShutInDrill;
     @XmlSchemaType(name = "string")
-    protected WellControlIncidentType incidentType;
+    protected String incidentType;
     @XmlSchemaType(name = "string")
-    protected WellKillingProcedureType killingType;
+    protected String killingType;
     protected String formation;
     protected ThermodynamicTemperatureMeasure tempBottom;
     protected PressureMeasure presMaxChoke;
@@ -128,11 +128,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Gets the value of the dTim property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link XMLGregorianCalendar }
-     *     
+     *
      */
     public XMLGregorianCalendar getDTim() {
         return dTim;
@@ -140,11 +140,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Sets the value of the dTim property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link XMLGregorianCalendar }
-     *     
+     *
      */
     public void setDTim(XMLGregorianCalendar value) {
         this.dTim = value;
@@ -152,11 +152,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Gets the value of the mdInflow property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link MeasuredDepthCoord }
-     *     
+     *
      */
     public MeasuredDepthCoord getMdInflow() {
         return mdInflow;
@@ -164,11 +164,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Sets the value of the mdInflow property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link MeasuredDepthCoord }
-     *     
+     *
      */
     public void setMdInflow(MeasuredDepthCoord value) {
         this.mdInflow = value;
@@ -176,11 +176,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Gets the value of the tvdInflow property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link WellVerticalDepthCoord }
-     *     
+     *
      */
     public WellVerticalDepthCoord getTvdInflow() {
         return tvdInflow;
@@ -188,11 +188,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Sets the value of the tvdInflow property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link WellVerticalDepthCoord }
-     *     
+     *
      */
     public void setTvdInflow(WellVerticalDepthCoord value) {
         this.tvdInflow = value;
@@ -200,11 +200,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Gets the value of the phase property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getPhase() {
         return phase;
@@ -212,11 +212,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Sets the value of the phase property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setPhase(String value) {
         this.phase = value;
@@ -224,11 +224,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Gets the value of the activityCode property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getActivityCode() {
         return activityCode;
@@ -236,11 +236,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Sets the value of the activityCode property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setActivityCode(String value) {
         this.activityCode = value;
@@ -248,25 +248,25 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Gets the value of the proprietaryCode property.
-     * 
+     *
      *
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the proprietaryCode property.
-     * 
+     *
      *
      * For example, to add a new item, do as follows:
      * <pre> {@code
      *    getProprietaryCode().add(newItem);
      * } </pre>
-     * 
-     * 
+     *
+     *
      *
      * Objects of the following type(s) are allowed in the list
      * {@link NameStruct }
-     * 
-     * 
+     *
+     *
      */
     public List<NameStruct> getProprietaryCode() {
         if (proprietaryCode == null) {
@@ -277,11 +277,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Gets the value of the detailActivity property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDetailActivity() {
         return detailActivity;
@@ -289,11 +289,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Sets the value of the detailActivity property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDetailActivity(String value) {
         this.detailActivity = value;
@@ -301,11 +301,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Gets the value of the eTimLost property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link TimeMeasure }
-     *     
+     *
      */
     public TimeMeasure getETimLost() {
         return eTimLost;
@@ -313,11 +313,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Sets the value of the eTimLost property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link TimeMeasure }
-     *     
+     *
      */
     public void setETimLost(TimeMeasure value) {
         this.eTimLost = value;
@@ -325,11 +325,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Gets the value of the dTimRegained property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link XMLGregorianCalendar }
-     *     
+     *
      */
     public XMLGregorianCalendar getDTimRegained() {
         return dTimRegained;
@@ -337,11 +337,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Sets the value of the dTimRegained property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link XMLGregorianCalendar }
-     *     
+     *
      */
     public void setDTimRegained(XMLGregorianCalendar value) {
         this.dTimRegained = value;
@@ -349,11 +349,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Gets the value of the diaBit property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link LengthMeasure }
-     *     
+     *
      */
     public LengthMeasure getDiaBit() {
         return diaBit;
@@ -361,11 +361,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Sets the value of the diaBit property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link LengthMeasure }
-     *     
+     *
      */
     public void setDiaBit(LengthMeasure value) {
         this.diaBit = value;
@@ -373,11 +373,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Gets the value of the mdBit property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link MeasuredDepthCoord }
-     *     
+     *
      */
     public MeasuredDepthCoord getMdBit() {
         return mdBit;
@@ -385,11 +385,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Sets the value of the mdBit property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link MeasuredDepthCoord }
-     *     
+     *
      */
     public void setMdBit(MeasuredDepthCoord value) {
         this.mdBit = value;
@@ -397,11 +397,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Gets the value of the wtMud property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link DensityMeasure }
-     *     
+     *
      */
     public DensityMeasure getWtMud() {
         return wtMud;
@@ -409,11 +409,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Sets the value of the wtMud property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link DensityMeasure }
-     *     
+     *
      */
     public void setWtMud(DensityMeasure value) {
         this.wtMud = value;
@@ -421,11 +421,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Gets the value of the porePressure property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link DensityMeasure }
-     *     
+     *
      */
     public DensityMeasure getPorePressure() {
         return porePressure;
@@ -433,11 +433,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Sets the value of the porePressure property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link DensityMeasure }
-     *     
+     *
      */
     public void setPorePressure(DensityMeasure value) {
         this.porePressure = value;
@@ -445,11 +445,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Gets the value of the diaCsgLast property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link LengthMeasure }
-     *     
+     *
      */
     public LengthMeasure getDiaCsgLast() {
         return diaCsgLast;
@@ -457,11 +457,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Sets the value of the diaCsgLast property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link LengthMeasure }
-     *     
+     *
      */
     public void setDiaCsgLast(LengthMeasure value) {
         this.diaCsgLast = value;
@@ -469,11 +469,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Gets the value of the mdCsgLast property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link MeasuredDepthCoord }
-     *     
+     *
      */
     public MeasuredDepthCoord getMdCsgLast() {
         return mdCsgLast;
@@ -481,11 +481,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Sets the value of the mdCsgLast property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link MeasuredDepthCoord }
-     *     
+     *
      */
     public void setMdCsgLast(MeasuredDepthCoord value) {
         this.mdCsgLast = value;
@@ -493,11 +493,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Gets the value of the volMudGained property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link VolumeMeasure }
-     *     
+     *
      */
     public VolumeMeasure getVolMudGained() {
         return volMudGained;
@@ -505,11 +505,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Sets the value of the volMudGained property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link VolumeMeasure }
-     *     
+     *
      */
     public void setVolMudGained(VolumeMeasure value) {
         this.volMudGained = value;
@@ -517,11 +517,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Gets the value of the presShutInCasing property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link PressureMeasure }
-     *     
+     *
      */
     public PressureMeasure getPresShutInCasing() {
         return presShutInCasing;
@@ -529,11 +529,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Sets the value of the presShutInCasing property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link PressureMeasure }
-     *     
+     *
      */
     public void setPresShutInCasing(PressureMeasure value) {
         this.presShutInCasing = value;
@@ -541,11 +541,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Gets the value of the presShutInDrill property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link PressureMeasure }
-     *     
+     *
      */
     public PressureMeasure getPresShutInDrill() {
         return presShutInDrill;
@@ -553,11 +553,11 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Sets the value of the presShutInDrill property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link PressureMeasure }
-     *     
+     *
      */
     public void setPresShutInDrill(PressureMeasure value) {
         this.presShutInDrill = value;
@@ -565,49 +565,49 @@ public class CsDrillReportControlIncidentInfo {
 
     /**
      * Gets the value of the incidentType property.
-     * 
+     *
      * @return
      *     possible object is
-     *     {@link WellControlIncidentType }
-     *     
+     *     {@link String }
+     *
      */
-    public WellControlIncidentType getIncidentType() {
+    public String getIncidentType() {
         return incidentType;
     }
 
     /**
      * Sets the value of the incidentType property.
-     * 
+     *
      * @param value
      *     allowed object is
-     *     {@link WellControlIncidentType }
-     *     
+     *     {@link String }
+     *
      */
-    public void setIncidentType(WellControlIncidentType value) {
+    public void setIncidentType(String value) {
         this.incidentType = value;
     }
 
     /**
      * Gets the value of the killingType property.
-     * 
+     *
      * @return
      *     possible object is
-     *     {@link WellKillingProcedureType }
-     *     
+     *     {@link String }
+     *
      */
-    public WellKillingProcedureType getKillingType() {
+    public String getKillingType() {
         return killingType;
     }
 
     /**
      * Sets the value of the killingType property.
-     * 
+     *
      * @param value
      *     allowed object is
-     *     {@link WellKillingProcedureType }
-     *     
+     *     {@link String }
+     *
      */
-    public void setKillingType(WellKillingProcedureType value) {
+    public void setKillingType(String value) {
         this.killingType = value;
     }
 

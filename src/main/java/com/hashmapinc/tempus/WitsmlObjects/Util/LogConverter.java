@@ -28,12 +28,10 @@ public class LogConverter {
         dest.setNullValue(src.getNullValue());
         dest.setStartDateTimeIndex(src.getStartDateTimeIndex());
         dest.setEndDateTimeIndex(src.getEndDateTimeIndex());
+        dest.setIndexType(src.getIndexType());
+        dest.setDirection(src.getDirection());
 
         // check complex fields
-        // indexType
-        if (null != src.getIndexType())
-            dest.setIndexType(com.hashmapinc.tempus.WitsmlObjects.v1311.LogIndexType.fromValue(src.getIndexType().value()));
-
         // startIndex
         if (null != src.getStartIndex())
             dest.setStartIndex(src.getStartIndex().to1311GenericMeasure());
@@ -45,10 +43,6 @@ public class LogConverter {
         // stepIncrement
         if (null != src.getStepIncrement())
             dest.setStepIncrement(src.getStepIncrement().to1311RatioGenericMeasure());
-
-        // direction
-        if (null != src.getDirection())
-            dest.setDirection(com.hashmapinc.tempus.WitsmlObjects.v1311.LogIndexDirection.fromValue(src.getDirection().value()));
 
         // indexCurve
         if (null != src.getIndexCurve()) {
@@ -125,12 +119,10 @@ public class LogConverter {
         dest.setNullValue(src.getNullValue());
         dest.setStartDateTimeIndex(src.getStartDateTimeIndex());
         dest.setEndDateTimeIndex(src.getEndDateTimeIndex());
+        dest.setIndexType(src.getIndexType());
+        dest.setDirection(src.getDirection());
 
         // check complex fields
-        // indexType
-        if (null != src.getIndexType())
-            dest.setIndexType(com.hashmapinc.tempus.WitsmlObjects.v1411.LogIndexType.fromValue(src.getIndexType().value()));
-
         // startIndex
         if (null != src.getStartIndex())
             dest.setStartIndex(src.getStartIndex().to1411GenericMeasure());
@@ -142,10 +134,6 @@ public class LogConverter {
         // stepIncrement
         if (null != src.getStepIncrement())
             dest.setStepIncrement(src.getStepIncrement().to1411RatioGenericMeasure());
-
-        // direction
-        if (null != src.getDirection())
-            dest.setDirection(com.hashmapinc.tempus.WitsmlObjects.v1411.LogIndexDirection.fromValue(src.getDirection().value()));
 
         // indexCurve
         if (null != src.getIndexCurve())

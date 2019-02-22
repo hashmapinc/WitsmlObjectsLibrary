@@ -88,7 +88,7 @@ public class CsPump {
     protected XMLGregorianCalendar dTimRemove;
     protected String owner;
     @XmlSchemaType(name = "string")
-    protected PumpType typePump;
+    protected String typePump;
     protected Short numCyl;
     protected LengthMeasure odRod;
     @XmlElement(required = true)
@@ -249,10 +249,10 @@ public class CsPump {
      * 
      * @return
      *     possible object is
-     *     {@link PumpType }
+     *     {@link String }
      *     
      */
-    public PumpType getTypePump() {
+    public String getTypePump() {
         return typePump;
     }
 
@@ -261,10 +261,10 @@ public class CsPump {
      * 
      * @param value
      *     allowed object is
-     *     {@link PumpType }
+     *     {@link String }
      *     
      */
-    public void setTypePump(PumpType value) {
+    public void setTypePump(String value) {
         this.typePump = value;
     }
 

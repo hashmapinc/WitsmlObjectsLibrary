@@ -48,7 +48,7 @@ public class CsMudGas {
     protected VolumePerVolumeMeasure gasAv;
     protected VolumePerVolumeMeasure gasPeak;
     @XmlSchemaType(name = "string")
-    protected GasPeakType gasPeakType;
+    protected String gasPeakType;
     protected VolumePerVolumeMeasure gasBackgnd;
     protected VolumePerVolumeMeasure gasConAv;
     protected VolumePerVolumeMeasure gasConMx;
@@ -107,10 +107,10 @@ public class CsMudGas {
      * 
      * @return
      *     possible object is
-     *     {@link GasPeakType }
+     *     {@link String }
      *     
      */
-    public GasPeakType getGasPeakType() {
+    public String getGasPeakType() {
         return gasPeakType;
     }
 
@@ -119,10 +119,10 @@ public class CsMudGas {
      * 
      * @param value
      *     allowed object is
-     *     {@link GasPeakType }
+     *     {@link String }
      *     
      */
-    public void setGasPeakType(GasPeakType value) {
+    public void setGasPeakType(String value) {
         this.gasPeakType = value;
     }
 

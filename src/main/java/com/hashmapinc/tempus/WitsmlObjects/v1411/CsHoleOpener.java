@@ -52,7 +52,7 @@ import javax.xml.bind.annotation.XmlType;
 public class CsHoleOpener {
 
     @XmlSchemaType(name = "string")
-    protected HoleOpenerType typeHoleOpener;
+    protected String typeHoleOpener;
     protected Short numCutter;
     protected String manufacturer;
     protected LengthMeasure diaHoleOpener;
@@ -64,10 +64,10 @@ public class CsHoleOpener {
      * 
      * @return
      *     possible object is
-     *     {@link HoleOpenerType }
+     *     {@link String }
      *     
      */
-    public HoleOpenerType getTypeHoleOpener() {
+    public String getTypeHoleOpener() {
         return typeHoleOpener;
     }
 
@@ -76,10 +76,10 @@ public class CsHoleOpener {
      * 
      * @param value
      *     allowed object is
-     *     {@link HoleOpenerType }
+     *     {@link String }
      *     
      */
-    public void setTypeHoleOpener(HoleOpenerType value) {
+    public void setTypeHoleOpener(String value) {
         this.typeHoleOpener = value;
     }
 

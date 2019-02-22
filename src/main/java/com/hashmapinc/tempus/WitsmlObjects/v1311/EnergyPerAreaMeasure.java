@@ -30,17 +30,17 @@ public class EnergyPerAreaMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected EnergyPerAreaUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link EnergyPerAreaUom }
+     *     {@link String }
      *     
      */
-    public EnergyPerAreaUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -49,10 +49,10 @@ public class EnergyPerAreaMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link EnergyPerAreaUom }
+     *     {@link String }
      *     
      */
-    public void setUom(EnergyPerAreaUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

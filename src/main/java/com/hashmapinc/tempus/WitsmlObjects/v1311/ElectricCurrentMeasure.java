@@ -30,17 +30,17 @@ public class ElectricCurrentMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected ElectricCurrentUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link ElectricCurrentUom }
+     *     {@link String }
      *     
      */
-    public ElectricCurrentUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -49,10 +49,10 @@ public class ElectricCurrentMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link ElectricCurrentUom }
+     *     {@link String }
      *     
      */
-    public void setUom(ElectricCurrentUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

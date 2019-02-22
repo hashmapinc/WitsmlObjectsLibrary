@@ -29,7 +29,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
  *         <element name="dTim" type="{http://www.witsml.org/schemas/1series}timestamp" minOccurs="0"/>
- *         <element name="readingType" type="{http://www.witsml.org/schemas/1series}GasPeakType" minOccurs="0"/>
+ *         <element name="readingType" type="{http://www.witsml.org/schemas/1series}String" minOccurs="0"/>
  *         <element name="mdTop" type="{http://www.witsml.org/schemas/1series}measuredDepthCoord" minOccurs="0"/>
  *         <element name="mdBottom" type="{http://www.witsml.org/schemas/1series}measuredDepthCoord" minOccurs="0"/>
  *         <element name="tvdTop" type="{http://www.witsml.org/schemas/1series}wellVerticalDepthCoord" minOccurs="0"/>
@@ -75,7 +75,7 @@ public class CsDrillReportGasReadingInfo {
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar dTim;
     @XmlSchemaType(name = "string")
-    protected GasPeakType readingType;
+    protected String readingType;
     protected MeasuredDepthCoord mdTop;
     protected MeasuredDepthCoord mdBottom;
     protected WellVerticalDepthCoord tvdTop;
@@ -121,10 +121,10 @@ public class CsDrillReportGasReadingInfo {
      * 
      * @return
      *     possible object is
-     *     {@link GasPeakType }
+     *     {@link String }
      *     
      */
-    public GasPeakType getReadingType() {
+    public String getReadingType() {
         return readingType;
     }
 
@@ -133,10 +133,10 @@ public class CsDrillReportGasReadingInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link GasPeakType }
+     *     {@link String }
      *     
      */
-    public void setReadingType(GasPeakType value) {
+    public void setReadingType(String value) {
         this.readingType = value;
     }
 

@@ -19,9 +19,9 @@ import javax.xml.bind.annotation.XmlType;
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="type" type="{http://www.witsml.org/schemas/131}IntervalType"/>
+ *         <element name="type" type="{http://www.witsml.org/schemas/131}String"/>
  *         <sequence minOccurs="0">
- *           <element name="method" type="{http://www.witsml.org/schemas/131}IntervalMethod"/>
+ *           <element name="method" type="{http://www.witsml.org/schemas/131}String"/>
  *           <choice>
  *             <element name="timeInterval" type="{http://www.witsml.org/schemas/131}timeMeasure" minOccurs="0"/>
  *             <element name="distanceInterval" type="{http://www.witsml.org/schemas/131}lengthMeasure" minOccurs="0"/>
@@ -46,9 +46,9 @@ public class CsInterval {
 
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected IntervalType type;
+    protected String type;
     @XmlSchemaType(name = "string")
-    protected IntervalMethod method;
+    protected String method;
     protected TimeMeasure timeInterval;
     protected LengthMeasure distanceInterval;
 
@@ -57,10 +57,10 @@ public class CsInterval {
      * 
      * @return
      *     possible object is
-     *     {@link IntervalType }
+     *     {@link String }
      *     
      */
-    public IntervalType getType() {
+    public String getType() {
         return type;
     }
 
@@ -69,10 +69,10 @@ public class CsInterval {
      * 
      * @param value
      *     allowed object is
-     *     {@link IntervalType }
+     *     {@link String }
      *     
      */
-    public void setType(IntervalType value) {
+    public void setType(String value) {
         this.type = value;
     }
 
@@ -81,10 +81,10 @@ public class CsInterval {
      * 
      * @return
      *     possible object is
-     *     {@link IntervalMethod }
+     *     {@link String }
      *     
      */
-    public IntervalMethod getMethod() {
+    public String getMethod() {
         return method;
     }
 
@@ -93,10 +93,10 @@ public class CsInterval {
      * 
      * @param value
      *     allowed object is
-     *     {@link IntervalMethod }
+     *     {@link String }
      *     
      */
-    public void setMethod(IntervalMethod value) {
+    public void setMethod(String value) {
         this.method = value;
     }
 

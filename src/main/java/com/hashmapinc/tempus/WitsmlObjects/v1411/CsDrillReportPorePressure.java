@@ -57,7 +57,7 @@ public class CsDrillReportPorePressure {
 
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected ReadingKind readingKind;
+    protected String readingKind;
     @XmlElement(required = true)
     protected DensityMeasure equivalentMudWeight;
     @XmlSchemaType(name = "dateTime")
@@ -73,10 +73,10 @@ public class CsDrillReportPorePressure {
      * 
      * @return
      *     possible object is
-     *     {@link ReadingKind }
+     *     {@link String }
      *     
      */
-    public ReadingKind getReadingKind() {
+    public String getReadingKind() {
         return readingKind;
     }
 
@@ -85,10 +85,10 @@ public class CsDrillReportPorePressure {
      * 
      * @param value
      *     allowed object is
-     *     {@link ReadingKind }
+     *     {@link String }
      *     
      */
-    public void setReadingKind(ReadingKind value) {
+    public void setReadingKind(String value) {
         this.readingKind = value;
     }
 

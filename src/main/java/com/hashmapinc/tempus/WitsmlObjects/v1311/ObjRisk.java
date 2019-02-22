@@ -78,14 +78,14 @@ public class ObjRisk {
     protected String name;
     protected RefObjectString objectReference;
     @XmlSchemaType(name = "string")
-    protected RiskType type;
+    protected String type;
     @XmlSchemaType(name = "string")
-    protected RiskCategory category;
+    protected String category;
     @XmlSchemaType(name = "string")
-    protected RiskSubCategory subCategory;
+    protected String subCategory;
     protected String extendCategory;
     @XmlSchemaType(name = "string")
-    protected List<RiskAffectedPersonnel> affectedPersonnel;
+    protected List<String> affectedPersonnel;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar dTimStart;
     @XmlSchemaType(name = "dateTime")
@@ -214,10 +214,10 @@ public class ObjRisk {
      * 
      * @return
      *     possible object is
-     *     {@link RiskType }
+     *     {@link String }
      *     
      */
-    public RiskType getType() {
+    public String getType() {
         return type;
     }
 
@@ -226,10 +226,10 @@ public class ObjRisk {
      * 
      * @param value
      *     allowed object is
-     *     {@link RiskType }
+     *     {@link String }
      *     
      */
-    public void setType(RiskType value) {
+    public void setType(String value) {
         this.type = value;
     }
 
@@ -238,10 +238,10 @@ public class ObjRisk {
      * 
      * @return
      *     possible object is
-     *     {@link RiskCategory }
+     *     {@link String }
      *     
      */
-    public RiskCategory getCategory() {
+    public String getCategory() {
         return category;
     }
 
@@ -250,10 +250,10 @@ public class ObjRisk {
      * 
      * @param value
      *     allowed object is
-     *     {@link RiskCategory }
+     *     {@link String }
      *     
      */
-    public void setCategory(RiskCategory value) {
+    public void setCategory(String value) {
         this.category = value;
     }
 
@@ -262,10 +262,10 @@ public class ObjRisk {
      * 
      * @return
      *     possible object is
-     *     {@link RiskSubCategory }
+     *     {@link String }
      *     
      */
-    public RiskSubCategory getSubCategory() {
+    public String getSubCategory() {
         return subCategory;
     }
 
@@ -274,10 +274,10 @@ public class ObjRisk {
      * 
      * @param value
      *     allowed object is
-     *     {@link RiskSubCategory }
+     *     {@link String }
      *     
      */
-    public void setSubCategory(RiskSubCategory value) {
+    public void setSubCategory(String value) {
         this.subCategory = value;
     }
 
@@ -323,13 +323,13 @@ public class ObjRisk {
      * 
      *
      * Objects of the following type(s) are allowed in the list
-     * {@link RiskAffectedPersonnel }
+     * {@link String }
      * 
      * 
      */
-    public List<RiskAffectedPersonnel> getAffectedPersonnel() {
+    public List<String> getAffectedPersonnel() {
         if (affectedPersonnel == null) {
-            affectedPersonnel = new ArrayList<RiskAffectedPersonnel>();
+            affectedPersonnel = new ArrayList<String>();
         }
         return this.affectedPersonnel;
     }
