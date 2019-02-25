@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Represents an array of doubles based on an origin and a multi-dimensional offset. The offset is based on a linearization of a multi-dimensional offset.
+ * Represents an array of Doubles based on an origin and a multi-dimensional offset. The offset is based on a linearization of a multi-dimensional offset.
  * 
  * If count(i) is the number of elements in the dimension i and offset(i) is the offset in the dimension i, then:
  * globalOffsetInNDimension = startValue+ ni*offset(n) + n_1i*count(n)*offset(n-1) + .... + 0i*count(n)*count(n-1)*....count(1)*offset(0)
@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlType;
  *   <complexContent>
  *     <extension base="{http://www.energistics.org/energyml/data/commonv2}AbstractFloatingPointArray">
  *       <sequence>
- *         <element name="StartValue" type="{http://www.w3.org/2001/XMLSchema}double"/>
+ *         <element name="StartValue" type="{http://www.w3.org/2001/XMLSchema}Double"/>
  *         <element name="Offset" type="{http://www.energistics.org/energyml/data/commonv2}FloatingPointConstantArray" maxOccurs="unbounded"/>
  *       </sequence>
  *     </extension>
@@ -46,7 +46,7 @@ public class FloatingPointLatticeArray
 {
 
     @XmlElement(name = "StartValue")
-    protected double startValue;
+    protected Double startValue;
     @XmlElement(name = "Offset", required = true)
     protected List<FloatingPointConstantArray> offset;
 
@@ -54,7 +54,7 @@ public class FloatingPointLatticeArray
      * Gets the value of the startValue property.
      * 
      */
-    public double getStartValue() {
+    public Double getStartValue() {
         return startValue;
     }
 
@@ -62,7 +62,7 @@ public class FloatingPointLatticeArray
      * Sets the value of the startValue property.
      * 
      */
-    public void setStartValue(double value) {
+    public void setStartValue(Double value) {
         this.startValue = value;
     }
 

@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Parameter containing a double value.
+ * Parameter containing a Double value.
  * 
  * <p>Java class for DoubleQuantityParameter complex type.
  * 
@@ -21,7 +21,7 @@ import javax.xml.bind.annotation.XmlType;
  *   <complexContent>
  *     <extension base="{http://www.energistics.org/energyml/data/commonv2}AbstractActivityParameter">
  *       <sequence>
- *         <element name="Value" type="{http://www.w3.org/2001/XMLSchema}double"/>
+ *         <element name="Value" type="{http://www.w3.org/2001/XMLSchema}Double"/>
  *         <element name="Uom" type="{http://www.energistics.org/energyml/data/commonv2}UnitOfMeasureExt"/>
  *         <element name="CustomUnitDictionary" type="{http://www.energistics.org/energyml/data/commonv2}DataObjectReference" minOccurs="0"/>
  *       </sequence>
@@ -43,7 +43,7 @@ public class DoubleQuantityParameter
 {
 
     @XmlElement(name = "Value")
-    protected double value;
+    protected Double value;
     @XmlElement(name = "Uom", required = true)
     protected String uom;
     @XmlElement(name = "CustomUnitDictionary")
@@ -53,7 +53,7 @@ public class DoubleQuantityParameter
      * Gets the value of the value property.
      * 
      */
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -61,7 +61,7 @@ public class DoubleQuantityParameter
      * Sets the value of the value property.
      * 
      */
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 

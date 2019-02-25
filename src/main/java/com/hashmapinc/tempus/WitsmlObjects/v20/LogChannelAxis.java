@@ -22,8 +22,8 @@ import javax.xml.bind.annotation.XmlType;
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="AxisStart" type="{http://www.w3.org/2001/XMLSchema}double"/>
- *         <element name="AxisSpacing" type="{http://www.w3.org/2001/XMLSchema}double"/>
+ *         <element name="AxisStart" type="{http://www.w3.org/2001/XMLSchema}Double"/>
+ *         <element name="AxisSpacing" type="{http://www.w3.org/2001/XMLSchema}Double"/>
  *         <element name="AxisCount" type="{http://www.energistics.org/energyml/data/commonv2}PositiveLong"/>
  *         <element name="AxisName" type="{http://www.energistics.org/energyml/data/commonv2}String64" minOccurs="0"/>
  *         <element name="AxisPropertyKind" type="{http://www.energistics.org/energyml/data/commonv2}String64"/>
@@ -49,9 +49,9 @@ import javax.xml.bind.annotation.XmlType;
 public class LogChannelAxis {
 
     @XmlElement(name = "AxisStart")
-    protected double axisStart;
+    protected Double axisStart;
     @XmlElement(name = "AxisSpacing")
-    protected double axisSpacing;
+    protected Double axisSpacing;
     @XmlElement(name = "AxisCount")
     protected long axisCount;
     @XmlElement(name = "AxisName")
@@ -67,7 +67,7 @@ public class LogChannelAxis {
      * Gets the value of the axisStart property.
      * 
      */
-    public double getAxisStart() {
+    public Double getAxisStart() {
         return axisStart;
     }
 
@@ -75,7 +75,7 @@ public class LogChannelAxis {
      * Sets the value of the axisStart property.
      * 
      */
-    public void setAxisStart(double value) {
+    public void setAxisStart(Double value) {
         this.axisStart = value;
     }
 
@@ -83,7 +83,7 @@ public class LogChannelAxis {
      * Gets the value of the axisSpacing property.
      * 
      */
-    public double getAxisSpacing() {
+    public Double getAxisSpacing() {
         return axisSpacing;
     }
 
@@ -91,7 +91,7 @@ public class LogChannelAxis {
      * Sets the value of the axisSpacing property.
      * 
      */
-    public void setAxisSpacing(double value) {
+    public void setAxisSpacing(Double value) {
         this.axisSpacing = value;
     }
 

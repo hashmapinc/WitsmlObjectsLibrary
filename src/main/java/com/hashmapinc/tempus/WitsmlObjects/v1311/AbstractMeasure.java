@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlValue;
 /**
  * The intended abstract supertype of all quantities that have a value 
  * 			with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
- * 			This type allows all quantities to be profiled to be a 'float' instead of a 'double'.
+ * 			This type allows all quantities to be profiled to be a 'float' instead of a 'Double'.
  * 
  * <p>Java class for abstractMeasure complex type.
  * 
@@ -84,7 +84,7 @@ public abstract class AbstractMeasure {
     protected Double value;
 
     /**
-     * This type disallows an "empty" double value.
+     * This type disallows an "empty" Double value.
      * 			This type should not be used directly except to derive another type.
      * @return returns the value as a Double
      */
@@ -96,7 +96,7 @@ public abstract class AbstractMeasure {
      * Sets the value of the value property.
      * @param value The value to set as a Double
      */
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 

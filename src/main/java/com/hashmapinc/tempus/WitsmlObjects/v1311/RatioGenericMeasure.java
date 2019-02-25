@@ -7,14 +7,14 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Representation of a number as a double, possibly qualified as a ratio of doubles.	
+ * Representation of a number as a Double, possibly qualified as a ratio of Doubles.
  * 			Ratio component attributes 'numerator' and 'denominator' may be both present or both absent.	
  * 			When ratio component attributes are present, the ratio represented is to be used with
- * 			the double representation included for human readability.
+ * 			the Double representation included for human readability.
  * 			A 'canonical' representation, according to the following rules, is suggested:
- * 			Only use numerator/denominator when the representation of the number as double is not 
+ * 			Only use numerator/denominator when the representation of the number as Double is not
  * 			sufficiently precise (i. e. causes errors of accumulation).
- * 			Express both numerator and denominator as integers (doubles with integer values) reduced 
+ * 			Express both numerator and denominator as integers (Doubles with integer values) reduced
  * 			to 'least common denominator' if possible.
  * 
  * <p>Java class for ratioGenericMeasure complex type.

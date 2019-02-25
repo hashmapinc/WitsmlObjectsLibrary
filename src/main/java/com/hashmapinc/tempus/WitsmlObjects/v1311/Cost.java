@@ -31,17 +31,17 @@ import javax.xml.bind.annotation.XmlValue;
 public class Cost {
 
     @XmlValue
-    protected double value;
+    protected Double value;
     @XmlAttribute(name = "currency")
     protected String currency;
 
     /**
-     * This type disallows an "empty" double value.
+     * This type disallows an "empty" Double value.
      * 			This type should not be used directly except to derive another type.
      *
-     * @return The value of the value property as double
+     * @return The value of the value property as Double
      */
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -50,7 +50,7 @@ public class Cost {
      *
      * @param value The value to set the value property to
      */
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 

@@ -61,7 +61,7 @@
             <eml:Format>Mapforce</eml:Format>
          </eml:Citation>
          <Mnemonic>Mdepth</Mnemonic>
-         <DataType>double</DataType>
+         <DataType>Double</DataType>
          <Uom>m</Uom>
          <GrowingStatus>active</GrowingStatus>
          <TimeDepth>time</TimeDepth>
@@ -98,7 +98,7 @@
             <eml:Format>Mapforce</eml:Format>
          </eml:Citation>
          <Mnemonic>Vdepth</Mnemonic>
-         <DataType>double</DataType>
+         <DataType>Double</DataType>
          <Uom>m</Uom>
          <GrowingStatus>active</GrowingStatus>
          <TimeDepth>time</TimeDepth>
@@ -135,7 +135,7 @@
             <eml:Format>Mapforce</eml:Format>
          </eml:Citation>
          <Mnemonic>Bit Dist</Mnemonic>
-         <DataType>double</DataType>
+         <DataType>Double</DataType>
          <Uom>m</Uom>
          <GrowingStatus>active</GrowingStatus>
          <TimeDepth>time</TimeDepth>
@@ -172,7 +172,7 @@
             <eml:Format>Mapforce</eml:Format>
          </eml:Citation>
          <Mnemonic>TQ on btm</Mnemonic>
-         <DataType>double</DataType>
+         <DataType>Double</DataType>
          <Uom>m</Uom>
          <GrowingStatus>active</GrowingStatus>
          <TimeDepth>time</TimeDepth>
@@ -209,7 +209,7 @@
             <eml:Format>Mapforce</eml:Format>
          </eml:Citation>
          <Mnemonic>TQ off btm</Mnemonic>
-         <DataType>double</DataType>
+         <DataType>Double</DataType>
          <Uom>m</Uom>
          <GrowingStatus>active</GrowingStatus>
          <TimeDepth>time</TimeDepth>
@@ -246,7 +246,7 @@
             <eml:Format>Mapforce</eml:Format>
          </eml:Citation>
          <Mnemonic>ROP</Mnemonic>
-         <DataType>double</DataType>
+         <DataType>Double</DataType>
          <Uom>m</Uom>
          <GrowingStatus>active</GrowingStatus>
          <TimeDepth>time</TimeDepth>
@@ -283,7 +283,7 @@
             <eml:Format>Mapforce</eml:Format>
          </eml:Citation>
          <Mnemonic>WOP</Mnemonic>
-         <DataType>double</DataType>
+         <DataType>Double</DataType>
          <Uom>m</Uom>
          <GrowingStatus>active</GrowingStatus>
          <TimeDepth>time</TimeDepth>
@@ -320,7 +320,7 @@
             <eml:Format>Mapforce</eml:Format>
          </eml:Citation>
          <Mnemonic>HKLD</Mnemonic>
-         <DataType>double</DataType>
+         <DataType>Double</DataType>
          <Uom>m</Uom>
          <GrowingStatus>active</GrowingStatus>
          <TimeDepth>time</TimeDepth>
@@ -357,7 +357,7 @@
             <eml:Format>Mapforce</eml:Format>
          </eml:Citation>
          <Mnemonic>Surf RPM</Mnemonic>
-         <DataType>double</DataType>
+         <DataType>Double</DataType>
          <Uom>m</Uom>
          <GrowingStatus>active</GrowingStatus>
          <TimeDepth>time</TimeDepth>
@@ -394,7 +394,7 @@
             <eml:Format>Mapforce</eml:Format>
          </eml:Citation>
          <Mnemonic>Mtr RPM</Mnemonic>
-         <DataType>double</DataType>
+         <DataType>Double</DataType>
          <Uom>m</Uom>
          <GrowingStatus>active</GrowingStatus>
          <TimeDepth>time</TimeDepth>
@@ -431,7 +431,7 @@
             <eml:Format>Mapforce</eml:Format>
          </eml:Citation>
          <Mnemonic>Avg TQ</Mnemonic>
-         <DataType>double</DataType>
+         <DataType>Double</DataType>
          <Uom>m</Uom>
          <GrowingStatus>active</GrowingStatus>
          <TimeDepth>time</TimeDepth>
@@ -468,7 +468,7 @@
             <eml:Format>Mapforce</eml:Format>
          </eml:Citation>
          <Mnemonic>Max TQ</Mnemonic>
-         <DataType>double</DataType>
+         <DataType>Double</DataType>
          <Uom>m</Uom>
          <GrowingStatus>active</GrowingStatus>
          <TimeDepth>time</TimeDepth>
@@ -505,7 +505,7 @@
             <eml:Format>Mapforce</eml:Format>
          </eml:Citation>
          <Mnemonic>Min TQ</Mnemonic>
-         <DataType>double</DataType>
+         <DataType>Double</DataType>
          <Uom>m</Uom>
          <GrowingStatus>active</GrowingStatus>
          <TimeDepth>time</TimeDepth>
@@ -542,7 +542,7 @@
             <eml:Format>Mapforce</eml:Format>
          </eml:Citation>
          <Mnemonic>Max - Min TQ</Mnemonic>
-         <DataType>double</DataType>
+         <DataType>Double</DataType>
          <Uom>m</Uom>
          <GrowingStatus>active</GrowingStatus>
          <TimeDepth>time</TimeDepth>
@@ -579,7 +579,7 @@
             <eml:Format>Mapforce</eml:Format>
          </eml:Citation>
          <Mnemonic>Max - Min TQ</Mnemonic>
-         <DataType>double</DataType>
+         <DataType>Double</DataType>
          <Uom>m</Uom>
          <GrowingStatus>active</GrowingStatus>
          <TimeDepth>time</TimeDepth>
@@ -616,7 +616,7 @@
             <eml:Format>Mapforce</eml:Format>
          </eml:Citation>
          <Mnemonic>Pump p avg</Mnemonic>
-         <DataType>double</DataType>
+         <DataType>Double</DataType>
          <Uom>m</Uom>
          <GrowingStatus>active</GrowingStatus>
          <TimeDepth>time</TimeDepth>
@@ -653,7 +653,7 @@
             <eml:Format>Mapforce</eml:Format>
          </eml:Citation>
          <Mnemonic>Mud D avg</Mnemonic>
-         <DataType>double</DataType>
+         <DataType>Double</DataType>
          <Uom>m</Uom>
          <GrowingStatus>active</GrowingStatus>
          <TimeDepth>time</TimeDepth>
@@ -690,7 +690,7 @@
             <eml:Format>Mapforce</eml:Format>
          </eml:Citation>
          <Mnemonic>Mud Temp avg</Mnemonic>
-         <DataType>double</DataType>
+         <DataType>Double</DataType>
          <Uom>m</Uom>
          <GrowingStatus>active</GrowingStatus>
          <TimeDepth>time</TimeDepth>
@@ -727,7 +727,7 @@
             <eml:Format>Mapforce</eml:Format>
          </eml:Citation>
          <Mnemonic>Bit RPM</Mnemonic>
-         <DataType>double</DataType>
+         <DataType>Double</DataType>
          <Uom>m</Uom>
          <GrowingStatus>active</GrowingStatus>
          <TimeDepth>time</TimeDepth>
@@ -764,7 +764,7 @@
             <eml:Format>Mapforce</eml:Format>
          </eml:Citation>
          <Mnemonic>DXC</Mnemonic>
-         <DataType>double</DataType>
+         <DataType>Double</DataType>
          <Uom>m</Uom>
          <GrowingStatus>active</GrowingStatus>
          <TimeDepth>time</TimeDepth>
@@ -801,7 +801,7 @@
             <eml:Format>Mapforce</eml:Format>
          </eml:Citation>
          <Mnemonic>ECD</Mnemonic>
-         <DataType>double</DataType>
+         <DataType>Double</DataType>
          <Uom>m</Uom>
          <GrowingStatus>active</GrowingStatus>
          <TimeDepth>time</TimeDepth>

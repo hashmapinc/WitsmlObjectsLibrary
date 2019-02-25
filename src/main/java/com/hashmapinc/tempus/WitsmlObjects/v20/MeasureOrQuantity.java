@@ -36,17 +36,17 @@ import javax.xml.bind.annotation.XmlValue;
 public class MeasureOrQuantity {
 
     @XmlValue
-    protected double value;
+    protected Double value;
     @XmlAttribute(name = "uom", required = true)
     protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
      * 
-     * This type allows all quantities to be profiled to be a 'float' instead of a 'double'.
+     * This type allows all quantities to be profiled to be a 'float' instead of a 'Double'.
      * 
      */
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -54,7 +54,7 @@ public class MeasureOrQuantity {
      * Sets the value of the value property.
      * 
      */
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 

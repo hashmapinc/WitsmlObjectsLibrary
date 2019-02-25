@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Used to store explicit string values, i.e., values that are not double, boolean or integers. The datatype of the values will be identified by means of the HDF5 API.
+ * Used to store explicit string values, i.e., values that are not Double, boolean or integers. The datatype of the values will be identified by means of the HDF5 API.
  * 
  * <p>Java class for StringExternalArray complex type.
  * 

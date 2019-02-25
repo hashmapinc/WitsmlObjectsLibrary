@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlType;
  *       <sequence>
  *         <element name="Term" type="{http://www.energistics.org/energyml/data/commonv2}String64"/>
  *         <element name="Prop" type="{http://www.energistics.org/energyml/data/witsmlv2}ErrorPropagationMode"/>
- *         <element name="Bias" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
+ *         <element name="Bias" type="{http://www.w3.org/2001/XMLSchema}Double" minOccurs="0"/>
  *         <element name="Comment" type="{http://www.energistics.org/energyml/data/commonv2}String2000" minOccurs="0"/>
  *         <element name="ExtensionNameValue" type="{http://www.energistics.org/energyml/data/commonv2}ExtensionNameValue" maxOccurs="unbounded" minOccurs="0"/>
  *         <element name="Value" type="{http://www.energistics.org/energyml/data/witsmlv2}MeasureOrQuantity"/>
