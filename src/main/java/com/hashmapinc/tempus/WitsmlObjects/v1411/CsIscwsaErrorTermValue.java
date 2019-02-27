@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlType;
  *       <sequence>
  *         <element name="term" type="{http://www.witsml.org/schemas/1series}refNameString"/>
  *         <element name="prop" type="{http://www.witsml.org/schemas/1series}String"/>
- *         <element name="bias" type="{http://www.w3.org/2001/XMLSchema}Double" minOccurs="0"/>
+ *         <element name="bias" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
  *         <element name="value" type="{http://www.witsml.org/schemas/1series}measureOrQuantity"/>
  *         <element name="comment" type="{http://www.witsml.org/schemas/1series}commentString" minOccurs="0"/>
  *         <element name="extensionNameValue" type="{http://www.witsml.org/schemas/1series}cs_extensionNameValue" maxOccurs="unbounded" minOccurs="0"/>

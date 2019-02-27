@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.XmlType;
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
  *         <element name="name" type="{http://www.witsml.org/schemas/1series}nameString"/>
- *         <element name="value" type="{http://www.w3.org/2001/XMLSchema}Double"/>
+ *         <element name="value" type="{http://www.w3.org/2001/XMLSchema}double"/>
  *         <element name="unit" type="{http://www.witsml.org/schemas/1series}uomString"/>
  *         <element name="description" type="{http://www.witsml.org/schemas/1series}commentString"/>
  *         <element name="extensionNameValue" type="{http://www.witsml.org/schemas/1series}cs_extensionNameValue" maxOccurs="unbounded" minOccurs="0"/>
@@ -55,7 +55,7 @@ public class CsIscwsaNomenclatureConstant {
 
     @XmlElement(required = true)
     protected String name;
-    protected Double value;
+    protected double value;
     @XmlElement(required = true)
     protected String unit;
     @XmlElement(required = true)
@@ -92,7 +92,7 @@ public class CsIscwsaNomenclatureConstant {
      * Gets the value of the value property.
      * 
      */
-    public Double getValue() {
+    public double getValue() {
         return value;
     }
 
@@ -100,7 +100,7 @@ public class CsIscwsaNomenclatureConstant {
      * Sets the value of the value property.
      * 
      */
-    public void setValue(Double value) {
+    public void setValue(double value) {
         this.value = value;
     }
 

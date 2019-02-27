@@ -45,7 +45,7 @@ They totally artificial and are not intended to demonstrate best practices.
 			<curveDescription>Measured depth</curveDescription>
 			<sensorOffset uom="m">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-2">
 			<mnemonic>Vdepth</mnemonic>
@@ -58,7 +58,7 @@ They totally artificial and are not intended to demonstrate best practices.
 			<curveDescription>Vertical depth</curveDescription>
 			<sensorOffset uom="m">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-3">
 			<mnemonic>Bit Dist</mnemonic>
@@ -71,7 +71,7 @@ They totally artificial and are not intended to demonstrate best practices.
 			<curveDescription>Distance drilled by bit</curveDescription>
 			<sensorOffset uom="m">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-4">
 			<mnemonic>TQ on btm</mnemonic>
@@ -84,7 +84,7 @@ They totally artificial and are not intended to demonstrate best practices.
 			<curveDescription>On bottom torque</curveDescription>
 			<sensorOffset uom="m">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-5">
 			<mnemonic>TQ off btm</mnemonic>
@@ -97,7 +97,7 @@ They totally artificial and are not intended to demonstrate best practices.
 			<curveDescription>Off bottom torque</curveDescription>
 			<sensorOffset uom="m">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-6">
 			<mnemonic>ROP</mnemonic>
@@ -110,7 +110,7 @@ They totally artificial and are not intended to demonstrate best practices.
 			<curveDescription>Drill rate</curveDescription>
 			<sensorOffset uom="m">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-7">
 			<mnemonic>WOP</mnemonic>
@@ -123,7 +123,7 @@ They totally artificial and are not intended to demonstrate best practices.
 			<curveDescription>Weight on bit</curveDescription>
 			<sensorOffset uom="m">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-8">
 			<mnemonic>HKLD</mnemonic>
@@ -136,7 +136,7 @@ They totally artificial and are not intended to demonstrate best practices.
 			<curveDescription>Hookload</curveDescription>
 			<sensorOffset uom="m">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-9">
 			<mnemonic>Surf RPM</mnemonic>
@@ -149,7 +149,7 @@ They totally artificial and are not intended to demonstrate best practices.
 			<curveDescription>RPM measured at surface</curveDescription>
 			<sensorOffset uom="m">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-10">
 			<mnemonic>Mtr RPM</mnemonic>
@@ -162,7 +162,7 @@ They totally artificial and are not intended to demonstrate best practices.
 			<curveDescription>Calculated motor RPM</curveDescription>
 			<sensorOffset uom="m">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-11">
 			<mnemonic>Avg TQ</mnemonic>
@@ -175,7 +175,7 @@ They totally artificial and are not intended to demonstrate best practices.
 			<curveDescription>Average drilling torque</curveDescription>
 			<sensorOffset uom="m">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-12">
 			<mnemonic>Max TQ</mnemonic>
@@ -188,7 +188,7 @@ They totally artificial and are not intended to demonstrate best practices.
 			<curveDescription>Maximum drilling torque</curveDescription>
 			<sensorOffset uom="m">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-13">
 			<mnemonic>Min TQ</mnemonic>
@@ -201,7 +201,7 @@ They totally artificial and are not intended to demonstrate best practices.
 			<curveDescription>Minimum drilling torque</curveDescription>
 			<sensorOffset uom="m">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-14">
 			<mnemonic>Max - Min TQ</mnemonic>
@@ -214,7 +214,7 @@ They totally artificial and are not intended to demonstrate best practices.
 			<curveDescription>Maximum - minimum drilling torque</curveDescription>
 			<sensorOffset uom="m">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-15">
 			<mnemonic>Max - Min TQ</mnemonic>
@@ -227,7 +227,7 @@ They totally artificial and are not intended to demonstrate best practices.
 			<curveDescription>Average mud flow in</curveDescription>
 			<sensorOffset uom="m">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-16">
 			<mnemonic>Pump p avg</mnemonic>
@@ -240,7 +240,7 @@ They totally artificial and are not intended to demonstrate best practices.
 			<curveDescription>Average pump pressure</curveDescription>
 			<sensorOffset uom="m">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-17">
 			<mnemonic>Mud D avg</mnemonic>
@@ -253,7 +253,7 @@ They totally artificial and are not intended to demonstrate best practices.
 			<curveDescription>Average mud density</curveDescription>
 			<sensorOffset uom="m">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-18">
 			<mnemonic>Mud Temp avg</mnemonic>
@@ -266,7 +266,7 @@ They totally artificial and are not intended to demonstrate best practices.
 			<curveDescription>Average mud temperature</curveDescription>
 			<sensorOffset uom="m">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-19">
 			<mnemonic>Bit RPM</mnemonic>
@@ -279,7 +279,7 @@ They totally artificial and are not intended to demonstrate best practices.
 			<curveDescription>Bit RPM</curveDescription>
 			<sensorOffset uom="m">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-20">
 			<mnemonic>DXC</mnemonic>
@@ -291,7 +291,7 @@ They totally artificial and are not intended to demonstrate best practices.
 			<curveDescription>d exponent</curveDescription>
 			<sensorOffset uom="m">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-21">
 			<mnemonic>ECD</mnemonic>
@@ -304,7 +304,7 @@ They totally artificial and are not intended to demonstrate best practices.
 			<curveDescription>equivalent circulating density</curveDescription>
 			<sensorOffset uom="m">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logData>
 			<mnemonicList>Mdepth,Vdepth,Bit Dist,TQ on btm,TQ off btm,ROP,WOP,HKLD,Surf RPM,Mtr RPM,Avg TQ,Max TQ,Min TQ,Max - Min TQ,Max - Min TQ,Pump p avg,Mud D avg,Mud Temp avg,Bit RPM,DXC,ECD</mnemonicList>

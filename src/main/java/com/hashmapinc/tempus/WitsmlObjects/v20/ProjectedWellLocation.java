@@ -21,8 +21,8 @@ import javax.xml.bind.annotation.XmlType;
  *   <complexContent>
  *     <extension base="{http://www.energistics.org/energyml/data/witsmlv2}AbstractWellLocation">
  *       <sequence>
- *         <element name="Coordinate1" type="{http://www.w3.org/2001/XMLSchema}Double"/>
- *         <element name="Coordinate2" type="{http://www.w3.org/2001/XMLSchema}Double"/>
+ *         <element name="Coordinate1" type="{http://www.w3.org/2001/XMLSchema}double"/>
+ *         <element name="Coordinate2" type="{http://www.w3.org/2001/XMLSchema}double"/>
  *         <element name="Crs" type="{http://www.energistics.org/energyml/data/commonv2}AbstractProjectedCrs"/>
  *       </sequence>
  *     </extension>
@@ -43,9 +43,9 @@ public class ProjectedWellLocation
 {
 
     @XmlElement(name = "Coordinate1")
-    protected Double coordinate1;
+    protected double coordinate1;
     @XmlElement(name = "Coordinate2")
-    protected Double coordinate2;
+    protected double coordinate2;
     @XmlElement(name = "Crs", required = true)
     protected AbstractProjectedCrs crs;
 
@@ -53,7 +53,7 @@ public class ProjectedWellLocation
      * Gets the value of the coordinate1 property.
      * 
      */
-    public Double getCoordinate1() {
+    public double getCoordinate1() {
         return coordinate1;
     }
 
@@ -61,7 +61,7 @@ public class ProjectedWellLocation
      * Sets the value of the coordinate1 property.
      * 
      */
-    public void setCoordinate1(Double value) {
+    public void setCoordinate1(double value) {
         this.coordinate1 = value;
     }
 
@@ -69,7 +69,7 @@ public class ProjectedWellLocation
      * Gets the value of the coordinate2 property.
      * 
      */
-    public Double getCoordinate2() {
+    public double getCoordinate2() {
         return coordinate2;
     }
 
@@ -77,7 +77,7 @@ public class ProjectedWellLocation
      * Sets the value of the coordinate2 property.
      * 
      */
-    public void setCoordinate2(Double value) {
+    public void setCoordinate2(double value) {
         this.coordinate2 = value;
     }
 

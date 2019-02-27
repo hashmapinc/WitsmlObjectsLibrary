@@ -41,7 +41,7 @@ public class PlaneAngleMeasure {
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
      * 
-     * This type allows all quantities to be profiled to be a 'float' instead of a 'Double'.
+     * This type allows all quantities to be profiled to be a 'float' instead of a 'double'.
      * 
      */
     public Double getValue() {

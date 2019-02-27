@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *         <element name="GyroInitialization" type="{http://www.energistics.org/energyml/data/commonv2}PlaneAngleMeasure" minOccurs="0"/>
  *         <element name="GyroReinitializationDistance" type="{http://www.energistics.org/energyml/data/commonv2}LengthMeasure" minOccurs="0"/>
  *         <element name="Switching" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
- *         <element name="NoiseReductionFactor" type="{http://www.w3.org/2001/XMLSchema}Double" minOccurs="0"/>
+ *         <element name="NoiseReductionFactor" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
  *         <element name="GyroRunningSpeed" type="{http://www.energistics.org/energyml/data/commonv2}LengthPerTimeMeasure" minOccurs="0"/>
  *       </sequence>
  *     </restriction>

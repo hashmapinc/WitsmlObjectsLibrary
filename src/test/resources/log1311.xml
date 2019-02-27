@@ -44,7 +44,7 @@
 			<curveDescription>Measured depth</curveDescription>
 			<sensorOffset uom="ft">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-2">
 			<mnemonic>Vdepth</mnemonic>
@@ -58,7 +58,7 @@
 			<curveDescription>Vertical depth</curveDescription>
 			<sensorOffset uom="ft">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-3">
 			<mnemonic>Bit Dist</mnemonic>
@@ -72,7 +72,7 @@
 			<curveDescription>Distance drilled by bit</curveDescription>
 			<sensorOffset uom="ft">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-4">
 			<mnemonic>TQ on btm</mnemonic>
@@ -86,7 +86,7 @@
 			<curveDescription>On bottom torque</curveDescription>
 			<sensorOffset uom="ft">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-5">
 			<mnemonic>TQ off btm</mnemonic>
@@ -100,7 +100,7 @@
 			<curveDescription>Off bottom torque</curveDescription>
 			<sensorOffset uom="ft">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-6">
 			<mnemonic>ROP</mnemonic>
@@ -114,7 +114,7 @@
 			<curveDescription>Drill rate</curveDescription>
 			<sensorOffset uom="ft">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-7">
 			<mnemonic>WOP</mnemonic>
@@ -128,7 +128,7 @@
 			<curveDescription>Weight on bit</curveDescription>
 			<sensorOffset uom="ft">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-8">
 			<mnemonic>HKLD</mnemonic>
@@ -142,7 +142,7 @@
 			<curveDescription>Hookload</curveDescription>
 			<sensorOffset uom="ft">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-9">
 			<mnemonic>Surf RPM</mnemonic>
@@ -156,7 +156,7 @@
 			<curveDescription>RPM measured at surface</curveDescription>
 			<sensorOffset uom="ft">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-10">
 			<mnemonic>Mtr RPM</mnemonic>
@@ -170,7 +170,7 @@
 			<curveDescription>Calculated motor RPM</curveDescription>
 			<sensorOffset uom="ft">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-11">
 			<mnemonic>Avg TQ</mnemonic>
@@ -184,7 +184,7 @@
 			<curveDescription>Average drilling torque</curveDescription>
 			<sensorOffset uom="ft">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-12">
 			<mnemonic>Max TQ</mnemonic>
@@ -198,7 +198,7 @@
 			<curveDescription>Maximum drilling torque</curveDescription>
 			<sensorOffset uom="ft">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-13">
 			<mnemonic>Min TQ</mnemonic>
@@ -212,7 +212,7 @@
 			<curveDescription>Minimum drilling torque</curveDescription>
 			<sensorOffset uom="ft">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-14">
 			<mnemonic>Max - Min TQ</mnemonic>
@@ -226,7 +226,7 @@
 			<curveDescription>Maximum - minimum drilling torque</curveDescription>
 			<sensorOffset uom="ft">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-15">
 			<mnemonic>Mud Flow in Avg</mnemonic>
@@ -240,7 +240,7 @@
 			<curveDescription>Average mud flow in</curveDescription>
 			<sensorOffset uom="ft">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-16">
 			<mnemonic>Pump p avg</mnemonic>
@@ -254,7 +254,7 @@
 			<curveDescription>Average pump pressure</curveDescription>
 			<sensorOffset uom="ft">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-17">
 			<mnemonic>Mud D avg</mnemonic>
@@ -268,7 +268,7 @@
 			<curveDescription>Average mud density</curveDescription>
 			<sensorOffset uom="ft">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-18">
 			<mnemonic>Mud Temp avg</mnemonic>
@@ -282,7 +282,7 @@
 			<curveDescription>Average mud temperature</curveDescription>
 			<sensorOffset uom="ft">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-19">
 			<mnemonic>Bit RPM</mnemonic>
@@ -296,7 +296,7 @@
 			<curveDescription>Bit RPM</curveDescription>
 			<sensorOffset uom="ft">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-20">
 			<mnemonic>DXC</mnemonic>
@@ -309,7 +309,7 @@
 			<curveDescription>d exponent</curveDescription>
 			<sensorOffset uom="ft">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logCurveInfo uid="lci-21">
 			<mnemonic>ECD</mnemonic>
@@ -323,7 +323,7 @@
 			<curveDescription>equivalent circulating density</curveDescription>
 			<sensorOffset uom="ft">0</sensorOffset>
 			<traceState>raw</traceState>
-			<typeLogData>Double</typeLogData>
+			<typeLogData>double</typeLogData>
 		</logCurveInfo>
 		<logData>
 			<data>499,498.99,1.25,0,1.45,3.67,11.02,187.66,0.29,116.24,0.01,0.05,0.01,0,886.03,1089.99,1.11,14.67,0.29,1.12,1.11</data>

@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Generic representation of an array of Double values. Each derived element provides specialized implementation to allow specific optimization of the representation.
+ * Generic representation of an array of double values. Each derived element provides specialized implementation to allow specific optimization of the representation.
  * 
  * <p>Java class for AbstractFloatingPointArray complex type.
  * 

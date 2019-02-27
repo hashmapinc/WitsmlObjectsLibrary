@@ -129,7 +129,7 @@ public class LogDataHelper {
                 case "short":
                     trace = new ColumnarDataTrace<Double, Short>();
                     break;
-                case "Double":
+                case "double":
                     trace = new ColumnarDataTrace<Double, Double>();
                     break;
                 case "string":
@@ -159,7 +159,7 @@ public class LogDataHelper {
                 case "short":
                     trace = new ColumnarDataTrace<String, Short>();
                     break;
-                case "Double":
+                case "double":
                     trace = new ColumnarDataTrace<String, Double>();
                     break;
                 case "string":
@@ -229,7 +229,7 @@ public class LogDataHelper {
                 case "short":
                     trace = new DepthLogTrace<Short>();
                     break;
-                case "Double":
+                case "double":
                     trace = new DepthLogTrace<Double>();
                     break;
                 case "string":
@@ -259,7 +259,7 @@ public class LogDataHelper {
                 case "short":
                     trace = new TimeLogTrace<Short>();
                     break;
-                case "Double":
+                case "double":
                     trace = new TimeLogTrace<Double>();
                     break;
                 case "string":

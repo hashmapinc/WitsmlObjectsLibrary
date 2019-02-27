@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.XmlType;
  *         <element name="propertyType" type="{http://www.witsml.org/schemas/131}nameString" minOccurs="0"/>
  *         <element name="uom" type="{http://www.witsml.org/schemas/131}uomString" minOccurs="0"/>
  *         <choice>
- *           <element name="DoubleValues" type="{http://www.witsml.org/schemas/131}listOfDouble" minOccurs="0"/>
+ *           <element name="doubleValues" type="{http://www.witsml.org/schemas/131}listOfDouble" minOccurs="0"/>
  *           <element name="stringValues" type="{http://www.witsml.org/schemas/131}listOfString" minOccurs="0"/>
  *         </choice>
  *       </sequence>
@@ -49,7 +49,7 @@ import javax.xml.bind.annotation.XmlType;
     "name",
     "propertyType",
     "uom",
-    "DoubleValues",
+    "doubleValues",
     "stringValues"
 })
 public class CsAxisDefinition {
@@ -61,7 +61,7 @@ public class CsAxisDefinition {
     protected String uom;
     @XmlList
     @XmlElement(type = Double.class)
-    protected List<Double> DoubleValues;
+    protected List<Double> doubleValues;
     @XmlList
     protected List<String> stringValues;
     @XmlAttribute(name = "uid")
@@ -174,13 +174,13 @@ public class CsAxisDefinition {
     }
 
     /**
-     * Gets the value of the DoubleValues property.
+     * Gets the value of the doubleValues property.
      * 
      *
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the DoubleValues property.
+     * This is why there is not a <CODE>set</CODE> method for the doubleValues property.
      * 
      *
      * For example, to add a new item, do as follows:
@@ -196,16 +196,16 @@ public class CsAxisDefinition {
      * 
      */
     public List<Double> getDoubleValues() {
-        if (DoubleValues == null) {
-            DoubleValues = new ArrayList<Double>();
+        if (doubleValues == null) {
+            doubleValues = new ArrayList<Double>();
         }
-        return this.DoubleValues;
+        return this.doubleValues;
     }
 
     public void setDoubleValues(List<String> values) {
-        this.DoubleValues = new ArrayList<>();
+        this.doubleValues = new ArrayList<>();
         for (String value : values) {
-            this.DoubleValues.add(Double.parseDouble(value));
+            this.doubleValues.add(Double.parseDouble(value));
         }
     }
 

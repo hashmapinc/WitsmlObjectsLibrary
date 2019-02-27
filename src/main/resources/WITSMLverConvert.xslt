@@ -123,7 +123,7 @@
 		privateGroupOnly	(parent element=commonData)
 		stnGridConUsed		(parent element=trajectoryStation/corUsed)
 		gridConUsed		(parent element=trajectoryStation)
-		typeLogData		(specialized kinds changed to "Double" or "string")
+		typeLogData		(specialized kinds changed to "double" or "string")
 	OBJECT=dtsMeasurement
 		dTim
 		dTimMin
@@ -1458,10 +1458,10 @@
 	</xsl:template>
 	<xsl:template match="*" mode="typeLogData-Backward">
 		<xsl:choose>
-			<xsl:when test=".='byte'">Double</xsl:when>
-			<xsl:when test=".='float'">Double</xsl:when>
-			<xsl:when test=".='int'">Double</xsl:when>
-			<xsl:when test=".='short'">Double</xsl:when>
+			<xsl:when test=".='byte'">double</xsl:when>
+			<xsl:when test=".='float'">double</xsl:when>
+			<xsl:when test=".='int'">double</xsl:when>
+			<xsl:when test=".='short'">double</xsl:when>
 			<xsl:when test=".='string40'">string</xsl:when>
 			<xsl:when test=".='string16'">string</xsl:when>
 			<xsl:otherwise>

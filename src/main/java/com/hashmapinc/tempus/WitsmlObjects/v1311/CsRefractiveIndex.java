@@ -42,7 +42,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class CsRefractiveIndex {
 
-    protected Double value;
+    protected double value;
     protected FrequencyMeasure frequency;
     protected LengthMeasure wavelength;
     @XmlAttribute(name = "uid")
@@ -52,7 +52,7 @@ public class CsRefractiveIndex {
      * Gets the value of the value property.
      * 
      */
-    public Double getValue() {
+    public double getValue() {
         return value;
     }
 
@@ -60,7 +60,7 @@ public class CsRefractiveIndex {
      * Sets the value of the value property.
      * 
      */
-    public void setValue(Double value) {
+    public void setValue(double value) {
         this.value = value;
     }
 
