@@ -43,9 +43,9 @@ public class ProjectedWellLocation
 {
 
     @XmlElement(name = "Coordinate1")
-    protected double coordinate1;
+    protected Double coordinate1;
     @XmlElement(name = "Coordinate2")
-    protected double coordinate2;
+    protected Double coordinate2;
     @XmlElement(name = "Crs", required = true)
     protected AbstractProjectedCrs crs;
 
@@ -53,7 +53,7 @@ public class ProjectedWellLocation
      * Gets the value of the coordinate1 property.
      * 
      */
-    public double getCoordinate1() {
+    public Double getCoordinate1() {
         return coordinate1;
     }
 
@@ -61,7 +61,7 @@ public class ProjectedWellLocation
      * Sets the value of the coordinate1 property.
      * 
      */
-    public void setCoordinate1(double value) {
+    public void setCoordinate1(Double value) {
         this.coordinate1 = value;
     }
 
@@ -69,7 +69,7 @@ public class ProjectedWellLocation
      * Gets the value of the coordinate2 property.
      * 
      */
-    public double getCoordinate2() {
+    public Double getCoordinate2() {
         return coordinate2;
     }
 
@@ -77,7 +77,7 @@ public class ProjectedWellLocation
      * Sets the value of the coordinate2 property.
      * 
      */
-    public void setCoordinate2(double value) {
+    public void setCoordinate2(Double value) {
         this.coordinate2 = value;
     }
 

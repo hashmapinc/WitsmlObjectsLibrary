@@ -46,7 +46,7 @@ public class FloatingPointLatticeArray
 {
 
     @XmlElement(name = "StartValue")
-    protected double startValue;
+    protected Double startValue;
     @XmlElement(name = "Offset", required = true)
     protected List<FloatingPointConstantArray> offset;
 
@@ -54,7 +54,7 @@ public class FloatingPointLatticeArray
      * Gets the value of the startValue property.
      * 
      */
-    public double getStartValue() {
+    public Double getStartValue() {
         return startValue;
     }
 
@@ -62,7 +62,7 @@ public class FloatingPointLatticeArray
      * Sets the value of the startValue property.
      * 
      */
-    public void setStartValue(double value) {
+    public void setStartValue(Double value) {
         this.startValue = value;
     }
 
