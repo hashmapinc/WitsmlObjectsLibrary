@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Parameter containing a double value.
+ * Parameter containing a Double value.
  * 
  * <p>Java class for DoubleQuantityParameter complex type.
  * 
@@ -43,7 +43,7 @@ public class DoubleQuantityParameter
 {
 
     @XmlElement(name = "Value")
-    protected double value;
+    protected Double value;
     @XmlElement(name = "Uom", required = true)
     protected String uom;
     @XmlElement(name = "CustomUnitDictionary")
@@ -53,7 +53,7 @@ public class DoubleQuantityParameter
      * Gets the value of the value property.
      * 
      */
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -61,7 +61,7 @@ public class DoubleQuantityParameter
      * Sets the value of the value property.
      * 
      */
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
