@@ -38,17 +38,17 @@ public class MagneticInductionMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected MagneticInductionUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link MagneticInductionUom }
+     *     {@link String }
      *     
      */
-    public MagneticInductionUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -57,10 +57,10 @@ public class MagneticInductionMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link MagneticInductionUom }
+     *     {@link String }
      *     
      */
-    public void setUom(MagneticInductionUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 
@@ -75,8 +75,7 @@ public class MagneticInductionMeasure
 
         // assign fields
         measure.setValue(this.getValue());
-        if (null != this.getUom())
-            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.MagneticInductionUom.fromValue(this.getUom().value()));
+        measure.setUom(this.getUom());
 
         return measure;
     }
@@ -86,8 +85,7 @@ public class MagneticInductionMeasure
 
         // assign fields
         measure.setValue(this.getValue());
-        if (null != this.getUom())
-            measure.setUom(this.getUom().value());
+        measure.setUom(this.getUom());
 
         return measure;
     }

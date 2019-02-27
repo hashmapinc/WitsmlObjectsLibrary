@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlValue;
  * <complexType name="CapacitanceMeasure">
  *   <simpleContent>
  *     <extension base="<http://www.energistics.org/energyml/data/commonv2>AbstractMeasure">
- *       <attribute name="uom" use="required" type="{http://www.energistics.org/energyml/data/commonv2}CapacitanceUom" />
+ *       <attribute name="uom" use="required" type="{http://www.energistics.org/energyml/data/commonv2}String" />
  *     </extension>
  *   </simpleContent>
  * </complexType>
@@ -34,9 +34,9 @@ import javax.xml.bind.annotation.XmlValue;
 public class CapacitanceMeasure {
 
     @XmlValue
-    protected double value;
+    protected Double value;
     @XmlAttribute(name = "uom", required = true)
-    protected CapacitanceUom uom;
+    protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -44,7 +44,7 @@ public class CapacitanceMeasure {
      * This type allows all quantities to be profiled to be a 'float' instead of a 'double'.
      * 
      */
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -52,7 +52,7 @@ public class CapacitanceMeasure {
      * Sets the value of the value property.
      * 
      */
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
@@ -61,10 +61,10 @@ public class CapacitanceMeasure {
      * 
      * @return
      *     possible object is
-     *     {@link CapacitanceUom }
+     *     {@link String }
      *     
      */
-    public CapacitanceUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -73,10 +73,10 @@ public class CapacitanceMeasure {
      * 
      * @param value
      *     allowed object is
-     *     {@link CapacitanceUom }
+     *     {@link String }
      *     
      */
-    public void setUom(CapacitanceUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

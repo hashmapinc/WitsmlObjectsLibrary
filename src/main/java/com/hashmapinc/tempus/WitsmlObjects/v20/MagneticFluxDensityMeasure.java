@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlValue;
 public class MagneticFluxDensityMeasure {
 
     @XmlValue
-    protected double value;
+    protected Double value;
     @XmlAttribute(name = "uom", required = true)
     protected String uom;
 
@@ -44,7 +44,7 @@ public class MagneticFluxDensityMeasure {
      * This type allows all quantities to be profiled to be a 'float' instead of a 'double'.
      * 
      */
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -52,7 +52,7 @@ public class MagneticFluxDensityMeasure {
      * Sets the value of the value property.
      * 
      */
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
@@ -91,8 +91,7 @@ public class MagneticFluxDensityMeasure {
 
         // assign fields
         measure.setValue(this.getValue());
-        if (null != this.getUom())
-            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.MagneticInductionUom.fromValue(this.getUom()));
+        measure.setUom(this.getUom());
 
         return measure;
     }
@@ -102,8 +101,7 @@ public class MagneticFluxDensityMeasure {
 
         // assign fields
         measure.setValue(this.getValue());
-        if (null != this.getUom())
-            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1411.MagneticInductionUom.fromValue(this.getUom()));
+        measure.setUom(this.getUom());
 
         return measure;
     }

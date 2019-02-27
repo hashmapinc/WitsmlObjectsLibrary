@@ -54,7 +54,7 @@ public class CsScr {
     protected RefPositiveCount pump;
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected ScrType typeScr;
+    protected String typeScr;
     @XmlElement(required = true)
     protected AnglePerTimeMeasure rateStroke;
     @XmlElement(required = true)
@@ -116,10 +116,10 @@ public class CsScr {
      * 
      * @return
      *     possible object is
-     *     {@link ScrType }
+     *     {@link String }
      *     
      */
-    public ScrType getTypeScr() {
+    public String getTypeScr() {
         return typeScr;
     }
 
@@ -128,10 +128,10 @@ public class CsScr {
      * 
      * @param value
      *     allowed object is
-     *     {@link ScrType }
+     *     {@link String }
      *     
      */
-    public void setTypeScr(ScrType value) {
+    public void setTypeScr(String value) {
         this.typeScr = value;
     }
 

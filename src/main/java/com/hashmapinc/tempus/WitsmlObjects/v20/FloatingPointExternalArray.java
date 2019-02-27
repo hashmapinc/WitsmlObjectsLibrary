@@ -11,7 +11,7 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * An array of double values provided explicitly by an HDF5 dataset.
+ * An array of Double values provided explicitly by an HDF5 dataset.
  * By convention, the null value is NaN.
  * 
  * <p>Java class for FloatingPointExternalArray complex type.

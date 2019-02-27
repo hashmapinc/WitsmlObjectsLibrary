@@ -21,7 +21,7 @@ import javax.xml.bind.annotation.XmlType;
  *   <complexContent>
  *     <extension base="{http://www.energistics.org/energyml/data/commonv2}AbstractObject">
  *       <sequence>
- *         <element name="Direction" type="{http://www.energistics.org/energyml/data/commonv2}VerticalDirection"/>
+ *         <element name="Direction" type="{http://www.energistics.org/energyml/data/commonv2}String"/>
  *         <element name="AbstractVerticalCrs" type="{http://www.energistics.org/energyml/data/commonv2}AbstractVerticalCrs"/>
  *       </sequence>
  *       <attribute name="uom" use="required" type="{http://www.energistics.org/energyml/data/commonv2}LengthUomExt" />
@@ -43,7 +43,7 @@ public class VerticalCrs
 
     @XmlElement(name = "Direction", required = true)
     @XmlSchemaType(name = "string")
-    protected VerticalDirection direction;
+    protected String direction;
     @XmlElement(name = "AbstractVerticalCrs", required = true)
     protected AbstractVerticalCrs abstractVerticalCrs;
     @XmlAttribute(name = "uom", required = true)
@@ -54,10 +54,10 @@ public class VerticalCrs
      * 
      * @return
      *     possible object is
-     *     {@link VerticalDirection }
+     *     {@link String }
      *     
      */
-    public VerticalDirection getDirection() {
+    public String getDirection() {
         return direction;
     }
 
@@ -66,10 +66,10 @@ public class VerticalCrs
      * 
      * @param value
      *     allowed object is
-     *     {@link VerticalDirection }
+     *     {@link String }
      *     
      */
-    public void setDirection(VerticalDirection value) {
+    public void setDirection(String value) {
         this.direction = value;
     }
 

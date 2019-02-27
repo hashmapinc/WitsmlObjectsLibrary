@@ -38,7 +38,7 @@ public class LogConverterTest {
         // check complex fields
         // indexType
         if (null != src.getIndexType())
-            assertEquals(src.getIndexType().value(), dest.getIndexType().value());
+            assertEquals(src.getIndexType(), dest.getIndexType());
 
         // startIndex
         if (null != src.getStartIndex()) {
@@ -62,7 +62,7 @@ public class LogConverterTest {
 
         // direction
         if (null != src.getDirection())
-            assertEquals(src.getDirection().value(), dest.getDirection().value());
+            assertEquals(src.getDirection(), dest.getDirection());
 
         // indexCurve
         if (null != src.getIndexCurve())
@@ -77,7 +77,7 @@ public class LogConverterTest {
             assertEquals(src.getCommonData().getSourceName(), dest.getCommonData().getSourceName());
             assertEquals(src.getCommonData().getDTimCreation(), dest.getCommonData().getDTimCreation());
             assertEquals(src.getCommonData().getDTimLastChange(), dest.getCommonData().getDTimLastChange());
-            assertEquals(src.getCommonData().getItemState().value(), dest.getCommonData().getItemState().value());
+            assertEquals(src.getCommonData().getItemState(), dest.getCommonData().getItemState());
             assertEquals(src.getCommonData().getComments(), dest.getCommonData().getComments());
         }
 
@@ -157,15 +157,15 @@ public class LogConverterTest {
 
                 // traceState
                 if (null != srcInfo.getTraceState())
-                    assertEquals(srcInfo.getTraceState().value(), destInfo.getTraceState().value());
+                    assertEquals(srcInfo.getTraceState(), destInfo.getTraceState());
 
                 // traceOrigin
                 if (null != srcInfo.getTraceOrigin())
-                    assertEquals(srcInfo.getTraceOrigin().value(), destInfo.getTraceOrigin().value());
+                    assertEquals(srcInfo.getTraceOrigin(), destInfo.getTraceOrigin());
 
                 // typeLogData
                 if (null != srcInfo.getTypeLogData())
-                    assertEquals(srcInfo.getTypeLogData().value(), destInfo.getTypeLogData().value());
+                    assertEquals(srcInfo.getTypeLogData(), destInfo.getTypeLogData());
 
                 // repeating fields
                 if (null != srcInfo.getAxisDefinition()) {
@@ -239,7 +239,7 @@ public class LogConverterTest {
         // check complex fields
         // indexType
         if (null != src.getIndexType())
-            assertEquals(src.getIndexType().value(), dest.getIndexType().value());
+            assertEquals(src.getIndexType(), dest.getIndexType());
 
         // startIndex
         if (null != src.getStartIndex()) {
@@ -263,7 +263,7 @@ public class LogConverterTest {
 
         // direction
         if (null != src.getDirection())
-            assertEquals(src.getDirection().value(), dest.getDirection().value());
+            assertEquals(src.getDirection(), dest.getDirection());
 
         // indexCurve
         if (null != src.getIndexCurve())
@@ -278,7 +278,7 @@ public class LogConverterTest {
             assertEquals(src.getCommonData().getSourceName(), dest.getCommonData().getSourceName());
             assertEquals(src.getCommonData().getDTimCreation(), dest.getCommonData().getDTimCreation());
             assertEquals(src.getCommonData().getDTimLastChange(), dest.getCommonData().getDTimLastChange());
-            assertEquals(src.getCommonData().getItemState().value(), dest.getCommonData().getItemState().value());
+            assertEquals(src.getCommonData().getItemState(), dest.getCommonData().getItemState());
             assertEquals(src.getCommonData().getComments(), dest.getCommonData().getComments());
         }
 
@@ -358,15 +358,15 @@ public class LogConverterTest {
 
                 // traceState
                 if (null != srcInfo.getTraceState())
-                    assertEquals(srcInfo.getTraceState().value(), destInfo.getTraceState().value());
+                    assertEquals(srcInfo.getTraceState(), destInfo.getTraceState());
 
                 // traceOrigin
                 if (null != srcInfo.getTraceOrigin())
-                    assertEquals(srcInfo.getTraceOrigin().value(), destInfo.getTraceOrigin().value());
+                    assertEquals(srcInfo.getTraceOrigin(), destInfo.getTraceOrigin());
 
                 // typeLogData
                 if (null != srcInfo.getTypeLogData())
-                    assertEquals(srcInfo.getTypeLogData().value(), destInfo.getTypeLogData().value());
+                    assertEquals(srcInfo.getTypeLogData(), destInfo.getTypeLogData());
 
                 // repeating fields
                 if (null != srcInfo.getAxisDefinition()) {

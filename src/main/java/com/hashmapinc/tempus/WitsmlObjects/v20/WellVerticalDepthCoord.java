@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlValue;
 public class WellVerticalDepthCoord {
 
     @XmlValue
-    protected double value;
+    protected Double value;
     @XmlAttribute(name = "uom", required = true)
     protected String uom;
     @XmlAttribute(name = "datum", required = true)
@@ -49,7 +49,7 @@ public class WellVerticalDepthCoord {
      * This type allows all quantities to be profiled to be a 'float' instead of a 'double'.
      * 
      */
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -57,7 +57,7 @@ public class WellVerticalDepthCoord {
      * Sets the value of the value property.
      * 
      */
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
@@ -118,9 +118,7 @@ public class WellVerticalDepthCoord {
     public com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalDepthCoord to1311VerticalDepthCoord() {
         com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalDepthCoord coord = new com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalDepthCoord();
 
-        if (null != this.getUom())
-            coord.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalCoordinateUom.fromValue(this.getUom()));
-
+        coord.setUom(this.getUom());
         coord.setDatum(this.getDatum());
         coord.setValue(this.getValue());
 
@@ -130,8 +128,7 @@ public class WellVerticalDepthCoord {
     public com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalDepthCoord to1411WellVerticalDepthCoord() {
         com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalDepthCoord coord = new com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalDepthCoord();
 
-        if (null != this.getUom())
-            coord.setUom(com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalCoordinateUom.fromValue(this.getUom()));
+        coord.setUom(this.getUom());
         coord.setDatum(this.getDatum());
         coord.setValue(this.getValue());
 

@@ -30,17 +30,17 @@ public class ForceMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected ForceUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link ForceUom }
+     *     {@link String }
      *     
      */
-    public ForceUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -49,10 +49,10 @@ public class ForceMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link ForceUom }
+     *     {@link String }
      *     
      */
-    public void setUom(ForceUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

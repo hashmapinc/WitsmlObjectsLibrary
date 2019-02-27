@@ -30,17 +30,17 @@ public class MomentOfForceMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected MomentOfForceUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link MomentOfForceUom }
+     *     {@link String }
      *     
      */
-    public MomentOfForceUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -49,10 +49,10 @@ public class MomentOfForceMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link MomentOfForceUom }
+     *     {@link String }
      *     
      */
-    public void setUom(MomentOfForceUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

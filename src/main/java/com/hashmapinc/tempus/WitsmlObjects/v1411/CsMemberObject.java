@@ -32,7 +32,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
  *         <element name="objectReference" type="{http://www.witsml.org/schemas/1series}refObjectString"/>
- *         <element name="indexType" type="{http://www.witsml.org/schemas/1series}LogIndexType" minOccurs="0"/>
+ *         <element name="indexType" type="{http://www.witsml.org/schemas/1series}String" minOccurs="0"/>
  *         <sequence minOccurs="0">
  *           <element name="sequence1" type="{http://www.witsml.org/schemas/1series}objectSequence"/>
  *           <sequence minOccurs="0">
@@ -82,7 +82,7 @@ public class CsMemberObject {
     @XmlElement(required = true)
     protected RefObjectString objectReference;
     @XmlSchemaType(name = "string")
-    protected LogIndexType indexType;
+    protected String indexType;
     protected ObjectSequence sequence1;
     protected ObjectSequence sequence2;
     protected ObjectSequence sequence3;
@@ -130,10 +130,10 @@ public class CsMemberObject {
      * 
      * @return
      *     possible object is
-     *     {@link LogIndexType }
+     *     {@link String }
      *     
      */
-    public LogIndexType getIndexType() {
+    public String getIndexType() {
         return indexType;
     }
 
@@ -142,10 +142,10 @@ public class CsMemberObject {
      * 
      * @param value
      *     allowed object is
-     *     {@link LogIndexType }
+     *     {@link String }
      *     
      */
-    public void setIndexType(LogIndexType value) {
+    public void setIndexType(String value) {
         this.indexType = value;
     }
 

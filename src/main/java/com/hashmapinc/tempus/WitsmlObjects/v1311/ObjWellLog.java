@@ -78,7 +78,7 @@ public class ObjWellLog {
     protected XMLGregorianCalendar creationDate;
     protected String description;
     @XmlSchemaType(name = "string")
-    protected LogIndexType indexType;
+    protected String indexType;
     protected GenericMeasure minIndex;
     protected GenericMeasure maxIndex;
     @XmlSchemaType(name = "dateTime")
@@ -320,10 +320,10 @@ public class ObjWellLog {
      * 
      * @return
      *     possible object is
-     *     {@link LogIndexType }
+     *     {@link String }
      *     
      */
-    public LogIndexType getIndexType() {
+    public String getIndexType() {
         return indexType;
     }
 
@@ -332,10 +332,10 @@ public class ObjWellLog {
      * 
      * @param value
      *     allowed object is
-     *     {@link LogIndexType }
+     *     {@link String }
      *     
      */
-    public void setIndexType(LogIndexType value) {
+    public void setIndexType(String value) {
         this.indexType = value;
     }
 

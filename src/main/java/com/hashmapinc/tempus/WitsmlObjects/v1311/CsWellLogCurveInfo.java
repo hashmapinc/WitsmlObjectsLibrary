@@ -33,11 +33,11 @@ import javax.xml.bind.annotation.XmlType;
  *         <element name="sensorOffset" type="{http://www.witsml.org/schemas/131}lengthMeasure" minOccurs="0"/>
  *         <element name="dataSource" type="{http://www.witsml.org/schemas/131}str32" minOccurs="0"/>
  *         <element name="densData" type="{http://www.witsml.org/schemas/131}perLengthMeasure" minOccurs="0"/>
- *         <element name="traceState" type="{http://www.witsml.org/schemas/131}LogTraceState" minOccurs="0"/>
- *         <element name="traceOrigin" type="{http://www.witsml.org/schemas/131}LogTraceOrigin" minOccurs="0"/>
+ *         <element name="traceState" type="{http://www.witsml.org/schemas/131}String" minOccurs="0"/>
+ *         <element name="traceOrigin" type="{http://www.witsml.org/schemas/131}String" minOccurs="0"/>
  *         <choice minOccurs="0">
- *           <element name="typeLogData" type="{http://www.witsml.org/schemas/131}LogDataType" minOccurs="0"/>
- *           <element name="encodingDef" type="{http://www.witsml.org/schemas/131}ArrayElementDataType" minOccurs="0"/>
+ *           <element name="typeLogData" type="{http://www.witsml.org/schemas/131}String" minOccurs="0"/>
+ *           <element name="encodingDef" type="{http://www.witsml.org/schemas/131}String" minOccurs="0"/>
  *         </choice>
  *         <element name="axisDefinition" type="{http://www.witsml.org/schemas/131}cs_axisDefinition" maxOccurs="unbounded" minOccurs="0"/>
  *       </sequence>
@@ -83,13 +83,13 @@ public class CsWellLogCurveInfo {
     protected String dataSource;
     protected PerLengthMeasure densData;
     @XmlSchemaType(name = "string")
-    protected LogTraceState traceState;
+    protected String traceState;
     @XmlSchemaType(name = "string")
-    protected LogTraceOrigin traceOrigin;
+    protected String traceOrigin;
     @XmlSchemaType(name = "string")
-    protected LogDataType typeLogData;
+    protected String typeLogData;
     @XmlSchemaType(name = "string")
-    protected ArrayElementDataType encodingDef;
+    protected String encodingDef;
     protected List<CsAxisDefinition> axisDefinition;
     @XmlAttribute(name = "uid", required = true)
     protected String uid;
@@ -363,10 +363,10 @@ public class CsWellLogCurveInfo {
      * 
      * @return
      *     possible object is
-     *     {@link LogTraceState }
+     *     {@link String }
      *     
      */
-    public LogTraceState getTraceState() {
+    public String getTraceState() {
         return traceState;
     }
 
@@ -375,10 +375,10 @@ public class CsWellLogCurveInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link LogTraceState }
+     *     {@link String }
      *     
      */
-    public void setTraceState(LogTraceState value) {
+    public void setTraceState(String value) {
         this.traceState = value;
     }
 
@@ -387,10 +387,10 @@ public class CsWellLogCurveInfo {
      * 
      * @return
      *     possible object is
-     *     {@link LogTraceOrigin }
+     *     {@link String }
      *     
      */
-    public LogTraceOrigin getTraceOrigin() {
+    public String getTraceOrigin() {
         return traceOrigin;
     }
 
@@ -399,10 +399,10 @@ public class CsWellLogCurveInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link LogTraceOrigin }
+     *     {@link String }
      *     
      */
-    public void setTraceOrigin(LogTraceOrigin value) {
+    public void setTraceOrigin(String value) {
         this.traceOrigin = value;
     }
 
@@ -411,10 +411,10 @@ public class CsWellLogCurveInfo {
      * 
      * @return
      *     possible object is
-     *     {@link LogDataType }
+     *     {@link String }
      *     
      */
-    public LogDataType getTypeLogData() {
+    public String getTypeLogData() {
         return typeLogData;
     }
 
@@ -423,10 +423,10 @@ public class CsWellLogCurveInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link LogDataType }
+     *     {@link String }
      *     
      */
-    public void setTypeLogData(LogDataType value) {
+    public void setTypeLogData(String value) {
         this.typeLogData = value;
     }
 
@@ -435,10 +435,10 @@ public class CsWellLogCurveInfo {
      * 
      * @return
      *     possible object is
-     *     {@link ArrayElementDataType }
+     *     {@link String }
      *     
      */
-    public ArrayElementDataType getEncodingDef() {
+    public String getEncodingDef() {
         return encodingDef;
     }
 
@@ -447,10 +447,10 @@ public class CsWellLogCurveInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link ArrayElementDataType }
+     *     {@link String }
      *     
      */
-    public void setEncodingDef(ArrayElementDataType value) {
+    public void setEncodingDef(String value) {
         this.encodingDef = value;
     }
 

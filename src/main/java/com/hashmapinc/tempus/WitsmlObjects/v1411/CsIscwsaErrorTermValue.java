@@ -33,7 +33,7 @@ import javax.xml.bind.annotation.XmlType;
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
  *         <element name="term" type="{http://www.witsml.org/schemas/1series}refNameString"/>
- *         <element name="prop" type="{http://www.witsml.org/schemas/1series}ErrorPropagationMode"/>
+ *         <element name="prop" type="{http://www.witsml.org/schemas/1series}String"/>
  *         <element name="bias" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
  *         <element name="value" type="{http://www.witsml.org/schemas/1series}measureOrQuantity"/>
  *         <element name="comment" type="{http://www.witsml.org/schemas/1series}commentString" minOccurs="0"/>
@@ -62,7 +62,7 @@ public class CsIscwsaErrorTermValue {
     protected RefNameString term;
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected ErrorPropagationMode prop;
+    protected String prop;
     protected Double bias;
     @XmlElement(required = true)
     protected MeasureOrQuantity value;
@@ -100,10 +100,10 @@ public class CsIscwsaErrorTermValue {
      * 
      * @return
      *     possible object is
-     *     {@link ErrorPropagationMode }
+     *     {@link String }
      *     
      */
-    public ErrorPropagationMode getProp() {
+    public String getProp() {
         return prop;
     }
 
@@ -112,10 +112,10 @@ public class CsIscwsaErrorTermValue {
      * 
      * @param value
      *     allowed object is
-     *     {@link ErrorPropagationMode }
+     *     {@link String }
      *     
      */
-    public void setProp(ErrorPropagationMode value) {
+    public void setProp(String value) {
         this.prop = value;
     }
 

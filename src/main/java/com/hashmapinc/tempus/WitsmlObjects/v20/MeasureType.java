@@ -39,13 +39,13 @@ import javax.xml.bind.annotation.XmlValue;
 public class MeasureType {
 
     @XmlValue
-    protected double value;
+    protected Double value;
 
     /**
      * Gets the value of the value property.
      * 
      */
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -53,7 +53,7 @@ public class MeasureType {
      * Sets the value of the value property.
      * 
      */
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 

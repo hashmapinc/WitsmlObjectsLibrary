@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlValue;
 public class AnglePerLengthMeasure {
 
     @XmlValue
-    protected double value;
+    protected Double value;
     @XmlAttribute(name = "uom", required = true)
     protected String uom;
 
@@ -44,7 +44,7 @@ public class AnglePerLengthMeasure {
      * This type allows all quantities to be profiled to be a 'float' instead of a 'double'.
      * 
      */
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -52,7 +52,7 @@ public class AnglePerLengthMeasure {
      * Sets the value of the value property.
      * 
      */
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
@@ -90,9 +90,7 @@ public class AnglePerLengthMeasure {
         com.hashmapinc.tempus.WitsmlObjects.v1311.AnglePerLengthMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v1311.AnglePerLengthMeasure();
 
         // assign fields
-        if (null != this.getUom())
-            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.AnglePerLengthUom.fromValue(this.getUom()));
-
+        measure.setUom(this.getUom());
         measure.setValue(this.getValue());
 
         return measure;
@@ -102,9 +100,7 @@ public class AnglePerLengthMeasure {
         com.hashmapinc.tempus.WitsmlObjects.v1411.AnglePerLengthMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v1411.AnglePerLengthMeasure();
 
         // assign fields
-        if (null != this.getUom())
-            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1411.AnglePerLengthUom.fromValue(this.getUom()));
-
+        measure.setUom(this.getUom());
         measure.setValue(this.getValue());
 
         return measure;

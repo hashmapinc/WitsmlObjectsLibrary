@@ -34,9 +34,9 @@ import javax.xml.bind.annotation.XmlValue;
 public class ThermalConductanceMeasure {
 
     @XmlValue
-    protected double value;
+    protected Double value;
     @XmlAttribute(name = "uom", required = true)
-    protected ThermalConductanceUom uom;
+    protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -44,7 +44,7 @@ public class ThermalConductanceMeasure {
      * This type allows all quantities to be profiled to be a 'float' instead of a 'double'.
      * 
      */
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -52,7 +52,7 @@ public class ThermalConductanceMeasure {
      * Sets the value of the value property.
      * 
      */
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
@@ -61,10 +61,10 @@ public class ThermalConductanceMeasure {
      * 
      * @return
      *     possible object is
-     *     {@link ThermalConductanceUom }
+     *     {@link String }
      *     
      */
-    public ThermalConductanceUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -73,10 +73,10 @@ public class ThermalConductanceMeasure {
      * 
      * @param value
      *     allowed object is
-     *     {@link ThermalConductanceUom }
+     *     {@link String }
      *     
      */
-    public void setUom(ThermalConductanceUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

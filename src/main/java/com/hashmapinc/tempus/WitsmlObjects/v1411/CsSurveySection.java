@@ -86,7 +86,7 @@ public class CsSurveySection {
     protected Boolean overwrite;
     protected LengthMeasure frequencyMx;
     @XmlSchemaType(name = "string")
-    protected ItemState itemState;
+    protected String itemState;
     protected String comments;
     protected List<CsExtensionNameValue> extensionNameValue;
     @XmlAttribute(name = "uid")
@@ -329,10 +329,10 @@ public class CsSurveySection {
      * 
      * @return
      *     possible object is
-     *     {@link ItemState }
+     *     {@link String }
      *     
      */
-    public ItemState getItemState() {
+    public String getItemState() {
         return itemState;
     }
 
@@ -341,10 +341,10 @@ public class CsSurveySection {
      * 
      * @param value
      *     allowed object is
-     *     {@link ItemState }
+     *     {@link String }
      *     
      */
-    public void setItemState(ItemState value) {
+    public void setItemState(String value) {
         this.itemState = value;
     }
 

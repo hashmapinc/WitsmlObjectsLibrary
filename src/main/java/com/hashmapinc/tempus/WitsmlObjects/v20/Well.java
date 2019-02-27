@@ -138,13 +138,13 @@ public class Well
     private String numAPI;
     @XmlElement(name = "StatusWell")
     @XmlSchemaType(name = "string")
-    private WellStatus statusWell;
+    private String statusWell;
     @XmlElement(name = "PurposeWell")
     @XmlSchemaType(name = "string")
-    private WellPurpose purposeWell;
+    private String purposeWell;
     @XmlElement(name = "FluidWell")
     @XmlSchemaType(name = "string")
-    private WellFluid fluidWell;
+    private String fluidWell;
     @XmlElement(name = "DirectionWell")
     @XmlSchemaType(name = "string")
     private String directionWell;
@@ -582,10 +582,10 @@ public class Well
      * 
      * @return
      *     possible object is
-     *     {@link WellStatus }
+     *     {@link String }
      *     
      */
-    public WellStatus getStatusWell() {
+    public String getStatusWell() {
         return statusWell;
     }
 
@@ -594,10 +594,10 @@ public class Well
      * 
      * @param value
      *     allowed object is
-     *     {@link WellStatus }
+     *     {@link String }
      *     
      */
-    public void setStatusWell(WellStatus value) {
+    public void setStatusWell(String value) {
         this.statusWell = value;
     }
 
@@ -606,10 +606,10 @@ public class Well
      * 
      * @return
      *     possible object is
-     *     {@link WellPurpose }
+     *     {@link String }
      *     
      */
-    public WellPurpose getPurposeWell() {
+    public String getPurposeWell() {
         return purposeWell;
     }
 
@@ -618,10 +618,10 @@ public class Well
      * 
      * @param value
      *     allowed object is
-     *     {@link WellPurpose }
+     *     {@link String }
      *     
      */
-    public void setPurposeWell(WellPurpose value) {
+    public void setPurposeWell(String value) {
         this.purposeWell = value;
     }
 
@@ -630,10 +630,10 @@ public class Well
      * 
      * @return
      *     possible object is
-     *     {@link WellFluid }
+     *     {@link String }
      *     
      */
-    public WellFluid getFluidWell() {
+    public String getFluidWell() {
         return fluidWell;
     }
 
@@ -642,10 +642,10 @@ public class Well
      * 
      * @param value
      *     allowed object is
-     *     {@link WellFluid }
+     *     {@link String }
      *     
      */
-    public void setFluidWell(WellFluid value) {
+    public void setFluidWell(String value) {
         this.fluidWell = value;
     }
 

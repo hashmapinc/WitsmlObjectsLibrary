@@ -31,7 +31,7 @@ import javax.xml.bind.annotation.XmlType;
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
  *         <element name="name" type="{http://www.witsml.org/schemas/1series}nameString"/>
- *         <element name="kind" type="{http://www.witsml.org/schemas/1series}StimAdditiveType" minOccurs="0"/>
+ *         <element name="kind" type="{http://www.witsml.org/schemas/1series}String" minOccurs="0"/>
  *         <element name="volume" type="{http://www.witsml.org/schemas/1series}volumeMeasure" minOccurs="0"/>
  *         <element name="mass" type="{http://www.witsml.org/schemas/1series}massMeasure" minOccurs="0"/>
  *         <element name="extensionNameValue" type="{http://www.witsml.org/schemas/1series}cs_extensionNameValue" maxOccurs="unbounded" minOccurs="0"/>
@@ -57,7 +57,7 @@ public class CsStimAdditive {
     @XmlElement(required = true)
     protected String name;
     @XmlSchemaType(name = "string")
-    protected StimAdditiveType kind;
+    protected String kind;
     protected VolumeMeasure volume;
     protected MassMeasure mass;
     protected List<CsExtensionNameValue> extensionNameValue;
@@ -93,10 +93,10 @@ public class CsStimAdditive {
      * 
      * @return
      *     possible object is
-     *     {@link StimAdditiveType }
+     *     {@link String }
      *     
      */
-    public StimAdditiveType getKind() {
+    public String getKind() {
         return kind;
     }
 
@@ -105,10 +105,10 @@ public class CsStimAdditive {
      * 
      * @param value
      *     allowed object is
-     *     {@link StimAdditiveType }
+     *     {@link String }
      *     
      */
-    public void setKind(StimAdditiveType value) {
+    public void setKind(String value) {
         this.kind = value;
     }
 

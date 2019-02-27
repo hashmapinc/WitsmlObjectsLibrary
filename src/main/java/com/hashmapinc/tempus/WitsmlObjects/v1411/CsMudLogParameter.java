@@ -71,7 +71,7 @@ public class CsMudLogParameter {
 
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected MudLogParameterType type;
+    protected String type;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar dTime;
     @XmlElement(required = true)
@@ -93,10 +93,10 @@ public class CsMudLogParameter {
      * 
      * @return
      *     possible object is
-     *     {@link MudLogParameterType }
+     *     {@link String }
      *     
      */
-    public MudLogParameterType getType() {
+    public String getType() {
         return type;
     }
 
@@ -105,10 +105,10 @@ public class CsMudLogParameter {
      * 
      * @param value
      *     allowed object is
-     *     {@link MudLogParameterType }
+     *     {@link String }
      *     
      */
-    public void setType(MudLogParameterType value) {
+    public void setType(String value) {
         this.type = value;
     }
 

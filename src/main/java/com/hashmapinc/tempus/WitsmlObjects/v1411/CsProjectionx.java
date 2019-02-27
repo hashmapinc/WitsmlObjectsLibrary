@@ -102,7 +102,7 @@ public class CsProjectionx {
 
     protected WellKnownNameStruct nameCRS;
     @XmlSchemaType(name = "string")
-    protected Projection projectionCode;
+    protected String projectionCode;
     protected RefNameString projectedFrom;
     protected PlaneAngleMeasure stdParallel1;
     protected PlaneAngleMeasure stdParallel2;
@@ -119,17 +119,17 @@ public class CsProjectionx {
     protected LengthMeasure spheroidRadius;
     protected Double scaleFactor;
     @XmlSchemaType(name = "string")
-    protected ProjectionVariantsObliqueMercator methodVariant;
+    protected String methodVariant;
     protected LengthMeasure perspectiveHeight;
     protected String zone;
     @XmlElement(name = "NADType")
     @XmlSchemaType(name = "string")
-    protected NADTypes nadType;
+    protected String nadType;
     protected LengthMeasure falseEasting;
     protected LengthMeasure falseNorthing;
     protected PlaneAngleMeasure bearing;
     @XmlSchemaType(name = "string")
-    protected Hemispheres hemisphere;
+    protected String hemisphere;
     protected String description;
     protected List<IndexedObject> parameter;
 
@@ -162,10 +162,10 @@ public class CsProjectionx {
      * 
      * @return
      *     possible object is
-     *     {@link Projection }
+     *     {@link String }
      *     
      */
-    public Projection getProjectionCode() {
+    public String getProjectionCode() {
         return projectionCode;
     }
 
@@ -174,10 +174,10 @@ public class CsProjectionx {
      * 
      * @param value
      *     allowed object is
-     *     {@link Projection }
+     *     {@link String }
      *     
      */
-    public void setProjectionCode(Projection value) {
+    public void setProjectionCode(String value) {
         this.projectionCode = value;
     }
 
@@ -546,10 +546,10 @@ public class CsProjectionx {
      * 
      * @return
      *     possible object is
-     *     {@link ProjectionVariantsObliqueMercator }
+     *     {@link String }
      *     
      */
-    public ProjectionVariantsObliqueMercator getMethodVariant() {
+    public String getMethodVariant() {
         return methodVariant;
     }
 
@@ -558,10 +558,10 @@ public class CsProjectionx {
      * 
      * @param value
      *     allowed object is
-     *     {@link ProjectionVariantsObliqueMercator }
+     *     {@link String }
      *     
      */
-    public void setMethodVariant(ProjectionVariantsObliqueMercator value) {
+    public void setMethodVariant(String value) {
         this.methodVariant = value;
     }
 
@@ -618,11 +618,11 @@ public class CsProjectionx {
      * 
      * @return
      *     possible object is
-     *     {@link NADTypes }
+     *     {@link String }
      *     
      */
     @JsonProperty("nADType")
-    public NADTypes getNADType() {
+    public String getNADType() {
         return nadType;
     }
 
@@ -631,10 +631,10 @@ public class CsProjectionx {
      * 
      * @param value
      *     allowed object is
-     *     {@link NADTypes }
+     *     {@link String }
      *     
      */
-    public void setNADType(NADTypes value) {
+    public void setNADType(String value) {
         this.nadType = value;
     }
 
@@ -715,10 +715,10 @@ public class CsProjectionx {
      * 
      * @return
      *     possible object is
-     *     {@link Hemispheres }
+     *     {@link String }
      *     
      */
-    public Hemispheres getHemisphere() {
+    public String getHemisphere() {
         return hemisphere;
     }
 
@@ -727,10 +727,10 @@ public class CsProjectionx {
      * 
      * @param value
      *     allowed object is
-     *     {@link Hemispheres }
+     *     {@link String }
      *     
      */
-    public void setHemisphere(Hemispheres value) {
+    public void setHemisphere(String value) {
         this.hemisphere = value;
     }
 
@@ -804,14 +804,14 @@ public class CsProjectionx {
         projection.setScaleFactor(this.getScaleFactor());
         projection.setZone(this.getZone());
         projection.setDescription(this.getDescription());
+        projection.setProjectionCode(this.getProjectionCode());
+        projection.setMethodVariant(this.getMethodVariant());
+        projection.setNADType(this.getNADType());
+        projection.setHemisphere(this.getHemisphere());
 
         // nameCRS
         if (null != this.getNameCRS())
             projection.setNameCRS(this.getNameCRS().to1311WellKnownNameStruct());
-
-        // projectionCode
-        if (null != this.getProjectionCode())
-            projection.setProjectionCode(com.hashmapinc.tempus.WitsmlObjects.v1311.Projection.fromValue(this.getProjectionCode().value()));
 
         // projectedFrom
         if (null != this.getProjectedFrom())
@@ -868,18 +868,9 @@ public class CsProjectionx {
         // spheroidRadius
         if (null != this.getSpheroidRadius())
             projection.setSpheroidRadius(this.getSpheroidRadius().to1311LengthMeasure());
-
-        // methodVariant
-        if (null != this.getMethodVariant())
-            projection.setMethodVariant(com.hashmapinc.tempus.WitsmlObjects.v1311.ProjectionVariantsObliqueMercator.fromValue(this.getMethodVariant().value()));
-
         // perspectiveHeight
         if (null != this.getPerspectiveHeight())
             projection.setPerspectiveHeight(this.getPerspectiveHeight().to1311LengthMeasure());
-
-        // nadType
-        if (null != this.getNADType())
-            projection.setNADType(com.hashmapinc.tempus.WitsmlObjects.v1311.NADTypes.fromValue(this.getNADType().value()));
 
         // falseEasting
         if (null != this.getFalseEasting())
@@ -892,10 +883,6 @@ public class CsProjectionx {
         // bearing
         if (null != this.getBearing())
             projection.setBearing(this.getBearing().to1311PlaneAngleMeasure());
-
-        // hemisphere
-        if (null != this.getHemisphere())
-            projection.setHemisphere(com.hashmapinc.tempus.WitsmlObjects.v1311.Hemispheres.fromValue(this.getHemisphere().value()));
 
         // parameter
         if (null != this.getParameter()) {

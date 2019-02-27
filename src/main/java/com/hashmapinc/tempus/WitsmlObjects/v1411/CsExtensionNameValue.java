@@ -70,7 +70,7 @@ public class CsExtensionNameValue {
     protected Extensionvalue value;
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected PrimitiveType dataType;
+    protected String dataType;
     @XmlSchemaType(name = "dateTime")
     @JsonProperty("dTim")
     protected XMLGregorianCalendar dTim;
@@ -135,10 +135,10 @@ public class CsExtensionNameValue {
      * 
      * @return
      *     possible object is
-     *     {@link PrimitiveType }
+     *     {@link String }
      *     
      */
-    public PrimitiveType getDataType() {
+    public String getDataType() {
         return dataType;
     }
 
@@ -147,10 +147,10 @@ public class CsExtensionNameValue {
      * 
      * @param value
      *     allowed object is
-     *     {@link PrimitiveType }
+     *     {@link String }
      *     
      */
-    public void setDataType(PrimitiveType value) {
+    public void setDataType(String value) {
         this.dataType = value;
     }
 

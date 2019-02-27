@@ -34,9 +34,9 @@ import javax.xml.bind.annotation.XmlValue;
 public class TemperatureIntervalPerPressureMeasure {
 
     @XmlValue
-    protected double value;
+    protected Double value;
     @XmlAttribute(name = "uom", required = true)
-    protected TemperatureIntervalPerPressureUom uom;
+    protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -44,7 +44,7 @@ public class TemperatureIntervalPerPressureMeasure {
      * This type allows all quantities to be profiled to be a 'float' instead of a 'double'.
      * 
      */
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -52,7 +52,7 @@ public class TemperatureIntervalPerPressureMeasure {
      * Sets the value of the value property.
      * 
      */
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
@@ -61,10 +61,10 @@ public class TemperatureIntervalPerPressureMeasure {
      * 
      * @return
      *     possible object is
-     *     {@link TemperatureIntervalPerPressureUom }
+     *     {@link String }
      *     
      */
-    public TemperatureIntervalPerPressureUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -73,10 +73,10 @@ public class TemperatureIntervalPerPressureMeasure {
      * 
      * @param value
      *     allowed object is
-     *     {@link TemperatureIntervalPerPressureUom }
+     *     {@link String }
      *     
      */
-    public void setUom(TemperatureIntervalPerPressureUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

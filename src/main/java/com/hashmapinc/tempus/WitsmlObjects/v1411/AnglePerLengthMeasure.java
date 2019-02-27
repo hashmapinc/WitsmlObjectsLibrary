@@ -38,17 +38,17 @@ public class AnglePerLengthMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected AnglePerLengthUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link AnglePerLengthUom }
+     *     {@link String }
      *     
      */
-    public AnglePerLengthUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -57,10 +57,10 @@ public class AnglePerLengthMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link AnglePerLengthUom }
+     *     {@link String }
      *     
      */
-    public void setUom(AnglePerLengthUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 
@@ -74,9 +74,7 @@ public class AnglePerLengthMeasure
         com.hashmapinc.tempus.WitsmlObjects.v1311.AnglePerLengthMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v1311.AnglePerLengthMeasure();
 
         // assign fields
-        if (null != this.getUom())
-            measure.setUom(com.hashmapinc.tempus.WitsmlObjects.v1311.AnglePerLengthUom.fromValue(this.getUom().value()));
-
+        measure.setUom(this.getUom());
         measure.setValue(this.getValue());
 
         return measure;
@@ -86,9 +84,7 @@ public class AnglePerLengthMeasure
         com.hashmapinc.tempus.WitsmlObjects.v20.AnglePerLengthMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v20.AnglePerLengthMeasure();
 
         // assign fields
-        if (null != this.getUom())
-            measure.setUom(this.getUom().value());
-
+        measure.setUom(this.getUom());
         measure.setValue(this.getValue());
 
         return measure;

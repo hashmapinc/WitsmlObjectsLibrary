@@ -67,7 +67,7 @@ public class ObjTubular {
     @XmlElement(required = true)
     protected String name;
     @XmlSchemaType(name = "string")
-    protected TubularAssembly typeTubularAssy;
+    protected String typeTubularAssy;
     protected Boolean valveFloat;
     protected Boolean sourceNuclear;
     protected LengthMeasure diaHoleAssy;
@@ -158,10 +158,10 @@ public class ObjTubular {
      * 
      * @return
      *     possible object is
-     *     {@link TubularAssembly }
+     *     {@link String }
      *     
      */
-    public TubularAssembly getTypeTubularAssy() {
+    public String getTypeTubularAssy() {
         return typeTubularAssy;
     }
 
@@ -170,10 +170,10 @@ public class ObjTubular {
      * 
      * @param value
      *     allowed object is
-     *     {@link TubularAssembly }
+     *     {@link String }
      *     
      */
-    public void setTypeTubularAssy(TubularAssembly value) {
+    public void setTypeTubularAssy(String value) {
         this.typeTubularAssy = value;
     }
 

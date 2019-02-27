@@ -108,7 +108,7 @@ public class ObjCementJob {
     @XmlElement(required = true)
     protected String name;
     @XmlSchemaType(name = "string")
-    protected CementJobType jobType;
+    protected String jobType;
     protected String jobConfig;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar dTimJob;
@@ -247,10 +247,10 @@ public class ObjCementJob {
      * 
      * @return
      *     possible object is
-     *     {@link CementJobType }
+     *     {@link String }
      *     
      */
-    public CementJobType getJobType() {
+    public String getJobType() {
         return jobType;
     }
 
@@ -259,10 +259,10 @@ public class ObjCementJob {
      * 
      * @param value
      *     allowed object is
-     *     {@link CementJobType }
+     *     {@link String }
      *     
      */
-    public void setJobType(CementJobType value) {
+    public void setJobType(String value) {
         this.jobType = value;
     }
 

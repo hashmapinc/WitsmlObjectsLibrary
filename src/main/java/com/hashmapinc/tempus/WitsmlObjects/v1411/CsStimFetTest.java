@@ -30,7 +30,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="analysisMethod" type="{http://www.witsml.org/schemas/1series}StimAnalysisMethod" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="analysisMethod" type="{http://www.witsml.org/schemas/1series}String" maxOccurs="unbounded" minOccurs="0"/>
  *         <element name="dTimStart" type="{http://www.witsml.org/schemas/1series}timestamp" minOccurs="0"/>
  *         <element name="dTimEnd" type="{http://www.witsml.org/schemas/1series}timestamp" minOccurs="0"/>
  *         <element name="endPdlDuration" type="{http://www.witsml.org/schemas/1series}timeMeasure" minOccurs="0"/>
@@ -77,7 +77,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 public class CsStimFetTest {
 
     @XmlSchemaType(name = "string")
-    protected List<StimAnalysisMethod> analysisMethod;
+    protected List<String> analysisMethod;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar dTimStart;
     @XmlSchemaType(name = "dateTime")
@@ -116,13 +116,13 @@ public class CsStimFetTest {
      * 
      *
      * Objects of the following type(s) are allowed in the list
-     * {@link StimAnalysisMethod }
+     * {@link String }
      * 
      * 
      */
-    public List<StimAnalysisMethod> getAnalysisMethod() {
+    public List<String> getAnalysisMethod() {
         if (analysisMethod == null) {
-            analysisMethod = new ArrayList<StimAnalysisMethod>();
+            analysisMethod = new ArrayList<String>();
         }
         return this.analysisMethod;
     }

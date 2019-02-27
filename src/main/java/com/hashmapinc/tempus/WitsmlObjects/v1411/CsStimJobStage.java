@@ -33,7 +33,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="kind" type="{http://www.witsml.org/schemas/1series}StimStageType"/>
+ *         <element name="kind" type="{http://www.witsml.org/schemas/1series}String"/>
  *         <element name="name" type="{http://www.witsml.org/schemas/1series}nameString" minOccurs="0"/>
  *         <element name="description" type="{http://www.witsml.org/schemas/1series}descriptionString" minOccurs="0"/>
  *         <element name="number" type="{http://www.witsml.org/schemas/1series}positiveCount"/>
@@ -207,7 +207,7 @@ public class CsStimJobStage {
 
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected StimStageType kind;
+    protected String kind;
     protected String name;
     protected String description;
     protected short number;
@@ -296,10 +296,10 @@ public class CsStimJobStage {
      * 
      * @return
      *     possible object is
-     *     {@link StimStageType }
+     *     {@link String }
      *     
      */
-    public StimStageType getKind() {
+    public String getKind() {
         return kind;
     }
 
@@ -308,10 +308,10 @@ public class CsStimJobStage {
      * 
      * @param value
      *     allowed object is
-     *     {@link StimStageType }
+     *     {@link String }
      *     
      */
-    public void setKind(StimStageType value) {
+    public void setKind(String value) {
         this.kind = value;
     }
 

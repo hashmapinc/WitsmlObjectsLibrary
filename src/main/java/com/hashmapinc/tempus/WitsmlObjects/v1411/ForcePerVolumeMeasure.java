@@ -38,17 +38,17 @@ public class ForcePerVolumeMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected ForcePerVolumeUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link ForcePerVolumeUom }
+     *     {@link String }
      *     
      */
-    public ForcePerVolumeUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -57,10 +57,10 @@ public class ForcePerVolumeMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link ForcePerVolumeUom }
+     *     {@link String }
      *     
      */
-    public void setUom(ForcePerVolumeUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

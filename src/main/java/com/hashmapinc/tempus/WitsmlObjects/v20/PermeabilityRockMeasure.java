@@ -34,9 +34,9 @@ import javax.xml.bind.annotation.XmlValue;
 public class PermeabilityRockMeasure {
 
     @XmlValue
-    protected double value;
+    protected Double value;
     @XmlAttribute(name = "uom", required = true)
-    protected PermeabilityRockUom uom;
+    protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -44,7 +44,7 @@ public class PermeabilityRockMeasure {
      * This type allows all quantities to be profiled to be a 'float' instead of a 'double'.
      * 
      */
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -52,7 +52,7 @@ public class PermeabilityRockMeasure {
      * Sets the value of the value property.
      * 
      */
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
@@ -61,10 +61,10 @@ public class PermeabilityRockMeasure {
      * 
      * @return
      *     possible object is
-     *     {@link PermeabilityRockUom }
+     *     {@link String }
      *     
      */
-    public PermeabilityRockUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -73,10 +73,10 @@ public class PermeabilityRockMeasure {
      * 
      * @param value
      *     allowed object is
-     *     {@link PermeabilityRockUom }
+     *     {@link String }
      *     
      */
-    public void setUom(PermeabilityRockUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

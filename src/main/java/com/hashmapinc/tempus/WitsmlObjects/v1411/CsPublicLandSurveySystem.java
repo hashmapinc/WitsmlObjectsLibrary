@@ -26,9 +26,9 @@ import javax.xml.bind.annotation.XmlType;
  *       <sequence>
  *         <element name="principalMeridian" type="{http://www.witsml.org/schemas/1series}PrincipalMeridian" minOccurs="0"/>
  *         <element name="range" type="{http://www.witsml.org/schemas/1series}positiveCount" minOccurs="0"/>
- *         <element name="rangeDir" type="{http://www.witsml.org/schemas/1series}EastOrWest" minOccurs="0"/>
+ *         <element name="rangeDir" type="{http://www.witsml.org/schemas/1series}String" minOccurs="0"/>
  *         <element name="township" type="{http://www.witsml.org/schemas/1series}positiveCount" minOccurs="0"/>
- *         <element name="townshipDir" type="{http://www.witsml.org/schemas/1series}NorthOrSouth" minOccurs="0"/>
+ *         <element name="townshipDir" type="{http://www.witsml.org/schemas/1series}String" minOccurs="0"/>
  *         <element name="section" type="{http://www.witsml.org/schemas/1series}sectionNumber" minOccurs="0"/>
  *         <element name="quarterSection" type="{http://www.witsml.org/schemas/1series}publicLandSurveySystemQuarterSection" minOccurs="0"/>
  *         <element name="quarterTownship" type="{http://www.witsml.org/schemas/1series}publicLandSurveySystemQuarterTownship" minOccurs="0"/>
@@ -60,10 +60,10 @@ public class CsPublicLandSurveySystem {
     protected String principalMeridian;
     protected Short range;
     @XmlSchemaType(name = "string")
-    protected EastOrWest rangeDir;
+    protected String rangeDir;
     protected Short township;
     @XmlSchemaType(name = "string")
-    protected NorthOrSouth townshipDir;
+    protected String townshipDir;
     protected String section;
     protected String quarterSection;
     protected String quarterTownship;
@@ -123,10 +123,10 @@ public class CsPublicLandSurveySystem {
      * 
      * @return
      *     possible object is
-     *     {@link EastOrWest }
+     *     {@link String }
      *     
      */
-    public EastOrWest getRangeDir() {
+    public String getRangeDir() {
         return rangeDir;
     }
 
@@ -135,10 +135,10 @@ public class CsPublicLandSurveySystem {
      * 
      * @param value
      *     allowed object is
-     *     {@link EastOrWest }
+     *     {@link String }
      *     
      */
-    public void setRangeDir(EastOrWest value) {
+    public void setRangeDir(String value) {
         this.rangeDir = value;
     }
 
@@ -171,10 +171,10 @@ public class CsPublicLandSurveySystem {
      * 
      * @return
      *     possible object is
-     *     {@link NorthOrSouth }
+     *     {@link String }
      *     
      */
-    public NorthOrSouth getTownshipDir() {
+    public String getTownshipDir() {
         return townshipDir;
     }
 
@@ -183,10 +183,10 @@ public class CsPublicLandSurveySystem {
      * 
      * @param value
      *     allowed object is
-     *     {@link NorthOrSouth }
+     *     {@link String }
      *     
      */
-    public void setTownshipDir(NorthOrSouth value) {
+    public void setTownshipDir(String value) {
         this.townshipDir = value;
     }
 

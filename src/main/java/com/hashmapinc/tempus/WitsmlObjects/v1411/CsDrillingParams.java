@@ -217,7 +217,7 @@ public class CsDrillingParams {
     protected PressureMeasure presPumpAv;
     protected VolumeFlowRateMeasure flowrateBit;
     @XmlSchemaType(name = "string")
-    protected MudClass mudClass;
+    protected String mudClass;
     protected String mudSubClass;
     protected String comments;
     protected List<CsExtensionNameValue> extensionNameValue;
@@ -1525,10 +1525,10 @@ public class CsDrillingParams {
      * 
      * @return
      *     possible object is
-     *     {@link MudClass }
+     *     {@link String }
      *     
      */
-    public MudClass getMudClass() {
+    public String getMudClass() {
         return mudClass;
     }
 
@@ -1537,10 +1537,10 @@ public class CsDrillingParams {
      * 
      * @param value
      *     allowed object is
-     *     {@link MudClass }
+     *     {@link String }
      *     
      */
-    public void setMudClass(MudClass value) {
+    public void setMudClass(String value) {
         this.mudClass = value;
     }
 

@@ -11,42 +11,42 @@
     "shape" : "horizontal",
     "mdCurrent" : {
       "value" : 0.0,
-      "uom" : "FT",
+      "uom" : "ft",
       "datum" : null
     },
     "tvdCurrent" : {
       "value" : 0.0,
-      "uom" : "FT",
+      "uom" : "ft",
       "datum" : null
     },
     "mdKickoff" : {
       "value" : 0.0,
-      "uom" : "FT",
+      "uom" : "ft",
       "datum" : null
     },
     "tvdKickoff" : {
       "value" : 0.0,
-      "uom" : "FT",
+      "uom" : "ft",
       "datum" : null
     },
     "mdPlanned" : {
       "value" : 0.0,
-      "uom" : "FT",
+      "uom" : "ft",
       "datum" : null
     },
     "tvdPlanned" : {
       "value" : 0.0,
-      "uom" : "FT",
+      "uom" : "ft",
       "datum" : null
     },
     "mdSubSeaPlanned" : {
       "value" : 0.0,
-      "uom" : "FT",
+      "uom" : "ft",
       "datum" : null
     },
     "tvdSubSeaPlanned" : {
       "value" : 0.0,
-      "uom" : "FT",
+      "uom" : "ft",
       "datum" : null
     },
     "dayTarget" : {

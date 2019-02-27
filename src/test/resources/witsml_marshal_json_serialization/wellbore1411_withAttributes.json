@@ -11,42 +11,42 @@
     "shape" : "",
     "md" : {
       "value" : null,
-      "uom" : null,
+      "uom" : "",
       "datum" : null
     },
     "tvd" : {
       "value" : null,
-      "uom" : null,
+      "uom" : "",
       "datum" : null
     },
     "mdKickoff" : {
       "value" : null,
-      "uom" : null,
+      "uom" : "",
       "datum" : null
     },
     "tvdKickoff" : {
       "value" : null,
-      "uom" : null,
+      "uom" : "",
       "datum" : null
     },
     "mdPlanned" : {
       "value" : null,
-      "uom" : null,
+      "uom" : "",
       "datum" : null
     },
     "tvdPlanned" : {
       "value" : null,
-      "uom" : null,
+      "uom" : "",
       "datum" : null
     },
     "mdSubSeaPlanned" : {
       "value" : null,
-      "uom" : null,
+      "uom" : "",
       "datum" : null
     },
     "tvdSubSeaPlanned" : {
       "value" : null,
-      "uom" : null,
+      "uom" : "",
       "datum" : null
     },
     "dayTarget" : {
@@ -55,7 +55,7 @@
     },
     "commonData" : {
       "sourceName" : null,
-      "itemState" : null,
+      "itemState" : "",
       "serviceCategory" : null,
       "comments" : "",
       "acquisitionTimeZone" : [ ],

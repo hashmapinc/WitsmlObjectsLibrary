@@ -84,30 +84,30 @@ import javax.xml.bind.annotation.XmlType;
 public class CsShow {
 
     @XmlSchemaType(name = "string")
-    protected ShowRating showRat;
+    protected String showRat;
     protected String stainColor;
     protected String stainDistr;
     protected AreaPerAreaMeasure stainPc;
     protected String natFlorColor;
     protected AreaPerAreaMeasure natFlorPc;
     @XmlSchemaType(name = "string")
-    protected ShowFluorescence natFlorLevel;
+    protected String natFlorLevel;
     protected String natFlorDesc;
     protected String cutColor;
     @XmlSchemaType(name = "string")
-    protected ShowSpeed cutSpeed;
+    protected String cutSpeed;
     protected String cutStrength;
     @XmlSchemaType(name = "string")
-    protected ShowLevel cutForm;
+    protected String cutForm;
     protected String cutLevel;
     protected String cutFlorColor;
     @XmlSchemaType(name = "string")
-    protected ShowSpeed cutFlorSpeed;
+    protected String cutFlorSpeed;
     protected String cutFlorStrength;
     @XmlSchemaType(name = "string")
-    protected ShowLevel cutFlorForm;
+    protected String cutFlorForm;
     @XmlSchemaType(name = "string")
-    protected ShowFluorescence cutFlorLevel;
+    protected String cutFlorLevel;
     protected String residueColor;
     protected String showDesc;
     protected String impregnatedLitho;
@@ -118,10 +118,10 @@ public class CsShow {
      * 
      * @return
      *     possible object is
-     *     {@link ShowRating }
+     *     {@link String }
      *     
      */
-    public ShowRating getShowRat() {
+    public String getShowRat() {
         return showRat;
     }
 
@@ -130,10 +130,10 @@ public class CsShow {
      * 
      * @param value
      *     allowed object is
-     *     {@link ShowRating }
+     *     {@link String }
      *     
      */
-    public void setShowRat(ShowRating value) {
+    public void setShowRat(String value) {
         this.showRat = value;
     }
 
@@ -262,10 +262,10 @@ public class CsShow {
      * 
      * @return
      *     possible object is
-     *     {@link ShowFluorescence }
+     *     {@link String }
      *     
      */
-    public ShowFluorescence getNatFlorLevel() {
+    public String getNatFlorLevel() {
         return natFlorLevel;
     }
 
@@ -274,10 +274,10 @@ public class CsShow {
      * 
      * @param value
      *     allowed object is
-     *     {@link ShowFluorescence }
+     *     {@link String }
      *     
      */
-    public void setNatFlorLevel(ShowFluorescence value) {
+    public void setNatFlorLevel(String value) {
         this.natFlorLevel = value;
     }
 
@@ -334,10 +334,10 @@ public class CsShow {
      * 
      * @return
      *     possible object is
-     *     {@link ShowSpeed }
+     *     {@link String }
      *     
      */
-    public ShowSpeed getCutSpeed() {
+    public String getCutSpeed() {
         return cutSpeed;
     }
 
@@ -346,10 +346,10 @@ public class CsShow {
      * 
      * @param value
      *     allowed object is
-     *     {@link ShowSpeed }
+     *     {@link String }
      *     
      */
-    public void setCutSpeed(ShowSpeed value) {
+    public void setCutSpeed(String value) {
         this.cutSpeed = value;
     }
 
@@ -382,10 +382,10 @@ public class CsShow {
      * 
      * @return
      *     possible object is
-     *     {@link ShowLevel }
+     *     {@link String }
      *     
      */
-    public ShowLevel getCutForm() {
+    public String getCutForm() {
         return cutForm;
     }
 
@@ -394,10 +394,10 @@ public class CsShow {
      * 
      * @param value
      *     allowed object is
-     *     {@link ShowLevel }
+     *     {@link String }
      *     
      */
-    public void setCutForm(ShowLevel value) {
+    public void setCutForm(String value) {
         this.cutForm = value;
     }
 
@@ -454,10 +454,10 @@ public class CsShow {
      * 
      * @return
      *     possible object is
-     *     {@link ShowSpeed }
+     *     {@link String }
      *     
      */
-    public ShowSpeed getCutFlorSpeed() {
+    public String getCutFlorSpeed() {
         return cutFlorSpeed;
     }
 
@@ -466,10 +466,10 @@ public class CsShow {
      * 
      * @param value
      *     allowed object is
-     *     {@link ShowSpeed }
+     *     {@link String }
      *     
      */
-    public void setCutFlorSpeed(ShowSpeed value) {
+    public void setCutFlorSpeed(String value) {
         this.cutFlorSpeed = value;
     }
 
@@ -502,10 +502,10 @@ public class CsShow {
      * 
      * @return
      *     possible object is
-     *     {@link ShowLevel }
+     *     {@link String }
      *     
      */
-    public ShowLevel getCutFlorForm() {
+    public String getCutFlorForm() {
         return cutFlorForm;
     }
 
@@ -514,10 +514,10 @@ public class CsShow {
      * 
      * @param value
      *     allowed object is
-     *     {@link ShowLevel }
+     *     {@link String }
      *     
      */
-    public void setCutFlorForm(ShowLevel value) {
+    public void setCutFlorForm(String value) {
         this.cutFlorForm = value;
     }
 
@@ -526,10 +526,10 @@ public class CsShow {
      * 
      * @return
      *     possible object is
-     *     {@link ShowFluorescence }
+     *     {@link String }
      *     
      */
-    public ShowFluorescence getCutFlorLevel() {
+    public String getCutFlorLevel() {
         return cutFlorLevel;
     }
 
@@ -538,10 +538,10 @@ public class CsShow {
      * 
      * @param value
      *     allowed object is
-     *     {@link ShowFluorescence }
+     *     {@link String }
      *     
      */
-    public void setCutFlorLevel(ShowFluorescence value) {
+    public void setCutFlorLevel(String value) {
         this.cutFlorLevel = value;
     }
 

@@ -39,8 +39,8 @@ import javax.xml.bind.annotation.XmlType;
  *         <element name="purpose" type="{http://www.witsml.org/schemas/1series}descriptionString" minOccurs="0"/>
  *         <element name="description" type="{http://www.witsml.org/schemas/1series}descriptionString" minOccurs="0"/>
  *         <element name="supplier" type="{http://www.witsml.org/schemas/1series}nameString" minOccurs="0"/>
- *         <element name="fluidType" type="{http://www.witsml.org/schemas/1series}StimFluidType" minOccurs="0"/>
- *         <element name="fluidSubtype" type="{http://www.witsml.org/schemas/1series}StimFluidSubtype" minOccurs="0"/>
+ *         <element name="fluidType" type="{http://www.witsml.org/schemas/1series}String" minOccurs="0"/>
+ *         <element name="fluidSubtype" type="{http://www.witsml.org/schemas/1series}String" minOccurs="0"/>
  *       </sequence>
  *     </restriction>
  *   </complexContent>
@@ -78,9 +78,9 @@ public class CsStimFluid {
     protected String description;
     protected String supplier;
     @XmlSchemaType(name = "string")
-    protected StimFluidType fluidType;
+    protected String fluidType;
     @XmlSchemaType(name = "string")
-    protected StimFluidSubtype fluidSubtype;
+    protected String fluidSubtype;
 
     /**
      * Gets the value of the name property.
@@ -332,10 +332,10 @@ public class CsStimFluid {
      * 
      * @return
      *     possible object is
-     *     {@link StimFluidType }
+     *     {@link String }
      *     
      */
-    public StimFluidType getFluidType() {
+    public String getFluidType() {
         return fluidType;
     }
 
@@ -344,10 +344,10 @@ public class CsStimFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link StimFluidType }
+     *     {@link String }
      *     
      */
-    public void setFluidType(StimFluidType value) {
+    public void setFluidType(String value) {
         this.fluidType = value;
     }
 
@@ -356,10 +356,10 @@ public class CsStimFluid {
      * 
      * @return
      *     possible object is
-     *     {@link StimFluidSubtype }
+     *     {@link String }
      *     
      */
-    public StimFluidSubtype getFluidSubtype() {
+    public String getFluidSubtype() {
         return fluidSubtype;
     }
 
@@ -368,10 +368,10 @@ public class CsStimFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link StimFluidSubtype }
+     *     {@link String }
      *     
      */
-    public void setFluidSubtype(StimFluidSubtype value) {
+    public void setFluidSubtype(String value) {
         this.fluidSubtype = value;
     }
 

@@ -134,7 +134,7 @@ public class ObjRig {
     protected String name;
     protected String owner;
     @XmlSchemaType(name = "string")
-    protected RigType typeRig;
+    protected String typeRig;
     protected String manufacturer;
     @XmlSchemaType(name = "gYear")
     protected XMLGregorianCalendar yearEntService;
@@ -163,7 +163,7 @@ public class ObjRig {
     protected CsSurfaceEquipment surfaceEquipment;
     protected Short numDerricks;
     @XmlSchemaType(name = "string")
-    protected DerrickType typeDerrick;
+    protected String typeDerrick;
     protected ForceMeasure ratingDerrick;
     protected LengthMeasure htDerrick;
     protected ForceMeasure ratingHkld;
@@ -175,7 +175,7 @@ public class ObjRig {
     protected ForceMeasure ratingHook;
     protected LengthMeasure sizeDrillLine;
     @XmlSchemaType(name = "string")
-    protected DrawWorksType typeDrawWorks;
+    protected String typeDrawWorks;
     protected PowerMeasure powerDrawWorks;
     protected ForceMeasure ratingDrawWorks;
     protected String motorDrawWorks;
@@ -183,7 +183,7 @@ public class ObjRig {
     protected String typeSwivel;
     protected ForceMeasure ratingSwivel;
     @XmlSchemaType(name = "string")
-    protected DriveType rotSystem;
+    protected String rotSystem;
     protected String descRotSystem;
     protected MomentOfForceMeasure ratingTqRotSys;
     protected LengthMeasure rotSizeOpening;
@@ -327,10 +327,10 @@ public class ObjRig {
      * 
      * @return
      *     possible object is
-     *     {@link RigType }
+     *     {@link String }
      *     
      */
-    public RigType getTypeRig() {
+    public String getTypeRig() {
         return typeRig;
     }
 
@@ -339,10 +339,10 @@ public class ObjRig {
      * 
      * @param value
      *     allowed object is
-     *     {@link RigType }
+     *     {@link String }
      *     
      */
-    public void setTypeRig(RigType value) {
+    public void setTypeRig(String value) {
         this.typeRig = value;
     }
 
@@ -957,10 +957,10 @@ public class ObjRig {
      * 
      * @return
      *     possible object is
-     *     {@link DerrickType }
+     *     {@link String }
      *     
      */
-    public DerrickType getTypeDerrick() {
+    public String getTypeDerrick() {
         return typeDerrick;
     }
 
@@ -969,10 +969,10 @@ public class ObjRig {
      * 
      * @param value
      *     allowed object is
-     *     {@link DerrickType }
+     *     {@link String }
      *     
      */
-    public void setTypeDerrick(DerrickType value) {
+    public void setTypeDerrick(String value) {
         this.typeDerrick = value;
     }
 
@@ -1221,10 +1221,10 @@ public class ObjRig {
      * 
      * @return
      *     possible object is
-     *     {@link DrawWorksType }
+     *     {@link String }
      *     
      */
-    public DrawWorksType getTypeDrawWorks() {
+    public String getTypeDrawWorks() {
         return typeDrawWorks;
     }
 
@@ -1233,10 +1233,10 @@ public class ObjRig {
      * 
      * @param value
      *     allowed object is
-     *     {@link DrawWorksType }
+     *     {@link String }
      *     
      */
-    public void setTypeDrawWorks(DrawWorksType value) {
+    public void setTypeDrawWorks(String value) {
         this.typeDrawWorks = value;
     }
 
@@ -1389,10 +1389,10 @@ public class ObjRig {
      * 
      * @return
      *     possible object is
-     *     {@link DriveType }
+     *     {@link String }
      *     
      */
-    public DriveType getRotSystem() {
+    public String getRotSystem() {
         return rotSystem;
     }
 
@@ -1401,10 +1401,10 @@ public class ObjRig {
      * 
      * @param value
      *     allowed object is
-     *     {@link DriveType }
+     *     {@link String }
      *     
      */
-    public void setRotSystem(DriveType value) {
+    public void setRotSystem(String value) {
         this.rotSystem = value;
     }
 

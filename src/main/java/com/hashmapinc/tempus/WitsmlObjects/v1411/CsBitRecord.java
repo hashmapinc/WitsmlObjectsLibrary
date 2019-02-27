@@ -111,30 +111,30 @@ public class CsBitRecord {
     protected LengthMeasure diaPilot;
     protected String manufacturer;
     @XmlSchemaType(name = "string")
-    protected BitType typeBit;
+    protected String typeBit;
     protected Cost cost;
     protected String codeMfg;
     protected String codeIADC;
     protected Short condInitInner;
     protected Short condInitOuter;
     @XmlSchemaType(name = "string")
-    protected BitDullCode condInitDull;
+    protected String condInitDull;
     protected String condInitLocation;
     protected String condInitBearing;
     protected String condInitGauge;
     protected String condInitOther;
     @XmlSchemaType(name = "string")
-    protected BitReasonPulled condInitReason;
+    protected String condInitReason;
     protected Short condFinalInner;
     protected Short condFinalOuter;
     @XmlSchemaType(name = "string")
-    protected BitDullCode condFinalDull;
+    protected String condFinalDull;
     protected String condFinalLocation;
     protected String condFinalBearing;
     protected String condFinalGauge;
     protected String condFinalOther;
     @XmlSchemaType(name = "string")
-    protected BitReasonPulled condFinalReason;
+    protected String condFinalReason;
     protected String drive;
     protected String bitClass;
     protected CsCustomData customData;
@@ -268,10 +268,10 @@ public class CsBitRecord {
      * 
      * @return
      *     possible object is
-     *     {@link BitType }
+     *     {@link String }
      *     
      */
-    public BitType getTypeBit() {
+    public String getTypeBit() {
         return typeBit;
     }
 
@@ -280,10 +280,10 @@ public class CsBitRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link BitType }
+     *     {@link String }
      *     
      */
-    public void setTypeBit(BitType value) {
+    public void setTypeBit(String value) {
         this.typeBit = value;
     }
 
@@ -412,10 +412,10 @@ public class CsBitRecord {
      * 
      * @return
      *     possible object is
-     *     {@link BitDullCode }
+     *     {@link String }
      *     
      */
-    public BitDullCode getCondInitDull() {
+    public String getCondInitDull() {
         return condInitDull;
     }
 
@@ -424,10 +424,10 @@ public class CsBitRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link BitDullCode }
+     *     {@link String }
      *     
      */
-    public void setCondInitDull(BitDullCode value) {
+    public void setCondInitDull(String value) {
         this.condInitDull = value;
     }
 
@@ -532,10 +532,10 @@ public class CsBitRecord {
      * 
      * @return
      *     possible object is
-     *     {@link BitReasonPulled }
+     *     {@link String }
      *     
      */
-    public BitReasonPulled getCondInitReason() {
+    public String getCondInitReason() {
         return condInitReason;
     }
 
@@ -544,10 +544,10 @@ public class CsBitRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link BitReasonPulled }
+     *     {@link String }
      *     
      */
-    public void setCondInitReason(BitReasonPulled value) {
+    public void setCondInitReason(String value) {
         this.condInitReason = value;
     }
 
@@ -604,10 +604,10 @@ public class CsBitRecord {
      * 
      * @return
      *     possible object is
-     *     {@link BitDullCode }
+     *     {@link String }
      *     
      */
-    public BitDullCode getCondFinalDull() {
+    public String getCondFinalDull() {
         return condFinalDull;
     }
 
@@ -616,10 +616,10 @@ public class CsBitRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link BitDullCode }
+     *     {@link String }
      *     
      */
-    public void setCondFinalDull(BitDullCode value) {
+    public void setCondFinalDull(String value) {
         this.condFinalDull = value;
     }
 
@@ -724,10 +724,10 @@ public class CsBitRecord {
      * 
      * @return
      *     possible object is
-     *     {@link BitReasonPulled }
+     *     {@link String }
      *     
      */
-    public BitReasonPulled getCondFinalReason() {
+    public String getCondFinalReason() {
         return condFinalReason;
     }
 
@@ -736,10 +736,10 @@ public class CsBitRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link BitReasonPulled }
+     *     {@link String }
      *     
      */
-    public void setCondFinalReason(BitReasonPulled value) {
+    public void setCondFinalReason(String value) {
         this.condFinalReason = value;
     }
 

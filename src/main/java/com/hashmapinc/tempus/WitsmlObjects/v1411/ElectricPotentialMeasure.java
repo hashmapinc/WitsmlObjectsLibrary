@@ -38,17 +38,17 @@ public class ElectricPotentialMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected ElectricPotentialUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link ElectricPotentialUom }
+     *     {@link String }
      *     
      */
-    public ElectricPotentialUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -57,10 +57,10 @@ public class ElectricPotentialMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link ElectricPotentialUom }
+     *     {@link String }
      *     
      */
-    public void setUom(ElectricPotentialUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

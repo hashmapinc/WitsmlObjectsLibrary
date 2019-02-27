@@ -29,7 +29,7 @@ import javax.xml.bind.annotation.XmlType;
  *       <sequence>
  *         <element name="description" type="{http://www.witsml.org/schemas/1series}commentString" minOccurs="0"/>
  *         <element name="presRating" type="{http://www.witsml.org/schemas/1series}pressureMeasure" minOccurs="0"/>
- *         <element name="typeSurfEquip" type="{http://www.witsml.org/schemas/1series}SurfEquipType"/>
+ *         <element name="typeSurfEquip" type="{http://www.witsml.org/schemas/1series}String"/>
  *         <element name="usePumpDischarge" type="{http://www.witsml.org/schemas/1series}logicalBoolean" minOccurs="0"/>
  *         <element name="useStandpipe" type="{http://www.witsml.org/schemas/1series}logicalBoolean" minOccurs="0"/>
  *         <element name="useHose" type="{http://www.witsml.org/schemas/1series}logicalBoolean" minOccurs="0"/>
@@ -118,7 +118,7 @@ public class CsSurfaceEquipment {
     protected PressureMeasure presRating;
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected SurfEquipType typeSurfEquip;
+    protected String typeSurfEquip;
     protected Boolean usePumpDischarge;
     protected Boolean useStandpipe;
     protected Boolean useHose;
@@ -207,10 +207,10 @@ public class CsSurfaceEquipment {
      * 
      * @return
      *     possible object is
-     *     {@link SurfEquipType }
+     *     {@link String }
      *     
      */
-    public SurfEquipType getTypeSurfEquip() {
+    public String getTypeSurfEquip() {
         return typeSurfEquip;
     }
 
@@ -219,10 +219,10 @@ public class CsSurfaceEquipment {
      * 
      * @param value
      *     allowed object is
-     *     {@link SurfEquipType }
+     *     {@link String }
      *     
      */
-    public void setTypeSurfEquip(SurfEquipType value) {
+    public void setTypeSurfEquip(String value) {
         this.typeSurfEquip = value;
     }
 

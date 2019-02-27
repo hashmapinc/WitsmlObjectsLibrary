@@ -117,22 +117,20 @@ public class DepthCoord {
     //=========================================================================
     public com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthCoord to1311MeasuredDepthCoord() {
         com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthCoord mdCoord = new com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthCoord();
-        com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthUom mdUom = com.hashmapinc.tempus.WitsmlObjects.v1311.MeasuredDepthUom.fromValue(this.uom);
 
-        mdCoord.setDatum(this.datum);
-        mdCoord.setUom(mdUom);
-        mdCoord.setValue(this.value);
+        mdCoord.setDatum(this.getDatum());
+        mdCoord.setUom(this.getUom());
+        mdCoord.setValue(this.getValue());
 
         return mdCoord;
     }
 
     public com.hashmapinc.tempus.WitsmlObjects.v1411.MeasuredDepthCoord to1411MeasuredDepthCoord() {
         com.hashmapinc.tempus.WitsmlObjects.v1411.MeasuredDepthCoord mdCoord = new com.hashmapinc.tempus.WitsmlObjects.v1411.MeasuredDepthCoord();
-        com.hashmapinc.tempus.WitsmlObjects.v1411.MeasuredDepthUom mdUom = com.hashmapinc.tempus.WitsmlObjects.v1411.MeasuredDepthUom.fromValue(this.uom);
 
-        mdCoord.setDatum(this.datum);
-        mdCoord.setUom(mdUom);
-        mdCoord.setValue(this.value);
+        mdCoord.setDatum(this.getDatum());
+        mdCoord.setUom(this.getUom());
+        mdCoord.setValue(this.getValue());
 
         return mdCoord;
     }
@@ -140,10 +138,9 @@ public class DepthCoord {
 
     public com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalDepthCoord to1311VerticalDepthCoord() {
         com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalDepthCoord vdCoord = new com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalDepthCoord();
-        com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalCoordinateUom vdUom = com.hashmapinc.tempus.WitsmlObjects.v1311.WellVerticalCoordinateUom.fromValue(this.uom);
 
         vdCoord.setDatum(this.datum);
-        vdCoord.setUom(vdUom);
+        vdCoord.setUom(this.uom);
         vdCoord.setValue(this.value);
 
         return vdCoord;
@@ -151,10 +148,9 @@ public class DepthCoord {
 
     public com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalDepthCoord to1411VerticalDepthCoord() {
         com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalDepthCoord vdCoord = new com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalDepthCoord();
-        com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalCoordinateUom vdUom = com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalCoordinateUom.fromValue(this.uom);
 
         vdCoord.setDatum(this.datum);
-        vdCoord.setUom(vdUom);
+        vdCoord.setUom(this.uom);
         vdCoord.setValue(this.value);
 
         return vdCoord;

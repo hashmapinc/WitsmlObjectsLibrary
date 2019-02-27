@@ -79,7 +79,7 @@ public class CsConnection {
     protected PressureMeasure tensYield;
     protected MomentOfForceMeasure tqYield;
     @XmlSchemaType(name = "string")
-    protected ConnectionPosition position;
+    protected String position;
     protected AreaMeasure criticalCrossSection;
     protected PressureMeasure presLeak;
     protected MomentOfForceMeasure tqMakeup;
@@ -262,10 +262,10 @@ public class CsConnection {
      * 
      * @return
      *     possible object is
-     *     {@link ConnectionPosition }
+     *     {@link String }
      *     
      */
-    public ConnectionPosition getPosition() {
+    public String getPosition() {
         return position;
     }
 
@@ -274,10 +274,10 @@ public class CsConnection {
      * 
      * @param value
      *     allowed object is
-     *     {@link ConnectionPosition }
+     *     {@link String }
      *     
      */
-    public void setPosition(ConnectionPosition value) {
+    public void setPosition(String value) {
         this.position = value;
     }
 

@@ -62,7 +62,7 @@ public class CsNozzle {
     protected Short index;
     protected LengthMeasure diaNozzle;
     @XmlSchemaType(name = "string")
-    protected NozzleType typeNozzle;
+    protected String typeNozzle;
     protected LengthMeasure len;
     protected String orientation;
     protected CsCustomData customData;
@@ -124,10 +124,10 @@ public class CsNozzle {
      * 
      * @return
      *     possible object is
-     *     {@link NozzleType }
+     *     {@link String }
      *     
      */
-    public NozzleType getTypeNozzle() {
+    public String getTypeNozzle() {
         return typeNozzle;
     }
 
@@ -136,10 +136,10 @@ public class CsNozzle {
      * 
      * @param value
      *     allowed object is
-     *     {@link NozzleType }
+     *     {@link String }
      *     
      */
-    public void setTypeNozzle(NozzleType value) {
+    public void setTypeNozzle(String value) {
         this.typeNozzle = value;
     }
 

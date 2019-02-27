@@ -102,7 +102,7 @@ public class ObjLog extends AbstractWitsmlObject {
     protected String description;
     protected String dataDelimiter;
     @XmlSchemaType(name = "string")
-    protected LogIndexType indexType;
+    protected String indexType;
     protected GenericMeasure startIndex;
     protected GenericMeasure endIndex;
     protected RatioGenericMeasure stepIncrement;
@@ -111,7 +111,7 @@ public class ObjLog extends AbstractWitsmlObject {
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar endDateTimeIndex;
     @XmlSchemaType(name = "string")
-    protected LogIndexDirection direction;
+    protected String direction;
     protected String indexCurve;
     protected String nullValue;
     protected List<IndexedObject> logParam;
@@ -476,10 +476,10 @@ public class ObjLog extends AbstractWitsmlObject {
      * 
      * @return
      *     possible object is
-     *     {@link LogIndexType }
+     *     {@link String }
      *     
      */
-    public LogIndexType getIndexType() {
+    public String getIndexType() {
         return indexType;
     }
 
@@ -488,10 +488,10 @@ public class ObjLog extends AbstractWitsmlObject {
      * 
      * @param value
      *     allowed object is
-     *     {@link LogIndexType }
+     *     {@link String }
      *     
      */
-    public void setIndexType(LogIndexType value) {
+    public void setIndexType(String value) {
         this.indexType = value;
     }
 
@@ -620,10 +620,10 @@ public class ObjLog extends AbstractWitsmlObject {
      * 
      * @return
      *     possible object is
-     *     {@link LogIndexDirection }
+     *     {@link String }
      *     
      */
-    public LogIndexDirection getDirection() {
+    public String getDirection() {
         return direction;
     }
 
@@ -632,10 +632,10 @@ public class ObjLog extends AbstractWitsmlObject {
      * 
      * @param value
      *     allowed object is
-     *     {@link LogIndexDirection }
+     *     {@link String }
      *     
      */
-    public void setDirection(LogIndexDirection value) {
+    public void setDirection(String value) {
         this.direction = value;
     }
 

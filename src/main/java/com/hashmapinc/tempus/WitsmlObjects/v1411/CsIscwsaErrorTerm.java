@@ -32,12 +32,12 @@ import javax.xml.bind.annotation.XmlType;
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
  *         <element name="name" type="{http://www.witsml.org/schemas/1series}nameString"/>
- *         <element name="type" type="{http://www.witsml.org/schemas/1series}ErrorTermSource" minOccurs="0"/>
+ *         <element name="type" type="{http://www.witsml.org/schemas/1series}String" minOccurs="0"/>
  *         <element name="measureClass" type="{http://www.witsml.org/schemas/1series}MeasureClass" minOccurs="0"/>
  *         <element name="label" type="{http://www.witsml.org/schemas/1series}nameString"/>
  *         <element name="description" type="{http://www.witsml.org/schemas/1series}commentString" minOccurs="0"/>
  *         <element name="errorCoefficient" type="{http://www.witsml.org/schemas/1series}cs_iscwsaErrorCoefficient" maxOccurs="unbounded"/>
- *         <element name="operatingMode" type="{http://www.witsml.org/schemas/1series}SurveyToolOperatingMode" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="operatingMode" type="{http://www.witsml.org/schemas/1series}String" maxOccurs="unbounded" minOccurs="0"/>
  *         <element name="extensionNameValue" type="{http://www.witsml.org/schemas/1series}cs_extensionNameValue" maxOccurs="unbounded" minOccurs="0"/>
  *       </sequence>
  *       <attGroup ref="{http://www.witsml.org/schemas/1series}attgrp_uid"/>
@@ -64,7 +64,7 @@ public class CsIscwsaErrorTerm {
     @XmlElement(required = true)
     protected String name;
     @XmlSchemaType(name = "string")
-    protected ErrorTermSource type;
+    protected String type;
     protected String measureClass;
     @XmlElement(required = true)
     protected String label;
@@ -72,7 +72,7 @@ public class CsIscwsaErrorTerm {
     @XmlElement(required = true)
     protected List<CsIscwsaErrorCoefficient> errorCoefficient;
     @XmlSchemaType(name = "string")
-    protected List<SurveyToolOperatingMode> operatingMode;
+    protected List<String> operatingMode;
     protected List<CsExtensionNameValue> extensionNameValue;
     @XmlAttribute(name = "uid")
     protected String uid;
@@ -106,10 +106,10 @@ public class CsIscwsaErrorTerm {
      * 
      * @return
      *     possible object is
-     *     {@link ErrorTermSource }
+     *     {@link String }
      *     
      */
-    public ErrorTermSource getType() {
+    public String getType() {
         return type;
     }
 
@@ -118,10 +118,10 @@ public class CsIscwsaErrorTerm {
      * 
      * @param value
      *     allowed object is
-     *     {@link ErrorTermSource }
+     *     {@link String }
      *     
      */
-    public void setType(ErrorTermSource value) {
+    public void setType(String value) {
         this.type = value;
     }
 
@@ -244,13 +244,13 @@ public class CsIscwsaErrorTerm {
      * 
      *
      * Objects of the following type(s) are allowed in the list
-     * {@link SurveyToolOperatingMode }
+     * {@link String }
      * 
      * 
      */
-    public List<SurveyToolOperatingMode> getOperatingMode() {
+    public List<String> getOperatingMode() {
         if (operatingMode == null) {
-            operatingMode = new ArrayList<SurveyToolOperatingMode>();
+            operatingMode = new ArrayList<String>();
         }
         return this.operatingMode;
     }

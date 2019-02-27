@@ -73,7 +73,7 @@ import javax.xml.bind.annotation.XmlType;
 public class CsWbGeometrySection {
 
     @XmlSchemaType(name = "string")
-    protected HoleCasingType typeHoleCasing;
+    protected String typeHoleCasing;
     protected MeasuredDepthCoord mdTop;
     protected MeasuredDepthCoord mdBottom;
     protected WellVerticalDepthCoord tvdTop;
@@ -94,10 +94,10 @@ public class CsWbGeometrySection {
      * 
      * @return
      *     possible object is
-     *     {@link HoleCasingType }
+     *     {@link String }
      *     
      */
-    public HoleCasingType getTypeHoleCasing() {
+    public String getTypeHoleCasing() {
         return typeHoleCasing;
     }
 
@@ -106,10 +106,10 @@ public class CsWbGeometrySection {
      * 
      * @param value
      *     allowed object is
-     *     {@link HoleCasingType }
+     *     {@link String }
      *     
      */
-    public void setTypeHoleCasing(HoleCasingType value) {
+    public void setTypeHoleCasing(String value) {
         this.typeHoleCasing = value;
     }
 

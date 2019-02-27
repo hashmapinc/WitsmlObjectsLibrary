@@ -38,17 +38,17 @@ public class ThermodynamicTemperatureMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected ThermodynamicTemperatureUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link ThermodynamicTemperatureUom }
+     *     {@link String }
      *     
      */
-    public ThermodynamicTemperatureUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -57,10 +57,10 @@ public class ThermodynamicTemperatureMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link ThermodynamicTemperatureUom }
+     *     {@link String }
      *     
      */
-    public void setUom(ThermodynamicTemperatureUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

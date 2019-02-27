@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlValue;
  *   <simpleContent>
  *     <extension base="<http://www.energistics.org/energyml/data/commonv2>AbstractMeasure">
  *       <attribute name="uom" use="required" type="{http://www.energistics.org/energyml/data/commonv2}LengthUom" />
- *       <attribute name="reference" use="required" type="{http://www.energistics.org/energyml/data/witsmlv2}EastOrWest" />
+ *       <attribute name="reference" use="required" type="{http://www.energistics.org/energyml/data/witsmlv2}String" />
  *     </extension>
  *   </simpleContent>
  * </complexType>
@@ -37,11 +37,11 @@ import javax.xml.bind.annotation.XmlValue;
 public class DistanceEastWest {
 
     @XmlValue
-    protected double value;
+    protected Double value;
     @XmlAttribute(name = "uom", required = true)
     protected String uom;
     @XmlAttribute(name = "reference", required = true)
-    protected EastOrWest reference;
+    protected String reference;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -49,7 +49,7 @@ public class DistanceEastWest {
      * This type allows all quantities to be profiled to be a 'float' instead of a 'double'.
      * 
      */
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -57,7 +57,7 @@ public class DistanceEastWest {
      * Sets the value of the value property.
      * 
      */
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
@@ -90,10 +90,10 @@ public class DistanceEastWest {
      * 
      * @return
      *     possible object is
-     *     {@link EastOrWest }
+     *     {@link String }
      *     
      */
-    public EastOrWest getReference() {
+    public String getReference() {
         return reference;
     }
 
@@ -102,10 +102,10 @@ public class DistanceEastWest {
      * 
      * @param value
      *     allowed object is
-     *     {@link EastOrWest }
+     *     {@link String }
      *     
      */
-    public void setReference(EastOrWest value) {
+    public void setReference(String value) {
         this.reference = value;
     }
 

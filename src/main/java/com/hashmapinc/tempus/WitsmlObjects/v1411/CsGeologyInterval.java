@@ -127,7 +127,7 @@ public class CsGeologyInterval {
 
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected LithologySource typeLithology;
+    protected String typeLithology;
     @XmlElement(required = true)
     protected MeasuredDepthCoord mdTop;
     @XmlElement(required = true)
@@ -178,10 +178,10 @@ public class CsGeologyInterval {
      * 
      * @return
      *     possible object is
-     *     {@link LithologySource }
+     *     {@link String }
      *     
      */
-    public LithologySource getTypeLithology() {
+    public String getTypeLithology() {
         return typeLithology;
     }
 
@@ -190,10 +190,10 @@ public class CsGeologyInterval {
      * 
      * @param value
      *     allowed object is
-     *     {@link LithologySource }
+     *     {@link String }
      *     
      */
-    public void setTypeLithology(LithologySource value) {
+    public void setTypeLithology(String value) {
         this.typeLithology = value;
     }
 

@@ -144,13 +144,13 @@ public class TrajectoryStation {
     protected String dTimStn;
     @XmlElement(name = "TypeTrajStation", required = true)
     @XmlSchemaType(name = "string")
-    protected TrajStationType typeTrajStation;
+    protected String typeTrajStation;
     @XmlElement(name = "TypeSurveyTool")
     @XmlSchemaType(name = "string")
-    protected TypeSurveyTool typeSurveyTool;
+    protected String typeSurveyTool;
     @XmlElement(name = "CalcAlgorithm")
     @XmlSchemaType(name = "string")
-    protected TrajStnCalcAlgorithm calcAlgorithm;
+    protected String calcAlgorithm;
     @XmlElement(name = "Md", required = true)
     protected DepthCoord md;
     @XmlElement(name = "Tvd")
@@ -219,7 +219,7 @@ public class TrajectoryStation {
     protected String geoModelUsed;
     @XmlElement(name = "StatusTrajStation")
     @XmlSchemaType(name = "string")
-    protected TrajStationStatus statusTrajStation;
+    protected String statusTrajStation;
     @XmlElement(name = "ExtensionNameValue")
     protected List<ExtensionNameValue> extensionNameValue;
     @XmlElement(name = "Valid")
@@ -316,10 +316,10 @@ public class TrajectoryStation {
      * 
      * @return
      *     possible object is
-     *     {@link TrajStationType }
+     *     {@link String }
      *     
      */
-    public TrajStationType getTypeTrajStation() {
+    public String getTypeTrajStation() {
         return typeTrajStation;
     }
 
@@ -328,10 +328,10 @@ public class TrajectoryStation {
      * 
      * @param value
      *     allowed object is
-     *     {@link TrajStationType }
+     *     {@link String }
      *     
      */
-    public void setTypeTrajStation(TrajStationType value) {
+    public void setTypeTrajStation(String value) {
         this.typeTrajStation = value;
     }
 
@@ -340,10 +340,10 @@ public class TrajectoryStation {
      * 
      * @return
      *     possible object is
-     *     {@link TypeSurveyTool }
+     *     {@link String }
      *     
      */
-    public TypeSurveyTool getTypeSurveyTool() {
+    public String getTypeSurveyTool() {
         return typeSurveyTool;
     }
 
@@ -352,10 +352,10 @@ public class TrajectoryStation {
      * 
      * @param value
      *     allowed object is
-     *     {@link TypeSurveyTool }
+     *     {@link String }
      *     
      */
-    public void setTypeSurveyTool(TypeSurveyTool value) {
+    public void setTypeSurveyTool(String value) {
         this.typeSurveyTool = value;
     }
 
@@ -364,10 +364,10 @@ public class TrajectoryStation {
      * 
      * @return
      *     possible object is
-     *     {@link TrajStnCalcAlgorithm }
+     *     {@link String }
      *     
      */
-    public TrajStnCalcAlgorithm getCalcAlgorithm() {
+    public String getCalcAlgorithm() {
         return calcAlgorithm;
     }
 
@@ -376,10 +376,10 @@ public class TrajectoryStation {
      * 
      * @param value
      *     allowed object is
-     *     {@link TrajStnCalcAlgorithm }
+     *     {@link String }
      *     
      */
-    public void setCalcAlgorithm(TrajStnCalcAlgorithm value) {
+    public void setCalcAlgorithm(String value) {
         this.calcAlgorithm = value;
     }
 
@@ -1180,10 +1180,10 @@ public class TrajectoryStation {
      * 
      * @return
      *     possible object is
-     *     {@link TrajStationStatus }
+     *     {@link String }
      *     
      */
-    public TrajStationStatus getStatusTrajStation() {
+    public String getStatusTrajStation() {
         return statusTrajStation;
     }
 
@@ -1192,10 +1192,10 @@ public class TrajectoryStation {
      * 
      * @param value
      *     allowed object is
-     *     {@link TrajStationStatus }
+     *     {@link String }
      *     
      */
-    public void setStatusTrajStation(TrajStationStatus value) {
+    public void setStatusTrajStation(String value) {
         this.statusTrajStation = value;
     }
 
@@ -1447,6 +1447,8 @@ public class TrajectoryStation {
         station.setMagModelValid(this.getMagModelValid());
         station.setGeoModelUsed(this.getGeoModelUsed());
         station.setUid(this.getUid());
+        station.setTypeTrajStation(this.getTypeTrajStation());
+        station.setStatusTrajStation(this.getStatusTrajStation());
 
         // check complex fields
         // dtimStn
@@ -1460,13 +1462,9 @@ public class TrajectoryStation {
             station.setTarget(ref);
         }
 
-        // typeTrajStation
-        if (null != this.getTypeTrajStation())
-            station.setTypeTrajStation(com.hashmapinc.tempus.WitsmlObjects.v1411.TrajStationType.fromValue(this.getTypeTrajStation().value()));
-
         // typeSurveyTool
         if (null != this.getTypeSurveyTool())
-            station.setTypeSurveyTool(this.getTypeSurveyTool().value());
+            station.setTypeSurveyTool(this.getTypeSurveyTool());
 
         // md
         if (null != this.getMd())
@@ -1547,10 +1545,6 @@ public class TrajectoryStation {
         // magDipAngleReference
         if (null != this.getMagDipAngleReference())
             station.setMagDipAngleReference(this.getMagDipAngleReference().to1411PlaneAngleMeasure());
-
-        // statusTrajStation
-        if (null != this.getStatusTrajStation())
-            station.setStatusTrajStation(com.hashmapinc.tempus.WitsmlObjects.v1411.TrajStationStatus.fromValue(this.getStatusTrajStation().value()));
 
         // rawData
         if (null != this.getRawData())

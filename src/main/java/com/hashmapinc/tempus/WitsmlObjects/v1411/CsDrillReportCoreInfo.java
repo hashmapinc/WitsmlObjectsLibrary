@@ -77,7 +77,7 @@ public class CsDrillReportCoreInfo {
     protected VolumePerVolumeMeasurePercent recoverPc;
     protected LengthMeasure lenBarrel;
     @XmlSchemaType(name = "string")
-    protected InnerBarrelType innerBarrelType;
+    protected String innerBarrelType;
     protected String coreDescription;
     protected List<CsExtensionNameValue> extensionNameValue;
     @XmlAttribute(name = "uid")
@@ -304,10 +304,10 @@ public class CsDrillReportCoreInfo {
      * 
      * @return
      *     possible object is
-     *     {@link InnerBarrelType }
+     *     {@link String }
      *     
      */
-    public InnerBarrelType getInnerBarrelType() {
+    public String getInnerBarrelType() {
         return innerBarrelType;
     }
 
@@ -316,10 +316,10 @@ public class CsDrillReportCoreInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link InnerBarrelType }
+     *     {@link String }
      *     
      */
-    public void setInnerBarrelType(InnerBarrelType value) {
+    public void setInnerBarrelType(String value) {
         this.innerBarrelType = value;
     }
 

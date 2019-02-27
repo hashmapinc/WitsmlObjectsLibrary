@@ -38,17 +38,17 @@ public class ForcePerLengthMeasure
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected ForcePerLengthUom uom;
+    protected String uom;
 
     /**
      * Gets the value of the uom property.
      * 
      * @return
      *     possible object is
-     *     {@link ForcePerLengthUom }
+     *     {@link String }
      *     
      */
-    public ForcePerLengthUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -57,10 +57,10 @@ public class ForcePerLengthMeasure
      * 
      * @param value
      *     allowed object is
-     *     {@link ForcePerLengthUom }
+     *     {@link String }
      *     
      */
-    public void setUom(ForcePerLengthUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Represents an array of double values where all values are identical. This an optimization for which an array of explicit double values is not required.
+ * Represents an array of Double values where all values are identical. This an optimization for which an array of explicit Double values is not required.
  * 
  * <p>Java class for FloatingPointConstantArray complex type.
  * 
@@ -41,7 +41,7 @@ public class FloatingPointConstantArray
 {
 
     @XmlElement(name = "Value")
-    protected double value;
+    protected Double value;
     @XmlElement(name = "Count")
     protected long count;
 
@@ -49,7 +49,7 @@ public class FloatingPointConstantArray
      * Gets the value of the value property.
      * 
      */
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -57,7 +57,7 @@ public class FloatingPointConstantArray
      * Sets the value of the value property.
      * 
      */
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 

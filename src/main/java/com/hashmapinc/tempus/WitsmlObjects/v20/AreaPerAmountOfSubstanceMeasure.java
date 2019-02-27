@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlValue;
  * <complexType name="AreaPerAmountOfSubstanceMeasure">
  *   <simpleContent>
  *     <extension base="<http://www.energistics.org/energyml/data/commonv2>AbstractMeasure">
- *       <attribute name="uom" use="required" type="{http://www.energistics.org/energyml/data/commonv2}AreaPerAmountOfSubstanceUom" />
+ *       <attribute name="uom" use="required" type="{http://www.energistics.org/energyml/data/commonv2}String" />
  *     </extension>
  *   </simpleContent>
  * </complexType>
@@ -34,9 +34,9 @@ import javax.xml.bind.annotation.XmlValue;
 public class AreaPerAmountOfSubstanceMeasure {
 
     @XmlValue
-    protected double value;
+    protected Double value;
     @XmlAttribute(name = "uom", required = true)
-    protected AreaPerAmountOfSubstanceUom uom;
+    protected String uom;
 
     /**
      * The intended abstract supertype of all quantities that have a value with a unit of measure. The unit of measure is in the uom attribute of the subtypes. 
@@ -44,7 +44,7 @@ public class AreaPerAmountOfSubstanceMeasure {
      * This type allows all quantities to be profiled to be a 'float' instead of a 'double'.
      * 
      */
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -52,7 +52,7 @@ public class AreaPerAmountOfSubstanceMeasure {
      * Sets the value of the value property.
      * 
      */
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
@@ -61,10 +61,10 @@ public class AreaPerAmountOfSubstanceMeasure {
      * 
      * @return
      *     possible object is
-     *     {@link AreaPerAmountOfSubstanceUom }
+     *     {@link String }
      *     
      */
-    public AreaPerAmountOfSubstanceUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -73,10 +73,10 @@ public class AreaPerAmountOfSubstanceMeasure {
      * 
      * @param value
      *     allowed object is
-     *     {@link AreaPerAmountOfSubstanceUom }
+     *     {@link String }
      *     
      */
-    public void setUom(AreaPerAmountOfSubstanceUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 

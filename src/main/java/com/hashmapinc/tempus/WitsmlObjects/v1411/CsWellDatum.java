@@ -77,7 +77,7 @@ public class CsWellDatum {
     @XmlElement(required = true)
     protected String name;
     @XmlSchemaType(name = "string")
-    protected ElevCodeEnum code;
+    protected String code;
     protected WellKnownNameStruct datumName;
     protected RefNameString datumCRS;
     protected List<String> kind;
@@ -121,10 +121,10 @@ public class CsWellDatum {
      * 
      * @return
      *     possible object is
-     *     {@link ElevCodeEnum }
+     *     {@link String }
      *     
      */
-    public ElevCodeEnum getCode() {
+    public String getCode() {
         return code;
     }
 
@@ -133,10 +133,10 @@ public class CsWellDatum {
      * 
      * @param value
      *     allowed object is
-     *     {@link ElevCodeEnum }
+     *     {@link String }
      *     
      */
-    public void setCode(ElevCodeEnum value) {
+    public void setCode(String value) {
         this.code = value;
     }
 
@@ -433,13 +433,9 @@ public class CsWellDatum {
         datum.setKind(this.getKind());
         datum.setComment(this.getComment());
         datum.setUid(this.getUid());
-
+        datum.setCode(this.getCode());
 
         // complex objects
-        // code
-        if (null != this.getCode())
-            datum.setCode(com.hashmapinc.tempus.WitsmlObjects.v1311.ElevCodeEnum.fromValue(this.getCode().value()));
-
         // datum name
         if (null != this.getDatumName())
             datum.setDatumName(this.getDatumName().to1311WellKnownNameStruct());

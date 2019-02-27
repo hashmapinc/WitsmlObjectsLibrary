@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlType;
  *   <simpleContent>
  *     <extension base="<http://www.witsml.org/schemas/1series>abstractMeasure">
  *       <attribute name="uom" use="required" type="{http://www.witsml.org/schemas/1series}LengthUom" />
- *       <attribute name="ref" use="required" type="{http://www.witsml.org/schemas/1series}EastOrWest" />
+ *       <attribute name="ref" use="required" type="{http://www.witsml.org/schemas/1series}String" />
  *     </extension>
  *   </simpleContent>
  * </complexType>
@@ -44,7 +44,7 @@ public class FootageEastWest
     @XmlAttribute(name = "uom", required = true)
     protected String uom;
     @XmlAttribute(name = "ref", required = true)
-    protected EastOrWest ref;
+    protected String ref;
 
     /**
      * Gets the value of the uom property.
@@ -75,10 +75,10 @@ public class FootageEastWest
      * 
      * @return
      *     possible object is
-     *     {@link EastOrWest }
+     *     {@link String }
      *     
      */
-    public EastOrWest getRef() {
+    public String getRef() {
         return ref;
     }
 
@@ -87,10 +87,10 @@ public class FootageEastWest
      * 
      * @param value
      *     allowed object is
-     *     {@link EastOrWest }
+     *     {@link String }
      *     
      */
-    public void setRef(EastOrWest value) {
+    public void setRef(String value) {
         this.ref = value;
     }
 

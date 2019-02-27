@@ -36,7 +36,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         <element name="dTimRemove" type="{http://www.witsml.org/schemas/1series}timestamp" minOccurs="0"/>
  *         <element name="capMx" type="{http://www.witsml.org/schemas/1series}volumeMeasure"/>
  *         <element name="owner" type="{http://www.witsml.org/schemas/1series}str32" minOccurs="0"/>
- *         <element name="typePit" type="{http://www.witsml.org/schemas/1series}PitType" minOccurs="0"/>
+ *         <element name="typePit" type="{http://www.witsml.org/schemas/1series}String" minOccurs="0"/>
  *         <element name="isActive" type="{http://www.witsml.org/schemas/1series}logicalBoolean" minOccurs="0"/>
  *         <element name="nameTag" type="{http://www.witsml.org/schemas/1series}cs_nameTag" maxOccurs="unbounded" minOccurs="0"/>
  *         <element name="extensionNameValue" type="{http://www.witsml.org/schemas/1series}cs_extensionNameValue" maxOccurs="unbounded" minOccurs="0"/>
@@ -72,7 +72,7 @@ public class CsPit {
     protected VolumeMeasure capMx;
     protected String owner;
     @XmlSchemaType(name = "string")
-    protected PitType typePit;
+    protected String typePit;
     protected Boolean isActive;
     protected List<CsNameTag> nameTag;
     protected List<CsExtensionNameValue> extensionNameValue;
@@ -196,10 +196,10 @@ public class CsPit {
      * 
      * @return
      *     possible object is
-     *     {@link PitType }
+     *     {@link String }
      *     
      */
-    public PitType getTypePit() {
+    public String getTypePit() {
         return typePit;
     }
 
@@ -208,10 +208,10 @@ public class CsPit {
      * 
      * @param value
      *     allowed object is
-     *     {@link PitType }
+     *     {@link String }
      *     
      */
-    public void setTypePit(PitType value) {
+    public void setTypePit(String value) {
         this.typePit = value;
     }
 

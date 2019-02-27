@@ -20,7 +20,7 @@ import javax.xml.bind.annotation.XmlType;
  * <complexType name="wellElevationCoord">
  *   <simpleContent>
  *     <extension base="<http://www.witsml.org/schemas/131>abstractMeasure">
- *       <attribute name="uom" use="required" type="{http://www.witsml.org/schemas/131}WellVerticalCoordinateUom" />
+ *       <attribute name="uom" use="required" type="String" />
  *       <attribute name="datum" type="{http://www.witsml.org/schemas/131}refWellDatum" />
  *     </extension>
  *   </simpleContent>
@@ -36,7 +36,7 @@ public class WellElevationCoord
 {
 
     @XmlAttribute(name = "uom", required = true)
-    protected WellVerticalCoordinateUom uom;
+    protected String uom;
     @XmlAttribute(name = "datum")
     protected String datum;
 
@@ -45,10 +45,10 @@ public class WellElevationCoord
      * 
      * @return
      *     possible object is
-     *     {@link WellVerticalCoordinateUom }
+     *     {@link String }
      *     
      */
-    public WellVerticalCoordinateUom getUom() {
+    public String getUom() {
         return uom;
     }
 
@@ -57,10 +57,10 @@ public class WellElevationCoord
      * 
      * @param value
      *     allowed object is
-     *     {@link WellVerticalCoordinateUom }
+     *     {@link String }
      *     
      */
-    public void setUom(WellVerticalCoordinateUom value) {
+    public void setUom(String value) {
         this.uom = value;
     }
 
@@ -97,11 +97,7 @@ public class WellElevationCoord
     public com.hashmapinc.tempus.WitsmlObjects.v1411.WellElevationCoord to1411WellElevationCoord() {
         com.hashmapinc.tempus.WitsmlObjects.v1411.WellElevationCoord wellElevationCoord = new com.hashmapinc.tempus.WitsmlObjects.v1411.WellElevationCoord();
 
-        if (null != this.uom) {
-            com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalCoordinateUom uom = com.hashmapinc.tempus.WitsmlObjects.v1411.WellVerticalCoordinateUom.fromValue(this.uom.value());
-            wellElevationCoord.setUom(uom);
-        }
-
+        wellElevationCoord.setUom(this.uom);
         wellElevationCoord.setDatum(this.datum);
         wellElevationCoord.setValue(this.value);
 
