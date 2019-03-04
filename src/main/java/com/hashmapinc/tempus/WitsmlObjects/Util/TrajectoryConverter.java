@@ -159,6 +159,14 @@ public class TrajectoryConverter {
         // get converted object
         com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory dest = new com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory();
 
+        // check the objects that are not really 2.0 but are in some silly responses
+        dest.setName(src.getName());
+        dest.setNameWell(src.getNameWell());
+        dest.setNameWellbore(src.getNameWellbore());
+        dest.setUid(src.getUid());
+        dest.setUidWell(src.getUidWell());
+        dest.setUidWellbore(src.getUidWellbore());
+
         // check non-complex, non-repeating fields
         dest.setServiceCompany(src.getServiceCompany());
         dest.setDefinitive(src.isDefinitive());

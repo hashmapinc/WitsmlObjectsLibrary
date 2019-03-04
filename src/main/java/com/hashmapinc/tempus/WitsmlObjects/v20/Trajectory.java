@@ -110,6 +110,20 @@ public class Trajectory
     protected DataObjectReference wellbore;
     @XmlElement(name = "ParentTrajectory")
     protected DataObjectReference parentTrajectory;
+    // Begin the fields for 1411 conversion capability
+    @XmlTransient
+    protected String name;
+    @XmlTransient
+    protected String nameWellbore;
+    @XmlTransient
+    protected String nameWell;
+    @XmlTransient
+    protected String uid;
+    @XmlTransient
+    protected String uidWellbore;
+    @XmlTransient
+    protected String uidWell;
+
 
     /**
      * Gets the value of the growingStatus property.
@@ -551,5 +565,54 @@ public class Trajectory
     public void setParentTrajectory(DataObjectReference value) {
         this.parentTrajectory = value;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getNameWellbore() {
+        return nameWellbore;
+    }
+
+    public void setNameWellbore(String nameWellbore) {
+        this.nameWellbore = nameWellbore;
+    }
+
+    public String getNameWell() {
+        return nameWell;
+    }
+
+    public void setNameWell(String nameWell) {
+        this.nameWell = nameWell;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    public String getUidWellbore() {
+        return uidWellbore;
+    }
+
+    public void setUidWellbore(String uidWellbore) {
+        this.uidWellbore = uidWellbore;
+    }
+
+    public String getUidWell() {
+        return uidWell;
+    }
+
+    public void setUidWell(String uidWell) {
+        this.uidWell = uidWell;
+    }
+
 
 }
