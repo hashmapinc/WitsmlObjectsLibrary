@@ -156,8 +156,8 @@ public class WellboreConverter {
             dest.setMdKickoff(src.getMdKickoff().to1411MeasuredDepthCoord());
         if (null != src.getTvdKickoff())
             dest.setTvdKickoff(src.getTvdKickoff().to1411VerticalDepthCoord());
-        if (null != src.getMdPlanned());
-        dest.setMdPlanned(src.getMdPlanned().to1411MeasuredDepthCoord());
+        if (null != src.getMdPlanned())
+            dest.setMdPlanned(src.getMdPlanned().to1411MeasuredDepthCoord());
         if (null != src.getTvdPlanned())
             dest.setTvdPlanned(src.getTvdPlanned().to1411VerticalDepthCoord());
         if (null != src.getMdSubSeaPlanned())
