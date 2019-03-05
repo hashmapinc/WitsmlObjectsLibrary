@@ -128,7 +128,7 @@ public class ObjWell extends AbstractWitsmlObject {
     protected List<CsReferencePoint> referencePoint;
     protected List<CsWellCRS> wellCRS;
     protected CsCommonData commonData;
-    protected CsCustomData customData;
+    protected String customData;
     @XmlAttribute(name = "uid")
     @JsonInclude(JsonInclude.Include.ALWAYS)
     protected String uid;
@@ -977,7 +977,7 @@ public class ObjWell extends AbstractWitsmlObject {
      *     {@link CsCustomData }
      *     
      */
-    public CsCustomData getCustomData() {
+    public String getCustomData() {
         return customData;
     }
 
@@ -989,7 +989,7 @@ public class ObjWell extends AbstractWitsmlObject {
      *     {@link CsCustomData }
      *     
      */
-    public void setCustomData(CsCustomData value) {
+    public void setCustomData(String value) {
         this.customData = value;
     }
 

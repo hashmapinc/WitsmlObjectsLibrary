@@ -42,9 +42,8 @@ import javax.xml.bind.annotation.*;
     "documentInfo",
     "well"
 })
-@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ObjWells {
-
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     protected CsDocumentInfo documentInfo;
     @XmlElement(required = true)
     protected List<ObjWell> well;
