@@ -44,7 +44,7 @@ public class WellboreConverterTest {
     @Test
     public void shouldConvert1311to1411() throws Exception {
         String srcXML = TestUtilities.getResourceAsString("wellbore_converter/wellbore1311.xml");
-        ObjWellbore src = ((ObjWellbores)WitsmlMarshal.deserialize(srcXML, ObjWellbore.class)).getWellbore().get(0);
+        ObjWellbore src = ((ObjWellbores)WitsmlMarshal.deserialize(srcXML, ObjWellbores.class)).getWellbore().get(0);
 
         // get converted wellbore
         com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore dest = WellboreConverter.convertTo1411(src);
@@ -73,7 +73,7 @@ public class WellboreConverterTest {
     @Test
     public void shouldConvert1311to20() throws Exception {
         String srcXML = TestUtilities.getResourceAsString("wellbore_converter/wellbore1311.xml");
-        ObjWellbore src = ((ObjWellbores)WitsmlMarshal.deserialize(srcXML, ObjWellbore.class)).getWellbore().get(0);
+        ObjWellbore src = ((ObjWellbores)WitsmlMarshal.deserialize(srcXML, ObjWellbores.class)).getWellbore().get(0);
 
         // get converted wellbore
         Wellbore dest = WellboreConverter.convertTo20(src);
@@ -85,7 +85,7 @@ public class WellboreConverterTest {
     @Test
     public void shouldConvert1411to20() throws Exception {
         String srcXML = TestUtilities.getResourceAsString("wellbore_converter/wellbore1411.xml");
-        com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore src = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores)WitsmlMarshal.deserialize(srcXML, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore.class)).getWellbore().get(0);
+        com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore src = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores)WitsmlMarshal.deserialize(srcXML, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores.class)).getWellbore().get(0);
 
         // get converted wellbore
         Wellbore dest = WellboreConverter.convertTo20(src);

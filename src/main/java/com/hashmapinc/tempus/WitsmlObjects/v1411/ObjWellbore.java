@@ -106,7 +106,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
     protected WellVerticalDepthCoord tvdSubSeaPlanned;
     protected TimeMeasure dayTarget;
     protected CsCommonData commonData;
-    protected CsCustomData customData;
+    protected String customData;
     @XmlAttribute(name = "uidWell")
     @JsonInclude(JsonInclude.Include.ALWAYS)
     protected String uidWell;
@@ -740,7 +740,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link CsCustomData }
      *
      */
-    public CsCustomData getCustomData() {
+    public String getCustomData() {
         return customData;
     }
 
@@ -752,7 +752,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *     {@link CsCustomData }
      *
      */
-    public void setCustomData(CsCustomData value) {
+    public void setCustomData(String value) {
         this.customData = value;
     }
 

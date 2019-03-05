@@ -96,7 +96,7 @@ public class ObjTrajectory extends AbstractWitsmlObject {
     protected String aziRef;
     protected List<CsTrajectoryStation> trajectoryStation;
     protected CsCommonData commonData;
-    protected CsCustomData customData;
+    protected String customData;
     @XmlAttribute(name = "uidWell")
     protected String uidWell;
     @XmlAttribute(name = "uidWellbore")
@@ -630,11 +630,10 @@ public class ObjTrajectory extends AbstractWitsmlObject {
      * Gets the value of the customData property.
      * 
      * @return
-     *     possible object is
-     *     {@link CsCustomData }
+     *     possible object is String
      *     
      */
-    public CsCustomData getCustomData() {
+    public String getCustomData() {
         return customData;
     }
 
@@ -642,11 +641,10 @@ public class ObjTrajectory extends AbstractWitsmlObject {
      * Sets the value of the customData property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link CsCustomData }
+     *     allowed object is String
      *     
      */
-    public void setCustomData(CsCustomData value) {
+    public void setCustomData(String value) {
         this.customData = value;
     }
 

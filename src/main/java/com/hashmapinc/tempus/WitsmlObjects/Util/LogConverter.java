@@ -63,8 +63,7 @@ public class LogConverter {
             dest.setCommonData(src.getCommonData().to1311CommonData());
 
         // customData
-        if (null != src.getCustomData() && null != src.getCustomData().getAny())
-            dest.setCustomData(src.getCustomData().to1311CustomData());
+        dest.setCustomData(src.getCustomData());
 
         // check repeating fields
         // logParam
@@ -148,8 +147,7 @@ public class LogConverter {
             dest.setCommonData(src.getCommonData().to1411CommonData());
 
         // customData
-        if (null != src.getCustomData() && null != src.getCustomData().getAny())
-            dest.setCustomData(src.getCustomData().to1411CustomData());
+        dest.setCustomData(src.getCustomData());
 
         // check repeating fields
         // logParam

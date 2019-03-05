@@ -63,7 +63,7 @@ public class TrajectoryConverter {
 
         // custom data
         if (null != src.getCustomData())
-            dest.setCustomData(src.getCustomData().to1311CustomData());
+            dest.setCustomData(src.getCustomData());
 
         // check repeating fields
         if (null != src.getTrajectoryStation()) {
@@ -141,7 +141,7 @@ public class TrajectoryConverter {
 
         // custom data
         if (null != src.getCustomData())
-            dest.setCustomData(src.getCustomData().to1411CustomData());
+            dest.setCustomData(src.getCustomData());
 
         // check repeating fields
         if (null != src.getTrajectoryStation()) {
@@ -212,8 +212,7 @@ public class TrajectoryConverter {
             dest.setDispEwVertSectOrig(src.getDispEwVertSectOrig().to1411LengthMeasure());
 
         // customData
-        if (null != src.getCustomData() && null != src.getCustomData().getAny())
-            dest.setCustomData(src.getCustomData().to1411CustomData());
+        dest.setCustomData(src.getCustomData());
 
         // check repeating fields
         if (null != src.getTrajectoryStation()) {
@@ -293,8 +292,7 @@ public class TrajectoryConverter {
             dest.setDispEwVertSectOrig(src.getDispEwVertSectOrig().to20LengthMeasure());
 
         // customData
-        if (null != src.getCustomData() && null != src.getCustomData().getAny())
-            dest.setCustomData(src.getCustomData().to20CustomData());
+        dest.setCustomData(src.getCustomData());
 
         // check repeating fields
         if (null != src.getTrajectoryStation()) {
