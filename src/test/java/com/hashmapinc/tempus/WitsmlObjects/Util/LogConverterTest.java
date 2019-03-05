@@ -82,10 +82,7 @@ public class LogConverterTest {
         }
 
         // customData
-        if (null != src.getCustomData() && null != src.getCustomData().getAny()){
-            for (int i = 0; i < src.getCustomData().getAny().size(); i++)
-                assertEquals(src.getCustomData().getAny().get(i), dest.getCustomData().getAny().get(i));
-        }
+        assertEquals(src.getCustomData(), dest.getCustomData());
 
         // check repeating fields
         // logParam
@@ -196,7 +193,7 @@ public class LogConverterTest {
     @Test
     public void shouldConvert1311to1411()  throws Exception {
         String srcXML = TestUtilities.getResourceAsString("log_converter/log1311.xml");
-        com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLog src = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLogs)WitsmlMarshal.deserialize(srcXML, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLog.class)).getLog().get(0);
+        com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLog src = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLogs)WitsmlMarshal.deserialize(srcXML, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLogs.class)).getLog().get(0);
 
         // get converted log
         com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLog dest = LogConverter.convertTo1411(src);
@@ -267,10 +264,7 @@ public class LogConverterTest {
         }
 
         // customData
-        if (null != src.getCustomData() && null != src.getCustomData().getAny()){
-            for (int i = 0; i < src.getCustomData().getAny().size(); i++)
-                assertEquals(src.getCustomData().getAny().get(i), dest.getCustomData().getAny().get(i));
-        }
+        assertEquals(src.getCustomData(), dest.getCustomData());
 
         // check repeating fields
         // logParam

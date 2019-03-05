@@ -67,7 +67,7 @@ public class WellboreConverter {
         if (null != src.getCommonData())
             dest.setCommonData(src.getCommonData().to1311CommonData());
         if (null != src.getCustomData())
-            dest.setCustomData(src.getCustomData().to1311CustomData());
+            dest.setCustomData(src.getCustomData());
 
         dest.setUidWell(src.getUidWell());
         dest.setUid(src.getUid());
@@ -117,11 +117,7 @@ public class WellboreConverter {
 
 
         // get custom data
-        if(null != src.getCustomData()) {
-            com.hashmapinc.tempus.WitsmlObjects.v1311.CsCustomData customData = new com.hashmapinc.tempus.WitsmlObjects.v1311.CsCustomData();
-            customData.setAny(src.getCustomData().getAny());
-            dest.setCustomData(customData);
-        }
+        dest.setCustomData(src.getCustomData());
         return dest;
     }
     //=========================================================================
@@ -178,8 +174,8 @@ public class WellboreConverter {
 
         if (null != src.getCommonData())
             dest.setCommonData(src.getCommonData().to1411CommonData());
-        if (null != src.getCustomData())
-            dest.setCustomData(src.getCustomData().to1411CustomData());
+
+        dest.setCustomData(src.getCustomData());
 
         dest.setUidWell(src.getUidWell());
         dest.setUid(src.getUid());
@@ -229,11 +225,7 @@ public class WellboreConverter {
         }
 
         // get custom data
-        if(null != src.getCustomData()) {
-            com.hashmapinc.tempus.WitsmlObjects.v1411.CsCustomData customData = new com.hashmapinc.tempus.WitsmlObjects.v1411.CsCustomData();
-            customData.setAny(src.getCustomData().getAny());
-            dest.setCustomData(customData);
-        }
+        dest.setCustomData(src.getCustomData());
         return dest;
     }
     //=========================================================================
@@ -279,11 +271,7 @@ public class WellboreConverter {
         }
 
         // get custom data
-        if(null != src.getCustomData()) {
-            com.hashmapinc.tempus.WitsmlObjects.v20.CustomData customData = new com.hashmapinc.tempus.WitsmlObjects.v20.CustomData();
-            customData.setAny(src.getCustomData().getAny());
-            dest.setCustomData(customData);
-        }
+        dest.setCustomData(src.getCustomData());
         return dest;
     }
 
@@ -324,11 +312,7 @@ public class WellboreConverter {
         }
 
         // get custom data
-        if(null != src.getCustomData()) {
-            com.hashmapinc.tempus.WitsmlObjects.v20.CustomData customData = new com.hashmapinc.tempus.WitsmlObjects.v20.CustomData();
-            customData.setAny(src.getCustomData().getAny());
-            dest.setCustomData(customData);
-        }
+        dest.setCustomData(src.getCustomData());
         return dest;
     }
     //=========================================================================

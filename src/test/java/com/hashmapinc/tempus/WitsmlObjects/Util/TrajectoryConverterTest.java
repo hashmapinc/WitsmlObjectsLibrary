@@ -73,10 +73,7 @@ public class TrajectoryConverterTest {
             assertEquals(src.getCommonData().getItemState(), dest.getCommonData().getItemState());
             assertEquals(src.getCommonData().getComments(), dest.getCommonData().getComments());
         }
-        if (null != src.getCustomData() && null != src.getCustomData().getAny()){
-            for (int i = 0; i < src.getCustomData().getAny().size(); i++)
-                assertEquals(src.getCustomData().getAny().get(i), dest.getCustomData().getAny().get(i));
-        }
+        assertEquals(src.getCustomData(), dest.getCustomData());
 
         // check repeating fields
         if (null != src.getTrajectoryStation()) {
@@ -462,10 +459,7 @@ public class TrajectoryConverterTest {
         }
         if (null != src.getAziRef())
             assertEquals(src.getAziRef(), dest.getAziRef());
-        if (null != src.getCustomData() && null != src.getCustomData().getAny()){
-            for (int i = 0; i < src.getCustomData().getAny().size(); i++)
-                assertEquals(src.getCustomData().getAny().get(i), dest.getCustomData().getAny().get(i));
-        }
+        assertEquals(src.getCustomData(), dest.getCustomData());
 
         // check repeating fields
         if (null != src.getTrajectoryStation()) {
@@ -730,7 +724,7 @@ public class TrajectoryConverterTest {
     @Test
     public void shouldConvert1311To1411() throws Exception{
         String srcXML = TestUtilities.getResourceAsString("trajectory_converter/trajectory1311.xml");
-        com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectory src = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectorys)WitsmlMarshal.deserialize(srcXML, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectory.class)).getTrajectory().get(0);
+        com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectory src = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectorys)WitsmlMarshal.deserialize(srcXML, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectorys.class)).getTrajectory().get(0);
 
         // get converted object
         com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory dest = TrajectoryConverter.convertTo1411(src);
@@ -791,10 +785,8 @@ public class TrajectoryConverterTest {
             assertEquals(src.getCommonData().getItemState(), dest.getCommonData().getItemState());
             assertEquals(src.getCommonData().getComments(), dest.getCommonData().getComments());
         }
-        if (null != src.getCustomData() && null != src.getCustomData().getAny()){
-            for (int i = 0; i < src.getCustomData().getAny().size(); i++)
-                assertEquals(src.getCustomData().getAny().get(i), dest.getCustomData().getAny().get(i));
-        }
+
+        assertEquals(src.getCustomData(), dest.getCustomData());
 
         // check repeating fields
         if (null != src.getTrajectoryStation()) {
@@ -1185,10 +1177,8 @@ public class TrajectoryConverterTest {
         }
         if (null != src.getAziRef())
             assertEquals(src.getAziRef(), dest.getAziRef());
-        if (null != src.getCustomData() && null != src.getCustomData().getAny()){
-            for (int i = 0; i < src.getCustomData().getAny().size(); i++)
-                assertEquals(src.getCustomData().getAny().get(i), dest.getCustomData().getAny().get(i));
-        }
+        assertEquals(src.getCustomData(), dest.getCustomData());
+
 
         // check repeating fields
         if (null != src.getTrajectoryStation()) {
@@ -1453,7 +1443,7 @@ public class TrajectoryConverterTest {
     @Test
     public void shouldConvert1311To20() throws Exception {
         String srcXML = TestUtilities.getResourceAsString("trajectory_converter/trajectory1311.xml");
-        com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectory src = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectorys)WitsmlMarshal.deserialize(srcXML, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectory.class)).getTrajectory().get(0);
+        com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectory src = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectorys)WitsmlMarshal.deserialize(srcXML, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectorys.class)).getTrajectory().get(0);
 
         // get converted object
         com.hashmapinc.tempus.WitsmlObjects.v20.Trajectory dest = TrajectoryConverter.convertTo20(src);
@@ -1497,10 +1487,8 @@ public class TrajectoryConverterTest {
         }
         if (null != src.getAziRef())
             assertEquals(src.getAziRef(), dest.getAziRef());
-        if (null != src.getCustomData() && null != src.getCustomData().getAny()){
-            for (int i = 0; i < src.getCustomData().getAny().size(); i++)
-                assertEquals(src.getCustomData().getAny().get(i), dest.getCustomData().getAny().get(i));
-        }
+
+        assertEquals(src.getCustomData(), dest.getCustomData());
 
         // check repeating fields
         if (null != src.getTrajectoryStation()) {
@@ -1808,10 +1796,7 @@ public class TrajectoryConverterTest {
         }
         if (null != src.getAziRef())
             assertEquals(src.getAziRef(), dest.getAziRef());
-        if (null != src.getCustomData() && null != src.getCustomData().getAny()){
-            for (int i = 0; i < src.getCustomData().getAny().size(); i++)
-                assertEquals(src.getCustomData().getAny().get(i), dest.getCustomData().getAny().get(i));
-        }
+        assertEquals(src.getCustomData(), dest.getCustomData());
 
         // check repeating fields
         if (null != src.getTrajectoryStation()) {

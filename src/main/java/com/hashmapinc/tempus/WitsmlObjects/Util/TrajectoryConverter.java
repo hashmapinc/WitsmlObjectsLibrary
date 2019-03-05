@@ -63,7 +63,7 @@ public class TrajectoryConverter {
 
         // custom data
         if (null != src.getCustomData())
-            dest.setCustomData(src.getCustomData().to1311CustomData());
+            dest.setCustomData(src.getCustomData());
 
         // check repeating fields
         if (null != src.getTrajectoryStation()) {
@@ -141,7 +141,7 @@ public class TrajectoryConverter {
 
         // custom data
         if (null != src.getCustomData())
-            dest.setCustomData(src.getCustomData().to1411CustomData());
+            dest.setCustomData(src.getCustomData());
 
         // check repeating fields
         if (null != src.getTrajectoryStation()) {
@@ -212,8 +212,7 @@ public class TrajectoryConverter {
             dest.setDispEwVertSectOrig(src.getDispEwVertSectOrig().to1411LengthMeasure());
 
         // customData
-        if (null != src.getCustomData() && null != src.getCustomData().getAny())
-            dest.setCustomData(src.getCustomData().to1411CustomData());
+        dest.setCustomData(src.getCustomData());
 
         // check repeating fields
         if (null != src.getTrajectoryStation()) {
@@ -239,6 +238,14 @@ public class TrajectoryConverter {
     public static com.hashmapinc.tempus.WitsmlObjects.v20.Trajectory convertTo20(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory src) {
         // get converted object
         com.hashmapinc.tempus.WitsmlObjects.v20.Trajectory dest = new com.hashmapinc.tempus.WitsmlObjects.v20.Trajectory();
+
+        // check the objects that are not really 2.0 but are in some silly responses
+        dest.setName(src.getName());
+        dest.setNameWell(src.getNameWell());
+        dest.setNameWellbore(src.getNameWellbore());
+        dest.setUid(src.getUid());
+        dest.setUidWell(src.getUidWell());
+        dest.setUidWellbore(src.getUidWellbore());
 
         // check non-complex, non-repeating fields
         dest.setServiceCompany(src.getServiceCompany());
@@ -285,8 +292,7 @@ public class TrajectoryConverter {
             dest.setDispEwVertSectOrig(src.getDispEwVertSectOrig().to20LengthMeasure());
 
         // customData
-        if (null != src.getCustomData() && null != src.getCustomData().getAny())
-            dest.setCustomData(src.getCustomData().to20CustomData());
+        dest.setCustomData(src.getCustomData());
 
         // check repeating fields
         if (null != src.getTrajectoryStation()) {

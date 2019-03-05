@@ -75,7 +75,7 @@ public abstract class AbstractObject {
     @XmlElement(name = "Citation", required = true)
     protected Citation citation;
     @XmlElement(name = "CustomData")
-    protected CustomData customData;
+    protected String customData;
     @XmlElement(name = "ExtensionNameValue")
     protected List<ExtensionNameValue> extensionNameValue;
     @XmlAttribute(name = "objectVersion")
@@ -148,7 +148,7 @@ public abstract class AbstractObject {
      *     {@link CustomData }
      *     
      */
-    public CustomData getCustomData() {
+    public String getCustomData() {
         return customData;
     }
 
@@ -160,7 +160,7 @@ public abstract class AbstractObject {
      *     {@link CustomData }
      *     
      */
-    public void setCustomData(CustomData value) {
+    public void setCustomData(String value) {
         this.customData = value;
     }
 

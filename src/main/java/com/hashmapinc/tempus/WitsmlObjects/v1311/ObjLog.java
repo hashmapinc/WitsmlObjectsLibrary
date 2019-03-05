@@ -97,7 +97,7 @@ public class ObjLog extends AbstractWitsmlObject {
     private List<CsLogCurveInfo> logCurveInfo;
     private CsLogData logData;
     protected CsCommonData commonData;
-    protected CsCustomData customData;
+    protected String customData;
     @XmlAttribute(name = "uidWell")
     protected String uidWell;
     @XmlAttribute(name = "uidWellbore")
@@ -627,20 +627,18 @@ public class ObjLog extends AbstractWitsmlObject {
     /**
      * Gets the value of the customData property.
      *
-     * @return possible object is
-     * {@link CsCustomData }
+     * @return possible object is String
      */
-    public CsCustomData getCustomData() {
+    public String getCustomData() {
         return customData;
     }
 
     /**
      * Sets the value of the customData property.
      *
-     * @param value allowed object is
-     *              {@link CsCustomData }
+     * @param value allowed object is String
      */
-    public void setCustomData(CsCustomData value) {
+    public void setCustomData(String value) {
         this.customData = value;
     }
 

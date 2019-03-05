@@ -6,7 +6,7 @@
 
     <groupId>com.hashmapinc.tempus</groupId>
     <artifactId>WitsmlObjects</artifactId>
-    <version>1.1.26</version>
+    <version>1.1.28</version>
     <packaging>jar</packaging>
 
     <name>WITSML Objects Helper Library</name>

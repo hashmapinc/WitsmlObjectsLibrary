@@ -16,7 +16,7 @@ public class AbstractWitsmlObjectTest {
         try {
             String xml1311 = TestUtilities.getResourceAsString("trajectory1311.xml");
             AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectorys) WitsmlMarshal
-                    .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectory.class)).getTrajectory().get(0);
+                    .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectorys.class)).getTrajectory().get(0);
 
             String uid = obj1311.getUid();
 
@@ -30,7 +30,7 @@ public class AbstractWitsmlObjectTest {
         try {
             String xml1411 = TestUtilities.getResourceAsString("trajectory1411.xml");
             AbstractWitsmlObject obj1411 = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectorys) WitsmlMarshal
-                    .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory.class)).getTrajectory().get(0);
+                    .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectorys.class)).getTrajectory().get(0);
 
             String uid = obj1411.getUid();
 
@@ -48,7 +48,7 @@ public class AbstractWitsmlObjectTest {
         //=====================================================================
         String xml1311 = TestUtilities.getResourceAsString("trajectory1311.xml");
         AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectorys) WitsmlMarshal
-                .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectory.class)).getTrajectory().get(0);
+                .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectorys.class)).getTrajectory().get(0);
 
         // check same-version serialization
         String serializedXML1311 = obj1311.getXMLString("1.3.1.1");
@@ -74,7 +74,7 @@ public class AbstractWitsmlObjectTest {
         //=====================================================================
         String xml1411 = TestUtilities.getResourceAsString("trajectory1411.xml");
         AbstractWitsmlObject obj1411 = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectorys) WitsmlMarshal
-                .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory.class)).getTrajectory().get(0);
+                .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectorys.class)).getTrajectory().get(0);
 
         // check same-version serialization
         String serializedXML1411 = obj1411.getXMLString("1.4.1.1");
@@ -103,7 +103,7 @@ public class AbstractWitsmlObjectTest {
         //=====================================================================
         String xml1311 = TestUtilities.getResourceAsString("trajectory1311.xml");
         AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectorys) WitsmlMarshal
-                .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectory.class)).getTrajectory().get(0);
+                .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjTrajectorys.class)).getTrajectory().get(0);
 
         // check same-version serialization
         String serializedJSON1311 = obj1311.getJSONString("1.3.1.1");
@@ -127,7 +127,7 @@ public class AbstractWitsmlObjectTest {
         //=====================================================================
         String xml1411 = TestUtilities.getResourceAsString("trajectory1411.xml");
         AbstractWitsmlObject obj1411 = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectorys) WitsmlMarshal
-                .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory.class)).getTrajectory().get(0);
+                .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectorys.class)).getTrajectory().get(0);
 
         // check same-version serialization
         String serializedJSON1411 = obj1411.getJSONString("1.4.1.1");
@@ -157,7 +157,7 @@ public class AbstractWitsmlObjectTest {
         //=====================================================================
         String xml1311 = TestUtilities.getResourceAsString("wellbore1311.xml");
         AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWellbores) WitsmlMarshal
-                .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWellbore.class)).getWellbore().get(0);
+                .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWellbores.class)).getWellbore().get(0);
 
         // check same-version serialization
         String serializedJSON1311 = obj1311.getJSONString("1.3.1.1");
@@ -175,7 +175,7 @@ public class AbstractWitsmlObjectTest {
         //=====================================================================
         String xml1411 = TestUtilities.getResourceAsString("wellbore1411.xml");
         AbstractWitsmlObject obj1411 = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores) WitsmlMarshal
-                .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore.class)).getWellbore().get(0);
+                .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores.class)).getWellbore().get(0);
 
         // check same-version serialization
         String serializedJSON1411 = obj1411.getJSONString("1.4.1.1");
@@ -195,7 +195,7 @@ public class AbstractWitsmlObjectTest {
         try {
             String xml1311 = TestUtilities.getResourceAsString("wellbore1311.xml");
             AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWellbores) WitsmlMarshal
-                    .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWellbore.class)).getWellbore().get(0);
+                    .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWellbores.class)).getWellbore().get(0);
 
             String uid = obj1311.getUid();
 
@@ -209,7 +209,7 @@ public class AbstractWitsmlObjectTest {
         try {
             String xml1411 = TestUtilities.getResourceAsString("wellbore1411.xml");
             AbstractWitsmlObject obj1411 = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores) WitsmlMarshal
-                    .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore.class)).getWellbore().get(0);
+                    .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores.class)).getWellbore().get(0);
 
             String uid = obj1411.getUid();
 
@@ -227,7 +227,7 @@ public class AbstractWitsmlObjectTest {
         //=====================================================================
         String xml1311 = TestUtilities.getResourceAsString("wellbore1311.xml");
         AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWellbores) WitsmlMarshal
-            .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWellbore.class)).getWellbore().get(0);
+            .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWellbores.class)).getWellbore().get(0);
 
         // check same-version serialization
         String serializedXML1311 = obj1311.getXMLString("1.3.1.1");
@@ -245,7 +245,7 @@ public class AbstractWitsmlObjectTest {
         //=====================================================================
         String xml1411 = TestUtilities.getResourceAsString("wellbore1411.xml");
         AbstractWitsmlObject obj1411 = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores) WitsmlMarshal
-            .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbore.class)).getWellbore().get(0);
+            .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWellbores.class)).getWellbore().get(0);
 
         // check same-version serialization
         String serializedXML1411 = obj1411.getXMLString("1.4.1.1");
@@ -270,7 +270,7 @@ public class AbstractWitsmlObjectTest {
         //=====================================================================
         String xml1311 = TestUtilities.getResourceAsString("well1311.xml");
         AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWells) WitsmlMarshal
-                .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell.class)).getWell().get(0);
+                .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWells.class)).getWell().get(0);
 
         // check same-version serialization
         String serializedJSON1311 = obj1311.getJSONString("1.3.1.1");
@@ -288,7 +288,7 @@ public class AbstractWitsmlObjectTest {
         //=====================================================================
         String xml1411 = TestUtilities.getResourceAsString("well1411.xml");
         AbstractWitsmlObject obj1411 = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWells) WitsmlMarshal
-                .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell.class)).getWell().get(0);
+                .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWells.class)).getWell().get(0);
 
         // check same-version serialization
         String serializedJSON1411 = obj1411.getJSONString("1.4.1.1");
@@ -308,7 +308,7 @@ public class AbstractWitsmlObjectTest {
         try {
             String xml1311 = TestUtilities.getResourceAsString("well1311.xml");
             AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWells) WitsmlMarshal
-                    .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell.class)).getWell().get(0);
+                    .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWells.class)).getWell().get(0);
 
             String uid = obj1311.getUid();
 
@@ -322,7 +322,7 @@ public class AbstractWitsmlObjectTest {
         try {
             String xml1411 = TestUtilities.getResourceAsString("well1411.xml");
             AbstractWitsmlObject obj1411 = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWells) WitsmlMarshal
-                    .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell.class)).getWell().get(0);
+                    .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWells.class)).getWell().get(0);
 
             String uid = obj1411.getUid();
 
@@ -340,7 +340,7 @@ public class AbstractWitsmlObjectTest {
         //=====================================================================
         String xml1311 = TestUtilities.getResourceAsString("well1311.xml");
         AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWells) WitsmlMarshal
-            .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWell.class)).getWell().get(0);
+            .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjWells.class)).getWell().get(0);
 
         // check same-version serialization
         String serializedXML1311 = obj1311.getXMLString("1.3.1.1");
@@ -358,7 +358,7 @@ public class AbstractWitsmlObjectTest {
         //=====================================================================
         String xml1411 = TestUtilities.getResourceAsString("well1411.xml");
         AbstractWitsmlObject obj1411 = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWells) WitsmlMarshal
-            .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWell.class)).getWell().get(0);
+            .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWells.class)).getWell().get(0);
 
         // check same-version serialization
         String serializedXML1411 = obj1411.getXMLString("1.4.1.1");
@@ -381,7 +381,7 @@ public class AbstractWitsmlObjectTest {
         // test 1311
         try {
             String xml1311 = TestUtilities.getResourceAsString("log1311.xml");
-            AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLogs) WitsmlMarshal.deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLog.class)).getLog().get(0);
+            AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLogs) WitsmlMarshal.deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLogs.class)).getLog().get(0);
             assertEquals("1.3.1.1", obj1311.getVersion());
         } catch (Exception e) {
             e.printStackTrace();
@@ -405,7 +405,7 @@ public class AbstractWitsmlObjectTest {
         // test 1311
         try {
             String xml1311 = TestUtilities.getResourceAsString("log1311.xml");
-            AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLogs) WitsmlMarshal.deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLog.class)).getLog().get(0);
+            AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLogs) WitsmlMarshal.deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLogs.class)).getLog().get(0);
 
             String json1311 = obj1311.getJSONString("1.3.1.1");
             String json1411 = obj1311.getJSONString("1.4.1.1");
@@ -440,7 +440,7 @@ public class AbstractWitsmlObjectTest {
         try {
             String xml1311 = TestUtilities.getResourceAsString("log1311.xml");
             AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLogs) WitsmlMarshal
-                    .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLog.class)).getLog().get(0);
+                    .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLogs.class)).getLog().get(0);
 
             String objectType = obj1311.getObjectType();
 
@@ -454,7 +454,7 @@ public class AbstractWitsmlObjectTest {
         try {
             String xml1411 = TestUtilities.getResourceAsString("log1411.xml");
             AbstractWitsmlObject obj1411 = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLogs) WitsmlMarshal
-                    .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLog.class)).getLog().get(0);
+                    .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLogs.class)).getLog().get(0);
 
             String objectType = obj1411.getObjectType();
 
@@ -471,7 +471,7 @@ public class AbstractWitsmlObjectTest {
         try {
             String xml1311 = TestUtilities.getResourceAsString("log1311.xml");
             AbstractWitsmlObject obj1311 = ((com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLogs) WitsmlMarshal
-                    .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLog.class)).getLog().get(0);
+                    .deserialize(xml1311, com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLogs.class)).getLog().get(0);
 
             String uid = obj1311.getUid();
 
@@ -485,7 +485,7 @@ public class AbstractWitsmlObjectTest {
         try {
             String xml1411 = TestUtilities.getResourceAsString("log1411.xml");
             AbstractWitsmlObject obj1411 = ((com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLogs) WitsmlMarshal
-                    .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLog.class)).getLog().get(0);
+                    .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLogs.class)).getLog().get(0);
 
             String uid = obj1411.getUid();
 
