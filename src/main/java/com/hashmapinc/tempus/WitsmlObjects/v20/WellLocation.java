@@ -4,17 +4,12 @@
 package com.hashmapinc.tempus.WitsmlObjects.v20;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonSubTypes;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.hashmapinc.tempus.WitsmlObjects.v1411.RefNameString;
+import com.hashmapinc.tempus.WitsmlObjects.v20.*;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -42,18 +37,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AbstractWellLocation", namespace = "http://www.energistics.org/energyml/data/witsmlv2", propOrder = {
-    "original",
-    "description",
-    "extensionNameValue"
-})
-@XmlSeeAlso({
-    ProjectedWellLocation.class,
-    GeodeticWellLocation.class
-})
-@JsonIgnoreProperties(ignoreUnknown = true)
-
-public abstract class AbstractWellLocation {
+public class WellLocation {
 
     @XmlElement(name = "Original")
     protected Boolean original;
@@ -63,6 +47,16 @@ public abstract class AbstractWellLocation {
     protected List<ExtensionNameValue> extensionNameValue;
     @XmlAttribute(name = "uid", required = true)
     protected String uid;
+    @XmlElement(name = "Coordinate1")
+    protected Double coordinate1;
+    @XmlElement(name = "Coordinate2")
+    protected Double coordinate2;
+    @XmlElement(name = "Crs", required = true)
+    protected RefNameString crs;
+    @XmlElement(name = "Latitude", required = true)
+    protected PlaneAngleMeasure latitude;
+    @XmlElement(name = "Longitude", required = true)
+    protected PlaneAngleMeasure longitude;
 
     /**
      * Gets the value of the original property.
@@ -165,7 +159,110 @@ public abstract class AbstractWellLocation {
         this.uid = value;
     }
 
+    /**
+     * Gets the value of the coordinate1 property.
+     *
+     */
+    public Double getCoordinate1() {
+        return coordinate1;
+    }
 
+    /**
+     * Sets the value of the coordinate1 property.
+     *
+     */
+    public void setCoordinate1(Double value) {
+        this.coordinate1 = value;
+    }
+
+    /**
+     * Gets the value of the coordinate2 property.
+     *
+     */
+    public Double getCoordinate2() {
+        return coordinate2;
+    }
+
+    /**
+     * Sets the value of the coordinate2 property.
+     *
+     */
+    public void setCoordinate2(Double value) {
+        this.coordinate2 = value;
+    }
+
+    /**
+     * Gets the value of the latitude property.
+     *
+     * @return
+     *     possible object is
+     *     {@link PlaneAngleMeasure }
+     *
+     */
+    public PlaneAngleMeasure getLatitude() {
+        return latitude;
+    }
+
+    /**
+     * Sets the value of the latitude property.
+     *
+     * @param value
+     *     allowed object is
+     *     {@link PlaneAngleMeasure }
+     *
+     */
+    public void setLatitude(PlaneAngleMeasure value) {
+        this.latitude = value;
+    }
+
+
+    /**
+     * Gets the value of the longitude property.
+     *
+     * @return
+     *     possible object is
+     *     {@link PlaneAngleMeasure }
+     *
+     */
+    public PlaneAngleMeasure getLongitude() {
+        return longitude;
+    }
+
+    /**
+     * Sets the value of the longitude property.
+     *
+     * @param value
+     *     allowed object is
+     *     {@link PlaneAngleMeasure }
+     *
+     */
+    public void setLongitude(PlaneAngleMeasure value) {
+        this.longitude = value;
+    }
+
+    /**
+     * Gets the value of the crs property.
+     *
+     * @return
+     *     possible object is
+     *     {@link AbstractGeodeticCrs }
+     *
+     */
+    public RefNameString getCrs() {
+        return crs;
+    }
+
+    /**
+     * Sets the value of the crs property.
+     *
+     * @param value
+     *     allowed object is
+     *     {@link AbstractGeodeticCrs }
+     *
+     */
+    public void setCrs(RefNameString value) {
+        this.crs = value;
+    }
 
 
     //=========================================================================
@@ -178,6 +275,11 @@ public abstract class AbstractWellLocation {
         location.setOriginal(this.isOriginal());
         location.setDescription(this.getDescription());
         location.setUid(this.getUid());
+        if (this.getLatitude() != null)
+            location.setLatitude(this.getLatitude().to1311PlaneAngleMeasure());
+
+        if (this.getLongitude() != null)
+            location.setLongitude(this.getLongitude().to1311PlaneAngleMeasure());
 
         return location;
     }
@@ -189,6 +291,11 @@ public abstract class AbstractWellLocation {
         location.setOriginal(this.isOriginal());
         location.setDescription(this.getDescription());
         location.setUid(this.getUid());
+        if (this.getLatitude() != null)
+            location.setLatitude(this.getLatitude().to1411PlaneAngleMeasure());
+
+        if (this.getLongitude() != null)
+            location.setLongitude(this.getLongitude().to1411PlaneAngleMeasure());
 
         return location;
     }

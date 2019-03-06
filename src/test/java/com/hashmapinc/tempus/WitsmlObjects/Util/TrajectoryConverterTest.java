@@ -703,7 +703,7 @@ public class TrajectoryConverterTest {
 
                 // check repeating fields
                 if (null != srcStation.getLocation()) {
-                    List<com.hashmapinc.tempus.WitsmlObjects.v20.AbstractWellLocation> srcStationLoc = srcStation.getLocation();
+                    List<com.hashmapinc.tempus.WitsmlObjects.v20.WellLocation> srcStationLoc = srcStation.getLocation();
                     List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsLocation> destStationLoc = destStation.getLocation();
                     for (int j = 0; j < srcStationLoc.size(); j++) {
                         assertEquals(srcStationLoc.get(j).isOriginal(), destStationLoc.get(j).isOriginal());
@@ -1422,7 +1422,7 @@ public class TrajectoryConverterTest {
 
                 // check repeating fields
                 if (null != srcStation.getLocation()) {
-                    List<com.hashmapinc.tempus.WitsmlObjects.v20.AbstractWellLocation> srcStationLoc = srcStation.getLocation();
+                    List<com.hashmapinc.tempus.WitsmlObjects.v20.WellLocation> srcStationLoc = srcStation.getLocation();
                     List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation> destStationLoc = destStation.getLocation();
                     for (int j = 0; j < srcStationLoc.size(); j++) {
                         assertEquals(srcStationLoc.get(j).isOriginal(), destStationLoc.get(j).isOriginal());
@@ -1733,7 +1733,7 @@ public class TrajectoryConverterTest {
                 // check repeating fields
                 if (null != srcStation.getLocation()) {
                     List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsLocation> srcStationLoc = srcStation.getLocation();
-                    List<com.hashmapinc.tempus.WitsmlObjects.v20.AbstractWellLocation> destStationLoc = destStation.getLocation();
+                    List<com.hashmapinc.tempus.WitsmlObjects.v20.WellLocation> destStationLoc = destStation.getLocation();
                     for (int j = 0; j < srcStationLoc.size(); j++) {
                         assertEquals(srcStationLoc.get(j).isOriginal(), destStationLoc.get(j).isOriginal());
                         assertEquals(srcStationLoc.get(j).getDescription(), destStationLoc.get(j).getDescription());
@@ -2041,7 +2041,7 @@ public class TrajectoryConverterTest {
                 // check repeating fields
                 if (null != srcStation.getLocation()) {
                     List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation> srcStationLoc = srcStation.getLocation();
-                    List<com.hashmapinc.tempus.WitsmlObjects.v20.AbstractWellLocation> destStationLoc = destStation.getLocation();
+                    List<com.hashmapinc.tempus.WitsmlObjects.v20.WellLocation> destStationLoc = destStation.getLocation();
                     for (int j = 0; j < srcStationLoc.size(); j++) {
                         assertEquals(srcStationLoc.get(j).isOriginal(), destStationLoc.get(j).isOriginal());
                         assertEquals(srcStationLoc.get(j).getDescription(), destStationLoc.get(j).getDescription());

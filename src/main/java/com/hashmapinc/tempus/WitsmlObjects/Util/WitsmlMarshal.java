@@ -1,13 +1,11 @@
 package com.hashmapinc.tempus.WitsmlObjects.Util;
 
-import javax.xml.bind.*;
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.util.StdDateFormat;
 
+import javax.xml.bind.*;
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;

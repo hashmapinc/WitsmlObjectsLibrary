@@ -9,6 +9,7 @@
 package com.hashmapinc.tempus.WitsmlObjects.v1411;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.hashmapinc.tempus.WitsmlObjects.v20.GeodeticWellLocation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -539,14 +540,17 @@ public class CsLocation {
         return location;
     }
 
-    public com.hashmapinc.tempus.WitsmlObjects.v20.AbstractWellLocation to20AbstractWellLocation() {
-        com.hashmapinc.tempus.WitsmlObjects.v20.AbstractWellLocation location = new com.hashmapinc.tempus.WitsmlObjects.v20.GeodeticWellLocation();
+    public com.hashmapinc.tempus.WitsmlObjects.v20.WellLocation to20AbstractWellLocation() {
+        com.hashmapinc.tempus.WitsmlObjects.v20.WellLocation location = new com.hashmapinc.tempus.WitsmlObjects.v20.WellLocation();
 
         // assign fields
         location.setOriginal(this.isOriginal());
         location.setDescription(this.getDescription());
         location.setUid(this.getUid());
-
+        if (getLatitude() != null)
+            location.setLatitude(getLatitude().to20PlaneAngleMeasure());
+        if (getLongitude() != null)
+            location.setLongitude(getLongitude().to20PlaneAngleMeasure());
         return location;
     }
     //=========================================================================

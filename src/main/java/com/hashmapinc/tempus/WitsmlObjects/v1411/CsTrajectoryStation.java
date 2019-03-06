@@ -1680,7 +1680,7 @@ public class CsTrajectoryStation {
 
         // check repeating fields
         if (null != this.getLocation()) {
-            List<com.hashmapinc.tempus.WitsmlObjects.v20.AbstractWellLocation> destLocations = new ArrayList<>();
+            List<com.hashmapinc.tempus.WitsmlObjects.v20.WellLocation> destLocations = new ArrayList<>();
             for (com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation srcLocation : this.getLocation())
                 destLocations.add(srcLocation.to20AbstractWellLocation());
 

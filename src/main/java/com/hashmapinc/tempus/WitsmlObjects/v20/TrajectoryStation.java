@@ -229,7 +229,7 @@ public class TrajectoryStation {
     @XmlElement(name = "MatrixCov")
     protected StnTrajMatrixCov matrixCov;
     @XmlElement(name = "Location")
-    protected List<AbstractWellLocation> location;
+    protected List<WellLocation> location;
     @XmlElement(name = "SourceStation")
     protected RefWellboreTrajectoryStation sourceStation;
     @XmlElement(name = "RawData")
@@ -1300,14 +1300,14 @@ public class TrajectoryStation {
      * 
      * 
      */
-    public List<AbstractWellLocation> getLocation() {
+    public List<WellLocation> getLocation() {
         if (location == null) {
-            location = new ArrayList<AbstractWellLocation>();
+            location = new ArrayList<WellLocation>();
         }
         return this.location;
     }
 
-    public void setLocation(List<AbstractWellLocation> locList) {
+    public void setLocation(List<WellLocation> locList) {
         this.location = locList;
     }
 
@@ -1571,7 +1571,7 @@ public class TrajectoryStation {
         // check repeating fields
         if (null != this.getLocation()) {
             List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsLocation> destLocations = new ArrayList<>();
-            for (com.hashmapinc.tempus.WitsmlObjects.v20.AbstractWellLocation srcLocation : this.getLocation())
+            for (com.hashmapinc.tempus.WitsmlObjects.v20.WellLocation srcLocation : this.getLocation())
                 destLocations.add(srcLocation.to1411CsLocation());
 
             station.setLocation(destLocations);
