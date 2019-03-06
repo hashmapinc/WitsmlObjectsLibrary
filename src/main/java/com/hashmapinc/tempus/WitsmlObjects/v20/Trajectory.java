@@ -3,6 +3,8 @@
 
 package com.hashmapinc.tempus.WitsmlObjects.v20;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.*;

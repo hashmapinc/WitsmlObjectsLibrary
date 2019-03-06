@@ -3,6 +3,10 @@
 
 package com.hashmapinc.tempus.WitsmlObjects.v20;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -47,6 +51,7 @@ import javax.xml.bind.annotation.XmlType;
     ProjectedWellLocation.class,
     GeodeticWellLocation.class
 })
+@JsonIgnoreProperties(ignoreUnknown = true)
 public abstract class AbstractWellLocation {
 
     @XmlElement(name = "Original")

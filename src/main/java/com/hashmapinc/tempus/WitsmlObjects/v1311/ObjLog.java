@@ -114,6 +114,14 @@ public class ObjLog extends AbstractWitsmlObject {
     }
 
     /**
+     * get the grandParent uid as a string
+     */
+    @Override
+    public String getGrandParentUid() {
+        return this.uidWell;
+    }
+
+    /**
      * get the version as a string
      */
     @Override

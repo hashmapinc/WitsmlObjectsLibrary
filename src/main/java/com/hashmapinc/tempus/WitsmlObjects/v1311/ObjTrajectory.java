@@ -107,9 +107,17 @@ public class ObjTrajectory extends AbstractWitsmlObject {
     /**
      * get the parent uid as a string
      */
-    //@Override
+    @Override
     public String getParentUid() {
         return this.uidWellbore;
+    }
+
+    /**
+     * get the parent uid as a string
+     */
+    @Override
+    public String getGrandParentUid() {
+        return this.uidWell;
     }
 
     /**

@@ -70,6 +70,17 @@ public abstract class AbstractWitsmlObject {
     public String getParentUid() {
         return null;
     };
+
+    /**
+     * This function will try to return the grandParentUid. If one does not exist, then
+     * null is returned.
+     *
+     * @return grandParentUid - String value with the grandParentUid if it exists, otherwise
+     *         null
+     */
+    public String getGrandParentUid() {
+        return null;
+    };
     // =========================================================================
 
 
