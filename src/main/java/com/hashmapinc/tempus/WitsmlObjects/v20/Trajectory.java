@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 
 /**
@@ -70,6 +71,7 @@ import javax.xml.bind.annotation.*;
     "wellbore",
     "parentTrajectory"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Trajectory
     extends AbstractObject
 {
