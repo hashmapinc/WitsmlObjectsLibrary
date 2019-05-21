@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.hashmapinc.tempus.WitsmlObjects.v20.Citation;
-import com.hashmapinc.tempus.WitsmlObjects.v20.DataObjectReference;
 import com.hashmapinc.tempus.WitsmlObjects.v20.FluidsReport;
 
 public class FluidsReportConverter {
@@ -47,7 +46,11 @@ public class FluidsReportConverter {
         return dest;
     }
 
-	public static Object convertTo20(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjFluidsReport src) {
+
+    //=========================================================================
+    // conversions to 2.0
+    //=========================================================================
+	public static com.hashmapinc.tempus.WitsmlObjects.v20.FluidsReport convertTo20(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjFluidsReport src) {
 		
         com.hashmapinc.tempus.WitsmlObjects.v20.FluidsReport dest = new FluidsReport();
 
