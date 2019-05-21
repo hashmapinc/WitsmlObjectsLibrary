@@ -108,9 +108,41 @@ public class WitsmlMarshalTest {
 
     @Test
     public void shouldSerialize1411WellToJSON() throws Exception {
+        String xml1411 = TestUtilities.getResourceAsString("trajectory1411.xml");
+        com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectorys obj1411 = WitsmlMarshal
+            .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectorys.class);
+
+        com.hashmapinc.tempus.WitsmlObjects.v1411.ObjTrajectory traj = obj1411.getTrajectory().get(0);
+        String trajJson = traj.getJSONString("1.4.1.1");
+        //String json1411 = WitsmlMarshal.serializeToJSON(obj1411);
+        //String expectedJson = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/well1411_withAttributes.json");
+        //assertEquals(expectedJson.length(), json1411.length()); // simple length check before more advanced comparision
+
+        // do a deep comparison of the json values
+        assertNotNull(trajJson);
+    }
+
+    @Test
+    public void shouldSerialize1411FluidReportToJSON() throws Exception {
+        String xml1411 = TestUtilities.getResourceAsString("fluid_converter/fluid_report_1411.xml");
+        com.hashmapinc.tempus.WitsmlObjects.v1411.ObjFluidsReports obj1411 = WitsmlMarshal
+            .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjFluidsReports.class);
+
+        com.hashmapinc.tempus.WitsmlObjects.v1411.ObjFluidsReport fluidReport = obj1411.getFluidsReport().get(0);
+        String fluidReportJson = fluidReport.getJSONString("2.0");
+        //String json1411 = WitsmlMarshal.serializeToJSON(obj1411);
+        //String expectedJson = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/well1411_withAttributes.json");
+        //assertEquals(expectedJson.length(), json1411.length()); // simple length check before more advanced comparision
+
+        // do a deep comparison of the json values
+        assertNotNull(fluidReportJson);
+    }
+
+    @Test
+    public void shouldSerialize1411TrajectoryToJSON() throws Exception {
         String xml1411 = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/well1411_withoutAttributes.xml");
         com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWells obj1411 = WitsmlMarshal
-            .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWells.class);
+                .deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjWells.class);
 
         String json1411 = WitsmlMarshal.serializeToJSON(obj1411);
         String expectedJson = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/well1411_withAttributes.json");

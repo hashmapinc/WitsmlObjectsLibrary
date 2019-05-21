@@ -67,6 +67,7 @@ public abstract class AbstractWitsmlObject {
      * @return parentUid - String value with the parentUid if it exists, otherwise
      *         null
      */
+    @JsonIgnore
     public String getParentUid() {
         return null;
     };
@@ -78,6 +79,7 @@ public abstract class AbstractWitsmlObject {
      * @return grandParentUid - String value with the grandParentUid if it exists, otherwise
      *         null
      */
+    @JsonIgnore
     public String getGrandParentUid() {
         return null;
     };

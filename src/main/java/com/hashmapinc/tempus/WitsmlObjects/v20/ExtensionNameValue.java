@@ -60,7 +60,7 @@ public class ExtensionNameValue {
     @XmlElement(name = "DTim")
     protected String dTim;
     @XmlElement(name = "Index")
-    protected Integer index;
+    protected Long index;
     @XmlElement(name = "Description")
     protected String description;
 
@@ -168,7 +168,7 @@ public class ExtensionNameValue {
      *     {@link Integer }
      *     
      */
-    public Integer getIndex() {
+    public Long getIndex() {
         return index;
     }
 
@@ -180,7 +180,7 @@ public class ExtensionNameValue {
      *     {@link Integer }
      *     
      */
-    public void setIndex(Integer value) {
+    public void setIndex(Long value) {
         this.index = value;
     }
 

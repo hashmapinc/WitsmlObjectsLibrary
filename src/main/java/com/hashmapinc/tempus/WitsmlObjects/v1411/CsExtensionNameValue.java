@@ -9,6 +9,7 @@
 package com.hashmapinc.tempus.WitsmlObjects.v1411;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.hashmapinc.tempus.WitsmlObjects.v20.StringMeasure;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -298,5 +299,25 @@ public class CsExtensionNameValue {
     public void setUid(String value) {
         this.uid = value;
     }
+
+	public com.hashmapinc.tempus.WitsmlObjects.v20.ExtensionNameValue to20ExtensionNameValue() {
+        com.hashmapinc.tempus.WitsmlObjects.v20.ExtensionNameValue dest = new com.hashmapinc.tempus.WitsmlObjects.v20.ExtensionNameValue();
+        dest.setName(this.getName());
+        dest.setDTim(this.getDTim().toXMLFormat());
+        dest.setMeasureClass(this.getMeasureClass());
+        dest.setDescription(this.getDescription());
+        dest.setIndex(this.getIndex());
+        
+        if (this.getValue() != null){
+            StringMeasure sm = new StringMeasure();
+            sm.setUom(this.getValue().getUom());
+            sm.setValue(this.getValue().getValue());
+            dest.setValue(sm);
+        }
+
+
+
+		return dest;
+	}
 
 }

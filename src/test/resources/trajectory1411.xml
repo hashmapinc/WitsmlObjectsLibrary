@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="./stylesheets/generic.xsl" type="text/xsl" media="screen"?>
-<!--   		Example of Trajectory data 		-->
 <trajectorys 
 	xmlns="http://www.witsml.org/schemas/1series" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://www.witsml.org/schemas/1series  ../xsd_schemas/obj_trajectory.xsd" 
 	version="1.4.1.1">
-<!-- 
-These examples are only intended to demonstrate the type of data that can be exchanged.
-They totally artificial and are not intended to demonstrate best practices. 
--->
 	<documentInfo>
 		<documentName>trajectory</documentName>
 		<fileCreationInformation>

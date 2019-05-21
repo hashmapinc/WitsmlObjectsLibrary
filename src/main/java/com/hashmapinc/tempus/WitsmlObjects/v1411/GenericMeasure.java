@@ -83,6 +83,16 @@ public class GenericMeasure
 
         return measure;
     }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure to20GenericMeasure() {
+        com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
+
+        // assign fields
+        measure.setValue(this.getValue());
+        measure.setUom(this.getUom());
+
+        return measure;
+    }
     //=========================================================================
 
 }

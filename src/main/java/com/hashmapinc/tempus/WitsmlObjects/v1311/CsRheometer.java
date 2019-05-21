@@ -48,8 +48,8 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class CsRheometer {
 
-    protected ThermodynamicTemperatureMeasure tempRheom;
-    protected PressureMeasure presRheom;
+    protected GenericMeasure tempRheom;
+    protected GenericMeasure presRheom;
     protected Double vis3Rpm;
     protected Double vis6Rpm;
     protected Double vis100Rpm;
@@ -64,10 +64,10 @@ public class CsRheometer {
      * 
      * @return
      *     possible object is
-     *     {@link ThermodynamicTemperatureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public ThermodynamicTemperatureMeasure getTempRheom() {
+    public GenericMeasure getTempRheom() {
         return tempRheom;
     }
 
@@ -76,10 +76,10 @@ public class CsRheometer {
      * 
      * @param value
      *     allowed object is
-     *     {@link ThermodynamicTemperatureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setTempRheom(ThermodynamicTemperatureMeasure value) {
+    public void setTempRheom(GenericMeasure value) {
         this.tempRheom = value;
     }
 
@@ -88,10 +88,10 @@ public class CsRheometer {
      * 
      * @return
      *     possible object is
-     *     {@link PressureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public PressureMeasure getPresRheom() {
+    public GenericMeasure getPresRheom() {
         return presRheom;
     }
 
@@ -100,10 +100,10 @@ public class CsRheometer {
      * 
      * @param value
      *     allowed object is
-     *     {@link PressureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setPresRheom(PressureMeasure value) {
+    public void setPresRheom(GenericMeasure value) {
         this.presRheom = value;
     }
 

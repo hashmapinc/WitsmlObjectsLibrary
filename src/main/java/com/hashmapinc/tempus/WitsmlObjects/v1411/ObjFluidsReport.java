@@ -5,7 +5,6 @@
 // Generated on: 2017.06.26 at 03:00:38 PM CDT 
 //
 
-
 package com.hashmapinc.tempus.WitsmlObjects.v1411;
 
 import java.util.ArrayList;
@@ -17,6 +16,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+
+import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
+import com.hashmapinc.tempus.WitsmlObjects.Util.FluidsReportConverter;
+import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlMarshal;
 
 
 /**
@@ -59,7 +62,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "commonData",
     "customData"
 })
-public class ObjFluidsReport {
+public class ObjFluidsReport extends AbstractWitsmlObject {
 
     @XmlElement(required = true)
     protected String nameWell;
@@ -74,7 +77,7 @@ public class ObjFluidsReport {
     protected Short numReport;
     protected List<CsFluid> fluid;
     protected CsCommonData commonData;
-    protected CsCustomData customData;
+    protected String customData;
     @XmlAttribute(name = "uidWell")
     protected String uidWell;
     @XmlAttribute(name = "uidWellbore")
@@ -311,7 +314,7 @@ public class ObjFluidsReport {
      *     {@link CsCustomData }
      *     
      */
-    public CsCustomData getCustomData() {
+    public String getCustomData() {
         return customData;
     }
 
@@ -323,7 +326,7 @@ public class ObjFluidsReport {
      *     {@link CsCustomData }
      *     
      */
-    public void setCustomData(CsCustomData value) {
+    public void setCustomData(String value) {
         this.customData = value;
     }
 
@@ -397,6 +400,50 @@ public class ObjFluidsReport {
      */
     public void setUid(String value) {
         this.uid = value;
+    }
+
+    @Override
+    public String getJSONString(String version) {
+        try {
+            if ("1.3.1.1".equals(version)) {
+                return WitsmlMarshal.serializeToJSON(FluidsReportConverter.convertTo1311(this));
+            } else if ("1.4.1.1".equals(version)) {
+                return WitsmlMarshal.serializeToJSON(this);
+            } else if ("2.0".equals(version)) {
+                return WitsmlMarshal.serializeToJSON(FluidsReportConverter.convertTo20(this));
+            } else {
+                return null; // unsupported version
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
+    public String getXMLString(String version) {
+        return null;
+    }
+
+    @Override
+    public String getVersion() {
+        return "1.4.1.1";
+    }
+
+     /**
+     * get the parent uid as a string
+     */
+    @Override
+    public String getParentUid() {
+        return this.uidWellbore;
+    }
+
+    /**
+     * get the grandParent uid as a string
+     */
+    @Override
+    public String getGrandParentUid() {
+        return this.uidWell;
     }
 
 }
