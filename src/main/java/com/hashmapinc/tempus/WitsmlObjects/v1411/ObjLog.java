@@ -784,9 +784,6 @@ public class ObjLog extends AbstractWitsmlObject {
      * 
      */
     public List<CsLogData> getLogData() {
-        if (logData == null) {
-            logData = new ArrayList<CsLogData>();
-        }
         return this.logData;
     }
 
