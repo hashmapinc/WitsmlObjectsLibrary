@@ -96,7 +96,7 @@ public abstract class AbstractMeasure {
      * Sets the value of the value property.
      * @param value The value to set as a Double
      */
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
