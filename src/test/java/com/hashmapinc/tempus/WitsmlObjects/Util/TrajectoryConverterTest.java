@@ -24,9 +24,9 @@ public class TrajectoryConverterTest {
         assertEquals(src.isObjectGrowing(), dest.isObjectGrowing());
         assertEquals(src.getDTimTrajStart(), dest.getDTimTrajStart());
         assertEquals(src.getServiceCompany(), dest.getServiceCompany());
-        assertEquals(src.isDefinitive(), dest.isDefinitive());
-        assertEquals(src.isMemory(), dest.isMemory());
-        assertEquals(src.isFinalTraj(), dest.isFinalTraj());
+        assertEquals(src.getDefinitive(), dest.getDefinitive());
+        assertEquals(src.getMemory(), dest.getMemory());
+        assertEquals(src.getFinalTraj(), dest.getFinalTraj());
         assertEquals(src.getDTimTrajEnd(), dest.getDTimTrajEnd());
         assertEquals(src.getUidWell(), dest.getUidWell());
         assertEquals(src.getUidWellbore(), dest.getUidWellbore());
@@ -422,9 +422,9 @@ public class TrajectoryConverterTest {
 
         // check non-complex, non-repeating fields
         assertEquals(src.getServiceCompany(), dest.getServiceCompany());
-        assertEquals(src.isDefinitive(), dest.isDefinitive());
-        assertEquals(src.isMemory(), dest.isMemory());
-        assertEquals(src.isFinalTraj(), dest.isFinalTraj());
+        assertEquals(src.isDefinitive(), dest.getDefinitive());
+        assertEquals(src.isMemory(), dest.getMemory());
+        assertEquals(src.isFinalTraj(), dest.getFinalTraj());
 
         // check complex fields
         if (null != dest.getDTimTrajStart())
@@ -736,9 +736,9 @@ public class TrajectoryConverterTest {
         assertEquals(src.isObjectGrowing(), dest.isObjectGrowing());
         assertEquals(src.getDTimTrajStart(), dest.getDTimTrajStart());
         assertEquals(src.getServiceCompany(), dest.getServiceCompany());
-        assertEquals(src.isDefinitive(), dest.isDefinitive());
-        assertEquals(src.isMemory(), dest.isMemory());
-        assertEquals(src.isFinalTraj(), dest.isFinalTraj());
+        assertEquals(src.getDefinitive(), dest.getDefinitive());
+        assertEquals(src.getMemory(), dest.getMemory());
+        assertEquals(src.getFinalTraj(), dest.getFinalTraj());
         assertEquals(src.getDTimTrajEnd(), dest.getDTimTrajEnd());
         assertEquals(src.getUidWell(), dest.getUidWell());
         assertEquals(src.getUidWellbore(), dest.getUidWellbore());
@@ -1136,9 +1136,9 @@ public class TrajectoryConverterTest {
 
         // check non-complex, non-repeating fields
         assertEquals(src.getServiceCompany(), dest.getServiceCompany());
-        assertEquals(src.isDefinitive(), dest.isDefinitive());
-        assertEquals(src.isMemory(), dest.isMemory());
-        assertEquals(src.isFinalTraj(), dest.isFinalTraj());
+        assertEquals(src.isDefinitive(), dest.getDefinitive());
+        assertEquals(src.isMemory(), dest.getMemory());
+        assertEquals(src.isFinalTraj(), dest.getFinalTraj());
 
         // check complex fields
         if (null != dest.getDTimTrajStart())
@@ -1450,9 +1450,9 @@ public class TrajectoryConverterTest {
 
         // check non-complex, non-repeating fields
         assertEquals(src.getServiceCompany(), dest.getServiceCompany());
-        assertEquals(src.isDefinitive(), dest.isDefinitive());
-        assertEquals(src.isMemory(), dest.isMemory());
-        assertEquals(src.isFinalTraj(), dest.isFinalTraj());
+        assertEquals(src.getDefinitive(), dest.isDefinitive());
+        assertEquals(src.getMemory(), dest.isMemory());
+        assertEquals(src.getFinalTraj(), dest.isFinalTraj());
 
         // check complex fields
         if (null != dest.getDTimTrajStart())
@@ -1755,9 +1755,9 @@ public class TrajectoryConverterTest {
 
         // check non-complex, non-repeating fields
         assertEquals(src.getServiceCompany(), dest.getServiceCompany());
-        assertEquals(src.isDefinitive(), dest.isDefinitive());
-        assertEquals(src.isMemory(), dest.isMemory());
-        assertEquals(src.isFinalTraj(), dest.isFinalTraj());
+        assertEquals(src.getDefinitive(), dest.isDefinitive());
+        assertEquals(src.getMemory(), dest.isMemory());
+        assertEquals(src.getFinalTraj(), dest.isFinalTraj());
 
         // check complex fields
         if (null != dest.getDTimTrajStart())

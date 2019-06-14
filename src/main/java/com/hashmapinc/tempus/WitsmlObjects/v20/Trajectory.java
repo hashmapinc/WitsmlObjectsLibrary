@@ -100,11 +100,11 @@ public class Trajectory
     @XmlElement(name = "DispEwVertSectOrig")
     protected LengthMeasure dispEwVertSectOrig;
     @XmlElement(name = "Definitive")
-    protected Boolean definitive;
+    protected String definitive;
     @XmlElement(name = "Memory")
-    protected Boolean memory;
+    protected String memory;
     @XmlElement(name = "FinalTraj")
-    protected Boolean finalTraj;
+    protected String finalTraj;
     @XmlElement(name = "AziRef")
     @XmlSchemaType(name = "string")
     protected String aziRef;
@@ -401,7 +401,7 @@ public class Trajectory
      *     {@link Boolean }
      *     
      */
-    public Boolean isDefinitive() {
+    public String isDefinitive() {
         return definitive;
     }
 
@@ -413,7 +413,7 @@ public class Trajectory
      *     {@link Boolean }
      *     
      */
-    public void setDefinitive(Boolean value) {
+    public void setDefinitive(String value) {
         this.definitive = value;
     }
 
@@ -425,7 +425,7 @@ public class Trajectory
      *     {@link Boolean }
      *     
      */
-    public Boolean isMemory() {
+    public String isMemory() {
         return memory;
     }
 
@@ -437,7 +437,7 @@ public class Trajectory
      *     {@link Boolean }
      *     
      */
-    public void setMemory(Boolean value) {
+    public void setMemory(String value) {
         this.memory = value;
     }
 
@@ -449,7 +449,7 @@ public class Trajectory
      *     {@link Boolean }
      *     
      */
-    public Boolean isFinalTraj() {
+    public String isFinalTraj() {
         return finalTraj;
     }
 
@@ -461,7 +461,7 @@ public class Trajectory
      *     {@link Boolean }
      *     
      */
-    public void setFinalTraj(Boolean value) {
+    public void setFinalTraj(String value) {
         this.finalTraj = value;
     }
 
