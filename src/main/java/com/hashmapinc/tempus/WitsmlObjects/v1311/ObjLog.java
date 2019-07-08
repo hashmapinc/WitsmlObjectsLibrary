@@ -71,14 +71,14 @@ public class ObjLog extends AbstractWitsmlObject {
     protected String nameWellbore;
     @XmlElement(required = true)
     protected String name;
-    private Boolean objectGrowing;
+    private String objectGrowing;
     private Integer dataRowCount;
     private String serviceCompany;
     private String runNumber;
     private Short bhaRunNumber;
     private String pass;
     @XmlSchemaType(name = "dateTime")
-    private XMLGregorianCalendar creationDate;
+    private String creationDate;
     protected String description;
     @XmlSchemaType(name = "string")
     private String indexType;
@@ -86,9 +86,9 @@ public class ObjLog extends AbstractWitsmlObject {
     private GenericMeasure endIndex;
     private RatioGenericMeasure stepIncrement;
     @XmlSchemaType(name = "dateTime")
-    private XMLGregorianCalendar startDateTimeIndex;
+    private String startDateTimeIndex;
     @XmlSchemaType(name = "dateTime")
-    private XMLGregorianCalendar endDateTimeIndex;
+    private String endDateTimeIndex;
     @XmlSchemaType(name = "string")
     protected String direction;
     private IndexCurve indexCurve;
@@ -196,7 +196,7 @@ public class ObjLog extends AbstractWitsmlObject {
      * @return possible object is
      * {@link Boolean }
      */
-    public Boolean isObjectGrowing() {
+    public String isObjectGrowing() {
         return objectGrowing;
     }
 
@@ -206,7 +206,7 @@ public class ObjLog extends AbstractWitsmlObject {
      * @param value allowed object is
      *              {@link Boolean }
      */
-    public void setObjectGrowing(Boolean value) {
+    public void setObjectGrowing(String value) {
         this.objectGrowing = value;
     }
 
@@ -316,7 +316,7 @@ public class ObjLog extends AbstractWitsmlObject {
      * @return possible object is
      * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getCreationDate() {
+    public String getCreationDate() {
         return creationDate;
     }
 
@@ -326,7 +326,7 @@ public class ObjLog extends AbstractWitsmlObject {
      * @param value allowed object is
      *              {@link XMLGregorianCalendar }
      */
-    public void setCreationDate(XMLGregorianCalendar value) {
+    public void setCreationDate(String value) {
         this.creationDate = value;
     }
 
@@ -436,7 +436,7 @@ public class ObjLog extends AbstractWitsmlObject {
      * @return possible object is
      * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getStartDateTimeIndex() {
+    public String getStartDateTimeIndex() {
         return startDateTimeIndex;
     }
 
@@ -446,7 +446,7 @@ public class ObjLog extends AbstractWitsmlObject {
      * @param value allowed object is
      *              {@link XMLGregorianCalendar }
      */
-    public void setStartDateTimeIndex(XMLGregorianCalendar value) {
+    public void setStartDateTimeIndex(String value) {
         this.startDateTimeIndex = value;
     }
 
@@ -456,7 +456,7 @@ public class ObjLog extends AbstractWitsmlObject {
      * @return possible object is
      * {@link XMLGregorianCalendar }
      */
-    public XMLGregorianCalendar getEndDateTimeIndex() {
+    public String getEndDateTimeIndex() {
         return endDateTimeIndex;
     }
 
@@ -466,7 +466,7 @@ public class ObjLog extends AbstractWitsmlObject {
      * @param value allowed object is
      *              {@link XMLGregorianCalendar }
      */
-    public void setEndDateTimeIndex(XMLGregorianCalendar value) {
+    public void setEndDateTimeIndex(String value) {
         this.endDateTimeIndex = value;
     }
 
@@ -739,7 +739,7 @@ public class ObjLog extends AbstractWitsmlObject {
                 // convert to 1411 pojo and parse as json
                 String xml1411 = this.getXMLString("1.4.1.1");
                 com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLogs logs = WitsmlMarshal.deserialize(xml1411, com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLogs.class);
-                return WitsmlMarshal.serializeToJSON(logs.getLog().get(0));                
+                return WitsmlMarshal.serializeToJSON(logs.getLog().get(0));
             } else if ("1.3.1.1".equals(version)) {
                 return WitsmlMarshal.serializeToJSON(this);
             } else {
