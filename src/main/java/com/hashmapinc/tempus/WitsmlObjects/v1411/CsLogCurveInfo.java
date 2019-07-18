@@ -9,6 +9,7 @@
 package com.hashmapinc.tempus.WitsmlObjects.v1411;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -90,7 +91,7 @@ public class CsLogCurveInfo {
     @XmlElement(required = true)
     protected ShortNameStruct mnemonic;
     protected String classWitsml;
-    protected Short classIndex;
+    protected String classIndex;
     protected String unit;
     protected ShortNameStruct mnemAlias;
     protected String nullValue;
@@ -174,7 +175,7 @@ public class CsLogCurveInfo {
      *     {@link Short }
      *
      */
-    public Short getClassIndex() {
+    public String getClassIndex() {
         return classIndex;
     }
 
@@ -186,7 +187,7 @@ public class CsLogCurveInfo {
      *     {@link Short }
      *
      */
-    public void setClassIndex(Short value) {
+    public void setClassIndex(String value) {
         this.classIndex = value;
     }
 
@@ -666,9 +667,15 @@ public class CsLogCurveInfo {
     //=========================================================================
     // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
     //=========================================================================
-    public com.hashmapinc.tempus.WitsmlObjects.v1311.CsLogCurveInfo to1311CsLogCurveInfo() {
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.CsLogCurveInfo to1311CsLogCurveInfo(String mnemList) {
         com.hashmapinc.tempus.WitsmlObjects.v1311.CsLogCurveInfo info =
                 new com.hashmapinc.tempus.WitsmlObjects.v1311.CsLogCurveInfo();
+
+        List<String> chanIndexSrc = null;
+        if (mnemList!= null && mnemList.length() > 0) {
+            String[] mnemAliasArr = mnemList.split(",");
+            chanIndexSrc = Arrays.asList(mnemAliasArr);
+        }
 
         // simple fields
         info.setClassWitsml(this.getClassWitsml());
@@ -683,6 +690,8 @@ public class CsLogCurveInfo {
         info.setTraceState(this.getTraceState());
         info.setTraceOrigin(this.getTraceOrigin());
         info.setTypeLogData(this.getTypeLogData());
+        if (chanIndexSrc != null)
+            info.setColumnIndex(String.valueOf(chanIndexSrc.indexOf(this.getMnemonic().value.toLowerCase()) + 1));
 
         // complex fields
         // mnemonic

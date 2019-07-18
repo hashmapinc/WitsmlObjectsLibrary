@@ -91,7 +91,7 @@ public class CsLogCurveInfo {
     protected String minDateTimeIndex;
     @XmlSchemaType(name = "dateTime")
     protected String maxDateTimeIndex;
-    protected short columnIndex;
+    protected String columnIndex;
     protected String curveDescription;
     protected LengthMeasure sensorOffset;
     protected String dataSource;
@@ -374,7 +374,7 @@ public class CsLogCurveInfo {
      * Gets the value of the columnIndex property.
      *
      */
-    public short getColumnIndex() {
+    public String getColumnIndex() {
         return columnIndex;
     }
 
@@ -382,7 +382,7 @@ public class CsLogCurveInfo {
      * Sets the value of the columnIndex property.
      *
      */
-    public void setColumnIndex(short value) {
+    public void setColumnIndex(String value) {
         this.columnIndex = value;
     }
 

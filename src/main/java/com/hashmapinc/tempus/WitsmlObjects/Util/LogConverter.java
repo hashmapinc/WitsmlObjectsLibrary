@@ -77,9 +77,13 @@ public class LogConverter {
 
         // logCurveInfo
         if (null != src.getLogCurveInfo()) {
+            String mnemList = null;
+            if (src.getLogData() != null && src.getLogData().size() > 0 && src.getLogData().get(0).getMnemonicList() != null) {
+                mnemList = src.getLogData().get(0).getMnemonicList().toLowerCase();
+            }
             List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsLogCurveInfo> destInfos = new ArrayList<>();
             for (com.hashmapinc.tempus.WitsmlObjects.v1411.CsLogCurveInfo srcInfo : src.getLogCurveInfo())
-                destInfos.add(srcInfo.to1311CsLogCurveInfo());
+                destInfos.add(srcInfo.to1311CsLogCurveInfo(mnemList));
 
             dest.setLogCurveInfo(destInfos);
         }
