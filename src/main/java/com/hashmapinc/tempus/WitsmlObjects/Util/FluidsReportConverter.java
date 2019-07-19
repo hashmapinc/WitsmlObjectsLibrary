@@ -77,9 +77,8 @@ public class FluidsReportConverter {
 
         // check repeating fields
         if (src.getFluid() != null){
-            List<com.hashmapinc.tempus.WitsmlObjects.v20.Fluid> destFluids = new ArrayList<>();
             for (com.hashmapinc.tempus.WitsmlObjects.v1411.CsFluid fluid : src.getFluid()){
-                destFluids.add(fluid.to20Fluid());
+                dest.getFluid().add(fluid.to20Fluid());
             }
         }   
         return dest;

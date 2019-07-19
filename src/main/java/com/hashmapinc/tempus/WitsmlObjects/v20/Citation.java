@@ -3,6 +3,8 @@
 
 package com.hashmapinc.tempus.WitsmlObjects.v20;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,6 +54,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "description",
     "descriptiveKeywords"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Citation {
 
     @XmlElement(name = "Title", required = true)

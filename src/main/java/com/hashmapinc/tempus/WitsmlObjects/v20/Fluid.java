@@ -8,6 +8,8 @@
 
 package com.hashmapinc.tempus.WitsmlObjects.v20;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -206,6 +208,7 @@ import javax.xml.bind.annotation.XmlType;
     "extensionNameValue",
     "rheometer"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Fluid {
 
     @XmlElement(name = "Type")

@@ -8,6 +8,8 @@
 
 package com.hashmapinc.tempus.WitsmlObjects.v20;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -51,6 +53,7 @@ import javax.xml.bind.annotation.XmlType;
     "fluid",
     "wellbore"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class FluidsReport
     extends AbstractObject
 {

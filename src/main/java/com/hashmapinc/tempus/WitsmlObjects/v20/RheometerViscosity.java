@@ -8,6 +8,8 @@
 
 package com.hashmapinc.tempus.WitsmlObjects.v20;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -43,6 +45,7 @@ import javax.xml.bind.annotation.XmlType;
     "speed",
     "viscosity"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class RheometerViscosity {
 
     @XmlElement(name = "Speed", required = true)

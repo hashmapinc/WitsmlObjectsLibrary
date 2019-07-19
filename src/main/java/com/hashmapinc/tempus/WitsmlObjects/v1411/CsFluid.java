@@ -1821,6 +1821,7 @@ public class CsFluid {
         if (this.getAsg() != null){
             com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure asg = new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
             asg.setValue(this.getAsg());
+            asg.setUom("unitless");
             dest.setAsg(asg);
         }
 

@@ -3,6 +3,8 @@
 
 package com.hashmapinc.tempus.WitsmlObjects.v20;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -35,6 +37,7 @@ import javax.xml.bind.annotation.XmlValue;
 @XmlType(name = "GenericMeasure", propOrder = {
     "value"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class GenericMeasure {
 
     @XmlValue

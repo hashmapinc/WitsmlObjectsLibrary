@@ -3,6 +3,8 @@
 
 package com.hashmapinc.tempus.WitsmlObjects.v20;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,6 +50,7 @@ import javax.xml.bind.annotation.XmlType;
     "index",
     "description"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ExtensionNameValue {
 
     @XmlElement(name = "Name", required = true)
