@@ -1,0 +1,87 @@
+<FluidsReport xmlns="http://www.energistics.org/energyml/data/witsmlv2" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.energistics.org/energyml/data/witsmlv2 file:///C:/Energistics2/energyml/data/witsml/v2.0/xsd_schemas/FluidsReport.xsd" schemaVersion="2.0" uuid="00000000-0000-0000-0000-000000000000">
+    <eml:Aliases authority="1.4.1.1">
+        <eml:Identifier>W-12B-01121</eml:Identifier>
+        <eml:Description>
+            Identifier is created from the uid of the input scheme
+        </eml:Description>
+    </eml:Aliases>
+    <eml:Citation>
+        <eml:Title>Rpt A-42-R003</eml:Title>
+        <eml:Originator>1411_input</eml:Originator>
+        <eml:Creation>2018-01-23T08:18:12.563-06:00</eml:Creation>
+        <eml:Format>Mapforce</eml:Format>
+    </eml:Citation>
+    <DTim>2001-10-31T16:30:00Z</DTim>
+    <Md uom="m" datum="kb">2438</Md>
+    <Tvd uom="m" datum="kb">2345</Tvd>
+    <NumReport>1</NumReport>
+    <Fluid uid="fluid-1">
+        <Type>OilBased</Type>
+        <LocationSample>Pit</LocationSample>
+        <Density uom="g/L">1.26</Density>
+        <VisFunnel uom="s">135</VisFunnel>
+        <TempVis uom="degC">28</TempVis>
+        <Pv uom="cP">50</Pv>
+        <Yp uom="0.01 lbf/ft2">30</Yp>
+        <Gel10Sec uom="0.01 lbf/ft2">14</Gel10Sec>
+        <Gel10Min uom="0.01 lbf/ft2">24</Gel10Min>
+        <Gel30Min uom="0.01 lbf/ft2">27</Gel30Min>
+        <FilterCakeLtlp uom="1/32 in">1</FilterCakeLtlp>
+        <FiltrateLtlp uom="mL">2.3</FiltrateLtlp>
+        <TempHthp uom="degF">200</TempHthp>
+        <PresHthp uom="psi">500</PresHthp>
+        <FiltrateHthp uom="mL">2.4</FiltrateHthp>
+        <FilterCakeHthp uom="1/32 in">1</FilterCakeHthp>
+        <SolidsPc uom="%">6.1</SolidsPc>
+        <WaterPc uom="%">32</WaterPc>
+        <OilPc uom="%">53</OilPc>
+        <SandPc uom="%">0.3</SandPc>
+        <SolidsLowGravPc uom="%">6.1</SolidsLowGravPc>
+        <SolidsCalcPc uom="%">7.5</SolidsCalcPc>
+        <BaritePc uom="%">5.0</BaritePc>
+        <Lcm uom="lbm/bbl">10</Lcm>
+        <Mbt uom="meq/g">0.3</Mbt>
+        <Ph>10.5</Ph>
+        <TempPh uom="degC">28</TempPh>
+        <Pm uom="mL">0.9</Pm>
+        <PmFiltrate uom="mL">1.3</PmFiltrate>
+        <Mf uom="mL">1.0</Mf>
+        <AlkalinityP1 uom="mL">1.1</AlkalinityP1>
+        <AlkalinityP2 uom="mL">1.2</AlkalinityP2>
+        <Chloride uom="mg/L">18750</Chloride>
+        <Calcium uom="mg/L">7000</Calcium>
+        <Magnesium uom="mg/L">104.5</Magnesium>
+        <Potassium uom="mg/L">5000</Potassium>
+        <BrinePc uom="%">20</BrinePc>
+        <Lime uom="lbm/bbl">3.2</Lime>
+        <ElectStab uom="V">360</ElectStab>
+        <CalciumChloride uom="mg/L">5000</CalciumChloride>
+        <Company>Baker Hughes INTEQ</Company>
+        <Engineer>Doug Bullivant/Andy Duncombe</Engineer>
+        <Asg uom="mg/g">0.0353</Asg>
+        <SolidsHiGravPc uom="%">7.22</SolidsHiGravPc>
+        <Polymer uom="%">2.5</Polymer>
+        <PolyType>XCD POLYMER</PolyType>
+        <SolCorPc uom="%">3.53</SolCorPc>
+        <OilCtg uom="g/kg">110.3</OilCtg>
+        <HardnessCa uom="ppm">3200</HardnessCa>
+        <Sulfide uom="g/L">10.5</Sulfide>
+        <Comments>
+            Base oil, fluid loss additive and viscosifier to active and reserve mud.
+        </Comments>
+        <Rheometer uid="rheometer-1">
+            <TempRheom uom="degC">25</TempRheom>
+            <PresRheom uom="psi">0</PresRheom>
+        </Rheometer>
+        <Rheometer uid="rheometer-2">
+            <TempRheom uom="degC">26</TempRheom>
+            <PresRheom uom="psi">1</PresRheom>
+        </Rheometer>
+    </Fluid>
+    <Wellbore>
+        <eml:ContentType>wellbore</eml:ContentType>
+        <eml:Title>A-42</eml:Title>
+        <eml:Uuid>00000000-0000-0000-0000-000000000000</eml:Uuid>
+        <eml:VersionString>B-01</eml:VersionString>
+    </Wellbore>
+</FluidsReport>
