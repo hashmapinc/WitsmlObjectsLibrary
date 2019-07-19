@@ -20,6 +20,8 @@ import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
 import com.hashmapinc.tempus.WitsmlObjects.Util.TrajectoryConverter;
 import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlMarshal;
@@ -79,6 +81,7 @@ import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlVersionTransformer;
     "commonData",
     "customData"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ObjTrajectory extends AbstractWitsmlObject {
 
     @XmlElement(required = true)
@@ -90,9 +93,11 @@ public class ObjTrajectory extends AbstractWitsmlObject {
     protected Boolean objectGrowing;
     protected CsRefWellboreTrajectory parentTrajectory;
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar dTimTrajStart;
+    @JsonProperty("dTimTrajStart")
+    protected String dTimTrajStart;
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar dTimTrajEnd;
+    @JsonProperty("dTimTrajEnd")
+    protected String dTimTrajEnd;
     protected MeasuredDepthCoord mdMn;
     protected MeasuredDepthCoord mdMx;
     protected String serviceCompany;
@@ -102,9 +107,9 @@ public class ObjTrajectory extends AbstractWitsmlObject {
     protected PlaneAngleMeasure aziVertSect;
     protected LengthMeasure dispNsVertSectOrig;
     protected LengthMeasure dispEwVertSectOrig;
-    protected Boolean definitive;
-    protected Boolean memory;
-    protected Boolean finalTraj;
+    protected String definitive;
+    protected String memory;
+    protected String finalTraj;
     @XmlSchemaType(name = "string")
     protected String aziRef;
     protected List<CsTrajectoryStation> trajectoryStation;
@@ -262,7 +267,8 @@ public class ObjTrajectory extends AbstractWitsmlObject {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public XMLGregorianCalendar getDTimTrajStart() {
+    @JsonProperty("dTimTrajStart")
+    public String getDTimTrajStart() {
         return dTimTrajStart;
     }
 
@@ -274,21 +280,8 @@ public class ObjTrajectory extends AbstractWitsmlObject {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setDTimTrajStart(XMLGregorianCalendar value) {
+    public void setDTimTrajStart(String value) {
         this.dTimTrajStart = value;
-    }
-
-    /**
-     * Sets the value of the dTimTrajStart property.
-     *
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *
-     */
-    public void setDTimTrajStart(String value) throws DatatypeConfigurationException {
-        if (null != value && !value.isEmpty())
-            this.dTimTrajStart =DatatypeFactory.newInstance().newXMLGregorianCalendar(value);
     }
 
     /**
@@ -299,7 +292,8 @@ public class ObjTrajectory extends AbstractWitsmlObject {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public XMLGregorianCalendar getDTimTrajEnd() {
+    @JsonProperty("dTimTrajEnd")
+    public String getDTimTrajEnd() {
         return dTimTrajEnd;
     }
 
@@ -311,21 +305,8 @@ public class ObjTrajectory extends AbstractWitsmlObject {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setDTimTrajEnd(XMLGregorianCalendar value) {
+    public void setDTimTrajEnd(String value) {
         this.dTimTrajEnd = value;
-    }
-
-    /**
-     * Sets the value of the dTimTrajEnd property.
-     *
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *
-     */
-    public void setDTimTrajEnd(String value) throws DatatypeConfigurationException {
-        if (null != value && !value.isEmpty())
-            this.dTimTrajEnd =DatatypeFactory.newInstance().newXMLGregorianCalendar(value);
     }
 
     /**
@@ -552,7 +533,7 @@ public class ObjTrajectory extends AbstractWitsmlObject {
      *     {@link Boolean }
      *     
      */
-    public Boolean isDefinitive() {
+    public String getDefinitive() {
         return definitive;
     }
 
@@ -564,7 +545,7 @@ public class ObjTrajectory extends AbstractWitsmlObject {
      *     {@link Boolean }
      *     
      */
-    public void setDefinitive(Boolean value) {
+    public void setDefinitive(String value) {
         this.definitive = value;
     }
 
@@ -576,7 +557,7 @@ public class ObjTrajectory extends AbstractWitsmlObject {
      *     {@link Boolean }
      *     
      */
-    public Boolean isMemory() {
+    public String getMemory() {
         return memory;
     }
 
@@ -588,7 +569,7 @@ public class ObjTrajectory extends AbstractWitsmlObject {
      *     {@link Boolean }
      *     
      */
-    public void setMemory(Boolean value) {
+    public void setMemory(String value) {
         this.memory = value;
     }
 
@@ -600,7 +581,7 @@ public class ObjTrajectory extends AbstractWitsmlObject {
      *     {@link Boolean }
      *     
      */
-    public Boolean isFinalTraj() {
+    public String getFinalTraj() {
         return finalTraj;
     }
 
@@ -612,7 +593,7 @@ public class ObjTrajectory extends AbstractWitsmlObject {
      *     {@link Boolean }
      *     
      */
-    public void setFinalTraj(Boolean value) {
+    public void setFinalTraj(String value) {
         this.finalTraj = value;
     }
 

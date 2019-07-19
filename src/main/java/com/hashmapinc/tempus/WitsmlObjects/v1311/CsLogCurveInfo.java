@@ -13,11 +13,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 /**
  * WITSML Log - Curve Information
- * 
+ *
  * <p>Java class for cs_logCurveInfo complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre> {@code
  * <complexType name="cs_logCurveInfo">
  *   <complexContent>
@@ -49,31 +49,31 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   </complexContent>
  * </complexType>
  * } </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "cs_logCurveInfo", propOrder = {
-    "mnemonic",
-    "classWitsml",
-    "unit",
-    "mnemAlias",
-    "nullValue",
-    "alternateIndex",
-    "wellDatum",
-    "minIndex",
-    "maxIndex",
-    "minDateTimeIndex",
-    "maxDateTimeIndex",
-    "columnIndex",
-    "curveDescription",
-    "sensorOffset",
-    "dataSource",
-    "densData",
-    "traceState",
-    "traceOrigin",
-    "typeLogData",
-    "axisDefinition"
+        "mnemonic",
+        "classWitsml",
+        "unit",
+        "mnemAlias",
+        "nullValue",
+        "alternateIndex",
+        "wellDatum",
+        "minIndex",
+        "maxIndex",
+        "minDateTimeIndex",
+        "maxDateTimeIndex",
+        "columnIndex",
+        "curveDescription",
+        "sensorOffset",
+        "dataSource",
+        "densData",
+        "traceState",
+        "traceOrigin",
+        "typeLogData",
+        "axisDefinition"
 })
 public class CsLogCurveInfo {
 
@@ -83,15 +83,15 @@ public class CsLogCurveInfo {
     protected String unit;
     protected String mnemAlias;
     protected String nullValue;
-    protected Boolean alternateIndex;
+    protected String alternateIndex;
     protected RefNameString wellDatum;
     protected GenericMeasure minIndex;
     protected GenericMeasure maxIndex;
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar minDateTimeIndex;
+    protected String minDateTimeIndex;
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar maxDateTimeIndex;
-    protected short columnIndex;
+    protected String maxDateTimeIndex;
+    protected String columnIndex;
     protected String curveDescription;
     protected LengthMeasure sensorOffset;
     protected String dataSource;
@@ -108,11 +108,11 @@ public class CsLogCurveInfo {
 
     /**
      * Gets the value of the mnemonic property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getMnemonic() {
         return mnemonic;
@@ -120,11 +120,11 @@ public class CsLogCurveInfo {
 
     /**
      * Sets the value of the mnemonic property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setMnemonic(String value) {
         this.mnemonic = value;
@@ -132,11 +132,11 @@ public class CsLogCurveInfo {
 
     /**
      * Gets the value of the classWitsml property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getClassWitsml() {
         return classWitsml;
@@ -144,11 +144,11 @@ public class CsLogCurveInfo {
 
     /**
      * Sets the value of the classWitsml property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setClassWitsml(String value) {
         this.classWitsml = value;
@@ -156,11 +156,11 @@ public class CsLogCurveInfo {
 
     /**
      * Gets the value of the unit property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getUnit() {
         return unit;
@@ -168,11 +168,11 @@ public class CsLogCurveInfo {
 
     /**
      * Sets the value of the unit property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setUnit(String value) {
         this.unit = value;
@@ -180,11 +180,11 @@ public class CsLogCurveInfo {
 
     /**
      * Gets the value of the mnemAlias property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getMnemAlias() {
         return mnemAlias;
@@ -192,11 +192,11 @@ public class CsLogCurveInfo {
 
     /**
      * Sets the value of the mnemAlias property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setMnemAlias(String value) {
         this.mnemAlias = value;
@@ -204,11 +204,11 @@ public class CsLogCurveInfo {
 
     /**
      * Gets the value of the nullValue property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getNullValue() {
         return nullValue;
@@ -216,11 +216,11 @@ public class CsLogCurveInfo {
 
     /**
      * Sets the value of the nullValue property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setNullValue(String value) {
         this.nullValue = value;
@@ -228,35 +228,35 @@ public class CsLogCurveInfo {
 
     /**
      * Gets the value of the alternateIndex property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
-    public Boolean isAlternateIndex() {
+    public String isAlternateIndex() {
         return alternateIndex;
     }
 
     /**
      * Sets the value of the alternateIndex property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
-    public void setAlternateIndex(Boolean value) {
+    public void setAlternateIndex(String value) {
         this.alternateIndex = value;
     }
 
     /**
      * Gets the value of the wellDatum property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link RefNameString }
-     *     
+     *
      */
     public RefNameString getWellDatum() {
         return wellDatum;
@@ -264,11 +264,11 @@ public class CsLogCurveInfo {
 
     /**
      * Sets the value of the wellDatum property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link RefNameString }
-     *     
+     *
      */
     public void setWellDatum(RefNameString value) {
         this.wellDatum = value;
@@ -276,11 +276,11 @@ public class CsLogCurveInfo {
 
     /**
      * Gets the value of the minIndex property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link GenericMeasure }
-     *     
+     *
      */
     public GenericMeasure getMinIndex() {
         return minIndex;
@@ -288,11 +288,11 @@ public class CsLogCurveInfo {
 
     /**
      * Sets the value of the minIndex property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link GenericMeasure }
-     *     
+     *
      */
     public void setMinIndex(GenericMeasure value) {
         this.minIndex = value;
@@ -300,11 +300,11 @@ public class CsLogCurveInfo {
 
     /**
      * Gets the value of the maxIndex property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link GenericMeasure }
-     *     
+     *
      */
     public GenericMeasure getMaxIndex() {
         return maxIndex;
@@ -312,11 +312,11 @@ public class CsLogCurveInfo {
 
     /**
      * Sets the value of the maxIndex property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link GenericMeasure }
-     *     
+     *
      */
     public void setMaxIndex(GenericMeasure value) {
         this.maxIndex = value;
@@ -324,75 +324,75 @@ public class CsLogCurveInfo {
 
     /**
      * Gets the value of the minDateTimeIndex property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link XMLGregorianCalendar }
-     *     
+     *
      */
-    public XMLGregorianCalendar getMinDateTimeIndex() {
+    public String getMinDateTimeIndex() {
         return minDateTimeIndex;
     }
 
     /**
      * Sets the value of the minDateTimeIndex property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link XMLGregorianCalendar }
-     *     
+     *
      */
-    public void setMinDateTimeIndex(XMLGregorianCalendar value) {
+    public void setMinDateTimeIndex(String value) {
         this.minDateTimeIndex = value;
     }
 
     /**
      * Gets the value of the maxDateTimeIndex property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link XMLGregorianCalendar }
-     *     
+     *
      */
-    public XMLGregorianCalendar getMaxDateTimeIndex() {
+    public String getMaxDateTimeIndex() {
         return maxDateTimeIndex;
     }
 
     /**
      * Sets the value of the maxDateTimeIndex property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link XMLGregorianCalendar }
-     *     
+     *
      */
-    public void setMaxDateTimeIndex(XMLGregorianCalendar value) {
+    public void setMaxDateTimeIndex(String value) {
         this.maxDateTimeIndex = value;
     }
 
     /**
      * Gets the value of the columnIndex property.
-     * 
+     *
      */
-    public short getColumnIndex() {
+    public String getColumnIndex() {
         return columnIndex;
     }
 
     /**
      * Sets the value of the columnIndex property.
-     * 
+     *
      */
-    public void setColumnIndex(short value) {
+    public void setColumnIndex(String value) {
         this.columnIndex = value;
     }
 
     /**
      * Gets the value of the curveDescription property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getCurveDescription() {
         return curveDescription;
@@ -400,11 +400,11 @@ public class CsLogCurveInfo {
 
     /**
      * Sets the value of the curveDescription property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setCurveDescription(String value) {
         this.curveDescription = value;
@@ -412,11 +412,11 @@ public class CsLogCurveInfo {
 
     /**
      * Gets the value of the sensorOffset property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link LengthMeasure }
-     *     
+     *
      */
     public LengthMeasure getSensorOffset() {
         return sensorOffset;
@@ -424,11 +424,11 @@ public class CsLogCurveInfo {
 
     /**
      * Sets the value of the sensorOffset property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link LengthMeasure }
-     *     
+     *
      */
     public void setSensorOffset(LengthMeasure value) {
         this.sensorOffset = value;
@@ -436,11 +436,11 @@ public class CsLogCurveInfo {
 
     /**
      * Gets the value of the dataSource property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDataSource() {
         return dataSource;
@@ -448,11 +448,11 @@ public class CsLogCurveInfo {
 
     /**
      * Sets the value of the dataSource property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDataSource(String value) {
         this.dataSource = value;
@@ -460,11 +460,11 @@ public class CsLogCurveInfo {
 
     /**
      * Gets the value of the densData property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link PerLengthMeasure }
-     *     
+     *
      */
     public PerLengthMeasure getDensData() {
         return densData;
@@ -472,11 +472,11 @@ public class CsLogCurveInfo {
 
     /**
      * Sets the value of the densData property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link PerLengthMeasure }
-     *     
+     *
      */
     public void setDensData(PerLengthMeasure value) {
         this.densData = value;
@@ -484,11 +484,11 @@ public class CsLogCurveInfo {
 
     /**
      * Gets the value of the traceState property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getTraceState() {
         return traceState;
@@ -496,11 +496,11 @@ public class CsLogCurveInfo {
 
     /**
      * Sets the value of the traceState property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setTraceState(String value) {
         this.traceState = value;
@@ -508,11 +508,11 @@ public class CsLogCurveInfo {
 
     /**
      * Gets the value of the traceOrigin property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getTraceOrigin() {
         return traceOrigin;
@@ -520,11 +520,11 @@ public class CsLogCurveInfo {
 
     /**
      * Sets the value of the traceOrigin property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setTraceOrigin(String value) {
         this.traceOrigin = value;
@@ -532,11 +532,11 @@ public class CsLogCurveInfo {
 
     /**
      * Gets the value of the typeLogData property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getTypeLogData() {
         return typeLogData;
@@ -544,11 +544,11 @@ public class CsLogCurveInfo {
 
     /**
      * Sets the value of the typeLogData property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setTypeLogData(String value) {
         this.typeLogData = value;
@@ -556,25 +556,25 @@ public class CsLogCurveInfo {
 
     /**
      * Gets the value of the axisDefinition property.
-     * 
+     *
      *
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the axisDefinition property.
-     * 
+     *
      *
      * For example, to add a new item, do as follows:
      * <pre> {@code
      *    getAxisDefinition().add(newItem);
      * } </pre>
-     * 
-     * 
+     *
+     *
      *
      * Objects of the following type(s) are allowed in the list
      * {@link CsAxisDefinition }
-     * 
-     * 
+     *
+     *
      */
     public List<CsAxisDefinition> getAxisDefinition() {
         if (axisDefinition == null) {
@@ -589,11 +589,11 @@ public class CsLogCurveInfo {
 
     /**
      * Gets the value of the uid property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getUid() {
         return uid;
@@ -601,11 +601,11 @@ public class CsLogCurveInfo {
 
     /**
      * Sets the value of the uid property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setUid(String value) {
         this.uid = value;

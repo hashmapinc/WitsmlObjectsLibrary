@@ -19,9 +19,9 @@ public class TrajectoryConverter {
         dest.setObjectGrowing(src.isObjectGrowing());
         dest.setDTimTrajStart(src.getDTimTrajStart());
         dest.setServiceCompany(src.getServiceCompany());
-        dest.setDefinitive(src.isDefinitive());
-        dest.setMemory(src.isMemory());
-        dest.setFinalTraj(src.isFinalTraj());
+        dest.setDefinitive(src.getDefinitive());
+        dest.setMemory(src.getMemory());
+        dest.setFinalTraj(src.getFinalTraj());
         dest.setDTimTrajEnd(src.getDTimTrajEnd());
         dest.setUidWell(src.getUidWell());
         dest.setUidWellbore(src.getUidWellbore());
@@ -97,9 +97,9 @@ public class TrajectoryConverter {
         dest.setObjectGrowing(src.isObjectGrowing());
         dest.setDTimTrajStart(src.getDTimTrajStart());
         dest.setServiceCompany(src.getServiceCompany());
-        dest.setDefinitive(src.isDefinitive());
-        dest.setMemory(src.isMemory());
-        dest.setFinalTraj(src.isFinalTraj());
+        dest.setDefinitive(src.getDefinitive());
+        dest.setMemory(src.getMemory());
+        dest.setFinalTraj(src.getFinalTraj());
         dest.setDTimTrajEnd(src.getDTimTrajEnd());
         dest.setUidWell(src.getUidWell());
         dest.setUidWellbore(src.getUidWellbore());
@@ -249,9 +249,9 @@ public class TrajectoryConverter {
 
         // check non-complex, non-repeating fields
         dest.setServiceCompany(src.getServiceCompany());
-        dest.setDefinitive(src.isDefinitive());
-        dest.setMemory(src.isMemory());
-        dest.setFinalTraj(src.isFinalTraj());
+        dest.setDefinitive(src.getDefinitive());
+        dest.setMemory(src.getMemory());
+        dest.setFinalTraj(src.getFinalTraj());
         dest.setAziRef(src.getAziRef());
 
         // check complex fields
