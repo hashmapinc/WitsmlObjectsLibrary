@@ -67,7 +67,6 @@ public abstract class AbstractWitsmlObject {
      * @return parentUid - String value with the parentUid if it exists, otherwise
      *         null
      */
-    @JsonIgnore
     public String getParentUid() {
         return null;
     };

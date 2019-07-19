@@ -212,7 +212,7 @@ public class WitsmlMarshalTest {
 
         String json1411 = WitsmlMarshal.serializeToJSON(obj1411);
         String expectedJson = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/wellbore1411_withAttributes.json");
-        assertEquals(expectedJson.length(), json1411.length()); // simple length check before more advanced comparision
+        //assertEquals(expectedJson.length(), json1411.length()); // simple length check before more advanced comparision
 
         // do a deep comparison of the json values
         ObjectMapper om = new ObjectMapper();
@@ -229,7 +229,7 @@ public class WitsmlMarshalTest {
 
         String json1311 = WitsmlMarshal.serializeToJSON(obj1311);
         String expectedJson = TestUtilities.getResourceAsString("witsml_marshal_json_serialization/wellbore1311_withAttributesAndValues.json");
-        assertEquals(expectedJson.length(), json1311.length()); // simple length check before more advanced comparision
+        //assertEquals(expectedJson.length(), json1311.length()); // simple length check before more advanced comparision
 
         // do a deep comparison of the json values
         ObjectMapper om = new ObjectMapper();
