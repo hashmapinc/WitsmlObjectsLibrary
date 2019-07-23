@@ -68,14 +68,13 @@ public class GenericMeasure
         this.uom = value;
     }
 
-
-
-
     //=========================================================================
     // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
     //=========================================================================
+    // 1.4.1.1 -> 1.3.1.1
     public com.hashmapinc.tempus.WitsmlObjects.v1311.GenericMeasure to1311GenericMeasure() {
-        com.hashmapinc.tempus.WitsmlObjects.v1311.GenericMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v1311.GenericMeasure();
+        com.hashmapinc.tempus.WitsmlObjects.v1311.GenericMeasure measure =
+                new com.hashmapinc.tempus.WitsmlObjects.v1311.GenericMeasure();
 
         // assign fields
         measure.setValue(this.getValue());
@@ -84,15 +83,17 @@ public class GenericMeasure
         return measure;
     }
 
-    public com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure to20GenericMeasure() {
-        com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure measure = new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
-
-        // assign fields
-        measure.setValue(this.getValue());
-        measure.setUom(this.getUom());
-
-        return measure;
-    }
     //=========================================================================
+    // 1.4.1.1 -> 2.0
+    public com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure to20GenericMeasure() {
+        com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure measure =
+                new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
+
+        // assign fields
+        measure.setValue(this.getValue());
+        measure.setUom(this.getUom());
+
+        return measure;
+    }
 
 }

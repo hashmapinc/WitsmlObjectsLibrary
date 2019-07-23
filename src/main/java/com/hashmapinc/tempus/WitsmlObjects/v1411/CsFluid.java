@@ -1649,8 +1649,14 @@ public class CsFluid {
         this.uid = value;
     }
 
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    // 1.4.1.1 to 1.3.1.1
+    //=========================================================================
 	public com.hashmapinc.tempus.WitsmlObjects.v1311.CsFluid to1311Fluid() {
-        com.hashmapinc.tempus.WitsmlObjects.v1311.CsFluid dest = new com.hashmapinc.tempus.WitsmlObjects.v1311.CsFluid();
+        com.hashmapinc.tempus.WitsmlObjects.v1311.CsFluid dest =
+                new com.hashmapinc.tempus.WitsmlObjects.v1311.CsFluid();
 
         // check non-complex, non-repeating fields
         dest.setType(this.getType());
@@ -1798,7 +1804,8 @@ public class CsFluid {
             dest.setSulfide(this.getSulfide().to1311GenericMeasure());  
         
         if (this.getRheometer() != null){
-            List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsRheometer> destRheometer = new ArrayList<>();
+            List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsRheometer> destRheometer =
+                    new ArrayList<>();
             for (com.hashmapinc.tempus.WitsmlObjects.v1411.CsRheometer rheometer : this.getRheometer()){
                 destRheometer.add(rheometer.to1311Rheometer());
             }
@@ -1806,8 +1813,12 @@ public class CsFluid {
         return dest;
 	}
 
+    //=========================================================================
+    // 1.4.1.1 to 2.0
+    //=========================================================================
     public com.hashmapinc.tempus.WitsmlObjects.v20.Fluid to20Fluid(){
-        com.hashmapinc.tempus.WitsmlObjects.v20.Fluid dest = new com.hashmapinc.tempus.WitsmlObjects.v20.Fluid();
+        com.hashmapinc.tempus.WitsmlObjects.v20.Fluid dest =
+                new com.hashmapinc.tempus.WitsmlObjects.v20.Fluid();
         // check non-complex, non-repeating fields
         dest.setType(this.getType());
         dest.setLocationSample(this.getLocationSample());
@@ -1819,15 +1830,18 @@ public class CsFluid {
         dest.setUid(this.getUid());
 
         if (this.getAsg() != null){
-            com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure asg = new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
+            com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure asg =
+                    new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
             asg.setValue(this.getAsg());
-            asg.setUom("unitless");
             dest.setAsg(asg);
         }
 
         // check complex fields
+        // this was 2.0 -> 1411 (XML Format)
+        // now need to go 4144 -> 2.0 (JSON Format)
         if (this.getDTim() != null)
             dest.setDTim(this.getDTim().toXMLFormat());
+        // this.getDTim().toGregorianCalendar()?
             
         if (this.getMd() != null)
             dest.setMd(this.getMd().to20DepthCoord());

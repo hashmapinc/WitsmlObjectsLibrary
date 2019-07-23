@@ -5,7 +5,6 @@
 // Generated on: 2017.06.26 at 03:00:38 PM CDT 
 //
 
-
 package com.hashmapinc.tempus.WitsmlObjects.v1411;
 
 import java.util.ArrayList;
@@ -320,8 +319,12 @@ public class CsRheometer {
         this.uid = value;
     }
 
+    //=========================================================================
+    // 1.4.1.1 -> 1.3.1.1
+    //=========================================================================
 	public com.hashmapinc.tempus.WitsmlObjects.v1311.CsRheometer to1311Rheometer() {
-        com.hashmapinc.tempus.WitsmlObjects.v1311.CsRheometer dest = new com.hashmapinc.tempus.WitsmlObjects.v1311.CsRheometer();
+        com.hashmapinc.tempus.WitsmlObjects.v1311.CsRheometer dest =
+                new com.hashmapinc.tempus.WitsmlObjects.v1311.CsRheometer();
         
         // check non-complex, non-repeating fields
         dest.setVis3Rpm(this.getVis3Rpm());
@@ -342,8 +345,12 @@ public class CsRheometer {
 		return dest;
 	}
 
+    //=========================================================================
+    // 1.4.1.1 -> 2.0
+    //=========================================================================
 	public com.hashmapinc.tempus.WitsmlObjects.v20.Rheometer to20Rheometer() {
-		com.hashmapinc.tempus.WitsmlObjects.v20.Rheometer dest = new com.hashmapinc.tempus.WitsmlObjects.v20.Rheometer();
+		com.hashmapinc.tempus.WitsmlObjects.v20.Rheometer dest =
+                new com.hashmapinc.tempus.WitsmlObjects.v20.Rheometer();
         
         // check non-complex, non-repeating fields
         dest.setUid(this.getUid());
@@ -361,7 +368,7 @@ public class CsRheometer {
             com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure gm =
                 new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
             gm.setUom("rpm");
-            gm.setValue(new Double(100));
+            gm.setValue((double)100);
             rv.setSpeed(gm);
             rv.setViscosity(this.getVis100Rpm());
             rv.setUid("vis100rpm");
@@ -373,7 +380,7 @@ public class CsRheometer {
             com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure gm =
                 new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
             gm.setUom("rpm");
-            gm.setValue(new Double(3));
+            gm.setValue((double)3);
             rv.setSpeed(gm);
             rv.setViscosity(this.getVis3Rpm());
             rv.setUid("vis3rpm");
@@ -385,7 +392,7 @@ public class CsRheometer {
             com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure gm =
                 new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
             gm.setUom("rpm");
-            gm.setValue(new Double(6));
+            gm.setValue((double)6);
             rv.setSpeed(gm);
             rv.setViscosity(this.getVis6Rpm());
         }
@@ -395,7 +402,7 @@ public class CsRheometer {
             com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure gm =
                 new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
             gm.setUom("rpm");
-            gm.setValue(new Double(200));
+            gm.setValue((double)200);
             rv.setSpeed(gm);
             rv.setViscosity(this.getVis200Rpm());
             rv.setUid("vis200rpm");
@@ -407,7 +414,7 @@ public class CsRheometer {
             com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure gm =
                 new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
             gm.setUom("rpm");
-            gm.setValue(new Double(300));
+            gm.setValue((double)300);
             rv.setSpeed(gm);
             rv.setViscosity(this.getVis300Rpm());
             rv.setUid("vis300rpm");
@@ -419,13 +426,16 @@ public class CsRheometer {
             com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure gm =
                 new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
             gm.setUom("rpm");
-            gm.setValue(new Double(600));
+            gm.setValue((double)600);
             rv.setSpeed(gm);
             rv.setViscosity(this.getVis600Rpm());
             rv.setUid("vis600rpm");
             dest.getViscosity().add(rv);
         }
-        
+
+        // TODO Should destArray be added to dest somehow?
+        // destArray contains the 1411 ExtensionNameValues, but it is
+        // not retained anywhere.
         if (this.extensionNameValue != null){
             List<ExtensionNameValue> destArray = new ArrayList<>();
             for (CsExtensionNameValue value : this.extensionNameValue){

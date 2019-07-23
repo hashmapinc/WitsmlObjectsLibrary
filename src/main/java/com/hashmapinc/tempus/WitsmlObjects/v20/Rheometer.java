@@ -9,6 +9,7 @@
 package com.hashmapinc.tempus.WitsmlObjects.v20;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.hashmapinc.tempus.WitsmlObjects.v1411.CsExtensionNameValue;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -195,4 +196,121 @@ public class Rheometer {
         this.uid = value;
     }
 
+    //=========================================================================
+    // conversion 2.0 -> 1.4.1.1
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.CsRheometer to1411CsRheometer() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.CsRheometer dest =
+                new com.hashmapinc.tempus.WitsmlObjects.v1411.CsRheometer();
+
+        // check non-complex, non-repeating fields
+        dest.setUid(this.getUid());
+
+        // check complex fields
+        if (this.getTempRheom() != null)
+            dest.setTempRheom(this.getTempRheom().to1411GenericMeasure());
+
+        if (this.getPresRheom() != null)
+            dest.setPresRheom(this.getPresRheom().to1411GenericMeasure());
+
+        // Process each element in the RheometerViscosity list
+        List<RheometerViscosity> rvs = this.getViscosity();
+        if (rvs.size() > 0)
+            dest.setUid(rvs.get(0).getUid());
+        rvs.forEach((rv) -> {
+            switch (rv.getUid())
+                {
+                    case "vis100rpm":
+                         dest.setVis100Rpm(rv.getViscosity());
+                         break;
+                    case "vis3rpm":
+                         dest.setVis3Rpm(rv.getViscosity());
+                         break;
+                    case "vis6rpm":
+                         dest.setVis6Rpm(rv.getViscosity());
+                         break;
+                    case "vis200rpm":
+                         dest.setVis200Rpm(rv.getViscosity());
+                         break;
+                    case "vis300rpm":
+                         dest.setVis300Rpm(rv.getViscosity());
+                         break;
+                    case "vis600rpm":
+                         dest.setVis600Rpm(rv.getViscosity());
+                         break;
+                    }
+            }
+        );
+
+        // 20 -> 1411
+        if (this.extensionNameValue != null){
+            List<ExtensionNameValue> destArray = new ArrayList<>();
+            for (ExtensionNameValue value : this.extensionNameValue){
+                //destArray.add(value.to1411ExtensionNameValue());
+                destArray.add(0, value);
+            }
+        }
+
+        return dest;
+    }
+
+    //=========================================================================
+    // conversion 2.0 -> 1.3.1.1
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.CsRheometer to1311CsRheometer()
+    {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.CsRheometer dest =
+                new com.hashmapinc.tempus.WitsmlObjects.v1311.CsRheometer();
+
+        // check non-complex, non-repeating fields
+        dest.setUid(this.getUid());
+
+        // check complex fields
+        if (this.getTempRheom() != null)
+            dest.setTempRheom(this.getTempRheom().to1311GenericMeasure());
+
+        if (this.getPresRheom() != null)
+            dest.setPresRheom(this.getPresRheom().to1311GenericMeasure());
+
+        // Process each element in the RheometerViscosity list
+        List<RheometerViscosity> rvs = this.getViscosity();
+        if (rvs.size() > 0)
+            dest.setUid(rvs.get(0).getUid());
+        rvs.forEach((rv) -> {
+                    switch (rv.getUid())
+                    {
+                        case "vis100rpm":
+                            dest.setVis100Rpm(rv.getViscosity());
+                            break;
+                        case "vis3rpm":
+                            dest.setVis3Rpm(rv.getViscosity());
+                            break;
+                        case "vis6rpm":
+                            dest.setVis6Rpm(rv.getViscosity());
+                            break;
+                        case "vis200rpm":
+                            dest.setVis200Rpm(rv.getViscosity());
+                            break;
+                        case "vis300rpm":
+                            dest.setVis300Rpm(rv.getViscosity());
+                            break;
+                        case "vis600rpm":
+                            dest.setVis600Rpm(rv.getViscosity());
+                            break;
+                    }
+                }
+        );
+
+        /*
+        // there is no place within 1.3.1.1 for ExtensionNameValue.
+        if (this.extensionNameValue != null){
+            List<ExtensionNameValue> destArray = new ArrayList<>();
+            for (ExtensionNameValue value : this.extensionNameValue){
+                destArray.add(value.to1311ExtensionNameValue());
+            }
+        }
+        */
+
+        return dest;
+    }
 }

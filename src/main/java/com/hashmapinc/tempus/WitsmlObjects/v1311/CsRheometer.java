@@ -1,9 +1,17 @@
 package com.hashmapinc.tempus.WitsmlObjects.v1311;
 
+// import com.hashmapinc.tempus.WitsmlObjects.v1311.CsExtensionNameValue;
+
+import com.hashmapinc.tempus.WitsmlObjects.v1411.CsExtensionNameValue;
+import com.hashmapinc.tempus.WitsmlObjects.v20.ExtensionNameValue;
+import com.hashmapinc.tempus.WitsmlObjects.v20.RheometerViscosity;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -273,6 +281,109 @@ public class CsRheometer {
      */
     public void setUid(String value) {
         this.uid = value;
+    }
+
+    //=========================================================================
+    // 1.3.1.1 -> 2.0
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v20.Rheometer to20Rheometer() {
+        com.hashmapinc.tempus.WitsmlObjects.v20.Rheometer dest =
+                new com.hashmapinc.tempus.WitsmlObjects.v20.Rheometer();
+
+        // check non-complex, non-repeating fields
+        dest.setUid(this.getUid());
+
+        // check complex fields
+        if (this.getTempRheom() != null)
+            dest.setTempRheom(this.getTempRheom().to20GenericMeasure());
+
+        if (this.getPresRheom() != null)
+            dest.setPresRheom(this.getPresRheom().to20GenericMeasure());
+
+        RheometerViscosity rv = new RheometerViscosity();
+        if (this.getVis100Rpm() != null)
+        {
+            com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure gm =
+                    new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
+            gm.setUom("rpm");
+            gm.setValue((double)100);
+            rv.setSpeed(gm);
+            rv.setViscosity(this.getVis100Rpm());
+            rv.setUid("vis100rpm");
+            dest.getViscosity().add(rv);
+        }
+
+        if (this.getVis3Rpm() != null)
+        {
+            com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure gm =
+                    new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
+            gm.setUom("rpm");
+            gm.setValue((double)3);
+            rv.setSpeed(gm);
+            rv.setViscosity(this.getVis3Rpm());
+            rv.setUid("vis3rpm");
+            dest.getViscosity().add(rv);
+        }
+
+        if (this.getVis6Rpm() != null)
+        {
+            com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure gm =
+                    new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
+            gm.setUom("rpm");
+            gm.setValue((double)6);
+            rv.setSpeed(gm);
+            rv.setViscosity(this.getVis6Rpm());
+        }
+
+        if (this.getVis200Rpm() != null)
+        {
+            com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure gm =
+                    new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
+            gm.setUom("rpm");
+            gm.setValue((double)200);
+            rv.setSpeed(gm);
+            rv.setViscosity(this.getVis200Rpm());
+            rv.setUid("vis200rpm");
+            dest.getViscosity().add(rv);
+        }
+
+        if (this.getVis300Rpm() != null)
+        {
+            com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure gm =
+                    new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
+            gm.setUom("rpm");
+            gm.setValue((double)300);
+            rv.setSpeed(gm);
+            rv.setViscosity(this.getVis300Rpm());
+            rv.setUid("vis300rpm");
+            dest.getViscosity().add(rv);
+        }
+
+        if (this.getVis600Rpm() != null)
+        {
+            com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure gm =
+                    new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
+            gm.setUom("rpm");
+            gm.setValue((double)600);
+            rv.setSpeed(gm);
+            rv.setViscosity(this.getVis600Rpm());
+            rv.setUid("vis600rpm");
+            dest.getViscosity().add(rv);
+        }
+
+        // TODO Verify the following...
+        /*
+        // While ExtensionNameValue exists in 1.4.1.1 and 2.0,
+        // it is not present in 1.3.1.1
+        if (this.extensionNameValue != null){
+            List<ExtensionNameValue> destArray = new ArrayList<>();
+            for (CsExtensionNameValue value : this.extensionNameValue){
+                destArray.add(value.to20ExtensionNameValue());
+            }
+        }
+        */
+
+        return dest;
     }
 
 }

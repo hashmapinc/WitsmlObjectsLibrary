@@ -300,8 +300,10 @@ public class CsExtensionNameValue {
         this.uid = value;
     }
 
+    // v1411 -> v20
 	public com.hashmapinc.tempus.WitsmlObjects.v20.ExtensionNameValue to20ExtensionNameValue() {
-        com.hashmapinc.tempus.WitsmlObjects.v20.ExtensionNameValue dest = new com.hashmapinc.tempus.WitsmlObjects.v20.ExtensionNameValue();
+        com.hashmapinc.tempus.WitsmlObjects.v20.ExtensionNameValue dest =
+                new com.hashmapinc.tempus.WitsmlObjects.v20.ExtensionNameValue();
         dest.setName(this.getName());
         dest.setDTim(this.getDTim().toXMLFormat());
         dest.setMeasureClass(this.getMeasureClass());
@@ -314,8 +316,6 @@ public class CsExtensionNameValue {
             sm.setValue(this.getValue().getValue());
             dest.setValue(sm);
         }
-
-
 
 		return dest;
 	}

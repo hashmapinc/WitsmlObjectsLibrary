@@ -7,6 +7,8 @@ public class LogConverter {
     //=========================================================================
     // conversions to 1.3.1.1
     //=========================================================================
+    // 1.4.1.1 -> 1.3.1.1
+    //=========================================================================
     public static com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLog convertTo1311(com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLog src) {
         // get converted log
         com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLog dest = new com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLog();
@@ -96,6 +98,8 @@ public class LogConverter {
 
     //=========================================================================
     // conversions to 1.4.1.1
+    //=========================================================================
+    // 1.3.1.1 -> 1.4.1.1
     //=========================================================================
     public static com.hashmapinc.tempus.WitsmlObjects.v1411.ObjLog convertTo1411(com.hashmapinc.tempus.WitsmlObjects.v1311.ObjLog src) {
         // get converted log
