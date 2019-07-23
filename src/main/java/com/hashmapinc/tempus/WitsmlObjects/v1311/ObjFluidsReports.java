@@ -32,10 +32,7 @@ import javax.xml.bind.annotation.*;
     "documentInfo",
     "fluidsReport"
 })
-public class ObjFluidsReports
-    // TODO Why does 1.3.1.1 not have an AbstractObject?
-    // extends AbstractObject
-{
+public class ObjFluidsReports {
 
     protected CsDocumentInfo documentInfo;
     @XmlElement(required = true)
