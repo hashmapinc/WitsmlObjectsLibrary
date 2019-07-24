@@ -257,7 +257,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @return
      *     possible object is
-     *     {@link WellStatus }
+     *     {@link String }
      *
      */
     public String getStatusWellbore() {
@@ -269,7 +269,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @param value
      *     allowed object is
-     *     {@link WellStatus }
+     *     {@link String }
      *
      */
     public void setStatusWellbore(String value) {
@@ -281,7 +281,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @return
      *     possible object is
-     *     {@link WellPurpose }
+     *     {@link String }
      *
      */
     public String getPurposeWellbore() {
@@ -293,7 +293,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @param value
      *     allowed object is
-     *     {@link WellPurpose }
+     *     {@link String }
      *
      */
     public void setPurposeWellbore(String value) {
@@ -305,7 +305,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @return
      *     possible object is
-     *     {@link WellboreType }
+     *     {@link String }
      *
      */
     public String getTypeWellbore() {
@@ -317,7 +317,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @param value
      *     allowed object is
-     *     {@link WellboreType }
+     *     {@link String }
      *
      */
     public void setTypeWellbore(String value) {
@@ -329,7 +329,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @return
      *     possible object is
-     *     {@link WellboreShape }
+     *     {@link String }
      *
      */
     public String getShape() {
@@ -341,7 +341,7 @@ public class ObjWellbore extends AbstractWitsmlObject {
      *
      * @param value
      *     allowed object is
-     *     {@link WellboreShape }
+     *     {@link String }
      *
      */
     public void setShape(String value) {

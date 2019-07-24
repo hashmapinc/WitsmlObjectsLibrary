@@ -8,6 +8,8 @@
 
 package com.hashmapinc.tempus.WitsmlObjects.v1411;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.*;
@@ -43,12 +45,24 @@ import javax.xml.bind.annotation.*;
 public class ObjFluidsReports
     extends AbstractObject
 {
-
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     protected CsDocumentInfo documentInfo;
     @XmlElement(required = true)
     protected List<ObjFluidsReport> fluidsReport;
     @XmlAttribute(name = "version", required = true)
-    protected String version;
+    protected String version = "1.4.1.1";
+
+    /**
+     * adds a fluidsReport to the fluidsReport list.
+     *
+     * @param fluidsReportObj to add
+     */
+    public void addFluidReport(ObjFluidsReport fluidsReportObj) {
+        if (fluidsReport == null) {
+            fluidsReport = new ArrayList<ObjFluidsReport>();
+        }
+        this.fluidsReport.add(fluidsReportObj);
+    }
 
     /**
      * Gets the value of the documentInfo property.
