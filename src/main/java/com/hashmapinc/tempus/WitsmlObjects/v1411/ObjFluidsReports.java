@@ -59,7 +59,7 @@ public class ObjFluidsReports
      */
     public void addFluidReport(ObjFluidsReport fluidsReportObj) {
         if (fluidsReport == null) {
-            fluidsReport = new ArrayList<ObjFluidsReport>();
+            fluidsReport = new ArrayList<>();
         }
         this.fluidsReport.add(fluidsReportObj);
     }
