@@ -1,6 +1,9 @@
 package com.hashmapinc.tempus.WitsmlObjects.v1311;
 
 import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
+import com.hashmapinc.tempus.WitsmlObjects.Util.FluidsReportConverter;
+import com.hashmapinc.tempus.WitsmlObjects.Util.WellboreConverter;
+import com.hashmapinc.tempus.WitsmlObjects.Util.WitsmlMarshal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -419,9 +422,31 @@ public class ObjFluidsReport extends AbstractWitsmlObject {
         return null;
     }
 
+    /**
+     * Gets this object as an xml string in the requested version format.
+     *
+     * @param version - WITSML version to serialize to
+     * @return xml - string value holding the xml string
+     */
     @Override
     public String getXMLString(String version) {
-        return null;
+        try {
+            if ("1.4.1.1".equals(version)) {
+                com.hashmapinc.tempus.WitsmlObjects.v1411.ObjFluidsReports fluidsReports =
+                        new com.hashmapinc.tempus.WitsmlObjects.v1411.ObjFluidsReports();
+                fluidsReports.addFluidReport(FluidsReportConverter.convertTo1411(this));
+                return WitsmlMarshal.serialize(fluidsReports);
+            } else if ("1.3.1.1".equals(version)) {
+                ObjFluidsReports fluidsReports = new ObjFluidsReports();
+                fluidsReports.addFluidReport(this);
+                return WitsmlMarshal.serialize(fluidsReports);
+            } else {
+                return null;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
 }

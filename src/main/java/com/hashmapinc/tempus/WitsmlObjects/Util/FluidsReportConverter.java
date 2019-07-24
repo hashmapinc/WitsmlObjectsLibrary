@@ -1,14 +1,10 @@
 package com.hashmapinc.tempus.WitsmlObjects.Util;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.hashmapinc.tempus.WitsmlObjects.v20
         .Citation;
 import com.hashmapinc.tempus.WitsmlObjects.v20.FluidsReport;
 
 import javax.xml.datatype.DatatypeFactory;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 public class FluidsReportConverter {
     //=========================================================================
@@ -99,7 +95,48 @@ public class FluidsReportConverter {
     //=========================================================================
     // conversions to 1.4.1.1
     //=========================================================================
+    // 1.3.1.1 -> 1.4.1.1
+    //=========================================================================
+    public static com.hashmapinc.tempus.WitsmlObjects.v1411.ObjFluidsReport
+            convertTo1411(com.hashmapinc.tempus.WitsmlObjects.v1311.ObjFluidsReport src)
+    {
+
+        com.hashmapinc.tempus.WitsmlObjects.v1411.ObjFluidsReport dest =
+                new com.hashmapinc.tempus.WitsmlObjects.v1411.ObjFluidsReport();
+
+        // check non-complex, non-repeating fields
+        dest.setNameWell(src.getNameWell());
+        dest.setNameWellbore(src.getNameWellbore());
+        dest.setName(src.getName());
+        dest.setNumReport(src.getNumReport());
+
+        // check complex fields
+        if (src.getDTim() != null)
+            dest.setDTim(src.getDTim());
+
+        if (src.getCommonData() != null)
+            dest.setCommonData(src.getCommonData().to1411CommonData());
+
+        if (src.getCustomData() != null)
+            dest.setCustomData(src.getCustomData());
+
+        if (src.getMd() != null)
+            dest.setMd(src.getMd().to1411MeasuredDepthCoord());
+
+        if (src.getTvd() != null)
+            dest.setTvd(src.getTvd().to1411VerticalDepthCoord());
+
+        // check repeating fields
+        if (src.getFluid() != null){
+            for (com.hashmapinc.tempus.WitsmlObjects.v1311.CsFluid fluid : src.getFluid()){
+                dest.getFluid().add(fluid.to1411CsFluid());
+            }
+        }
+        return dest;
+    }
+    //=========================================================================
     // 2.0 -> 1.4.1.1
+    //=========================================================================
     public static com.hashmapinc.tempus.WitsmlObjects.v1411.ObjFluidsReport
                           convertTo1411(com.hashmapinc.tempus.WitsmlObjects.v20.FluidsReport src)
                                             throws javax.xml.datatype.DatatypeConfigurationException {
@@ -112,7 +149,6 @@ public class FluidsReportConverter {
             dest.setName(c.getTitle());
 
         if (src.getDTim() != null)
-            // TODO Booleans and Dates - change to String
             dest.setDTim(DatatypeFactory
                     .newInstance()
                     .newXMLGregorianCalendar(src.getDTim()));

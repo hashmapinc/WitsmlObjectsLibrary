@@ -421,11 +421,6 @@ public class ObjFluidsReport extends AbstractWitsmlObject {
     }
 
     @Override
-    public String getXMLString(String version) {
-        return null;
-    }
-
-    @Override
     public String getVersion() {
         return "1.4.1.1";
     }
@@ -444,6 +439,35 @@ public class ObjFluidsReport extends AbstractWitsmlObject {
     @Override
     public String getGrandParentUid() {
         return this.uidWell;
+    }
+
+
+    /**
+     * Gets this object as an xml string in the requested version format.
+     *
+     * @param version - WITSML version to serialize to
+     * @return xml - string value holding the xml string
+     */
+    @Override
+    public String getXMLString(String version) {
+        try {
+            if ("1.4.1.1".equals(version)) {
+                com.hashmapinc.tempus.WitsmlObjects.v1411.ObjFluidsReports fluidsReports =
+                        new com.hashmapinc.tempus.WitsmlObjects.v1411.ObjFluidsReports();
+                fluidsReports.addFluidReport(this);
+                return WitsmlMarshal.serialize(fluidsReports);
+            } else if ("1.3.1.1".equals(version)) {
+                com.hashmapinc.tempus.WitsmlObjects.v1311.ObjFluidsReports fluidsReports =
+                        new com.hashmapinc.tempus.WitsmlObjects.v1311.ObjFluidsReports();
+                fluidsReports.addFluidReport(FluidsReportConverter.convertTo1311(this));
+                return WitsmlMarshal.serialize(fluidsReports);
+            } else {
+                return null;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
 }

@@ -1527,7 +1527,6 @@ public class CsFluid {
         this.uid = value;
     }
 
-
     public com.hashmapinc.tempus.WitsmlObjects.v20.Fluid to20Fluid(){
         com.hashmapinc.tempus.WitsmlObjects.v20.Fluid dest =
                 new com.hashmapinc.tempus.WitsmlObjects.v20.Fluid();
@@ -1641,7 +1640,7 @@ public class CsFluid {
 
         if (this.getAlkalinityP2() != null)
             this.getAlkalinityP2().to1411GenericMeasure();
-            dest.setAlkalinityP2(this.getAlkalinityP2().to20GenericMeasure());
+        dest.setAlkalinityP2(this.getAlkalinityP2().to20GenericMeasure());
 
         if (this.getChloride() != null)
             dest.setChloride(this.getChloride().to20GenericMeasure());
@@ -1689,6 +1688,171 @@ public class CsFluid {
             List<com.hashmapinc.tempus.WitsmlObjects.v20.Rheometer> destRheometer = new ArrayList<>();
             for (com.hashmapinc.tempus.WitsmlObjects.v1311.CsRheometer rheometer : this.getRheometer()){
                 destRheometer.add(rheometer.to20Rheometer());
+            }
+        }
+        return dest;
+    }
+
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.CsFluid to1411CsFluid(){
+        com.hashmapinc.tempus.WitsmlObjects.v1411.CsFluid dest =
+                new com.hashmapinc.tempus.WitsmlObjects.v1411.CsFluid();
+
+        // check non-complex, non-repeating fields
+        dest.setType(this.getType());
+        dest.setLocationSample(this.getLocationSample());
+        dest.setPh(this.getPh());
+        dest.setCompany(this.getCompany());
+        dest.setEngineer(this.getEngineer());
+        dest.setPolyType(this.getPolyType());
+        dest.setComments(this.getComments());
+        dest.setUid(this.getUid());
+
+        if (this.getAsg() != null){
+            dest.setAsg(this.asg);
+        }
+
+        // check complex fields
+        if (this.getDTim() != null)
+            dest.setDTim(this.getDTim());
+
+        if (this.getMd() != null)
+            dest.setMd(this.getMd().to1411MeasuredDepthCoord());
+
+        if (this.getDensity() != null)
+            dest.setDensity(this.getDensity().to1411GenericMeasure());
+
+        if (this.getVisFunnel() != null)
+            dest.setVisFunnel(this.getVisFunnel().to1411GenericMeasure());
+
+        if (this.getTempVis() != null)
+            dest.setTempVis(this.getVisFunnel().to1411GenericMeasure());
+
+        if (this.getPv() != null)
+            dest.setPv(this.getPv().to1411GenericMeasure());
+
+        if (this.getYp() != null)
+            dest.setYp(this.getYp().to1411GenericMeasure());
+
+        if (this.getGel10Sec() != null)
+            dest.setGel10Sec(this.getGel10Sec().to1411GenericMeasure());
+
+        if (this.getGel10Min() != null)
+            dest.setGel10Min(this.getGel10Min().to1411GenericMeasure());
+
+        if (this.getGel30Min() != null)
+            dest.setGel30Min(this.getGel30Min().to1411GenericMeasure());
+
+        if (this.getFilterCakeLtlp() != null)
+            dest.setFilterCakeLtlp(this.getFilterCakeLtlp().to1411GenericMeasure());
+
+        if (this.getFiltrateLtlp() != null)
+            dest.setFiltrateLtlp(this.getFiltrateLtlp().to1411GenericMeasure());
+
+        if (this.getTempHthp() != null)
+            dest.setTempHthp(this.getTempHthp().to1411GenericMeasure());
+
+        if (this.getPresHthp() != null)
+            dest.setPresHthp(this.getPresHthp().to1411GenericMeasure());
+
+        if (this.getFiltrateHthp() != null)
+            dest.setFiltrateHthp(this.getFiltrateHthp().to1411GenericMeasure());
+
+        if (this.getFilterCakeHthp() != null)
+            dest.setFilterCakeHthp(this.getFilterCakeHthp().to1411GenericMeasure());
+
+        if (this.getSolidsPc() != null)
+            dest.setSolidsPc(this.getSolidsPc().to1411GenericMeasure());
+
+        if (this.getWaterPc() != null)
+            dest.setWaterPc(this.getWaterPc().to1411GenericMeasure());
+
+        if (this.getOilPc() != null)
+            dest.setOilPc(this.getOilPc().to1411GenericMeasure());
+
+        if (this.getSandPc() != null)
+            dest.setSandPc(this.getSandPc().to1411GenericMeasure());
+
+        if (this.getSolidsLowGravPc() != null)
+            dest.setSolidsLowGravPc(this.getSolidsLowGravPc().to1411GenericMeasure());
+
+        if (this.getSolidsCalcPc() != null)
+            dest.setSolidsCalcPc(this.getSolidsCalcPc().to1411GenericMeasure());
+
+        if (this.getBaritePc() != null)
+            dest.setBaritePc(this.getBaritePc().to1411GenericMeasure());
+
+        if (this.getLcm() != null)
+            dest.setLcd(this.getLcm().to1411GenericMeasure());
+
+        if (this.getMbt() != null)
+            dest.setMbt(this.getMbt().to1411GenericMeasure());
+
+        if (this.getTempPh() != null)
+            dest.setTempPh(this.getTempPh().to1411GenericMeasure());
+
+        if (this.getPm() != null)
+            dest.setPm(this.getPm().to1411GenericMeasure());
+
+        if (this.getPmFiltrate() != null)
+            dest.setPmFiltrate(this.getPmFiltrate().to1411GenericMeasure());
+
+        if (this.getMf() != null)
+            dest.setMf(this.getMf().to1411GenericMeasure());
+
+        if (this.getAlkalinityP1() != null)
+            dest.setAlkalinityP1(this.getAlkalinityP1().to1411GenericMeasure());
+
+        if (this.getAlkalinityP2() != null)
+            this.getAlkalinityP2().to1411GenericMeasure();
+        dest.setAlkalinityP2(this.getAlkalinityP2().to1411GenericMeasure());
+
+        if (this.getChloride() != null)
+            dest.setChloride(this.getChloride().to1411GenericMeasure());
+
+        if (this.getCalcium() != null)
+            dest.setCalcium(this.getCalcium().to1411GenericMeasure());
+
+        if (this.getMagnesium() != null)
+            dest.setMagnesium(this.getMagnesium().to1411GenericMeasure());
+
+        if (this.getPotassium() != null)
+            dest.setPotassium(this.getPotassium().to1411GenericMeasure());
+
+        if (this.getBrinePc() != null)
+            dest.setBrinePc(this.getBrinePc().to1411GenericMeasure());
+
+        if (this.getLime() != null)
+            dest.setLime(this.getLime().to1411GenericMeasure());
+
+        if (this.getElectStab() != null)
+            dest.setElectStab(this.getElectStab().to1411GenericMeasure());
+
+        if (this.getCalciumChloride() != null)
+            dest.setCalciumChloride(this.getCalciumChloride().to1411GenericMeasure());
+
+        if (this.getSolidsHiGravPc() != null)
+            dest.setSolidsHiGravPc(this.getSolidsHiGravPc().to1411GenericMeasure());
+
+        if (this.getPolymer() != null)
+            dest.setPolymer(this.getPolymer().to1411GenericMeasure());
+
+        if (this.getSolCorPc() != null)
+            dest.setSolCorPc(this.getSolCorPc().to1411GenericMeasure());
+
+        if (this.getOilCtg() != null)
+            dest.setOilCtg(this.getOilCtg().to1411GenericMeasure());
+
+        if (this.getHardnessCa() != null)
+            dest.setHardnessCa(this.getHardnessCa().to1411GenericMeasure());
+
+        if (this.getSulfide() != null)
+            dest.setSulfide(this.getSulfide().to1411GenericMeasure());
+
+        if (this.getRheometer() != null){
+            List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsRheometer> destRheometer =
+                    new ArrayList<>();
+            for (com.hashmapinc.tempus.WitsmlObjects.v1311.CsRheometer rheometer : this.getRheometer()){
+                destRheometer.add(rheometer.to1411CsRheometer());
             }
         }
         return dest;

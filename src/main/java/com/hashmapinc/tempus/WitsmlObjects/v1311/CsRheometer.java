@@ -333,6 +333,8 @@ public class CsRheometer {
             gm.setValue((double)6);
             rv.setSpeed(gm);
             rv.setViscosity(this.getVis6Rpm());
+            rv.setUid("vis6rpm");
+            dest.getViscosity().add(rv);
         }
 
         if (this.getVis200Rpm() != null)
@@ -370,6 +372,57 @@ public class CsRheometer {
             rv.setUid("vis600rpm");
             dest.getViscosity().add(rv);
         }
+
+        // TODO Verify the following...
+        /*
+        // While ExtensionNameValue exists in 1.4.1.1 and 2.0,
+        // it is not present in 1.3.1.1
+        if (this.extensionNameValue != null){
+            List<ExtensionNameValue> destArray = new ArrayList<>();
+            for (CsExtensionNameValue value : this.extensionNameValue){
+                destArray.add(value.to20ExtensionNameValue());
+            }
+        }
+        */
+
+        return dest;
+    }
+
+    //=========================================================================
+    // 1.3.1.1 -> 1.4.1.1
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.CsRheometer to1411CsRheometer() {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.CsRheometer dest =
+                new com.hashmapinc.tempus.WitsmlObjects.v1411.CsRheometer();
+
+        // check non-complex, non-repeating fields
+        dest.setUid(this.getUid());
+
+        // check complex fields
+        if (this.getTempRheom() != null)
+            dest.setTempRheom(this.getTempRheom().to1411GenericMeasure());
+
+        if (this.getPresRheom() != null)
+            dest.setPresRheom(this.getPresRheom().to1411GenericMeasure());
+
+        RheometerViscosity rv = new RheometerViscosity();
+        if (this.getVis100Rpm() != null)
+            dest.setVis100Rpm(this.getVis100Rpm());
+
+        if (this.getVis3Rpm() != null)
+            dest.setVis3Rpm(this.getVis3Rpm());
+
+        if (this.getVis6Rpm() != null)
+            dest.setVis6Rpm(this.getVis6Rpm());
+
+        if (this.getVis200Rpm() != null)
+            dest.setVis200Rpm(this.getVis200Rpm());
+
+        if (this.getVis300Rpm() != null)
+            dest.setVis300Rpm(this.getVis300Rpm());
+
+        if (this.getVis600Rpm() != null)
+            dest.setVis600Rpm(this.getVis300Rpm());
 
         // TODO Verify the following...
         /*
