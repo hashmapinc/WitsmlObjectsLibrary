@@ -1,5 +1,7 @@
 package com.hashmapinc.tempus.WitsmlObjects.v1311;
 
+import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -51,7 +53,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "commonData",
     "customData"
 })
-public class ObjFluidsReport {
+public class ObjFluidsReport extends AbstractWitsmlObject {
 
     @XmlElement(required = true)
     protected String nameWell;
@@ -66,7 +68,7 @@ public class ObjFluidsReport {
     protected Short numReport;
     protected List<CsFluid> fluid;
     protected CsCommonData commonData;
-    protected CsCustomData customData;
+    protected String customData;
     @XmlAttribute(name = "uidWell")
     protected String uidWell;
     @XmlAttribute(name = "uidWellbore")
@@ -303,7 +305,7 @@ public class ObjFluidsReport {
      *     {@link CsCustomData }
      *     
      */
-    public CsCustomData getCustomData() {
+    public String getCustomData() {
         return customData;
     }
 
@@ -315,7 +317,7 @@ public class ObjFluidsReport {
      *     {@link CsCustomData }
      *     
      */
-    public void setCustomData(CsCustomData value) {
+    public void setCustomData(String value) {
         this.customData = value;
     }
 
@@ -379,6 +381,27 @@ public class ObjFluidsReport {
         return uid;
     }
 
+     /**
+     * get the parent uid as a string
+     */
+    @Override
+    public String getParentUid() {
+        return this.uidWellbore;
+    }
+
+    /**
+     * get the grandParent uid as a string
+     */
+    @Override
+    public String getGrandParentUid() {
+        return this.uidWell;
+    }
+
+    @Override
+    public String getVersion() {
+        return "1.3.1.1";
+    }
+
     /**
      * Sets the value of the uid property.
      * 
@@ -389,6 +412,16 @@ public class ObjFluidsReport {
      */
     public void setUid(String value) {
         this.uid = value;
+    }
+
+    @Override
+    public String getJSONString(String version) {
+        return null;
+    }
+
+    @Override
+    public String getXMLString(String version) {
+        return null;
     }
 
 }

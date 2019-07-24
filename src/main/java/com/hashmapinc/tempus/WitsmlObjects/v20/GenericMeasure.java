@@ -1,7 +1,6 @@
-
-
-
 package com.hashmapinc.tempus.WitsmlObjects.v20;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -35,6 +34,7 @@ import javax.xml.bind.annotation.XmlValue;
 @XmlType(name = "GenericMeasure", propOrder = {
     "value"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class GenericMeasure {
 
     @XmlValue
@@ -82,6 +82,36 @@ public class GenericMeasure {
      */
     public void setUom(String value) {
         this.uom = value;
+    }
+
+    //=========================================================================
+    // 2.0 -> 1.4.1.1
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1411.GenericMeasure to1411GenericMeasure()
+    {
+        com.hashmapinc.tempus.WitsmlObjects.v1411.GenericMeasure gm =
+                new com.hashmapinc.tempus.WitsmlObjects.v1411.GenericMeasure();
+
+        // assign fields
+        gm.setValue(this.getValue());
+        gm.setUom(this.getUom());
+
+        return gm;
+    }
+
+    //=========================================================================
+    // 2.0 -> 1.3.1.1
+    //=========================================================================
+    public com.hashmapinc.tempus.WitsmlObjects.v1311.GenericMeasure to1311GenericMeasure()
+    {
+        com.hashmapinc.tempus.WitsmlObjects.v1311.GenericMeasure gm =
+                new com.hashmapinc.tempus.WitsmlObjects.v1311.GenericMeasure();
+
+        // assign fields
+        gm.setValue(this.getValue());
+        gm.setUom(this.getUom());
+
+        return gm;
     }
 
 }

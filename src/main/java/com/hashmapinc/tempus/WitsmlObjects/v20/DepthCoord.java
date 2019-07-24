@@ -3,6 +3,8 @@
 
 package com.hashmapinc.tempus.WitsmlObjects.v20;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -34,6 +36,7 @@ import javax.xml.bind.annotation.XmlValue;
 @XmlType(name = "DepthCoord", namespace = "http://www.energistics.org/energyml/data/witsmlv2", propOrder = {
     "value"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class DepthCoord {
 
     @XmlValue

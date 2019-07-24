@@ -3,6 +3,8 @@
 
 package com.hashmapinc.tempus.WitsmlObjects.v20;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -45,6 +47,7 @@ import javax.xml.bind.annotation.XmlType;
     "uri",
     "versionString"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class DataObjectReference {
 
     @XmlElement(name = "ContentType", required = true)

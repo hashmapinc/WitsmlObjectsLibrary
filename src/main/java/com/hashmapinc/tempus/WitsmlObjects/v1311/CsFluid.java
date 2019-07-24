@@ -149,55 +149,55 @@ public class CsFluid {
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar dTim;
     protected MeasuredDepthCoord md;
-    protected DensityMeasure density;
-    protected TimeMeasure visFunnel;
-    protected ThermodynamicTemperatureMeasure tempVis;
-    protected DynamicViscosityMeasure pv;
-    protected PressureMeasure yp;
-    protected PressureMeasure gel10Sec;
-    protected PressureMeasure gel10Min;
-    protected PressureMeasure gel30Min;
-    protected LengthMeasure filterCakeLtlp;
-    protected VolumeMeasure filtrateLtlp;
-    protected ThermodynamicTemperatureMeasure tempHthp;
-    protected PressureMeasure presHthp;
-    protected VolumeMeasure filtrateHthp;
-    protected LengthMeasure filterCakeHthp;
-    protected VolumePerVolumeMeasure solidsPc;
-    protected VolumePerVolumeMeasure waterPc;
-    protected VolumePerVolumeMeasure oilPc;
-    protected VolumePerVolumeMeasure sandPc;
-    protected VolumePerVolumeMeasure solidsLowGravPc;
-    protected VolumePerVolumeMeasure solidsCalcPc;
-    protected VolumePerVolumeMeasure baritePc;
-    protected DensityMeasure lcm;
-    protected EquivalentPerMassMeasure mbt;
+    protected GenericMeasure density;
+    protected GenericMeasure visFunnel;
+    protected GenericMeasure tempVis;
+    protected GenericMeasure pv;
+    protected GenericMeasure yp;
+    protected GenericMeasure gel10Sec;
+    protected GenericMeasure gel10Min;
+    protected GenericMeasure gel30Min;
+    protected GenericMeasure filterCakeLtlp;
+    protected GenericMeasure filtrateLtlp;
+    protected GenericMeasure tempHthp;
+    protected GenericMeasure presHthp;
+    protected GenericMeasure filtrateHthp;
+    protected GenericMeasure filterCakeHthp;
+    protected GenericMeasure solidsPc;
+    protected GenericMeasure waterPc;
+    protected GenericMeasure oilPc;
+    protected GenericMeasure sandPc;
+    protected GenericMeasure solidsLowGravPc;
+    protected GenericMeasure solidsCalcPc;
+    protected GenericMeasure baritePc;
+    protected GenericMeasure lcm;
+    protected GenericMeasure mbt;
     protected Double ph;
-    protected ThermodynamicTemperatureMeasure tempPh;
-    protected VolumeMeasure pm;
-    protected VolumeMeasure pmFiltrate;
-    protected VolumeMeasure mf;
-    protected VolumeMeasure alkalinityP1;
-    protected VolumeMeasure alkalinityP2;
-    protected DensityMeasure chloride;
-    protected DensityMeasure calcium;
-    protected DensityMeasure magnesium;
-    protected DensityMeasure potassium;
+    protected GenericMeasure tempPh;
+    protected GenericMeasure pm;
+    protected GenericMeasure pmFiltrate;
+    protected GenericMeasure mf;
+    protected GenericMeasure alkalinityP1;
+    protected GenericMeasure alkalinityP2;
+    protected GenericMeasure chloride;
+    protected GenericMeasure calcium;
+    protected GenericMeasure magnesium;
+    protected GenericMeasure potassium;
     protected List<CsRheometer> rheometer;
-    protected VolumePerVolumeMeasure brinePc;
-    protected DensityMeasure lime;
-    protected ElectricPotentialMeasure electStab;
-    protected DensityMeasure calciumChloride;
+    protected GenericMeasure brinePc;
+    protected GenericMeasure lime;
+    protected GenericMeasure electStab;
+    protected GenericMeasure calciumChloride;
     protected String company;
     protected String engineer;
     protected Double asg;
-    protected VolumePerVolumeMeasure solidsHiGravPc;
-    protected VolumePerVolumeMeasure polymer;
+    protected GenericMeasure solidsHiGravPc;
+    protected GenericMeasure polymer;
     protected String polyType;
-    protected VolumePerVolumeMeasure solCorPc;
-    protected MassConcentrationMeasure oilCtg;
-    protected MassConcentrationMeasure hardnessCa;
-    protected DensityMeasure sulfide;
+    protected GenericMeasure solCorPc;
+    protected GenericMeasure oilCtg;
+    protected GenericMeasure hardnessCa;
+    protected GenericMeasure sulfide;
     protected String comments;
     @XmlAttribute(name = "uid")
     protected String uid;
@@ -303,10 +303,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link DensityMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public DensityMeasure getDensity() {
+    public GenericMeasure getDensity() {
         return density;
     }
 
@@ -315,10 +315,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link DensityMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setDensity(DensityMeasure value) {
+    public void setDensity(GenericMeasure value) {
         this.density = value;
     }
 
@@ -327,10 +327,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link TimeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public TimeMeasure getVisFunnel() {
+    public GenericMeasure getVisFunnel() {
         return visFunnel;
     }
 
@@ -339,10 +339,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link TimeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setVisFunnel(TimeMeasure value) {
+    public void setVisFunnel(GenericMeasure value) {
         this.visFunnel = value;
     }
 
@@ -351,10 +351,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link ThermodynamicTemperatureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public ThermodynamicTemperatureMeasure getTempVis() {
+    public GenericMeasure getTempVis() {
         return tempVis;
     }
 
@@ -363,10 +363,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link ThermodynamicTemperatureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setTempVis(ThermodynamicTemperatureMeasure value) {
+    public void setTempVis(GenericMeasure value) {
         this.tempVis = value;
     }
 
@@ -375,10 +375,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link DynamicViscosityMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public DynamicViscosityMeasure getPv() {
+    public GenericMeasure getPv() {
         return pv;
     }
 
@@ -387,10 +387,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link DynamicViscosityMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setPv(DynamicViscosityMeasure value) {
+    public void setPv(GenericMeasure value) {
         this.pv = value;
     }
 
@@ -399,10 +399,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link PressureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public PressureMeasure getYp() {
+    public GenericMeasure getYp() {
         return yp;
     }
 
@@ -411,10 +411,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link PressureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setYp(PressureMeasure value) {
+    public void setYp(GenericMeasure value) {
         this.yp = value;
     }
 
@@ -423,10 +423,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link PressureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public PressureMeasure getGel10Sec() {
+    public GenericMeasure getGel10Sec() {
         return gel10Sec;
     }
 
@@ -435,10 +435,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link PressureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setGel10Sec(PressureMeasure value) {
+    public void setGel10Sec(GenericMeasure value) {
         this.gel10Sec = value;
     }
 
@@ -447,10 +447,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link PressureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public PressureMeasure getGel10Min() {
+    public GenericMeasure getGel10Min() {
         return gel10Min;
     }
 
@@ -459,10 +459,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link PressureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setGel10Min(PressureMeasure value) {
+    public void setGel10Min(GenericMeasure value) {
         this.gel10Min = value;
     }
 
@@ -471,10 +471,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link PressureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public PressureMeasure getGel30Min() {
+    public GenericMeasure getGel30Min() {
         return gel30Min;
     }
 
@@ -483,10 +483,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link PressureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setGel30Min(PressureMeasure value) {
+    public void setGel30Min(GenericMeasure value) {
         this.gel30Min = value;
     }
 
@@ -495,10 +495,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link LengthMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public LengthMeasure getFilterCakeLtlp() {
+    public GenericMeasure getFilterCakeLtlp() {
         return filterCakeLtlp;
     }
 
@@ -507,10 +507,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link LengthMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setFilterCakeLtlp(LengthMeasure value) {
+    public void setFilterCakeLtlp(GenericMeasure value) {
         this.filterCakeLtlp = value;
     }
 
@@ -519,10 +519,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link VolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public VolumeMeasure getFiltrateLtlp() {
+    public GenericMeasure getFiltrateLtlp() {
         return filtrateLtlp;
     }
 
@@ -531,10 +531,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link VolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setFiltrateLtlp(VolumeMeasure value) {
+    public void setFiltrateLtlp(GenericMeasure value) {
         this.filtrateLtlp = value;
     }
 
@@ -543,10 +543,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link ThermodynamicTemperatureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public ThermodynamicTemperatureMeasure getTempHthp() {
+    public GenericMeasure getTempHthp() {
         return tempHthp;
     }
 
@@ -555,10 +555,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link ThermodynamicTemperatureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setTempHthp(ThermodynamicTemperatureMeasure value) {
+    public void setTempHthp(GenericMeasure value) {
         this.tempHthp = value;
     }
 
@@ -567,10 +567,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link PressureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public PressureMeasure getPresHthp() {
+    public GenericMeasure getPresHthp() {
         return presHthp;
     }
 
@@ -579,10 +579,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link PressureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setPresHthp(PressureMeasure value) {
+    public void setPresHthp(GenericMeasure value) {
         this.presHthp = value;
     }
 
@@ -591,10 +591,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link VolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public VolumeMeasure getFiltrateHthp() {
+    public GenericMeasure getFiltrateHthp() {
         return filtrateHthp;
     }
 
@@ -603,10 +603,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link VolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setFiltrateHthp(VolumeMeasure value) {
+    public void setFiltrateHthp(GenericMeasure value) {
         this.filtrateHthp = value;
     }
 
@@ -615,10 +615,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link LengthMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public LengthMeasure getFilterCakeHthp() {
+    public GenericMeasure getFilterCakeHthp() {
         return filterCakeHthp;
     }
 
@@ -627,10 +627,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link LengthMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setFilterCakeHthp(LengthMeasure value) {
+    public void setFilterCakeHthp(GenericMeasure value) {
         this.filterCakeHthp = value;
     }
 
@@ -639,10 +639,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link VolumePerVolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public VolumePerVolumeMeasure getSolidsPc() {
+    public GenericMeasure getSolidsPc() {
         return solidsPc;
     }
 
@@ -651,10 +651,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link VolumePerVolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setSolidsPc(VolumePerVolumeMeasure value) {
+    public void setSolidsPc(GenericMeasure value) {
         this.solidsPc = value;
     }
 
@@ -663,10 +663,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link VolumePerVolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public VolumePerVolumeMeasure getWaterPc() {
+    public GenericMeasure getWaterPc() {
         return waterPc;
     }
 
@@ -675,10 +675,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link VolumePerVolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setWaterPc(VolumePerVolumeMeasure value) {
+    public void setWaterPc(GenericMeasure value) {
         this.waterPc = value;
     }
 
@@ -687,10 +687,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link VolumePerVolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public VolumePerVolumeMeasure getOilPc() {
+    public GenericMeasure getOilPc() {
         return oilPc;
     }
 
@@ -699,10 +699,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link VolumePerVolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setOilPc(VolumePerVolumeMeasure value) {
+    public void setOilPc(GenericMeasure value) {
         this.oilPc = value;
     }
 
@@ -711,10 +711,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link VolumePerVolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public VolumePerVolumeMeasure getSandPc() {
+    public GenericMeasure getSandPc() {
         return sandPc;
     }
 
@@ -723,10 +723,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link VolumePerVolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setSandPc(VolumePerVolumeMeasure value) {
+    public void setSandPc(GenericMeasure value) {
         this.sandPc = value;
     }
 
@@ -735,10 +735,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link VolumePerVolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public VolumePerVolumeMeasure getSolidsLowGravPc() {
+    public GenericMeasure getSolidsLowGravPc() {
         return solidsLowGravPc;
     }
 
@@ -747,10 +747,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link VolumePerVolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setSolidsLowGravPc(VolumePerVolumeMeasure value) {
+    public void setSolidsLowGravPc(GenericMeasure value) {
         this.solidsLowGravPc = value;
     }
 
@@ -759,10 +759,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link VolumePerVolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public VolumePerVolumeMeasure getSolidsCalcPc() {
+    public GenericMeasure getSolidsCalcPc() {
         return solidsCalcPc;
     }
 
@@ -771,10 +771,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link VolumePerVolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setSolidsCalcPc(VolumePerVolumeMeasure value) {
+    public void setSolidsCalcPc(GenericMeasure value) {
         this.solidsCalcPc = value;
     }
 
@@ -783,10 +783,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link VolumePerVolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public VolumePerVolumeMeasure getBaritePc() {
+    public GenericMeasure getBaritePc() {
         return baritePc;
     }
 
@@ -795,10 +795,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link VolumePerVolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setBaritePc(VolumePerVolumeMeasure value) {
+    public void setBaritePc(GenericMeasure value) {
         this.baritePc = value;
     }
 
@@ -807,10 +807,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link DensityMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public DensityMeasure getLcm() {
+    public GenericMeasure getLcm() {
         return lcm;
     }
 
@@ -819,10 +819,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link DensityMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setLcm(DensityMeasure value) {
+    public void setLcm(GenericMeasure value) {
         this.lcm = value;
     }
 
@@ -831,10 +831,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link EquivalentPerMassMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public EquivalentPerMassMeasure getMbt() {
+    public GenericMeasure getMbt() {
         return mbt;
     }
 
@@ -843,10 +843,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link EquivalentPerMassMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setMbt(EquivalentPerMassMeasure value) {
+    public void setMbt(GenericMeasure value) {
         this.mbt = value;
     }
 
@@ -879,10 +879,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link ThermodynamicTemperatureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public ThermodynamicTemperatureMeasure getTempPh() {
+    public GenericMeasure getTempPh() {
         return tempPh;
     }
 
@@ -891,10 +891,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link ThermodynamicTemperatureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setTempPh(ThermodynamicTemperatureMeasure value) {
+    public void setTempPh(GenericMeasure value) {
         this.tempPh = value;
     }
 
@@ -903,10 +903,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link VolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public VolumeMeasure getPm() {
+    public GenericMeasure getPm() {
         return pm;
     }
 
@@ -915,10 +915,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link VolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setPm(VolumeMeasure value) {
+    public void setPm(GenericMeasure value) {
         this.pm = value;
     }
 
@@ -927,10 +927,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link VolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public VolumeMeasure getPmFiltrate() {
+    public GenericMeasure getPmFiltrate() {
         return pmFiltrate;
     }
 
@@ -939,10 +939,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link VolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setPmFiltrate(VolumeMeasure value) {
+    public void setPmFiltrate(GenericMeasure value) {
         this.pmFiltrate = value;
     }
 
@@ -951,10 +951,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link VolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public VolumeMeasure getMf() {
+    public GenericMeasure getMf() {
         return mf;
     }
 
@@ -963,10 +963,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link VolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setMf(VolumeMeasure value) {
+    public void setMf(GenericMeasure value) {
         this.mf = value;
     }
 
@@ -975,10 +975,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link VolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public VolumeMeasure getAlkalinityP1() {
+    public GenericMeasure getAlkalinityP1() {
         return alkalinityP1;
     }
 
@@ -987,10 +987,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link VolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setAlkalinityP1(VolumeMeasure value) {
+    public void setAlkalinityP1(GenericMeasure value) {
         this.alkalinityP1 = value;
     }
 
@@ -999,10 +999,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link VolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public VolumeMeasure getAlkalinityP2() {
+    public GenericMeasure getAlkalinityP2() {
         return alkalinityP2;
     }
 
@@ -1011,10 +1011,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link VolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setAlkalinityP2(VolumeMeasure value) {
+    public void setAlkalinityP2(GenericMeasure value) {
         this.alkalinityP2 = value;
     }
 
@@ -1023,10 +1023,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link DensityMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public DensityMeasure getChloride() {
+    public GenericMeasure getChloride() {
         return chloride;
     }
 
@@ -1035,10 +1035,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link DensityMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setChloride(DensityMeasure value) {
+    public void setChloride(GenericMeasure value) {
         this.chloride = value;
     }
 
@@ -1047,10 +1047,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link DensityMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public DensityMeasure getCalcium() {
+    public GenericMeasure getCalcium() {
         return calcium;
     }
 
@@ -1059,10 +1059,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link DensityMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setCalcium(DensityMeasure value) {
+    public void setCalcium(GenericMeasure value) {
         this.calcium = value;
     }
 
@@ -1071,10 +1071,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link DensityMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public DensityMeasure getMagnesium() {
+    public GenericMeasure getMagnesium() {
         return magnesium;
     }
 
@@ -1083,10 +1083,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link DensityMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setMagnesium(DensityMeasure value) {
+    public void setMagnesium(GenericMeasure value) {
         this.magnesium = value;
     }
 
@@ -1095,10 +1095,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link DensityMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public DensityMeasure getPotassium() {
+    public GenericMeasure getPotassium() {
         return potassium;
     }
 
@@ -1107,10 +1107,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link DensityMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setPotassium(DensityMeasure value) {
+    public void setPotassium(GenericMeasure value) {
         this.potassium = value;
     }
 
@@ -1148,10 +1148,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link VolumePerVolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public VolumePerVolumeMeasure getBrinePc() {
+    public GenericMeasure getBrinePc() {
         return brinePc;
     }
 
@@ -1160,10 +1160,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link VolumePerVolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setBrinePc(VolumePerVolumeMeasure value) {
+    public void setBrinePc(GenericMeasure value) {
         this.brinePc = value;
     }
 
@@ -1172,10 +1172,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link DensityMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public DensityMeasure getLime() {
+    public GenericMeasure getLime() {
         return lime;
     }
 
@@ -1184,10 +1184,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link DensityMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setLime(DensityMeasure value) {
+    public void setLime(GenericMeasure value) {
         this.lime = value;
     }
 
@@ -1196,10 +1196,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link ElectricPotentialMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public ElectricPotentialMeasure getElectStab() {
+    public GenericMeasure getElectStab() {
         return electStab;
     }
 
@@ -1208,10 +1208,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link ElectricPotentialMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setElectStab(ElectricPotentialMeasure value) {
+    public void setElectStab(GenericMeasure value) {
         this.electStab = value;
     }
 
@@ -1220,10 +1220,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link DensityMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public DensityMeasure getCalciumChloride() {
+    public GenericMeasure getCalciumChloride() {
         return calciumChloride;
     }
 
@@ -1232,10 +1232,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link DensityMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setCalciumChloride(DensityMeasure value) {
+    public void setCalciumChloride(GenericMeasure value) {
         this.calciumChloride = value;
     }
 
@@ -1316,10 +1316,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link VolumePerVolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public VolumePerVolumeMeasure getSolidsHiGravPc() {
+    public GenericMeasure getSolidsHiGravPc() {
         return solidsHiGravPc;
     }
 
@@ -1328,10 +1328,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link VolumePerVolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setSolidsHiGravPc(VolumePerVolumeMeasure value) {
+    public void setSolidsHiGravPc(GenericMeasure value) {
         this.solidsHiGravPc = value;
     }
 
@@ -1340,10 +1340,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link VolumePerVolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public VolumePerVolumeMeasure getPolymer() {
+    public GenericMeasure getPolymer() {
         return polymer;
     }
 
@@ -1352,10 +1352,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link VolumePerVolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setPolymer(VolumePerVolumeMeasure value) {
+    public void setPolymer(GenericMeasure value) {
         this.polymer = value;
     }
 
@@ -1388,10 +1388,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link VolumePerVolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public VolumePerVolumeMeasure getSolCorPc() {
+    public GenericMeasure getSolCorPc() {
         return solCorPc;
     }
 
@@ -1400,10 +1400,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link VolumePerVolumeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setSolCorPc(VolumePerVolumeMeasure value) {
+    public void setSolCorPc(GenericMeasure value) {
         this.solCorPc = value;
     }
 
@@ -1412,10 +1412,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link MassConcentrationMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public MassConcentrationMeasure getOilCtg() {
+    public GenericMeasure getOilCtg() {
         return oilCtg;
     }
 
@@ -1424,10 +1424,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link MassConcentrationMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setOilCtg(MassConcentrationMeasure value) {
+    public void setOilCtg(GenericMeasure value) {
         this.oilCtg = value;
     }
 
@@ -1436,10 +1436,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link MassConcentrationMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public MassConcentrationMeasure getHardnessCa() {
+    public GenericMeasure getHardnessCa() {
         return hardnessCa;
     }
 
@@ -1448,10 +1448,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link MassConcentrationMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setHardnessCa(MassConcentrationMeasure value) {
+    public void setHardnessCa(GenericMeasure value) {
         this.hardnessCa = value;
     }
 
@@ -1460,10 +1460,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link DensityMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public DensityMeasure getSulfide() {
+    public GenericMeasure getSulfide() {
         return sulfide;
     }
 
@@ -1472,10 +1472,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link DensityMeasure }
+     *     {@link GenericMeasure }
      *     
      */
-    public void setSulfide(DensityMeasure value) {
+    public void setSulfide(GenericMeasure value) {
         this.sulfide = value;
     }
 
@@ -1525,6 +1525,174 @@ public class CsFluid {
      */
     public void setUid(String value) {
         this.uid = value;
+    }
+
+
+    public com.hashmapinc.tempus.WitsmlObjects.v20.Fluid to20Fluid(){
+        com.hashmapinc.tempus.WitsmlObjects.v20.Fluid dest =
+                new com.hashmapinc.tempus.WitsmlObjects.v20.Fluid();
+        // check non-complex, non-repeating fields
+        dest.setType(this.getType());
+        dest.setLocationSample(this.getLocationSample());
+        dest.setPh(this.getPh());
+        dest.setCompany(this.getCompany());
+        dest.setEngineer(this.getEngineer());
+        dest.setPolyType(this.getPolyType());
+        dest.setComments(this.getComments());
+        dest.setUid(this.getUid());
+
+        if (this.getAsg() != null){
+            com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure asg =
+                    new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
+            asg.setValue(this.getAsg());
+            dest.setAsg(asg);
+        }
+
+        // check complex fields
+        if (this.getDTim() != null)
+            dest.setDTim(this.getDTim().toXMLFormat());
+
+        if (this.getMd() != null)
+            dest.setMd(this.getMd().to20DepthCoord());
+
+        if (this.getDensity() != null)
+            dest.setDensity(this.getDensity().to20GenericMeasure());
+
+        if (this.getVisFunnel() != null)
+            dest.setVisFunnel(this.getVisFunnel().to20GenericMeasure());
+
+        if (this.getTempVis() != null)
+            dest.setTempVis(this.getVisFunnel().to20GenericMeasure());
+
+        if (this.getPv() != null)
+            dest.setPv(this.getPv().to20GenericMeasure());
+
+        if (this.getYp() != null)
+            dest.setYp(this.getYp().to20GenericMeasure());
+
+        if (this.getGel10Sec() != null)
+            dest.setGel10Sec(this.getGel10Sec().to20GenericMeasure());
+
+        if (this.getGel10Min() != null)
+            dest.setGel10Min(this.getGel10Min().to20GenericMeasure());
+
+        if (this.getGel30Min() != null)
+            dest.setGel30Min(this.getGel30Min().to20GenericMeasure());
+
+        if (this.getFilterCakeLtlp() != null)
+            dest.setFilterCakeLtlp(this.getFilterCakeLtlp().to20GenericMeasure());
+
+        if (this.getFiltrateLtlp() != null)
+            dest.setFiltrateLtlp(this.getFiltrateLtlp().to20GenericMeasure());
+
+        if (this.getTempHthp() != null)
+            dest.setTempHthp(this.getTempHthp().to20GenericMeasure());
+
+        if (this.getPresHthp() != null)
+            dest.setPresHthp(this.getPresHthp().to20GenericMeasure());
+
+        if (this.getFiltrateHthp() != null)
+            dest.setFiltrateHthp(this.getFiltrateHthp().to20GenericMeasure());
+
+        if (this.getFilterCakeHthp() != null)
+            dest.setFilterCakeHthp(this.getFilterCakeHthp().to20GenericMeasure());
+
+        if (this.getSolidsPc() != null)
+            dest.setSolidsPc(this.getSolidsPc().to20GenericMeasure());
+
+        if (this.getWaterPc() != null)
+            dest.setWaterPc(this.getWaterPc().to20GenericMeasure());
+
+        if (this.getOilPc() != null)
+            dest.setOilPc(this.getOilPc().to20GenericMeasure());
+
+        if (this.getSandPc() != null)
+            dest.setSandPc(this.getSandPc().to20GenericMeasure());
+
+        if (this.getSolidsLowGravPc() != null)
+            dest.setSolidsLowGravPc(this.getSolidsLowGravPc().to20GenericMeasure());
+
+        if (this.getSolidsCalcPc() != null)
+            dest.setSolidsCalcPc(this.getSolidsCalcPc().to20GenericMeasure());
+
+        if (this.getBaritePc() != null)
+            dest.setBaritePc(this.getBaritePc().to20GenericMeasure());
+
+        if (this.getLcm() != null)
+            dest.setLcm(this.getLcm().to20GenericMeasure());
+
+        if (this.getMbt() != null)
+            dest.setMbt(this.getMbt().to20GenericMeasure());
+
+        if (this.getTempPh() != null)
+            dest.setTempPh(this.getTempPh().to20GenericMeasure());
+
+        if (this.getPm() != null)
+            dest.setPm(this.getPm().to20GenericMeasure());
+
+        if (this.getPmFiltrate() != null)
+            dest.setPmFiltrate(this.getPmFiltrate().to20GenericMeasure());
+
+        if (this.getMf() != null)
+            dest.setMf(this.getMf().to20GenericMeasure());
+
+        if (this.getAlkalinityP1() != null)
+            dest.setAlkalinityP1(this.getAlkalinityP1().to20GenericMeasure());
+
+        if (this.getAlkalinityP2() != null)
+            this.getAlkalinityP2().to1411GenericMeasure();
+            dest.setAlkalinityP2(this.getAlkalinityP2().to20GenericMeasure());
+
+        if (this.getChloride() != null)
+            dest.setChloride(this.getChloride().to20GenericMeasure());
+
+        if (this.getCalcium() != null)
+            dest.setCalcium(this.getCalcium().to20GenericMeasure());
+
+        if (this.getMagnesium() != null)
+            dest.setMagnesium(this.getMagnesium().to20GenericMeasure());
+
+        if (this.getPotassium() != null)
+            dest.setPotassium(this.getPotassium().to20GenericMeasure());
+
+        if (this.getBrinePc() != null)
+            dest.setBrinePc(this.getBrinePc().to20GenericMeasure());
+
+        if (this.getLime() != null)
+            dest.setLime(this.getLime().to20GenericMeasure());
+
+        if (this.getElectStab() != null)
+            dest.setElectStab(this.getElectStab().to20GenericMeasure());
+
+        if (this.getCalciumChloride() != null)
+            dest.setCalciumChloride(this.getCalciumChloride().to20GenericMeasure());
+
+        if (this.getSolidsHiGravPc() != null)
+            dest.setSolidsHiGravPc(this.getSolidsHiGravPc().to20GenericMeasure());
+
+        if (this.getPolymer() != null)
+            dest.setPolymer(this.getPolymer().to20GenericMeasure());
+
+        if (this.getSolCorPc() != null)
+            dest.setSolCorPc(this.getSolCorPc().to20GenericMeasure());
+
+        if (this.getOilCtg() != null)
+            dest.setOilCtg(this.getOilCtg().to20GenericMeasure());
+
+        if (this.getHardnessCa() != null)
+            dest.setHardnessCa(this.getHardnessCa().to20GenericMeasure());
+
+        if (this.getSulfide() != null)
+            dest.setSulfide(this.getSulfide().to20GenericMeasure());
+
+        if (this.getRheometer() != null){
+            List<com.hashmapinc.tempus.WitsmlObjects.v20.Rheometer> destRheometer = new ArrayList<>();
+            for (com.hashmapinc.tempus.WitsmlObjects.v1311.CsRheometer rheometer : this.getRheometer()){
+                destRheometer.add(rheometer.to20Rheometer());
+            }
+        }
+        return dest;
+
     }
 
 }

@@ -5,6 +5,7 @@ import org.custommonkey.xmlunit.XMLUnit;
 import org.junit.Assert;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
@@ -26,6 +27,6 @@ public class TestUtilities {
 
     public static String getResourceAsString(String resourceName) throws IOException {
         String path = "src/test/resources/" + resourceName;
-        return new String(Files.readAllBytes(Paths.get(path)));
+        return new String(Files.readAllBytes(Paths.get(path)), StandardCharsets.UTF_8);
     }
 }
