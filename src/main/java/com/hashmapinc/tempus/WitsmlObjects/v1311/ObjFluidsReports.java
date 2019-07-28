@@ -48,7 +48,8 @@ public class ObjFluidsReports {
      *
      * @param fluidsReportObj to add
      */
-    public void addFluidReport(com.hashmapinc.tempus.WitsmlObjects.v1311.ObjFluidsReport fluidsReportObj) {
+    public void addFluidReport(
+            com.hashmapinc.tempus.WitsmlObjects.v1311.ObjFluidsReport fluidsReportObj) {
         if (fluidsReport == null) {
             fluidsReport = new ArrayList<>();
         }

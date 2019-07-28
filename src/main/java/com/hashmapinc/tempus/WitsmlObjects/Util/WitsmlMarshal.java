@@ -19,7 +19,8 @@ public class WitsmlMarshal {
     private static final Logger LOG = Logger.getLogger(WitsmlMarshal.class.getName());
 
     /**
-     * Deserializes an WITSML XML string into an Object. The object type is passed in via witsmlClass and the witsml is passed in as a string.
+     * Deserializes an WITSML XML string into an Object.
+     * The object type is passed in via witsmlClass and the witsml is passed in as a string.
      * @param witsml The String containing the WITSML data
      * @param witsmlClass The class to serialize the WITSML string into
      * @param <T> The type of class that is going to be returned
@@ -30,6 +31,12 @@ public class WitsmlMarshal {
         StringReader witsmlReader = new StringReader(witsml);
         JAXBContext jaxbContext = JAXBContext.newInstance(witsmlClass);
         Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+
+        // TODO Pull this out for production
+        // If you need to Debug JAXB this is your ticket.
+        // Don't use this for production just when debugging.
+        jaxbUnmarshaller.setEventHandler(new javax.xml.bind.helpers.DefaultValidationEventHandler());
+
         return (T) JAXBIntrospector.getValue(jaxbUnmarshaller.unmarshal(witsmlReader));
     }
 
