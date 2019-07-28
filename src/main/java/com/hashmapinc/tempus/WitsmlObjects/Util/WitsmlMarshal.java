@@ -35,7 +35,7 @@ public class WitsmlMarshal {
         // TODO Pull this out for production
         // If you need to Debug JAXB this is your ticket.
         // Don't use this for production just when debugging.
-        jaxbUnmarshaller.setEventHandler(new javax.xml.bind.helpers.DefaultValidationEventHandler());
+        // jaxbUnmarshaller.setEventHandler(new javax.xml.bind.helpers.DefaultValidationEventHandler());
 
         return (T) JAXBIntrospector.getValue(jaxbUnmarshaller.unmarshal(witsmlReader));
     }

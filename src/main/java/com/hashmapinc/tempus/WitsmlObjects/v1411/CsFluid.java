@@ -163,7 +163,8 @@ public class CsFluid {
     protected String type;
     protected String locationSample;
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar dTim;
+    // protected XMLGregorianCalendar dTim;
+    protected String dTim;
     protected MeasuredDepthCoord md;
     protected WellVerticalDepthCoord tvd;
     protected GenericMeasure presBopRating;
@@ -276,10 +277,10 @@ public class CsFluid {
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDTim() {
+    public String getDTim() {
         return dTim;
     }
 
@@ -288,10 +289,10 @@ public class CsFluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDTim(XMLGregorianCalendar value) {
+    public void setDTim(String value) {
         this.dTim = value;
     }
 
@@ -1840,7 +1841,7 @@ public class CsFluid {
         // this was 2.0 -> 1411 (XML Format)
         // now need to go 4144 -> 2.0 (JSON Format)
         if (this.getDTim() != null)
-            dest.setDTim(this.getDTim().toXMLFormat());
+            dest.setDTim(this.getDTim()); //.toXMLFormat());
         // this.getDTim().toGregorianCalendar()?
             
         if (this.getMd() != null)
