@@ -147,7 +147,8 @@ public class CsFluid {
     protected String type;
     protected String locationSample;
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar dTim;
+    // protected XMLGregorianCalendar dTim;
+    protected String dTim;
     protected MeasuredDepthCoord md;
     protected GenericMeasure density;
     protected GenericMeasure visFunnel;
@@ -258,7 +259,7 @@ public class CsFluid {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public XMLGregorianCalendar getDTim() {
+    public String getDTim() {
         return dTim;
     }
 
@@ -270,7 +271,7 @@ public class CsFluid {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setDTim(XMLGregorianCalendar value) {
+    public void setDTim(String value) {
         this.dTim = value;
     }
 
@@ -1549,7 +1550,7 @@ public class CsFluid {
 
         // check complex fields
         if (this.getDTim() != null)
-            dest.setDTim(this.getDTim().toXMLFormat());
+            dest.setDTim(this.getDTim()); //.toXMLFormat());
 
         if (this.getMd() != null)
             dest.setMd(this.getMd().to20DepthCoord());

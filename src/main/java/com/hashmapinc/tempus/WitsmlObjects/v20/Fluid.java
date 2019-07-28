@@ -2407,10 +2407,11 @@ public class Fluid {
         if (this.getDTim() != null)
             // Construct a new Gregorian Calendar object
             // ToDo Change all of these to Strings as with Log.
-            dest.setDTim(
+            dest.setDTim(this.getDTim());
+            /*
                 DatatypeFactory
                     .newInstance()
-                    .newXMLGregorianCalendar(this.getDTim()));
+            */
 
         if (this.getMd() != null)
             dest.setMd(this.getMd().to1411MeasuredDepthCoord());
@@ -2579,11 +2580,12 @@ public class Fluid {
         if (this.getDTim() != null)
             // Construct a new Gregorian Calendar object
             // ToDo Change all of these to Strings as with Log.
-            dest.setDTim(
+            dest.setDTim(this.getDTim());
+            /*
                     DatatypeFactory
                             .newInstance()
                             .newXMLGregorianCalendar(this.getDTim()));
-
+            */
         if (this.getMd() != null)
             dest.setMd(this.getMd().to1311MeasuredDepthCoord());
 
@@ -2598,6 +2600,7 @@ public class Fluid {
 
         if (this.getPv() != null)
             dest.setPv(this.getPv().to1311GenericMeasure());
+        
 
         if (this.getYp() != null)
             dest.setYp(this.getYp().to1311GenericMeasure());
