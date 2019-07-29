@@ -15,7 +15,6 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 import com.hashmapinc.tempus.WitsmlObjects.AbstractWitsmlObject;
 import com.hashmapinc.tempus.WitsmlObjects.Util.FluidsReportConverter;
@@ -71,7 +70,8 @@ public class ObjFluidsReport extends AbstractWitsmlObject {
     @XmlElement(required = true)
     protected String name;
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar dTim;
+    //protected XMLGregorianCalendar dTim;
+    protected String dTim;
     protected MeasuredDepthCoord md;
     protected WellVerticalDepthCoord tvd;
     protected Short numReport;
@@ -165,7 +165,7 @@ public class ObjFluidsReport extends AbstractWitsmlObject {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public XMLGregorianCalendar getDTim() {
+    public String getDTim() {
         return dTim;
     }
 
@@ -177,7 +177,7 @@ public class ObjFluidsReport extends AbstractWitsmlObject {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setDTim(XMLGregorianCalendar value) {
+    public void setDTim(String value) {
         this.dTim = value;
     }
 

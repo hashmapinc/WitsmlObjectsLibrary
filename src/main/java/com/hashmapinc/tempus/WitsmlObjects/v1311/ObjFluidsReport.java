@@ -65,7 +65,8 @@ public class ObjFluidsReport extends AbstractWitsmlObject {
     @XmlElement(required = true)
     protected String name;
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar dTim;
+    // protected XMLGregorianCalendar dTim;
+    protected String dTim;
     protected MeasuredDepthCoord md;
     protected WellVerticalDepthCoord tvd;
     protected Short numReport;
@@ -156,10 +157,10 @@ public class ObjFluidsReport extends AbstractWitsmlObject {
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDTim() {
+    public String getDTim() {
         return dTim;
     }
 
@@ -168,10 +169,10 @@ public class ObjFluidsReport extends AbstractWitsmlObject {
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDTim(XMLGregorianCalendar value) {
+    public void setDTim(String value) {
         this.dTim = value;
     }
 

@@ -69,9 +69,12 @@ public class FluidsReportConverter {
             dest.setName(c.getTitle());
 
         if (src.getDTim() != null)
-            dest.setDTim(DatatypeFactory
+            dest.setDTim(src.getDTim());
+        /*
+                    DatatypeFactory
                     .newInstance()
                     .newXMLGregorianCalendar(src.getDTim()));
+        */
         if (src.getNumReport() != null)
             dest.setNumReport(src.getNumReport().shortValue());
         if (src.getMd() != null)
@@ -149,9 +152,12 @@ public class FluidsReportConverter {
             dest.setName(c.getTitle());
 
         if (src.getDTim() != null)
-            dest.setDTim(DatatypeFactory
+            dest.setDTim(src.getDTim());
+        /*
+                    DatatypeFactory
                     .newInstance()
                     .newXMLGregorianCalendar(src.getDTim()));
+        */
         if (src.getNumReport() != null)
             dest.setNumReport(src.getNumReport().shortValue());
         if (src.getMd() != null)
@@ -194,7 +200,7 @@ public class FluidsReportConverter {
         }
 
         if (src.getDTim() != null)
-            dest.setDTim(src.getDTim().toXMLFormat());
+            dest.setDTim(src.getDTim()); //.toXMLFormat());
         
         if (src.getNumReport() != null)
             dest.setNumReport((int)src.getNumReport()); 
@@ -238,7 +244,7 @@ public class FluidsReportConverter {
         }
 
         if (src.getDTim() != null)
-            dest.setDTim(src.getDTim().toXMLFormat());
+            dest.setDTim(src.getDTim()); //.toXMLFormat());
 
         if (src.getNumReport() != null)
             dest.setNumReport((int)src.getNumReport());
