@@ -220,7 +220,7 @@ public class ObjLog extends AbstractWitsmlObject {
      *
      * @return
      *     possible object is
-     *     {@link Boolean }
+     *     {@link String }
      *
      */
     public String isObjectGrowing() {
@@ -232,7 +232,7 @@ public class ObjLog extends AbstractWitsmlObject {
      *
      * @param value
      *     allowed object is
-     *     {@link Boolean }
+     *     {@link String }
      *
      */
     public void setObjectGrowing(String value) {
@@ -268,7 +268,7 @@ public class ObjLog extends AbstractWitsmlObject {
      *
      * @return
      *     possible object is
-     *     {@link Boolean }
+     *     {@link String }
      *
      */
     public String isCurveSensorsAligned() {
@@ -280,7 +280,7 @@ public class ObjLog extends AbstractWitsmlObject {
      *
      * @param value
      *     allowed object is
-     *     {@link Boolean }
+     *     {@link String }
      *
      */
     public void setCurveSensorsAligned(String value) {
@@ -424,7 +424,7 @@ public class ObjLog extends AbstractWitsmlObject {
      *
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *
      */
     public void setCreationDate(String value) {
@@ -592,7 +592,7 @@ public class ObjLog extends AbstractWitsmlObject {
      *
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *
      */
     public void setStartDateTimeIndex(String value) {
@@ -604,7 +604,7 @@ public class ObjLog extends AbstractWitsmlObject {
      *
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String}
      *
      */
     public String getEndDateTimeIndex() {
@@ -616,7 +616,7 @@ public class ObjLog extends AbstractWitsmlObject {
      *
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *
      */
     public void setEndDateTimeIndex(String value) {

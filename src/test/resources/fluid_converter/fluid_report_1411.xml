@@ -99,7 +99,7 @@ They totally artificial and are not intended to demonstrate best practices.
 		</fluid>
 		<commonData>
 			<itemState>plan</itemState>
-			<comments>These are the comments associated with theFluids Report data object.</comments>
+			<comments>These are the comments associated with the Fluids Report data object.</comments>
 		</commonData>
 	</fluidsReport>
 </fluidsReports>
