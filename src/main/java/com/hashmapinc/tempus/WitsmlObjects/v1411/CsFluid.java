@@ -1977,10 +1977,10 @@ public class CsFluid {
             dest.setSulfide(this.getSulfide().to20GenericMeasure());  
         
         if (this.getRheometer() != null){
-            List<com.hashmapinc.tempus.WitsmlObjects.v20.Rheometer> destRheometer = new ArrayList<>();
             for (com.hashmapinc.tempus.WitsmlObjects.v1411.CsRheometer rheometer : this.getRheometer()){
-                destRheometer.add(rheometer.to20Rheometer());
+                dest.getRheometer().add(rheometer.to20Rheometer());
             }
+            
         }   
         return dest;
 
