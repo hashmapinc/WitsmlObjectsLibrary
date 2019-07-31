@@ -267,5 +267,4 @@ public class FluidsReportConverter {
 
         return dest;
     }
-
 }
