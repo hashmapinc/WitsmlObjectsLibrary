@@ -1980,7 +1980,7 @@ public class CsFluid {
             for (com.hashmapinc.tempus.WitsmlObjects.v1411.CsRheometer rheometer : this.getRheometer()){
                 dest.getRheometer().add(rheometer.to20Rheometer());
             }
-            
+
         }   
         return dest;
 
