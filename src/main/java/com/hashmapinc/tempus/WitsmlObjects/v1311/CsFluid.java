@@ -1528,6 +1528,12 @@ public class CsFluid {
         this.uid = value;
     }
 
+    //=========================================================================
+    // conversion methods for 1.3.1.1/1.4.1.1/2.0 interop
+    //=========================================================================
+    //=========================================================================
+    // 1.3.1.1 to 2.0
+    //=========================================================================
     public com.hashmapinc.tempus.WitsmlObjects.v20.Fluid to20Fluid(){
         com.hashmapinc.tempus.WitsmlObjects.v20.Fluid dest =
                 new com.hashmapinc.tempus.WitsmlObjects.v20.Fluid();
@@ -1685,15 +1691,18 @@ public class CsFluid {
         if (this.getSulfide() != null)
             dest.setSulfide(this.getSulfide().to20GenericMeasure());
 
-        if (this.getRheometer() != null){
-            List<com.hashmapinc.tempus.WitsmlObjects.v20.Rheometer> destRheometer = new ArrayList<>();
-            for (com.hashmapinc.tempus.WitsmlObjects.v1311.CsRheometer rheometer : this.getRheometer()){
-                destRheometer.add(rheometer.to20Rheometer());
+        if (this.getRheometer() != null) {
+            for (com.hashmapinc.tempus.WitsmlObjects.v1311.CsRheometer rheometer : this.getRheometer()) {
+                dest.getRheometer().add(rheometer.to20Rheometer());
             }
         }
+
         return dest;
     }
 
+    //=========================================================================
+    // 1.3.1.1 to 1.4.1.1
+    //=========================================================================
     public com.hashmapinc.tempus.WitsmlObjects.v1411.CsFluid to1411CsFluid(){
         com.hashmapinc.tempus.WitsmlObjects.v1411.CsFluid dest =
                 new com.hashmapinc.tempus.WitsmlObjects.v1411.CsFluid();
@@ -1849,13 +1858,12 @@ public class CsFluid {
         if (this.getSulfide() != null)
             dest.setSulfide(this.getSulfide().to1411GenericMeasure());
 
-        if (this.getRheometer() != null){
-            List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsRheometer> destRheometer =
-                    new ArrayList<>();
-            for (com.hashmapinc.tempus.WitsmlObjects.v1311.CsRheometer rheometer : this.getRheometer()){
-                destRheometer.add(rheometer.to1411CsRheometer());
+        if (this.getRheometer() != null) {
+            for (com.hashmapinc.tempus.WitsmlObjects.v1311.CsRheometer rheometer : this.getRheometer()) {
+                dest.getRheometer().add(rheometer.to1411CsRheometer());
             }
         }
+
         return dest;
     }
 

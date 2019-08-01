@@ -481,7 +481,7 @@ public class Fluid {
      * 
      * @return
      *     possible object is
-     *     {@link WellVerticalDepthCoord }
+     *     {@link DepthCoord }
      *     
      */
     public DepthCoord getTvd() {
@@ -493,7 +493,7 @@ public class Fluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link WellVerticalDepthCoord }
+     *     {@link DepthCoord }
      *     
      */
     public void setTvd(DepthCoord value) {
@@ -673,7 +673,7 @@ public class Fluid {
      * 
      * @return
      *     possible object is
-     *     {@link TimeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
     public GenericMeasure getVisFunnel() {
@@ -685,7 +685,7 @@ public class Fluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link TimeMeasure }
+     *     {@link GenericMeasure }
      *     
      */
     public void setVisFunnel(GenericMeasure value) {
@@ -721,7 +721,7 @@ public class Fluid {
      * 
      * @return
      *     possible object is
-     *     {@link DynamicViscosityMeasure }
+     *     {@link GenericMeasure }
      *     
      */
     public GenericMeasure getPv() {
@@ -733,7 +733,7 @@ public class Fluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link DynamicViscosityMeasure }
+     *     {@link GenericMeasure }
      *     
      */
     public void setPv(GenericMeasure value) {
@@ -745,7 +745,7 @@ public class Fluid {
      * 
      * @return
      *     possible object is
-     *     {@link PressureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
     public GenericMeasure getYp() {
@@ -757,7 +757,7 @@ public class Fluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link PressureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
     public void setYp(GenericMeasure value) {
@@ -769,7 +769,7 @@ public class Fluid {
      * 
      * @return
      *     possible object is
-     *     {@link PressureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
     public GenericMeasure getGel10Sec() {
@@ -781,7 +781,7 @@ public class Fluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link PressureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
     public void setGel10Sec(GenericMeasure value) {
@@ -793,7 +793,7 @@ public class Fluid {
      * 
      * @return
      *     possible object is
-     *     {@link PressureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
     public GenericMeasure getGel10Min() {
@@ -805,7 +805,7 @@ public class Fluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link PressureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
     public void setGel10Min(GenericMeasure value) {
@@ -817,7 +817,7 @@ public class Fluid {
      * 
      * @return
      *     possible object is
-     *     {@link PressureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
     public GenericMeasure getGel30Min() {
@@ -829,7 +829,7 @@ public class Fluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link PressureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
     public void setGel30Min(GenericMeasure value) {
@@ -913,7 +913,7 @@ public class Fluid {
      * 
      * @return
      *     possible object is
-     *     {@link PressureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
     public GenericMeasure getPresHthp() {
@@ -925,7 +925,7 @@ public class Fluid {
      * 
      * @param value
      *     allowed object is
-     *     {@link PressureMeasure }
+     *     {@link GenericMeasure }
      *     
      */
     public void setPresHthp(GenericMeasure value) {
@@ -2416,6 +2416,9 @@ public class Fluid {
         if (this.getMd() != null)
             dest.setMd(this.getMd().to1411MeasuredDepthCoord());
 
+        if (this.getTvd() != null)
+            dest.setTvd(this.getTvd().to1411VerticalDepthCoord());
+
         if (this.getDensity() != null)
             dest.setDensity(this.getDensity().to1411GenericMeasure());
 
@@ -2720,16 +2723,12 @@ public class Fluid {
             dest.setSulfide(this.getSulfide().to1311GenericMeasure());
 
         if (this.getRheometer() != null){
-            List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsRheometer> destRheometer =
-                    new ArrayList<>();
             for (com.hashmapinc.tempus.WitsmlObjects.v20.Rheometer rheometer : this.getRheometer()){
-                destRheometer.add(rheometer.to1311CsRheometer());
+                dest.getRheometer().add(rheometer.to1311CsRheometer());
             }
         }
 
         return dest;
     }
-
-
 
 }
