@@ -1802,15 +1802,14 @@ public class CsFluid {
             dest.setHardnessCa(this.getHardnessCa().to1311GenericMeasure());   
         
         if (this.getSulfide() != null)    
-            dest.setSulfide(this.getSulfide().to1311GenericMeasure());  
+            dest.setSulfide(this.getSulfide().to1311GenericMeasure());
         
         if (this.getRheometer() != null){
-            List<com.hashmapinc.tempus.WitsmlObjects.v1311.CsRheometer> destRheometer =
-                    new ArrayList<>();
             for (com.hashmapinc.tempus.WitsmlObjects.v1411.CsRheometer rheometer : this.getRheometer()){
-                destRheometer.add(rheometer.to1311Rheometer());
+                dest.getRheometer().add(rheometer.to1311Rheometer());
             }
-        }   
+        }
+
         return dest;
 	}
 
@@ -1844,8 +1843,15 @@ public class CsFluid {
             dest.setDTim(this.getDTim()); //.toXMLFormat());
         // this.getDTim().toGregorianCalendar()?
             
-        if (this.getMd() != null)
+        if (this.getMd() != null) {
+            //if (this.getMd().getUom() != null)
+            //    dest.setMd(this.getMd().getUom());
             dest.setMd(this.getMd().to20DepthCoord());
+        }
+
+        if (this.getTvd() != null) {
+            dest.setTvd(this.getTvd().to20DepthCoord());
+        }
 
         if (this.getDensity() != null)
             dest.setDensity(this.getDensity().to20GenericMeasure());
@@ -1981,7 +1987,15 @@ public class CsFluid {
                 dest.getRheometer().add(rheometer.to20Rheometer());
             }
 
-        }   
+        }
+
+        if (this.getExtensionNameValue() != null) {
+            for (com.hashmapinc.tempus.WitsmlObjects.v1411.CsExtensionNameValue extensionNameValue :
+                                                                        this.getExtensionNameValue()) {
+                dest.getExtensionNameValue().add(extensionNameValue.to20ExtensionNameValue());
+            }
+        }
+
         return dest;
 
     }
