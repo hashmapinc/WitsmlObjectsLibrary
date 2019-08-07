@@ -2548,7 +2548,6 @@ public class Fluid {
 
         if (this.getSulfide() != null)
             dest.setSulfide(this.getSulfide().to1411GenericMeasure());
-
         
         if (this.getRheometer() != null){
             for (com.hashmapinc.tempus.WitsmlObjects.v20.Rheometer rheometer : this.getRheometer()){
