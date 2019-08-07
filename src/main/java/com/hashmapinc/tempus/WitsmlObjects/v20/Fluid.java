@@ -2385,8 +2385,9 @@ public class Fluid {
     //=========================================================================
     // 2.0 to 1.4.1.1
     //=========================================================================
+
     public com.hashmapinc.tempus.WitsmlObjects.v1411.CsFluid to1411CsFluid()
-                                        throws javax.xml.datatype.DatatypeConfigurationException
+            throws javax.xml.datatype.DatatypeConfigurationException
     {
         com.hashmapinc.tempus.WitsmlObjects.v1411.CsFluid dest =
                 new com.hashmapinc.tempus.WitsmlObjects.v1411.CsFluid();
@@ -2408,10 +2409,10 @@ public class Fluid {
             // Construct a new Gregorian Calendar object
             // ToDo Change all of these to Strings as with Log.
             dest.setDTim(this.getDTim());
-            /*
-                DatatypeFactory
-                    .newInstance()
-            */
+        /*
+            DatatypeFactory
+                .newInstance()
+        */
 
         if (this.getMd() != null)
             dest.setMd(this.getMd().to1411MeasuredDepthCoord());
@@ -2550,12 +2551,11 @@ public class Fluid {
             dest.setSulfide(this.getSulfide().to1411GenericMeasure());
 
         if (this.getRheometer() != null){
-            List<com.hashmapinc.tempus.WitsmlObjects.v1411.CsRheometer> destRheometer =
-                    new ArrayList<>();
             for (com.hashmapinc.tempus.WitsmlObjects.v20.Rheometer rheometer : this.getRheometer()){
-                destRheometer.add(rheometer.to1411CsRheometer());
+                dest.getRheometer().add(rheometer.to1411CsRheometer());
             }
         }
+
         return dest;
     }
     //=========================================================================
