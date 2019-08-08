@@ -166,8 +166,10 @@ public class FluidsReportConverter {
             dest.setCustomData(src.getCustomData());
         if (src.getTvd() != null)
             dest.setTvd(src.getTvd().to1411VerticalDepthCoord());
-        if (src.getWellbore().getTitle() != null)
-            dest.setNameWellbore(src.getWellbore().getTitle());
+        if (src.getWellbore() != null) {
+            if (src.getWellbore().getTitle() != null)
+                dest.setNameWellbore(src.getWellbore().getTitle());
+        }
         if (src.getUid() != null)
             dest.setUid(src.getUid());
 
