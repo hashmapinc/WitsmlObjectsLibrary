@@ -22,7 +22,7 @@ os:
   - linux
 
 jdk:
-  - oraclejdk11
+  - openjdk11
 
 install: mvn install -P !build-extras -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script: mvn test -P !build-extras -B
