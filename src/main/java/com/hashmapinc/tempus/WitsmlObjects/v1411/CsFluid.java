@@ -1838,7 +1838,7 @@ public class CsFluid {
 
         // check complex fields
         // this was 2.0 -> 1411 (XML Format)
-        // now need to go 4144 -> 2.0 (JSON Format)
+        // now need to go 1411 -> 2.0 (JSON Format)
         if (this.getDTim() != null)
             dest.setDTim(this.getDTim()); //.toXMLFormat());
         // this.getDTim().toGregorianCalendar()?
