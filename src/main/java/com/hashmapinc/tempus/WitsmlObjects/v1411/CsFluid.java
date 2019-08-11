@@ -1682,7 +1682,7 @@ public class CsFluid {
             dest.setVisFunnel(this.getVisFunnel().to1311GenericMeasure());
         
         if (this.getTempVis() != null)
-            dest.setTempVis(this.getVisFunnel().to1311GenericMeasure());
+            dest.setTempVis(this.getTempVis().to1311GenericMeasure());
 
         if (this.getPv() != null)
             dest.setPv(this.getPv().to1311GenericMeasure());
@@ -1830,10 +1830,13 @@ public class CsFluid {
         dest.setUid(this.getUid());
 
         if (this.getAsg() != null){
-            com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure asg =
+            com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure asgGM =
                     new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
-            asg.setValue(this.getAsg());
-            dest.setAsg(asg);
+            asgGM.setValue(this.getAsg().doubleValue());
+            // TODO 2.0 requires ASG to be type GenericMeasure; however, v1.3.1.1
+            //      doe NOT have a UOM for this value. Should there be a default?
+            // asgGM.setUom();
+            dest.setAsg(asgGM);
         }
 
         // check complex fields
@@ -1860,7 +1863,7 @@ public class CsFluid {
             dest.setVisFunnel(this.getVisFunnel().to20GenericMeasure());
         
         if (this.getTempVis() != null)
-            dest.setTempVis(this.getVisFunnel().to20GenericMeasure());
+            dest.setTempVis(this.getTempVis().to20GenericMeasure());
 
         if (this.getPv() != null)
             dest.setPv(this.getPv().to20GenericMeasure());
