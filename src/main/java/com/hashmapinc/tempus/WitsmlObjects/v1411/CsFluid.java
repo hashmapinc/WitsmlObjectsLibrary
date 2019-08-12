@@ -1833,7 +1833,7 @@ public class CsFluid {
             com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure asgGM =
                     new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
             asgGM.setValue(this.getAsg().doubleValue());
-            // TODO 2.0 requires ASG to be type GenericMeasure; however, v1.3.1.1
+            // TODO 2.0 requires ASG to be type GenericMeasure; however, v1.4.1.1
             //      doe NOT have a UOM for this value. Should there be a default?
             // asgGM.setUom();
             dest.setAsg(asgGM);

@@ -2385,7 +2385,6 @@ public class Fluid {
     // 2.0 to 1.4.1.1
     //=========================================================================
     public com.hashmapinc.tempus.WitsmlObjects.v1411.CsFluid to1411CsFluid()
-                                        throws javax.xml.datatype.DatatypeConfigurationException
     {
         com.hashmapinc.tempus.WitsmlObjects.v1411.CsFluid dest =
                 new com.hashmapinc.tempus.WitsmlObjects.v1411.CsFluid();
@@ -2400,7 +2399,7 @@ public class Fluid {
         dest.setComments(this.getComments());
         dest.setUid(this.getUid());
         if (this.getAsg() != null) {
-            dest.setAsg(this.getAsg().getValue());
+            dest.setAsg(this.getAsg().getValue().doubleValue());
         }
         // check complex fields
         if (this.getDTim() != null)
@@ -2425,7 +2424,7 @@ public class Fluid {
             dest.setVisFunnel(this.getVisFunnel().to1411GenericMeasure());
 
         if (this.getTempVis() != null)
-            dest.setTempVis(this.getVisFunnel().to1411GenericMeasure());
+            dest.setTempVis(this.getTempVis().to1411GenericMeasure());
 
         if (this.getPv() != null)
             dest.setPv(this.getPv().to1411GenericMeasure());
@@ -2560,7 +2559,6 @@ public class Fluid {
     // 2.0 to 1.3.1.1
     //=========================================================================
     public com.hashmapinc.tempus.WitsmlObjects.v1311.CsFluid to1311CsFluid()
-                            throws javax.xml.datatype.DatatypeConfigurationException
     {
         com.hashmapinc.tempus.WitsmlObjects.v1311.CsFluid dest =
                 new com.hashmapinc.tempus.WitsmlObjects.v1311.CsFluid();
@@ -2575,7 +2573,7 @@ public class Fluid {
         dest.setComments(this.getComments());
         dest.setUid(this.getUid());
         if (this.getAsg() != null) {
-            dest.setAsg(this.getAsg().getValue());
+            dest.setAsg(this.getAsg().getValue().doubleValue());
         }
         // check complex fields
         if (this.getDTim() != null)
@@ -2597,7 +2595,7 @@ public class Fluid {
             dest.setVisFunnel(this.getVisFunnel().to1311GenericMeasure());
 
         if (this.getTempVis() != null)
-            dest.setTempVis(this.getVisFunnel().to1311GenericMeasure());
+            dest.setTempVis(this.getTempVis().to1311GenericMeasure());
 
         if (this.getPv() != null)
             dest.setPv(this.getPv().to1311GenericMeasure());
