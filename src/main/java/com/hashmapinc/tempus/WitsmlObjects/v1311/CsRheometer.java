@@ -300,11 +300,12 @@ public class CsRheometer {
         if (this.getPresRheom() != null)
             dest.setPresRheom(this.getPresRheom().to20GenericMeasure());
 
-        RheometerViscosity rv = new RheometerViscosity();
+        RheometerViscosity rv = null;
         if (this.getVis100Rpm() != null)
         {
             com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure gm =
                     new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
+            rv = new RheometerViscosity();
             gm.setUom("rpm");
             gm.setValue((double)100);
             rv.setSpeed(gm);
@@ -317,6 +318,7 @@ public class CsRheometer {
         {
             com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure gm =
                     new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
+            rv = new RheometerViscosity();
             gm.setUom("rpm");
             gm.setValue((double)3);
             rv.setSpeed(gm);
@@ -329,6 +331,7 @@ public class CsRheometer {
         {
             com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure gm =
                     new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
+            rv = new RheometerViscosity();
             gm.setUom("rpm");
             gm.setValue((double)6);
             rv.setSpeed(gm);
@@ -341,6 +344,7 @@ public class CsRheometer {
         {
             com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure gm =
                     new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
+            rv = new RheometerViscosity();
             gm.setUom("rpm");
             gm.setValue((double)200);
             rv.setSpeed(gm);
@@ -353,6 +357,7 @@ public class CsRheometer {
         {
             com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure gm =
                     new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
+            rv = new RheometerViscosity();
             gm.setUom("rpm");
             gm.setValue((double)300);
             rv.setSpeed(gm);
@@ -365,6 +370,7 @@ public class CsRheometer {
         {
             com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure gm =
                     new com.hashmapinc.tempus.WitsmlObjects.v20.GenericMeasure();
+            rv = new RheometerViscosity();
             gm.setUom("rpm");
             gm.setValue((double)600);
             rv.setSpeed(gm);

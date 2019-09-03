@@ -194,7 +194,10 @@ public class FluidsReportConverter {
         com.hashmapinc.tempus.WitsmlObjects.v20.FluidsReport dest =
                 new FluidsReport();
 
-        // check non-complex, non-repeating fields
+        // *************************** METADATA *************************** //
+        if (src.getUid() != null)
+            dest.setUid(src.getUid());
+
         Citation c = new Citation();
         if (src.getName() != null) {
             c.setTitle(src.getName());
@@ -203,28 +206,32 @@ public class FluidsReportConverter {
 
         if (src.getDTim() != null)
             dest.setDTim(src.getDTim()); //.toXMLFormat());
-        
-        if (src.getNumReport() != null)
-            dest.setNumReport((int)src.getNumReport()); 
 
         if (src.getCustomData() != null)
             dest.setCustomData(src.getCustomData());
 
-        if (src.getMd() != null)    
+        if (src.getMd() != null)
             dest.setMd(src.getMd().to20DepthCoord());
-        
+
         if (src.getTvd() != null)
             dest.setTvd(src.getTvd().to20DepthCoord());
+        
+        if (src.getNumReport() != null)
+            dest.setNumReport((int)src.getNumReport());
 
-        if (src.getUid() != null)
-            dest.setUid(src.getUid());
-
-        // check repeating fields
+        // *************************** FLUID *************************** //
         if (src.getFluid() != null){
-            for (com.hashmapinc.tempus.WitsmlObjects.v1411.CsFluid fluid : src.getFluid()){
+            for (com.hashmapinc.tempus.WitsmlObjects.v1411.CsFluid
+                    fluid : src.getFluid()){
                 dest.getFluid().add(fluid.to20Fluid());
             }
         }
+        // ************************************************************ //
+
+        // 2.0 does not have CommonData
+
+        if (src.getCustomData() != null)
+            dest.setCustomData(src.getCustomData());
 
         return dest;
 	}

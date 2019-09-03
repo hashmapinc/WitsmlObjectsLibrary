@@ -215,8 +215,7 @@ public class Rheometer {
 
         // Process each element in the RheometerViscosity list
         List<RheometerViscosity> rvs = this.getViscosity();
-        if (rvs.size() > 0)
-            dest.setUid(rvs.get(0).getUid());
+
         rvs.forEach((rv) -> {
             switch (rv.getUid())
                 {
@@ -274,8 +273,7 @@ public class Rheometer {
 
         // Process each element in the RheometerViscosity list
         List<RheometerViscosity> rvs = this.getViscosity();
-        if (rvs.size() > 0)
-            dest.setUid(rvs.get(0).getUid());
+
         rvs.forEach((rv) -> {
                     switch (rv.getUid())
                     {
