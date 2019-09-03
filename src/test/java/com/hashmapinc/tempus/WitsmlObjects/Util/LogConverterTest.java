@@ -20,7 +20,7 @@ public class LogConverterTest {
         assertEquals(src.getNameWell(), dest.getNameWell());
         assertEquals(src.getNameWellbore(), dest.getNameWellbore());
         assertEquals(src.getName(), dest.getName());
-        assertEquals(src.isObjectGrowing(), dest.isObjectGrowing());
+        assertEquals(src.getObjectGrowing(), dest.isObjectGrowing());
         assertEquals(src.getServiceCompany(), dest.getServiceCompany());
         assertEquals(src.getRunNumber(), dest.getRunNumber());
         assertEquals(src.getBhaRunNumber(), dest.getBhaRunNumber());
@@ -202,7 +202,7 @@ public class LogConverterTest {
         assertEquals(src.getNameWell(), dest.getNameWell());
         assertEquals(src.getNameWellbore(), dest.getNameWellbore());
         assertEquals(src.getName(), dest.getName());
-        assertEquals(src.isObjectGrowing(), dest.isObjectGrowing());
+        assertEquals(src.isObjectGrowing(), dest.getObjectGrowing());
         assertEquals(src.getServiceCompany(), dest.getServiceCompany());
         assertEquals(src.getRunNumber(), dest.getRunNumber());
         assertEquals(src.getBhaRunNumber(), dest.getBhaRunNumber());
