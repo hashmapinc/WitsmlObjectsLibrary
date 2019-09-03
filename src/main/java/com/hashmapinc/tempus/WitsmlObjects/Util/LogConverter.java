@@ -15,7 +15,7 @@ public class LogConverter {
         dest.setNameWell(src.getNameWell());
         dest.setNameWellbore(src.getNameWellbore());
         dest.setName(src.getName());
-        dest.setObjectGrowing(src.isObjectGrowing());
+        dest.setObjectGrowing(src.getObjectGrowing());
         dest.setServiceCompany(src.getServiceCompany());
         dest.setRunNumber(src.getRunNumber());
         dest.setBhaRunNumber(src.getBhaRunNumber());

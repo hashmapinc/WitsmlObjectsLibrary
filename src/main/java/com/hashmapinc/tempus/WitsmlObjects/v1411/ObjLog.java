@@ -223,7 +223,7 @@ public class ObjLog extends AbstractWitsmlObject {
      *     {@link String }
      *
      */
-    public String isObjectGrowing() {
+    public String getObjectGrowing() {
         return objectGrowing;
     }
 
